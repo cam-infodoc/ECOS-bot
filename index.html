@@ -313,17 +313,19 @@ function calculateScore(){
   botSay(`Questions abordées : ${questionsAsked.size} / ${currentChapter.questionSet.length}`);
   botSay("📝 Récapitulatif :");
   
+  // envoie chaque message du récap séparément
   currentChapter.recap.forEach(msg => botSay(msg));
 
   botSay("✨ Consultation terminée. Choisis une nouvelle spécialité ci-dessous :");
 
+  // après queue, réinitialisation et affichage des boutons
   botQueue.push(() => {
     currentChapter = null;
     questionsAsked.clear();
     finishBtn.disabled = true;
     showThemes();
   });
-}
+} 
 
 // ===== START =====
 showThemes();
