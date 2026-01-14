@@ -142,7 +142,14 @@ const data = {
           id: "SDD1",
           title: "Constipation",
           intro: "Vous êtes gastro-entérologue et vous recevez Mme Dubois, 31 ans, pour une constipation chronique.",
-          recap: "Il faut bien différencier constipation fonctionnelle et organique. La constipation fonctionnelle ou idiopathique est soit de transit (réduction de la fréquence ou de l'amplitude des contrations coliques) soit distale (=dyschésie, expliquée par un trouble fonctionnelle ou anatomique de la statique pelvienne). La constipation fonctionnelle donne des petites selles dures et peu nombreuses dans la semaine, il faut d'ailleurs chercher une colopathie fonctionnelle. La constipation distale donne des efforts de poussées importants avec une sensation d'évacuation incomplète et souvent des manoeuvres distales pour favoriser l'évacuation. Les signes d'alarmes auraient été une AEG, un amaigrissement, des douleurs nocturnes ou insomniantes, des rectorragies / méléna ou un syndrome rectal (épreinte, ténesme, faux besoins). Face à ces signes d'alarme on pense à une constipation organique ou secondaire et il faut éliminer le syndrome occlusif. Pour les examens complémentaires, aucun n'est nécessaire chez un constipé chronique sans signe d'alarme. Un bilan sanguin est possible mais pas obligatoire (NFS, CRP, TSH, ionogramme sanguin, calcémie, glycémie, créat). Si les symptômes apparaissent après 50 ans on pense forcément à prescrire une coloscopie.",
+          recap: [
+            "Il faut bien différencier constipation fonctionnelle et organique."
+            "La constipation fonctionnelle ou idiopathique est soit de transit (réduction de la fréquence ou de l'amplitude des contrations coliques) soit distale (=dyschésie, expliquée par un trouble fonctionnelle ou anatomique de la statique pelvienne)."
+            "La constipation fonctionnelle donne des petites selles dures et peu nombreuses dans la semaine, il faut d'ailleurs chercher une colopathie fonctionnelle."
+            "La constipation distale donne des efforts de poussées importants avec une sensation d'évacuation incomplète et souvent des manoeuvres distales pour favoriser l'évacuation."
+            "Les signes d'alarmes auraient été une AEG, un amaigrissement, des douleurs nocturnes ou insomniantes, des rectorragies / méléna ou un syndrome rectal (épreinte, ténesme, faux besoins). Face à ces signes d'alarme on pense à une constipation organique ou secondaire et il faut éliminer le syndrome occlusif."
+            "Pour les examens complémentaires, aucun n'est nécessaire chez un constipé chronique sans signe d'alarme. Un bilan sanguin est possible mais pas obligatoire (NFS, CRP, TSH, ionogramme sanguin, calcémie, glycémie, créat)."
+            "Si les symptômes apparaissent après 50 ans on pense forcément à prescrire une coloscopie.", ]
           questionSet: [
             { "id": "q_constip_1", "patterns":["évolution","combien de temps","combien de jours"], "answer":"Je suis constipée depuis environ 4 ans, sans aggravation particulière. Et je fais moins de 3 selles par semaine." },
             { "id": "q_constip_2", "patterns":["altération état général","amaigrissement","perte de poids", "poids", "plus fatiguée"], "answer":"Je n'ai pas perdu de poids et je me sens pas plus fatiguée qu'avant Docteur." },
@@ -305,13 +312,17 @@ function calculateScore(){
   botSay("📊 Fin de la consultation");
   botSay(`Questions abordées : ${questionsAsked.size} / ${currentChapter.questionSet.length}`);
   botSay("📝 Récapitulatif :");
-  botSay(currentChapter.recap);
+  
+  currentChapter.recap.forEach(msg => botSay(msg));
 
-  currentChapter = null;
-  questionsAsked.clear();
-  finishBtn.disabled = true;
+  botSay("✨ Consultation terminée. Choisis une nouvelle spécialité ci-dessous :");
+
+  botQueue.push(() => {
+    currentChapter = null;
+    questionsAsked.clear();
+    finishBtn.disabled = true;
   showThemes();
-}
+});
 
 // ===== START =====
 showThemes();
