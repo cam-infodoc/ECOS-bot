@@ -1,101 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>BotECOS</title>
-  <style>
-    body {
-      font-family: system-ui;
-      background: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .chat-container {
-      background: white;
-      width: 360px;
-      height: 600px;
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .messages {
-      flex: 1;
-      padding: 10px;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .bot {
-      align-self: flex-start;
-      background: #E5E5EA;
-      padding: 10px 14px;
-      border-radius: 18px 18px 18px 4px;
-      max-width: 75%;
-    }
-
-    .user {
-      align-self: flex-end;
-      background: #0084FF;
-      color: white;
-      padding: 10px 14px;
-      border-radius: 18px 18px 4px 18px;
-      max-width: 75%;
-    }
-
-    .input-area {
-      display: flex;
-      border-top: 1px solid #ddd;
-    }
-
-    input {
-      flex: 1;
-      border: none;
-      padding: 12px;
-      font-size: 14px;
-    }
-
-    button {
-      border: none;
-      padding: 12px;
-      background: #0084FF;
-      color: white;
-      cursor: pointer;
-    }
-
-    #finishBtn {
-      background: #ff5c7b;
-      margin-left: 4px;
-    }
-
-    .choices button {
-      margin-top: 6px;
-      width: 100%;
-      border-radius: 12px;
-      padding: 10px;
-      background: #0084FF;
-      color: white;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .choices button:hover {
-      background: #005bb5;
-    }
-  </style>
+<meta charset="UTF-8" />
+<title>BotECOS</title>
+<style>
+body { font-family: system-ui; background: #f0f0f0; display: flex; justify-content: center; padding: 20px; }
+.chat-container { background: white; width: 360px; height: 600px; border-radius: 12px; display: flex; flex-direction: column; overflow: hidden; }
+.messages { flex: 1; padding: 10px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+.bot { align-self: flex-start; background: #E5E5EA; padding: 10px 14px; border-radius: 18px 18px 18px 4px; max-width: 75%; }
+.user { align-self: flex-end; background: #0084FF; color: white; padding: 10px 14px; border-radius: 18px 18px 4px 18px; max-width: 75%; }
+.input-area { display: flex; border-top: 1px solid #ddd; }
+input { flex: 1; border: none; padding: 12px; font-size: 14px; }
+button { border: none; padding: 12px; background: #0084FF; color: white; cursor: pointer; }
+#finishBtn { background: #FF5722; margin-left: 4px; }
+.choices button { margin-top: 6px; width: 100%; border-radius: 12px; padding: 10px; background: #0084FF; color: white; font-weight: bold; border: none; cursor: pointer; transition: background 0.2s; }
+.choices button:hover { background: #005bb5; }
+</style>
 </head>
 <body>
 
 <div class="chat-container">
   <div class="messages" id="messages"></div>
-
   <div class="input-area">
     <input id="input" placeholder="Écris ta question…" />
     <button onclick="send()">➤</button>
@@ -104,73 +29,98 @@
 </div>
 
 <script>
-let data, currentChapter;
+// ==== JSON intégré directement ====
+const data = {
+  "app": { "name": "BotECOS" },
+  "themes": [
+    {
+      "id": "science",
+      "title": "Science",
+      "chapters": [
+        {
+          "id": "physique",
+          "title": "Physique",
+          "intro": "La physique étudie les lois fondamentales de l’univers.",
+          "questionSet": [
+            { "id": "q_phys_1", "patterns": ["c'est quoi la physique","definition physique"], "answer":"La physique est la science qui étudie la matière, l’énergie et leurs interactions." },
+            { "id": "q_phys_2", "patterns": ["c'est quoi la gravité","definition gravité"], "answer":"La gravité est une force d’attraction entre les corps." }
+          ]
+        },
+        {
+          "id": "biologie",
+          "title": "Biologie",
+          "intro": "La biologie est la science du vivant.",
+          "questionSet": [
+            { "id": "q_bio_1", "patterns": ["c'est quoi la biologie","definition biologie"], "answer":"La biologie étudie les êtres vivants." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "histoire",
+      "title": "Histoire",
+      "chapters": [
+        {
+          "id": "antiquite",
+          "title": "Antiquité",
+          "intro": "L’Antiquité est une période historique ancienne.",
+          "questionSet": [
+            { "id": "q_ant_1", "patterns":["c'est quoi l'antiquité"], "answer":"L’Antiquité commence avec l’écriture et se termine avec la chute de Rome." }
+          ]
+        }
+      ]
+    }
+  ],
+  "botBehavior": { "fallbackAnswer":"Je ne sais pas." }
+};
+
+// ==== Variables de session ====
+let currentChapter;
 let questionsAsked = new Set();
 const messages = document.getElementById("messages");
 const input = document.getElementById("input");
 const finishBtn = document.getElementById("finishBtn");
 
-// Normalisation des textes pour enlever accents et mettre en minuscules
-function normalizeText(text) {
-  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-}
+// ==== Fonctions utilitaires ====
+function normalizeText(text) { return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
+function botSay(text) { const div=document.createElement("div"); div.className="bot"; div.textContent=text; messages.appendChild(div); messages.scrollTop=messages.scrollHeight; }
+function userSay(text) { const div=document.createElement("div"); div.className="user"; div.textContent=text; messages.appendChild(div); messages.scrollTop=messages.scrollHeight; }
 
-function botSay(text) {
-  const div = document.createElement("div");
-  div.className = "bot";
-  div.textContent = text;
-  messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight;
-}
-
-function userSay(text) {
-  const div = document.createElement("div");
-  div.className = "user";
-  div.textContent = text;
-  messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight;
-}
-
+// ==== Affichage des thèmes ====
 function showThemes() {
   botSay("Bienvenue 👋 Choisis un thème :");
-
-  data.themes.forEach(theme => {
-    const btn = document.createElement("button");
-    btn.textContent = theme.title;
-    btn.onclick = () => selectTheme(theme);
-    btn.className = "choices";
+  data.themes.forEach(theme=>{
+    const btn=document.createElement("button");
+    btn.textContent=theme.title;
+    btn.onclick=()=>selectTheme(theme);
+    btn.className="choices";
     messages.appendChild(btn);
   });
 }
 
+// ==== Sélection d’un thème ====
 function selectTheme(theme) {
-  document.querySelectorAll(".choices").forEach(b => b.remove());
-
-  const chapter = theme.chapters[Math.floor(Math.random() * theme.chapters.length)];
+  document.querySelectorAll(".choices").forEach(b=>b.remove());
+  const chapter = theme.chapters[Math.floor(Math.random()*theme.chapters.length)];
   currentChapter = chapter;
   questionsAsked.clear();
-
   botSay(`📘 Cours sélectionné : ${chapter.title}`);
   botSay(chapter.intro);
-
   finishBtn.disabled = false;
 }
 
+// ==== Envoyer une question ====
 function send() {
   let text = input.value.trim();
-  if (!text || !currentChapter) return;
-
+  if(!text || !currentChapter) return;
   userSay(text);
   input.value = "";
-
   text = normalizeText(text);
 
-  // On cherche si la question correspond à l'un des patterns
   let matched = false;
-  currentChapter.questionSet.forEach(q => {
-    q.patterns.forEach(p => {
-      const pattern = normalizeText(p);
-      if (text.includes(pattern)) {
+  currentChapter.questionSet.forEach(q=>{
+    q.patterns.forEach(p=>{
+      if(text.includes(normalizeText(p))) {
         botSay(q.answer);
         questionsAsked.add(q.id);
         matched = true;
@@ -178,45 +128,34 @@ function send() {
     });
   });
 
-  if (!matched) botSay(data.botBehavior.fallbackAnswer);
+  if(!matched) botSay(data.botBehavior.fallbackAnswer);
 }
 
+// ==== Calcul du score ====
 function calculateScore() {
-  if (!currentChapter) return;
-
-  const totalQuestions = currentChapter.questionSet.length;
-  const answeredQuestions = questionsAsked.size;
-
+  if(!currentChapter) return;
+  const totalQuestions=currentChapter.questionSet.length;
+  const answeredQuestions=questionsAsked.size;
   botSay("📊 Fin du chapitre !");
   botSay(`Tu as répondu correctement à ${answeredQuestions} sur ${totalQuestions} questions.`);
 
-  // Conclusion : lister toutes les questions qu'il fallait poser
-  const missedQuestions = currentChapter.questionSet.filter(q => !questionsAsked.has(q.id));
-  if (missedQuestions.length > 0) {
+  const missedQuestions=currentChapter.questionSet.filter(q=>!questionsAsked.has(q.id));
+  if(missedQuestions.length>0) {
     botSay("💡 Pour avoir 20/20, il fallait poser les questions suivantes :");
-    missedQuestions.forEach(q => botSay("- " + q.patterns[0]));
+    missedQuestions.forEach(q=>botSay("- "+q.patterns[0]));
   } else {
     botSay("🎉 Parfait ! Tu as posé toutes les questions du chapitre.");
   }
 
-  currentChapter = null;
+  currentChapter=null;
   questionsAsked.clear();
-  finishBtn.disabled = true;
-
+  finishBtn.disabled=true;
   showThemes();
 }
 
-fetch("./data.json")
-  .then(res => res.json())
-  .then(json => {
-    data = json;
-    showThemes();
-  })
-  .catch(err => {
-    console.error("Erreur chargement JSON :", err);
-    botSay("⚠️ Impossible de charger les données. Vérifie que data.json est bien accessible.");
-  });
-</script>
+// ==== Démarrage ====
+showThemes();
 
+</script>
 </body>
 </html>
