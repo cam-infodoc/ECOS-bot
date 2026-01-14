@@ -4,54 +4,113 @@
 <meta charset="UTF-8">
 <title>BotECOS</title>
 <style>
-body { font-family: system-ui; background: #f0f0f0; display: flex; justify-content: center; padding: 20px; }
-.chat-container { background: white; width: 360px; height: 600px; border-radius: 12px; display: flex; flex-direction: column; overflow: hidden; }
-.messages { flex: 1; padding: 10px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
-.bot { align-self: flex-start; background: #E5E5EA; padding: 10px 14px; border-radius: 18px 18px 18px 4px; max-width: 75%; }
-.user { align-self: flex-end; background: #0084FF; color: white; padding: 10px 14px; border-radius: 18px 18px 4px 18px; max-width: 75%; }
-.input-area { display: flex; border-top: 1px solid #ddd; }
-input { flex: 1; border: none; padding: 12px; font-size: 14px; }
-button { border: none; padding: 12px; background: #0084FF; color: white; cursor: pointer; }
-#finishBtn { background: #ff5c7b; margin-left: 4px; }
+body {
+  font-family: system-ui;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
 
-/* === Styles des boutons thèmes côte à côte === */
+.chat-container {
+  background: white;
+  width: 360px;
+  height: 600px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== BOT AVEC AVATAR ===== */
+.bot-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.bot-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.bot {
+  background: #E5E5EA;
+  padding: 10px 14px;
+  border-radius: 18px 18px 18px 4px;
+  max-width: 75%;
+  white-space: pre-wrap;
+}
+
+/* ===== USER ===== */
+.user {
+  align-self: flex-end;
+  background: #0084FF;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 18px 18px 4px 18px;
+  max-width: 75%;
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+input {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+}
+
+button {
+  border: none;
+  padding: 12px;
+  background: #0084FF;
+  color: white;
+  cursor: pointer;
+}
+
+#finishBtn {
+  background: #ff5c7b;
+  margin-left: 4px;
+}
+
+/* ===== CHOICES ===== */
 .choices {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 10px;
 }
+
 .choices button {
-  width: calc(50% - 4px); /* moitié largeur - moitié gap */
+  width: calc(50% - 4px);
   padding: 12px;
   background: #0084FF;
   color: white;
   font-weight: bold;
-  border-radius: 12px;   /* coins arrondis */
+  border-radius: 12px;
   border: none;
   cursor: pointer;
-  text-align: center;
-  transition: background 0.2s;
-}
-.choices button:hover {
-  background: #005bb5;
-}
-  /* === Avatar du bot === */
-.bot-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-.bot-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border: 1px solid #ccc;
-  font-size: 18px;
 }
 </style>
 </head>
@@ -62,98 +121,129 @@ button { border: none; padding: 12px; background: #0084FF; color: white; cursor:
   <div class="input-area">
     <input id="input" placeholder="Écris ta question…">
     <button onclick="send()">➤</button>
-    <button id="finishBtn" onclick="calculateScore()">🏁 Terminer</button>
+    <button id="finishBtn" onclick="calculateScore()" disabled>🏁 Terminer</button>
   </div>
 </div>
 
 <script>
-// ===== JSON intégré =====
+// ===== DATA =====
 const data = {
-  "app": { "name": "BotECOS" },
-  "themes": [
+  themes: [
     {
-      "id": "HGE",
-      "title": "hépato-gastro-entérologie",
-      "chapters": [
+      id: "HGE",
+      title: "Hépato-gastro-entérologie",
+      chapters: [
         {
-          "id": "SDD1",
-          "title": "Constipation",
-          "intro": "Vous êtes gastro-entérologue et vous recevez Mme Dubois une patiente de 31 ans qui se plaint d'une constipation. Menez un interrogatoire détaillé pour rechercher le mode d'évolution et le mécanisme de la constipation. Décidez de la prescription d'examen.s complémentaire.s. Expliquez les MHD et d'automédication.",
-          "questionSet": [
-            { "id": "q_constip_1", "patterns":["évolution","combien de temps","combien de jours"], "answer":"Je suis constipée depuis environ 4 ans, sans aggravation particulière. Et je fais moins de 3 selles par semaine." },
-            { "id": "q_constip_2", "patterns":["altération état général","amaigrissement","perte de poids", "poids", "plus fatiguée"], "answer":"Je n'ai pas perdu de poids et je me sens pas plus fatiguée qu'avant Docteur." },
-            { "id": "q_constip_3", "patterns":["douleurs nocturnes","douleur la nuit","douleur insomniante", "vous empêche de dormir", "nuit", "douleur"], "answer":"Ma douleur abdominale ne m'empêche pas de bien dormir la nuit. Je dirais que c'est une douleur comme des spasmes." },
-            { "id": "q_constip_4", "patterns":["rectorragies","rectorragie","méléna", "sang dans les selles", "sang"], "answer":"Oula vous me faites peur Docteur, non non il n'y a pas de sang dans mes selles. On va faire une imagerie du coup Docteur ?" },
-            { "id": "q_constip_5", "patterns":["contractions abdominales avant la selle","épreintes","ténesme", "faux besoins", "glaires"], "answer":"Non je n'ai aucun signe de syndrome rectal." },
-            { "id": "q_constip_6", "patterns":["dures","petites","moins de selles par semaine", "moins souvent"], "answer":"C'est vrai que je vais moins à la selle qu'avant, environ 3 fois par semaine. D'ailleurs mes selles sont petites et très dures Docteur. Je bois beaucoup d'eau et je fais de la corde à sauter pour m'aider, ça marche pas trop..." },
-            { "id": "q_constip_7", "patterns":["efforts de poussée","vous devez pousser","incomplet", "reste encore des selles", "manoeuvres digitales", "évacuation des selles à la main"], "answer":"Ah non non je fais caca normalement. Je pousse même moins qu'avant à vrai dire, mais quand je suis allée à la selle c'est fini." },
-            { "id": "q_constip_8", "patterns":["gaz","nausées","vomissements", "vomi", "vomis"], "answer":"J'ai toujours des gaz, et non je n'ai jamais vomi ni vraiment eu de nausées." },
-            { "id": "q_constip_9", "patterns":["examens complémentaires","imagerie","scanner", "radiographie"], "answer":"Je vous fais confiance en terme d'imagerie." },
-            { "id": "q_constip_10", "patterns":["fibre","règles hygiéno-diététiques","mesures hygiéno-diététiques"], "answer":"Ok Docteur je ferai ce que vous me préconisez." },
-            { "id": "q_constip_11", "patterns":["laxatifs","médicaments","médicament", "laxatifs osmotiques", "laxatifs de lest"], "answer":"D'accord Docteur si ça peut m'aider je vous écoute !" },
+          id: "SDD1",
+          title: "Constipation",
+          intro: "Vous êtes gastro-entérologue et vous recevez Mme Dubois, 31 ans, pour une constipation chronique.",
+          recap: "Constipation chronique fonctionnelle sans signe de gravité. Il fallait éliminer les drapeaux rouges, rassurer la patiente et proposer des mesures hygiéno-diététiques en première intention.",
+          questionSet: [
+            { id:"q1", patterns:["évolution","combien de temps"], answer:"Je suis constipée depuis environ 4 ans." },
+            { id:"q2", patterns:["amaigrissement","perte de poids"], answer:"Non, je n'ai pas perdu de poids." },
+            { id:"q3", patterns:["sang","rectorragie"], answer:"Non, je n'ai jamais vu de sang dans mes selles." },
+            { id:"q4", patterns:["douleur","nuit"], answer:"Ça ne me réveille pas la nuit, ce sont plutôt des spasmes." },
+            { id:"q5", patterns:["laxatif","traitement"], answer:"Si ça peut m'aider, je veux bien essayer." }
           ]
-        },
+        }
+      ]
     }
   ],
-  "botBehavior": { "fallbackAnswer":"Je ne sais pas." }
+  botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
 
-// ===== Variables de session =====
-let currentChapter;
+// ===== VARIABLES =====
+let currentChapter = null;
 let questionsAsked = new Set();
 const messages = document.getElementById("messages");
 const input = document.getElementById("input");
 const finishBtn = document.getElementById("finishBtn");
 
-// ===== Utilitaires =====
-function normalizeText(text){ return text.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(); }
-function botSay(text){ const div=document.createElement("div"); div.className="bot"; div.textContent=text; messages.appendChild(div); messages.scrollTop=messages.scrollHeight; }
-function userSay(text){ const div=document.createElement("div"); div.className="user"; div.textContent=text; messages.appendChild(div); messages.scrollTop=messages.scrollHeight; }
+// ===== UTILS =====
+function normalizeText(text){
+  return text.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+}
 
-// ===== Thèmes =====
+/* ===== BOT TYPING EFFECT ===== */
+function botSay(text){
+  const container = document.createElement("div");
+  container.className = "bot-container";
+
+  const avatar = document.createElement("div");
+  avatar.className = "bot-avatar";
+  avatar.textContent = "🤖";
+
+  const bubble = document.createElement("div");
+  bubble.className = "bot";
+  bubble.textContent = "";
+
+  container.appendChild(avatar);
+  container.appendChild(bubble);
+  messages.appendChild(container);
+  messages.scrollTop = messages.scrollHeight;
+
+  let i = 0;
+  const speed = 20; // ↓ plus petit = plus rapide
+
+  const interval = setInterval(() => {
+    bubble.textContent += text.charAt(i);
+    i++;
+    messages.scrollTop = messages.scrollHeight;
+    if (i >= text.length) clearInterval(interval);
+  }, speed);
+}
+
+function userSay(text){
+  const div = document.createElement("div");
+  div.className = "user";
+  div.textContent = text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+// ===== THEMES =====
 function showThemes(){
-  botSay("Bienvenue 👋 Choisis une spécialité sur laquelle tu veux t'entrainer :");
+  botSay("Bienvenue 👋 Choisis une spécialité :");
   const wrapper = document.createElement("div");
   wrapper.className = "choices";
+
   data.themes.forEach(theme=>{
     const btn = document.createElement("button");
     btn.textContent = theme.title;
     btn.onclick = () => selectTheme(theme);
     wrapper.appendChild(btn);
   });
-  // Ajouter le wrapper dans un div pour que le flex fonctionne
-  const msgDiv = document.createElement("div");
-  msgDiv.appendChild(wrapper);
-  messages.appendChild(msgDiv);
+
+  messages.appendChild(wrapper);
 }
 
-// ===== Sélection thème et chapitre aléatoire =====
 function selectTheme(theme){
-  document.querySelectorAll(".choices").forEach(b=>b.remove());
-  const chapter = theme.chapters[Math.floor(Math.random()*theme.chapters.length)];
-  currentChapter = chapter;
+  document.querySelectorAll(".choices").forEach(e=>e.remove());
+  currentChapter = theme.chapters[0];
   questionsAsked.clear();
-  botSay(`📘 Cours sélectionné : ${chapter.title}`);
-  botSay(chapter.intro);
+  botSay(`📘 ${currentChapter.title}`);
+  botSay(currentChapter.intro);
   finishBtn.disabled = false;
 }
 
-// ===== Envoi d’une question =====
+// ===== CHAT =====
 function send(){
+  if(!currentChapter) return;
   let text = input.value.trim();
-  if(!text || !currentChapter) return;
+  if(!text) return;
+
   userSay(text);
   input.value = "";
-  text = normalizeText(text);
 
-  let matched=false;
+  const normalized = normalizeText(text);
+  let matched = false;
+
   currentChapter.questionSet.forEach(q=>{
     q.patterns.forEach(p=>{
-      const pattern = normalizeText(p);
-      if(text.includes(pattern)){
+      if(normalized.includes(normalizeText(p))){
         botSay(q.answer);
         questionsAsked.add(q.id);
-        matched=true;
+        matched = true;
       }
     });
   });
@@ -161,30 +251,22 @@ function send(){
   if(!matched) botSay(data.botBehavior.fallbackAnswer);
 }
 
-// ===== Calcul score et correction =====
+// ===== FIN =====
 function calculateScore(){
   if(!currentChapter) return;
-  const totalQuestions = currentChapter.questionSet.length;
-  const answeredQuestions = questionsAsked.size;
 
-  botSay("📊 Fin du chapitre !");
-  botSay(`Tu as répondu correctement à ${answeredQuestions} sur ${totalQuestions} questions.`);
+  botSay("📊 Fin de la consultation");
+  botSay(`Questions abordées : ${questionsAsked.size} / ${currentChapter.questionSet.length}`);
+  botSay("📝 Récapitulatif :");
+  botSay(currentChapter.recap);
 
-  const missedQuestions = currentChapter.questionSet.filter(q=>!questionsAsked.has(q.id));
-  if(missedQuestions.length>0){
-    botSay("💡 Pour avoir 20/20, il fallait poser les questions suivantes :");
-    missedQuestions.forEach(q=>botSay("- "+q.patterns[0]));
-  } else {
-    botSay("🎉 Parfait ! Tu as posé toutes les questions nécessaires. Tu as donc 20/20 !");
-  }
-
-  currentChapter=null;
+  currentChapter = null;
   questionsAsked.clear();
-  finishBtn.disabled=true;
+  finishBtn.disabled = true;
   showThemes();
 }
 
-// ===== Démarrage =====
+// ===== START =====
 showThemes();
 </script>
 
