@@ -412,10 +412,43 @@ const data = {
             { "id": "q_melena_10", "patterns":["transufser", "transfusion"], "answer":"Laura va prévenir la pharmacie." },
             { "id": "q_melena_11", "patterns":["IPP", "inhibiteurs de la pompe à protons", "IPP en IVSE"], "answer":"Laura va mettre des IPP en IVSE." },
             { "id": "q_melena_12", "patterns":["terlipressine", "somatostatine", "ocréotide"], "answer":"Laura va instaurer un traitement vasoactif." },
-            { "id": "q_melena_12", "patterns":["arrêt des antiagrégants plaquettaires", "arrêt des AAP", "arrêt des anticoagulants", "anticoagulant", "anticoagulants", "AAP", "antiagrégants plaquettaires", "antiagrégant plaquettaire", "anti agrégant plaquettaire", "anti agrégants plaquettaires], "answer":"Vous allez vérifier les traitements du patient et s'il a une antiagrégation plaquettaire ou un anticoagulant vous arrêterez sa prescription." },
+            { "id": "q_melena_12", "patterns":["arrêt des antiagrégants plaquettaires", "arrêt des AAP", "arrêt des anticoagulants", "anticoagulant", "anticoagulants", "AAP", "antiagrégants plaquettaires", "antiagrégant plaquettaire", "anti agrégant plaquettaire", "anti agrégants plaquettaires"], "answer": "Vous allez vérifier les traitements du patient et s'il a une antiagrégation plaquettaire ou un anticoagulant vous arrêterez sa prescription." },
             { "id": "q_melena_13", "patterns":["antibioprophylaxie", "antibiotiques", "C3G", "céphalosporines"], "answer":"Des C3G seront données en prophylaxie de l'infection du liquide d'ascite." },
             { "id": "q_melena_14", "patterns":["hémoglobine", "hémoglobinémie capillaire"], "answer":"L'hémoglobinémie capillaire est à 8 g/dL." },
             { "id": "q_melena_15", "patterns":["fibroscopie", "fibroscopie oesogastroduodénale"], "answer":"L'équipe de gastroentérologie est prévenue." }
+          ]
+        },
+
+        {
+          id: "SDD9",
+          title: "Amaigrissement",
+          intro: "Vous êtes médecin généraliste et recevez une patiente de 35 ans inquiète à propos d'un amaigrissement de 10 kg. Vous cherchez à l'interrogatoire et à l'examen clinique des signes de dénutrition et de carences et déterminez le mécanisme en cause.",
+          recap: [
+            "Il y a plusieurs mécanismes d'amaigrissement à connaître:",
+            "La diminution des ingestas.",
+            "La malabsorption : maladie coeliaque, Crohn, pancréatite chronique, cholestase. Et la maldigestion : insuffisance pancréatite, grêle court.",
+            "Augmentation des dépenses",
+            "Pertes caloriques / protéiques : sd néphrotique, entéropathie exsudative, lésions cutanées.",
+            "Il y a plusieurs causes d'amaigrissement à connaître: ",
+            "Organiques",
+            "Psychiatriques : baisse de singesta +/- augmentation de l'activité physique et manoeuvres de purge",
+            "Socio environnementales : difficulté d'accès aux aliments ou négligence",
+            "Iatrogène : diminution de l'appétit. La polymédication étant aussi une cause d'amaigrissement du sujet âgé notamment."
+          ],
+
+          questionSet: [
+            { "id": "q_maigre_1", "patterns":["baisse de vision nocturne"], "answer":"Non je vois correctement même la nuit."},
+            { "id": "q_maigre_2", "patterns":["fracture", "traumatisme basse énergie"], "answer":"Je me cogne de temps en temps mais je ne me suis rien cassé !" },
+            { "id": "q_maigre_3", "patterns":["hématomes", "hémarthrose", "hémarthroses", "hématome", "des bleus"], "answer":"Ah ça oui des hématomes j'en ai. Dès que je me cogne je fais des bleus super facilement. Et notamment il y a deux semaines je me suis cognée le genou et il y a gonflé énormément pour un tout petit choc." },
+            { "id": "q_maigre_4", "patterns":["purpura pétéchial", "saignement gingival", "saignement des gencives", "déchaussement dentaire", "perte de dents"], "answer":"Non je n'ai rien de tout ça." },
+            { "id": "q_maigre_5", "patterns":["dyspnée", "difficulé à respirer", "palpitations", "asthénie", "fatigue", "fatiguée", "dysphagie", "difficulté à avaler", "pâleur", "pâle", "koilonychie", "ongles incurvés", "cheveux cassants", "perte de cheveux", "alopécie", "glossite""], "answer":"Non, par contre je n'ai plus eu de règles depuis 3 mois et je ne suis pas enceinte car je n'ai pas eu de relations sexuelles depuis plus de 12 mois." },
+            { "id": "q_maigre_6", "patterns":["oedèmes des membres inférieurs", "OMI"], "answer":"Non je n'ai pas d'oedème des membres inférieurs." },
+            { "id": "q_maigre_7", "patterns":["déficit musculaire", "manoeuvre de Barré", "Barré", "Mangazzini", "Mangazini"], "answer":"Mon tonus musculaire est normal." },
+            { "id": "q_maigre_8", "patterns":["diminution des apports", "mangez moins"], "answer":"Je mange normalement." },
+            { "id": "q_maigre_9", "patterns":["diarrhée", "diarrhées", "selles graisseuses", "selles beiges", "selles claires", "douleurs abdominales", "mal au ventre"], "answer":"Oui maintenant que vous le dites, j'ai oublié de vous le dire mais je fais effectivement des diarrhées plusieurs fois par jour et elle sont plutôt graisseuses." },
+            { "id": "q_maigre_10", "patterns":["bonjour"], "answer":"Bonjour Docteur, je viens vous voir car j'ai perdu 10 kilos et ça m'angoisse énormément." },
+            { "id": "q_maigre_11", "patterns":["contexte", "combien de temps"], "answer":"J'ai perdu ces 10 kilos en 6 mois alors que mon poids de base est de 40 kg." },
+            { "id": "q_maigre_12", "patterns":["antécédents", "traitements", "allergie", "allergies", "tabac", "alcool", "toxiques"], "answer":"Je n'ai jamais été vraiment malade donc je ne prend pas de traitement. En plus de ça j'ai un train de vie sain donc pas d'alcool, pas de tabac et pas de toxiques autre." }
           ]
         }
       ]
