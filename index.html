@@ -59,6 +59,11 @@ body {
   white-space: pre-wrap;
 }
 
+.thinking {
+  font-style: italic;
+  opacity: 0.7;
+}
+
 /* ===== USER ===== */
 .user {
   align-self: flex-end;
@@ -165,6 +170,9 @@ const data = {
 // ===== VARIABLES =====
 let currentChapter = null;
 let questionsAsked = new Set();
+let botQueue = [];
+let botIsTyping = false;
+
 const messages = document.getElementById("messages");
 const input = document.getElementById("input");
 const finishBtn = document.getElementById("finishBtn");
@@ -174,8 +182,19 @@ function normalizeText(text){
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 }
 
-/* ===== BOT TYPING EFFECT ===== */
+/* ===== BOT QUEUE + TYPING ===== */
 function botSay(text){
+  botQueue.push(text);
+  if (!botIsTyping) processBotQueue();
+}
+function processBotQueue(){
+  if (botQueue.lenght === 0) {
+    botIsTyping = false;
+    return;
+  }
+  botIsTyping = true;
+  const text = botQueue.shift();
+  
   const container = document.createElement("div");
   container.className = "bot-container";
 
@@ -192,15 +211,31 @@ function botSay(text){
   messages.appendChild(container);
   messages.scrollTop = messages.scrollHeight;
 
-  let i = 0;
-  const speed = 20; // ↓ plus petit = plus rapide
+  let dots = 0;
+  const thinkingInterval = setInterval(() => {
+    dots = (dots + 1) %4;
+    bubble.textContent = "réfléchit" + "." .repeat(dots);
+  }, 400);
 
-  const interval = setInterval(() => {
-    bubble.textContent += text.charAt(i);
-    i++;
-    messages.scrollTop = messages.scrollHeight;
-    if (i >= text.length) clearInterval(interval);
-  }, speed);
+  setTimeout(() => {
+    clearInterval(tinkingInterval);
+    bubble.className = "bot";
+    bubble.textContent = "";
+
+    let i = 0;
+    const speed = 20;
+
+    const typingInterval = setInterval(() => {
+      bubble.textContent += text.chartAt(i);
+      i++;
+      messages.scrollTop = messages.scrollHeight;
+
+      if (i >= text.lenght) {
+        clearInterval(typingInterval);
+        processBotQueue();
+      }
+    }, speed);
+  }, 800);
 }
 
 function userSay(text){
