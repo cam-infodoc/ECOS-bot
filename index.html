@@ -13,8 +13,29 @@ body { font-family: system-ui; background: #f0f0f0; display: flex; justify-conte
 input { flex: 1; border: none; padding: 12px; font-size: 14px; }
 button { border: none; padding: 12px; background: #0084FF; color: white; cursor: pointer; }
 #finishBtn { background: #ff5c7b; margin-left: 4px; }
-.choices button { margin-top: 6px; width: 100%; border-radius: 12px; padding: 10px; background: #0084FF; color: white; font-weight: bold; border: none; cursor: pointer; transition: background 0.2s; }
-.choices button:hover { background: #005bb5; }
+
+  /* === Styles des boutons thèmes arrondis === */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+.choices button {
+  width: 100%;
+  border-radius: 20px; /* arrondi prononcé */
+  padding: 12px;
+  background: #0084FF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+.choices button:hover {
+  background: #005bb5;
+}
 </style>
 </head>
 <body>
@@ -27,7 +48,7 @@ button { border: none; padding: 12px; background: #0084FF; color: white; cursor:
     <button id="finishBtn" onclick="calculateScore()">🏁 Terminer</button>
   </div>
 </div>
-
+  
 <script>
 // ===== JSON intégré =====
 const data = {
