@@ -14,10 +14,12 @@
           "intro": "La physique étudie les lois fondamentales de l’univers.",
           "questionSet": [
             {
+              "id": "q_phys_1",
               "patterns": ["c'est quoi la physique", "definition physique"],
               "answer": "La physique est la science qui étudie la matière, l’énergie et leurs interactions."
             },
             {
+              "id": "q_phys_2",
               "patterns": ["c'est quoi la gravité", "definition gravité"],
               "answer": "La gravité est une force d’attraction entre les corps."
             }
@@ -29,6 +31,7 @@
           "intro": "La biologie est la science du vivant.",
           "questionSet": [
             {
+              "id": "q_bio_1",
               "patterns": ["c'est quoi la biologie", "definition biologie"],
               "answer": "La biologie étudie les êtres vivants."
             }
@@ -47,6 +50,7 @@
           "intro": "L’Antiquité est une période historique ancienne.",
           "questionSet": [
             {
+              "id": "q_ant_1",
               "patterns": ["c'est quoi l'antiquité"],
               "answer": "L’Antiquité commence avec l’écriture et se termine avec la chute de Rome."
             }
