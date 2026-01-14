@@ -480,6 +480,40 @@ const data = {
             { "id": "q_ictere_12", "patterns":["échographie abdominale", "écho abdo", "écho-doppler abdominal"], "answer":"Une échographie abdominale est prescrite." },
             { "id": "q_ictere_13", "patterns":["Bonjour"], "answer":"Bonjour Docteur, je viens vous voir car je trouve que je suis de plus en plus jaune de peau depuis 2 mois. Il faut savoir que je ne suis jamais malade, je ne prend même pas de traitements. Je mange sainement et je ne fume ou bois pas." }
           ]
+        },
+
+        {
+          id: "SDD11",
+          title: "Traumatisme abdomino-pelvien",
+          intro: "Vous êtes médecin de garde aux urgences et vous prenez en charge un patient de 32 ans Mr FERNANDES pour un AVP survenu à moto. Le patient est amené par les SP en choc hémodynamique, en cours de stabilisation, vous avez réalisé une échographie abdominale, une radiographie thoracique et une radio du bassin. Le patient a reçu du NaCl 0,9%, 3 CGR et de la noradrénaline. Ce bilan a retrouvé une rupture de la rate avec hémopéritoine indiquant une PEC chirurgicale urgente. Le patient est PEC au bloc opératoire, sa femme est installé dans un box de consultation pour réaliser l'annonce. Annoncez la PEC et le pronostic à la femme du patient et répondez à ses questions.",
+          recap: [
+            "Il faut se souvenir de la physiopathologie des atteintes des organes abdominaux après un traumatisme.",
+            "Traumatisme hépatique : trauma fermé / plaie hypochondre D ou hémithorax D / fractures dernières côtes. Si hémopéritoine : instabilité + épanchement. Si trauma + signes angiocholite : hémobilie. Sur la bio on retrouve une anémie aigue et une cytolyse hépatique. Au scanner on peut voir un hématome sous capsulaire, une fracture hépatique, une contusion ou des lésions vasculaires.",
+            "Lésions pancréatiques : compression du pancréas, chutes à vélo, trauma par le volant. Douleurs solaires, abdomen chirurgical. Bio avec élévation de la lipase, élévation de l'amylase. Scanner : fractures, lésions de contusions.",
+            "Lésions de la rate : trauma fermé, fractures des dernières côtes G, plaie hypochondre G, plaie thoracique du côté G. Hémopéritoine. Anémie aigue sur la biologie sanguine. Bilan hépatique instable, radio tho et écho FAST possible. Scanner : hématome sous capsulaire, contusion, lésions vasculaires du hile.",
+            "Examens complémentaires : FAST écho dès l'arrivée, recherche d'hémopéritoine, si hémopéritoine traumatisme grave de la rate et/ou du foie. Puis si possible réalisation d'un scanner",
+            "Si traumatisme hépatique : traitement médical hémodynamique, sinon laparotomie d'hémostase",
+            "Si traumatisme pancréatique : traitement médical de la pancréatite aigue, traitement chir si plaie par arme blanche ou à feu / instabilité HD / lésions canalaires",
+            "Si traumatisme splénique : traitement médical si patient stable +/- embolisation artérielle splénique, sinon splénectomie. Rappel : vaccin pneumocoque, haemophilus, méningocoque et grippe + ATB prophylaxie dans les suites.",
+            "Si hématome rétropéritonéale : traitement médical avec ceinture pelvienne si suspi de fracture du bassin. Artérioembolisation si fracture du bassin. Ttt chirurgical : bride antérieure ou clamp pelvien, si échec packing pelvien."
+
+          ],
+
+          questionSet: [
+            { "id": "q_traumabdo_1", "patterns":["bonjour"], "answer":"Bonjour Docteur, je suis bien Mme FERNANDES. Merci de me recevoir pour discuter de mon conjoint. J'ai appris qu'il avait eu un accident de moto. On m'a dit qu'il était au bloc opératoire, je peux savoir pourquoi ?"},
+            { "id": "q_traumabdo_2", "patterns":["bloc opératoire", "opéré", "en salle d'opération"], "answer":"Donc là des chirurgiens l'opèrent car il saigne mais pourquoi saigne t'il ? " },
+            { "id": "q_traumabdo_3", "patterns":["rate", "saignement splénique", "saigne de la rate", "sa rate saigne", "rupture de rate", "rupture splénique"], "answer":"Ok donc je comprend qu'il a eu une rupture de rate. On lui a donné quoi comme traitement avant le bloc ?" },
+            { "id": "q_traumabdo_4", "patterns":["remplissage", "NaCl", "transufsion", "noradrénaline"], "answer":"D'accord donc il a perdu beaucoup de sang et n'était pas stable. Qu'est-ce qui fait qu'on pouvait pas attendre pour faire cette chirurgie ?" },
+            { "id": "q_traumabdo_5", "patterns":["pertes sanguines", "instable", "instabilité"], "answer":"Il était instable d'accord. Et après cette opération c'est fini ? A quoi elle sert exactement ?" },
+            { "id": "q_traumabdo_6", "patterns":["arrêter le saignement", "autre opération", "damage control"], "answer":"Je vois donc c'est pour faire pansement en gros. Elle sera longue cette opération ?" },
+            { "id": "q_traumabdo_7", "patterns":["courte", "rapide"], "answer":"D'accord donc plutôt rapide. Et il est endormi ?" },
+            { "id": "q_traumabdo_8", "patterns":["anesthésie générale"], "answer":"D'accord. Ensuite il rentre à la maison ?" },
+            { "id": "q_traumabdo_9", "patterns":["hospitalisé", "soins intensifs"], "answer":"Oh je vois. C'est pas rassurant tout ça. Et il s'en sortira là c'est sur ?" },
+            { "id": "q_traumabdo_10", "patterns":["décès"], "answer":"Il peut décéder ? Oh mon dieu... Je ne sais pas quoi vous dire... Il va garder sa rate s'il survit" },
+            { "id": "q_traumabdo_11", "patterns":["splénectomie"], "answer":"Ah on pourrait lui enlever la rate... Bon et s'il se sort de tout ça il aura des traitements pendant un certain temps j'imagine ?" },
+            { "id": "q_traumabdo_12", "patterns":["infection", "infectieux", "vaccins", "vaccinations", "antibiotiques", "antibioprophylaxie"], "answer":"D'accord donc il devra bien être à jour de ses vaccins et prendre un antibiotique. " },
+            { "id": "q_traumabdo_13", "patterns":["autres questions", "tout compris", "compris"], "answer":"J'ai compris ce que vous me dites Docteur, merci pour toutes ses informations." }
+          ]
         }
       ]
     }
