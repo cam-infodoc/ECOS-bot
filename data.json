@@ -5,29 +5,50 @@
 
   "themes": [
     {
-      "id": "theme_science",
+      "id": "science",
       "title": "Science",
       "chapters": [
         {
-          "id": "science_physique",
+          "id": "physique",
           "title": "Physique",
+          "intro": "La physique étudie les lois fondamentales de l’univers.",
           "questionSet": [
             {
-              "id": "q_phys_1",
-              "patterns": [
-                "qu'est-ce que la physique",
-                "c'est quoi la physique",
-                "définition physique"
-              ],
-              "answer": "La physique est la science qui étudie les lois fondamentales de l’univers."
+              "patterns": ["c'est quoi la physique", "definition physique"],
+              "answer": "La physique est la science qui étudie la matière, l’énergie et leurs interactions."
             },
             {
-              "id": "q_phys_2",
-              "patterns": [
-                "qu'est-ce que la gravité",
-                "c'est quoi la gravité"
-              ],
-              "answer": "La gravité est une force qui attire les objets entre eux."
+              "patterns": ["c'est quoi la gravité", "definition gravité"],
+              "answer": "La gravité est une force d’attraction entre les corps."
+            }
+          ]
+        },
+        {
+          "id": "biologie",
+          "title": "Biologie",
+          "intro": "La biologie est la science du vivant.",
+          "questionSet": [
+            {
+              "patterns": ["c'est quoi la biologie", "definition biologie"],
+              "answer": "La biologie étudie les êtres vivants."
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "histoire",
+      "title": "Histoire",
+      "chapters": [
+        {
+          "id": "antiquite",
+          "title": "Antiquité",
+          "intro": "L’Antiquité est une période historique ancienne.",
+          "questionSet": [
+            {
+              "patterns": ["c'est quoi l'antiquité"],
+              "answer": "L’Antiquité commence avec l’écriture et se termine avec la chute de Rome."
             }
           ]
         }
@@ -35,30 +56,7 @@
     }
   ],
 
-  "state": {
-    "selectedThemeId": "theme_science",
-    "selectedChapterId": "science_physique"
-  },
-
   "botBehavior": {
     "fallbackAnswer": "Je ne sais pas."
-  },
-
-  "chat": {
-    "ui": {
-      "layout": "messenger",
-      "botSide": "left",
-      "userSide": "right",
-      "bubbleStyle": {
-        "bot": {
-          "backgroundColor": "#E5E5EA",
-          "textColor": "#000000"
-        },
-        "user": {
-          "backgroundColor": "#0084FF",
-          "textColor": "#FFFFFF"
-        }
-      }
-    }
   }
 }
