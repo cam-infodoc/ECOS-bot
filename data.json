@@ -1,0 +1,64 @@
+{
+  "app": {
+    "name": "BotECOS"
+  },
+
+  "themes": [
+    {
+      "id": "theme_science",
+      "title": "Science",
+      "chapters": [
+        {
+          "id": "science_physique",
+          "title": "Physique",
+          "questionSet": [
+            {
+              "id": "q_phys_1",
+              "patterns": [
+                "qu'est-ce que la physique",
+                "c'est quoi la physique",
+                "définition physique"
+              ],
+              "answer": "La physique est la science qui étudie les lois fondamentales de l’univers."
+            },
+            {
+              "id": "q_phys_2",
+              "patterns": [
+                "qu'est-ce que la gravité",
+                "c'est quoi la gravité"
+              ],
+              "answer": "La gravité est une force qui attire les objets entre eux."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "state": {
+    "selectedThemeId": "theme_science",
+    "selectedChapterId": "science_physique"
+  },
+
+  "botBehavior": {
+    "fallbackAnswer": "Je ne sais pas."
+  },
+
+  "chat": {
+    "ui": {
+      "layout": "messenger",
+      "botSide": "left",
+      "userSide": "right",
+      "bubbleStyle": {
+        "bot": {
+          "backgroundColor": "#E5E5EA",
+          "textColor": "#000000"
+        },
+        "user": {
+          "backgroundColor": "#0084FF",
+          "textColor": "#FFFFFF"
+        }
+      }
+    }
+  }
+}
