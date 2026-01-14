@@ -384,6 +384,37 @@ const data = {
             { "id": "q_massepar_13", "patterns":["antécédents", "traitements", "allergie", "allergies", "tabac", "alcool", "toxiques"], "answer":"Je n'ai aucuns antécédents et je ne prend aucun traitement. Aussi je ne fume pas, je ne bois pas et je n'ai pas d'allergies." },
             { "id": "q_massepar_14", "patterns":["autres questions", "tout compris"], "answer":"J'ai tout compris, merci beaucoup Docteur." }
           ]
+        },
+
+        {
+          id: "SDD8",
+          title: "Méléna / rectorragies",
+          intro: "Vous êtes médecin de garde aux urgences et prenez en charge un patient de 56 ans qui présente des hématémèses abondantes accompagnées de méléna. Vous êtes accompagné.e de Laura infirmière des urgences. A l'inspection votre patient présente des angiomes stellaires et un ictère. Evaluez la tolérance hémodynamique du patient et expliquez à Laura la PEC immédiate et à court terme du patient.",
+          recap: [
+            "Le bilan biologique doit contenir : NFS, plaquettes, TP et TCA, créatininémie, ionogramme sanguin, groupe sanguin, gazométrie artérielle.",
+            "Il faut différencier l'hémorragie haute (au dessus de l'angle duodénojéjunal) de l'hémorragie basse.",
+            "Une lésion de l'estomac de l'oesophage ou du duodénum peut donner des hématémèses, du méléna ou des rectorragies seulement si accompagnés d'un choc hémodynamique.",
+            "Une lésion intestinale ou colique peut donner du méléna ou des rectorragies (colon G)."
+          ],
+
+          questionSet: [
+            { "id": "q_melena_1", "patterns":["constantes", "paramètres", "paramètres vitaux"], "answer":"TA 75/50mmHg. FC 120 bpm. FR 22/mn. Sat 95% en AA. Température 36,5°C."},
+            { "id": "q_melena_2", "patterns":["marbrures", "marbrure"], "answer":"Présence de marbrures aux genoux." },
+            { "id": "q_melena_3", "patterns":["TRC", "temps de recoloration cutanée"], "answer":"TRC à 4 secondes." },
+            { "id": "q_melena_4", "patterns":["baisse température des extrémités", "extrémités froides", "extrémités"], "answer":"Extrémités froides." },
+            { "id": "q_melena_5", "patterns":["confusion", "score de glasgow"], "answer":"Patient non interrogeable." },
+            { "id": "q_melena_6", "patterns":["NFS", "plaquettes", "groupe sanguin", "TP", "TCA", "ionogramme", "créatininémie", "gaz du sang", "gazométrie artérielle"], "answer":"Laura va piquer le patient." },
+            { "id": "q_melena_7", "patterns":["unité de soins intensifs", "monitorer", "monitoring"], "answer":"C'est noté." },
+            { "id": "q_melena_8", "patterns":["2 voies veineuses périphériques", "2 VVP", "deux VVP", "deux voies veineuses périphériques"], "answer":"Laura va poser 2 VVP de bon calibre." },
+            { "id": "q_melena_9", "patterns":["remplissage vasculaire", "NaCl", "NaCl 0,9%", "cristalloïdes"], "answer":"Laura va perfuser le patient avec du NaCl 0,9%." },
+            { "id": "q_melena_10", "patterns":["transufser", "transfusion"], "answer":"Laura va prévenir la pharmacie." },
+            { "id": "q_melena_11", "patterns":["IPP", "inhibiteurs de la pompe à protons", "IPP en IVSE"], "answer":"Laura va mettre des IPP en IVSE." },
+            { "id": "q_melena_12", "patterns":["terlipressine", "somatostatine", "ocréotide"], "answer":"Laura va instaurer un traitement vasoactif." },
+            { "id": "q_melena_12", "patterns":["arrêt des antiagrégants plaquettaires", "arrêt des AAP", "arrêt des anticoagulants", "anticoagulant", "anticoagulants", "AAP", "antiagrégants plaquettaires", "antiagrégant plaquettaire", "anti agrégant plaquettaire", "anti agrégants plaquettaires], "answer":"Vous allez vérifier les traitements du patient et s'il a une antiagrégation plaquettaire ou un anticoagulant vous arrêterez sa prescription." },
+            { "id": "q_melena_13", "patterns":["antibioprophylaxie", "antibiotiques", "C3G", "céphalosporines"], "answer":"Des C3G seront données en prophylaxie de l'infection du liquide d'ascite." },
+            { "id": "q_melena_14", "patterns":["hémoglobine", "hémoglobinémie capillaire"], "answer":"L'hémoglobinémie capillaire est à 8 g/dL." },
+            { "id": "q_melena_15", "patterns":["fibroscopie", "fibroscopie oesogastroduodénale"], "answer":"L'équipe de gastroentérologie est prévenue." }
+          ]
         }
       ]
     }
