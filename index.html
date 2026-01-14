@@ -287,6 +287,40 @@ const data = {
             { "id": "q_hepatomeg_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, je suis bien Mr BERNARD. Je viens car mon médecin généraliste m'a envoyé vers vous." },
             { "id": "q_hepatomeg_13", "patterns":["échographie", "écho-doppler", "écho", "écho-Doppler"], "answer":"Nous retenons l'indication d'une échographie abdominale." }
           ]
+        },
+
+        {
+          id: "SDD6",
+          title: "Incontinence fécale",
+          intro: "Vous êtes médecin généraliste et vous recevez Mr DUPONT, 40 ans, qui vous consulte pour une perte involontaire de selles. Interrogez le patient pour caractériser sa plainte et avancer sur la démarche étiologique, menez un examen clinique, énoncez votre principale hypothèse.",
+          recap: [
+            "L'incontinence fécale peut survenir dans les situations suivantes",
+            "En période de post-partum : au même titre qu'une incontinence urinaire suite à des lésions périnéales lors du travail et qui indique une rééducation périnéale.",
+            "Après des années d'évolution d'une constipation de type terminale.",
+            "A la suite d'une myélite dans le cadre d'une SEP.",
+            "Lors d'un syndrome de la queue de cheval où les incontinences urinaires et fécales sont précoces à l'inverse de la compression médullaire.",
+            "Dans le cadre d'une neuropathie par dysautonomie (diabète++)."
+          ],
+
+          questionSet: [
+            { "id": "q_incfec_1", "patterns":["depuis quand", "combien de temps", "épisode"], "answer":"Depuis 2 jours j'ai des selles involontaires de jour comme de nuit... C'est bien la première fois que ça m'arrive.},
+            { "id": "q_incfec_2", "patterns":["constipation","constipation chronique"], "answer":"Non je ne suis pas particulièrement constipé." },
+            { "id": "q_incfec_3", "patterns":["diarrhée", "épisode de diarrhée", "transit", "selles"], "answer":"Je n'ai pas eu de diarrhées non plus en fait mes selles sont normales... je  ne les sens juste pas arriver comme avant?" },
+            { "id": "q_incfec_4", "patterns":["dysurie", "urgenturie", "incontinence urinaire", "urines", "pipi"], "answer":"Oui j'ai du mal à uriner Docteur. J'ai l'impression que mon jet est faible et pareil je sens pas bien quand je vais uriner. Pour être honnête j'ai aussi eu quelques fuites d'urines. Puis alors niveau érection, c'est pas la fête... ça tient pas longtemps quoi..." },
+            { "id": "q_incfec_5", "patterns":["douleur rachidienne", "mal au dos"], "answer":"Oui j'ai mal au dos depuis quelques mois. Ca irradie dans mes jambes et là récemment depuis 3 jours ça c'est franchement aggravé." },
+            { "id": "q_incfec_6", "patterns":["imagerie", "chute", "port de charges lourdes"], "answer":"Oui j'ai porté des charges lourdes." },
+            { "id": "q_incfec_7", "patterns":["hypoesthésie", "paresthésies", "sentez moins bien", "fourmis", "fourmillements", "fourmillement"], "answer":"Oui j'ai l'impression au niveau des jambes de sentir un peu moins bien." },
+            { "id": "q_incfec_8", "patterns":["examen moteur", "psoas", "quadriceps", "tibial antérieur", "triceps sural", "fléchisseurs des orteils", "extenseurs des orteils", "ischio-jambiers", "ischiojambiers"], "answer":"Les muscles tibio-antérieurs, extenseurs des orteils, fléchisseurs des orteils et triceps suraux sont côtés à 3/5." },
+            { "id": "q_incfec_9", "patterns":["examen sensitif", "sensibilité"], "answer":"Trouble sensitif postérolatéral des 2 membres inférieurs." },
+            { "id": "q_incfec_10", "patterns":["ROT","réflexes ostéo-tendineux","ROT rotuliens", "ROT achiléens"], "answer":"ROT achiléens absents des deus côtés." },
+            { "id": "q_incfec_11", "patterns":["réflexe bulbo-caverneux"], "answer":"Réflexe bulbo-caverneux aboli." },
+            { "id": "q_incfec_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, je suis bien Mr DUPONT. Je viens car j'ai eu un épisode d'incontinence fécale et à mon âge ça m'inquiète pas mal..." },
+            { "id": "q_incfec_13", "patterns":["toucher rectal", "sensibilité périnéale"], "answer":"Perte du tonus et de la contraction volontaire du sphincter anal au TR." },
+            { "id": "q_incfec_14", "patterns":["raideur rachidienne", "raideur rachis", "raideur"], "answer":"Ce sont surtout les douleurs le problème." },
+            { "id": "q_incfec_15", "patterns":["signe de la sonnette", "signe de Lasègue", "signe de Léri"], "answer":"Absence de signe de la sonnette, signe de Lasègue ou signe de Léri." },
+            { "id": "q_incfec_16", "patterns":["syndrome de la queue de cheval", "queue de cheval"], "answer":"Hypothèse diagnostique confirmée." },
+            { "id": "q_incfec_17", "patterns":["antécédents", "traitement", "traitements", "allergie"], "answer":"Aucun antécédent, aucun traitement et pas d'allergies, habituellement tout va bien." },
+          ]
         }
       ]
     }
