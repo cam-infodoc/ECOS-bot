@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>BotECOS</title>
-
   <style>
     body {
       font-family: system-ui;
@@ -73,6 +72,7 @@
       margin-top: 6px;
       width: 100%;
       border-radius: 12px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -89,7 +89,7 @@
 
 <script>
 let data, currentChapter;
-
+let questionsAsked = new Set();
 const messages = document.getElementById("messages");
 const input = document.getElementById("input");
 
@@ -116,18 +116,27 @@ function showThemes() {
     const btn = document.createElement("button");
     btn.textContent = theme.title;
     btn.onclick = () => selectTheme(theme);
-    btn.className = "bot";
+    btn.className = "choices";
     messages.appendChild(btn);
   });
 }
 
 function selectTheme(theme) {
-  const chapter =
-    theme.chapters[Math.floor(Math.random() * theme.chapters.length)];
+  // Nettoyer les boutons
+  document.querySelectorAll(".choices").forEach(b => b.remove());
+  // Choix aléatoire d'un chapitre
+  const chapter = theme.chapters[Math.floor(Math.random() * theme.chapters.length)];
   currentChapter = chapter;
+  questionsAsked.clear();
 
   botSay(`📘 Cours sélectionné : ${chapter.title}`);
   botSay(chapter.intro);
+
+  // ajouter bouton terminer chapitre
+  const endBtn = document.createElement("button");
+  endBtn.textContent = "Terminer le chapitre";
+  endBtn.onclick = calculateScore;
+  messages.appendChild(endBtn);
 }
 
 function send() {
@@ -141,7 +150,29 @@ function send() {
     q.patterns.some(p => text.includes(p))
   );
 
-  botSay(match ? match.answer : data.botBehavior.fallbackAnswer);
+  if (match) {
+    botSay(match.answer);
+    questionsAsked.add(match.id);
+  } else {
+    botSay(data.botBehavior.fallbackAnswer);
+  }
+}
+
+function calculateScore() {
+  if (!currentChapter) return;
+
+  const totalQuestions = currentChapter.questionSet.length;
+  const answeredQuestions = questionsAsked.size;
+  const missed = totalQuestions - answeredQuestions;
+
+  botSay("📊 Fin du chapitre !");
+  botSay(`Tu as répondu correctement à ${answeredQuestions} sur ${totalQuestions} questions.`);
+  if (missed > 0) {
+    botSay(`Tu as perdu ${missed} point(s) pour les questions non posées.`);
+  }
+
+  // reset chapitre pour pouvoir choisir un autre thème
+  currentChapter = null;
 }
 
 fetch("data.json")
