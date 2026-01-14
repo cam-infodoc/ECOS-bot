@@ -129,10 +129,8 @@ function showThemes() {
 }
 
 function selectTheme(theme) {
-  // Supprime les boutons de thème
   document.querySelectorAll(".choices").forEach(b => b.remove());
 
-  // Choix aléatoire d'un chapitre
   const chapter = theme.chapters[Math.floor(Math.random() * theme.chapters.length)];
   currentChapter = chapter;
   questionsAsked.clear();
@@ -140,7 +138,6 @@ function selectTheme(theme) {
   botSay(`📘 Cours sélectionné : ${chapter.title}`);
   botSay(chapter.intro);
 
-  // Réactiver le bouton terminer
   finishBtn.disabled = false;
 }
 
@@ -174,14 +171,20 @@ function calculateScore() {
   botSay(`Tu as répondu correctement à ${answeredQuestions} sur ${totalQuestions} questions.`);
   if (missed > 0) {
     botSay(`Tu as perdu ${missed} point(s) pour les questions non posées.`);
+
+    // Afficher les questions oubliées
+    const missedQuestions = currentChapter.questionSet.filter(q => !questionsAsked.has(q.id));
+    botSay("❌ Questions que tu as oubliées :");
+    missedQuestions.forEach(q => {
+      botSay("- " + q.patterns[0]); // afficher la première formulation de la question
+    });
   }
 
-  // Reset pour pouvoir choisir un nouveau thème
+  // Reset pour un nouveau chapitre
   currentChapter = null;
   questionsAsked.clear();
   finishBtn.disabled = true;
 
-  // proposer de choisir un nouveau thème
   showThemes();
 }
 
