@@ -258,7 +258,35 @@ const data = {
             { "id": "q_dlanale_13", "patterns":["anuscope", "anuscopie"], "answer":"A l'anuscopie vous retrouvez un prolapsus hémorroïdaire interne." },
             { "id": "q_dlanale_14", "patterns":["diagnostic", "hypothèse diagnostique", "crise hémorroïdiaire"], "answer":"Votre diagnostic est retenu." }
           ]
-        }    
+        },
+
+        {
+          id: "SDD5",
+          title: "Hépatomégalie",
+          intro: "Vous êtes gastro-entérologue et vous recevez Mr BERNARD, 54 ans, qui vous est adressé par son médecin traitant. Il vous fournit la lettre suivante : Cher / Chère confrère / consoeur, je vous adresse Mr BERNARD âgé de 54 ans, à qui j'ai découvert à l'examen clinique une hépatomégalie à l'occasion d'une consultation de suivi de son HTA. Je lui ai prescrit un bilan hépatique complet, qui retrouve des arguments en faveur d'une pathologie hépatique chronique. Je sollicite votre expertise pour la PEC diagnostique et thérapeutique de notre patient. Confraternellement. Recherchez à l'interrogatoire et à l'examen clinique les éléments pour orienter l'enquête étiologique et proposer un examen complémentaire de 1e intention.",
+          recap: [
+            "Pour les ECOS il faut savoir caractériser une douleur, on demande : localisation, intensité, type, horaire, irradiation, facteurs aggravants ou améliorants, signes associés, évolution.",
+            "La douleur anale après la selle doit vous évoquer : crise hémorroïdaire (douleur pendant quelques minutes déclenchée par la selle, +/- saignements, dure quelques jours), fissure anale (douleur quelques minutes après la selle puis récidive de la douleur des heures après la selle, +/- saignements, dure des semaines).",
+            "La douleur anale avant la selle doit vous évoquer : fécalome, cancer du rectum. Les deux par syndrome rectal (ténesme, épreintes, émissions glairo sanglantes afécales).",
+            "La douleur anale indépendante de la selle doit vous évoquer : thrombose hémorroïdaire externe (tuméfaction bleue limitée, douleur au toucher et à la position assise, dégressive sur quelques heures à quelques jours), abcès anal (tuméfaction mal limitée, douleur au toucher et assise, continue sur quelques heures / jours)."
+          ],
+
+          questionSet: [
+            { "id": "q_hepatomeg_1", "patterns":["antécédents", "antécédents familiaux"], "answer":"Moi je suis suivi pour une hypertension et une hypercholestérolémie. Mais je sais que mon père avait une cirrhose et c'est un cancer du foie qui l'a tué..." },
+            { "id": "q_hepatomeg_2", "patterns":["consommation","alcool","tabac", "fumez", "buvez", "alcoolo-tabagique"], "answer":"Je n'ai jamais fumé ! Par contre, bon c'est vrai que je ne me refuse jamais mes petits verres de vin... J'en bois, quoi, allez, 3 verres par jour pas plus Docteur !" },
+            { "id": "q_hepatomeg_3", "patterns":["obésité", "hypertension", "dyslipidémie", "cholestérol", "hyperglycémie", "diabète"], "answer":"J'ai de la tension et du cholestérol. Pour le reste non." },
+            { "id": "q_hepatomeg_4", "patterns":["voyage","zone d'endémie", "toxicomanie", "drogues", "rapports sexuels", "sexe"], "answer":"Je n'ai jamais pris de drogue moi alors me piquer ? Certainement pas ça va pas ? Puis moi j'ai jamais été un grand fétard alors des relations sexuelles non protégées très peu pour moi. Par contre oui on est partis au Moyen Orient il y a 6 mois, c'était pas mal." },
+            { "id": "q_hepatomeg_5", "patterns":["asthénie", "fatigue", "perte de poids", "amaigrissement"], "answer":"Je suis pas plus fatigué que d'habitude et je n'ai pas perdu de poids." },
+            { "id": "q_hepatomeg_6", "patterns":["aires ganglionnaires", "ganglions", "ganglion", "Troisier", "pelviens", "pelvien"], "answer":"Aucun ganglion, absence de ganglion de Troisier." },
+            { "id": "q_hepatomeg_7", "patterns":["fièvre", "frissons", "frisson", "sepsis"], "answer":"Absence de fièvre, absence de frissons." },
+            { "id": "q_hepatomeg_8", "patterns":["angiomes stellaires", "inspection abdominale", "angiome stellaire", "leuconychie", "leuconychies", "hippocratisme digital", "hypogonadisme", "ictère", "érythrose palmaire"], "answer":"Présence d'un hippocratisme digital, des angiomes stellaires et un ictère conjonctival." },
+            { "id": "q_hepatomeg_9", "patterns":["ascite", "splénomégalie", "circulation collatérale"], "answer":"Absence d'ascite, splénomégalie ou circulation collatérale." },
+            { "id": "q_hepatomeg_10", "patterns":["ictère","prurit","selles décolorées", "urines foncées"], "answer":"Absence d'un syndrome de cholestase." },
+            { "id": "q_hepatomeg_11", "patterns":["palpation abdominale", "bord tranchant"], "answer":"Absence de bord tranchant du foie à la palpation abdominale." },
+            { "id": "q_hepatomeg_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, je suis bien Mr BERNARD. Je viens car mon médecin généraliste m'a envoyé vers vous." },
+            { "id": "q_hepatomeg_13", "patterns":["échographie", "écho-doppler", "écho", "écho-Doppler"], "answer":"Nous retenons l'indication d'une échographie abdominale." }
+          ]
+        }
       ]
     }
   ],
