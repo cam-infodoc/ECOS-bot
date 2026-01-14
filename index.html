@@ -200,6 +200,35 @@ const data = {
             { "id": "q_dia_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." },
           ]
         }
+      
+        {
+          id: "SDD3",
+          title: "Douleur abdominale",
+          intro: "Vous êtes médecin aux urgences et vous recevez à 14h Mr JEAN, un patient de 60 ans amené aux urgences par les SP pour d'importantes douleurs abdominales. A l'interrogatoire vous notez qu'il n'a pour seul antécédent qu'une constipation chronique, qu'il a débuté des AINS il y a 2 jours pour des douleurs abdominales situées en bas à gauche du ventre, que depuis ce matin les douleurs sont plus violentes et diffuses côtées à 8/10 et qu'il n'a pas d'arrêt des gaz et matières. Vous êtes accompagné de votre infirmier Clément. Examinez le patient et évaluez le degré d'urgence de la situation. Expliquez la prise en charge dans les prochaines heures à Mr JEAN.",
+          recap: [
+            "Pour les ECOS il y a plusieurs pathologies responsables de douleur abdominale à connaître.",
+            "La colique hépatique : irradiation à l'épaule droite ou interscapulaire. La pancréatite aigue : irradiation dorsale. L'appendicite aigue : début en ombilical / épigastre puis localisation en FID. L'ulcère gastrique : post-prandial tardif. La strangulation : brutal puis localisation diffuse. La colique néphrétique : irradiation vers les OGE.",
+            "Il faut bien différencier la douleur fonctionnelle et organique.",
+            "La douleur fonctionnelle est chronique, survient >= 1 fois par semaine, à type de spasme, surtout en FI ou hypogastre, matinale ou post-prandiale, absente la nuite, soulagée par les gaz et/ou selles, augmentée par le stress, calmée par le repos.",
+            "La douleur organique est aigue ou chronique, présente la nuit. La sémiologie de la douleur ou signes associés orientent vers une pathologie.",
+            "Attention l'intensité de la douleur en elle même n'est pas discriminante !".
+          ],
+
+          questionSet: [
+            { "id": "q_dlabdo_1", "patterns":["marbrures","TRC", "temps de recoloration cutanée", "froideur extrémités"], "answer":"Pas de marbrures, extrémités chaudes, TRC à 2 secondes." },
+            { "id": "q_dlabdo_2", "patterns":["confusion","fréquence respiratoire","FR", "tension", "sepsis", "qSOFA", "sofa"], "answer":"C'est noté !" },
+            { "id": "q_dlabdo_3", "patterns":["palpation abdominale","contracture","défense", "hernie"], "answer":"Vous retrouvez une contracture généralisée de l'abodmen." },
+            { "id": "q_dlabdo_4", "patterns":["insepction","insepction abdominale"], "answer":"Absence de cicatrices au niveau abdominal. Rien à signaler à l'inspection." },
+            { "id": "q_dlabdo_5", "patterns":["perfusion","perfuser","perfusé", "soluté d'hydratation", "cristalloïdes"], "answer":"Clément va donc perfuser Mr JEAN." },
+            { "id": "q_dlabdo_6", "patterns":["infection", "colite"], "answer":"Le patient va être informé de votre suspicion d'infection abdominale".},
+            { "id": "q_dlabdo_7", "patterns":["bilan biologique","bilan","hémocultures", "hémoc"], "answer":"Un bilan sanguin sera prélevé par Clément, également il piquera des hémocultures." },
+            { "id": "q_dlabdo_8", "patterns":["constantes","tension","fréquence cardiaque", "tempéréature", "glasgow"], "answer":"TA à 95/70mmg, FC à 110 bpm, sat à 100% en AA, FR à 24. Température à 39°C. Score de Glasgow à 15." },
+            { "id": "q_dlabdo_9", "patterns":["scanner","scanner abdominal","scanner AP"], "answer":"Le patient est informé qu'il réalisera un scanner abdominal." },
+            { "id": "q_dlabdo_10", "patterns":["opération","chirurgie","chirurgien"], "answer":"Le patient est informé de la possibilité d'une chirurgie en urgence après le bilan diagnostique." },
+            { "id": "q_dlabdo_11", "patterns":["anesthésie générale","unité soins intensifs"], "answer":"Le patient est informé qu'il sera opéré sous AG et qu'il sera hospitalisé en unité de soins intensifs." },
+            { "id": "q_dlabdo_14", "patterns":["bonjour"], "answer":"Monsieur JEAN vous répond avec un visage crispé bonjour." }
+          ]
+        }
       ]
     }
   ],
