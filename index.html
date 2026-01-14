@@ -14,16 +14,15 @@ input { flex: 1; border: none; padding: 12px; font-size: 14px; }
 button { border: none; padding: 12px; background: #0084FF; color: white; cursor: pointer; }
 #finishBtn { background: #ff5c7b; margin-left: 4px; }
 
-  /* === Styles des boutons thèmes arrondis === */
+/* === Styles des boutons thèmes côte à côte === */
 .choices {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;      /* permet d’aller à la ligne si nécessaire */
   gap: 8px;
   margin-top: 10px;
 }
 .choices button {
-  width: 100%;
-  border-radius: 20px; /* arrondi prononcé */
+  flex: 1 1 48%;        /* largeur ~50%, flexible */
   padding: 12px;
   background: #0084FF;
   color: white;
@@ -35,6 +34,8 @@ button { border: none; padding: 12px; background: #0084FF; color: white; cursor:
 }
 .choices button:hover {
   background: #005bb5;
+}
+
 }
 </style>
 </head>
