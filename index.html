@@ -76,7 +76,7 @@
     .choices button {
       margin-top: 6px;
       width: 100%;
-      border-radius: 12px; /* bords arrondis */
+      border-radius: 12px;
       padding: 10px;
       background: #0084FF;
       color: white;
@@ -110,7 +110,7 @@ const messages = document.getElementById("messages");
 const input = document.getElementById("input");
 const finishBtn = document.getElementById("finishBtn");
 
-// normalisation pour enlever accents et majuscules
+// Normalisation des textes pour enlever accents et mettre en minuscules
 function normalizeText(text) {
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
@@ -165,16 +165,20 @@ function send() {
 
   text = normalizeText(text);
 
-  const match = currentChapter.questionSet.find(q =>
-    q.patterns.some(p => normalizeText(p).split(" ").every(w => text.includes(w)))
-  );
+  // On cherche si la question correspond à l'un des patterns
+  let matched = false;
+  currentChapter.questionSet.forEach(q => {
+    q.patterns.forEach(p => {
+      const pattern = normalizeText(p);
+      if (text.includes(pattern)) {
+        botSay(q.answer);
+        questionsAsked.add(q.id);
+        matched = true;
+      }
+    });
+  });
 
-  if (match) {
-    botSay(match.answer);
-    questionsAsked.add(match.id);
-  } else {
-    botSay(data.botBehavior.fallbackAnswer);
-  }
+  if (!matched) botSay(data.botBehavior.fallbackAnswer);
 }
 
 function calculateScore() {
@@ -186,17 +190,15 @@ function calculateScore() {
   botSay("📊 Fin du chapitre !");
   botSay(`Tu as répondu correctement à ${answeredQuestions} sur ${totalQuestions} questions.`);
 
-  // afficher conclusion avec toutes les questions qu'il fallait poser
+  // Conclusion : lister toutes les questions qu'il fallait poser
   const missedQuestions = currentChapter.questionSet.filter(q => !questionsAsked.has(q.id));
   if (missedQuestions.length > 0) {
-    let conclusion = "💡 Pour avoir 20/20, il fallait poser les questions suivantes :";
-    botSay(conclusion);
+    botSay("💡 Pour avoir 20/20, il fallait poser les questions suivantes :");
     missedQuestions.forEach(q => botSay("- " + q.patterns[0]));
   } else {
     botSay("🎉 Parfait ! Tu as posé toutes les questions du chapitre.");
   }
 
-  // reset pour un nouveau chapitre
   currentChapter = null;
   questionsAsked.clear();
   finishBtn.disabled = true;
@@ -209,6 +211,10 @@ fetch("data.json")
   .then(json => {
     data = json;
     showThemes();
+  })
+  .catch(err => {
+    console.error("Erreur chargement JSON :", err);
+    botSay("⚠️ Impossible de charger les données. Vérifie que data.json est bien accessible.");
   });
 </script>
 
