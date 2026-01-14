@@ -72,16 +72,25 @@ const data = {
   "app": { "name": "BotECOS" },
   "themes": [
     {
-      "id": "science",
-      "title": "Science",
+      "id": "HGE",
+      "title": "hépato-gastro-entérologie",
       "chapters": [
         {
-          "id": "physique",
-          "title": "Physique",
-          "intro": "La physique étudie les lois fondamentales de l’univers.",
+          "id": "SDD1",
+          "title": "Constipation",
+          "intro": "Vous êtes gastro-entérologue et vous recevez Mme Dubois une patiente de 31 ans qui se plaint d'une constipation. Menez un interrogatoire détaillé pour rechercher le mode d'évolution et le mécanisme de la constipation. Décidez de la prescription d'examen.s complémentaire.s. Expliquez les MHD et d'automédication.",
           "questionSet": [
-            { "id": "q_phys_1", "patterns":["qu'est-ce que la physique","c'est quoi la physique","définition physique"], "answer":"La physique est la science qui étudie la matière, l’énergie et leurs interactions." },
-            { "id": "q_phys_2", "patterns":["qu'est-ce que la gravité","c'est quoi la gravité","définition gravité"], "answer":"La gravité est une force d’attraction entre les corps." }
+            { "id": "q_constip_1", "patterns":["évolution","combien de temps","combien de jours"], "answer":"Je suis constipée depuis environ 4 ans, sans aggravation particulière. Et je fais moins de 3 selles par semaine." },
+            { "id": "q_constip_2", "patterns":["altération état général","amaigrissement","perte de poids", "poids", "plus fatiguée"], "answer":"Je n'ai pas perdu de poids et je me sens pas plus fatiguée qu'avant Docteur." },
+            { "id": "q_constip_3", "patterns":["douleurs nocturnes","douleur la nuit","douleur insomniante", "vous empêche de dormir", "nuit", "douleur"], "answer":"Ma douleur abdominale ne m'empêche pas de bien dormir la nuit. Je dirais que c'est une douleur comme des spasmes." },
+            { "id": "q_constip_4", "patterns":["rectorragies","rectorragie","méléna", "sang dans les selles", "sang"], "answer":"Oula vous me faites peur Docteur, non non il n'y a pas de sang dans mes selles. On va faire une imagerie du coup Docteur ?" },
+            { "id": "q_constip_5", "patterns":["contractions abdominales avant la selle","épreintes","ténesme", "faux besoins", "glaires"], "answer":"Non je n'ai aucun signe de syndrome rectal." },
+            { "id": "q_constip_6", "patterns":["dures","petites","moins de selles par semaine", "moins souvent"], "answer":"C'est vrai que je vais moins à la selle qu'avant, environ 3 fois par semaine. D'ailleurs mes selles sont petites et très dures Docteur. Je bois beaucoup d'eau et je fais de la corde à sauter pour m'aider, ça marche pas trop..." },
+            { "id": "q_constip_7", "patterns":["efforts de poussée","vous devez pousser","incomplet", "reste encore des selles", "manoeuvres digitales", "évacuation des selles à la main"], "answer":"Ah non non je fais caca normalement. Je pousse même moins qu'avant à vrai dire, mais quand je suis allée à la selle c'est fini." },
+            { "id": "q_constip_8", "patterns":["gaz","nausées","vomissements", "vomi", "vomis"], "answer":"J'ai toujours des gaz, et non je n'ai jamais vomi ni vraiment eu de nausées." },
+            { "id": "q_constip_9", "patterns":["examens complémentaires","imagerie","scanner", "radiographie"], "answer":"Je vous fais confiance en terme d'imagerie." },
+            { "id": "q_constip_10", "patterns":["fibre","règles hygiéno-diététiques","mesures hygiéno-diététiques"], "answer":"Ok Docteur je ferai ce que vous me préconisez." },
+            { "id": "q_constip_11", "patterns":["laxatifs","médicaments","médicament", "laxatifs osmotiques", "laxatifs de lest"], "answer":"D'accord Docteur si ça peut m'aider je vous écoute !" },
           ]
         },
         {
@@ -126,7 +135,7 @@ function userSay(text){ const div=document.createElement("div"); div.className="
 
 // ===== Thèmes =====
 function showThemes(){
-  botSay("Bienvenue 👋 Choisis un thème :");
+  botSay("Bienvenue 👋 Choisis une spécialité sur laquelle tu veux t'entrainer :");
   const wrapper = document.createElement("div");
   wrapper.className = "choices";
   data.themes.forEach(theme=>{
@@ -189,7 +198,7 @@ function calculateScore(){
     botSay("💡 Pour avoir 20/20, il fallait poser les questions suivantes :");
     missedQuestions.forEach(q=>botSay("- "+q.patterns[0]));
   } else {
-    botSay("🎉 Parfait ! Tu as posé toutes les questions du chapitre.");
+    botSay("🎉 Parfait ! Tu as posé toutes les questions nécessaires. Tu as donc 20/20 !");
   }
 
   currentChapter=null;
