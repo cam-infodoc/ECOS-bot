@@ -169,6 +169,36 @@ const data = {
             { "id": "q_constip_14", "patterns":["bonjour"], "answer":"Bonjour, je suis bien Madame Dubois, je vous consulte Docteur car je suis constipée." },
             { "id": "q_constip_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." },
           ]
+        },
+        {
+          id: "SDD2",
+          title: "Diarrhée",
+          intro: "Vous êtes gastro-entérologue et vous recevez Mr ROUX, 60 ans, qui se plaint d'une diarrhée depuis 4 jours. Cherchez à l'interrogatoire et à l'examen clinique les signes orientant le diagnostic étiologique. Recherchez les complications de la diarrhée.",
+          recap: [
+            "Il faut savoir identifier le syndrome cholériforme et les syndromes invasifs.",
+            "Un syndrome cholériforme est un trouble de la fonction sécrétoire. Il donne des diarrhées profuses afécales, on retrouve des signes de déshydratation et il n'y a pas de fièvre.",
+            "Les syndromes invasifs comprennent le syndrome dysentérique et le syndrome gastro-entérique.",
+            "Le syndrome dysentérique signe l'invasion des cellules épithéliales. Il donne du sang, des glaires voire du pus et un syndrome rectal est fréquent. Les douleurs abdominales sont diffuses ou colique et on retrouve de la fièvre.",
+            "Le syndrome gastro-entérique est bactérien. Il donne une diarrhée aspécifique souvent avec nausées, vomissement, fièvre et syndrome pseudo-grippal."
+          ],
+
+          questionSet: [
+            { "id": "q_dia_1", "patterns":["antécédents","antécédents personnels"], "answer":"Je n'ai pas d'antécédents particuliers." },
+            { "id": "q_dia_2", "patterns":["alcool","tabac","fumez", "buvez", "alcoolo-tabagique"], "answer":"Je ne fume pas, je ne bois pas." },
+            { "id": "q_dia_3", "patterns":["voyage","voyagé","contage", "zone d'endémie", "avion"], "answer":"Je n'ai pas voyagé récemment non. Puis dans ma famille je suis le seul à être malade." },
+            { "id": "q_dia_4", "patterns":["antibiotiques","traitement","traitements"], "answer":"Je n'ai aucun traitement habituellement et récemment je n'ai rien pris de particulier." },
+            { "id": "q_dia_5", "patterns":["liquide","sang","glaires", "selles", "décrivez moi vos selles"], "answer":"Depuis 4 jours j'ai des diarrhées, parfois je trouve même du sang voir des glaires." },
+            { "id": "q_dia_6", "patterns":["faux besoins", "tension anale","douleur avant les selles","spasmes", "épreintes"], "answer":"J'ai des douleurs à type de spasmes avant de faire caca maintenant que vous me le demandez c'est vrai !" },
+            { "id": "q_dia_7", "patterns":["constipation","douleur","douleurs", "nausées", "vomissement", "vomi"], "answer":"J'ai des douleurs à type de spasmes avant les selles mais c'est tout." },
+            { "id": "q_dia_8", "patterns":["constantes","tension","fréquence cardiaque", "tempéréature"], "answer":"Ma tension est à 120/70 mmHg. Ma FC à 110 bpm. Ma température à 36,5°C et je n'ai pas pris de doliprane avant de venir." },
+            { "id": "q_dia_9", "patterns":["soif","sécheresse","muqueuses", "trouble conscience"], "answer":"Mes muqueuses sont sèches." },
+            { "id": "q_dia_10", "patterns":["pli cutané","cernes","tachycardie", "hypotension", "oligurie", "perte de poids", "poids", "veines jugulaires"], "answer":"Mes veines jugulaires sont plates et j'ai perdu 3 kg depuis le début de mes diarrhées." },
+            { "id": "q_dia_11", "patterns":["fièvre","frissons"], "answer":"Je ne crois pas avoir eu de fièvre à la maison, en tout cas je n'ai jamais frissoné. Actuellement je ne frissonne pas d'ailleurs." },
+            { "id": "q_dia_12", "patterns":["allergie","allergies"], "answer":"Je n'ai aucune allergie." },
+            { "id": "q_dia_13", "patterns":["toxiques","alcool", "tabac", "fumez"], "answer":"Je ne fume pas, je ne bois pas Docteur !" },
+            { "id": "q_dia_14", "patterns":["bonjour"], "answer":"Bonjour, je suis bien Monsieur Roux, je vous consulte Docteur car j'ai des diarrhées." },
+            { "id": "q_dia_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." },
+          ]
         }
       ]
     }
@@ -264,8 +294,10 @@ function userSay(text){
 }
 
 // ===== THEMES =====
-function showThemes(){
-  botSay("Bienvenue 👋 Choisis une spécialité :");
+function showThemes(isInitial = false){
+  if(isInitial){
+    botSay("Bienvenue 👋 Choisis une spécialité :");
+  }
   const wrapper = document.createElement("div");
   wrapper.className = "choices";
 
@@ -335,7 +367,7 @@ function calculateScore(){
 } 
 
 // ===== START =====
-showThemes();
+showThemes(true);
 </script>
 
 </body>
