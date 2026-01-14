@@ -3,69 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <title>BotECOS</title>
+
   <style>
     body {
       font-family: system-ui;
       background: #f0f0f0;
+      display: flex;
+      justify-content: center;
       padding: 20px;
     }
-    .chat {
-      max-width: 400px;
-      margin: auto;
+
+    .chat-container {
+      background: white;
+      width: 360px;
+      height: 600px;
+      border-radius: 12px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      overflow: hidden;
     }
+
+    .messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
     .bot {
       align-self: flex-start;
       background: #E5E5EA;
       padding: 10px 14px;
       border-radius: 18px 18px 18px 4px;
+      max-width: 75%;
     }
+
     .user {
       align-self: flex-end;
       background: #0084FF;
       color: white;
       padding: 10px 14px;
       border-radius: 18px 18px 4px 18px;
+      max-width: 75%;
+    }
+
+    .input-area {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    input {
+      flex: 1;
+      border: none;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    button {
+      border: none;
+      padding: 12px;
+      background: #0084FF;
+      color: white;
+      cursor: pointer;
+    }
+
+    .choices button {
+      margin-top: 6px;
+      width: 100%;
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
 
-<div class="chat" id="chat"></div>
+<div class="chat-container">
+  <div class="messages" id="messages"></div>
+
+  <div class="input-area">
+    <input id="input" placeholder="Écris ta question…" />
+    <button onclick="send()">➤</button>
+  </div>
+</div>
 
 <script>
+let data, currentChapter;
+
+const messages = document.getElementById("messages");
+const input = document.getElementById("input");
+
+function botSay(text) {
+  const div = document.createElement("div");
+  div.className = "bot";
+  div.textContent = text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function userSay(text) {
+  const div = document.createElement("div");
+  div.className = "user";
+  div.textContent = text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function showThemes() {
+  botSay("Bienvenue 👋 Choisis un thème :");
+
+  data.themes.forEach(theme => {
+    const btn = document.createElement("button");
+    btn.textContent = theme.title;
+    btn.onclick = () => selectTheme(theme);
+    btn.className = "bot";
+    messages.appendChild(btn);
+  });
+}
+
+function selectTheme(theme) {
+  const chapter =
+    theme.chapters[Math.floor(Math.random() * theme.chapters.length)];
+  currentChapter = chapter;
+
+  botSay(`📘 Cours sélectionné : ${chapter.title}`);
+  botSay(chapter.intro);
+}
+
+function send() {
+  const text = input.value.trim().toLowerCase();
+  if (!text || !currentChapter) return;
+
+  userSay(text);
+  input.value = "";
+
+  const match = currentChapter.questionSet.find(q =>
+    q.patterns.some(p => text.includes(p))
+  );
+
+  botSay(match ? match.answer : data.botBehavior.fallbackAnswer);
+}
+
 fetch("data.json")
   .then(res => res.json())
-  .then(data => {
-    const chapter =
-      data.themes[0].chapters[0];
-
-    const chat = document.getElementById("chat");
-
-    function botSay(text) {
-      const div = document.createElement("div");
-      div.className = "bot";
-      div.textContent = text;
-      chat.appendChild(div);
-    }
-
-    function userSay(text) {
-      const div = document.createElement("div");
-      div.className = "user";
-      div.textContent = text;
-      chat.appendChild(div);
-    }
-
-    userSay("C'est quoi la physique ?");
-    const answer = chapter.questionSet.find(q =>
-      q.patterns.some(p =>
-        "c'est quoi la physique".includes(p)
-      )
-    );
-
-    botSay(answer ? answer.answer : data.botBehavior.fallbackAnswer);
+  .then(json => {
+    data = json;
+    showThemes();
   });
 </script>
 
