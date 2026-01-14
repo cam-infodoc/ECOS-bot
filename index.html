@@ -312,13 +312,17 @@ function showThemes(isInitial = false){
 }
 
 function selectTheme(theme){
-  document.querySelectorAll(".choices").forEach(e=>e.remove());
-  currentChapter = theme.chapters[0];
+  document.querySelectorAll(".choices").forEach(e => e.remove());
+
+  const chapters = theme.chapters;
+  currentChapter = chapters[Math.floor(Math.random() * chapters.length)];
+
   questionsAsked.clear();
   botSay(`📘 ${currentChapter.title}`);
   botSay(currentChapter.intro);
   finishBtn.disabled = false;
 }
+
 
 // ===== CHAT =====
 function send(){
