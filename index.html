@@ -450,6 +450,36 @@ const data = {
             { "id": "q_maigre_11", "patterns":["contexte", "combien de temps"], "answer":"J'ai perdu ces 10 kilos en 6 mois alors que mon poids de base est de 40 kg." },
             { "id": "q_maigre_12", "patterns":["antécédents", "traitements", "allergie", "allergies", "tabac", "alcool", "toxiques"], "answer":"Je n'ai jamais été vraiment malade donc je ne prend pas de traitement. En plus de ça j'ai un train de vie sain donc pas d'alcool, pas de tabac et pas de toxiques autre." }
           ]
+        },
+
+        {
+          id: "SDD10",
+          title: "Ictère",
+          intro: "Vous êtes médecin généraliste et recevez une patiente de 65 ans qui trouve que sa couleur de peau vire au jaune depuis 2 mois. Complétez l'interrogatoire et l'examen clinique notamment à la recherche de signes permettant de distinguer un ictère à bilirubine libre d'un ictère à bilirubine conjuguée. Prescrivez et interprétez un bilan biologique pour déterminer la nature de l'ictère. Poursuivez les investigations avec l'examen complémentaire nécessaire.",
+          recap: [
+            "Le premier bilan permet de distinguer l'ictère à bilirubine libre (>70% de la totale), l'ictère à bilirubine conjuguée (augmentation significative des GGT et PAL) et l'ictère mixte (élévation des deux bilirubines sans élévation significative des PAL).",
+            "Devant un IBNC : si tout est normal on pense à un sd de Gilbert, si on a une anémie on lance un bilan d'hémolyse et on prend un avis hématologique.",
+            "Devant un ictère mixte la cause la plus fréquente est l'insuffisance hépatoellulaire. On fait donc un bilan : TP, FV, albumine et un bilan d'hépatite aigue. Chez le cirrhotique on cherche des facteurs aggravants.",
+            "Devant un IBC on doit faire une échographie abdominale pour chercher une dilatation des voies biliaires.",
+            "Si elles sont dilatées : on identifie le site de l'obstruction, on recherche un cancer de la tête du pancréas / cholangiocarcinome / lithiase VBP / compression extrinsèque. On peut faire un scanner, une bili IRM, une IRM hépatique, une échoendoscopie voire une CPRE suivant la cause.",
+            "Si elles ne sont pas dilatées on recherche une cholangite sclérosante primitive par cholangioIRM ou une cirrhose biliaire primitive (Ac anti mitochondrie). Si on ne trouve pas d'étiologie on pourra proposer une PBH."
+          ],
+
+          questionSet: [
+            { "id": "q_ictere_1", "patterns":["urines foncées"], "answer":"Oui mes urines sont foncées."},
+            { "id": "q_ictere_2", "patterns":["selles décolorées", "selles claires", "selles pâles"], "answer":"Oui mes selles sont claires." },
+            { "id": "q_ictere_3", "patterns":["prurit", "gratte", "grattez"], "answer":"Je ne me gratte pas non." },
+            { "id": "q_ictere_4", "patterns":["altération de l'état général", "AEG", "anorexie", "perte de poids", "amaigrissement", "fatigue", "asthénie"], "answer":"J'ai perdu 5 kilos en 4 mois et je suis clairement plus fatiguée qu'avant. Je mange moins aussi c'est vrai." },
+            { "id": "q_ictere_5", "patterns":["douleurs abdominales"], "answer":"Oui j'ai masse en haut à droite du ventre." },
+            { "id": "q_ictere_6", "patterns":["palpation abdominale", "grosse vésicule"], "answer":"Une masse est palpable en hypochondre droit." },
+            { "id": "q_ictere_7", "patterns":["bilan biologique", "bilirubinémie totale", "bilirubinémie conjuguée", "ASAT", "ALAT", "transaminases", "gamma GT", "GGT", "PAL", "phosphatases alcalines", "NFS", "plaquettes"], "answer":"Bilirubine totale 90umol/L. Bilirubine conjuguée 80umol/L. Bilirubine libre 10 umol/L. ASAT/ALAT 30 UI/L. GGT 120 (N<40). PAL 181 (N<120). Hémoglobine 12,5 g/dL. Plaquettes 300 G/L. Reste de la NFS sans anomalies." },
+            { "id": "q_ictere_8", "patterns":["pas de cytolyse hépatique"], "answer":"Noté." },
+            { "id": "q_ictere_9", "patterns":["cholestase"], "answer":"Noté." },
+            { "id": "q_ictere_10", "patterns":["pas d'hémolyse", "pas d'anémie"], "answer":"Noté." },
+            { "id": "q_ictere_11", "patterns":["ictère à bilirubine conjuguée"], "answer":"Le diagnostic retenu est ictère à bilirubine conjuguée." },
+            { "id": "q_ictere_12", "patterns":["échographie abdominale", "écho abdo", "écho-doppler abdominal"], "answer":"Une échographie abdominale est prescrite." },
+            { "id": "q_ictere_13", "patterns":["Bonjour"], "answer":"Bonjour Docteur, je viens vous voir car je trouve que je suis de plus en plus jaune de peau depuis 2 mois. Il faut savoir que je ne suis jamais malade, je ne prend même pas de traitements. Je mange sainement et je ne fume ou bois pas." }
+          ]
         }
       ]
     }
