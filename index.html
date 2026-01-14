@@ -1,0 +1,124 @@
+{
+  "app": {
+    "name": "BotECOS",
+  },
+
+  "themes": [
+    {
+      "id": "theme_science",
+      "title": "Science",
+      "chapters": [
+        {
+          "id": "science_physique",
+          "title": "Physique",
+          "questionSet": [
+            {
+              "id": "q_phys_1",
+              "patterns": [
+                "qu'est-ce que la physique",
+                "c'est quoi la physique",
+                "définition physique"
+              ],
+              "answer": "La physique est la science qui étudie les lois fondamentales de l’univers, comme le mouvement, l’énergie et la matière."
+            },
+            {
+              "id": "q_phys_2",
+              "patterns": [
+                "qu'est-ce que la gravité",
+                "c'est quoi la gravité"
+              ],
+              "answer": "La gravité est une force qui attire les objets entre eux, comme la Terre qui attire les objets vers le sol."
+            }
+          ]
+        },
+        {
+          "id": "science_biologie",
+          "title": "Biologie",
+          "questionSet": [
+            {
+              "id": "q_bio_1",
+              "patterns": [
+                "qu'est-ce que la biologie",
+                "c'est quoi la biologie"
+              ],
+              "answer": "La biologie est la science qui étudie les êtres vivants et leur fonctionnement."
+            },
+            {
+              "id": "q_bio_2",
+              "patterns": [
+                "qu'est-ce qu'une cellule",
+                "définition cellule"
+              ],
+              "answer": "La cellule est la plus petite unité vivante constituant tous les organismes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "theme_histoire",
+      "title": "Histoire",
+      "chapters": [
+        {
+          "id": "histoire_antiquite",
+          "title": "Antiquité",
+          "questionSet": [
+            {
+              "id": "q_ant_1",
+              "patterns": [
+                "qu'est-ce que l'antiquité",
+                "définition antiquité"
+              ],
+              "answer": "L’Antiquité est une période historique qui commence avec l’apparition de l’écriture et se termine avec la chute de l’Empire romain."
+            },
+            {
+              "id": "q_ant_2",
+              "patterns": [
+                "qui sont les romains",
+                "les romains"
+              ],
+              "answer": "Les Romains sont un peuple de l’Antiquité qui a fondé l’un des plus grands empires de l’Histoire."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "state": {
+    "selectedThemeId": null,
+    "selectedChapterId": null
+  },
+
+  "botBehavior": {
+    "fallbackAnswer": "Je ne sais pas.",
+    "matching": {
+      "type": "keyword",
+      "caseSensitive": false
+    }
+  },
+
+  "chat": {
+    "ui": {
+      "layout": "messenger",
+      "botSide": "left",
+      "userSide": "right",
+
+      "bubbleStyle": {
+        "bot": {
+          "backgroundColor": "#E5E5EA",
+          "textColor": "#000000",
+          "borderRadius": "18px 18px 18px 4px",
+          "maxWidth": "70%",
+          "padding": "10px 14px"
+        },
+        "user": {
+          "backgroundColor": "#0084FF",
+          "textColor": "#FFFFFF",
+          "borderRadius": "18px 18px 4px 18px",
+          "maxWidth": "70%",
+          "padding": "10px 14px"
+        },
+    "messages": []
+  }
+}
