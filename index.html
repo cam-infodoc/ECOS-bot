@@ -226,7 +226,35 @@ const data = {
             { "id": "q_dlabdo_9", "patterns":["scanner","scanner abdominal","scanner AP"], "answer":"Le patient est informé qu'il réalisera un scanner abdominal." },
             { "id": "q_dlabdo_10", "patterns":["opération","chirurgie","chirurgien"], "answer":"Le patient est informé de la possibilité d'une chirurgie en urgence après le bilan diagnostique." },
             { "id": "q_dlabdo_11", "patterns":["anesthésie générale","unité soins intensifs"], "answer":"Le patient est informé qu'il sera opéré sous AG et qu'il sera hospitalisé en unité de soins intensifs." },
-            { "id": "q_dlabdo_14", "patterns":["bonjour"], "answer":"Monsieur JEAN vous répond avec un visage crispé bonjour." }
+            { "id": "q_dlabdo_12", "patterns":["bonjour"], "answer":"Monsieur JEAN vous répond avec un visage crispé bonjour." }
+          ]
+        }
+        {
+          id: "SDD4",
+          title: "Douleur anale",
+          intro: "Vous êtes proctologue et recevez en consultation Mme MOREAU, patiente de 40 ans, qui se plaint de douleurs anales depuis 4 jours. Vous devez mener un interrogatoire afin de caractériser la douleur et d'orienter votre diagnostic, réaliser un examen proctologique et indiquer votre principale hypothèse diagnostique.",
+          recap: [
+            "Pour les ECOS il faut savoir caractériser une douleur, on demande : localisation, intensité, type, horaire, irradiation, facteurs aggravants ou améliorants, signes associés, évolution.",
+            "La douleur anale après la selle doit vous évoquer : crise hémorroïdaire (douleur pendant quelques minutes déclenchée par la selle, +/- saignements, dure quelques jours), fissure anale (douleur quelques minutes après la selle puis récidive de la douleur des heures après la selle, +/- saignements, dure des semaines.",
+            "La douleur anale avant la selle doit vous évoquer : fécalome, cancer du rectum. Les deux par syndrome rectal (ténesme, épreintes, émissions glairo sanglantes afécales).",
+            "La douleur anale indépendante de la selle doit vous évoquer : thrombose hémorroïdaire externe (tuméfaction bleue limitée, douleur au toucher et à la position assise, dégressive sur quelques heures à quelques jours), abcès anal (tuméfaction mal limitée, douleur au toucher et assise, continue sur quelques heures / jours).".
+          ],
+
+          questionSet: [
+            { "id": "q_dlanale_1", "patterns":["type de douleur","douleur", "décrire votre douleur"], "answer":"La douleur c'est comme des brûlures depuis 4 jours." },
+            { "id": "q_dlanale_2", "patterns":["intensité douleur","retentissement","côter", "EVA"], "answer":"La douleur est assez forte et me dérange énormément pendant la défécation, ensuite elle disparait." },
+            { "id": "q_dlanale_3", "patterns":["horaire","matin","journée", "soir"], "answer":"La douleur se limite vraiment au moment des selles. Sinon c'est génant mais ça va." },
+            { "id": "q_dlanale_4", "patterns":["évolution","évolu", "évolue"], "answer":"C'est la 4e fois que ça arrive. Tous après mon 2e accouchement il y a 3 mois." },
+            { "id": "q_dlanale_5", "patterns":["aggravant","aggravants","déclenchants", "déclenchant"], "answer":"La douleur est déclenchée par les selles et calmée immédiatement après." },
+            { "id": "q_dlanale_6", "patterns":["suintement", "saignement", "sang"], "answer":"Non il n'y a pas de saignements ni de suintement.".},
+            { "id": "q_dlanale_7", "patterns":["constipation","diarrhée","diarrhées", "transit"], "answer":"J'ai tendance à être constipée de nature c'est vrai ça. Mais là c'est différent." },
+            { "id": "q_dlanale_8", "patterns":["antécédents","antécédents gynécologiques","gynéco"], "answer":"J'ai eu 2 enfants ! Le dernier il y a trois mois et le premier il y a 3 ans. Tous par voie basse, pas de complications." },
+            { "id": "q_dlanale_9", "patterns":["température","frissons","fièvre"], "answer":"Non j'ai pas eu de fièvre associée." },
+            { "id": "q_dlanale_10", "patterns":["position","génupectorale","genupectorale"], "answer":"D'accord je vais me mettre en position genupectorale Docteur." },
+            { "id": "q_dlanale_11", "patterns":["inspection","prolapsus", "fissure anale"], "answer":"L'inspection anale ne retrouve ni prolapsus, ni fissure anale, ni hémorroïdes externes." },
+            { "id": "q_dlanale_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, je suis bien Mme MOREAU. Je viens pour des douleurs anales." },
+            { "id": "q_dlanale_13", "patterns":["anuscope", "anuscopie"], "answer":"A l'anuscopie vous retrouvez un prolapsus hémorroïdaire interne." },
+            { "id": "q_dlanale_14", "patterns":["diagnostic", "hypothèse diagnostique", "crise hémorroïdiaire"], "answer":"Votre diagnostic est retenu." },
           ]
         }
       ]
