@@ -271,13 +271,13 @@ let botIsTyping = false;
 const messages = document.getElementById("messages");
 const input = document.getElementById("input");
 const finishBtn = document.getElementById("finishBtn");
-  
+
 // ===== UTILS =====
 function normalizeText(text){
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 }
 
-/* ===== BOT QUEUE + TYPING ===== */
+// ===== BOT QUEUE + TYPING =====
 function botSay(text){
   botQueue.push(text);
   if (!botIsTyping) processBotQueue();
@@ -327,7 +327,6 @@ function processBotQueue(){
 
     let i = 0;
     const speed = 20;
-
     const typingInterval = setInterval(() => {
       bubble.textContent += text.charAt(i);
       i++;
@@ -388,8 +387,9 @@ function send(){
   const normalized = normalizeText(text);
   let matched = false;
 
-  currentChapter.questionSet.forEach(q=>{
-    q.patterns.forEach(p=>{
+  currentChapter.questionSet.forEach(q => {
+    if (matched) return; // une seule réponse
+    q.patterns.forEach(p => {
       if(normalized.includes(normalizeText(p))){
         botSay(q.answer);
         questionsAsked.add(q.id);
@@ -408,18 +408,18 @@ function calculateScore(){
   botSay("📊 Fin de la consultation");
   botSay(`Questions abordées : ${questionsAsked.size} / ${currentChapter.questionSet.length}`);
   botSay("📝 Récapitulatif :");
-  
-  // envoie chaque message du récap séparément
-  currentChapter.recap.forEach(msg => botSay(msg));
+
+  (currentChapter.recap || []).forEach(msg => botSay(msg));
 
   botSay("✨ Consultation terminée. Choisis une nouvelle spécialité ci-dessous :");
 
   botQueue.push(() => {
-  currentChapter = null;
-  questionsAsked.clear();
-  finishBtn.disabled = true;
-  showThemes();
-});
+      currentChapter = null;
+      questionsAsked.clear();
+      finishBtn.disabled = true;
+      showThemes();
+  });
+}
 
 // ===== START =====
 showThemes(true);
