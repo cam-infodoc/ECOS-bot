@@ -12,30 +12,29 @@ body { font-family: system-ui; background: #f0f0f0; display: flex; justify-conte
 .input-area { display: flex; border-top: 1px solid #ddd; }
 input { flex: 1; border: none; padding: 12px; font-size: 14px; }
 button { border: none; padding: 12px; background: #0084FF; color: white; cursor: pointer; }
-#finishBtn { background: #ff5c7b; margin-left: 4px; }
+#finishBtn { background: #FF5722; margin-left: 4px; }
 
 /* === Styles des boutons thèmes côte à côte === */
 .choices {
   display: flex;
-  flex-wrap: wrap;      /* permet d’aller à la ligne si nécessaire */
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 10px;
 }
 .choices button {
-  flex: 1 1 48%;        /* largeur ~50%, flexible */
+  width: calc(50% - 4px); /* moitié largeur - moitié gap */
   padding: 12px;
   background: #0084FF;
   color: white;
   font-weight: bold;
+  border-radius: 12px;   /* coins arrondis */
   border: none;
   cursor: pointer;
-  transition: background 0.2s;
   text-align: center;
+  transition: background 0.2s;
 }
 .choices button:hover {
   background: #005bb5;
-}
-
 }
 </style>
 </head>
@@ -49,7 +48,7 @@ button { border: none; padding: 12px; background: #0084FF; color: white; cursor:
     <button id="finishBtn" onclick="calculateScore()">🏁 Terminer</button>
   </div>
 </div>
-  
+
 <script>
 // ===== JSON intégré =====
 const data = {
@@ -111,13 +110,18 @@ function userSay(text){ const div=document.createElement("div"); div.className="
 // ===== Thèmes =====
 function showThemes(){
   botSay("Bienvenue 👋 Choisis un thème :");
+  const wrapper = document.createElement("div");
+  wrapper.className = "choices";
   data.themes.forEach(theme=>{
-    const btn=document.createElement("button");
-    btn.textContent=theme.title;
-    btn.onclick=()=>selectTheme(theme);
-    btn.className="choices";
-    messages.appendChild(btn);
+    const btn = document.createElement("button");
+    btn.textContent = theme.title;
+    btn.onclick = () => selectTheme(theme);
+    wrapper.appendChild(btn);
   });
+  // Ajouter le wrapper dans un div pour que le flex fonctionne
+  const msgDiv = document.createElement("div");
+  msgDiv.appendChild(wrapper);
+  messages.appendChild(msgDiv);
 }
 
 // ===== Sélection thème et chapitre aléatoire =====
