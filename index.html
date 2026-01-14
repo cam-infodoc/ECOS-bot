@@ -206,6 +206,12 @@ function processBotQueue(){
   botIsTyping = true;
   const text = botQueue.shift();
 
+  if (typeof text === "function") {
+    text();
+    processBotQueue();
+    return;
+  }
+
   const container = document.createElement("div");
   container.className = "bot-container";
 
@@ -320,13 +326,12 @@ function calculateScore(){
 
   botSay("✨ Consultation terminée. Choisis une nouvelle spécialité ci-dessous :");
 
-  // après queue, réinitialisation et affichage des boutons
   botQueue.push(() => {
-    currentChapter = null;
-    questionsAsked.clear();
-    finishBtn.disabled = true;
-    showThemes();
-  });
+  currentChapter = null;
+  questionsAsked.clear();
+  finishBtn.disabled = true;
+  showThemes();
+});
 } 
 
 // ===== START =====
