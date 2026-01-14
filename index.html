@@ -176,7 +176,7 @@ let botIsTyping = false;
 const messages = document.getElementById("messages");
 const input = document.getElementById("input");
 const finishBtn = document.getElementById("finishBtn");
-
+  
 // ===== UTILS =====
 function normalizeText(text){
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
@@ -187,14 +187,16 @@ function botSay(text){
   botQueue.push(text);
   if (!botIsTyping) processBotQueue();
 }
+
 function processBotQueue(){
-  if (botQueue.lenght === 0) {
+  if (botQueue.length === 0) {
     botIsTyping = false;
     return;
   }
+
   botIsTyping = true;
   const text = botQueue.shift();
-  
+
   const container = document.createElement("div");
   container.className = "bot-container";
 
@@ -203,8 +205,8 @@ function processBotQueue(){
   avatar.textContent = "🤖";
 
   const bubble = document.createElement("div");
-  bubble.className = "bot";
-  bubble.textContent = "";
+  bubble.className = "bot thinking";
+  bubble.textContent = "réfléchit";
 
   container.appendChild(avatar);
   container.appendChild(bubble);
@@ -213,12 +215,12 @@ function processBotQueue(){
 
   let dots = 0;
   const thinkingInterval = setInterval(() => {
-    dots = (dots + 1) %4;
-    bubble.textContent = "réfléchit" + "." .repeat(dots);
+    dots = (dots + 1) % 4;
+    bubble.textContent = "réfléchit" + ".".repeat(dots);
   }, 400);
 
   setTimeout(() => {
-    clearInterval(tinkingInterval);
+    clearInterval(thinkingInterval);
     bubble.className = "bot";
     bubble.textContent = "";
 
@@ -226,11 +228,11 @@ function processBotQueue(){
     const speed = 20;
 
     const typingInterval = setInterval(() => {
-      bubble.textContent += text.chartAt(i);
+      bubble.textContent += text.charAt(i);
       i++;
       messages.scrollTop = messages.scrollHeight;
 
-      if (i >= text.lenght) {
+      if (i >= text.length) {
         clearInterval(typingInterval);
         processBotQueue();
       }
