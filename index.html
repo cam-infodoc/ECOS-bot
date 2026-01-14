@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>BotECOS</title>
 <style>
 body { font-family: system-ui; background: #f0f0f0; display: flex; justify-content: center; padding: 20px; }
@@ -22,14 +22,14 @@ button { border: none; padding: 12px; background: #0084FF; color: white; cursor:
 <div class="chat-container">
   <div class="messages" id="messages"></div>
   <div class="input-area">
-    <input id="input" placeholder="Écris ta question…" />
+    <input id="input" placeholder="Écris ta question…">
     <button onclick="send()">➤</button>
     <button id="finishBtn" onclick="calculateScore()">🏁 Terminer</button>
   </div>
 </div>
 
 <script>
-// ==== JSON intégré directement ====
+// ===== JSON intégré =====
 const data = {
   "app": { "name": "BotECOS" },
   "themes": [
@@ -42,8 +42,8 @@ const data = {
           "title": "Physique",
           "intro": "La physique étudie les lois fondamentales de l’univers.",
           "questionSet": [
-            { "id": "q_phys_1", "patterns": ["c'est quoi la physique","definition physique"], "answer":"La physique est la science qui étudie la matière, l’énergie et leurs interactions." },
-            { "id": "q_phys_2", "patterns": ["c'est quoi la gravité","definition gravité"], "answer":"La gravité est une force d’attraction entre les corps." }
+            { "id": "q_phys_1", "patterns":["qu'est-ce que la physique","c'est quoi la physique","définition physique"], "answer":"La physique est la science qui étudie la matière, l’énergie et leurs interactions." },
+            { "id": "q_phys_2", "patterns":["qu'est-ce que la gravité","c'est quoi la gravité","définition gravité"], "answer":"La gravité est une force d’attraction entre les corps." }
           ]
         },
         {
@@ -51,7 +51,7 @@ const data = {
           "title": "Biologie",
           "intro": "La biologie est la science du vivant.",
           "questionSet": [
-            { "id": "q_bio_1", "patterns": ["c'est quoi la biologie","definition biologie"], "answer":"La biologie étudie les êtres vivants." }
+            { "id": "q_bio_1", "patterns":["qu'est-ce que la biologie","c'est quoi la biologie","définition biologie"], "answer":"La biologie étudie les êtres vivants." }
           ]
         }
       ]
@@ -65,7 +65,7 @@ const data = {
           "title": "Antiquité",
           "intro": "L’Antiquité est une période historique ancienne.",
           "questionSet": [
-            { "id": "q_ant_1", "patterns":["c'est quoi l'antiquité"], "answer":"L’Antiquité commence avec l’écriture et se termine avec la chute de Rome." }
+            { "id": "q_ant_1", "patterns":["qu'est-ce que l'antiquité","c'est quoi l'antiquité"], "answer":"L’Antiquité commence avec l’écriture et se termine avec la chute de Rome." }
           ]
         }
       ]
@@ -74,20 +74,20 @@ const data = {
   "botBehavior": { "fallbackAnswer":"Je ne sais pas." }
 };
 
-// ==== Variables de session ====
+// ===== Variables de session =====
 let currentChapter;
 let questionsAsked = new Set();
 const messages = document.getElementById("messages");
 const input = document.getElementById("input");
 const finishBtn = document.getElementById("finishBtn");
 
-// ==== Fonctions utilitaires ====
-function normalizeText(text) { return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
-function botSay(text) { const div=document.createElement("div"); div.className="bot"; div.textContent=text; messages.appendChild(div); messages.scrollTop=messages.scrollHeight; }
-function userSay(text) { const div=document.createElement("div"); div.className="user"; div.textContent=text; messages.appendChild(div); messages.scrollTop=messages.scrollHeight; }
+// ===== Utilitaires =====
+function normalizeText(text){ return text.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(); }
+function botSay(text){ const div=document.createElement("div"); div.className="bot"; div.textContent=text; messages.appendChild(div); messages.scrollTop=messages.scrollHeight; }
+function userSay(text){ const div=document.createElement("div"); div.className="user"; div.textContent=text; messages.appendChild(div); messages.scrollTop=messages.scrollHeight; }
 
-// ==== Affichage des thèmes ====
-function showThemes() {
+// ===== Thèmes =====
+function showThemes(){
   botSay("Bienvenue 👋 Choisis un thème :");
   data.themes.forEach(theme=>{
     const btn=document.createElement("button");
@@ -98,8 +98,8 @@ function showThemes() {
   });
 }
 
-// ==== Sélection d’un thème ====
-function selectTheme(theme) {
+// ===== Sélection thème et chapitre aléatoire =====
+function selectTheme(theme){
   document.querySelectorAll(".choices").forEach(b=>b.remove());
   const chapter = theme.chapters[Math.floor(Math.random()*theme.chapters.length)];
   currentChapter = chapter;
@@ -109,21 +109,22 @@ function selectTheme(theme) {
   finishBtn.disabled = false;
 }
 
-// ==== Envoyer une question ====
-function send() {
+// ===== Envoi d’une question =====
+function send(){
   let text = input.value.trim();
   if(!text || !currentChapter) return;
   userSay(text);
   input.value = "";
   text = normalizeText(text);
 
-  let matched = false;
+  let matched=false;
   currentChapter.questionSet.forEach(q=>{
     q.patterns.forEach(p=>{
-      if(text.includes(normalizeText(p))) {
+      const pattern = normalizeText(p);
+      if(text.includes(pattern)){
         botSay(q.answer);
         questionsAsked.add(q.id);
-        matched = true;
+        matched=true;
       }
     });
   });
@@ -131,16 +132,17 @@ function send() {
   if(!matched) botSay(data.botBehavior.fallbackAnswer);
 }
 
-// ==== Calcul du score ====
-function calculateScore() {
+// ===== Calcul score et correction =====
+function calculateScore(){
   if(!currentChapter) return;
-  const totalQuestions=currentChapter.questionSet.length;
-  const answeredQuestions=questionsAsked.size;
+  const totalQuestions = currentChapter.questionSet.length;
+  const answeredQuestions = questionsAsked.size;
+
   botSay("📊 Fin du chapitre !");
   botSay(`Tu as répondu correctement à ${answeredQuestions} sur ${totalQuestions} questions.`);
 
-  const missedQuestions=currentChapter.questionSet.filter(q=>!questionsAsked.has(q.id));
-  if(missedQuestions.length>0) {
+  const missedQuestions = currentChapter.questionSet.filter(q=>!questionsAsked.has(q.id));
+  if(missedQuestions.length>0){
     botSay("💡 Pour avoir 20/20, il fallait poser les questions suivantes :");
     missedQuestions.forEach(q=>botSay("- "+q.patterns[0]));
   } else {
@@ -153,9 +155,9 @@ function calculateScore() {
   showThemes();
 }
 
-// ==== Démarrage ====
+// ===== Démarrage =====
 showThemes();
-
 </script>
+
 </body>
 </html>
