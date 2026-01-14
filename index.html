@@ -68,6 +68,11 @@
       cursor: pointer;
     }
 
+    #finishBtn {
+      background: #FF5722;
+      margin-left: 4px;
+    }
+
     .choices button {
       margin-top: 6px;
       width: 100%;
@@ -84,6 +89,7 @@
   <div class="input-area">
     <input id="input" placeholder="Écris ta question…" />
     <button onclick="send()">➤</button>
+    <button id="finishBtn" onclick="calculateScore()">🏁 Terminer</button>
   </div>
 </div>
 
@@ -92,6 +98,7 @@ let data, currentChapter;
 let questionsAsked = new Set();
 const messages = document.getElementById("messages");
 const input = document.getElementById("input");
+const finishBtn = document.getElementById("finishBtn");
 
 function botSay(text) {
   const div = document.createElement("div");
@@ -122,8 +129,9 @@ function showThemes() {
 }
 
 function selectTheme(theme) {
-  // Nettoyer les boutons
+  // Supprime les boutons de thème
   document.querySelectorAll(".choices").forEach(b => b.remove());
+
   // Choix aléatoire d'un chapitre
   const chapter = theme.chapters[Math.floor(Math.random() * theme.chapters.length)];
   currentChapter = chapter;
@@ -132,11 +140,8 @@ function selectTheme(theme) {
   botSay(`📘 Cours sélectionné : ${chapter.title}`);
   botSay(chapter.intro);
 
-  // ajouter bouton terminer chapitre
-  const endBtn = document.createElement("button");
-  endBtn.textContent = "Terminer le chapitre";
-  endBtn.onclick = calculateScore;
-  messages.appendChild(endBtn);
+  // Réactiver le bouton terminer
+  finishBtn.disabled = false;
 }
 
 function send() {
@@ -171,8 +176,13 @@ function calculateScore() {
     botSay(`Tu as perdu ${missed} point(s) pour les questions non posées.`);
   }
 
-  // reset chapitre pour pouvoir choisir un autre thème
+  // Reset pour pouvoir choisir un nouveau thème
   currentChapter = null;
+  questionsAsked.clear();
+  finishBtn.disabled = true;
+
+  // proposer de choisir un nouveau thème
+  showThemes();
 }
 
 fetch("data.json")
