@@ -76,8 +76,18 @@
     .choices button {
       margin-top: 6px;
       width: 100%;
-      border-radius: 12px;
+      border-radius: 12px; /* bords arrondis */
+      padding: 10px;
+      background: #0084FF;
+      color: white;
+      font-weight: bold;
+      border: none;
       cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .choices button:hover {
+      background: #005bb5;
     }
   </style>
 </head>
@@ -99,6 +109,11 @@ let questionsAsked = new Set();
 const messages = document.getElementById("messages");
 const input = document.getElementById("input");
 const finishBtn = document.getElementById("finishBtn");
+
+// normalisation pour enlever accents et majuscules
+function normalizeText(text) {
+  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
 
 function botSay(text) {
   const div = document.createElement("div");
@@ -142,14 +157,16 @@ function selectTheme(theme) {
 }
 
 function send() {
-  const text = input.value.trim().toLowerCase();
+  let text = input.value.trim();
   if (!text || !currentChapter) return;
 
   userSay(text);
   input.value = "";
 
+  text = normalizeText(text);
+
   const match = currentChapter.questionSet.find(q =>
-    q.patterns.some(p => text.includes(p))
+    q.patterns.some(p => normalizeText(p).split(" ").every(w => text.includes(w)))
   );
 
   if (match) {
@@ -165,22 +182,21 @@ function calculateScore() {
 
   const totalQuestions = currentChapter.questionSet.length;
   const answeredQuestions = questionsAsked.size;
-  const missed = totalQuestions - answeredQuestions;
 
   botSay("📊 Fin du chapitre !");
   botSay(`Tu as répondu correctement à ${answeredQuestions} sur ${totalQuestions} questions.`);
-  if (missed > 0) {
-    botSay(`Tu as perdu ${missed} point(s) pour les questions non posées.`);
 
-    // Afficher les questions oubliées
-    const missedQuestions = currentChapter.questionSet.filter(q => !questionsAsked.has(q.id));
-    botSay("❌ Questions que tu as oubliées :");
-    missedQuestions.forEach(q => {
-      botSay("- " + q.patterns[0]); // afficher la première formulation de la question
-    });
+  // afficher conclusion avec toutes les questions qu'il fallait poser
+  const missedQuestions = currentChapter.questionSet.filter(q => !questionsAsked.has(q.id));
+  if (missedQuestions.length > 0) {
+    let conclusion = "💡 Pour avoir 20/20, il fallait poser les questions suivantes :";
+    botSay(conclusion);
+    missedQuestions.forEach(q => botSay("- " + q.patterns[0]));
+  } else {
+    botSay("🎉 Parfait ! Tu as posé toutes les questions du chapitre.");
   }
 
-  // Reset pour un nouveau chapitre
+  // reset pour un nouveau chapitre
   currentChapter = null;
   questionsAsked.clear();
   finishBtn.disabled = true;
