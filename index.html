@@ -354,6 +354,36 @@ const data = {
             { "id": "q_masseabdo_17", "patterns":["antécédents", "traitement", "traitements", "allergie"], "answer":"Aucun antécédent, aucun traitement et pas d'allergies, habituellement tout va bien." },
             { "id": "q_masseabdo_18", "patterns":["inspection abdominale"], "answer":"Pas de cicatrices présence d'un ictère." }
           ]
+        },
+
+        {
+          id: "SDD7",
+          title: "Masse ou tuméfaction pariétale",
+          intro: "Vous êtes gastro-entérologue et vous recevez en consultation un patient de 26 ans qui vient après la découverte d'une tuméfaction en bas de l'abdomen. Réalisez l'examen clinique et l'interrogatoire, donnez un diagnostic précis et expliquez au patient la CAT en terme d'examens complémentaires et de PEC.",
+          recap: [
+            "Il faut savoir différencier les différents types d'hernies.",
+            "Une hernie symptomatique donne une douleur ou gêne majorée à la toux et à la station debout, la hernie reste impulsive et réductible.",
+            "Une hernie engouée est irréductible qu'elle soit douloureuse ou non, son risque est l'évolution vers la hernie étranglée.",
+            "La hernie étranglée est douloureuse, irréductible et non impulsive à la toux. Son évolution est rapide vers un syndrome occlusif."
+          ],
+
+          questionSet: [
+            { "id": "q_massepar_1", "patterns":["inspection abdominale", "hernie", "cicatrices"], "answer":"Ca fait quelques semaines que j'ai cette boule au niveau de l'estomac."},
+            { "id": "q_massepar_2", "patterns":["debout", "toussez", "tousser"], "answer":"Majoration de la tuméfaction à la position debout et à la toux." },
+            { "id": "q_massepar_3", "patterns":["réduire", "réduction"], "answer":"La tuméfaction est réductible sans douleur." },
+            { "id": "q_massepar_4", "patterns":["hernie controlatérale", "autre côté"], "answer":"Absence d'hernie controlatérale." },
+            { "id": "q_massepar_5", "patterns":["douleur", "douloureux", "douloureuse"], "answer":"Je n'ai pas mal du tout et je n'ai pas eu d'épisodes douloureux depuis qu'elle est apparue." },
+            { "id": "q_massepar_6", "patterns":["vomissements", "vomi", "arrêt des gaz", "gaz", "selles"], "answer":"Non je n'ai pas vomi, pas de nausées et mon transit est bon." },
+            { "id": "q_massepar_7", "patterns":["hernie inguinale non compliquée"], "answer":"Vous pensez donc que j'ai une hernie inguinale. Il faut faire quoi comme imagerie dans ce cas ?" },
+            { "id": "q_massepar_8", "patterns":["aucun examen complémentaire", "pas d'examen", "pas de scanner", "pas de radio", "pas d'imagerie"], "answer":"D'accord je comprend. Et en terme de traitement ?" },
+            { "id": "q_massepar_9", "patterns":["pas de traitements", "absence de traitement"], "answer":"Ok Docteur je vous crois." },
+            { "id": "q_massepar_10", "patterns":["chirurgie"], "answer":"Ok donc si j'ai mal je serais opéré et quand est-ce que je dois reconsulter ?" },
+            { "id": "q_massepar_11", "patterns":["consultez", "consultation"], "answer":"Ok je vois." },
+            { "id": "q_massepar_12", "patterns":["contexte", "découvert", "combien de temps", "découverte", "anamnèse"], "answer":"Ca fait 2 mois que j'ai aperçu cette boule dans l'aine." },
+            { "id": "q_massepar_12", "patterns":["bonjour"], "answer":"Bonjour Docteur je viens vous voir car j'ai une boule au niveau de l'aine." },
+            { "id": "q_massepar_13", "patterns":["antécédents", "traitements", "allergie", "allergies", "tabac", "alcool", "toxiques"], "answer":"Je n'ai aucuns antécédents et je ne prend aucun traitement. Aussi je ne fume pas, je ne bois pas et je n'ai pas d'allergies." },
+            { "id": "q_massepar_14", "patterns":["autres questions", "tout compris"], "answer":"J'ai tout compris, merci beaucoup Docteur." }
+          ]
         }
       ]
     }
