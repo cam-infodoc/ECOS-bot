@@ -846,6 +846,43 @@ const data = {
             { "id": "q_scol_9", "patterns":["radiographie du rachis", "face et profil"], "answer":"Noté." },
             { "id": "q_scol_10", "patterns":["radiographie des crêtes iliaques", "radiographie sacrée"], "answer":"Noté." }
           ]
+        },
+        {
+          id: "SDD6",
+          title: "Apparition d'une difficulté à la marche",
+          intro: `Vous êtes rhumatologue, et vous recevez Mme Girard une patiente de 70 ans, qui vous consulte pour une difficulté à la marche, liée à des douleurs au bout d'un certain périmètre de marche, qui est variable selon les jours. Ces douleurs ont débuté il y a 1 an. Elle se trouve raide dans les mouvements de la vie quotidienne, notamment pour enfiler un pantalon, mettre des chaussettes ou des chaussures. Par ailleurs la patiente a des périodes de poussée où les douleurs sont plus intenses. Son médecin généraliste lui a prescrit des radiographies, que la patiente vous amène. Interprétez la radiographie, prescrivez le traitement de 1e intention. Vous pouvez poser quelques questions à la patiente pour des informations complémentaires vous aidant pour vos prescriptions. <img src= "radiographiehanche.jpg" style="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Dans cette station il fallait : ",
+            "Inspecter le rachis dans le plan frontal (en se plaçant derrière), sagittal (en se mettant à côté), et axial (recherche gibbosité)",
+            "Evaluer le stade pubertaire car la puberté aggrave la scoliose avec la croissance osseuse",
+            "Rechercher une hyperlaxité évocatrice d'une maladie de Marfan, cause de scoliose secondaire",
+            "Rechercher des tâches café au lait à l'inspection cutanée à la recherche d'une neurofibromatose, cause de scoliose secondaire",
+            "Inspecter la région sacrée à la recherche d'angiome ou d'une touffe pileuse, évocateur d'une malformation congénitale",
+            "Rechercher un trouble du tonus musculaire ou tester les ROT, une anomalie évoquerait une scoliose neuromusculaire.",
+            "Enfin il fallait prescrire : ",
+            "Une radiographie du rachis de face et de profil debout,",
+            "Une radiographie des crêtes iliaques (test de Risser permettant d'évaluer l'avancée pubertaire osseuse)."
+          ],
+
+          questionSet: [
+            { "id": "q_arthrose_1", "patterns":["radiographie de hanche de face"], "answer":"Noté." },
+            { "id": "q_arthrose_2", "patterns":["pincement interligne articulaire"], "answer":"Noté." },
+            { "id": "q_arthrose_3", "patterns":["ostéophytose"], "answer":"Noté." },
+            { "id": "q_arthrose_4", "patterns":["condensation"], "answer":"Noté." },
+            { "id": "q_arthrose_5", "patterns":["géodes", "géode"], "answer":"Noté." },
+            { "id": "q_arthrose_6", "patterns":["bilatéral", "bilatérale"], "answer":"Noté." },
+            { "id": "q_arthrose_7", "patterns":["activité physique", "sport"], "answer":"Oui Docteur je fais des longues balades avec mes amies et je joue au golf. M'enfin en ce moment avec ces douleurs je suis limitée." },
+            { "id": "q_arthrose_8", "patterns":["maintenir activité physique", "continuer le sport", "continuer l'activité physique", "continuer", "maintenir"], "answer":"D'accord." },
+            { "id": "q_arthrose_9", "patterns":["perdre du poids"], "answer":"Noté." },
+            { "id": "q_arthrose_10", "patterns":["diminuer le sport en période douloureuse", "arrêter les activités sportives en période douloureuse", "diminuer le sport si vous avez mal", "canne controlatérale"], "answer":"Noté." },
+            { "id": "q_arthrose_11", "patterns":["balnéothérapie"], "answer":"Noté." },
+            { "id": "q_arthrose_12", "patterns":["kinésithérapie", "kiné"], "answer":"Noté." },
+            { "id": "q_arthrose_13", "patterns":["antalgiques de pallier 1", "pallier 1", "doliprane"], "answer":"Noté." },
+            { "id": "q_arthrose_14", "patterns":["poids", "pesez", "IMC", "taille"], "answer":"Je pèse 90kg pour 1m70." },
+            { "id": "q_arthrose_14", "patterns":["antécédents", "maladies", "pathologies"], "answer":"Je n'ai aucun antécédent par ailleurs." },
+            { "id": "q_arthrose_15", "patterns":["calmées", "soulagées", "calment votre douleur", "soulagent"], "answer":"Je prend du paracétamol ou des AINS et ça m'aide partiellement. Mais bon j'aimerai des traitements efficaces à plus long terme." }
+          ]
         }
       ]
     }
