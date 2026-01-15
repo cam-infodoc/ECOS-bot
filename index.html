@@ -844,13 +844,13 @@ function send(){
 function calculateScore(){
   if(!currentChapter) return;
 
-  botSay("📊 Fin de la consultation");
+  botSay("📊 Fin de la station d'ECOS");
   botSay(`Questions abordées : ${questionsAsked.size} / ${currentChapter.questionSet.length}`);
   botSay("📝 Récapitulatif :");
 
   (currentChapter.recap || []).forEach(msg => botSay(msg));
 
-  botSay("✨ Consultation terminée. Choisis une nouvelle spécialité ci-dessous :");
+  botSay("✨ Station terminée. Bravo à toi ! Choisis une nouvelle spécialité ci-dessous :");
 
   botQueue.push(() => {
       currentChapter = null;
