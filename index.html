@@ -691,8 +691,7 @@ const data = {
         {
           id: "SDD1",
           title: "Douleur aigue post-opératoire",
-          intro: "Vous êtes interne de chirurgie orthopédique,
-Mr Séféuncaul 75 ans, décrit une douleur aiguë à J2 de son opération pour prothèse totale de hanche. Caractérisez la douleur, quantifiez la douleur, recherchez une complication chirurgicale, proposez une stratégie d'analgésie multimodale.",
+          intro: "Vous êtes interne de chirurgie orthopédique, Mr Séféuncaul 75 ans, décrit une douleur aiguë à J2 de son opération pour prothèse totale de hanche. Caractérisez la douleur, quantifiez la douleur, recherchez une complication chirurgicale, proposez une stratégie d'analgésie multimodale.",
           recap: [
             "Il faut proposer une évaluation de la douleur adaptée à son patient :",
             "Si le patient est communicant on propose une auto-évaluation par : échelle numérique (0-10), échelle visuelle analogique (règle 10cm), échelle verbale simple (0 pas de douleur 4 très intense). Elles sont toutes recommandées par la HAS mais insuffisantes pour évaluer toutes les composantes d'une douleur chronique.",
@@ -718,6 +717,41 @@ Mr Séféuncaul 75 ans, décrit une douleur aiguë à J2 de son opération pour 
             { "id": "q_dlapostop_16", "patterns":["froid", "musicothérapie", "relaxation", "hypnose"], "answer":"D'accord ça pourrait peut-être m'aider." },
             { "id": "q_dlapostop_17", "patterns":["ré-évaluation de la douleur", "réévaluer la douleur", "réévaluation"], "answer":"Ok je m'attends donc à ce qu'on me redemande comment est la douleur d'ici peu." },
             { "id": "q_dlapostop_18", "patterns":["antécédents", "traitement", "allergies", "toxiques", "tabac", "alcool"], "answer":"J'ai juste une arthrose de hanche bilatérale et je ne prend aucun traitement actuellement. Je ne suis ni fumeur ni alcoolique. Et je suis allergique aux chats c'est tout." }
+          ]
+        },
+        {
+          id: "SDD2",
+          title: "Douleur chronique",
+          intro: "Vous êtes médecin spécialiste de la douleur et vous recevez Mme GEMALE, une patiente de 60 ans qui consulte pour une douleur au dos évoluant depuis longtemps. Réalisez un interrogatoire de la patiente selon les recommandations de la HAS pour la douleur chronique.",
+          recap: [
+            "En cas de patient douloureux chronique il faudra demander :",
+            "Le mode de début",
+            "Le profil évolutif du syndrome douloureux",
+            "Les traitements effectués et actuels, la raison de leur arrêt",
+            "Les ATCD et pathologies associées",
+            "La description de la douleur actuelle et son retentissement",
+            "Le contexte familial, psychosocial, médico-légal, professionnel",
+            "La représentation de la maladie et l'interprétation des avis médicaux",
+            "L'attitude vis à vis de la maladie et l'observance",
+            "L'analyse de la demande : attentes et objectifs."
+          ],
+
+          questionSet: [
+            { "id": "q_dlchro_1", "patterns":["depuis quand", "combien de temps", "temps"], "answer":"Ca fait 5 ans Docteur, 5 ans !" },
+            { "id": "q_dlchro_2", "patterns":["diagnostic", "description", "décrire", "décririez", "prise en charge initiale", "retentissement"], "answer":"Mmm je dirai que c'est comme une sorte de pression en bas du dos." },
+            { "id": "q_dlchro_3", "patterns":["permanente", "intermittente", "tout le temps", "intermittent"], "answer":"Elle est permanente, j'ai pas une minute de répit. Avant ce n'était que le soir." },
+            { "id": "q_dlchro_4", "patterns":["traitements", "traitement", "efficace", "efficaces", "arrêté", "arrêtés", "arretés"], "answer":"Ah bah on a essayé du paracétamol, mais bien entendu ça ne marche pas. On a aussi essayé des AINS mais j'avais trop mal à l'estomac donc j'ai arrêté aussi. Puis on m'a prescrit de la kiné mais je ne l'ai pas fait, si des médicaments marchent pas ça fera rien. Et même j'ai peur que ça empire tout." },
+            { "id": "q_dlchro_5", "patterns":["antécédents", "antécédents médicaux", "autres syndromes douloureux", "autres pathologies"], "answer":"Alors on m'a dit que j'avais une discopathie arthrosique multi-étagée de la région lombaire." },
+            { "id": "q_dlchro_6", "patterns":["localisation", "où", "situe", "située", "localise"], "answer":"C'est tout en bas de mon dos." },
+            { "id": "q_dlchro_7", "patterns":["type", "brûlure", "brûlures", "brulures", "brulure", "décharge", "électrique", "froid", "paresthésies", "fourmillements", "fourmillement"], "answer":"Non c'est plus une pression qu'autre chose." },
+            { "id": "q_dlchro_8", "patterns":["intensité", "échelle", "EVA", "côter", "côteriez", "EN", "échelle verbale simple"], "answer":"Je ne saurais pas vous dire mais ça m'empêche de vivre." },
+            { "id": "q_dlchro_9", "patterns":["anxiété", "anxieuse", "stressée", "stress", "dépression", "déprimée", "déprime", "troubles du sommeil", "du mal à dormir", "limitation d'activité", "limitée dans vos activités", "restriction de participation", "ne pouvez pas faire"], "answer":"J'ai juste peur que mes douleurs s'aggravent, c'est tout. C'est sur que ça me rend triste au quotidien, puis j'ai beaucoup plus de mal à dormir ça doit pas aider." },
+            { "id": "q_dlchro_10", "patterns":["situation familiale", "entourage", "famille", "professionnel", "travail", "travaillez", "indemnisations", "indemnisée"], "answer":"J'ai du arrêter le travail à cause des douleurs." },
+            { "id": "q_dlchro_11", "patterns":["qu'est-ce que vous savez", "qu'est-ce que vous connaissez", "expliquez moi ce que vous savez"], "answer":"Je sais que ça ne partira pas, et je me doute que guérir complètement est impossible.?." },
+            { "id": "q_dlchro_12", "patterns":["observance", "suivez ce que", "observante", "en accord avec"], "answer":"J'ai essayé ce que m'ont dit vos collègues, vraiment, mais ça ne marche pas." },
+            { "id": "q_dlchro_13", "patterns":["attentes", "qu'est-ce que vous attendez", "qu'est-ce que vous aimeriez", "prise en charge"], "answer":"J'ai peur que ça s'aggrave, j'aimerai bien diminuer mes douleurs. Je suis consciente qu'une guérison totale c'est utopique..." },
+            { "id": "q_dlchro_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. Je viens vous voir car ça fait longtemps que j'ai mal au dos ! Et il n'y a rien qui fonctionne, rien. On a trouvé ce que c'était hun ça oui pas de problème mais pour autant j'ai toujours aussi mal." },
+            { "id": "q_dlchro_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." }
           ]
         }
       ]
