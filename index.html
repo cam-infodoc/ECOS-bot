@@ -1457,6 +1457,41 @@ const data = {
             { "id": "q_gros_17", "patterns":["régime", "régimes"], "answer":"J'ai essayé plusieurs régimes, ça ne marche jamais sur moi..." }
 
           ]
+        },
+                {
+          id: "SDD8",
+          title: "Syndrome polyuro-polydipsique",
+          intro: "Vous êtes médecin de garde aux urgences. Vous prenez en charge Mme PISSTRAU une patiente de 21 ans amenée aux urgences par les pompiers pour vomissements et confusion. La patiente est Glasgow 14 (confusion), le reste de l'examen clinique montre des signes de déshydratation. Elle était venue aux urgences il y a 2 semaines pour amaigrissement et polydipsie, mais elle avait
+quitté les urgences avant qu'un médecin puisse la voir. L'infirmière des urgences Marie, avec qui vous allez travailler en équipe, a installé la patiente en box
+d'urgence vitale. On ne vous demande pas d'examen clinique. Indiquez à Marie votre principale hypothèse diagnostique et le moyen pour la confirmer, annoncez et expliquez à l'infirmière la PEC à court terme de la patiente.",
+          recap: [
+            "Petits rappels pour cette station :",
+            "On attend la kaliémie ou l'ECG avant d'instaurer l'insuline",
+            "On recherche toujours un facteur de décompensation (radio tho, PCR, ECBU)",
+            "Le bilan biologique doit comprendre : NFS, CRP, ionogramme sanguin avec kaliémie, gazométrie artérielle, créatininémie.",
+            "On monitore la diurèse, la glycémie capillaire et la cétonémie toutes les 30 mn",
+            "On monitore les GDS, la glycémie veineuse et son ionogramme toutes les 2h.",
+            "Devant des vomissements globalement on évoque 4 urgences : acidocétose diabétique, insuffisance surrénalienne, hypercalcémie, hypertension intracrânienne.",
+            "5 diagnostics sont à évoquer devant un sd polyuro-polydipsique : sd cardinal d'un diabète, hypercalcémie, diabète insipide, hyperthyroïdie et HTA sévère."
+          ],
+
+          questionSet: [
+            { "id": "q_polyupolyd_1", "patterns":["acidocétose diabétique"], "answer":"Vous pensez à une acidocétose diabétique, d'accord." },
+            { "id": "q_polyupolyd_2", "patterns":["glycémie capillaire"], "answer":"La glycémie capillaire est à 25 mmol/L." },
+            { "id": "q_polyupolyd_3", "patterns":["cétonémie capillaire", "cétonurie"], "answer":"J'ai fait une cétonémie capillaire qui est à 8mmol/L." },
+            { "id": "q_polyupolyd_4", "patterns":["pose d'une VVP", "voie veineuse périphérique", "une VVP", "une voie veineuse périphérique"], "answer":"Je vais lui poser une VVP." },
+            { "id": "q_polyupolyd_5", "patterns":["monitorer", "monitoring", "fréquence cardiaque", "saturation", "tension artérielle", "unité de soins intensifs", "USI"], "answer":"Ok je vais la monitorer." },
+            { "id": "q_polyupolyd_6", "patterns":["remplissage par NaCl 0,9%", "remplissage", "NaCl", "NaCl 0,9%", "cristalloïdes"], "answer":"J'ai débuté un remplissage au NaCl 0,9%." },
+            { "id": "q_polyupolyd_7", "patterns":["électrocardiogramme", "ECG"], "answer":"On va lui faire un ECG de suite." },
+            { "id": "q_polyupolyd_8", "patterns":["bilan biologique", "ionogramme sanguin", "kaliémie", "gazométrie artérielle", "gaz du sang", "GDS", "créatininémie"], "answer":"Ok je vous pique le bilan." },
+            { "id": "q_polyupolyd_9", "patterns":["bilan étiologique", "hémocultures", "NFS", "CRP", "ECBU", "radiographie thoracique", "radiographie du thorax", "radio tho", "PCR Covid", "PCR multiplex"], "answer":"D'accord on va faire un ECBU en plus du bilan, je vais la pousser à la radio et on lui fera une PCR." },
+            { "id": "q_polyupolyd_10", "patterns":["attendre la kaliémie", "attendre l'ECG"], "answer":"D'accord j'attend la kaliémie ou l'ECG avant d'instaurer l'insuline." }, 
+            { "id": "q_polyupolyd_14", "patterns":["bonjour"], "answer":"Bonjour Docteur. Que voulez-vous que je fasse pour cette patiente ?"},
+            { "id": "q_polyupolyd_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi, je vous tiens au courant." },
+            { "id": "q_polyupolyd_16", "patterns":["insuline intraveineuse", "insuline IVSE"], "answer":"Je prépare le pousse seringue pour l'insuline." },
+            { "id": "q_polyupolyd_17", "patterns":["perfusion de potassium"], "answer":"Je mets de côté de quoi lui administer du potassium au besoin." },
+            { "id": "q_polyupolyd_18", "patterns":["toutes les 30 minutes", "toutes les 2 heures"], "answer":"D'accord je regarderai sa diurèse sa glycémie et sa cétonémie toutes les 30mn. Je regarderai son ionogramme sa glycémie veineuse et ses gaz du sang toutes les 2 heures." }
+          ]
         }
       ]
     }
