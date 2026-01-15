@@ -621,6 +621,31 @@ const data = {
             { "id": "q_asatalat_13", "patterns":["vésicule biliaire", "lithiase", "lithiase biliaire", "lithiases"], "answer":"Vésicule biliaire bien visualisée et absence de lithiase." },
             { "id": "q_asatalat_12", "patterns":["compris", "clair"], "answer":"Oui j'ai compris qu'on devait vérifier cette histoire de VHC et que mon foie était un peu attaqué par l'alcool mais qu'on voyait pas de cancer. Merci pour vos informations Docteur." }
           ]
+        },
+        {
+          id: "SDD16",
+          title: "Anomalie à l'imagerie abdominale",
+          intro: `Vous êtes le médecin généraliste de Mr AL COLE, un patient de 60 ans qui présente comme principal antécédent une cirrhose compensée. Mr FOIGRA vous amène le scanner que vous lui avez prescrit, en raison d'un nodule hépatique. Interprétez la coupe d'imagerie apportée par le patient en identifiant les structures saines visibles et en localisant l'anomalie, annoncez le résultat au patient et expliquez la suite de la PEC. <img src= "scannerabdominal.jpg" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+          recap: [
+            "L'imagerie abdominale tombe surtout pour : appendicite, sigmoïdite, cholécystite et angiocholite, sd occlusif, CCR, cancer du pancréas, cancer du rein et lithiase biliaire.",
+            "Bien dire il s'agit d'une image de ..., en coupe ..., injectée au temps... ou non injectée, passant par...",
+            "Ensuite décrire la lésion en identifiant sa localisation, sa prise de contraste ou non et ses rapports avec les organes adjacents."
+          ],
+
+          questionSet: [
+            { "id": "q_scanabdo_1", "patterns":["bonjour"], "answer":"Bonjour Docteur, alors qu'est-ce qu'on en dit de ce scanner ?"},
+            { "id": "q_scanabdo_2", "patterns":["scanner abdominal en coupe axiale", "scanner abdominal", "coupe axiale"], "answer":"Ok." },
+            { "id": "q_scanabdo_3", "patterns":["injection", "temps artériel"], "answer":"Effectivement je me souviens qu'on m'a mit un liquide dans le bras, c'est donc injecté." },
+            { "id": "q_scanabdo_4", "patterns":["foie", "estomac", "rate"], "answer":"Je vois." },
+            { "id": "q_scanabdo_5", "patterns":["tumeur", "nodule", "cancer"], "answer":"Oui on voit effectivement le nodule hépatique dont on avait discuté." },
+            { "id": "q_scanabdo_6", "patterns":["rehaussement", "réhaussée", "réhausse", "wash-in"], "answer":"Oui c'est vrai qu'elle est plus claire que le foie cette tumeur." },
+            { "id": "q_scanabdo_7", "patterns":["aorte", "veine porte"], "answer":"D'accord donc ça ce sont mes vaisseaux sanguins." },
+            { "id": "q_scanabdo_8", "patterns":["cancer hépatique", "carcinome hépatocellulaire", "cancer du foie", "carcinome"], "answer":"Donc là on peut dire que c'est un cancer du foie. Je vois... Faut faire une biopsie du coup ?" },
+            { "id": "q_scanabdo_9", "patterns":["non", "pas de biopsie", "pas nécessaire"], "answer":"D'accord. Et comment on le traite ce cancer ? C'est un traitement curatif ?" },
+            { "id": "q_scanabdo_10", "patterns":["traitement curatif", "résection", "transplantation", "radiofréquence"], "answer":"D'accord je vois." },
+            { "id": "q_scanabdo_11", "patterns":["RCP", "réunion de concertation pluridisciplinaire", "oncologue", "cancérologue"], "answer":"Ok donc vous serez plusieurs à en discuter pour me soigner du coup." },
+            { "id": "q_asatalat_12", "patterns":["compris", "clair"], "answer":"Oui j'ai compris que j'avais un cancer du foie comme on s'en doutait. Mais je sais aussi qu'on essaiera de le soigner avec vous et d'autres docteurs. Merci pour tout." }
+          ]
         }
       ]
     }
@@ -687,24 +712,34 @@ function processBotQueue(){
   }, 400);
 
   setTimeout(() => {
-    clearInterval(thinkingInterval);
-    bubble.className = "bot";
-    bubble.textContent = "";
+  clearInterval(thinkingInterval);
+  bubble.className = "bot";
 
-    let i = 0;
-    const speed = 20;
-    const typingInterval = setInterval(() => {
-      bubble.textContent += text.charAt(i);
-      i++;
-      messages.scrollTop = messages.scrollHeight;
+  // 🔍 Si le message contient du HTML
+  if (text.includes("<")) {
+    bubble.innerHTML = text;
+    messages.scrollTop = messages.scrollHeight;
+    processBotQueue();
+    return;
+  }
 
-      if (i >= text.length) {
-        clearInterval(typingInterval);
-        processBotQueue();
-      }
-    }, speed);
-  }, 800);
-}
+  // ✍️ Sinon : typing normal
+  bubble.textContent = "";
+  let i = 0;
+  const speed = 20;
+
+  const typingInterval = setInterval(() => {
+    bubble.textContent += text.charAt(i);
+    i++;
+    messages.scrollTop = messages.scrollHeight;
+
+    if (i >= text.length) {
+      clearInterval(typingInterval);
+      processBotQueue();
+    }
+  }, speed);
+
+}, 800);
 
 function userSay(text){
   const div = document.createElement("div");
