@@ -1090,7 +1090,40 @@ const data = {
             { "id": "q_sarcome_10", "patterns":["depuis combien de temps", "temporalité", "combien de temps", "temps"], "answer":"Depuis 3 mois je ressens de douleurs de l'épaule gauche surtout le matin au réveil." },
             { "id": "q_sarcome_11", "patterns":["fatigue", "asthénie", "AEG", "altération de l'état général", "amaigrissement", "perte de poids", "anorexie"], "answer":"Je suis plus fatigué depuis quelques semaines et j'ai perdu 6 kg." },
             { "id": "q_sarcome_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, j'ai mal à l'épaule gauche depuis quelque temps. Qu'a donné ma radio ?" },
-            { "id": "q_sarcome_13", "patterns":["compris", "clair"], "answer":"Tout est clair Docteur, merci de vos informations." },
+            { "id": "q_sarcome_13", "patterns":["compris", "clair"], "answer":"Tout est clair Docteur, merci de vos informations." }
+          ]
+        },
+        {
+          id: "SDD15",
+          title: "Mise en place et suivi d'un appareil d'immobilisation",
+          intro: "Vous êtes orthopédiste et vous venez de réaliser une contention par botte plâtrée à Mme LECHAT, une patiente de 60ans, pour une fracture non déplacée de la diaphyse tibiale. Expliquez à la patiente les complications potentielles, donnez les conseils pour prévenir ces complications, organisez une PEC et un suivi adapté.",
+
+          recap: [
+            "L'évaluation neurologique se base sur le score ASIA qu'il faut établir étape par étape :",
+            "Etablir le niveau sensitif : dernier niveau où la sensibilité est normale",
+            "Etablir le niveau moteur : dernier muscle clé côté à plus de 3/5 (à condition que les muscles sous-jacents soient aussi >3/5)"
+            "Etablir le niveau lésionnel : dernier niveau où la sensibilité et la motricité sont conservées",
+            "Tester la sensibilité et la motricité des territoires nerveux situés sous le niveau lésionnel pour déterminer si la lésion est complète ou incomplète.",
+            "On parle de déficit complet lorsqu'il n'y a aucune senisbilité ou motricité dans le territoire S4-S5",
+            "On parle de déficit incomplet sensitif lorsque la sensibilité mais pas la motricité est préservée au dessous du niveau lésionnel",
+            "On parle de déficit incomplet moteur lorsque la motricité est préservée au dessous du niveau lésionnel et plus de la moitié des muscles testés au dessous de ce score a un score <3 (C) ou <3 (D)"
+          ],
+
+          questionSet: [
+            { "id": "q_platre_1", "patterns":["syndrome des loges", "syndrome compartimental"], "answer":"D'accord donc un des risque c'est le syndrome des loges." },
+            { "id": "q_platre_2", "patterns":["thrombose veineuse profonde", "TVP"], "answer":"J'ai compris aussi que je risquais de faire une TVP." },
+            { "id": "q_platre_3", "patterns":["compression locale", "escares", "ischémie", "compression veineuse"], "answer":"Ok, il y a un risque de compression qu'il soit cutané ou vasculaire." },
+            { "id": "q_platre_4", "patterns":["déplacement fracturaire", "déplacement de la fracture"], "answer":"Ok ma fracture pourrait se déplacer." },
+            { "id": "q_platre_5", "patterns":["suréléver la jambe", "surélévation"], "answer":"D'accord je surélèverai ma jambe." },
+            { "id": "q_platre_6", "patterns":["contractions", "contractions isométriques"], "answer":"Ok j'essaierai de contracter mon mollet pour m'éviter des problèmes." },
+            { "id": "q_platre_7", "patterns":["ne pas mouiller", "pas mouiller le plâtre", "ne pas laver"], "answer":"C'est compris je ne mouillerai pas mon plâtre." },
+            { "id": "q_platre_8", "patterns":["pas introduire d'objets", "ne pas mettre d'objets"], "answer":"Ok je ne mettrais rien dans mon plâtre." },
+            { "id": "q_platre_9", "patterns":["anticoagulation préventive", "héparine de bas poids moléculaire", "HBPM"], "answer":"Je ferais donc venir une infirmère pour les piqures d'anticoagulant." },
+            { "id": "q_platre_10", "patterns":["contrôles radiologiques", "contrôle radiologique", "radiographies"], "answer":"D'accord on fera d'autres radios si c'est nécessaire." },
+            { "id": "q_platre_11", "patterns":["antécédents", "traitement", "traitements", "allergies", "tabac", "alcool", "fumez"], "answer":"J'ai pas d'antécédents et je ne prend aucun traitement. Je ne fume pas je ne bois pas. Je suis allergique aux légumes c'est tout." },
+            { "id": "q_platre_12", "patterns":["bonjour"], "answer":"Bon Docteur vous avez trouvé une fracture de la diaphyse tibiale et vous m'avez mis un plâtre, maintenant c'est quoi la suite ?" },
+            { "id": "q_platre_13", "patterns":["compris", "clair"], "answer":"Tout est clair Docteur, merci de vos informations." },
+            { "id": "q_platre_14", "patterns":["douleurs", "engourdissement", "modification de la couleur", "froid", "tâches", "odeurs nauséabondes", "fièvre"], "answer":"D'accord je reconsulterai si j'ai ça." }
           ]
         }
       ]
