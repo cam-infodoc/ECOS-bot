@@ -1154,6 +1154,36 @@ const data = {
             { "id": "q_platre_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, alors on fait quoi pour ma marche, je vous avoue être vraiment dérangé." },
             { "id": "q_platre_13", "patterns":["compris", "clair"], "answer":"Tout est clair Docteur, merci de vos informations." }
           ]
+        },
+        {
+          id: "SDD17",
+          title: "Consultation de suivi d'un patient présentant une lombalgie",
+          intro: "Vous êtes interne de rhumatologie, Mr Ovalie 30 ans, consulte pour des douleurs lombaires basses depuis 3 semaines. Réalisez l'examen clinique du rachis lombaire, différenciez lombalgie commune d'une lombalgie symptomatique.",
+
+          recap: [
+            "Il s'agit ici d'une lombalgie commune.",
+            "Il faut rechercher des symptômes neurologiques étendus, des paresthésies périnéales, de la fièvre, la prise de drogues en IV ou une immunodépression (attention à la prise de corticoïdes), la perte de poids inexpliquée, une AEG ou un ATCD de cancer."
+          ],
+
+          questionSet: [
+            { "id": "q_lombalgie_1", "patterns":["inspection", "trouble de la statique", "déformation rachidienne"], "answer":"Vous avez identifié un steppage." },
+            { "id": "q_lombalgie_2", "patterns":["palpation", "douleur du rachis", "douleur des muscles paravertébraux"], "answer":"J'ai des douleurs lombaires, c'est la première fois que ça m'arrive." },
+            { "id": "q_lombalgie_3", "patterns":["signe de la sonnette"], "answer":"Signe de la sonnette présent." },
+            { "id": "q_lombalgie_4", "patterns":["mobilisation", "mobilités du rachis lombaire", "raideur"], "answer":"Signe de Lasègue positif." },
+            { "id": "q_lombalgie_5", "patterns":["horaire", "matin", "soir"], "answer":"Horarie mécanique." },
+            { "id": "q_lombalgie_6", "patterns":["symptôme neurologique", "sphincters vésicaux ou anaux", "syndrome de la queue de cheval"], "answer":"Absence de symptômes neurologiques." },
+            { "id": "q_lombalgie_7", "patterns":["paresthésies", "paresthésies périnéales"], "answer":"Absence de paresthésies." },
+            { "id": "q_lombalgie_8", "patterns":["traumatisme", "traumatisme important"], "answer":"Mes douleurs sont apparues après mon déménagement c'est tout." },
+            { "id": "q_lombalgie_9", "patterns":["fièvre", "frissons"], "answer":"Je n'ai pas eu de fièvre." },
+            { "id": "q_lombalgie_10", "patterns":["drogues", "toxicomanie", "corticothérapie", "immunodépression"], "answer":"Je ne prend pas de drogues, pas de corticoïdes et je n'ai pas d'antécédents particuliers." },
+            { "id": "q_lombalgie_11", "patterns":["perte de poids", "amaigrissement"], "answer":"Je n'ai pas perdu de poids." },
+            { "id": "q_lombalgie_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, j'ai des douleurs lombaires depuis mon déménagement il y a 3 semaines." },
+            { "id": "q_lombalgie_13", "patterns":["compris", "clair"], "answer":"Tout est clair Docteur, merci de vos informations." },
+            { "id": "q_lombalgie_14", "patterns":["altération de l'état général", "AEG", "fatigue", "fatigué"], "answer":"Non je suis juste dérangé par les douleurs." },
+            { "id": "q_lombalgie_15", "patterns":["antécédent de cancer"], "answer":"Non je n'ai pas d'antécédents particuliers." },
+            { "id": "q_lombalgie_16", "patterns":["facteurs aggravants", "aggravent"], "answer":"Ma douleur est aggravée par la toux, le rire, la défécation, l'éternuement." },
+            { "id": "q_lombalgie_17", "patterns":["localisation", "irradiation"], "answer":"La localisation est lombaire, médiane et il y a une irradiation du dos vers la face postérieure de la cuisse." }
+          ]
         }
       ]
     }
