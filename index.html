@@ -884,7 +884,7 @@ const data = {
         {
           id: "SDD7",
           title: "Douleur articulaire",
-          intro: "Il est 20 h, vous êtes médecin de garde aux urgences et vous recevez Mr MICHEL, un patient de 57 ans, qui se plaint de douleur au genou, empêchant la marche. L'interrogatoire est le suivant : la douleur au genou date de ce matin, elle est accompagnée de frissons et d'une sensation de malaise général, c'est le premier épisode de ce type, le patient n'a pas d'antécédent particulier et ne prend pas de traitement. Le patient n'a pas d'allergies. A l'examen clinique : le genou est rouge douloureux et gonflé, avec impotence fonctionnelle, la température corporelle est à 39°C, le reste de l'examen clinique est normal. Le matériel disponible est le suivant : gel hydro-alcoolique, aiguille à ponction, seringue de 20mL, gants non stériles, gants stériles, champs stériles, compresses, antiseptique, 3 flacons de recueil. Expliquez au patient les 2 principales hypothèses diagnostiques ainsi que les premiers éléments de PEC diagnostiques, réalisez une ponction articulaire."
+          intro: "Il est 20 h, vous êtes médecin de garde aux urgences et vous recevez Mr MICHEL, un patient de 57 ans, qui se plaint de douleur au genou, empêchant la marche. L'interrogatoire est le suivant : la douleur au genou date de ce matin, elle est accompagnée de frissons et d'une sensation de malaise général, c'est le premier épisode de ce type, le patient n'a pas d'antécédent particulier et ne prend pas de traitement. Le patient n'a pas d'allergies. A l'examen clinique : le genou est rouge douloureux et gonflé, avec impotence fonctionnelle, la température corporelle est à 39°C, le reste de l'examen clinique est normal. Le matériel disponible est le suivant : gel hydro-alcoolique, aiguille à ponction, seringue de 20mL, gants non stériles, gants stériles, champs stériles, compresses, antiseptique, 3 flacons de recueil. Expliquez au patient les 2 principales hypothèses diagnostiques ainsi que les premiers éléments de PEC diagnostiques, réalisez une ponction articulaire.",
           recap: [
             "Cet ECOS est une procédure.",
             "Décrivez bien que la zone à ponctionner est la partie latérale de la patella",
@@ -910,6 +910,39 @@ const data = {
             { "id": "q_arthrite_11", "patterns":["partie latérale de la patella"], "answer":"Vous piquez dans la partie latérale de la patella." },
             { "id": "q_arthrite_12", "patterns":["3 tubes"], "answer":"Vous remplissez les 3 tubes." },
             { "id": "q_arthrite_13", "patterns":["cytologie", "microbiologie", "microcristaux"], "answer":"Vous remplissez un tube pour la cytologie, un tube pour la microbiologie et un tube pour la recherche de microcristaux." }
+          ]
+        },
+        {
+          id: "SDD8",
+          title: "Boiterie",
+          intro: "Vous êtes en cabinet de médecine générale, une maman consulte pour son garçon Tom de 5 ans, qui boite depuis 2 jours, avec une douleur à la hanche. Cherchez les éléments de l'interrogatoire et de l'examen clinique orientant vers une cause articulaire ou extra articulaire.",
+          recap: [
+            "La boiterie d'esquive est une réduction du temps d'appui au sol du membre pathologique à visée antalgique",
+            "La boiterie d'équilibration correspond à une bascule des épaules du côté pathologique, traduit une pathologie chronique de la hanche",
+            "Les étiologies de la boiterie dépendent de l'âge.",
+            "Ici entre 3 et 8 ans on recherche :",
+            "Synovite aigue transitoire : infection virale récente, brutale, max au réveil, épanchement à l'échographie, radio normale, pas de SIB.",
+            "Ostéochondrite primitive de hanche : garçon, insidieuse, aggravation à l'effort ou fin de journée, intermittente, diagnostic radiologique.",
+            "Il y a aussi des étiologies à éliminer à tout âge : infection ostéoarticulaire, pathologies tumorales, pathologies neuromusculaires, malformations congénitales, maladies inflammatoires.",
+            "Ne pas oublier de faire un examen complet des MI et de toutes les articulations des MI, rechercher des plaies, examen clinique du rachis, examen neurologique, examen des téguments. Penser aussi à éliminer l'appendicite (psoïtis)."
+          ],
+
+          questionSet: [
+            { "id": "q_boite_1", "patterns":["antécédents", "pathologies"], "answer":"Tom n'a pas de maladies particulières." },
+            { "id": "q_boite_2", "patterns":["depuis combien de temps", "quand", "temps"], "answer":"Il boite depuis 2 jours, c'est arrivé brutalement." },
+            { "id": "q_boite_3", "patterns":["infection virale récente", "virus", "virose"], "answer":"Effectivement il a eu une angine il y a 2 semaines." },
+            { "id": "q_boite_4", "patterns":["traumatisme récent", "tombé", "tombé récemment"], "answer":"Non il n'est pas tombé récemment." },
+            { "id": "q_boite_5", "patterns":["inégalité de longueur des membres", "asymétrie de longueur"], "answer":"Pas d'inégalité de la longueur des membres." },
+            { "id": "q_boite_6", "patterns":["fièvre", "frissons"], "answer":"Tom n'a pas de fièvre." },
+            { "id": "q_boite_7", "patterns":["douleur persistante", "insomniante", "empêche de dormir", "douleurs dans les os longs"], "answer":"Non, c'est plutôt au réveil qu'il boite." },
+            { "id": "q_boite_8", "patterns":["boiterie d'esquive", "boiterie d'équilibration"], "answer":"Boiterie d'esquive." },
+            { "id": "q_boite_9", "patterns":["examen de la hanche", "palpation", "point douloureux", "examen des articulations", "amplitudes articulaires", "douleur projetée"], "answer":"L'examen montre une limitation de l'abduction et et de la rotation interne. Les autres articulations sont normales." },
+            { "id": "q_boite_10", "patterns":["plaie", "ecchymose", "bleus", "plaies", "ecchymoses"], "answer":"Examen cutané normal." },
+            { "id": "q_boite_11", "patterns":["examen du rachis", "refus de la position assise", "du mal à s'assoir"], "answer":"Examen du rachis normal." },
+            { "id": "q_boite_12", "patterns":["examen neurologique"], "answer":"Examen neurologique normal." },
+            { "id": "q_boite_13", "patterns":["examen téguments", "inspection cutanée", "lésions cutanées"], "answer":"Absence de plaies ou lésions des téguments." },
+            { "id": "q_boite_14", "patterns":["examen abdomen", "psoïtis", "appendicite"], "answer":"Examen abdominal sans particularités." },
+            { "id": "q_boite_15", "patterns":["matin", "soir", "maximale", "temporalité", "matinée"], "answer":"Oui la douleur est plus importante le matin au réveil." }
           ]
         }
       ]
