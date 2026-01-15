@@ -1004,7 +1004,33 @@ const data = {
             { "id": "q_lca_10", "patterns":["rupture du ligament croisé antérieur", "rupture du LCA", "rupture du ligament croisé antérieur droit", "rupture du LCA droit"], "answer":"Vous diagnostiquez une rupture du LCA droit." }
           ]
         },
-        
+        {
+          id: "SDD11",
+          title: "Traumatisme des membres",
+          intro: `Vous êtes interne aux urgences et vous prenez en charge un patient de 30 ans suite à un accident de moto. Le patient à une douleur au membre supérieur droit cotée à 7/10. Une radiographie a été faite avant votre arrivée dans le box que voici. Décrivez et interprétez le cliché radiographique, recherchez à l'examen clinique les complications loco-régionales, expliquez les principes de PEC immédiate, puis discutez une PEC chirurgicale ou orthopédique. <img src= "fractureradius.jpg" style="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Devant une fracture vous devez vérifier les complications cutanées, neurologiques et vasculaires.",
+            "Le patient doit avoir une réduction de sa fracture, une immobilisation et une chirurgie car la fracture est ouverte (plaie de 5 cm sur la bras atteint)",
+            "Toujours vérifier la vaccination anti-tétanique. En cas de doute réaliser un test pour détecter les anticorps anti tétaniques."
+          ],
+
+          questionSet: [
+            { "id": "q_radius_1", "patterns":["trait de fracture transversal", "transversal"], "answer":"Noté." },
+            { "id": "q_radius_2", "patterns":["diaphyse", "diaphysaire"], "answer":"Noté." },
+            { "id": "q_radius_3", "patterns":["valgus"], "answer":"Noté." },
+            { "id": "q_radius_4", "patterns":["complication cutanée", "complications cutanées", "contusion", "découlement cutané", "ouverture", "plaie", "plaies"], "answer":"Plaie de 5 cm sur le bras droit." },
+            { "id": "q_radius_5", "patterns":["complications neurologiques", "complication neurologique", "examen sensitif","examen moteur", "nerf radial", "extension poignet", "sensibilité du dos de la main"], "answer":"Pas de déficit sensitivo-moteur." },
+            { "id": "q_radius_6", "patterns":["complication vasculaire", "complications vasculaires", "pouls périphériques", "pouls ulnaire", "pouls radial", "chaleur cutanée", "froid", "coloration", "TRC"], "answer":"Pouls présents." },
+            { "id": "q_radius_7", "patterns":["syndrome des loges", "palpation des loges musculaires"], "answer":"Pas de douleur à la palpation des loges musculaires." },
+            { "id": "q_radius_8", "patterns":["réduction", "immobilisation"], "answer":"Réduction et immobilisation réalisées." },
+            { "id": "q_radius_9", "patterns":["prise en charge antalgique", "antalgie", "antalgiques"], "answer":"Antalgie donnée." },
+            { "id": "q_radius_10", "patterns":["statut vaccinal", "vaccinations", "vaccination", "tétanos", "anticorps anti-tétaniques", "anticorps anti tétaniques"], "answer":"Je suis à jour de mes vaccinations Docteur." },
+            { "id": "q_radius_11", "patterns":["chirurgie", "chirurgie en urgence"], "answer":"Chirurgie en urgence prévue." },
+            { "id": "q_radius_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, je suis tombé de mon scooter il y a 1 heure. J'ai très mal au bras droit." },
+            { "id": "q_radius_13", "patterns":["constantes", "paramètres vitaux"], "answer":"Patient stable, conscient et orienté. Constantes stables. Apyréxie." },
+          ]
+        }
       ]
     }
   ],
