@@ -880,6 +880,37 @@ const data = {
             { "id": "q_arthrose_14", "patterns":["antécédents", "maladies", "pathologies"], "answer":"Je n'ai aucun antécédent par ailleurs." },
             { "id": "q_arthrose_15", "patterns":["calmées", "soulagées", "calment votre douleur", "soulagent"], "answer":"Je prend du paracétamol ou des AINS et ça m'aide partiellement. Mais bon j'aimerai des traitements efficaces à plus long terme." }
           ]
+        },
+        {
+          id: "SDD7",
+          title: "Douleur articulaire",
+          intro: "Il est 20 h, vous êtes médecin de garde aux urgences et vous recevez Mr MICHEL, un patient de 57 ans, qui se plaint de douleur au genou, empêchant la marche. L'interrogatoire est le suivant : la douleur au genou date de ce matin, elle est accompagnée de frissons et d'une sensation de malaise général, c'est le premier épisode de ce type, le patient n'a pas d'antécédent particulier et ne prend pas de traitement. Le patient n'a pas d'allergies. A l'examen clinique : le genou est rouge douloureux et gonflé, avec impotence fonctionnelle, la température corporelle est à 39°C, le reste de l'examen clinique est normal. Le matériel disponible est le suivant : gel hydro-alcoolique, aiguille à ponction, seringue de 20mL, gants non stériles, gants stériles, champs stériles, compresses, antiseptique, 3 flacons de recueil. Expliquez au patient les 2 principales hypothèses diagnostiques ainsi que les premiers éléments de PEC diagnostiques, réalisez une ponction articulaire."
+          recap: [
+            "Cet ECOS est une procédure.",
+            "Décrivez bien que la zone à ponctionner est la partie latérale de la patella",
+            "Précisez bien que les 3 tubes correspondent à la cytologie, la microbiologie et à la recherche des microcristaux.",
+            "Un autre angle possible sera d'orienter l'étiologie devant une douleur articulaire avec épanchement",
+            "Une monoarthrite d'évolution brutale avec liquide inflammatoire, fièvre et SIB = arthrite septique ou arthrite microcristalline.",
+            "Une oligo ou polyarthrite d'évolution subaigue avec liquide inflammatoire +/- signes généraux = polyarthrite rhumatoïde, spondylarthite, lupus.",
+            "Douleurs chroniques de rythme mécanique, avec poussée douloureuse aigue, liquide mécanique = arthrose.",
+            "La démarche diagnostique est : ponction articulaire, radiographies des genoux, un bilan biologique."
+          ],
+
+          questionSet: [
+            { "id": "q_arthrite_1", "patterns":["infection du genou", "arthrite septique"], "answer":"D'accord j'ai donc surement une infection du genou." },
+            { "id": "q_arthrite_2", "patterns":["arthropathie microcristalline", "goutte", "chondrocalcinose"], "answer":"D'accord ça pourrait aussi être une arthropathie microcristalline." },
+            { "id": "q_arthrite_3", "patterns":["ponction articulaire"], "answer":"D'accord vous pouvez faire une ponction articulaire." },
+            { "id": "q_arthrite_4", "patterns":["radiographie du genou", "radiographies du genou"], "answer":"Il y a pas de souci on peut faire des radios si besoin." },
+            { "id": "q_arthrite_5", "patterns":["bilan biologique", "NFS", "CRP", "hémocultures", "hémoc"], "answer":"D'accord faisons ça." },
+            { "id": "q_arthrite_6", "patterns":["désinfection", "antiseptique"], "answer":"Vous réalisez une désinfection du genou." },
+            { "id": "q_arthrite_7", "patterns":["gants stériles"], "answer":"Vous mettez vos gants stériles." },
+            { "id": "q_arthrite_8", "patterns":["champ stérile"], "answer":"Vous posez votre champ stérile." },
+            { "id": "q_arthrite_9", "patterns":["deuxième désinfection"], "answer":"Vous réalisez une seconde désinfection." },
+            { "id": "q_arthrite_10", "patterns":["hydroalcoolique"], "answer":"Vous vous nettoyez les mains au gel hydroalcoolique." },
+            { "id": "q_arthrite_11", "patterns":["partie latérale de la patella"], "answer":"Vous piquez dans la partie latérale de la patella." },
+            { "id": "q_arthrite_12", "patterns":["3 tubes"], "answer":"Vous remplissez les 3 tubes." },
+            { "id": "q_arthrite_13", "patterns":["cytologie", "microbiologie", "microcristaux"], "answer":"Vous remplissez un tube pour la cytologie, un tube pour la microbiologie et un tube pour la recherche de microcristaux." }
+          ]
         }
       ]
     }
