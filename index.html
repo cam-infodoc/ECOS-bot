@@ -1339,6 +1339,36 @@ const data = {
             { "id": "q_imc_16", "patterns":["cortisolurie des 24h", "cortisol urinaire des 24h", "freinage minute", "freinage", "cortisol salivaire à minuit", "cortisol à minuit"], "answer":"D'accord." },
             { "id": "q_imc_17", "patterns":["dosage de l'IGF1", "IGF1"], "answer":"Ok pas de soucis." }
           ]
+        },
+                {
+          id: "SDD4",
+          title: "Puberté précoce ou retardée",
+          intro: "Vous recevez en consultation Alicia, une fille de 13 ans accompagnée de sa maman, inquiète devant l'absence de règles de sa fille. Analysez le développement pubertaire grâce à l'anamnèse et la clinique, orientez votre interrogatoire et examen clinique à la recherche de causes organiques, interprétez les résultats de dosages hormonaux, poursuivez l'enquête étiologique.",
+          recap: [
+            "En cas d'hypogonadisme hypergonadotrope (cause périphérique) :",
+            "Faire un carytope pour éliminer un sd de Turner chez la fille ou de Klinefelter chez le garçon.",
+            "En cas d'hypogonadisme hypogonadotrope (cause centrale) :",
+            "Faire une IRM hypothalamo-hypophysaire pour rechercher une tumeur, rechercher une maladie chronique.",
+            "Le retard pubertaire simple est la cause la plus fréquente chez le garçon mais reste un diagnostic d'élimination."
+          ],
+
+          questionSet: [
+            { "id": "q_puberte_1", "patterns":["développement mammaire"], "answer":"Présence d'un petit bourgeon mammaire." },
+            { "id": "q_puberte_2", "patterns":["pilosité pubienne"], "answer":"Absence de pilosité pubienne." },
+            { "id": "q_puberte_3", "patterns":["retard pubertaire"], "answer":"Retard statural d'aggravation progressive." },
+            { "id": "q_puberte_4", "patterns":["antécédents familiaux", "âge des premières règles", "début pubertaire"], "answer":"Il n'y a pas d'antécédents familiaux particuliers." },
+            { "id": "q_puberte_5", "patterns":["antécédents personnels", "maladie chronique"], "answer":"Non elle n'a pas d'antécédents, pas de maladie chronique." },
+            { "id": "q_puberte_6", "patterns":["croissance staturo-pondérale", "courbe de croissance", "taille", "poids"], "answer":"Il y a un retard statural d'aggravation progressive." },
+            { "id": "q_puberte_7", "patterns":["anosmie", "hyposmie", "syndrome de Kallman"], "answer":"Absence de troubles de l'odorat." },
+            { "id": "q_puberte_8", "patterns":["signes visuels", "hypertension intracrânienne", "céphalées", "maux de tête", "nausées", "vomissements", "anomalies du champ visuel"], "answer":"Absence de signes neurologiques." },
+            { "id": "q_puberte_9", "patterns":["dénutrition", "anorexie"], "answer":"Elle mange normalement." },
+            { "id": "q_puberte_10", "patterns":["syndrome dysmorphique", "examen des organes génitaux", "OGE", "examen neurologique"], "answer":"Il existe une dysmorphie avec mamelons écartés et cou large." },
+            { "id": "q_puberte_11", "patterns":["hypogonadisme hypergonadotrope"], "answer":"Vous retenez le diagnostic d'hypogonadisme hypergonadotrope." },
+            { "id": "q_puberte_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. Nous venons car ma fille n'a toujours pas ses règles à 13 ans." },
+            { "id": "q_puberte_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." },
+            { "id": "q_puberte_16", "patterns":["caryotype"], "answer":"Un caryotype est prescrit." },
+            { "id": "q_puberte_17", "patterns":["bilan sanguin", "prise de sang"], "answer":"Vous retrouvez LH élevée, FSH élevée, oestradiol bas." }
+          ]
         }
       ]
     }
