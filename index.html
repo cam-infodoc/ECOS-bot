@@ -646,6 +646,40 @@ const data = {
             { "id": "q_scanabdo_11", "patterns":["RCP", "réunion de concertation pluridisciplinaire", "oncologue", "cancérologue"], "answer":"Ok donc vous serez plusieurs à en discuter pour me soigner du coup." },
             { "id": "q_asatalat_12", "patterns":["compris", "clair"], "answer":"Oui j'ai compris que j'avais un cancer du foie comme on s'en doutait. Mais je sais aussi qu'on essaiera de le soigner avec vous et d'autres docteurs. Merci pour tout." }
           ]
+        },
+        {
+          id: "SDD17",
+          title: "Demande et préparation aux examens endoscopiques digestifs",
+          intro: "Vous êtes gastro-entérologue et vous recevez en consultation Mr TUBOCU, un patient de 70 ans, qui a récemment fait le dépistage du cancer colorectal (test immunologique de détection de sang dans les selles) qui est revenu positif. Après un interrogatoire et un examen clinique qui ne révèlent pas de signes de cancer colorectal, vous décidez de prescrire une coloscopie à votre patient. Il vous rapporte les antécédents suivants : remplacement valvulaire par une valve biologique il y a 2 ans, infarctus du myocarde il y a 5 ans. Il prend pour traitement : aspirine, simvastatine, propanolol, Ramipril. Expliquez les objectifs et les risques de l'examen, expliquez le déroulement de l'endoscopie et les modalités de préparation."
+          recap: [
+            "Il faut bien connaîtres les indications à une endoscopie",
+            "RGO si >50a, dysphagie, perte de poids ou anémie",
+            "Douleurs épigastriques (UGD, cancer gastrique)",
+            "Dysphagie (cancer)",
+            "ATCD au 1e degré de cancer de l'estomac",
+            "Hématémèse, méléna ou rectorragies avec instabilité HD",
+            "A distance d'un abcès sigmoïdien",
+            "Dépistage du CCR si ATCD familiaux ou test de recherche dans les selles + ",
+            "Angiocholite aigue pour CPRE",
+            "Bilan de diarrhées chroniques ou de constipation avec drapeaux rouges",
+            "Carence en vitamine B12 (Biermer)."
+          ],
+
+          questionSet: [
+            { "id": "q_colo_1", "patterns":["bonjour"], "answer":"Bonjour Docteur, j'aimerai bien que vous m'expliquiez pourquoi je dois faire une coloscopie."},
+            { "id": "q_colo_2", "patterns":["dépistage", "lésions cancéreuses", "polypes"], "answer":"Ok donc le but c'est de chercher des lésions pré cancéreuses ou cancéreuses quoi. Et y a quoi comme complications possibles ? " },
+            { "id": "q_colo_3", "patterns":["hémorragie", "perforation", "infection"], "answer":"Ah oui donc ça peut être grave quand même faut pas qu'ils se loupent hun ! Et comment je me prépare à la coloscopie ?" },
+            { "id": "q_colo_4", "patterns":["préparation", "PEG", "polyéthylène-glycol", "la veille", "diarrhée", "diarrhées"], "answer":"Wow mais je vais me vider avec votre truc, c'est pas super glamour." },
+            { "id": "q_colo_5", "patterns":["régime sans résidus", "sans résidus", "3 jours avant"], "answer":"Roh les régimes ça n'a jamais été mon truc Docteur mais bon pourquoi pas." },
+            { "id": "q_colo_6", "patterns":["à jeun", "arrêt des solides", "arrêt des liquides"], "answer":"Ok et je dois arrêter de manger combien de temps avant ? et pour boire c'est combien de temps avant ?" },
+            { "id": "q_colo_7", "patterns":["6 heures", "6h", "six heures", "2h", "2 heures", "deux heures", "6H", "2H"], "answer":"Ok je retiens." },
+            { "id": "q_colo_8", "patterns":["anesthésie", "AG", "anesthésie locale", "anesthésie générale"], "answer":"Ok donc je peux être endormi." },
+            { "id": "q_colo_9", "patterns":["consultation", "anesthésiste", "consultation pré-opératoire"], "answer":"Ah donc je vais devoir voir un de vos collègues du coup. Mais une fois que la colo sera finie je dois resté hospitalisé longtemps ? "},
+            { "id": "q_colo_10", "patterns":["ambulatoire", "pas d'hospitalisation", "pas hospitalisé"], "answer":"Ah ça c'est cool. Je préfere rentrer vite moi." },
+            { "id": "q_colo_11", "patterns":["aspirine"], "answer":"Ok je ferai ce que vous me dites. Et je dois prendre des antibiotiques ?" },
+            { "id": "q_colo_12", "patterns":["pas d'antibiotiques", "pas d'antibioprophylaxie"], "answer":"D'accord" },
+            { "id": "q_colo_12", "patterns":["compris", "clair"], "answer":"Oui tout est clair, merci Doc! " }
+          ]
         }
       ]
     }
