@@ -1184,6 +1184,41 @@ const data = {
             { "id": "q_lombalgie_16", "patterns":["facteurs aggravants", "aggravent"], "answer":"Ma douleur est aggravée par la toux, le rire, la défécation, l'éternuement." },
             { "id": "q_lombalgie_17", "patterns":["localisation", "irradiation"], "answer":"La localisation est lombaire, médiane et il y a une irradiation du dos vers la face postérieure de la cuisse." }
           ]
+        },
+        {
+          id: "SDD18",
+          title: "Dépistage et prévention ostéoporose",
+          intro: "Vous êtes rhumatologue et vous recevez Mme Capon, une femme de 76 ans, qui vous est adressée par son médecin généraliste pour un bilan d'ostéoporose. La patiente vous remet la lettre du médecin.
+Le diagnostic clinique d'ostéoporose est déjà posé. (Chère confrère, je vous adresse la présente lettre au sujet de ma patiente, Mme Capon, qui a récemment subi une fracture vertébrale en L1 à la suite d'une simple chute de sa hauteur. Cette situation m'inquiète quant à sa santé osseuse et je souhaiterais solliciter votre expertise pour réaliser un bilan d'ostéoporose. Je vous remercie pour votre collaboration et votre aide dans le suivi de Mme Capon. Cordialement.) Recherchez à l'interrogatoire et à l'examen clinique les facteurs de risque et causes secondaires de fragilité osseuse, prescrivez et expliquez votre bilan de 1e intention.",
+
+          recap: [
+            "Il y a 3 situations où l'on prescrit une DMO : ",
+            "Signes d'ostéoporose : fracture vertébrale sans contexte traumatique évident, fracture périphérique sans traumatisme majeur",
+            "Sujets à risque d'ostéoporose : traitement inducteur d'ostéoporose (corticothérapie >7,5mg/j >3mois), pathologie inductrice d'ostéoporose (hypogonadisme prolongé ou médicamenteuse, hypercorticisme, hyperthyroïdie évolutive non traitée, hyperparathyroïdie primitive, ostéogénèse imparfaire, hémochromatose)",
+            "Chez la femme ménopausée : IMC < 19, ATCD familial 1e degré FESF, ménopause < 40 ans.",
+            "Interprétation d'une DMO : T-score (ostéoporose maladie si T-score <2,5 + fracture documentée), Z-score (valeur du sujet de même sexe + même âge)",
+            "La prévention se fait par des apports calcique 1-1,2g/j, vitamine D > 30 g/mL."
+          ],
+
+          questionSet: [
+            { "id": "q_osteoporose_1", "patterns":["alcool", "tabac", "fumez"], "answer":"Je fume un paquet de cigarettes par jour depuis mes 30 ans. Je bois aussi 3 verres d'alcool par jour." },
+            { "id": "q_osteoporose_2", "patterns":["médicaments", "traitements", "traitement"], "answer":"Je ne prend pas de traitements." },
+            { "id": "q_osteoporose_3", "patterns":["ménopause précoce", "ménopause"], "answer":"J'ai été ménopausée à 43 ans." },
+            { "id": "q_osteoporose_4", "patterns":["immobilisation prolongée", "sédentarité", "faible activité physique"], "answer":"Non je bouge fréquemment." },
+            { "id": "q_osteoporose_5", "patterns":["antécédent de pathologie endocrinienne", "ATCD endocriniens"], "answer":"Je n'ai pas d'antécédents particuliers." },
+            { "id": "q_osteoporose_6", "patterns":["rhumatisme inflammatoire chronique"], "answer":"Je n'ai pas de rhumatisme inflammatoire chronique." },
+            { "id": "q_osteoporose_7", "patterns":["maladies digestives chroniques"], "answer":"Je n'ai pas de maladies digestives chroniques." },
+            { "id": "q_osteoporose_8", "patterns":["insuffisance rénale chronique", "IRC"], "answer":"Je n'ai pas d'insuffisance rénale chronique." },
+            { "id": "q_osteoporose_9", "patterns":["faible poids", "dénutrition", "carence en calcium", "carence en vitamine C"], "answer":"Je n'ai pas de carence connue." },
+            { "id": "q_osteoporose_10", "patterns":["ostéodensitométrie"], "answer":"D'accord je ferais une ostéodensitométrie." },
+            { "id": "q_osteoporose_11", "patterns":["NFS", "CRP"], "answer":"Je ferais votre bilan sanguin." },
+            { "id": "q_osteoporose_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, je suis tombée il y a 2 mois et j'ai eu mal au dos. Depuis je ne suis plus tombée et je n'ai plus mal au dos." },
+            { "id": "q_osteoporose_13", "patterns":["compris", "clair"], "answer":"Tout est clair Docteur, merci de vos informations." },
+            { "id": "q_osteoporose_14", "patterns":["éléctrophorèse des protéines plasmatiques", "EPP", "myélome"], "answer":"Je ferais ce test aussi." },
+            { "id": "q_osteoporose_15", "patterns":["bilan phosphocalcique", "hypocalcémie", "carence en vitamine D"], "answer":"D'accord je ferais ce bilan." },
+            { "id": "q_osteoporose_16", "patterns":["créatininémie", "DFG"], "answer":"Je ferais ce bilan aussi." },
+            { "id": "q_osteoporose_17", "patterns":["imagerie", "radiographie"], "answer":"Mon médecin m'a déjà prescrit des radiographies qui ont retrouvé une fracture ostéoporotique typique." }
+          ]
         }
       ]
     }
