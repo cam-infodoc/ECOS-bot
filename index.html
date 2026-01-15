@@ -974,6 +974,35 @@ const data = {
             { "id": "q_boite_14", "patterns":["bonjour"], "answer":"Bonjour Docteur, je suis tombé il y a une heure en glissant bêtement et je suis retombé sur mon bras. Depuis j'ai super mal genre à 8/10 et je ne peux plus bouger mon bras." },
             { "id": "q_boite_15", "patterns":["antécédents", "traitements", "allergies", "tabac", "alcool"], "answer":"Je n'ai aucun antécédent, pas de traitement, je ne fume pas et je ne bois pas. Je suis allergique aux acariens." }
           ]
+        },
+        {
+          id: "SDD10",
+          title: "Instabilité du genou",
+          intro: "Vous êtes médecin du sport et vous recevez en consultation Mr GNOUE, un patient de 27 ans qui vous consulte pour une sensation d'instabilité et une douleur au genou droit. Ces symptômes sont apparus il y a 2 mois à la suite d'un choc lors d'un match de football. Mr GNOUE a réalisé des radiographies à la suite du choc, qui étaient normales. Réalisez un examen clinique complet de genou, déterminez l'atteinte anatomique. Vous ne devez pas parler avec le patient, seulement décrire ce que vous cherchez ou les tests réalisés lors de votre examen clinique.",
+
+          recap: [
+            "Si vous testz le tiroir antérieur à 30° de flexion = test de Lachman, si vous cherchez un ressaut rotatoire, vous recherchez une rupture du LCA",
+            "Si vous testez le tiroir antérieur à 90° de flexion vous recherchez une lésion condylienne associée",
+            "Si vous avez un avalement de la tubérosité tibiale antérieure, un tiroir postérieur à 90° de flexion, vous évoquez une rupture du LCP",
+            "Si vous avez une douleur à la palpation de l'interligne articulaire, un grinding-test positif ou un flessum de genou, vous évoquez une lésion méniscale",
+            "Si la plainte était une douleur chronique, déclenchée à l'effort chez un sportif ou une femme âgée il aurait fallu penser à :",
+            "Tendinopathie quadricipitale ou tendinopathie rotulienne : douleur à la mise en tension du quadriceps, douleur à l'étirement du tendon quadricipital, douleur à la palpation du tendon quadricipital ou du tendon rotulien",
+            "Tendinopathie de la patte d'oie : douleur à la flexion contrariée de la jambe en rotation interne, douleur à l'extension passive en rotation externe, douleur à la palpation de la patte d'oie",
+            "Syndrome de la bandelette ilio-tibiale = sd de l'essuie-glace : douleur à la palpation de l'épicondyle fémoral latéral jambe à 30° de flexion, douleur aux mouvements de flexion-extension actifs de la jambe en appui monopodal."
+          ],
+
+          questionSet: [
+            { "id": "q_lca_1", "patterns":["épanchement articulaire", "signe du flot", "choc patellaire", "signe du glaçon"], "answer":"Pas d'épanchement articulaire." },
+            { "id": "q_lca_2", "patterns":["tiroir antérieur", "test de Lachman"], "answer":"Tiroir antérieur lors du test à 30° de flexion, arrêt mou." },
+            { "id": "q_lca_3", "patterns":["tiroir antérieur à 90°"], "answer":"Pas de tiroir antérieur à 90°." },
+            { "id": "q_lca_4", "patterns":["ressaut", "est Macintosh"], "answer":"Ressaut au manoeuvre d'extension-flexion en rotation externe et en rotation interne + valgus." },
+            { "id": "q_lca_5", "patterns":["avalement de la tubérosité tibiale antérieure"], "answer":"Pas d'avalement de la tubérosité tibiale antérieure." },
+            { "id": "q_lca_6", "patterns":["tiroir postérieur"], "answer":"Absence de tiroir postérieur." },
+            { "id": "q_lca_7", "patterns":["douleur à la palpation de l'interligne articulaire", "lésion méniscale"], "answer":"Absence de douleur à la palpation de l'interligne articulaire." },
+            { "id": "q_lca_8", "patterns":["grinding test", "grinding-test"], "answer":"Grinding-test normal." },
+            { "id": "q_lca_9", "patterns":["flessum de genou", "signe de Genety"], "answer":"Absence de flessum du genou." },
+            { "id": "q_lca_10", "patterns":["rupture du ligament croisé antérieur", "rupture du LCA", "rupture du ligament croisé antérieur droit", "rupture du LCA droit"], "answer":"Vous diagnostiquez une rupture du LCA droit." }
+          ]
         }
       ]
     }
