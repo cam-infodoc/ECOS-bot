@@ -816,6 +816,36 @@ const data = {
             { "id": "q_raide_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. Je viens vous voir car j'ai une raideur de l'épaule droite." },
             { "id": "q_raide_15", "patterns":["antécédents", "maladies", "traitements", "médicaments", "allergies", "toxiques", "alcool", "tabac"], "answer":"Je n'ai aucun antécédent médical, pas de traitement, pas d'allergie. Je ne fume pas et je ne bois pas." }
           ]
+        },
+        {
+          id: "SDD5",
+          title: "Déformation rachidienne",
+          intro: "Vous êtes pédiatre en ville et recevez en consultation Chloé une jeune fille de 9 ans, accompagnée de sa mère. Sa mère a demandé un rendez-vous car elle trouve que le dos de Chloé est déformé. Examinez Chloé pour la diagnostic positif de la déformation rachidienne et le diagnostic étiologique, prescrivez un bilan complémentaire si nécessaire. (Pour information : pour cette station ECOS décrivez ce que vous faites par message en utilisant je, si cela correspond à la grille vous recevrez Noté, si cela ne correspond pas à la grille la réponse sera Je ne sais pas.)",
+          recap: [
+            "Dans cette station il fallait : ",
+            "Inspecter le rachis dans le plan frontal (en se plaçant derrière), sagittal (en se mettant à côté), et axial (recherche gibbosité)",
+            "Evaluer le stade pubertaire car la puberté aggrave la scoliose avec la croissance osseuse",
+            "Rechercher une hyperlaxité évocatrice d'une maladie de Marfan, cause de scoliose secondaire",
+            "Rechercher des tâches café au lait à l'inspection cutanée à la recherche d'une neurofibromatose, cause de scoliose secondaire",
+            "Inspecter la région sacrée à la recherche d'angiome ou d'une touffe pileuse, évocateur d'une malformation congénitale",
+            "Rechercher un trouble du tonus musculaire ou tester les ROT, une anomalie évoquerait une scoliose neuromusculaire.",
+            "Enfin il fallait prescrire : ",
+            "Une radiographie du rachis de face et de profil debout,",
+            "Une radiographie des crêtes iliaques (test de Risser permettant d'évaluer l'avancée pubertaire osseuse)."
+          ],
+
+          questionSet: [
+            { "id": "q_scol_1", "patterns":["me place derrière", "derrière", "plan frontal"], "answer":"Noté." },
+            { "id": "q_scol_2", "patterns":["à côté de", "à côté","me place à côté", "plan sagittal"], "answer":"Noté." },
+            { "id": "q_scol_3", "patterns":["plan axial", "gibbosité", "se pencher", "se penche"], "answer":"Noté." },
+            { "id": "q_scol_4", "patterns":["stade pubertaire", "développement mammaire", "Tanner"], "answer":"Noté." },
+            { "id": "q_scol_5", "patterns":["hyperlaxité", "hyperlaxe", "Marfan"], "answer":"Noté." },
+            { "id": "q_scol_6", "patterns":["inspection cutanée", "inspection", "tâches café au lait", "neurofibromatose"], "answer":"Noté." },
+            { "id": "q_scol_7", "patterns":["angiome", "région sacrée", "touffe pileuse", "touffe de poils", "poils"], "answer":"Noté." },
+            { "id": "q_scol_8", "patterns":["tonus musculaire", "testing musculaire", "ROT", "réflexes ostéotendineux", "réflexes ostéo tendineux", "réflexes ostéo-tendineux"], "answer":"Noté." },
+            { "id": "q_scol_9", "patterns":["radiographie du rachis", "face et profil"], "answer":"Noté." },
+            { "id": "q_scol_10", "patterns":["radiographie des crêtes iliaques", "radiographie sacrée"], "answer":"Noté." }
+          ]
         }
       ]
     }
