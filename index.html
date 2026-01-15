@@ -540,6 +540,31 @@ const data = {
             { "id": "q_microselles_12", "patterns":["antibiotiques", "antibio", "ATB", "antibiotique"], "answer":"Non Docteur je n'ai pas pris d'antibiotiques récemment." },
             { "id": "q_microselles_13", "patterns":["contage", "entourage"], "answer":"Je suis le seul à être malade dans mon entourage." }
           ]
+        },
+        {
+          id: "SDD13",
+          title: "Cholestase",
+          intro: "Vous êtes gastro-entérologue et vous recevez Mr DESCHAMPS, 52 ans, adressé par son médecin traitant pour un bilan de cholestase. Le patient présente depuis 3 mois un syndrome de cholestase clinique (ictère, diarrhée graisseuse) et biologique (cholestase ictérique avec élévation des PAL / GGT / Bili conjuguée). Par ailleurs il présente une AEG avec la perte de 8 kg en 3 mois, une asthénie et une anorexie. Le patient a pour antécédent un diabète sous metformine qui se déséquilibre progressivement depuis quelques semaines sans modification thérapeutique. Il consomme de l'alcool quotidiennement depuis plusieurs années et à une consommation tabagique estimée à 30 PA. Mr DESCHAMPS vous rapporte le CR de l'échographie abdominale qu'il a réalisé : dilatation des voies biliaires extra et intra-hépatiques, dilatation de la vésicule biliaire sans signe inflammatoire, parenchyme hépatique sain, pancréas non visualisé. Expliquez au patient les hypothèses diagnostiques en les hiérarchisant, expliquez la PEC diagnostique nécessaire pour vérifier votre hypothèse diagnostique principale, répondez aux questions du patient.",
+          recap: [
+            "Ici 3 diagnostics sont à évoquer dans l'ordre : ",
+            "Un cancer du pancréas",
+            "Une pancréatite chronique calcifiante",
+            "Un cholangiocarcinome",
+            "Les 2 traitements à évoquer sont la pose d'une prothèse biliaire libérant les voies et l'acide ursodésoxycholique en per os."
+          ],
+
+          questionSet: [
+            { "id": "q_cholestase_1", "patterns":["bonjour"], "answer":"Bonjour Docteur, alors qu'est-ce que vous pensez de mes résultats. "},
+            { "id": "q_cholestase_2", "patterns":["cancer du pancréas","cancer pancréatique"], "answer":"Oh... je m'attendais pas à ça... Et ça expliquerait les résultats de l'échographie et mes symptômes ? " },
+            { "id": "q_cholestase_3", "patterns":["pancréatite chronique", "pancréatite chronique calcifiante"], "answer":"D'accord c'est une autre hypothèse alors... Vous en aurez d'autres ?" },
+            { "id": "q_cholestase_4", "patterns":["tumeur voies biliaires", "tumeurs voies biliaires", "cholangiocarcinome"], "answer":"Mmm je vois donc vous pensez vraiment à un cancer finalement... On fait une radio du coup pour vérifier ?" },
+            { "id": "q_cholestase_5", "patterns":["scanner TAP", "scanner thoracoabdominopelvien", "scanner thoraco-abdomino-pelvien", "scanner thoraco abdomino pelvien"], "answer":"3 jours de suite ? Oh je pensais pas mais d'accord si c'est vraiment utile..." },
+            { "id": "q_cholestase_6", "patterns":["extension", "métastases"], "answer":"Donc si je comprends bien ce scanner il pourrait montrer un cancer et chercher son extension. Et si le scanner montre un cancer du pancéas on sera sur du diagnostic ?" },
+            { "id": "q_cholestase_7", "patterns":["biopsie", "biopsie écho-guidée", "exérèse"], "answer":"Je vois donc le scanner suffira pas. Moi ce qui m'embête docteur c'est vraiment les diarrhées et la coloration jaune de ma peau. Il y aurait des traitements pour ça ?" },
+            { "id": "q_cholestase_8", "patterns":["prothèse", "prothèse biliaire"], "answer":"D'accord donc une prothèse qui libérerait les tuyaux quoi. Et y a des traitements à prendre par la bouche en attendant ?" },
+            { "id": "q_cholestase_9", "patterns":["acide ursodésoxycholique", "acide", "ursodésoxycholique"], "answer":"Wow c'est un nom compliqué faudra bien me l'écrire Docteur." },
+            { "id": "q_cholestase_10", "patterns":["compris", "clair"], "answer":"Oui j'ai compris que c'était potentiellement grave et qu'on devait faire des imageries et peut-être une biopsie aussi. Merci pour vos informations Docteur." },
+          ]
         }
       ]
     }
