@@ -752,6 +752,33 @@ const data = {
             { "id": "q_dlchro_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. Je viens vous voir car ça fait longtemps que j'ai mal au dos ! Et il n'y a rien qui fonctionne, rien. On a trouvé ce que c'était hun ça oui pas de problème mais pour autant j'ai toujours aussi mal." },
             { "id": "q_dlchro_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." }
           ]
+        },
+        {
+          id: "SDD3",
+          title: "Douleur de la région lombaire",
+          intro: "Il est 19 h, vous êtes médecin de garde aux urgences, et vous prenez en charge une patiente de 27 ans qui se plaint, depuis quelques heures, de douleurs lombaires irradiant dans les jambes, déclenchées par le port d'une charge lourde. Avant que vous preniez votre garde, la patiente a reçu de la morphine et un scanner lombo-rachidien a été réalisé, retrouvant une hernie discale exclue du disque L5-S1. Recherchez à l'interrogatoire et à l'examen clinique les situations qui indiqueraient une PEC urgente. Après avoir recueilli les informations nécessaire appelez le chirurgien orthopédique de votre hôpital.",
+          recap: [
+            "Une douleur morphino-résistante est une indication chirurgicale en urgence",
+            "On cherche un syndrome de la queue de cheval : incontinence urinaire ou fécale, dysurie, urgenturie, anesthésie périnéale, (+ trouble de l'érection)",
+            "On cote MRC les muscles dépendant de L5 (moyen glutéal, tibial ant, fibulaires, extenseurs des orteils) et de S1 (grand glutéal, ischio -jambiers, triceps sural)",
+            "On se présente à son confrère et on indique le motif de l'appel : douleurs lombaires avec incontinences urianire et fécale depuis quelques heures",
+            "On vérifie les traitements du patient, ici attention à la Warfarine",
+            "On vérifie que la patiente est bien à jeun",
+            "On précise qu'on demande une prise en charge chirurgicale urgente"
+          ],
+
+          questionSet: [
+            { "id": "q_dllomb_1", "patterns":["intensité", "douleur après la morphine", "cotation", "côté", "côteriez", "sur 10", "/10", "sur dix"], "answer":"Je dirais que mes douleurs étaient à 8/10 au départ et maintenant sont à 4/10 malgré la morphine..." },
+            { "id": "q_dllomb_2", "patterns":["incontinence urinaire", "fuites urinaires", "urgenturie", "urgence d'aller aux toilettes", "dysurie", "jet faible", "difficultés à uriner", "anesthésie périnéale"], "answer":"Oui j'avais honte de vous en parler mais effectivement je me suis fait pipi et caca dessus... D'ailleurs je sens plus grand chose au niveau périnéal." },
+            { "id": "q_dllomb_3", "patterns":["déficit musculaire", "MRC", "moyen glutéal", "tibial antérieur", "fibulaires", "extenseurs des orteils", "grand glutéal", "ischiojambiers", "ischio jambiers", "ischio-jambiers", "triceps sural"], "answer":"Pas de déficit musculaire." },
+            { "id": "q_dllomb_4", "patterns":["avis chirurgical", "prise en charge chirurgicale urgente", "en urgence"], "answer":"Le Dr ORTHO vous répond au téléphone. Indiquez lui le motif de votre appel ainsi que toutes informations pertinentes en plusieurs messages." },
+            { "id": "q_dllomb_5", "patterns":["douleurs lombaires avec incontinence urinaire et fécale"], "answer":"Ok." },
+            { "id": "q_dllomb_6", "patterns":["hernie discale"], "answer":"D'accord je le note." },
+            { "id": "q_dllomb_7", "patterns":["à jeun", "vous n'avez pas mangé", "vous avez mangé", "dernière boisson", "dernière fois que vous avez bu"], "answer":"Je n'ai pas mangé ou bu depuis 9h du matin." },
+            { "id": "q_dllomb_8", "patterns":["anticoagulée", "anticoagulation", "Warfarine"], "answer":"Ok je note que la patiente est anticoagulée." },
+            { "id": "q_dllomb_9", "patterns":["traitements", "traitement", "antécédents", "maladies"], "answer":"Oui je suis sous Warfarine pour une fibrillation atriale." },
+           { "id": "q_dllomb_9", "patterns":["bonjour"], "answer":"Bonjour, Docteur. Je viens aux urgences parce que depuis ce matin 10h j'ai super mal au dos." }
+          ]
         }
       ]
     }
