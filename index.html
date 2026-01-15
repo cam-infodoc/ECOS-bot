@@ -1542,10 +1542,36 @@ const data = {
             { "id": "q_anorexie_6", "patterns":["hospitalisation", "hospitalisation courte"], "answer":"J'ai vraiment besoin d'être hospitalisée ? Pourquoi faire ? Et qui s'occupera de moi ?" },
             { "id": "q_anorexie_7", "patterns":["pluridisciplinaire", "psychiatre", "psychologue", "nutritionniste", "diététicien"], "answer":"Ok je vois." },
             { "id": "q_anorexie_8", "patterns":["renutrir", "renutrition", "carences"], "answer":"Ah on m'hospitalise pour me renutrir et faire attention à mes carences, ok." },
-            { "id": "q_anorexie_9", "patterns":["arrêter les comportements prugatifs", "arrêter les purges", "arrêter les comportements de purge"], "answer":"Oui c'est sur que ça serait pas mal..." },
+            { "id": "q_anorexie_9", "patterns":["arrêter les comportements purgatifs", "arrêter les purges", "arrêter les comportements de purge"], "answer":"Oui c'est sur que ça serait pas mal..." },
             { "id": "q_anorexie_10", "patterns":["renutrition progressive", "progressif"], "answer":"Ah oui si ça se fait trop vite je voudrais pas de toute façon." }, 
-            { "id": "q_poils_14", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends pas ce que je fais ici.. J'ai fait un malaise et je me retrouve face à vous un Docteur nutritionniste, expliquez moi tout."},
-            { "id": "q_polyupolyd_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur, on fait comme ça." }
+            { "id": "q_anorexie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends pas ce que je fais ici.. J'ai fait un malaise et je me retrouve face à vous un Docteur nutritionniste, expliquez moi tout."},
+            { "id": "q_anorexie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur, on fait comme ça." }
+          ]
+        },
+                {
+          id: "SDD11",
+          title: "Goitre ou nodule thyroïdien",
+          intro: "Mr GOELAN, 65 ans vous est adressé en consultation pour la découverte d'un nodule thyroïdien. Il a réalisé avant de venir une TSH qui est normale. Recherchez à l'examen clinique et à l'interrogatoire les signes évocateurs d'une origine cancéreuse, expliquez les principales modalités de PEC diagnostique du nodule.",
+          recap: [
+            "Devant un nodule thyroïdien en apparence isolé on fait en 1e intention un dosage de la TSH + une échographie thyroïdienne d'emblée",
+            "Si la TSH est diminuée on évoque une hyperthyroïdie. On réalisera une scintigraphie à l'iode, une IRAthérapie ou lobectomie devant un nodule hyperfonctionnel.",
+            "Si la TSH est normale ou augmentée on évoque un cancer thyroïdien. On réalise une cytoponction et on utilise la classification BETHESDA."
+          ],
+
+          questionSet: [
+            { "id": "q_goitre_1", "patterns":["isolé", "consistance", "volume"], "answer":"Le nodule fait 4 cm environ, il est dur et irrégulier." },
+            { "id": "q_goitre_2", "patterns":["évolution", "combien de temps", "temps"], "answer":"Ca fait quelques mois qu'il est apparu." },
+            { "id": "q_goitre_3", "patterns":["dysphonie", "dyspnée", "dysphagie", "syndrome cave supérieur", "signes compressifs"], "answer":"Absence de dysphonie, absence de dysphagie, absence de dyspnée. Absence de syndrome cave supérieur." },
+            { "id": "q_goitre_4", "patterns":["adénopathies"], "answer":"Absence d'adénopathies cervicales." },
+            { "id": "q_goitre_5", "patterns":["antécédents", "antécédents personnels", "irradiation cervicale"], "answer":"J'ai juste une hypertrophie bénigne de la prostate." },
+            { "id": "q_goitre_6", "patterns":["antécédents familiaux", "antécédents de cancer"], "answer":"Il n'y a pas d'antécédents familiaux particuliers." },
+            { "id": "q_goitre_7", "patterns":["altération de l'état général", "AEG", "fatigué", "fatigue", "anorexie", "amaigrissement"], "answer":"Absence d'altération de l'état général." },
+            { "id": "q_goitre_8", "patterns":["échographie thyroïdienne", "ckassification EU-TIRADS"], "answer":"D'accord je ferais cette échographie." },
+            { "id": "q_goitre_9", "patterns":["cytoponction"], "answer":"Ok on fera une cytoponction si nécessaire." },
+            { "id": "q_goitre_10", "patterns":["arguments cytologiques", "cytologie"], "answer":"Je comprends que la cytoponction ne donne que des arguments cytologiques." }, 
+            { "id": "q_goitre_14", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai un petit nodule thyroïdien et j'ai peur que ce soit un cancer."},
+            { "id": "q_goitre_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur, on fait comme ça." },
+            { "id": "q_goitre_16", "patterns":["surveillance échographique", "nouvelle cytoponction", "autre cytoponction", "exérèse"], "answer":"J'ai compris on verra en fonction de ce qu'on trouve." }
           ]
         }
       ]
