@@ -779,6 +779,43 @@ const data = {
             { "id": "q_dllomb_9", "patterns":["traitements", "traitement", "antécédents", "maladies"], "answer":"Oui je suis sous Warfarine pour une fibrillation atriale." },
            { "id": "q_dllomb_9", "patterns":["bonjour"], "answer":"Bonjour, Docteur. Je viens aux urgences parce que depuis ce matin 10h j'ai super mal au dos." }
           ]
+        },
+        {
+          id: "SDD4",
+          title: "Raideur articulaire",
+          intro: "Vous êtes rhumatologue et vous recevez en consultation Mr ROUILLEZ, un patient de 64 ans, qui est adressé par son médecin généraliste pour une raideur de l'épaule droite. Il vous joint la lettre suivante, faite par son médecin généraliste : (Cher confère, je vous réfère M. ROUILLEZ, un patient que j'ai récemment examiné, pour une raideur articulaire à l'examen clinique actif et passif. Je suis convaincu que votre expertise en rhumatologie sera précieuse pour un diagnostic précis et un traitement adéquat. Merci de votre collaboration. Confraternellement.) Il ne vous est pas demandé de réaliser un examen clinique. Interrogez le patient pour caractériser sa plainte et avancer dans la démarche étiologique, prescrivez le.s examen.s complémentaire.s si nécessaire.s",
+          recap: [
+            "Les causes de raideur articulaire sont les suivantes :",
+            "SDRC",
+            "Arthrose",
+            "Infection ostéoarticulaire",
+            "Rhumatisme inflammatoire ou microcristallin",
+            "Spasticité",
+            "Rétractation tendineuse suite à une immobilisation prolongée",
+            "Maladie de Parkinson.",
+            "Dans le cas de l'épaue une raideur active ome passive doit évoquer 2 causes : ",
+            "Capsulite rétractile (qui est un type de SDRC)",
+            "Omarthrose (souvent secondaire à une ruture tendineuse de la coiffe des rotateurs, une destruction articulaire d'un rhumatisme inflammatoire microcristallin ou septique).",
+            "L'examen de première intention est la radiographie de l'épaule de face et de profil qui sera normale dans la capsulite rétractile?."
+          ],
+
+          questionSet: [
+            { "id": "q_raide_1", "patterns":["depuis quand", "combien de temps"], "answer":"Ca fait maintenant 3 ans que j'ai mal à l'épaule." },
+            { "id": "q_raide_2", "patterns":["retentissement", "vie quotidienne","limitations", "limité"], "answer":"Oui je n'arive plus à attraper u ojet situé dans un placard avec mon bras droit par exemple. Je suis limité dans l'abduction du bras droit." },
+            { "id": "q_raide_3", "patterns":["droitier", "gaucher"], "answer":"Je suis droitier." },
+            { "id": "q_raide_4", "patterns":["douleurs", "avez mal"], "answer":"Oui franchement les douleurs augmentent depuis 3 mois." },
+            { "id": "q_raide_5", "patterns":["diminution des douleurs"], "answer":"Non elles augmentent." },
+            { "id": "q_raide_6", "patterns":["facteur déclenchants de SDRC", "tendinopathie de l'épaule", "traumatisme de l'épaule", "chirurgie de l'épaule"], "answer":"Je n'ai jamais cogné cette épaule ni eu de chirurgie dessus." },
+            { "id": "q_raide_7", "patterns":["autres douleurs", "autres articulations douloureuses", "autres raideurs", "autres articulations raides"], "answer":"Je n'ai al qu'ici." },
+            { "id": "q_raide_8", "patterns":["coiffe des rotateurs"], "answer":"Mon ami kiné a pensé à une atteinte de la coiffe des rotateurs parce que je suis limité dans l'abduction du bras droit, mais je n'ai jamais consulté je pensais que c'était rien." },
+            { "id": "q_raide_9", "patterns":["métier", "travail", "professionnel"], "answer":"Je suis ancien manutentionnaire." },
+            { "id": "q_raide_10", "patterns":["activité sportive", "du sport"], "answer":"Je fais pas mal de tennis." },
+            { "id": "q_raide_11", "patterns":["matin", "prédominance matinale"], "answer":"Non j'ai une raideur constante dans le temps." },
+            { "id": "q_raide_12", "patterns":["fièvre", "frissons"], "answer":"Non ni fièvre ni frissons." },
+            { "id": "q_raide_13", "patterns":["radiographie de l'épaule", "face et profil"], "answer":"D'accord faisons une radio." },
+            { "id": "q_raide_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. Je viens vous voir car j'ai une raideur de l'épaule droite." },
+            { "id": "q_raide_15", "patterns":["antécédents", "maladies", "traitements", "médicaments", "allergies", "toxiques", "alcool", "tabac"], "answer":"Je n'ai aucun antécédent médical, pas de traitement, pas d'allergie. Je ne fume pas et je ne bois pas." }
+          ]
         }
       ]
     }
