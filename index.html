@@ -1309,6 +1309,34 @@ const data = {
             { "id": "q_sueur_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. J'ai des sueurs depuis 1 mois. Ca devient vraiment insupportable..." },
             { "id": "q_sueur_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." }
           ]
+        },
+                     {
+          id: "SDD3",
+          title: "Anomalie de la croissance staturo-pondérale",
+          intro: `Vous êtes pédiatre et vous recevez en consultation Max, un jeune garçon de 7 ans, amené par sa mère. Sa mère est inquiète car en rapportant le poids et la taille de Max sur le carnet de santé, elle s'est aperçue que les courbes avaient changé de couloir. Analysez les courbes de croissance, recherchez des arguments pour une cause endocrinienne, prescrivez le bilan complémentaire en précisant le degré d'urgence. <img src= "carnetdesante.jpg" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+          recap: [
+            "Les causes d'hypersudation sont à catégoriser en fonction de la nature diffuse ou localisée des sueurs :",
+            "Sudation diffuse : hyperthyroïdie, ménopause, tuberculose, bactériémie, lymphome, sd de sevrage, hypoglycémie et iatrogénie.",
+            "Sudation localisée : SDRC en phase chaude, neuropathie dysutonoique, acrocyanose."
+          ],
+
+          questionSet: [
+            { "id": "q_imc_1", "patterns":["retard statural", "poids excessif", "retard de croissance", "retard de croissance staturale"], "answer":"Oui c'est ce que je me disais aussi." },
+            { "id": "q_imc_2", "patterns":["cassure staturale", "cassure de la courbe staturale", "cassure de la courbe de la taille"], "answer":"Tout à fait et ça ne me rassure pas du tout." },
+            { "id": "q_imc_3", "patterns":["palpation thyroïdienne", "goitre thyroïdien", "goître"], "answer":"Absence d'anomalie." },
+            { "id": "q_imc_4", "patterns":["hypothyroïdie", "pâleur", "asthénie", "fatigue", "fatigué", "frilosité", "froid", "constipation", "constipé", "baisse des résultats scolaires"], "answer":"Il a déjà loupé l'école car il avait des gastro avec vomis matinaux mais sans diarrhées." },
+            { "id": "q_imc_5", "patterns":["corticoïdes", "prise prolongée de corticoïdes"], "answer":"Non il n'a jamais pris de traitements comme ça." },
+            { "id": "q_imc_6", "patterns":["hypercorticisme", "amyotrophie musculaire", "érythrose faciale", "rougeur de la face", "répartition facio-tronculaire des graisses", "facio-tronculaire", "peau fine", "faciès lunaire", "vergetures pourpres", "vergetures violettes"], "answer":"Je n'ai pas l'impression." },
+            { "id": "q_imc_7", "patterns":["hypertension intracrânienne", "céphalées", "maux de tête", "vomissements matinaux"], "answer":"Oui il a déjà vomis le matin mais il devait avoir la gastro. Il n'a pas de maux de tête pour autant." },
+            { "id": "q_imc_8", "patterns":["syndrome polyuro-polydipsique", "urine fréquemment", "soif"], "answer":"Il fait pipi comme avant et boit normalement." },
+            { "id": "q_imc_9", "patterns":["traumatisme crânien", "infection neuroméningée", "méningite", "radiothérapie", "radiothérapie cérébrale"], "answer":"Non, rien de tout ça." },
+            { "id": "q_imc_10", "patterns":["imagerie cérébrale en urgence", "scanner cérébral en urgence", "IRM en urgence"], "answer":"D'accord on fera ça." },
+            { "id": "q_imc_11", "patterns":["bilan thyroïdien", "dosage de la TSH", "TSH", "T4"], "answer":"D'accord on fera ce bilan alors." },
+            { "id": "q_imc_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. J'ai l'impression que max a cessé de grandir depuis quelques mois alors qu'il mange normalement je ne comprends pas..." },
+            { "id": "q_imc_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." },
+            { "id": "q_imc_16", "patterns":["cortisolurie des 24h", "cortisol urinaire des 24h", "freinage minute", "freinage", "cortisol salivaire à minuit", "cortisol à minuit"], "answer":"D'accord." },
+            { "id": "q_imc_17", "patterns":["dosage de l'IGF1", "IGF1"], "answer":"Ok pas de soucis." }
+          ]
         }
       ]
     }
