@@ -684,6 +684,45 @@ const data = {
       ]
     }
   ],
+  {
+      id: "Rhumato, ortho, MPR",
+      title: "Rhumatologie, orthopédie, médecine physique et réadapation",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Douleur aigue post-opératoire",
+          intro: "Vous êtes interne de chirurgie orthopédique,
+Mr Séféuncaul 75 ans, décrit une douleur aiguë à J2 de son opération pour prothèse totale de hanche. Caractérisez la douleur, quantifiez la douleur, recherchez une complication chirurgicale, proposez une stratégie d'analgésie multimodale.",
+          recap: [
+            "Il faut proposer une évaluation de la douleur adaptée à son patient :",
+            "Si le patient est communicant on propose une auto-évaluation par : échelle numérique (0-10), échelle visuelle analogique (règle 10cm), échelle verbale simple (0 pas de douleur 4 très intense). Elles sont toutes recommandées par la HAS mais insuffisantes pour évaluer toutes les composantes d'une douleur chronique.",
+            "Si le patient est un enfant ou ne communique pas on utilisera une hétéro-évaluation. Il existe des échelles comportementales adaptées à la population évaluées. On observera le visage, la verbalisation de la douleur, les mouvements du corps."
+          ],
+
+          questionSet: [
+            { "id": "q_dlapostop_1", "patterns":["localisation", "site", "où se situe"], "answer":"Ma douleur se trouve au niveau du pli de l'aine." },
+            { "id": "q_dlapostop_2", "patterns":["diffus", "localisée", "localisé", "irradie", "irradiation"], "answer":"Elle est dans le pli de l'aine et elle va jusque dans le genou." },
+            { "id": "q_dlapostop_3", "patterns":["type", "décrire cette douleur", "décrire"], "answer":"Je dirai que c'est comme une torsion." },
+            { "id": "q_dlapostop_4", "patterns":["horaire", "jour", "journée", "nuit", "matin"], "answer":"Elle est permanente, j'ai mal non stop depuis 4 heures." },
+            { "id": "q_dlapostop_5", "patterns":["facteurs aggravants", "aggrave", "facteurs déclenchants", "calme", "calmée par", "aggravée par"], "answer":"Rien n'aggrave ou ne soulage ma douleur Docteur." },
+            { "id": "q_dlapostop_6", "patterns":["nausées", "vomi", "vomissements", "fièvre", "frissons"], "answer":"Je n'ai pas de fièvre et je n'ai pas de nausées." },
+            { "id": "q_dlapostop_7", "patterns":["anxieux", "anxiété", "stres", "stress"], "answer":"Ah ça oui, je suis particulièrement anxieux parce que je sors tout juste d'opération..." },
+            { "id": "q_dlapostop_8", "patterns":["trouble cognitif", "confusion", "syndrome confusionnel"], "answer":"Non je n'ai pas de trouble cognitif et je pense que mes réponses sont claires n'est-ce pas ?" },
+            { "id": "q_dlapostop_9", "patterns":["échelle visuelle analogique", "EVA", "échelle verbale simple", "échelle numérique", "échelle d'auto-évaluation", "combien sur 10", "combien sur dix", "vous coteriez", "vous côteriez"], "answer":"Je dirai que ma douleur est à 7/10." },
+            { "id": "q_dlapostop_10", "patterns":["inspection", "rougeur", "chaleur", "écoulement", "suintement"], "answer":"La cicatrice est propre." },
+            { "id": "q_dlapostop_11", "patterns":["oedème", "thrombose veineuse profonde", "TVP", "circulation veineuse collatérale", "antécédent de thrombose veineuse profonde", "antécédents de thrombose veineuse profonde"], "answer":"Le membre n'est pas gonflé." },
+            { "id": "q_dlapostop_12", "patterns":["luxation", "fracture péri-prothétique", "traumatisme", "chute", "mouvements luxants", "mouvement luxant", "asymétrie du bassin", "asymétrie", "comment"], "answer":"La douleur est apparue en mettant des chaussettes du côté opéré." },
+            { "id": "q_dlapostop_13", "patterns":["antalgique pallier 1 et 3","doliprane", "morphine", "pallier 1", "pallier 3"], "answer":"D'accord je avis prendre ça alors." },
+            { "id": "q_dlapostop_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. Je souffre terriblement du côté de ma prothèse de hanche depuis 4 heures. C'est fou j'aurai pas du me faire opérer de cette arthrose... j'ai vraiment très mal." },
+            { "id": "q_dlapostop_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." },
+            { "id": "q_dlapostop_16", "patterns":["froid", "musicothérapie", "relaxation", "hypnose"], "answer":"D'accord ça pourrait peut-être m'aider." },
+            { "id": "q_dlapostop_17", "patterns":["ré-évaluation de la douleur", "réévaluer la douleur", "réévaluation"], "answer":"Ok je m'attends donc à ce qu'on me redemande comment est la douleur d'ici peu." },
+            { "id": "q_dlapostop_18", "patterns":["antécédents", "traitement", "allergies", "toxiques", "tabac", "alcool"], "answer":"J'ai juste une arthrose de hanche bilatérale et je ne prend aucun traitement actuellement. Je ne suis ni fumeur ni alcoolique. Et je suis allergique aux chats c'est tout." }
+          ]
+        }
+      ]
+    }
+  ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
 
