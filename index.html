@@ -565,6 +565,33 @@ const data = {
             { "id": "q_cholestase_9", "patterns":["acide ursodésoxycholique", "acide", "ursodésoxycholique"], "answer":"Wow c'est un nom compliqué faudra bien me l'écrire Docteur." },
             { "id": "q_cholestase_10", "patterns":["compris", "clair"], "answer":"Oui j'ai compris que c'était potentiellement grave et qu'on devait faire des imageries et peut-être une biopsie aussi. Merci pour vos informations Docteur." }
           ]
+        },
+        {
+          id: "SDD14",
+          title: "Elevation des enzymes pancréatiques",
+          intro: "Mme SOUDAIS, 52 ans, consulte aux urgences pour une douleur abdominale apparue dans la matinée. Complétez l'anamnèse et l'interrogatoire, prescrivez un bilan biologique à visée diagnostique et étiologique et donnez votre principale hypothèse diagnostique.",
+          recap: [
+            "Ici 3 diagnostics sont à évoquer dans l'ordre : ",
+            "Un cancer du pancréas",
+            "Une pancréatite chronique calcifiante",
+            "Un cholangiocarcinome",
+            "Les 2 traitements à évoquer sont la pose d'une prothèse biliaire libérant les voies et l'acide ursodésoxycholique en per os."
+          ],
+
+          questionSet: [
+            { "id": "q_pancreatite_1", "patterns":["bonjour"], "answer":"Bonjour Docteur, je viens aux urgences parce que depuis ce matin j'ai une douleur très importante au niveau de l'estomac. "},
+            { "id": "q_pancreatite_2", "patterns":["site", "localisation", "irradiation", "type de douleur", "brulures", "crampes", "brûlures", "brûlure", "facteur déclenchant", "aggravant"], "answer":"Alors ma douleur est vraiment au centre de l'estomac et j'ai l'impression qu'elle va dans mon dos aussi. Elle est arrivée à peu près 2h après avoir mangé. Et la seule chose qui me soulage c'est d'être en position foetale vous savez..." },
+            { "id": "q_pancreatite_3", "patterns":["alcool", "tabac", "buvez", "fumez"], "answer":"Non je ne bois pas et je ne fume pas quoi que ce soit." },
+            { "id": "q_pancreatite_4", "patterns":["antécédents", "antécédents personnels", "traitement", "traitements"], "answer":"J'ai fait une chirurgie bariatrique il y a 3 mois et ma mère elle avait eu une cholécystectomie je crois. Mais je ne prend aucun traitement Docteur." },
+            { "id": "q_pancreatite_5", "patterns":["signes digestifs", "nausées", "vomissements", "vomi", "diarrhées", "diarrhée", "constipation"], "answer":"Oui j'ai de grosses nausées mais rien d'autre." },
+            { "id": "q_pancreatite_6", "patterns":["lipase", "lipases", "lipasémie"], "answer":"Lipasémie 600 UI/L (N<60)." },
+            { "id": "q_pancreatite_7", "patterns":["NFS", "numérotation de la formule sanguine"], "answer":"NFS normale." },
+            { "id": "q_pancreatite_8", "patterns":["bilan hépatique", "ASAT", "ALAT", "gamma GT", "GGT", "gammaGT", "PAL", "phosphatases alcalines", "bilirubine", "bilirubinémie"], "answer":"ASAT 250, ALAT 200, GGT 120, PAL 400, bilirubinémie 50 (N<60)" },
+            { "id": "q_pancreatite_9", "patterns":["calcium", "calcémie"], "answer":"Calcémie 1,5mmol/L." },
+            { "id": "q_pancreatite_10", "patterns":["TG", "triglycérides", "triglycéridémie"], "answer":"TG 5 mmol/L." },
+            { "id": "q_pancreatite_11", "patterns":["pancréatite aigue", "pancréatite aigue biliaire", "PA"], "answer":"D'accord vous pensez donc à une pancréatite aigue." },
+            { "id": "q_pancreatite_12", "patterns":["compris", "clair"], "answer":"Oui j'ai compris que c'était probablement une pancréatite aigue biliaire. Merci pour vos informations Docteur." }
+          ]
         }
       ]
     }
