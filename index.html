@@ -514,6 +514,32 @@ const data = {
             { "id": "q_traumabdo_12", "patterns":["infection", "infectieux", "vaccins", "vaccinations", "antibiotiques", "antibioprophylaxie"], "answer":"D'accord donc il devra bien être à jour de ses vaccins et prendre un antibiotique. " },
             { "id": "q_traumabdo_13", "patterns":["autres questions", "tout compris", "compris"], "answer":"J'ai compris ce que vous me dites Docteur, merci pour toutes ses informations." }
           ]
+        },
+       {
+          id: "SDD12",
+          title: "Prescription et interprétation d'un examen microbiologique des selles",
+          intro: "Vous êtes médecin généraliste et vous recevez en consultation un patient de 29 ans qui présente un épisode diarrhéique depuis 2 jours. A l'anamnèse le patient qui n'a pas d'antécédent et revenu du Sénégal il y a 8 jours. Il présente 2 à 3 épisodes de diarrhées avec glaire et sang par jour. Il a également des douleurs abdominales, des sensations de faux besoins, et des émissions de glaires et de sang en dehors des épisodes de selles. A l'examen clinique, il n'y a pas de signes de gravité, le patient est fébrile à 39°C. Rédigez et expliquez la prescription des examens microbiologiques adaptés, en tenant compte de la nature des agents à rechercher. Indiquez les mesures d'hygiènes adaptées.",
+          recap: [
+            "Une coproculture ou PCR multiplex bactéries permet de chercher : Salmonella, Shigella, Campylobacter, Yersinia. Elle est indiquée en cas de syndrome dysentérique, de fièvre >38,5°C, de symptômes de >3j, de suspicion de TIAC, de retour de zone d'endémie, de signes de gravité (déshydratation), et de terrain fragile.",
+            "Les EPS doivent être réalisés à 3 reprises ou on peut réaliser une PCR multiplex parasites. Ces examens sont indiqués en cas de retour en zone d'endémie ou chez l'immunodéprimé.",
+            "On peut également rechercher les toxines de C. difficile. Cela est faisable par PCR, test immuno-enzymatique ou par test de cytotoxicité. C'est indiqué en cas de diarrhée sous antibiotiques dans les 3 mois, diarrhée associée aux soins dans les 3j d'hospitalisation, diarrhée communautaire sévère sans cause retrouvée."  
+          ],
+
+          questionSet: [
+            { "id": "q_microselles_1", "patterns":["bonjour"], "answer":"Alors Docteur qu'est-ce qu'on fait pour soulager ma diarrhée ? "},
+            { "id": "q_microselles_2", "patterns":["hémocultures", "hémoc"], "answer":"Ok donc on va me faire un prélèvement sanguin, je comprends. " },
+            { "id": "q_microselles_3", "patterns":["coprocultures", "coproculture", "copro", "PCR", "PCR multiplex", "PCR bactérienne"], "answer":"Je vois on fait un examen des selles alors aussi." },
+            { "id": "q_microselles_4", "patterns":["Salmonella", "Shigella", "Campylobacter", "Yersinia", "salmonellose", "shigellose", "yersiniose"], "answer":"Ok je connaissais pas ces bactéries mais je vous crois." },
+            { "id": "q_microselles_5", "patterns":["3 jours de suite", "3 jours", "trois jours"], "answer":"3 jours de suite ? Oh je pensais pas mais d'accord si c'est vraiment utile..." },
+            { "id": "q_microselles_6", "patterns":["Giardia", "Amibes", "Cryptosporidium", "giardiase", "amibiase"], "answer":"On cherche des parasites aussi.. ok pourquoi pas." },
+            { "id": "q_microselles_7", "patterns":["écouvillon rectal", "IST", "infection sexuellement transmisible", "infections sexuellement transmissibles"], "answer":"Mais je n'ai pas de soucis urinaires ? Mais oui je vois pourquoi vous voulez chercher une IST." },
+            { "id": "q_microselles_8", "patterns":["Chlamydia", "gonocoque", "HSV", "herpès"], "answer":"Ca ce sont des noms d'IST que je connais." },
+            { "id": "q_microselles_9", "patterns":["paludisme", "accès palustre", "goutte épaisse"], "answer":"Le paludisme ? Wow je pensais pas que ça pouvait être si grave, une simple diarrhée ..." },
+            { "id": "q_microselles_10", "patterns":["lavage des mains", "se laver les mains"], "answer":"Ca j'y penserai, je suis quelqu'un de propre." },
+            { "id": "q_microselles_11", "patterns":["rapports sexuels non protégés", "relations sexuelles non protégées"], "answer":"Vous me jugerez pas hun ? Mais oui ça m'est arrivé..." },
+            { "id": "q_microselles_12", "patterns":["antibiotiques", "antibio", "ATB", "antibiotique"], "answer":"Non Docteur je n'ai pas pris d'antibiotiques récemment." },
+            { "id": "q_microselles_13", "patterns":["contage", "entourage"], "answer":"Je suis le seul à être malade dans mon entourage." }
+          ]
         }
       ]
     }
