@@ -1283,6 +1283,32 @@ const data = {
                  { "id": "q_bouffee_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. J'ai des bouffées de chaleur depuis plusieurs mois. J'aurais besoin de votre avis." },
             { "id": "q_bouffee_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." }
           ]
+        },
+                {
+          id: "SDD2",
+          title: "Hypersudation",
+          intro: "Vous êtes médecin généraliste et vous recevez en consultation Mme PIERRE, une patiente de 34 ans, qui consulte pour une sudation excessive. Réalisez un interrogatoire ciblé, indiquez votre hypothèse diagnostique principale et proposer la réalisation d'examen.s complémentaire.s.",
+          recap: [
+            "Les causes d'hypersudation sont à catégoriser en fonction de la nature diffuse ou localisée des sueurs :",
+            "Sudation diffuse : hyperthyroïdie, ménopause, tuberculose, bactériémie, lymphome, sd de sevrage, hypoglycémie et iatrogénie.",
+            "Sudation localisée : SDRC en phase chaude, neuropathie dysutonoique, acrocyanose."
+          ],
+
+          questionSet: [
+            { "id": "q_sueur_1", "patterns":["diffus", "diffuse", "localisée", "à un seul endroit"], "answer":"Je transpire surtout au niveau du visage, du tronc et des bras." },
+            { "id": "q_sueur_2", "patterns":["horaire", "matin", "soir"], "answer":"C'est de jour comme de nuit et ça s'empire." },
+            { "id": "q_sueur_3", "patterns":["évolution", "début", "date", "intensité"], "answer":"Ca fait un mois que je transpire plus qu'avant, je dois me changer plusieurs fois par jour. J'ai honte vous savez..." },
+            { "id": "q_sueur_4", "patterns":["traitements", "traitement", "médicaments", "médicament"], "answer":"Je ne prends pas de traitement." },
+            { "id": "q_sueur_5", "patterns":["alcool"], "answer":"Je ne bois pas et je ne fume pas." },
+            { "id": "q_sueur_6", "patterns":["fièvre", "frissons"], "answer":"Non je n'ai pas eu de fièvre." },
+            { "id": "q_sueur_7", "patterns":["amaigrissement", "perte de poids", "perdu du poids"], "answer":"Ah oui j'ai perdu 3 kg en 1 mois vous vous rendez compte ?" },
+            { "id": "q_sueur_8", "patterns":["palpitations", "tremblements", "tremblez", "diarrhées", "diarrhée", "irritable", "irritabilité", "troubles du sommeil", "du mal à dormir"], "answer":"Oui j'ai eu des palpitations, je suis super fatiguée, je me sens plus nerveuse qu'avant et j'ai beaucoup de mal à dormir." },
+            { "id": "q_sueur_9", "patterns":["aménorrhée, "arrêt de vos menstruations", "arrêt de vos règles", "plus vos menstruations"], "answer":"Non, mes menstruations sont toujours présentes et régulières." },
+            { "id": "q_sueur_10", "patterns":["hyperthyroïdie"], "answer":"D'accord vous pensez donc à une hyperthyroïdie. Comment on s'en assure ?" },
+            { "id": "q_sueur_11", "patterns":["TSH", "dosage de la TSH"], "answer":"D'accord on fera ce bilan alors." },
+            { "id": "q_bouffee_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. J'ai des sueurs depuis 1 mois. Ca devient vraiment insupportable..." },
+            { "id": "q_bouffee_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." }
+          ]
         }
       ]
     }
