@@ -592,6 +592,35 @@ const data = {
             { "id": "q_pancreatite_11", "patterns":["pancréatite aigue", "pancréatite aigue biliaire", "PA"], "answer":"D'accord vous pensez donc à une pancréatite aigue." },
             { "id": "q_pancreatite_12", "patterns":["compris", "clair"], "answer":"Oui j'ai compris que c'était probablement une pancréatite aigue biliaire. Merci pour vos informations Docteur." }
           ]
+        },
+        {
+          id: "SDD15",
+          title: "Elevation des transaminases sans cholestase",
+          intro: "Vous êtes gastro-entérologue à l'hôpital et vous recevez Mr DURANT un patient de 60 ans que vous voyez pour la deuxième fois. Vous l'avez vu il y a 2 semaines pour une cytolyse hépatique découverte fortuitement lors d'un bilan de routine. Le patient n'a pas d'antécédents particuliers hormis une dépendance à l'alcool. Il vous présente ce jour un bilan que vous aviez prescrit. Interprétez les résultats des examens biologiques et expliquez les anomalies, interprétez l'échographie en annonçant ce que vous recherchez.",
+          recap: [
+            "Dans le cadre d'une hépatite aigue on retrouve : ASAT/ALAT >10N, sd pseudo-grippal, ictère, encéphalopathie. ",
+            "Les causes d'hépatite aigue sont : hépatite virale aigue, toxiques, migration lithiasique dans la VBP, thrombose veine porte, hépatite AI, thrombose veine sus-hépatique (Budd Chiari), hypoxie hépatique (IC droite, choc).",
+            "Le bilan de 1e intention repose sur un bilan hépatique complet, des sérologie virales, une échographie hépatique et une sérologie HSV si fièvre.",
+            "Une élévation chronique des ASAT/ALAT retrouve : ASAT/ALAT < 10N, depuis >6 mois, et en cas de cirrhose des signes d'IHC ou d'HTP. Les causes sont : stéatose alcoolique, stéatose non alcoolique, hépatite virale chronique, hémochromatose, toxiques, hépatite AI, causes non hépatique (maladie coeliaque, myopathie, rhabdomyolyse, hémolyse).",
+            "Le bilan de 1e intention devant une hépatite chronique est un bilan hépatique complet, des sérologie virale, une GàJ et un bilan lipidique, une ferritininémie et un CST, une EPP."
+          ],
+
+          questionSet: [
+            { "id": "q_asatalat_1", "patterns":["bonjour"], "answer":"Bonjour Docteur, je reviens comme convenu avec le bilan sanguin et l'échographie. Voici les résultats du bilan sanguin : Hb 14, CCMH 34, VGM 110, leucocytes 4, plaquettes 90, ASAT 80, ALAT 70, PAL 60, GGT 100, bilirubinémie totale 10 (N<12), Ac anti-VHC+, Ag Hbs-, Ac anti Hbs+, Ac anti Hbc +, GàJ 0,9, LDLc 1,4, HDLc 0,6, TG 1,3, ferritinémie 100, CST 20%."},
+            { "id": "q_asatalat_2", "patterns":["thrombopénie", "plaquettes basses", "hypersplénisme"], "answer":"Ok donc j'ai des plaquettes basses et ça peut être du à mon foie donc." },
+            { "id": "q_asatalat_3", "patterns":["augmentation du VGM", "VGM augmenté", "augmentation des GGT", "augmentation des gamma GT", "gamma GT augmentées", "GGT augmentée"], "answer":"D'accord et donc ce VGM et ces GGT augmentés c'est à cause de l'alcool donc..." },
+            { "id": "q_asatalat_4", "patterns":["cytolyse hépatique", "cytolyse prédominant sur les ASAT"], "answer":"D'accord donc j'ai aussi une cytolyse prédominant sur les ASAT." },
+            { "id": "q_asatalat_5", "patterns":["PCR ARN VHC", "contact avec le VHC", "contact avec le virus de l'hépatite C"], "answer":"Oh donc j'ai été en contact avec l'hépatite C et on sait pas si je suis atteint donc. Ok je comprend." },
+            { "id": "q_asatalat_6", "patterns":["infection ancienne guérie", "vous avez eu le VHB"], "answer":"Bon donc le VHB je me suis guéri tout seul alors ahah, tant mieux." },
+            { "id": "q_asatalat_7", "patterns":["pas de syndrome métabolique", "pas de surcharge en fer", "pas d'hypertryglicéridémie", "pas d'hyperferritinémie", "CST normal"], "answer":"Ok donc de ce côté là tout va bien." },
+            { "id": "q_asatalat_8", "patterns":["échographie hépatique", "échographie"], "answer":"Dites moi un message après l'autre ce que vous rechercheriez sur l'échographie ?" },
+            { "id": "q_asatalat_9", "patterns":["nodules", "tumeur", "tumeurs", "nodule"], "answer":"Absence de nodule suspect." },
+            { "id": "q_asatalat_10", "patterns":["hyperéchogénicité", "hypoéchogénicité", "échogène"], "answer":"Hyperéchogénicité hépatique." },
+            { "id": "q_asatalat_11", "patterns":["dysmorphie", "bord tranchant", "contours bosselés", "bords tranchants", "contour bosselé"], "answer":"Le foie est dysmorphique à contours bosselés." },
+            { "id": "q_asatalat_12", "patterns":["thrombose", "thrombose porte", "veine porte"], "answer":"Il n'y a pas de thrombose porte." },
+            { "id": "q_asatalat_13", "patterns":["vésicule biliaire", "lithiase", "lithiase biliaire", "lithiases"], "answer":"Vésicule biliaire bien visualisée et absence de lithiase." },
+            { "id": "q_asatalat_12", "patterns":["compris", "clair"], "answer":"Oui j'ai compris qu'on devait vérifier cette histoire de VHC et que mon foie était un peu attaqué par l'alcool mais qu'on voyait pas de cancer. Merci pour vos informations Docteur." }
+          ]
         }
       ]
     }
