@@ -1030,6 +1030,38 @@ const data = {
             { "id": "q_radius_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, je suis tombé de mon scooter il y a 1 heure. J'ai très mal au bras droit." },
             { "id": "q_radius_13", "patterns":["constantes", "paramètres vitaux"], "answer":"Patient stable, conscient et orienté. Constantes stables. Apyréxie." },
           ]
+        },
+        {
+          id: "SDD13",
+          title: "Traumatisme rachidien",
+          intro: "Vous êtes internes aux urgences. Vous recevez Mr LOMBART, 45 ans, amené par le SAMU après un accident de moto. Le médecin du SAMU vous rapporte des douleurs du rachis lombaire, avec une faiblesse des membres inférieurs. Le patient est conscient et orienté, stable hémodynamiquement, le bilan initial (radiographie thoracique et du bassin, fast-écho) est normal. Le scanner corps entier retrouve comme seule anomalie une fracture des vertèbres Tll et T12 avec recul du mur postérieur. Réalisez un examen clinique neurologique permettant une évaluation standardisée, donnez un diagnostique précis, expliquez au patient les objectifs et la suite de sa PEC.",
+
+          recap: [
+            "L'évaluation neurologique se base sur le score ASIA qu'il faut établir étape par étape :",
+            "Etablir le niveau sensitif : dernier niveau où la sensibilité est normale",
+            "Etablir le niveau moteur : dernier muscle clé côté à plus de 3/5 (à condition que les muscles sous-jacents soient aussi >3/5)"
+            "Etablir le niveau lésionnel : dernier niveau où la sensibilité et la motricité sont conservées",
+            "Tester la sensibilité et la motricité des territoires nerveux situés sous le niveau lésionnel pour déterminer si la lésion est complète ou incomplète.",
+            "On parle de déficit complet lorsqu'il n'y a aucune senisbilité ou motricité dans le territoire S4-S5",
+            "On parle de déficit incomplet sensitif lorsque la sensibilité mais pas la motricité est préservée au dessous du niveau lésionnel",
+            "On parle de déficit incomplet moteur lorsque la motricité est préservée au dessous du niveau lésionnel et plus de la moitié des muscles testés au dessous de ce score a un score <3 (C) ou <3 (D)"
+          ],
+
+          questionSet: [
+            { "id": "q_rachis_1", "patterns":["cotation musculaire", "MRC", "psoas", "quadriceps", "tibial antérieur", "extenseur des orteils", "triceps sural"], "answer":"Flexion de la hanche 5/5, extension du genou 2/5, dorsiflexion de la cheville 2/5, extension de l'hallux 2/5, flexion plantaire 1/5." },
+            { "id": "q_rachis_2", "patterns":["examen sensitif", "niveau sensitif"], "answer":"Sensibilité de toute le membre inférieur diminuée, niveau sensitif à l'aine." },
+            { "id": "q_rachis_3", "patterns":["toucher rectal", "sensibilité anale", "tonus passif du sphincter anal", "contraction volontaire du sphincter anal"], "answer":"Sensibilité et contraction du sphincter au toucher rectal conservées." },
+            { "id": "q_rachis_4", "patterns":["réflexes ostéo-tendineux", "réflexes ostéo tendineux", "ROT", "ROT rotulien", "ROT achilléen"], "answer":"ROT rotulien et achilléen non retrouvés." },
+            { "id": "q_rachis_5", "patterns":["signe de Babinski", "Babinski"], "answer":"Signe de Babinski négatif." },
+            { "id": "q_rachis_6", "patterns":["compression médullaire", "compression médullaire motrice", "compression médullaire motrice incomplète"], "answer":"Vous retenez le diagnostic de compression médullaire motrice incomplète." },
+            { "id": "q_rachis_7", "patterns":["niveau neurologique L2", "niveau de L2", "niveau à la deuxième lombaire", "niveau à la 2e lombaire", "niveau à la 2eme lombaire", "niveau à la 2 eme lombaire"], "answer":"Le niveau neurologique est en L2." },
+            { "id": "q_rachis_8", "patterns":["chirurgie en urgence", "prise en charge chirurgicale urgente"], "answer":"La prise en charge chirurgicale est urgente." },
+            { "id": "q_rachis_9", "patterns":["anesthésie générale", "AG"], "answer":"La chirurgie se déroulera sous anesthésie générale." },
+            { "id": "q_rachis_10", "patterns":["heure de votre dernier repas", "dernier repas", "à jeun"], "answer":"Le dernier repas remonte il y a 8h." },
+            { "id": "q_rachis_11", "patterns":["traitement", "traitements"], "answer":"Je ne prend aucun traitement." },
+            { "id": "q_rachis_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, j'ai eu un accident de moto et depuis je ne sens plus très bien mes jambes. Ca me fait très peur... j'ai déjà eu un scanner. Vous pensez que j'ai quoi ?" },
+            { "id": "q_rachis_13", "patterns":["décomprimer", "décompression"], "answer":"Le patient est informé que la chirurgie a pour but une décompression médullaire." },
+          ]
         }
       ]
     }
