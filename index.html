@@ -1250,6 +1250,41 @@ const data = {
           ]
         }
       ]
+    },
+     {
+      id: "Endoc, diabéto, nutrition",
+      title: "Endocrinologie, diabétologie et nutrition",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Bouffées de chaleur",
+          intro: "Vous êtes médecin généraliste et vous recevez Mme Durand, patiente de 51 ans qui se plaint de bouffées de chaleur récurrentes. Réalisez l'interrogatoire ciblé devant ces bouffées de chaleur, annoncez votre hypothèse et proposez un bilan complémentaire si nécessaire.",
+          recap: [
+            "Tips pour un ECOS portant sur un symptôme : se référer à la douleur pour chercher l'intensité, le retentissement, les facteurs aggravants, l'horaire, la durée d'évolution et les signes associés",
+            "Différencier des bouffées de chaleur typiques et atypiques :",
+            "Typiques : péri-ménopause ou ménopause, prédominance nocturne, sans prodromes, déclenchées par les émotions et la chaleur",
+            "Atypiques : à distance de la ménopause, céphalées / palpitations / malaises / diarrhées / HTA, résistent au THM. Penser au phéochromocytome et à l'hyperthyroïdie.",
+            "La ménopause se diagnostique cliniquement devant une aménorrhée depuis 12 mois chez une femme de >45ans associée à des symptômes évoctaurs",
+            "On prescrit un bilan hormonal (E2, LH, FSH) si : hystérectomie, contraception hormonale, IOP (<40ans)."
+          ],
+
+          questionSet: [
+            { "id": "q_bouffee_1", "patterns":["date", "début", "depuis quand", "évolution"], "answer":"Cela fait 4 mois que j'ai des bouffées de chaleur." },
+            { "id": "q_bouffee_2", "patterns":["horaire", "matin", "soir"], "answer":"Elles surviennent surtout le soir et la nuit." },
+            { "id": "q_bouffee_3", "patterns":["intensité"], "answer":"Elles sont intenses." },
+            { "id": "q_bouffee_4", "patterns":["retentissement"], "answer":"Elles m'empêchent de bien dormir." },
+            { "id": "q_bouffee_5", "patterns":["céphalées", "signes associés", "palpitations", "malaises", "diarrhées", "poussées hypertensives"], "answer":"Je n'ai pas de palpitations, de malaise, de diarrhées, de céphalées." },
+            { "id": "q_bouffee_6", "patterns":["facteurs déclenchants", "déclenchent"], "answer":"Il n'y a pas de facteurs déclenchants." },
+            { "id": "q_bouffee_7", "patterns":["règles", "menstruations", "aménorrhée", "ménopausée", "ménopause"], "answer":"Je n'ai plus mes règles depuis 14 mois." },
+            { "id": "q_bouffee_8", "patterns":["troubles du sommeil", "troubles de l'attention", "trouble de la mémoire", "dépression", "déprimée", "fatiguée", "asthénie", "arthromyalgie", "sécheresse vaginale", "prise de poids"], "answer":"J'ai du mal à me concentrer et j'ai des douleurs articulaires le matin." },
+            { "id": "q_bouffee_9", "patterns":["traitement hormonal", "contraception", "traitement hormonal de la ménopause"], "answer":"Je ne prend aucun traitement." },
+            { "id": "q_bouffee_10", "patterns":["ménopause"], "answer":"D'accord vous pensez donc que je commence ma ménopause." },
+            { "id": "q_bouffee_11", "patterns":["pas de bilan", "pas de bilan hormonal", "diagnostic clinique"], "answer":"D'accord on ne fait pas de bilan alors." },
+                 { "id": "q_bouffee_14", "patterns":["bonjour"], "answer":"Bonjour, Docteur. J'ai des bouffées de chaleur depuis plusieurs mois. J'aurais besoin de votre avis." },
+            { "id": "q_bouffee_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair pour moi Docteur, merci pour tout bonne journée." }
+          ]
+        }
+      ]
     }
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
