@@ -1062,6 +1062,38 @@ const data = {
             { "id": "q_rachis_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, j'ai eu un accident de moto et depuis je ne sens plus très bien mes jambes. Ca me fait très peur... j'ai déjà eu un scanner. Vous pensez que j'ai quoi ?" },
             { "id": "q_rachis_13", "patterns":["décomprimer", "décompression"], "answer":"Le patient est informé que la chirurgie a pour but une décompression médullaire." },
           ]
+        },
+        {
+          id: "SDD14",
+          title: "Découverte d'une anomalie osseuse et articulaire à l'imagerie",
+          intro: `Vous êtes médecin généraliste et vous recevez Martin, un jeune homme de 17 ans que vous avez vu il y a 2 semaines pour des douleurs à l'épaule gauche de rythme inflammatoire. Martin vous avait également dit avoir maigri et être plus fatigué depuis quelques semaines. Il vous rapporte ce jour le résultat de l'imagerie qui vous lui aviez prescrit. Interprétez l'imagerie, annoncez votre hypothèse diagnostique principale, et expliquez les explorations nécessaires. <img src= "sarcome.jpg" style="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "L'évaluation neurologique se base sur le score ASIA qu'il faut établir étape par étape :",
+            "Etablir le niveau sensitif : dernier niveau où la sensibilité est normale",
+            "Etablir le niveau moteur : dernier muscle clé côté à plus de 3/5 (à condition que les muscles sous-jacents soient aussi >3/5)"
+            "Etablir le niveau lésionnel : dernier niveau où la sensibilité et la motricité sont conservées",
+            "Tester la sensibilité et la motricité des territoires nerveux situés sous le niveau lésionnel pour déterminer si la lésion est complète ou incomplète.",
+            "On parle de déficit complet lorsqu'il n'y a aucune senisbilité ou motricité dans le territoire S4-S5",
+            "On parle de déficit incomplet sensitif lorsque la sensibilité mais pas la motricité est préservée au dessous du niveau lésionnel",
+            "On parle de déficit incomplet moteur lorsque la motricité est préservée au dessous du niveau lésionnel et plus de la moitié des muscles testés au dessous de ce score a un score <3 (C) ou <3 (D)"
+          ],
+
+          questionSet: [
+            { "id": "q_sarcome_1", "patterns":["radiographie de l'épaule gauche de face"], "answer":"Vous êtes face à une radiographie de l'épaule gauche de face." },
+            { "id": "q_sarcome_2", "patterns":["tumeur métaphyse", "tumeur diaphyse", "tumeur humérale"], "answer":"Vous suspectez une tumeur de la métaphyse et de la diaphyse humérale gauche." },
+            { "id": "q_sarcome_3", "patterns":["contours flous"], "answer":"Les contours de la tumeur sont flous." },
+            { "id": "q_sarcome_4", "patterns":["destruction de la corticale", "érosion"], "answer":"Vous remarquez une destruction de la corticale osseuse humérale." },
+            { "id": "q_sarcome_5", "patterns":["appositions périostées", "feu d'herbe", "rayons de soleil", "triangle de Codman"], "answer":"Vous remarquez des appositions périostées en feu d'herbe ou rayons de soleils et en triangle de Codman." },
+            { "id": "q_sarcome_6", "patterns":["invasion des parties molles"], "answer":"Vous remarquez une invasion des parties molles du bras." },
+            { "id": "q_sarcome_7", "patterns":["tumeur maligne", "tumeur de l'os", "ostéosarcome"], "answer":"Vous suspectez une tumeur maligne de l'os ou ostéosarcome." },
+            { "id": "q_sarcome_8", "patterns":["scanner", "IRM"], "answer":"Vous réaliserez un scanner ou une IRM pour mieux caractériser la lésion." },
+            { "id": "q_sarcome_9", "patterns":["biopsie"], "answer":"Vous expliquez la nécessité d'une biopsie osseuse pour le diagnostic de certitude." },
+            { "id": "q_sarcome_10", "patterns":["depuis combien de temps", "temporalité", "combien de temps", "temps"], "answer":"Depuis 3 mois je ressens de douleurs de l'épaule gauche surtout le matin au réveil." },
+            { "id": "q_sarcome_11", "patterns":["fatigue", "asthénie", "AEG", "altération de l'état général", "amaigrissement", "perte de poids", "anorexie"], "answer":"Je suis plus fatigué depuis quelques semaines et j'ai perdu 6 kg." },
+            { "id": "q_sarcome_12", "patterns":["bonjour"], "answer":"Bonjour Docteur, j'ai mal à l'épaule gauche depuis quelque temps. Qu'a donné ma radio ?" },
+            { "id": "q_sarcome_13", "patterns":["compris", "clair"], "answer":"Tout est clair Docteur, merci de vos informations." },
+          ]
         }
       ]
     }
