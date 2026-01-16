@@ -1762,6 +1762,36 @@ const data = {
             { "id": "q_dtun_13", "patterns":["hypoglycémie", "resucrage", "resucrer"], "answer":"D'accord si je fais une hypoglycémie je dois me resucrer." },
             { "id": "q_dtun_14", "patterns":["restrictions alimentaires", "sucreries", "régimes"], "answer":"Je ne me refuserai rien, je ne fais pas de régimes et je mangerai moins de sucreries que maintenant quoi." }
           ]
+        },
+                {
+          id: "SDD17",
+          title: "Prescription médicamenteuse, consultation de suivi, éducation d'un patient DT2 ou ayant un diabète secondaire",
+          intro: "Vous êtes médecin généraliste et vous recevez Mr TRODSUKR, un patient de 65 ans. Vous le suivez pour un diabète de type 2 depuis 10 ans, mais vous ne l'avez pas vu en consultation depuis 2 ans. Il a continué le traitement que vous lui avez prescrit la dernière fois : monothérapie par metformine. Il vous amène sa dernière hémoglobine glyquée qui est à 8,5 %. La glycémie capillaire au cabinet est à 1,1 g/L. Vous disposez dans votre cabinet d'un matériel d'examen clinique complet, mais vous ne disposez pas de bandelette urinaire ni d'ECG. Interrogez et examinez le patient à la recherche des complications du diabète.",
+          recap: [
+            "Vous devez rechercher les principales complications du diabète :",
+            "Microvasculaires : rétinopathie, neuropathie, néphropathie.",
+            "Macrovasculaires : coronaropathie, athérome carotidien, AOMI.",
+            "Il faut aussi savoir organiser le suivi et les examens complémentaires :",
+            "Tous les 3 mois : HbA1c",
+            "Tous les ans : fond oeil, ECG, test au microfinalement, IPS, créatininémie, protéinurie, EAL."
+          ],
+
+          questionSet: [
+            { "id": "q_dtdeux_1", "patterns":["baisse de la vision", "vision", "troubles de la vision"], "answer":"Non je vois très bien Doc." },
+            { "id": "q_dtdeux_2", "patterns":["douleurs neuropathiques", "fourmillements", "fourmis", "froid douloureux", "hypoesthésies", "sentez moins bien", "paresthésies"], "answer":"Non je sens bien mes membres et j'ai pas de fourmillements." },
+            { "id": "q_dtdeux_3", "patterns":["dysautonomie", "diarrhées", "constipation", "satiété précoce", "signes fonctionnels urinaires", "trouble de l'érection", "trouble de l'éjaculation", "trouble de la sudation", "hypotension", "hypotension orthostatique"], "answer":"Non je n'ai pas de troubles particuliers." },
+            { "id": "q_dtdeux_4", "patterns":["bilan urinaire", "bandelette urinaire"], "answer":"Non je n'ai pas fait de bilan urinaire récemment." },
+            { "id": "q_dtdeux_5", "patterns":["coronaropathie", "angor à l'effort", "dyspnée d'effort", "douleur thoracique à l'effort", "difficulté à respirer"], "answer":"Non je n'ai pas de douleurs ou de mal à respirer quand je fais du sport." },
+            { "id": "q_dtdeux_6", "patterns":["athérome", "épisode transitoire", "AIT", "aphasie", "déficit moteur"], "answer":"Non je n'ai pas eu de symptômes de ce type." },
+            { "id": "q_dtdeux_7", "patterns":["examen sensitif", "examen moteur", "examen des pieds"], "answer":"Vous ne retrouvez pas de déficit sensitivomoteur." },
+            { "id": "q_dtdeux_8", "patterns":["ROT", "réflexes ostéo-tendineux", "réflexes ostéo tendineux"], "answer":"Les ROT sont normaux." },
+            { "id": "q_dtdeux_9", "patterns":["trouble oculomoteur", "oculomotricité", "examen ophtalmologique"], "answer":"Vous ne retrouvez pas de troubles oculomoteurs." },
+            { "id": "q_dtdeux_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir pour mon diabète."},
+            { "id": "q_dtdeux_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_dtdeux_12", "patterns":["carotides", "auscultation des carotides"], "answer":"Absence d'anomalies à l'auscultation carotidienne." },
+            { "id": "q_dtdeux_13", "patterns":["pouls fémoraux", "pouls fémoral", "pouls poplités", "pouls poplité", "pouls tibiaux", "pouls tibial", "pouls pédieux"], "answer":"Les pouls des membres inférieurs sont bien perçus." },
+            { "id": "q_dtdeux_14", "patterns":["pieds", "déformation du pied", "mal perforant plantaire", "plaies du pied", "plaie du pied"], "answer":"Les pieds sont sains." }
+          ]
         }
       ]
     }
