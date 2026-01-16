@@ -2065,10 +2065,11 @@ function showThemes(isInitial = false){
     botSay("Commences par choisir une spécialité sur laquelle tu veux t'entraîner aujourd'hui :");
   }
   
+  botQueue.push(() => {
   const wrapper = document.createElement("div");
   wrapper.className = "choices";
 
-  data.themes.forEach(theme=>{
+  data.themes.forEach(theme => {
     const btn = document.createElement("button");
     btn.textContent = theme.title;
     btn.onclick = () => selectTheme(theme);
@@ -2076,7 +2077,8 @@ function showThemes(isInitial = false){
   });
 
   messages.appendChild(wrapper);
-}
+  messages.scrollTop = messages.scrollHeight;
+});
 
 function selectTheme(theme){
   document.querySelectorAll(".choices").forEach(e => e.remove());
