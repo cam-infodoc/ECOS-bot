@@ -1879,7 +1879,7 @@ const data = {
           ]
         }
       ]
-    }
+    },
      {
       id: "Gynéco-obs",
       title: "Gynécologie obstétrique",
@@ -1914,6 +1914,42 @@ const data = {
             { "id": "q_ecoulementmam_14", "patterns":["échographie mammaire bilatérale", "modération"], "answer":"Je ferais l'échographie mammaire bilatérale." },
             { "id": "q_ecoulementmam_15", "patterns":["échographie des aires ganglionnaires bilatérales", "échographie axilaire", "échographie des aires ganglionnaires"], "answer":"Je ferais l'échographie des aires ganglionnaires bilatérales." },
             { "id": "q_ecoulementmam_16", "patterns":["antécédents", "antécédent", "traitements"], "answer":"Je n'ai ni antécédents ni traitements." }
+          ]
+        },
+                {
+          id: "SDD2",
+          title: "Gynécomastie",
+          intro: "Vous êtes médecin généraliste et vous recevez en consultation un homme de 25 ans pour une gynécomastie confirmée par mammographie. Il vous apporte un bilan biologique prescrit par votre remplaçant il y a 1 mois. Menez un interrogatoire, effectuez un examen clinique pertinent d'un organe clé, jugez la nécessité de prescrire des examens complémentaires et énumérez le.s quel.s si nécessaire.s.",
+          recap: [
+            "Devant une gynécomastie il faut : ",
+            "Affirmer le diagnosic positif par l'examen clinique et la mammographie et l'échographie mammaire.",
+            "Eliminer les causes évodentes : IR sévère, cirrhose, iatrogénie.",
+            "Prescrire un bilan hormonal : TSH, LH, FSH, testoséronémie, oestrogénémie, prolactinémie, hCG.",
+            "Si l'E2 est augmentée : échographie testiculaire et scanner surrénalien.",
+            "Si l'hCG est augmenté : échographie testiculaire, radio tho et IRC cérébrale (tumeur germinale).",
+            "Si la testostéronémie est basse et la LH/FSH basses : IRM hyothalamo-hypopysaire.",
+            "Si la testostéronémie est basse et la LH/FSH élevées : caryotype à la recherche d'un sd de Klinefelter.",
+            "Les causes iatrogéniques sont : oestrogèes, stéroïdes anabolisants, hormonothérapie, finastéride, spironolactone, neuroleptiques, AD tricycliques isoniazde, kétoconazole, antirétroviraux, omépraole, antiacides, morphiniques, vérapamil, méthyldopa."
+          ],
+
+          questionSet: [
+            { "id": "q_gyno_1", "patterns":["date d'apparition", "quand", "depis quand", "combien de temps"], "answer":"Cela fait 2 mois que c'est apparu." },
+            { "id": "q_gyno_2", "patterns":["traitement", "traitements"], "answer":"Je ne prends aucun traitement." },
+            { "id": "q_gyno_3", "patterns":["hypogonadisme", "fatigue", "faiblesse musculaire", "libido", "érection", "bouffées de chaleur"], "answer":"J'ai l'impression que ma libido est plus basse qu'avant. Aussi j'ai du mal à avoir des éretions." },
+            { "id": "q_gyno_4", "patterns":["hyperprolactinémie", "galactorhée", "écoulement mamelonnaire", "écoulement"], "answer":"Je n'ai pas d'écoulement mamelonnaire." },
+            { "id": "q_gyno_5", "patterns":["hyperthyroïdie", "fatigue", "nerosité", "nerveux", "fatigué", "tremblements", "tachycardie", "palpitations" "hypersudation", "sueurs", "perte de poids", "fatigue musculaire", "diarrhées"], "answer":"Je n'ai rien de tout ça." },
+            { "id": "q_gyno_6", "patterns":["inspection mammaire"], "answer":"L'inspection mammaire est sans anomalies." },
+            { "id": "q_gyno_7", "patterns":["palpation mammaire"], "answer":"La palpation mammaire est sans anomalies." },
+            { "id": "q_gyno_8", "patterns":["inspection testiculaire"], "answer":"Absence d'anomalies à l'inspection testiculaire." },
+            { "id": "q_gyno_9", "patterns":["palpation testiculaire"], "answer":"Absence d'anomalies à la palpation testiculaire." },
+            { "id": "q_gyno_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car j'ai l'impression d'avoir des seins qui poussent. J'ai déjà vu un médecin qui m'a dit que ma créatininémie est dans les normes et que mon bilan hépatique complet est normal aussi. Vous pourriez regarder ?"},
+            { "id": "q_gyno_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_gyno_12", "patterns":["insuffisance rénale chronique", "IRC", "cirrhose"], "answer":"Noté." },
+            { "id": "q_gyno_13", "patterns":["LH", "FSH", "testostéronémie"], "answer":"Vous prescrivez un bilan hormonal." },
+            { "id": "q_gyno_14", "patterns":["TSH"], "answer":"Vous prescrivez une TSH." },
+            { "id": "q_gyno_15", "patterns":["oestrogénémie"], "answer":"Vous prescrivez une oestrogénémie." },
+            { "id": "q_gyno_16", "patterns":["hCG sanguins", "hCG", "HCG"], "answer":"Vous prescrivez des hCG sanguins." },
+            { "id": "q_gyno_17", "patterns":["prolactinémie"], "answer":"Vous prescrivez une prolactinémie." }
           ]
         }
       ]
