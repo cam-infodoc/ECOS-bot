@@ -1818,6 +1818,35 @@ const data = {
             { "id": "q_suivihypothyr_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
             { "id": "q_suivihypothyr_12", "patterns":["diminuer la dose", "diminuer les doses", "respecter la prescription"], "answer":"D'accord je vais diminuer la dose et respecter la prescription." }
           ]
+        },
+                {
+          id: "SDD19",
+          title: "Prévention du surpoids et de l'obésité",
+          intro: `Vous êtes médecin généraliste et vous recevez William, un garçon de 7 ans, accompagné par sa mère. Cette dernière est inquiète car le grand frère de William, âgé de 17 ans, souffre d'une surcharge pondérale qui est la cause de douleurs des hanches. Elle vous apporte la courbe de l'évolution de l'IMC de William. Recherchez des facteurs de risque de surpoids ou obésité en interrogeant la mère, faites la promotion d'une activité physique adaptée à l'âge du patient.<img src= "imcsurcharge.jpg" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+          recap: [
+            "Toujours proposer une activité physique ludique.",
+            "Vérifier l'absence de difficultés socio-économiques.",
+            "Demander l'IMC des parents, le déroulement de la grossesse (RCIU, DG, tabac).",
+            "Le temps devant les écrans ou sédentaire est limité à 2h par jour. L'activité physique doit être de 60mn par jour."
+          ],
+
+          questionSet: [
+            { "id": "q_imcsurpoids_1", "patterns":["rebond", "adiposité précoce", "rebond d'adiposité précoce"], "answer":"Vous avez identifié un rebon d'adiposité précoce." },
+            { "id": "q_imcsurpoids_2", "patterns":["antécédents familiaux", "antécédents familiaux d'obésité"], "answer":"Mon IMC est à 31 et celui de son père à 34." },
+            { "id": "q_imcsurpoids_3", "patterns":["diabète gestationnel", "diabète pendant la grossesse"], "answer":"Oui j'ai eu un diabète gestationnel pendant sa grossesse, le reste s'est bien passé. Il est né à 38SA." },
+            { "id": "q_imcsurpoids_4", "patterns":["tabac", "tabac pendant la grossesse"], "answer":"Je ne fume pas et je n'ai pas fumé pendant sa grossesse." },
+            { "id": "q_imcsurpoids_5", "patterns":["poids de naissance", "retard de croissance intra-utérine", "RCIU"], "answer":"Non le poids de naissance était normal." },
+            { "id": "q_imcsurpoids_6", "patterns":["absence de sport", "absence d'activité physique"], "answer":"C'est vrai qu'il regarde souvent la télévision mon William, surtout en rentrant de l'école jusqu'à ce qu'on mange le soir." },
+            { "id": "q_imcsurpoids_7", "patterns":["activité physique régulière", "sport"], "answer":"Il ne fait pas de sport en dehors de l'école, c'est vrai qu'il pourrait faire plus de sport." },
+            { "id": "q_imcsurpoids_8", "patterns":["difficultés socio-économique", "argent", "difficultés économique"], "answer":"Non tout va bien." },
+            { "id": "q_imcsurpoids_9", "patterns":["troubles du sommeil", "du mal à dormir", "dort mal"], "answer":"Il dort normalement." },
+            { "id": "q_imcsurpoids_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'aimerai bien qu'on parle de William ensemble, je trouve que sa courbe me rappelle celle de son frère qui est en surpoids..."},
+            { "id": "q_imcsurpoids_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_imcsurpoids_12", "patterns":["activité physique", "sport", "marche", "vélo", "escalier"], "answer":"D'accord on va essayer de le mettre au sport." },
+            { "id": "q_imcsurpoids_13", "patterns":["60 minutes de sport", "60 minutes par jour", "1 heure par jour", "1h par jour", "1h de sport par jour"], "answer":"Ok j'ai compris que c'était 1h par jour." },
+            { "id": "q_imcsurpoids_14", "patterns":["activité physique ludique", "danse", "parcours", "gymnastique"], "answer":"D'accord on va essayer de lui faire faire une activité physique ludique." },
+            { "id": "q_imcsurpoids_15", "patterns":["sédentarité", "télévision", "ordinateur", "maximum 2h"], "answer":"D'accord on diminuera le temps devant les écrans." }
+          ]
         }
       ]
     }
