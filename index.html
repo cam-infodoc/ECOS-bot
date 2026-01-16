@@ -1566,14 +1566,48 @@ const data = {
             { "id": "q_goitre_5", "patterns":["antécédents", "antécédents personnels", "irradiation cervicale"], "answer":"J'ai juste une hypertrophie bénigne de la prostate." },
             { "id": "q_goitre_6", "patterns":["antécédents familiaux", "antécédents de cancer"], "answer":"Il n'y a pas d'antécédents familiaux particuliers." },
             { "id": "q_goitre_7", "patterns":["altération de l'état général", "AEG", "fatigué", "fatigue", "anorexie", "amaigrissement"], "answer":"Absence d'altération de l'état général." },
-            { "id": "q_goitre_8", "patterns":["échographie thyroïdienne", "ckassification EU-TIRADS"], "answer":"D'accord je ferais cette échographie." },
+            { "id": "q_goitre_8", "patterns":["échographie thyroïdienne", "classification EU-TIRADS"], "answer":"D'accord je ferais cette échographie." },
             { "id": "q_goitre_9", "patterns":["cytoponction"], "answer":"Ok on fera une cytoponction si nécessaire." },
             { "id": "q_goitre_10", "patterns":["arguments cytologiques", "cytologie"], "answer":"Je comprends que la cytoponction ne donne que des arguments cytologiques." }, 
-            { "id": "q_goitre_14", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai un petit nodule thyroïdien et j'ai peur que ce soit un cancer."},
-            { "id": "q_goitre_15", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur, on fait comme ça." },
-            { "id": "q_goitre_16", "patterns":["surveillance échographique", "nouvelle cytoponction", "autre cytoponction", "exérèse"], "answer":"J'ai compris on verra en fonction de ce qu'on trouve." }
+            { "id": "q_goitre_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai un petit nodule thyroïdien et j'ai peur que ce soit un cancer."},
+            { "id": "q_goitre_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur, on fait comme ça." },
+            { "id": "q_goitre_13", "patterns":["surveillance échographique", "nouvelle cytoponction", "autre cytoponction", "exérèse"], "answer":"J'ai compris on verra en fonction de ce qu'on trouve." }
           ]
-        }
+        },
+          {
+          id: "SDD12",
+          title: "Analyse du bilan thyroïdien",
+          intro: "Vous êtes médecin généraliste, Mme. TYROS, 40 ans, vous consulte devant une profonde fatigue depuis quelques semaines, associée à une frilosité et une constipation. Vous lui aviez prescrit un bilan il y a quelques jours, qui montre que le taux de TSH est à 15 mUI/L (normalement comprise entre 0,5 et 4 mUI/L). Expliquez les résultats du bilan à la patiente et l'interroger dans le cadre de  l'enquête étiologique, évoquez l'hypothèse la plus probable et prescrivez le bilan complémentaire adapté.",
+          recap: [
+            "Devant une TSH haute et T4L basse on évoque :",
+            "Thyroïdite de Hashimoto (notre cas), thyroïdite auto-immune du post-partum, thyroïdite iatrogène ou une thyroïdite de De Quervain",
+            "Dans cette situation on dose les Ac anti-TPO +/- les Ac anti-TG. O ne réalisera une échographie que si la palpation thyroïdienne est anormale.",
+            "Devant une TSH basse et T4L basse on évoque une insuffisance thyréotrope par atteinte de l'hypophyse. On prescrira alors une IRM et un bilan hormonal hypophysaire complet.",
+            "Devant une TSH basse et T4L élevée on évoque :",
+            "Maladie de Basedow, goître multinodulaire toxique, nodule extinctif, thyrotoxicose factice, thyroïdite de De Quervain",
+            "Si on est face à une jeune femme avec orbitopathie on prescrira les TRAK seuls en 1e intention",
+            "Dans les autres cas on prescrira TRAK + échographie. Si on retrouve une scintigraphie blanche sans contexte de surcharge en iode on dosera la thyroglobuline (thyrotoxicose factice).",
+            "Devant une TSH normale et T4L élevée on évoque :",
+            "Adénome thyréotrope ou insensibilité de l'hypophyse aux hormones thyroïdiennes. On réalisera une IRM et une recherche génétique.",
+            "On retiendra que la T3L est dosée uniquement si la T4L est normale et qu'on a une forte suspicion de dysthyroïdie",
+            "Attention à l'amiodarone : elle est riche en iode donc dans les 10j jours de traitement on observe un phénomène qui vise à diminuer sa concentration inorganique. On observe alors une diminution de la T4 et T3 et une élévation de la TSH, d'autres phénomènes compensent celui ci par la suite. On retiendra que dans les 10 premières semaines de traitment un dosage de la fonction thyroïdienne n'est généralement pas indiqué. On retrouvera sinon fréquemment une TSH normale une T3 basse et une T4 élevée. Le tout étant réversible à l'arrêt du traitement"
+          ],
+
+          questionSet: [
+            { "id": "q_hypothyro_1", "patterns":["hypothyroïdie", "activité diminuée"], "answer":"Ok donc j'ai une hypothyroïdie alors." },
+            { "id": "q_hypothyro_2", "patterns":["antécédents", "antécédents personnels", "pathologie thyroïdienne"], "answer":"J'ai une maladie de la peau auto-immune je crois et mon frère a un diabète depuis petit." },
+            { "id": "q_hypothyro_3", "patterns":["traitements", "lévothyroxine", "antithyroïdiens de synthèse", "lithium", "immunothérapie", "radiothérapie cervicale", "amiodarone", "injectée", "produit de contraste", "injection"], "answer":"Non je n'ai jamais pris de traitement comme ça ni eu d'imagerie injectée ou quoi." },
+            { "id": "q_hypothyro_4", "patterns":["maladie auto-immune"], "answer":"Oui ça me revient, j'ai un vitiligo !" },
+            { "id": "q_hypothyro_5", "patterns":["grossesse", "dernière grossesse"], "answer":"Ma dernière grossesse et unique grossesse d'ailleurs remonte à 5 ans." },
+            { "id": "q_hypothyro_6", "patterns":["épisode fébrile", "douleurs cervicales", "fièvre"], "answer":"Non je n'ai pas eu de fièvre ou de douleurs cervicales." },
+            { "id": "q_hypothyro_7", "patterns":["thyroïdite d'Hashimoto", "thyroïdite de Hashimoto", "Hashimoto"], "answer":"D'accord donc le nom de ma maladie c'est une thyroïdite de Hashimoto." },
+            { "id": "q_hypothyro_8", "patterns":["Ac antithyroperoxydase", "anticorps antithyroperoxydase", "anticorps anti TPO", "Ac anti TPO", "Ac anti-TPO"], "answer":"D'accord je ferais ce bilan." },
+            { "id": "q_hypothyro_9", "patterns":["TSH", "contrôle de la TSH"], "answer":"Ok si c'est nécessaire même si on l'a déjà fait." },
+            { "id": "q_hypothyro_10", "patterns":["T4L", "dosage de la T4L"], "answer":"D'accord on ne m'a jamais dosé ça." },
+            { "id": "q_hypothyro_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je vous ai ramené le résultat du bilan. Ca n'a pas l'air normal, qu'est-ce que ça veut dire ?"},
+            { "id": "q_hypothyro_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur, je vous fais confiance de toute façon." }
+          ]
+        }
       ]
     }
   ],
