@@ -2058,8 +2058,13 @@ function userSay(text){
 // ===== THEMES =====
 function showThemes(isInitial = false){
   if(isInitial){
-    botSay("Bienvenue je suis Ecosbot👋. Tous ces entrainements sont tirés de La Martingale ! Tu pourras t'entrainer avec des patients standardisés en ligne. Si ta question ne rentre pas dans la grille de correction, est mal posée ou non reconnue le patient répondra Je ne sais pas. Commences par choisir une spécialité sur laquelle tu veux t'entraîner aujourd'hui :");
+    botSay("Bienvenue 👋 je suis Ecosbot !"); 
+    botSay("Tous ces entrainements sont tirés des différents livres 'La Martingale', ainsi que des ECOS sur le drive Niçois (ils sont écrits par des professeurs).");
+    botSay("Tu pourras t'entrainer avec des patients standardisés en ligne.");
+    botSay("Si ta question ne rentre pas dans la grille de correction, est mal posée ou non reconnue le patient répondra Je ne sais pas.");
+    botSay("Commences par choisir une spécialité sur laquelle tu veux t'entraîner aujourd'hui :");
   }
+  
   const wrapper = document.createElement("div");
   wrapper.className = "choices";
 
