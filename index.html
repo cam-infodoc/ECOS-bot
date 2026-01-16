@@ -1792,6 +1792,32 @@ const data = {
             { "id": "q_dtdeux_13", "patterns":["pouls fémoraux", "pouls fémoral", "pouls poplités", "pouls poplité", "pouls tibiaux", "pouls tibial", "pouls pédieux"], "answer":"Les pouls des membres inférieurs sont bien perçus." },
             { "id": "q_dtdeux_14", "patterns":["pieds", "déformation du pied", "mal perforant plantaire", "plaies du pied", "plaie du pied"], "answer":"Les pieds sont sains." }
           ]
+        },
+                      {
+          id: "SDD18",
+          title: "Consultation de suivi et éducation thérapeutique d'un patient avec hypothyroïdie",
+          intro: "Vous êtes endocrinologue et vous recevez Mr Dubois, un patient de 52 ans, à qui vous avez diagnostiqué une hypothyroïdie périphérique. Vous avez introduit la substitution par lévothyroxine il y a 6 semaines. Le patient revient en consultation car il ressent des palpitations, il a réalisé le bilan de contrôle qui montre une TSH à 0,3 mUI/L. Evaluez à l'interrogatoire et à l'examen clinique l'efficacité, la tolérance et l'observance du traitement substitutif. Interprétez le bilan hormonal, et expliquez à la patiente la CAT.",
+          recap: [
+            "Je te rappelle que si le patient avec une cardiopathie ischémique la TSH aurait une cible plus haute pour ne pas trop accélerer la fréquence cardiaque (TSH 4-10mUI/L).",
+            "Egalement dans le cadre d'une insuffisance thyréotrope la surveillance se ferait sur le dosage de la T4L car la TSH n'est pas interprétable.",
+            "On cherche dans notre station des signes d'hypo et d'hyperthyroïdie.",
+            "On rappelle bien que la prise du traitement substitutif se fait le matin à jeun."
+          ],
+
+          questionSet: [
+            { "id": "q_suivihypothyr_1", "patterns":["asthénie", "fatigue", "fatigué", "somnolence", "constipation", "froid", "frilosité", "frileux", "prise de poids"], "answer":"Non j'ai pas ces symptômes." },
+            { "id": "q_suivihypothyr_2", "patterns":["bradycardie", "pâleur", "pâle"], "answer":"Absence de pâleur ou de bradycardie." },
+            { "id": "q_suivihypothyr_3", "patterns":["insomnie", "diarrhées", "tremblements", "tremblez", "perte de poids", "perdu du poids", "bouffées de chaleur", "sueurs", "dyspnée d'effort", "diarrhée"], "answer":"Ah ça oui ! J'ai des diarrhées, des sueurs et je tremble." },
+            { "id": "q_suivihypothyr_4", "patterns":["palpitations", "tachycardie", "fièvre"], "answer":"Palpitations. Fréquence cardiaque à 120bpm. Température à 37,8°C." },
+            { "id": "q_suivihypothyr_5", "patterns":["observance", "prenez correctement", "horaire des prises", "même moment de la journée"], "answer":"Alors moi mon traitement je le prends bien, je le prends même 2 fois plus que ce qui est indiqué parce que je veux me soigner plus vite ! J'en prend parfois le matin parfois à midi ça dépend." },
+            { "id": "q_suivihypothyr_6", "patterns":["autres médicaments", "médicaments", "amiodarone", "lithium", "produit de contraste"], "answer":"Je ne prend aucun autre traitmement." },
+            { "id": "q_suivihypothyr_7", "patterns":["le matin", "à jeun", "le matin à jeun"], "answer":"Ah je dois le prendre que le matin à jeun ? C'est pas ce que je faisais moi." },
+            { "id": "q_suivihypothyr_8", "patterns":["surdosage", "surdosage en lévothyroxine", "TSH  trop basse", "TSH basse"], "answer":"Ah je suis surdosée ? Mince alors." },
+            { "id": "q_suivihypothyr_9", "patterns":["cible", "0,5", "2,5"], "answer":"Ah je ne savais pas qu'il y avait une cible particulière." },
+            { "id": "q_suivihypothyr_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Votre traitement ça marche pas du tout pourtant je le prend hun je vous jure. Mais mon analyse de sang revient anormale, qu'est-ce qui se passe ?"},
+            { "id": "q_suivihypothyr_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_suivihypothyr_12", "patterns":["diminuer la dose", "diminuer les doses", "respecter la prescription"], "answer":"D'accord je vais diminuer la dose et respecter la prescription." },
+          ]
         }
       ]
     }
