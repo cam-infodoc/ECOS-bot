@@ -1847,6 +1847,74 @@ const data = {
             { "id": "q_imcsurpoids_14", "patterns":["activité physique ludique", "danse", "parcours", "gymnastique"], "answer":"D'accord on va essayer de lui faire faire une activité physique ludique." },
             { "id": "q_imcsurpoids_15", "patterns":["sédentarité", "télévision", "ordinateur", "maximum 2h"], "answer":"D'accord on diminuera le temps devant les écrans." }
           ]
+        },
+                {
+          id: "SDD20",
+          title: "Modification thérapeutique du mode de vie",
+          intro: "Vous êtes nutritionniste et recevez Mme Moreau, une patiente de 26 ans, qui consulte pour une évaluation de ses apports alimentaires, à la suite de remarques de ses proches sur ce qu'elle mange. Elle pèse 57 kg pour 1 m 60 (IMC à 22).À l'interrogatoire elle vous dit avoir quitté le domicile familial il y a 3 mois pour habiter seule, et depuis elle n'a pas pris l'habitude de cuisiner elle-même ; elle mange un sandwich le midi à la cafétéria de son travail et commande surtout des hamburgers ou des kebabs le soir. Au goûter elle mange 2 pâtisseries. Avant le déménagement c'est sa mère qui lui préparait les 3 repas du jour. Elle a la volonté de changer ses nouvelles habitudes et de commencer à cuisiner, mais ne sait pas comment répartir les aliments. Faites la promotion des bonnes habitudes alimentaires.",
+          recap: [
+            "Les conseils sont : ",
+            "Manger au moins 5 fruits ou légumes par jour, 2 produits laitiers par jour, privilégier la vollaile (max 500mg viande rouge), poisson 2 fois par semaine, produits céréaliers complets, 1 poignée de fruits à coque par jour, huiles de colza / noix / olive, limiter les produits sucrés, limiter le sel. Manger 3 plats par jour, éviter les nutriscore D et E. Pas d'interdits alimentaires. Fin du repas rythmée par le rassasiement et la satiété.",
+            "On peut aussi chercher les freins aux changements de comportement :",
+            "Freins internes au patient : absence de conscience des enjeux de santé, appréhension des contraintes / frustration.",
+            "Freins externes au patient : capacités financières, accessibilité aux aliments qualitatifs, accessibilité à des terrains sportifs."
+          ],
+
+          questionSet: [
+            { "id": "q_bpa_1", "patterns":["5 fruits", "5 légumes", "5 fruits ou légumes par jour", "5 fruits et légumes par jour"], "answer":"Noté." },
+            { "id": "q_bpa_2", "patterns":["2 produits laitiers"], "answer":"Noté." },
+            { "id": "q_bpa_3", "patterns":["volaille", "limiter la consommation de viandes rouges", "limiter la consommation de viande rouge", "500mg de viandes rouges par semaine"], "answer":"Noté." },
+            { "id": "q_bpa_4", "patterns":["poisson", "poisson 2 fois par semaine", "poisson deux fois par semaine"], "answer":"Noté." },
+            { "id": "q_bpa_5", "patterns":["céréales complètes", "complet", "complets", "produits céréaliers"], "answer":"Noté." },
+            { "id": "q_bpa_6", "patterns":["fruits à coque", "une poignée de fruits à coque", "1 poignée de fruits à coque"], "answer":"Noté." },
+            { "id": "q_bpa_7", "patterns":["huile de colza", "huiles de colza", "huile de noix", "huile d'olives", "huile d'olive", "huiles d'olives"], "answer":"Noté." },
+            { "id": "q_bpa_8", "patterns":["limiter les produits sucrés", "produits sucrés", "limiter la consommation de produits sucrés"], "answer":"Noté." },
+            { "id": "q_bpa_9", "patterns":["sel", "limiter la consommation de sel", "limiter le sel"], "answer":"Noté." },
+            { "id": "q_bpa_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'aimerai votre aide pour mieux me nourrir ?"},
+            { "id": "q_bpa_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_bpa_12", "patterns":["aliments locaux", "de saison", "aliments de saison", "éviter le grignotage", "ne pas grignoter"], "answer":"Noté." },
+            { "id": "q_bpa_13", "patterns":["nutriscore"], "answer":"Noté." },
+            { "id": "q_bpa_14", "patterns":["pas d'interdits", "modération"], "answer":"Noté." },
+            { "id": "q_bpa_15", "patterns":["rythmés par la faim", "rythmée par la faim", "rassasiement", "rassasiée", "satiété"], "answer":"Noté." }
+          ]
+        }
+      ]
+    }
+     {
+      id: "Gynéco-obs",
+      title: "Gynécologie obstétrique",
+      chapters: [
+                {
+          id: "SDD1",
+          title: "Ecoulement mamelonnaire",
+          intro: "Vous êtes gynécologue et recevez en consultation une femme de 47 ans pour un écoulement mamelonnaire apparu récemment. Caractérisez l'écoulement, cherchez à l'examen clinique des éléments d'orientation, expliquez à la patiente l'hypothèse diagnostique principales et les explorations nécessaires.",
+          recap: [
+            "Les hypothèses diagnostiques devant un écoulement mamelonnaire sont : ",
+            "Cancer du sein : rouge / jaune / noir, permanent, unilatéral, spontané.",
+            "Hyperprolactinémie : blanc et bilatéral, trouble des règles et de la libido, iatrogénie, sd tumoral d'adénome hypophysaire.",
+            "Infection : purulent, en présence de signes locaux ou généraux d'infection ou dans un contexte d'allaitement.",
+            "Penser à demander le caractère unipore ou multipore de l'écoulement.",
+            "Penser à prescrire une mammographie mammaire bilatérale, une échographie mammaire bilatérale et une échographie des aires ganglionnaires bilatérale."
+          ],
+
+          questionSet: [
+            { "id": "q_ecoulementmam_1", "patterns":["couleur"], "answer":"L'écoulement est plutôt jaune." },
+            { "id": "q_ecoulementmam_2", "patterns":["unipore", "multipore"], "answer":"Il est unipore." },
+            { "id": "q_ecoulementmam_3", "patterns":["intermittent", "provoqué", "permanent"], "answer":"Il est permanent depuis 1 mois." },
+            { "id": "q_ecoulementmam_4", "patterns":["AEG", "altération de l'état général", "anorexie", "amaigrissement", "fatigue", "fatiguée", "asthénie", "perte de poids", "perdu du poids"], "answer":"Je suis fatiguée et je mange moins car j'ai moins faim. J'ai perdu 5 kg." },
+            { "id": "q_ecoulementmam_5", "patterns":["hyperprolactinémie", "trouble des règles", "aménorrhée", "trouble de la libido", "libido", "menstruations"], "answer":"Non rien de particulier." },
+            { "id": "q_ecoulementmam_6", "patterns":["palpation mammaire", "nodule", "nodules"], "answer":"La palpation mammaire retrouve un nodule du sein droit dans le quadrant supéro-externe." },
+            { "id": "q_ecoulementmam_7", "patterns":["aires ganglionnaires", "ganglions", "sus-claviculaire", "sus-claviculaires", "axillaire", "axillaires"], "answer":"Absence de ganglions suspects." },
+            { "id": "q_ecoulementmam_8", "patterns":["signes inflammatoires", "rougeur", "rouge", "oedème", "gonflé, "douleur", "douloureux"], "answer":"Absence de douleur, rougeur, oedème." },
+            { "id": "q_ecoulementmam_9", "patterns":["température", "fièvre", "frissons"], "answer":"Absence de fièvre." },
+            { "id": "q_ecoulementmam_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai l'impression que quelque chose coule de mon sein droit."},
+            { "id": "q_ecoulementmam_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_ecoulementmam_12", "patterns":["cancer", "tumeur maligne"], "answer":"Oh d'accord je ne pensais pas que ça serait potentiellement un cancer..." },
+            { "id": "q_ecoulementmam_13", "patterns":["mammographie bilatérale"], "answer":"Je ferais une mammographie bilatérale." },
+            { "id": "q_ecoulementmam_14", "patterns":["échographie mammaire bilatérale", "modération"], "answer":"Je ferais l'échographie mammaire bilatérale." },
+            { "id": "q_ecoulementmam_15", "patterns":["échographie des aires ganglionnaires bilatérales", "échographie axilaire", "échographie des aires ganglionnaires"], "answer":"Je ferais l'échographie des aires ganglionnaires bilatérales." },
+            { "id": "q_ecoulementmam_16", "patterns":["antécédents", "antécédent", "traitements"], "answer":"Je n'ai ni antécédents ni traitements." }
+          ]
         }
       ]
     }
