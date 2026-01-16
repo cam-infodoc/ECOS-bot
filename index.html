@@ -1669,6 +1669,68 @@ const data = {
             { "id": "q_hypo_13", "patterns":["se passe", "expliquez-moi", "vous arrive", "motif"], "answer":"Depuis 2 heures j'ai l'impression d'avoir chaud, je suis pas bien..." },
             { "id": "q_hypo_14", "patterns":["antécédents", "autres maladies", "autres pathologies", "antécédents"], "answer":"J'ai une hypertension sous lercanidipine, une insuffisance rénale chronique et c'est tout. Ma famille va bien." }
           ]
+        },
+                {
+          id: "SDD15",
+          title: "Hypoprotidémie",
+          intro: "Vous êtes en consultation et vous revoyez Mme DAINUTRY, une patiente de 51 ans, que vous aviez vu pour la première fois il y a une semaine pour des oedèmes des membres inférieurs. Elle vous avait alors dit avoir perdu 5 kg en 4 mois, alors que son poids de base est 49 kg (pour une taille de 1 m 60, ce qui fait un IMC à 22). Cette baisse de poids est contemporaine d'une baisse de l'appétit et des apports alimentaires. Elle vous rapporte le résultat du dosage que vous lui avez prescrit : albuminémie 20 g/L. Interprétez ce résultat, cherchez une cause à cette hypoprotidémie par l'interrogatoire, l'examen clinique et en prescrivant des examens complémentaires.",
+          recap: [
+            "La dénutrition protéique peut être due à 4 grandes causes : ",
+            "Défaut d'apport (anorexie, régime végétalien strict)",
+            "Défaut de synthèse hépatique (insuffisance hépatique)",
+            "Excès de perte rénale (syndrome néphrotique)",
+            "Excès de perte digestive (entéropathie exsudative).",
+            "Il faut prescrire une BU et un bilan hépatique complet."
+          ],
+
+          questionSet: [
+            { "id": "q_hypoalbu_1", "patterns":["dénutrition sévère"], "answer":"Oh je ne pensais pas que ma dénutrition était sévère..." },
+            { "id": "q_hypoalbu_2", "patterns":["régime", "végétalien", "végétalienne"], "answer":"Non je ne fais pas de régime, je mange de tout." },
+            { "id": "q_hypoalbu_3", "patterns":["diarrhées", "diarrhée"], "answer":"Non je n'ai pas eu d'épisodes de diarrhées." },
+            { "id": "q_hypoalbu_4", "patterns":["antécédents", "pathologie rénale", "pathologie hépatique"], "answer":"Je n'ai pas d'ancédents particuliers, mon frère par contre a une néphropathie à IgA." },
+            { "id": "q_hypoalbu_5", "patterns":["insuffisance hépatocellulaire", "IHC", "ictère", "angiomes", "angiomes stellaires", "érythrose palmaire", "ongles blancs", "hippocratisme digital"], "answer":"Absence de signes d'insuffisance hépato-cellulaire." },
+            { "id": "q_hypoalbu_6", "patterns":["hypertension artérielle", "HTA"], "answer":"Ma tension est à 160/80." },
+            { "id": "q_hypoalbu_7", "patterns":["bandelette urinaire", "BU"], "answer":"Vous prescrivez une bandelette urinaire." },
+            { "id": "q_hypoalbu_8", "patterns":["bilan hépatique", "ASAT", "ALAT", "gamma GT", "GGT", "gamma-GT", "PAL", "phosphatases alcalines", "bilirubinémie"], "answer":"Vous prescrivez un bilan hépatique." },
+            { "id": "q_hypoalbu_9", "patterns":["symptômes", "oedèmes"], "answer":"Oui j'ai vu que j'avais des oedèmes des membres inférieurs, ce n'est pas douloureux." },
+            { "id": "q_hypoalbu_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai perdu beaucoup de poids et j'ai toujours les mêmes symptômes..."},
+            { "id": "q_hypoalbu_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_hypoalbu_12", "patterns":["mangez", "repas", "alimentation", "manger"], "answer":"Je mange moins depuis quelques mois et j'ai perdu du poids, je le vois." },
+            { "id": "q_hypoalbu_13", "patterns":["se passe", "expliquez-moi", "vous arrive", "motif"], "answer":"Depuis 2 heures j'ai l'impression d'avoir chaud, je suis pas bien..." },
+            { "id": "q_hypoalbu_14", "patterns":["tabac", "alcool", "fumez", "buvez"], "answer":"Je ne fume pas. Je bois par contre 3-4 verres d'alcool par jour oui." }
+          ]
+        },
+                {
+          id: "SDD16",
+          title: "Demande d'amaigrissement",
+          intro: "Vous êtes endocrinologue spécialiste de l'obésité et vous recevez Mr Garcia, un patient de 32 ans qui vous est adressé par son médecin généraliste. (Cher confrère, je vous adresse Mr Garcia, un patient âgé de 32 ans, que je prends en charge en tant que médecin généraliste. Je suis préoccupé par son obésité, avec un IMC de à 37 et un syndrome d'apnée obstructive du sommeil sévère. Cet IMC reste stable malgré une prise en charge nutritionnelle instaurée il y a 8 mois. Je vous réfère Mr Garcia pour une évaluation en vue d'une chirurgie bariatrique. Je pense que votre expertise en endocrinologie sera précieuse pour déterminer la meilleure approche pour la gestion de son obésité. Je reste à votre disposition pour toute information médicale supplémentaire dont vous pourriez avoir besoin. Cordialement) Expliquez au patient les principes et les risques de la chirurgie bariatrique, éliminez d'éventuelles contre-indications.",
+          recap: [
+            "Dans une station parlant de chirurgie bariatrique il faut évoquer les 3 options à votre patient : anneau gastrique, sleeve gastrectomie et bypass.",
+            "Les risques sont : carences, dénutrition post-opératoire, troubles digestifs, dumping syndrome, hypoglycémie post-prandiale, supplémentations vitaminiques, suivi à vie.",
+            "Les contre indications à la chirurgie seraient : trouble psychiatrique, refus du suivi, pathologies mettant le pronostic vital en jeu.",
+            "L'anneau gastrique correspond à une restriction gastrique (moins recommandé car 50% de réintervention). Cause des RGO, un blocage alimentaire et des vomissements. La supplémentation n'est pas systématique, mais on peut donner de la vitamine B1 si vomissements.",
+            "La sleeve induit une restriction en réséquant les 2/3 de l'estomac. Elle cause des RGO, un risque de fistule gastrique, des vomissements et un dumping syndrome. On supplémente en vitamines D, B12 et en fer.",
+            "Le bypass relie le jéjunum a une petite poche gastrique. Il cause des diarrhées, un dumping syndrome, des hypoglycémies post-prandiales. On supplémente en vitamines et en fer à vie."
+          ],
+
+          questionSet: [
+            { "id": "q_chirbar_1", "patterns":["restriction gastrique", "malabsorption"], "answer":"Je comprends ces risques." },
+            { "id": "q_chirbar_2", "patterns":["perte de poids", "perdre du poids", "diminution des complications", "diminue les complications"], "answer":"Mon médecin a essayé une PEC psychologique et nutritionnelle et ça depuis un an mais ça ne marche pas. Je serais heureux que cette chirurgie me fasse perdre du poids." },
+            { "id": "q_chirbar_3", "patterns":["anneau gastrique", "sleeve", "bypass", "by-pass"], "answer":"Ok donc il y a plusieurs techniques." },
+            { "id": "q_chirbar_4", "patterns":["dénutrition", "risque de dénutrition"], "answer":"D'accord je comprends le risque de dénutrition post-chirurgie." },
+            { "id": "q_chirbar_5", "patterns":["carences", "carencé"], "answer":"Je comprends le risque de carences après l'opération." },
+            { "id": "q_chirbar_6", "patterns":["troubles digestifs", "RGO", "reflux gastro-oesophagien", "vomissements", "vomir", "diarrhées"], "answer":"Je comprends que je pourrais avoir des symptômes gastriques." },
+            { "id": "q_chirbar_7", "patterns":["dumping syndrome"], "answer":"Je ne connaissais pas ce symptôme, merci de m'en informer." },
+            { "id": "q_chirbar_8", "patterns":["hypoglycémie", "hypoglycémies", "hypoglycémie post-prandiale", "hypoglycémies post-prandiales"], "answer":"Oui je comprends le risque d'hypoglycémie." },
+            { "id": "q_chirbar_9", "patterns":["supplémentations vitaminiques", "suppléments", "vitamines"], "answer":"Je comprends que je devrais prendre des vitamines." },
+            { "id": "q_chirbar_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon médecin m'a parlé de chirurgie bariatrique je viens vous voir à ce sujet."},
+            { "id": "q_chirbar_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_chirbar_12", "patterns":["suivi à vie", "à vie", "toute votre vie"], "answer":"Je suis d'accord pour être suivi à vie." },
+            { "id": "q_chirbar_13", "patterns":["psychiatrique", "troubles cognitids", "TCA", "troubles du comportement alimentaire"], "answer":"Je n'ai pas de troubles psychiatriques, pas de TCA." },
+            { "id": "q_chirbar_14", "patterns":["suivi post-opératoire", "suivi post-op"], "answer":"Je ferais le suivi post-opératoire nécessaire." },
+            { "id": "q_chirbar_15", "patterns":["pronostic vital", "pronostic vital en jeu"], "answer":"Je n'ai pas de maladies engageant mon pronostic vital et je comprends qu'une chirurgie est toujours à risque." },
+            { "id": "q_chirbar_16", "patterns":["combien de temps", "temps", "quand"], "answer":"Je suis obèse depuis mon jeune âge." }
+          ]
         }
       ]
     }
