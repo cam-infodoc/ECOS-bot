@@ -1637,6 +1637,38 @@ const data = {
             { "id": "q_hypothyro_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Qu'est-ce que vous pensez de mes résultats ?"},
             { "id": "q_hypothyro_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur, je vais faire de mon mieux !" }
           ]
+        },
+                {
+          id: "SDD14",
+          title: "Hypoglycémie",
+          intro: "Un patient diabétique sous insuline de 53 ans, consulte aux urgences avec sa femme pour sensation de malaise qui s'aggrave depuis quelques heures. Menez l'interrogatoire, communiquez avec l'infirmière et demandez lui d'effectuer l'examen complémentaire nécessaire.",
+          recap: [
+            "Ici on est face à une hypoglycémie du sujet diabétique.",
+            "On cherche des signes adrénergiques : anxiété, chaleur, nausées, sueurs, pâleurs, tachycardie, palpitations.",
+            "On cherche des signes neuroglucopéniques : troubles de la concentration, fatigue, troubles moteurs, troubles visuels, troubles de la coordination, troubles sensitifs, convulsions, sd confusionnel.",
+            "Les seuils d'hypoglycémie sont :",
+            "0,4g/l pour le nouveau-né de <48h,",
+            "0,5g/L en général",
+            "0,7 g/L pour le diabétique.",
+            "Si le patient est conscient la correction se fait par 3 morceaux de sucre (15g), un soda ou une barre sucrée. Si le patient est inconscient par injections sc ou IM 1mg de glucagon ou 1-2 ampoules en IVD de G30%. Le glucagon est contr-indiqué si le patient prend un sulfamide hypoglycémiant, on perfusera du G30%."
+          ],
+
+          questionSet: [
+            { "id": "q_hypo_1", "patterns":["à distance du repas", "activité physique", "sport", "dose d'insuline", "autres traitements"], "answer":"Je ne faisais rien mais je prends l'insuline depuis peu de temps." },
+            { "id": "q_hypo_2", "patterns":["anxiété", "anxieux", "stressé", "chaleur", "nausées", "pâleur", "sueurs", "tachycardie", "palpitations"], "answer":"J'ai très chaud oui et j'ai des sueurs. Puis ma femme me trouve pâle." },
+            { "id": "q_hypo_3", "patterns":["trouble de la concentration", "troubles moteurs", "coordination", "troubles visuels", "troubles de l'élocution", "du mal à parler", "troubles sensitifs", "paresthésies", "fourmillements", "convulsions", "confusion", "syndrome confusionnel", "confus"], "answer":"Je tremble des bras et j'ai du mal à coordiner mes mouvements. Il n'y a pas de déficit SM, pas de syndrome confusionnel, pas de trouble de la vigilance, pas de trouble de l'attention." },
+            { "id": "q_hypo_4", "patterns":["perte de connaissance", "perdu connaissance"], "answer":"Je n'ai pas perdu connaissance." },
+            { "id": "q_hypo_5", "patterns":["état de conscience fluctuant", "fluctuation", "troubles de l'attention", "DTS", "désorientation", "désorganisation", "fatigue", "fatigué", "perturbation de l'état de veille", "endormi"], "answer":"Je me sens de plus en plus fatigué." },
+            { "id": "q_hypo_6", "patterns":["constantes", "paramètres vitaux", "paramètres"], "answer":"Les constantes sont normales." },
+            { "id": "q_hypo_7", "patterns":["état de conscience", "Glasgow", "conscience"], "answer":"SGW 15." },
+            { "id": "q_hypo_8", "patterns":["hypoglycémie"], "answer":"Ok Docteur vous pensez donc à une hypoglycémie." },
+            { "id": "q_hypo_9", "patterns":["glycémie capillaire"], "answer":"La glycémie capillaire est à 0,6 g/L." },
+            { "id": "q_hypo_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne me sens pas super bien depuis quelques heures..."},
+            { "id": "q_hypo_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_hypo_12", "patterns":["insuline", "combien de temps", "depuis quand", "quand"], "answer":"Je suis sous insuline depuis 2 semaines seulement, on m'a trouvé un diabète de type 2." },
+            { "id": "q_hypo_13", "patterns":["se passe", "expliquez-moi", "vous arrive", "motif"], "answer":"Depuis 2 heures j'ai l'impression d'avoir chaud, je suis pas bien..." },
+            { "id": "q_hypo_14", "patterns":["antécédents", "autres maladies", "autres pathologies", "antécédents"], "answer":"J'ai une hypertension sous lercanidipine, une insuffisance rénale chronique et c'est tout. Ma famille va bien." }
+          ]
         }
       ]
     }
