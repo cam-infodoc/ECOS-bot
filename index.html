@@ -1951,6 +1951,37 @@ const data = {
             { "id": "q_gyno_16", "patterns":["hCG sanguins", "hCG", "HCG"], "answer":"Vous prescrivez des hCG sanguins." },
             { "id": "q_gyno_17", "patterns":["prolactinémie"], "answer":"Vous prescrivez une prolactinémie." }
           ]
+        },
+                {
+          id: "SDD3",
+          title: "Hypertension durant la grossesse",
+          intro: "Vous êtes gynécologue obstétricien et recevez en consultation une patiente de 31 ans, enceinte à 26 semaines d'aménorrhée, adressée par un confrère généraliste pour hypertension artérielle. La tension artérielle prise avant la consultation par l'infirmière est de 150/95 mmHg à 3 reprises. Les autres constantes sont normales (fréquence cardiaque, fréquence respiratoire, saturation, température). Eliminez les éventuels signes de gravité par l'interrogatoire et l'examen clinique, proposez et expliquez à la patiente le bilan complémentaire, proposer une PEC dans l'attente des résultats du bilan complémentaire.",
+          recap: [
+            "Devant une découverte d'HTA gravidique il faut donc avant tout éliminer les signes de prééclampsie sévère qui nécessiteraient une prise en charge urgente : signes annonciateurs de crise d'éclampsie (céphalées résistantes aux traitements, ROTs pyramidaux, phosphènes, acouphènes), signes de HELLP syndrome ou d'hématome sous capsulaire du foie (barre épigastrique), signes de souffrance fœtale (diminution des mouvements actifs fœtaux perçus par la mère, hauteur utérine trop basse pour le nombre de semaines d'aménorrhée), une TA supérieure à 160/110 mmHg.",
+            "Il faut prescrire un bilan complémentaire pour : chercher une prééclampsie (protéinurie), chercher une souffrance fœtale (échographie obstétricale avec biométrie fœtale + doppler ombilical si retard de croissance intra-utérine).",
+            "En l'absence de signe de gravité la prise en charge est ambulatoire avec : arrêt de travail, pas de traitement antihypertenseur tant que la tension artérielle est dans les cibles (PAS entre 140 et 160 mmHg, PAD entre 90 et 105 mmHg), consultations tous les 10 jours avec bilan biologique, échographie tous les mois."
+          ],
+
+          questionSet: [
+            { "id": "q_htagrossesse_1", "patterns":["céphalées", "aux de tête"], "answer":"Non je n'ai pas mal à la tête." },
+            { "id": "q_htagrossesse_2", "patterns":["acouphènes", "bourdonnements"], "answer":"Je n'ai pas d'acouphènes." },
+            { "id": "q_htagrossesse_3", "patterns":["phsophènes", "troubles visuels", "troubles de la vision", "tâches visuelles"], "answer":"Je vois normalement." },
+            { "id": "q_htagrossesse_4", "patterns":["douleur épigastrique en barre", "en barre", "mal au ventre"], "answer":"Je n'ai pas mal au ventre." },
+            { "id": "q_htagrossesse_5", "patterns":["mouvements", "mouvements actifs", "bouger", "bébé bouge"], "answer":"Oui il bouge normalement." },
+            { "id": "q_htagrossesse_6", "patterns":["réflexes vifs", "réflexes polycinétiques", "réflexes diffus", "réflexes ostéo-tendineux", "réflexes ostéotendineux", "ROT"], "answer":"Les ROT sont normaux." },
+            { "id": "q_htagrossesse_7", "patterns":["hauteur utérine"], "answer":"Elle est à 24 cm. C'est normal Docteur ?" },
+            { "id": "q_htagrossesse_8", "patterns":["oui", "normal"], "answer":"Vous m'en voyez rassurée." },
+            { "id": "q_htagrossesse_9", "patterns":["protéinurie", "bandelette urinaire", "urines des 24h"], "answer":"La protéinurie sur BU ou recueil des 24h est demandée. La patiente vous demande si un traitement médical lui sera prescrit ?" },
+            { "id": "q_htagrossesse_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car ma dernière tension était à 145/110mmHg. Je voulais voir avec vous si tout allait bien et quels examens on pourrait faire."},
+            { "id": "q_htagrossesse_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_htagrossesse_12", "patterns":["prééclampsie", "pré éclampsie", "pré-éclampsie"], "answer":"La patiente est informée que la protéinurie permet de dépister une prééclampsie." },
+            { "id": "q_htagrossesse_13", "patterns":["échographie", "échographie obstétricale", "échographie pelvienne"], "answer":"Vous prescrivez une échographie obstétricale." },
+            { "id": "q_htagrossesse_14", "patterns":["RCIU", "retard de croissance", "retard de croissance intra-utérin"], "answer":"Vous informez la patiente que l'échographie vous permettra de dépister un RCIU." },
+            { "id": "q_htagrossesse_15", "patterns":["pas de traitement", "pas d'antihypertenseur", "non"], "answer":"Vous prescrivez une oestrogénémie." },
+            { "id": "q_htagrossesse_16", "patterns":["arrêt de travail"], "answer":"Vous prescrivez un arrêt de travail." },
+            { "id": "q_htagrossesse_17", "patterns":["vous travaillez", "boulot", "travail", "professionnel"], "answer":"Oui je travaille encore Docteur." },
+            { "id": "q_htagrossesse_18", "patterns":["suivi", "suivi rapproché", "suivi renforcé", "consultation", "consultation tous les 10 jours", "10 jours", "dix jours"], "answer":"La patiente est informée de son suivi rapproché avec une consultation obstétricale tous les 10 jours." }
+          ]
         }
       ]
     }
