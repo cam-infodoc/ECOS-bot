@@ -1607,6 +1607,36 @@ const data = {
             { "id": "q_hypothyro_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je vous ai ramené le résultat du bilan. Ca n'a pas l'air normal, qu'est-ce que ça veut dire ?"},
             { "id": "q_hypothyro_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur, je vous fais confiance de toute façon." }
           ]
+        },
+                {
+          id: "SDD13",
+          title: "Hyperglycémie",
+          intro: "Vous êtes médecin généraliste et vous recevez Mr GERARD, un patient de 48 ans, que vous suivez pour une hypertension artérielle sous Ramipril. Les deux dernières glycémies à jeun que vous lui avez prescrites sont à 1,16 g/L et 1,11 g/L. Interprétez ces résultats biologiques, expliquez les risques liés à un contrôle glycémique insuffisant, expliquez au patient la PEC.",
+          recap: [
+            "Ici on est face à une hyperglycémie modérée à jeun ou prédiabète.",
+            "Il faut préconiser une alimentation plus saine (méditerranéenne) et moins sucrée ainsi qu'une reprise de l'activité sportive.",
+            "Les risques à évoquer sont cardiologiques, ophtalmologiques, neurologiques et néphrologiques.",
+            "La découverte d'un diabète se pose sur une GAJ > 1,26g/L à 2 reprises.",
+            "Si un malade présente une GAJ évoquant un diabète mais n'est pas en surpoids et n'a pas d'ATCD familial de DT2 il faut chercher 2 diagnostics :",
+            "DT1 de l'adulte ou LADA",
+            "Cancer du pancréas.",
+            "Il faudra donc prescrire un dosage des Ac anti-GAD et anti-IA2 et un scanner abdominal injecté en cas de suspicion de cancer."
+          ],
+
+          questionSet: [
+            { "id": "q_diab_1", "patterns":["hyperglycémie modérée", "pré-diabète", "prédiabète"], "answer":"Donc mes résultats reflètent un prédiabète." },
+            { "id": "q_diab_2", "patterns":["évolution vers un diabète", "risque d'évolution vers un diabète"], "answer":"Je risque d'avoir un diabète si je ne fais rien... C'est quoi les risques au juste ?" },
+            { "id": "q_diab_3", "patterns":["risque cardiovasculaire", "cardiovasculaire", "IDM", "infarctus", "accident vasculaire cérébral", "AVC", "artériopathie oblitérante des membres inférieurs", "AOMI"], "answer":"Ah oui non j'ai pas envie de faire un infarctus moi... y a d'autres risques ?" },
+            { "id": "q_diab_4", "patterns":["ophtalmologique", "rétinopathie"], "answer":"Ca serait dommage je vois plutôt bien pour le moment..." },
+            { "id": "q_diab_5", "patterns":["neuropathies", "neurologique"], "answer":"Ca pourrait même m'empêcher de marcher ? Ah oui non je ne veux pas ça moi." },
+            { "id": "q_diab_6", "patterns":["insuffisance rénale", "néphrologique"], "answer":"Hmmm ça a pas l'air d'être une bonne chose." },
+            { "id": "q_diab_7", "patterns":["sucré", "bonbons", "sucreries", "pâtisseries", "faible indice glycémique", "sucrés"], "answer":"Je mange assez sucré c'est vrai j'adore les bonbons..." },
+            { "id": "q_diab_8", "patterns":["fruits", "légumes", "indice glycémique faible", "méditérannéen"], "answer":"D'accord j'arrêterai de m'acheter des plats préparés dans ce cas et je mangerai plus sain." },
+            { "id": "q_diab_9", "patterns":["activité physique", "sport", "sportive"], "answer":"C'est vrai qu'en tant qu'informaticien je bouge pas beaucoup... je faisais du tennis avant et j'adorerai recommencer, c'est le moment !" },
+            { "id": "q_diab_10", "patterns":["contrôle de la glycémie", "mesures"], "answer":"D'accord on recontrôlera mon sucre dans le sang après mes efforts." },
+            { "id": "q_hypothyro_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Qu'est-ce que vous pensez de mes résultats ?"},
+            { "id": "q_hypothyro_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur, je vais faire de mon mieux !" }
+          ]
         }
       ]
     }
