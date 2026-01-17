@@ -2045,11 +2045,42 @@ const data = {
             { "id": "q_tbcycle_7", "patterns":["galactorrhée", "écoulement mammaire", "fluide laiteux", "lait"], "answer":"Non je n'ai pas ça." },
             { "id": "q_tbcycle_8", "patterns":["carence oestrogénique", "bouffées de chaleur", "trouble du sommeil", "fatiguée", "asthénie", "dépression", "déprimée", "sécherresse vaginale", "perte de libido", "arthralgie"], "answer":"Non je n'ai pas ces symptômes." },
             { "id": "q_tbcycle_9", "patterns":["bHCG sanguins", "bHCG sanguin", "bêta-hCG sanguins", "bêta hCG sanguins", "bhCG urinaires", "bêta hCG urinaires", "bêta-hCG urinaires"], "answer":"D'accord je ferais un dosage de mes bHCG." },
-            { "id": "q_tbcycle_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car avec mon mari avec qui je suis depuis 30 ans nous avons des soucis au niveau sexuel car j'ai des douleurs."},
+            { "id": "q_tbcycle_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car je n'ai pas eu mes règles comme prévu depuis 7 semaines..."},
             { "id": "q_tbcycle_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
             { "id": "q_tbcycle_12", "patterns":["test au progestatif", "test aux progestatifs"], "answer":"D'accord je ferais ce test." },
             { "id": "q_tbcycle_13", "patterns":["bilan hormonal", "FSH", "prolactine", "LH"], "answer":"D'accord je ferais ce bilan hormonal." },
             { "id": "q_tbcycle_13", "patterns":["échographie pelvienne", "échographie"], "answer":"Y a pas de soucis pour l'échographie." }
+          ]
+        },
+          {
+          id: "SDD6",
+          title: "Contraction utérine chez une femme enceinte",
+          intro: `Mme KONTRACT, 25 ans, enceinte à 28 SA, consulte aux urgences gynécologiques pour des contractions utérines. Vous avez à disposition tout le matériel nécessaire pour examiner la patiente et le fœtus. Recherchez une menace d'accouchement prématuré et interprétez les résultats d'examen, prescrivez le bilan complémentaire, débuter la PEC immédiate en l'absence de CI.<img src= "contractions.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+          recap: [
+            "La grille de correction comprenait : ",
+            "Prescription d'une cardiotocographie, d'une échographie endovaginale, une description de contractions utérines régulières et un col raccourci,",
+            "Un bilan sanguin (NFS,CRP) et un bilan bactériologique (ECBU, prélèvement vaginal) et la prescription d'une échographie foetale,",
+            "La recherche de fièvre (chorioamniotite CI la tocolyse), recherche de métrorragies importantes (CI tocolyse), anomalie du RCF (CI la tocolyse),",
+            "La prescription d'une corticothérapie par béthamétasone en IM à 2 reprises à 24h d'intervalle et une tocolyse pendant 48h par atosiban ou inhibiteur calcique.",
+            "Pour rappel les FdR de MAP sont : socio-économiques (<18a ou >35a, travail, tb psychologiques, tabac et toxiques), ATCD obstétricaux (accouchement prématuré, fausse couche tardive, dernière grossesse <6mois), causes générales (HTA gravidiques, pré-éclampsie, RCIU vasculaire, infections, RPM, trauma abdominal accidentel), béance cervico-isthmique (conisation, col court), diminution de la taille de la cavité utérine (malformations utérines, fibrome endocavitaire), augmentation de la distension utérine pendant la grossesse (grossesse multiple, hydramniose, macrosomie).",
+            "Pour rappel les mesures de prévention sont : supprimer les FdR et faire un bilan morphologique de prématurité ou fausse couche tardive (prévention primaire), si 3 ATCD de prématurité ou FC tardives faire un cerclage (secondaire), si 1 ou 2 ATCD de prématurité ou FC tardives et col <2,5cm entre 16-22SA cerclage ou progestérone locale (secondaire)."
+          ],
+
+          questionSet: [
+            { "id": "q_contractions_1", "patterns":["cardio-tocographie"], "answer":"La cardio-tocographie vous est proposée." },
+            { "id": "q_contractions_2", "patterns":["échographie endo-vaginale"], "answer":"L'échographie endo-vaginale vous est proposée." },
+            { "id": "q_contractions_3", "patterns":["contractions utérines régulières", "régulières"], "answer":"Les contractions utérines sont régulières." },
+            { "id": "q_contractions_4", "patterns":["col raccourci", "col court", "col est bas"], "answer":"Le col est raccourci." },
+            { "id": "q_contractions_5", "patterns":["NFS", "CRP"], "answer":"Vous avez prescrit une NFS avec CRP." },
+            { "id": "q_contractions_6", "patterns":["ECBU", "BU", "prélèvement vaginal"], "answer":"Un bilan bactériologique est lancé." },
+            { "id": "q_contractions_7", "patterns":["échographie foetale", "croissance foetale", "poids foetal","liquide amnniotique"], "answer":"Une échographie foetale est prescrite." },
+            { "id": "q_contractions_8", "patterns":["fièvre", "chorioamniotite"], "answer":"Absence de fièvre." },
+            { "id": "q_contractions_9", "patterns":["métrorragies", "métrorragies importantes"], "answer":"Absence de métrorragies importantes." },
+            { "id": "q_contractions_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Ca fait 3h que j'ai des contractions qui me semblent régulières et douloureuses. Je suis à jour sur mon suivi de grossesse, c'est ma première en plus, et je n'ai pas de soucis de santé, ça m'inquiète pas mal..."},
+            { "id": "q_contractions_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_contractions_12", "patterns":["anomalie du rythme cardiaque foetal", "rythme cardiaque foetal"], "answer":"Le rythme cardiaque foetal est normal." },
+            { "id": "q_contractions_13", "patterns":["corticothérapie", "2 injections", "béthamétasone", "intramusculaire", "24h d'intervalle"], "answer":"La corticothérapie est prescrite." },
+            { "id": "q_contractions_14", "patterns":["tocolyse", "48h", "atosiban", "inhibiteur calcique"], "answer":"Une tocolyse est mise en place à votre demande." }
           ]
         }
       ]
