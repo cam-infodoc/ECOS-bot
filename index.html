@@ -2020,6 +2020,37 @@ const data = {
             { "id": "q_tbsexe_13", "patterns":["oestrogènes locaux", "oestrogènes en crème", "oestrogènes en pommade", "oestrogène en ovules", "ovules", "ovule"], "answer":"D'accord j'essaierai de mettre cette pommade." },
             { "id": "q_tbsexe_13", "patterns":["antécédents", "antécédent", "traitement", "traitements", "allergies", "toxiques"], "answer":"Je n'ai aucun souci de santé et je ne prend aucun traitement. Je ne fume pas et je ne bois pas." }
           ]
+        },
+                {
+          id: "SDD5",
+          title: "Troubles du cycle menstruel",
+          intro: "Vous êtes gynécologue et recevez Mme KATAIN, une patiente de 23 ans qui consulte car elle n'a toujours pas eu ses menstruations, alors qu'elle était censée les avoir il y a 7 semaines. Recherchez à l'interrogatoire et à l'examen cliniques les éléments orientant votre diagnostic, prescrivez les examens complémentaires nécessaires à votre démarche diagnostique.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "Recherche des ATCD personnels et familiaux gynécologiques et chirurgicaux, IMC et prise de poids, douleurs cycliques, rapports non protégés, signes d'hyperandrogénie, galactorrhée, signes de carence oestrogénique. Il fallait lui prescrire des bHCG sanguins ou urinaires, un test aux progestatifs, un bilan hormonal (hCG, prolactine, FSH+/-LH) et une échographie pelvienne.",
+            "Gardez à l'esprit que les 5 diagnostics les + fréquents devant un tb du cycles sont : grossesse, SOPK, hyperprolactinémie, aménorrhée hypothalamique fonctionnelle, IOP.",
+            "Le test aux progestatifs est le 1e à réaliser devant une aménorrhée pour réaliser une hémorragie de privation. Il est positif quand les menstrations surviennent dans les 5j suivant l'arrêt et signe une imprégnation oestrogénique suffisante, s'il est négatif il informe sur une hypo-oestrogénie ou anomalie anatomique de la filière génitale.",
+            "Si le test au Pg est +, le bilan hormonal est normal on dosera la 17-OH progestérone pour éliminer un bloc tardif et diagnostiquer un SOPK.",
+            "Si le test au Pg est -, le bilan hormonal normal on envisagera des causes utéro-vaginales, si le bilan montre un hypogonadisme hypergonadotrope une IOP (faire un caryotype) et un hypogonadisme hypogonadotrope des causes hypothalamo-hypophysaires (faire une IRM).",
+
+          ],
+
+          questionSet: [
+            { "id": "q_tbcycle_1", "patterns":["antécédents", "antécédents personnels", "antécédents familiaux", "antécédents gynécologiques"], "answer":"Ni moi ni ma famille avons des antécédents gynécologiques particuliers." },
+            { "id": "q_tbcycle_2", "patterns":["antécédents chirurgicaux", "chirurgical", "antécédents personnels chirurgicaux", "antécédents familiaux chirurgicaux"], "answer":"Non personne de ma famille n'a été opéré, moi non plus d'ailleurs." },
+            { "id": "q_tbcycle_3", "patterns":["poids", "taille", "IMC", "fluctuation de poids", "prise de poids", "TCA", "trouble du comportement alimentaire"], "answer":"Mon IMC est dans la norme mais j'ai pris du poids récemment." },
+            { "id": "q_tbcycle_4", "patterns":["douleurs", "douleurs cycliques", "douleurs pendant vos règles", "douleurs pendant vos menstruations", "geste endo-utérin"], "answer":"Je n'ai aucune douleur." },
+            { "id": "q_tbcycle_5", "patterns":["rapports sexuels non protégés", "non protégés", "non protégé", "sans protection", "sans préservatif", "test de grossesse", "bHCG", "bêta-hCG"], "answer":"Chacun de mes rapports sexuels est protégé et j'ai fait un test urinaire des bHCG qui est revenu négatif, c'est pour ça que je ne comprends pas ce que j'ai." },
+            { "id": "q_tbcycle_6", "patterns":["hyperandrogénie", "hirsutisme", "poils", "acné sévère", "acné", "alopécie", "perte de cheveux", "perdu vos cheveux"], "answer":"J'ai de l'acné de temps en temps oui." },
+            { "id": "q_tbcycle_7", "patterns":["galactorrhée", "écoulement mammaire", "fluide laiteux", "lait"], "answer":"Non je n'ai pas ça." },
+            { "id": "q_tbcycle_8", "patterns":["carence oestrogénique", "bouffées de chaleur", "trouble du sommeil", "fatiguée", "asthénie", "dépression", "déprimée", "sécherresse vaginale", "perte de libido", "arthralgie"], "answer":"Non je n'ai pas ces symptômes." },
+            { "id": "q_tbcycle_9", "patterns":["bHCG sanguins", "bHCG sanguin", "bêta-hCG sanguins", "bêta hCG sanguins", "bhCG urinaires", "bêta hCG urinaires", "bêta-hCG urinaires"], "answer":"D'accord je ferais un dosage de mes bHCG." },
+            { "id": "q_tbcycle_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car avec mon mari avec qui je suis depuis 30 ans nous avons des soucis au niveau sexuel car j'ai des douleurs."},
+            { "id": "q_tbcycle_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_tbcycle_12", "patterns":["test au progestatif", "test aux progestatifs"], "answer":"D'accord je ferais ce test." },
+            { "id": "q_tbcycle_13", "patterns":["bilan hormonal", "FSH", "prolactine", "LH"], "answer":"D'accord je ferais ce bilan hormonal." },
+            { "id": "q_tbcycle_13", "patterns":["échographie pelvienne", "échographie"], "answer":"Y a pas de soucis pour l'échographie." }
+          ]
         }
       ]
     }
