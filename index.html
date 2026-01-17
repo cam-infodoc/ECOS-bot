@@ -1976,7 +1976,7 @@ const data = {
           questionSet: [
             { "id": "q_htagrossesse_1", "patterns":["céphalées", "aux de tête"], "answer":"Non je n'ai pas mal à la tête." },
             { "id": "q_htagrossesse_2", "patterns":["acouphènes", "bourdonnements"], "answer":"Je n'ai pas d'acouphènes." },
-            { "id": "q_htagrossesse_3", "patterns":["phsophènes", "troubles visuels", "troubles de la vision", "tâches visuelles"], "answer":"Je vois normalement." },
+            { "id": "q_htagrossesse_3", "patterns":["phosphènes", "troubles visuels", "troubles de la vision", "tâches visuelles"], "answer":"Je vois normalement." },
             { "id": "q_htagrossesse_4", "patterns":["douleur épigastrique en barre", "en barre", "mal au ventre"], "answer":"Je n'ai pas mal au ventre." },
             { "id": "q_htagrossesse_5", "patterns":["mouvements", "mouvements actifs", "bouger", "bébé bouge"], "answer":"Oui il bouge normalement." },
             { "id": "q_htagrossesse_6", "patterns":["réflexes vifs", "réflexes polycinétiques", "réflexes diffus", "réflexes ostéo-tendineux", "réflexes ostéotendineux", "ROT"], "answer":"Les ROT sont normaux." },
@@ -1992,6 +1992,33 @@ const data = {
             { "id": "q_htagrossesse_16", "patterns":["arrêt de travail"], "answer":"Vous prescrivez un arrêt de travail." },
             { "id": "q_htagrossesse_17", "patterns":["vous travaillez", "boulot", "travail", "professionnel"], "answer":"Oui je travaille encore Docteur." },
             { "id": "q_htagrossesse_18", "patterns":["suivi", "suivi rapproché", "suivi renforcé", "consultation", "consultation tous les 10 jours", "10 jours", "dix jours"], "answer":"La patiente est informée de son suivi rapproché avec une consultation obstétricale tous les 10 jours." }
+          ]
+        },
+          {
+          id: "SDD4",
+          title: "Troubles sexuels et trouble de l'érection",
+          intro: "Vous êtes gynécologue et vous recevez une patiente de 52 ans en consultation. Elle se plaint de douleurs au moment des rapports sexuels. Interrogez la patiente sur sa plainte, expliquez votre principale hypothèse et proposez une PEC.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "Caractérisation de la temporalité de la plainte, retentissement psychologique, statut ménopausal, syndrome climatérique, trouble de la lubrification, SFU, libido",
+            "La patiente souffre d'une carence oestrogénique et vous pouviez lui conseiller des lubrifiants ou hydratants ainsi que des oestrogènes locaux (gel crème ou ovules)."
+          ],
+
+          questionSet: [
+            { "id": "q_tbsexe_1", "patterns":["temporalité", "combien de temps", "depuis quand", "quand", "temps", "déjà survenu", "déjà arrivé", "première fois"], "answer":"Cela fait 6 mois, c'est bien la première fois que ça nous arrive." },
+            { "id": "q_tbsexe_2", "patterns":["retentissement", "conjoint", "copain", "mari", "psychologique"], "answer":"J'avoue qu'on se retrouve très frustrés de la situation." },
+            { "id": "q_tbsexe_3", "patterns":["dyspareunie", "dyspareunies superficielles", "d'intromission", "dyspareunies profondes", "dyspareunie profonde", "à l'introduction", "introduit", "pendant le rapport"], "answer":"La douleur est plutôt au moment où Monsieur introduit son pénis." },
+            { "id": "q_tbsexe_4", "patterns":["ménopause", "menstruations", "règles", "date des dernières règles", "DDR"], "answer":"Maintenant que vous le dites c'est vrai que je n'ai pas eu mes règles depuis 13 mois." },
+            { "id": "q_tbsexe_5", "patterns":["syndrome climatérique", "bouffées de chaleur", "asthénie", "fatigue", "dépression", "déprimée", "arthromyalgies", "douleurs articulaires"], "answer":"Je ne crois pas non." },
+            { "id": "q_tbsexe_6", "patterns":["troubles de le lubrification", "lubrifier", "lubrification"], "answer":"Oui je trouve que mon vagin est sec." },
+            { "id": "q_tbsexe_7", "patterns":["symptômes urinaires", "dysurie", "incontinence urinaire", "urinaire", "urinaires"], "answer":"Non je n'ai pas de symptômes urinaires." },
+            { "id": "q_tbsexe_8", "patterns":["libido", "envie", "envies"], "answer":"Justement ma libido est conservée c'est d'autant plus frustrant." },
+            { "id": "q_tbsexe_9", "patterns":["carence oestrogénique", "ménopause", "pré-ménopause", "préménopause", "oestrogènes"], "answer":"D'accord je comprends donc que mes symptômes sont du à un manque d'oestrogènes." },
+            { "id": "q_tbsexe_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car avec mon mari avec qui je suis depuis 30 ans nous avons des soucis au niveau sexuel car j'ai des douleurs."},
+            { "id": "q_tbsexe_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_tbsexe_12", "patterns":["méthodes de lubrification", "lubrifiant", "hydratants", "acide hyaluronique"], "answer":"D'accord on essaiera ça." },
+            { "id": "q_tbsexe_13", "patterns":["oestrogènes locaux", "oestrogènes en crème", "oestrogènes en pommade", "oestrogène en ovules", "ovules", "ovule"], "answer":"D'accord j'essaierai de mettre cette pommade." },
+            { "id": "q_tbsexe_13", "patterns":["antécédents", "antécédent", "traitement", "traitements", "allergies", "toxiques"], "answer":"Je n'ai aucun souci de santé et je ne prend aucun traitement. Je ne fume pas et je ne bois pas." }
           ]
         }
       ]
