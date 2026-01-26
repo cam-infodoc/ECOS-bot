@@ -2082,6 +2082,45 @@ const data = {
             { "id": "q_contractions_13", "patterns":["corticothérapie", "2 injections", "béthamétasone", "intramusculaire", "24h d'intervalle"], "answer":"La corticothérapie est prescrite." },
             { "id": "q_contractions_14", "patterns":["tocolyse", "48h", "atosiban", "inhibiteur calcique"], "answer":"Une tocolyse est mise en place à votre demande." }
           ]
+        },
+                {
+          id: "SDD7",
+          title: "Douleur pelvienne",
+          intro: "Vous êtes gynécologue et vous recevez aux urgences gynécologiques Mme PAILVISSE, une patiente de 21 ans, qui consulte pour une douleur en fosse iliaque gauche et en hypogastre depuis 1 h. La douleur s'est installée rapidement et est très intense. Complétez l'interrogatoire et l'anamnèse, expliquez le diagnostic et la PEC à la patiente.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "Interrogation sur la douleur (apparition, évolution...), nausées/vomissements douleurs abdo ou trouble du transit, date des dernières règles, antécédents gynéco, contraception, signes sympathiques de grossesse (nausées et vomissements rentraient dedans on pouvait rajouter tension mammaire), métrorragies, rapports sexuels non protégés, fièvre ou frissons, SFU.",
+            "Le diagnostic posé était celui d'une torsion d'annexe. La PEC correspond à une coelioscopie en urgence avec pour but de détordre l'ovaire et retirer le kyste tout en essayant de garder l'ovaire si viable.",
+            "Les bons réflexes :",
+            "- Devant une douleur pelvienne il faut penser aux causes : gynéco (GEU, torsion, IGH, rupture hémorragique kyste), urinaires (pyélo, CN, globe), digestives (appendicite, sigmoïdite, occlusion).",
+            "- L'examen clinique intègre TV, palpation abdo, tolérance hémodynamique. Les bhCG et l'échographie pelvienne par voie abdominale et endovaginales sont systématiques.",
+            "- Si la douleur est chronique les étiologies sont : gynécologiques (sd prémenstruel, endométriose, anomalies utéro-vaginales, dysménorrhées fonctionnelles, IGH chronique, tb de la statique pelvienne), digestives (MICI, endométriose digestive, adhérences, hémorroïdes), urinaires (cystalgies à urines claires), rhumathologiques (pathos ostéoarticulaires du bassin ou rachis lombaire)."
+          ],
+
+          questionSet: [
+            { "id": "q_dlpelv_1", "patterns":["date d'apparition", "quand", "depuis quand", "évolution", "évolue"], "answer":"J'ai mal depuis une heure environ, j'ai eu mal d'un coup et c'est de pire en pire." },
+            { "id": "q_dlpelv_2", "patterns":["nausées", "vomis", "vomissement", "vomi", "douleurs abdominales", "transit"], "answer":"Oui j'ai eu des nausées, des vomissements et un arrêt des gaz." },
+            { "id": "q_dlpelv_3", "patterns":["date des dernières règles", "dernières règles", "DDR", "menstruations", "aménorrhée", "vos règles pour la dernière fois"], "answer":"Mes dernières règles datent d'il y a 6 jours." },
+            { "id": "q_dlpelv_4", "patterns":["antécédents gynécologiques", "antécédents gynéco", "antécédent gynécologique", "antécédent gynéco"], "answer":"Oui, j'ai un kyste ovarien qu'on m'a diagnostiqué il y a un an mais pour le coup je ne l'ai pas surveillé." },
+            { "id": "q_dlpelv_5", "patterns":["contraception", "pilule", "stérilet"], "answer":"Non je ne prends pas de pilule et je n'ai pas de stérilet." },
+            { "id": "q_dlpelv_6", "patterns":["tension mammaire", "seins tendus", "signes de grossesse"], "answer":"A part les nausées et vomissements je n'ai pas eu d'autres signes particuliers de type tension mammaire ou quoi..." },
+            { "id": "q_dlpelv_7", "patterns":["métrorragies", "saignement abondant", "menstruations abondantes"], "answer":"Non mes saignements menstruels étaient habituels et depuis je n'ai plus rien." },
+            { "id": "q_dlpelv_8", "patterns":["rapports non protégés", "non protégés", "IST", "infection sexuellement transmissible"], "answer":"Je n'ai pas eu d'IST à ma connaissance et mon partenaire d'il y a 3 mois mettait un préservatif. Depuis je n'ai pas eu de rapports." },
+            { "id": "q_dlpelv_9", "patterns":["fièvre", "frissons"], "answer":"Non je n'ai eu ni fièvre ni frissons." },
+            { "id": "q_dlpelv_10", "patterns":["signes fonctionnels urinaires", "SFU", "brûlures urinaires", "pollakiurie", "dysurie", "symptômes urinaires", "symptôme urinaire"], "answer":"Non je n'ai eu aucun symptôme urinaire." },
+            { "id": "q_dlpelv_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car j'ai extrêmement mal en bas du ventre à gauche !"},
+            { "id": "q_dlpelv_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_dlpelv_12", "patterns":["torsion d'annexe", "torsion d'ovaire", "torsion ovarienne"], "answer":"Ok vous pensez à une torsion d'annexe." },
+            { "id": "q_dlpelv_13", "patterns":["chirurgie en urgence", "chirurgie"], "answer":"Oh je ne savais pas qu'on m'opérerait ... Et ça se passe comment ?" },
+            { "id": "q_dlpelv_13", "patterns":["échographie pelvienne", "échographie"], "answer":"On m'a fait une échographie à l'entrée des urgences. Voici le compte-rendu : 'masse latéroo-utérine avec arrêt de la vascularisation au doppler et b-hCG négatifs'." },
+            { "id": "q_dlpelv_14", "patterns":["coelioscopie", "coelio"], "answer":"Ok on ne va pas m'ouvrir en deux je suis rassurée." },
+            { "id": "q_dlpelv_15", "patterns":["détordre", "détorsion", "retirer le kyste", "enlever le kyste"], "answer":"Ok donc on détord l'ovaire si on peut et on retire le kyste. Est-ce que je vais perdre mon ovaire ou c'est une chirurgie plutôt conservatrice ?" },
+            { "id": "q_dlpelv_16", "patterns":["garder", "conservatrice"], "answer":"D'accord je préfère qu'on essaie de le garder aussi si possible." },
+            { "id": "q_dlpelv_17", "patterns":["traitements", "traitement", "allergies", "toxiques", "tabac", "alcool"], "answer":"Absence de traitements, allergies ou prise de toxiques." },
+            { "id": "q_dlpelv_18", "patterns":["irradie", "irradier", "irradiation"], "answer":"Oui au départ c'était plutôt à gauche et maintenant j'ai mal au dessus de la vessie aussi. (vous retrouvez une douleur en FIG et hypogastre)" },
+            { "id": "q_dlpelv_19", "patterns":["soulage", "soulagée"], "answer":"La seule position qui me soulage c'est d'être pliée en 2 et rien ne la calme c'est toujours plus fort." },
+            { "id": "q_dlpelv_20", "patterns":["hémodynamique", "constantes", "paramètres vitaux"], "answer":"Hémodynamique stable. Défense hypogastrique et FIG." }
+          ]
         }
       ]
     }
