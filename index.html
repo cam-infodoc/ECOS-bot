@@ -2170,8 +2170,8 @@ const data = {
           ],
 
           questionSet: [
-            { "id": "q_cryptotest_1", "patterns":["cryptorchidie", "arrêt de la descente", "arrêté de descendre"], "answer":"Oui ça j'ai bien compris, il est où exactement ce testicue du coup ?" },
-            { "id": "q_cryptotest_2", "patterns":["abdomen", "orifice inguinal"], "answer":"Ok donc son testicule est encore dans son venre, c'est quoi les risques à connaître ?" },
+            { "id": "q_cryptotest_1", "patterns":["cryptorchidie", "arrêt de la descente", "arrêté de descendre"], "answer":"Oui ça j'ai bien compris, il est où exactement ce testicule du coup ?" },
+            { "id": "q_cryptotest_2", "patterns":["abdomen", "orifice inguinal"], "answer":"Ok donc son testicule est encore dans son ventre, c'est quoi les risques à connaître ?" },
             { "id": "q_cryptotest_3", "patterns":["hypofertilité", "diminution de la fertilité", "diminution de sa fertilité"], "answer":"Ah c'est quand même bien embêtant ça..." },
             { "id": "q_cryptotest_4", "patterns":["cancer du testicule", "cancer", "cancer testiculaire"], "answer":"Mon dieu un cancer ?! Ah pitié non faites en sorte que ça n'arrive pas ! Vous êtes sur du diagnostic on ne fait pas une imagerie ?" },
             { "id": "q_cryptotest_5", "patterns":["clinique", "pas nécessaire", "pas d'imagerie", "pas faire d'imagerie"], "answer":"Bon si vous êtes sur de vous je vous crois. Mais si on attend on attend combien de temps ?" },
@@ -2220,6 +2220,38 @@ const data = {
             { "id": "q_massepelv_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
             { "id": "q_massepelv_12", "patterns":["marqueurs tumoraux", "CA125", "CA19-9", "ACE", "HE4"], "answer":"Les marqueurs tumoraux sont prescrits." }
           ]
+        },
+          {
+          id: "SDD11",
+          title: "Perte de liquide chez une femme enceinte",
+          intro: "Vous êtes gynécologue de garde à la maternité d'un grand hôpital, et vous prenez en charge Mme KORIO, une patiente de 27 ans enceinte à 34 semaines d'aménorrhée. Mme KORIO est fébrile et à des douleurs abdominales récurrentes depuis ce matin, ainsi que des pertes de liquide jaune foncé par le vagin. À l'examen clinique : température à 39 °C, le reste des constantes sont normales, col raccourci, membranes rompues, pas de douleur à la palpation des fosses lombaires. Vous êtes accompagné par Emma l'infirmière du service. Annoncez à Emma votre hypothèse diagnostique principale et le bilan à faire pour le confirmer, interprétez les premiers résultats et expliquer la PEC nécessaire.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- On pense à une chorioamniotite, il faut réaliser un ECBU / prélèvement vaginal / hémocultures, faire NFS + CRP, enregistrement du rythme cardiaque foetal et échographie obstétricale.",
+            "On identifie une tachycardie fœtale, des décélérations, contractions utérines maternelles, antibiothérapie parentale (C3G + aminosides), faire sortir le bébé (AVB si travail rapide et césarienne sinon).",
+            "En cas de MAP certaines situations nécessitent un accouchement en urgence et CI la tocolyse : .",
+            "- chorioamniotite",
+            "- métrorragies importantes",
+            "- anomalie du rythme cardiaque foetal",
+            "- RPM."
+          ],
+
+          questionSet: [
+            { "id": "q_liquidenceinte_1", "patterns":["chorioamniotite", "chorio-amniotite"], "answer":"Ok Dr on suspecte donc une chorioamniotite" },
+            { "id": "q_liquidenceinte_2", "patterns":["ECBU", "examen cytobactériologique des urines"], "answer":"Je vais faire un ECBU alors !" },
+            { "id": "q_liquidenceinte_3", "patterns":["prélèvement vaginal", "PV"], "answer":"On va faire un prélèvement vaginal alors." },
+            { "id": "q_liquidenceinte_4", "patterns":["hémocultures", "hémoculture"], "answer":"Je vais faire des hémocultures." },
+            { "id": "q_liquidenceinte_5", "patterns":["NFS", "CRP"], "answer":"Je vais donc réaliser une NFS et une CRP." },
+            { "id": "q_liquidenceinte_6", "patterns":["RCF", "rythme cardiaque foetal"], "answer":`<img src= "perteliquidienne.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_liquidenceinte_7", "patterns":["échographie", "échographie obstétrical"], "answer":"Je vais demander une échographie obstétricale alors." },
+            { "id": "q_liquidenceinte_8", "patterns":["tachycardie foetale"], "answer":"Il y a effectivement une tachycardie foetale." },
+            { "id": "q_liquidenceinte_9", "patterns":["décélérations", "mauvaise tolérance foetale"], "answer":"Il y a effectivement des décélérations." },
+            { "id": "q_liquidenceinte_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Alors vous pensez à quoi ?"},
+            { "id": "q_liquidenceinte_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_liquidenceinte_12", "patterns":["contractions utérines foetales", "contractions utérines"], "answer":"La maman a effectivement des contractions utérines." },
+            { "id": "q_liquidenceinte_13", "patterns":["antibiothérapie", "ATB", "C3G", "céphalosporines", "aminosides"], "answer":"Je vais donc lui donner des C3G avec des aminosides." },
+            { "id": "q_liquidenceinte_14", "patterns":["sortir le bébé", "AVB", "accoucher", "accouchement", "césarienne"], "answer":"Nous allons donc préparer l'accouchement." }
+         ]
         }
       ]
     }
