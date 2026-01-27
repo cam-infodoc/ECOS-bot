@@ -2158,6 +2158,33 @@ const data = {
             { "id": "q_leucorrhées_14", "patterns":["autres symptômes", "autre symptôme"], "answer":"Non je n'ai aucun symptôme à côté." },
             { "id": "q_leucorrhées_15", "patterns":["traitements", "traitement", "allergies", "toxiques", "tabac", "alcool"], "answer":"Absence de traitements, allergies ou prise de toxiques." }
          ]
+        },
+                {
+          id: "SDD9",
+          title: "Malformation de l'appareil génital",
+          intro: "Vous êtes pédiatre à l'hôpital et vous recevez en consultation Tanguy, un nouveau-né de 12 jours, avec sa maman. Au cours de l'hospitalisation en suite de couche, un médecin a diagnostiqué une cryptorchidie unilatérale droite à Tanguy. À l'examen clinique vous palpez le testicule droit dans le canal inguinal. Expliquez le diagnostic et les risques de la cryptorchidie à la maman, expliquez la PEC et répondez aux questions de la mère de Tanguy.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer que la cryptorchidie est l'arrêt de la descente du testicule entre la région lombaire et le scrotum, expliquer que le testicule est actuellement abdominal au niveau du canal inguinal, indiquer qu'il peut descendre dans les 6 premiers mois. Prévenir des risques d'hypofertilité et de cancer testiculaire.",
+            "Le diagnostic est clinique (imagerie non nécessaire), si le testicule ne descend pas à 6 mois on pratique une chirurgie qui diminue le risque d'hypofertilité. Expliquer que la chirurgie dépistera un cancer testiculaire et parler d'autopalpation."
+          ],
+
+          questionSet: [
+            { "id": "q_cryptotest_1", "patterns":["cryptorchidie", "arrêt de la descente", "arrêté de descendre"], "answer":"Oui ça j'ai bien compris, il est où exactement ce testicue du coup ?" },
+            { "id": "q_cryptotest_2", "patterns":["abdomen", "orifice inguinal"], "answer":"Ok donc son testicule est encore dans son venre, c'est quoi les risques à connaître ?" },
+            { "id": "q_cryptotest_3", "patterns":["hypofertilité", "diminution de la fertilité", "diminution de sa fertilité"], "answer":"Ah c'est quand même bien embêtant ça..." },
+            { "id": "q_cryptotest_4", "patterns":["cancer du testicule", "cancer", "cancer testiculaire"], "answer":"Mon dieu un cancer ?! Ah pitié non faites en sorte que ça n'arrive pas ! Vous êtes sur du diagnostic on ne fait pas une imagerie ?" },
+            { "id": "q_cryptotest_5", "patterns":["clinique", "pas nécessaire", "pas d'imagerie", "pas faire d'imagerie"], "answer":"Bon si vous êtes sur de vous je vous crois. Mais si on attend on attend combien de temps ?" },
+            { "id": "q_cryptotest_6", "patterns":["6 mois", "six mois"], "answer":"Ok donc si à 6 mois le testicule n'est pas à sa place alors là on devra faire quelque chose. D'ailleurs quoi ?" },
+            { "id": "q_cryptotest_7", "patterns":["chirurgie"], "answer":"Oh l'opérer carrément ? c'est quelque chose... Et comment je peux vérifier qu'il n'ait pas de cancer moi à la maison ? " },
+            { "id": "q_cryptotest_8", "patterns":["dépistage", "autopalpation"], "answer":"D'accord j'y penserai alors. Et la chirurgie diminuera les risques à long terme OUI ou NON ? " },
+            { "id": "q_cryptotest_9", "patterns":["oui", "OUI"], "answer":"Ok je suis rassurée de l'entendre." },
+            { "id": "q_cryptotest_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. De ce que j'ai compris un de ses testicules n'est pas descendu complètement. Par contre je ne sais pas s'il peut encore descendre dans les jours à venir, c'est possible ?"},
+            { "id": "q_cryptotest_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_cryptotest_12", "patterns":["test à la potasse", "sniff test", "poisson pourri"], "answer":"D'accord je vois." },
+            { "id": "q_cryptotest_13", "patterns":["autres symptômes", "autre symptôme"], "answer":"Absence d'autres symptômes." },
+            { "id": "q_cryptotest_14", "patterns":["traitements", "traitement", "allergies", "toxiques", "tabac", "alcool"], "answer":"Absence de traitements, allergies ou prise de toxiques." }
+         ]
         }
       ]
     }
