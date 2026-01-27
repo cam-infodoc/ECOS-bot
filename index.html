@@ -2395,7 +2395,7 @@ const data = {
           recap: [
             "Pour cet ECOS la grille comprenait : ",
             "- Demander si la patiente souhaite être seule ou accompagnée, partenaire sexue, différents type de contraception, 1e intention est la pilule OP, ATCD cancer, ATCD dyslipidémie / diabète / hypertension artérielle, ATCD migraine avec aura, ATCD thrombophilie ou MTEV ou artérielle. On prescrit une pilule OP et on explique qu'elle ne protège pas du risque d'IST et qu'il faut utiliser un préservatif.",
-            "- On explique à la patiente qu'il faut faire un bilan GAJ + EAL à 3 mois, le renouveler dans 5 ans, efficace si initiée le 1e jour des règles ou sous 7 jours. Il fatut prendre la pilule tous les jours à la même heure. En cas d'oubli >12h ou rapport dans les 5j précédant l'oubli prendre une contraception d'urgence.",
+            "- On explique à la patiente qu'il faut faire un bilan GAJ + EAL à 3 mois, le renouveler dans 5 ans, efficace si initiée le 1e jour des règles ou sous 7 jours. Il faut prendre la pilule tous les jours à la même heure. En cas d'oubli >12h ou rapport dans les 5j précédant l'oubli prendre une contraception d'urgence.",
             "Contraception orale : ",
             "- COP : action antigonadotrope, modification de la glaire cervicale. Administration orale, transdermique, vaginale. En 1e intention. CI : cancer sein et endomètre, métabolique (dyslipidémie, diabète), vasculaire (HTA, migraine avec aura, MTEV). Si intervention chir programmée arrêt 4S avant et 2S après.",
             "- Microprogestatif : en 1e intention si DT2. DIU au lévonorgestrel indiquée si dysménorrhées, ménorragies fonctionnelles, adénomyose, fibrome sous muqueux ou interstitielles. CI : cancer du sein, hépatopathie sévère, pathologies hormonodépendantes, hémorragie gynécologique d'origine inconnue, accident TE.",
@@ -2422,6 +2422,40 @@ const data = {
             { "id": "q_contraception_16", "patterns":["tous les jours", "même heure"], "answer":"D'accord donc c'est tous les jours et toujours à la même heure." },
             { "id": "q_contraception_17", "patterns":["oubli de plus de 12 heures", "oubli >12h", "oubli de plus de 12h", "rapport dans les 5 jours", "contraception d'urgence"], "answer":"Donc la contraception d'urgence c'est si l'oubli est de plus de 12 h ou que j'ai eu un rapport dans les 5 jours." }
          ]
+        },
+                {
+          id: "SDD17",
+          title: "Consultation de grossesse normale",
+          intro: "En remplacement dans un cabinet de gynécologie, vous recevez pour le suivi de sa grossesse une patiente de 36 ans, primigeste à 26SA. Vous avez tout le matériel d'examen clinique nécessaire au cabinet. Réalisez l'examen clinique de suivi obstétrical, prescrivez les examens complémentaires nécessaires au suivi de la grossesse.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher la hauteur utérine (normale), mesure TA en décubitus latéral G ou position demi-assise, auscultation abdomen à la recherche des bruits du coeur foetaux, palpation abdominale à la recherche de mouvements actifs foetaux, demander à se peser, besoin réalisation BU.",
+            "- Prescrire : RAI, NFS, sérologie toxoplasmise, dépistage diabète gestationnel car >35 ans.",
+            "Suivi obstétrical : ",
+            "- A chaque consultation : TA en décubitus dorsal G ou demi-assise, poids, mouvements actifs foetaux, bruits du coeur, BU, hauteur utérine (normalement 16cm à 20SA puis 1cm/mois jusqu'à 30SA puis 0,5cm/mois)..",
+            "- Suivi paraclinique à chaque consultation : sérologie toxoplasmose si négative, sérologie rubéole si négative et jusqu'à 18SA.",
+            "- Suivi préconceptionnel : VIH, GS et RAI.",
+            "- T1 : syphilis, Ag Hbs, et 2 GS+RAI. Recommandés : VIH, VHC, GàJ si FdR DG, ECBU si BU positive, TSH si ATCD, calcul risque combiné T21 si FdR, électrophorèse de l'Hb si origine africaine.",
+            "- M6 : NFS + RAI si Rh D- (et Rh D foetal + ou non fait ou ATCD transfusionnel). Possibilité hyperglycémie provoquée si FdR DG.",
+            "- M8 : RAI si Rh D- et pas d'injection d'immunoglobuline anti-D ou ATCD transfusionnel. Possibilité de faire dépistage vaginal asymptomatique du strep D.",
+            "- Suivi échographique : T1 entre 11-13SA (dater et mesure clarté nucale), T2 (biométries, vitalité, quantité liquide foetal, position, malformations), T3 (biométries foetales, croissance foetale, quantité liquide amniotique, présentation)."
+          ],
+
+          questionSet: [
+            { "id": "q_consultgross_1", "patterns":["hauteur utérine"], "answer":"'La hauteur utérine est à 24cm' C'est normal comme mesure Docteur ?" },
+            { "id": "q_consultgross_2", "patterns":["oui", "OUI"], "answer":"D'accord je suis rassurée." },
+            { "id": "q_consultgross_3", "patterns":["pression artérielle", "tension artérielle", "PA", "TA"], "answer":"Tension artérielle normale." },
+            { "id": "q_consultgross_4", "patterns":["auscultation abdominale", "bruits du coeur foetaux"], "answer":"Absence d'anomalies." },
+            { "id": "q_consultgross_5", "patterns":["palpation abdominale", "mouvements actifs foetaux"], "answer":"Absence d'anomalies." },
+            { "id": "q_consultgross_6", "patterns":["se peser", "poids"], "answer":"La patiente va se peser." },
+            { "id": "q_consultgross_7", "patterns":["bandelette urinaire", "BU"], "answer":"La BU sera réalisée." },
+            { "id": "q_consultgross_8", "patterns":["RAI", "recherche d'agglutines irrégulières"], "answer":"Une RAI est prescrite." },
+            { "id": "q_consultgross_9", "patterns":["NFS", "numération de la formule sanguine"], "answer":"Une NFS est prescrite." },
+            { "id": "q_consultgross_10", "patterns":["toxoplasmose", "sérologie toxoplasmose"], "answer":"La sérologie sera re contrôlée." },
+            { "id": "q_consultgross_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_consultgross_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_consultgross_13", "patterns":["dépistage du diabète gestationnel", "hyperglycémie provoquée à jeun", "diabète gestationnel"], "answer":"Un dépistage du diabète gestationnel sera effectué." }
+          ]
         }
       ]
     }
