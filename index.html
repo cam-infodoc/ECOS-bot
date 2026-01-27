@@ -2456,6 +2456,42 @@ const data = {
             { "id": "q_consultgross_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
             { "id": "q_consultgross_13", "patterns":["dépistage du diabète gestationnel", "hyperglycémie provoquée à jeun", "diabète gestationnel"], "answer":"Un dépistage du diabète gestationnel sera effectué." }
           ]
+        },
+
+        {
+          id: "SDD18",
+          title: "PEC d'un allaitement normal et difficile",
+          intro: `Vous recevez en consultation une femme 3 jours après son accouchement. Elle allaite mais ses seins sont rouges et douloureux avec des douleurs mammaires. Pas de signes généraux. Elle hésite à arrêter d'allaiter. Identifiez la complication que présente la patiente, conseillez la sur la technique d'allaitement et proposez une PEC, promouvez l'allaitement maternel en expliquant ses bienfaits. <img src= "seinrouge.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+          recap: [
+            "La grille de correction comprenait : ",
+            "Identifier un engorgement mammaire ou une congestion mammaire.",
+            "Privilégier un allaitement souple horaires libres, toutes les 2-3h en général, expliquer que l'allaitement est à la demande sans limitation, installation confortable avec la bouche prenant toute l'aréole, conseiller sur une hygiène de vie avec boissons abondantes / alimentation variée / proscription toxiques / lavage quotidien sein à l'eau et au savon. Prescrire AINS ou paracétamol ou massage aréolaire pour aider à diminuer l'oedème et la douleur.",
+            "Bienfaits : financiers, diminution dépression PP, facilicite perte de poids en PP, diminution risque cancer sein / ovaire, diminution FdR cardiovasculaires, dimunution allergies et asthme enfant, diminution infections pédiatriques (ORL), dimunution risque leucémie pédiatrique, favorise lien mère / enfant",
+            "Identifier et PEC les complications de l'allaitement :",
+            "- Crevasse du mamelon : rouge irrité, fissures et érosions, tétés très douloureuses, saignement possibles. Ttt symptomatique (tétés fréquentes et efficaces)",
+            "- Engorgement mammaire : seins gonflés, tendus, douloureux, oedème. Ttt symptomatique (tétés fréquentes et efficaces +/- AINS ou antalgiques",
+            "- Lymphangite : fièvre 39-40°C, douleur intension, inflammation locale, signe Budin -. AINS et antalgiques si besoin, ATB si signes graves, lésions mamelon visibles, symptômes > 12-24h.",
+            "-Galactophorite : peau d'orange, pus dans le lait, signe de Budin +. ATB per os, AINS et antalgiques. Arrêt temporaire allaitement.",
+            "- Abcès du sein : contexte galactophorite préalable, fièvre modérée voire absente, collection mammaire, fluctuante, hyperalgique. Incision avec lavage et drainage sous AG. Si mastite associée ATB. Arrêt de l'allaitement.",
+          ],
+
+          questionSet: [
+            { "id": "q_allaitement_1", "patterns":["engorgement", "congestion"], "answer":"D'accord c'est donc un engorgement mammaire." },
+            { "id": "q_allaitement_2", "patterns":["à la demande", "sans limites"], "answer":"L'allaitement doit être à la demande c'est compris." },
+            { "id": "q_allaitement_3", "patterns":["bouche doit prendre l'aréole", "pas que le mamelon"], "answer":"D'accord donc sa bouche doit prendre l'aréole et pas que le mamelon." },
+            { "id": "q_allaitement_4", "patterns":["boissons abondantes", "alimentation", "arrêt tabac", "arrêt alcool", "lavage quotidien", "eau et savon"], "answer":"Je note vos conseils." },
+            { "id": "q_allaitement_5", "patterns":["AINS", "antalgique", "massage aréolaire"], "answer":"D'accord." },
+            { "id": "q_allaitement_6", "patterns":["avantage financier", "coûte moins cher"], "answer":"C'est vrai qu'allaiter me revient à moins cher." },
+            { "id": "q_allaitement_7", "patterns":["dépression", "perte de poids"], "answer":"Ah je ne savais pas mais oui effectivement c'est positif." },
+            { "id": "q_allaitement_8", "patterns":["cancer sein", "cancer ovaire", "diminue le risque de cancer", "diminue le risque de cancers"], "answer":"Ah je ne savais pas que ça jouait sur les cancers aussi." },
+            { "id": "q_allaitement_9", "patterns":["facteurs de risque cardiovasculaires", "dyslipidémie", "HTA", "obésité", "diabète"], "answer":"Ok je vois." },
+            { "id": "q_allaitement_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon sein me fait mal et j'hésite à arrêter d'allaiter vous pourriez regarder ? "},
+            { "id": "q_allaitement_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_allaitement_12", "patterns":["allergies", "asthme"], "answer":"Oh d'accord." },
+            { "id": "q_allaitement_13", "patterns":["infections", "ORL"], "answer":"D'accord." },
+            { "id": "q_allaitement_14", "patterns":["leucémie", "cancer pédiatrique", "cancer du sang"], "answer":"Ah oui ça c'est vraiment intéressant." },
+            { "id": "q_allaitement_15", "patterns":["lien", "lien mère enfant", "lien mère-enfant"], "answer":"Je m'en doutais un peu oui." }
+          ]
         }
       ]
     }
