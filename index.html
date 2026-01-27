@@ -2252,6 +2252,38 @@ const data = {
             { "id": "q_liquidenceinte_13", "patterns":["antibiothérapie", "ATB", "C3G", "céphalosporines", "aminosides"], "answer":"Je vais donc lui donner des C3G avec des aminosides." },
             { "id": "q_liquidenceinte_14", "patterns":["sortir le bébé", "AVB", "accoucher", "accouchement", "césarienne"], "answer":"Nous allons donc préparer l'accouchement." }
          ]
+        },
+                {
+          id: "SDD12",
+          title: "Saignement génital anormal en post-partum",
+          intro: "Vous êtes obstétricien et vous prenez en charge Mme Sasègne qui a accouché il y a 1 heure. Depuis les saignements génitaux sont quantifiés à 700 ml, Mme Sasègne fait donc une hémorragie du post-partum. Vous avez réalisé la le partie de la prise en charge : délivrance artificielle du placenta, puis révision utérine, perfusion d'ocytocine IV, massage utérin et antibioprophylaxie. Malgré cette prise en charge, la patiente continue de saigner avec retentissement sur son état hémodynamique. Vous êtes accompagné par Fabrice l'infirmier du service. Réalisez l'examen gynécologique pour vérifier l'origine du saignement, planifiez la PEC avec l'aide de Fabrice.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Examen sous valves pour rechercher une déchirure vaginale et du col utérin.",
+            "- Poser 2 VVP, monitorer la patiente, sonder, remplir au NaCl 0,9%, oxygénothérapie, perfusion de sulprostone ou prostaglandines, bilan biologique (NFS, TP, TCA, fibrinogène), commander des CGR ET PFC, prescrire 1mg d'acide tranexanique.",
+            "Les bons réflexes sont : ",
+            "- La prévention de l'hémorragie du PP : délivrance dirigée systématique (ocytocine), sac de recueil des pertes sanguines, délivrance artificielle (si absence décollement placentaire 30mn après accouchement ou hémorragie du PP)",
+            "- La PEC de l'hémorragie du PP en 3 temps avec l'équipe de réanimation",
+            "1E TEMPS : si hémorragie après expulsion = révision utérine en urgence + examen sous valves, si hémorragie avant expulsion = délivrance artificielle puis révision utérine. Antibioprophylaxie. Si contractions utérines = ocytocine et massage utérin. Surveillance par scope, sondage urinaire, surveillance clinique, bilan biologique, expansion volémique par cristalloïdes.",
+            "2E TEMPS : persistance de l'hémorragie pendant 15-30mn après accouchement ou délai plus court si hémorragie très abdondante d'emblée ou mauvaise tolérance = sulprostone +/- tamponnement intra-utérin. Pose de 2VVP, mise en réserve de CGR et transfusion si mauvaise tolérance, acide tranexanique si choc hémorragique.",
+            "3E TEMPS : si l'état hémodynamique le permet PEC radio interventionnelle. Si instable PEC chirurgicale par traitement conservateur (ligature artères utérines voire ligaments ronds et utéro ovariens) ou ttt radical de dernier recours (hystérectomie d'hémostase)."
+          ],
+
+          questionSet: [
+            { "id": "q_saignepp_1", "patterns":["déchirure vaginale"], "answer":"Absence de déchirure vaginale à l'examen sous valves." },
+            { "id": "q_saignepp_2", "patterns":["déchirure du col utérin"], "answer":"Absence de déchirure du col utérin à l'examen sous valves." },
+            { "id": "q_saignepp_3", "patterns":["2 VVP", "2 voies veineuses périphériques"], "answer":"Fabrice va perfuser avec 2 VVP votre patiente." },
+            { "id": "q_saignepp_4", "patterns":["monitoring", "TA", "pression artérielle", "tension artérielle", "FC", "fréquence cardiaque", "sat", "saturation"], "answer":"Fabrice va monitorer votre patiente." },
+            { "id": "q_saignepp_5", "patterns":["sondage urinaire"], "answer":"La patiente était déjà sondée." },
+            { "id": "q_saignepp_6", "patterns":["remplissage", "NaCl 0,9%", "cristalloïdes"], "answer":"La patiente va être remplie par des cristalloïdes." },
+            { "id": "q_saignepp_7", "patterns":["oxygène", "oxygénothérapie"], "answer":"Vous avez prescrit une oxygénothérapie." },
+            { "id": "q_saignepp_8", "patterns":["sulprostone", "prostaglandines"], "answer":"De la sulprostone ou des prostaglandines sont prescrites." },
+            { "id": "q_saignepp_9", "patterns":["bilan biologiques", "NFS", "TP", "TCA", "fibrinogène"], "answer":"Un bilan biologiques : NFS, TP, TCA, fibrinogène est envoyé au laboratoire." },
+            { "id": "q_saignepp_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis à votre écoute."},
+            { "id": "q_saignepp_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_saignepp_12", "patterns":["culots globulaires", "CGR", "plasma frais congelé", "PFC"], "answer":"Des CGR et PFC sont commandés." },
+            { "id": "q_saignepp_13", "patterns":["acide tranexanique", "1g d'acide tranexanique"], "answer":"Je vais passer 1mg d'acide tranexanique." }
+         ]
         }
       ]
     }
