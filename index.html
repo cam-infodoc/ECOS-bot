@@ -2377,7 +2377,7 @@ const data = {
             { "id": "q_examensein_2", "patterns":["palpation mammaire", "localisation", "taille", "consistance", "régularité"], "answer":"Nodule palpable dans le QSE droit." },
             { "id": "q_examensein_3", "patterns":["debout", "assise", "allongée"], "answer":"L'inspection et la palpation se font en position debout ou assise ET en position allongée." },
             { "id": "q_examensein_4", "patterns":["adhérence", "adhère", "peau", "muscle", "grand pectoral"], "answer":"Absence d'adhérence à la peau. Adhérence et rétractation lors de la contraction du grand pectoral." },
-            { "id": "q_examensein_5", "patterns":["aires ganglionnaires" "axillaires", "sus-claviculaires"], "answer":"Absence d'adénopathies axillaires ou sus-claviculaires." },
+            { "id": "q_examensein_5", "patterns":["aires ganglionnaires", "axillaires", "sus-claviculaires"], "answer":"Absence d'adénopathies axillaires ou sus-claviculaires." },
             { "id": "q_examensein_6", "patterns":["hépatomégalie"], "answer":"Absence d'hépatomégalie." },
             { "id": "q_examensein_7", "patterns":["ascite"], "answer":"Absence d'ascite." },
             { "id": "q_examensein_8", "patterns":["auscultation pulmonaire"], "answer":"Absence d'anomalies à l'auscultation pulmonaire." },
@@ -2386,6 +2386,41 @@ const data = {
             { "id": "q_examensein_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Pourriez-vous m'examiner ?"},
             { "id": "q_examensein_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
             { "id": "q_examensein_13", "patterns":["échographie mammaire", "échographie des aires ganglionnaires"], "answer":"Une échographie mammaire et des aires ganglionnaires est prescrite." }
+         ]
+        },
+                {
+          id: "SDD16",
+          title: "Prescrire une contraception et une contraception d'urgence",
+          intro: "Vous êtes en consultation de gynécologie avec Mlle Stairilé qui à 18 ans souhaite débuter une contraception. La patiente est accompagnée de sa mère. Prescrivez une contraception adaptée en fonction des ATCD, des besoins et des attentes de la patiente et expliquez les modalités de l'initiation, de prise de suivi de la méthode choisie.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander si la patiente souhaite être seule ou accompagnée, partenaire sexue, différents type de contraception, 1e intention est la pilule OP, ATCD cancer, ATCD dyslipidémie / diabète / hypertension artérielle, ATCD migraine avec aura, ATCD thrombophilie ou MTEV ou artérielle. On prescrit une pilule OP et on explique qu'elle ne protège pas du risque d'IST et qu'il faut utiliser un préservatif.",
+            "- On explique à la patiente qu'il faut faire un bilan GAJ + EAL à 3 mois, le renouveler dans 5 ans, efficace si initiée le 1e jour des règles ou sous 7 jours. Il fatut prendre la pilule tous les jours à la même heure. En cas d'oubli >12h ou rapport dans les 5j précédant l'oubli prendre une contraception d'urgence.",
+            "Contraception orale : ",
+            "- COP : action antigonadotrope, modification de la glaire cervicale. Administration orale, transdermique, vaginale. En 1e intention. CI : cancer sein et endomètre, métabolique (dyslipidémie, diabète), vasculaire (HTA, migraine avec aura, MTEV). Si intervention chir programmée arrêt 4S avant et 2S après.",
+            "- Microprogestatif : en 1e intention si DT2. DIU au lévonorgestrel indiquée si dysménorrhées, ménorragies fonctionnelles, adénomyose, fibrome sous muqueux ou interstitielles. CI : cancer du sein, hépatopathie sévère, pathologies hormonodépendantes, hémorragie gynécologique d'origine inconnue, accident TE.",
+            "- DIU : CI anomalies cavité utérine, ATCD IGH < 3mois, hémorragies génitales non diagnostiquées, valvulopathie à risque endocardite, immunosuppresseurs ou corticoïdes long cours, maladie de Wilson, ATCD cancer sein ou méningiome.",
+            "- Contraception d'urgence : dans les 3j = lévonorgestrel sans ordonnance et gratuitement sans CI, dans les 5j = acétate d'ulipristal en prise unique ou DIU ou cuivre."
+          ],
+
+          questionSet: [
+            { "id": "q_contraception_1", "patterns":["seule", "accompagnée de votre mère", "accmpagnée de votre maman"], "answer":"Ma mère peut rester il n'y a pas de soucis." },
+            { "id": "q_contraception_2", "patterns":["partenaire", "partenaire sexuel"], "answer":"Oui j'ai un copain depuis un an et on a des rapports sexuels depuis une semaine." },
+            { "id": "q_contraception_3", "patterns":["orale", "implant", "patch", "dispositif intra-utérin", "DIU"], "answer":"D'accord je ne connaissais pas toutes ces méthodes." },
+            { "id": "q_contraception_4", "patterns":["pilule oestro-progestative"], "answer":"Ah le premier choix c'est la pilule OP ok." },
+            { "id": "q_contraception_5", "patterns":["cancer", "antécédents de cancer"], "answer":"Non il y a pas eu de cancer dans ma famille je crois (la mère fait non de la tête)." },
+            { "id": "q_contraception_6", "patterns":["dyslipidémie", "diabète", "hypertension"], "answer":"Papa a du diabète de type 2 et maman n'a pas d'hypertension ou quoi." },
+            { "id": "q_contraception_7", "patterns":["migraine avec aura"], "answer":"Non j'ai jamais de maux de tête." },
+            { "id": "q_contraception_8", "patterns":["thrombophilie", "troubles de l'hémostase", "maladie thromboembolique"], "answer":"Non on n'a pas de problèmes vasculaires." },
+            { "id": "q_contraception_9", "patterns":["prescription de pilule", "je vous prescrit une pilule", "prescrit une pilule"], "answer":"Merci pour la prescription." },
+            { "id": "q_contraception_10", "patterns":["risque d'IST", "préservatif est recommandé"], "answer":"Oui je vois, c'est pas parce que je prends une pilule qu'il n'y a plus de risque." },
+            { "id": "q_contraception_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'aimerai une contraception, c'est possible ?"},
+            { "id": "q_contraception_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_contraception_13", "patterns":["glycémie à jeun", "GAJ", "bilan lipidique à 3 mois", "bilan lipidique", "3 mois", "trois mois"], "answer":"Ok je ferais un bilan à 3 mois alors." },
+            { "id": "q_contraception_14", "patterns":["5 ans", "tous les 5 ans"], "answer":"Ok je ferais un bilan tous les 5 ans alors." },
+            { "id": "q_contraception_15", "patterns":["efficace directement", "premier jour des règles", "7 jours", "sept jours"], "answer":"Ok donc si je la prend le 1e jour de mes règles ça sera efficace sinon il y a 7 jours de délai quoi." },
+            { "id": "q_contraception_16", "patterns":["tous les jours", "même heure"], "answer":"D'accord donc c'est tous les jours et toujours à la même heure." },
+            { "id": "q_contraception_17", "patterns":["oubli de plus de 12 heures", "oubli >12h", "oubli de plus de 12h", "rapport dans les 5 jours", "contraception d'urgence"], "answer":"Donc la contraception d'urgence c'est si l'oubli est de plus de 12 h ou que j'ai eu un rapport dans les 5 jours." }
          ]
         }
       ]
