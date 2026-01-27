@@ -2356,7 +2356,36 @@ const data = {
             { "id": "q_saigneano_13", "patterns":["douleur pelvienne", "leucorrhée"], "answer":"J'ai quelques douleurs pendant les règles oui mais pas en dehors." },
             { "id": "q_saigneano_14", "patterns":["examen sous spéculum", "examen sous valve"], "answer":"L'examen clinique retrouve un saignement d'origine endo utérine." },
             { "id": "q_saigneano_15", "patterns":["toucher vaginal", "volume utérin"], "answer":"Utérus augmenté de volume." },
-            { "id": "q_saigneano_16", "patterns":["fiibrome", "fibrome utérin"], "answer":"D'accord je vous crois !" }
+            { "id": "q_saigneano_16", "patterns":["fibrome", "fibrome utérin"], "answer":"D'accord je vous crois !" }
+         ]
+        },
+                {
+          id: "SDD15",
+          title: "Anomalie de l'examen clinique mammaire",
+          intro: "Vous êtes médecin généraliste et vous recevez Mme CAIN, une patiente de 47 ans, qui vous consulte à la suite d'une autopalpation d'un nodule du sein droit. La mère et la sœur de la patiente ont eu un cancer du sein à 50 et 62 ans. La patiente est plus fatiguée depuis quelques semaines et a perdu du poids. La patiente n'a pas d'antécédent et ne prend pas de traitement. Réalisez l'examen clinique, prescrivez les examens complémentaires nécessaires.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Inspection mammaire bilatérale, palpation mammaire bilatérale, inspection et palpation en position debout / assise et en position allongée, on cherche une adhérence du nodule à la peau et une adhérence du nodule au muscle grand pectoral, palpation des aires ganglionnaires axillaires et sus claviculaires. Rechercher un écoulement mamelonnaire spontané et à la pression, rechercher une hépatomégalie, rechercher une ascite, ausculter les poumons.",
+            "- On prescrit une mammographie bilatérale et une échographie mammaire et des aires ganglionnaires.",
+            "Facteurs de risque du cancer du sein : ",
+            "- ATCD personnel d'hyperplasie atypique, exposition aux oestrogènes (puberté <12a, ménopause tardive >55a, surpoids, contraception hormonale, THM), nulliparité, 1e grossesse tardive (>30a), absence d'allaitement, tabac, alcool, haut niveau socio-économique, ATCD radiothérapie de la paroi thoracique, ATCD fam de cancer du sein ou de l'ovaire.",
+            "La mammographie permet de dire si la masse est interne ou externe et supérieure ou inférieure."
+          ],
+
+          questionSet: [
+            { "id": "q_examensein_1", "patterns":["inspection mammaire", "inspection", "rétraction cutanée", "déviation mamelon", "invagination mamelon", "ulcère cutané", "inflammation", "peau d'orange", "oedème", "érythème"], "answer":"Rétraction cutanée en regard du quadrant supéro-externe du sein droit." },
+            { "id": "q_examensein_2", "patterns":["palpation mammaire", "localisation", "taille", "consistance", "régularité"], "answer":"Nodule palpable dans le QSE droit." },
+            { "id": "q_examensein_3", "patterns":["debout", "assise", "allongée"], "answer":"L'inspection et la palpation se font en position debout ou assise ET en position allongée." },
+            { "id": "q_examensein_4", "patterns":["adhérence", "adhère", "peau", "muscle", "grand pectoral"], "answer":"Absence d'adhérence à la peau. Adhérence et rétractation lors de la contraction du grand pectoral." },
+            { "id": "q_examensein_5", "patterns":["aires ganglionnaires" "axillaires", "sus-claviculaires"], "answer":"Absence d'adénopathies axillaires ou sus-claviculaires." },
+            { "id": "q_examensein_6", "patterns":["hépatomégalie"], "answer":"Absence d'hépatomégalie." },
+            { "id": "q_examensein_7", "patterns":["ascite"], "answer":"Absence d'ascite." },
+            { "id": "q_examensein_8", "patterns":["auscultation pulmonaire"], "answer":"Absence d'anomalies à l'auscultation pulmonaire." },
+            { "id": "q_examensein_9", "patterns":["mammographie", "mammographie bilatérale"], "answer":"Prescription d'une mammographie bilatérale." },
+            { "id": "q_examensein_10", "patterns":["écoulement mamelonnaire", "à la pression"], "answer":"Absence d'écoulement mamelonnaire spontané et à la pression." },
+            { "id": "q_examensein_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Pourriez-vous m'examiner ?"},
+            { "id": "q_examensein_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_examensein_13", "patterns":["échographie mammaire", "échographie des aires ganglionnaires"], "answer":"Une échographie mammaire et des aires ganglionnaires est prescrite." }
          ]
         }
       ]
