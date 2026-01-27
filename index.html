@@ -2284,6 +2284,39 @@ const data = {
             { "id": "q_saignepp_12", "patterns":["culots globulaires", "CGR", "plasma frais congelé", "PFC"], "answer":"Des CGR et PFC sont commandés." },
             { "id": "q_saignepp_13", "patterns":["acide tranexanique", "1g d'acide tranexanique"], "answer":"Je vais passer 1mg d'acide tranexanique." }
          ]
+        },
+          {
+          id: "SDD13",
+          title: "Saignement génital durant la grossesse",
+          intro: "Vous êtes gynécologue et vous recevez aux urgences gynécologiques Mme Trousseau, une patiente de 25 ans, qui consulte pour un saignement génital. La patiente a consulté son médecin traitant il y a 2 jours, qui lui a diagnostiqué une grossesse devant des signes sympathiques de grossesse et une aménorrhée depuis 9 semaines. À l'examen clinique : FC 80 bpm, TA 130/80 mmHg et la sat 100 % en AA, défense en fosse iliaque droite, parois vaginales saines et sang s'écoule de l'utérus à travers le col. TV douloureux, notamment à la palpation latéro-utérine et des culs-de-sac. Complétez l'interrogatoire et l'anamnèse, expliquez à la patiente votre principale hypothèse et la conduite diagnostique à tenir.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Caractérisation du saignement (abondance, couleur, caillots), douleurs pelviennes, signes sympathiques de grossesse, ATCD de GEU, ATCD de chirurgie abdominale ou pelvienne, ATCD IGH ou de rapports non protégés, ATCD d'endométriose, traitements en cours, statut tabagique.",
+            "- Expliquer à la patiente la suspicion de GEU, prescrire un bilan biologique (b-HCG, NFS, GS+Rh, RAI), prescrire une échographie pelvienne.",
+            "Au T1 2 diagnostics sont à retenir : ",
+            "- GEU : recherchez FdR, métroorragie (rouge foncée noirâtre), douleurs pelviennes. Palpation abdominale, TV, masse latéro-utérine douloureuse, douleurs au cul de sac, utéruse moins gros que prévu, col tonique et fermé. b-HCG stagnent ou augmentent sans doubler. Utérus vide à l'échographie, endomètre épaissi, masse latéro-utérine.",
+            "- Fausse couche spontanée précoce : métrorragie (rouge avec caillots), dl pelviennes à type de contraction, palpation abdominale, TV col modifié. b-hCG diminuent. Sac ovulaire intra-utérin visible, embryon sans activité cardiaque, sac aplati, contours irréguliers, plus petit que prévu à l'échographie pelvienne.",
+            "Au T3 on évoque 2 diagnostics :",
+            "Hématome rétro-placentaire : contexte vasculaire (>35a, HTA gravidique / prééclampsie, tabac ou cocaïne, primipare). Douleur abdominale en coup de poignard, utérus de bois, HU augmentée. Diagnostic clinique. Echographie pelvienne confirme le diagnostic mais l'absence HRP ne l'élimine pas. Anomalie du RCF à l'ECT (foetus mort), hypertonie utérine.",
+            "Placenta praevia : ATCD chirurgico-obstétricaux (césarienne, aspiration endo-utérine, fibrome, malformation utérine, endométrite, tabac, multipartité, âge avancé). TV CI, apparition brutale sang rougle indolore abondante. Présentation pathologique. Echographie confirme le diagnostic. Activité cardiaque à l'ECT perçue."
+          ],
+
+          questionSet: [
+            { "id": "q_saignegros_1", "patterns":["caractériser", "abondance", "couleur", "caillots"], "answer":"Saignements peu abondants, couleur noirâtre, sans caillots." },
+            { "id": "q_saignegros_2", "patterns":["douleurs pelviennes"], "answer":"Oui j'ai des douleurs en bas à droite." },
+            { "id": "q_saignegros_3", "patterns":["signes sympathiques de grossesse", "mastodynie", "nausées", "vomissements"], "answer":"Oui j'ai eu certains signes de grossesse ce qui a permis à mon médecin de trouver que j'étais enceinte." },
+            { "id": "q_saignegros_4", "patterns":["antécédents gynécologiques", "antécédents de GEU", "antécédent de grossesse extra-utérine", "antécédent de GEU", "ATCD de GEU"], "answer":"Non je n'ai jamais fait de grossesse extra-utérine." },
+            { "id": "q_saignegros_5", "patterns":["antécédents de chirurgie"], "answer":"J'ai eu une appendicite à 15 ans mais on m'a opérée." },
+            { "id": "q_saignegros_6", "patterns":["antécédent d'infection génitale haute", "antécédents d'IST", "rapports sexuels non protégés", "rapports non protégés"], "answer":"J'ai eu des rapports non protégés avec mon conjoint mais c'est tout et je n'ai jamais fait d'IST." },
+            { "id": "q_saignegros_7", "patterns":["endométriose"], "answer":"Je ne suis pas connue comme ayant de l'endométriose." },
+            { "id": "q_saignegros_8", "patterns":["traitements", "traitement"], "answer":"Je ne prends aucun traitement." },
+            { "id": "q_saignegros_9", "patterns":["tabac", "tabagique", "fumez"], "answer":"Ah ça malheureusement oui je fume... Je fume 20 cigarettes par jour depuis 6 ans et malgré ma grossesse je n'ai pas réussi à m'arrêter..." },
+            { "id": "q_saignegros_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai vu mon médecin il y a 2 jours et il m'a dit que j'étais enceinte mais aujourd'hui je me suis rendue compte que je saignais au niveau vaginal. J'ai un peu peur et j'aimerais en savoir plus s'il vous plait."},
+            { "id": "q_saignegros_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_saignegros_12", "patterns":["GEU", "grossesse extra-utérine"], "answer":"Oh vous pensez à une grossesse extra-utérine... Je dois faire des examens en plus ? " },
+            { "id": "q_saignegros_13", "patterns":["bilan biologique", "b-hCG", "bêta-hCG", "NFS", "groupe sanguin", "Rh", "RAI"], "answer":"D'accord je ferais ce bilan." },
+            { "id": "q_saignegros_14", "patterns":["échographie pelvienne", "échographie"], "answer":"Je ferais cette échographie alors !" }
+         ]
         }
       ]
     }
