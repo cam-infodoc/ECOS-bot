@@ -2185,6 +2185,41 @@ const data = {
             { "id": "q_cryptotest_13", "patterns":["autres symptômes", "autre symptôme"], "answer":"Absence d'autres symptômes." },
             { "id": "q_cryptotest_14", "patterns":["traitements", "traitement", "allergies", "toxiques", "tabac", "alcool"], "answer":"Absence de traitements, allergies ou prise de toxiques." }
          ]
+        },
+                {
+          id: "SDD10",
+          title: "Masse pelvienne",
+          intro: `Vous êtes gynécologue et vous revoyez Mme Rousseau, une patiente de 70 ans, que vous avez vu il y a 2 semaines car elle se plaignait de douleurs pelviennes et d'une altération de l'état général. L'examen clinique retrouvait une masse annexielle droite. La patiente vous rapporte le résultat de l'examen d'imagerie que vous lui avez prescrit. Interprétez l'imagerie rapportée, prescrivez et justifiez le bilan biologique et/ou imagerie complémentaire. <img src= "massepelvienne.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+          recap: [
+            "La grille de correction comprenait : ",
+            "Expliquer que l'imagerie est une échographie pelvienne, on identifie une tumeur ovarienne multiloculaire aux contours irréguliers, on identifie une composante solide ou un contenu hétérogène, la tumeur est de grosse taille car > 7cm et est donc en faveur d'une lésion maligne ou cancer.",
+            "On prescrit une IRM AP pour mieux caractériser la tumeur et faire le bilan d'extension loco-régionale,",
+            "On prescrit un scanner TAP injecté pour le bilan d'extension,",
+            "On recherche les marqueurs tumoraux : CA125, CA 19-9, ACE, HE4.",
+            "Les bons réflèxes devant un cancer de l'ovaire :",
+            "Clinique : pesanteur ou douleur pelviennes, sd de masse (SFU, constipation, dilatation cavités pyélocaliciennes, thrombophlébite pelvienne, sciatique)",
+            "1e intention : échographie abdominale et endovaginale avec diamètre > 7cm, multiloculaire, composantes hétérogènes, contours irréguliers, végétations intrakystiques, hypervascularisation, paroi et cloisons épaisses, bilatéralité, ascite.",
+            "2e intention : CA125, CA19-9, ACE, HE4. IRM AP, TDM TAP, coelioscopie (bilan extension pour chercher carcinose + anapath).",
+            "Démarche diagnostique evant une tuméfaction pelvienne :",
+            "- Etiologies : grossesse, fibrome utérien, kyste ovarien, tumeur ovarienne, endométriome, abcès  tuboovarien.",
+            "- Interrogatoire : rapports sexuels, DDR, méno/métrorragies, dysménorrhées, sd de masse pelvienne, ATCD IST.",
+            "- Examen clinique : TV +++ (masse régulière et mobile = fibrome, kyste; masse irrégulière et fixe = cancer ovaire, endométriome, abcès).",
+          ],
+
+          questionSet: [
+            { "id": "q_massepelv_1", "patterns":["échographie pelvienne", "échographie"], "answer":"Il s'agit bien d'une échographie pelvienne." },
+            { "id": "q_massepelv_2", "patterns":["tumeur ovarienne", "masse ovarienne"], "answer":"Une tumeur ovarienne est mise en évidence." },
+            { "id": "q_massepelv_3", "patterns":["multiloculaire"], "answer":"La masse est décrite comme multiloculaire." },
+            { "id": "q_massepelv_4", "patterns":["contours irréguliers", "irréguliers"], "answer":"Les contours sont irréguliers." },
+            { "id": "q_massepelv_5", "patterns":["solide", "contenu hétérogène"], "answer":"La tumeur a une composante solide et le contenu est hétérogène." },
+            { "id": "q_massepelv_6", "patterns":["grosse taille", "supérieur à 8 cm"], "answer":"La tumeur est de grosse taille avec un petit diamètre > 8cm." },
+            { "id": "q_massepelv_7", "patterns":["lésion maligne", "cancer"], "answer":"L'échographie est en faveur d'une lésion maligne ou cancer." },
+            { "id": "q_massepelv_8", "patterns":["IRM", "IRM abdomino-pelvienne", "IRM AP", "IRM abdominopelvienne"], "answer":"Une IRM est prescrite pour caractériser la tumeur et faire un bilan d'extension loco-régionale." },
+            { "id": "q_massepelv_9", "patterns":["scanner TAP", "scanner thoraco-abdomino-pelvien", "scanner TAP injecté"], "answer":"Un scanner TAP injecté est prescrit pour faire le bilan d'extension à distance." },
+            { "id": "q_massepelv_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Depuis 3 mois j'ai comme une pesanteur et parfois des douleurs en bas du ventre. En plus j'ai moins faim et j'ai perdu 5kg en quelques semaines ce qui me fatigue beaucoup. Voici mon échographie, vous en pensez quoi ?"},
+            { "id": "q_massepelv_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_massepelv_12", "patterns":["marqueurs tumoraux", "CA125", "CA19-9", "ACE", "HE4"], "answer":"Les marqueurs tumoraux sont prescrits." }
+          ]
         }
       ]
     }
