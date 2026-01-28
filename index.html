@@ -121,50 +121,61 @@ button {
 .choices button {
   width: calc(50% - 4px);
   padding: 12px;
-  color: white;
+  color: white;       
   font-weight: bold;
   border-radius: 12px;
   border: none;
   cursor: pointer;
-  background: #0084FF; /* bleu par défaut */
+  background: #0084FF;
 }
 
-/* === Couleurs par thème === */
+  .choices button:hover {
+      filter: brightness(1.1);
 
-.choices [title*="Hépato"] {
-  background: #cd9575 !important;
-}
-  
-.choices [title*="Rhumatologie"] {
-  background: #ded8d8 !important;
-  color: #333;
-}
-
-.choices [title*="Endocrinologie"] {
-  background: #98777b !important;
-}
-
-.choices [title*="Gynécologie"] {
-  background: #873260 !important;
-}
-
-.choices [title*="Anatomopathologie"] {
-  background: #f4bbff !important;
-  color: #333;
-}
-  
 </style>
 </head>
 <body>
 
-<div class="chat-container">
-  <div class="messages" id="messages"></div>
-  <div class="input-area">
-    <input id="input" placeholder="Écris ta question…">
-    <button onclick="send()">➤</button>
-    <button id="finishBtn" onclick="calculateScore()" disabled>🏁 Terminer</button>
-  </div>
-</div>
+    <div class="choices"></div>
+  
+  <script>
+    // Thèmes + couleurs
+    const themeButtons = [
+      { id: "HGE", title: "Hépato-gastro-entérologie" },
+      { id: "Rhumato", title: "Rhumatologie, orthopédie, médecine physique et réadaptation" },
+      { id: "Endoc", title: "Endocrinologie, diabétologie et nutrition" },
+      { id: "Gynéco", title: "Gynécologie obstétrique" },
+      { id: "Anapath", title: "Anatomopathologie" }
+    ];
+
+    const themeColors = {
+      "Hépato-gastro-entérologie": "#cd9575",
+      "Rhumatologie, orthopédie, médecine physique et réadaptation": "#ded8d8",
+      "Endocrinologie, diabétologie et nutrition": "#98777b",
+      "Gynécologie obstétrique": "#873260",
+      "Anatomopathologie": "#f4bbff"
+    };
+
+    // Conteneur des boutons
+    const container = document.querySelector('.choices');
+
+    // Génération des boutons
+    themeButtons.forEach(theme => {
+      const btn = document.createElement('button');
+      btn.textContent = theme.title;
+
+      // Couleur de fond
+      btn.style.background = themeColors[theme.title] || "#0084FF";
+
+      // Texte sombre si couleur claire
+      if (theme.title === "Rhumatologie, orthopédie, médecine physique et réadaptation" || 
+          theme.title === "Anatomopathologie") {
+        btn.style.color = "#333";
+      }
+
+      container.appendChild(btn);
+    });
+  </script>
 
 <script>
 // ===== DATA =====
