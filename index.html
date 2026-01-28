@@ -2617,6 +2617,36 @@ const data = {
             { "id": "q_ivg_13", "patterns":["dépistage des IST", "IST", "dépistage des infections sexuellement transmissibles"], "answer":"Oui on va le faire ça aussi." },
             { "id": "q_ivg_14", "patterns":["consultation de suivi", "14 jours", "21 jours"], "answer":"Ok je vois on fera cette consultation de suivi alors, je suis ok avec ça." }
           ]
+        },
+                {
+          id: "SDD22",
+          title: "Violences sexuelles",
+          intro: "Vous êtes médecin de garde aux urgences, vous prenez en charge à 5h du matin Mme FRANCAISE, 21 ans, pour une agression sexuelle. Menez un interrogatoire et un entretien ciblé, expliquez à la patiente les principes de la PEC médicale.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Recueillir les ATCD gynécologique (DDR, date des derniers rapports consentant, grossesses antérieures, pathologies gynécologiques, contraception), type de violence sexuelle (pénétration, éjaculation), circonstances (date et heure, agresseur, prise de toxiques, perte de connaissance / tb mémoire), violences associées (coups, menance avec arme), comportement depuis les faits (douche, miction, changement de vêtements, prise de traitements).",
+            "- Consentement oral pour examen clinique et prélèvement, expliquer le déroulement de l'examen (examen vaginal, anal, buccal et cutané), prélèvement pour IST, dosage bHCG sanguin, prise en charge antalgie, contraception d'urgence, ATB présomptive (doxycycline), traitement antirétroviral (TPE 28J de trithérapie), suivi médical adapté avec bilan bio des IST à 6S et 3M.",
+            "A la PEC médicale s'ajoute la PEC psycho-sociale (évaluation puis suivi psy, hébergement d'urgence ou hospitalisation, assistante sociale, associations) et PEC médico-légale (information sur la possibilité de déposer plainte, signalement judiciaire, prélèvement toxicologiques et génétiques, CMI)."
+          ],
+
+          questionSet: [
+            { "id": "q_agressionsex_1", "patterns":["date des dernières règles", "DDR", "date des derniers rapports", "pathologies gynécologiques", "grossesse", "grossesses", "contraception"], "answer":"J'ai eu mes règles il y a deux semaines et mon dernier rapport consenti était il y a un mois et protégé. Moi je ne prend pas de contraception."},
+            { "id": "q_agressionsex_2", "patterns":["type de violences", "pénétration", "pénétrée", "éjaculation", "éjaculé"], "answer":"Je me souviens mal mais je suis sure qu'il y a eu pénétration et éjaculation sans préservatif oui..." },
+            { "id": "q_agressionsex_3", "patterns":["circonstances", "date", "heure", "pris des drogues", "pris des stupéfiants", "bu de l'alcool", "perte de connaissance", "perdu connaissance", "troubles de la mémoire"], "answer":"C'est très flou... je me souviens être sortie des toilettes et il m'a tiré avec lui et m'a agressée... Moi j'étais alcoolisée mais consciente... c'est flou mais je ne pense pas avoir perdu connaissance pour autant." },
+            { "id": "q_agressionsex_4", "patterns":["coup", "menaces", "arme"], "answer":"Non il ne m'a pas menacée ni frappée, il ne m'a juste pas laissé le choix.. Il m'a griffé les bras et les cuisses aussi, j'ai mal..." },
+            { "id": "q_agressionsex_5", "patterns":["depuis les faits", "douche", "miction", "changement de vêtements", "traitements"], "answer":"Hmm après ça je suis rentrée vers 2h30 chez moi et je me suis lavée et je suis venue aux urgences ensuite." },
+            { "id": "q_agressionsex_6", "patterns":["consentement", "êtes d'accord", "est-ce que vous acceptez", "est-ce que vous me permettez"], "answer":"Oui vous pouvez m'ausculter." },
+            { "id": "q_agressionsex_7", "patterns":["examen clinique vaginal", "examen clinique anal", "examen clinique buccal", "examen clinique cutané"], "answer":"Ca me fait peur mais si c'est nécessaire vous pouvez faire tout ça..." },
+            { "id": "q_agressionsex_8", "patterns":["prélèvements", "IST"], "answer":"Oui j'ai très peur d'être malade à cause de lui, faites les prélèvements." },
+            { "id": "q_agressionsex_9", "patterns":["b-hCG", "bêta-hCG", "dosage des b-hGC"], "answer":"Merci ça m'apaisera si  c'est négatif..." },
+            { "id": "q_agressionsex_10", "patterns":["prise en charge antalgique", "antalgiques", "antalgie"], "answer":"Merci de prendre en charge ma douleur." },
+            { "id": "q_agressionsex_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai subi une agression sexuelle en boite de nuit, est-ce qu'on peut encore faire quelque chose ?"},
+            { "id": "q_agressionsex_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_agressionsex_13", "patterns":["contraception d'urgence"], "answer":"D'accord oui je veux prendre la contraception d'urgence." },
+            { "id": "q_agressionsex_14", "patterns":["antibiothérapie", "doxycycline"], "answer":"Ok pour l'antibiothérapie." },
+            { "id": "q_agressionsex_15", "patterns":["traitement antirétroviral", "TPE", "trithérapie", "VIH"], "answer":"Oh c'est vrai... bon bah je vais le prendre ce traitement..." },
+            { "id": "q_agressionsex_16", "patterns":["suivi médical", "contrôle", "contrôle à 6 semaines et 3 mois"], "answer":"Merci de me suivre après tout ça..." }
+          ]
         }
       ]
     }
