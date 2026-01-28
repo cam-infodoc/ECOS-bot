@@ -126,28 +126,31 @@ button {
   border-radius: 12px;
   border: none;
   cursor: pointer;
+  background: #0084FF; /* bleu par défaut */
 }
 
 /* === Couleurs par thème === */
 
-.choices button[title*="Hépato-gastro-entérologie"] {
-  background: #cd9575;
+.choices [title*="Hépato"] {
+  background: #cd9575 !important;
+}
+  
+.choices [title*="Rhumatologie"] {
+  background: #ded8d8 !important;
+  color: #333;
 }
 
-.choices button[title*="Rhumatologie, orthopédie, médecine physique et réadaptation"] {
-  background: #ded8d8;
+.choices [title*="Endocrinologie"] {
+  background: #98777b !important;
 }
 
-.choices button[title*="Endocrinologie, diabétologie et nutrition"] {
-  background: #98777b;
+.choices [title*="Gynécologie"] {
+  background: #873260 !important;
 }
 
-.choices button[title*="Gynécologie obstétrique"] {
-  background: #873260;
-}
-
-.choices button[title*="Anatomopathologie"] {
-  background: #f4bbff;
+.choices [title*="Anatomopathologie"] {
+  background: #f4bbff !important;
+  color: #333;
 }
   
 </style>
