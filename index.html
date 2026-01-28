@@ -2647,6 +2647,34 @@ const data = {
             { "id": "q_agressionsex_15", "patterns":["traitement antirétroviral", "TPE", "trithérapie", "VIH"], "answer":"Oh c'est vrai... bon bah je vais le prendre ce traitement..." },
             { "id": "q_agressionsex_16", "patterns":["suivi médical", "contrôle", "contrôle à 6 semaines et 3 mois"], "answer":"Merci de me suivre après tout ça..." }
           ]
+        },
+                {
+          id: "SDD23",
+          title: "Consultation de suivi d'une femme ménopausée",
+          intro: "Vous êtes gynécologue et vous recevez Mme Garcia, patiente de 52 ans qui vous consulte pour un syndrome climatérique et une aménorrhée depuis 12 mois. Vous diagnostiquez une ménopause. Expliquez à la patiente le principe du traitement hormonal de la ménopause, discutez avec la patiente du bénéfique / risque.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Explique que le THM comprend une combinance d'oestrogènes et de progestérone, les voies peuvent être orale / cutanée / transdermique, les voies à privilégier sont parentérales (cutanée ou transdermiques) car diminuent le risque thromboembolique, schéma de prise avec règle ou sans règle, durée recommandée de 5 ans, réévaluation annuelle.",
+            "- Bénéfice sur les symptômes climatériques, bénéfice sur la prévention des fractures ostéoporotiques. Effet sur cancers : augmente sein / ovaire, diminue CCR. Explique l'augmentation du risque cardiovasculaire en cas de dyslipidémie ou HTA.",
+            "On peut également demander de réévaluer ce traitement :",
+            "Surdosage en oestrogènes : tension mammaire, prise de poids, gonflement abdominal, nervosité",
+            "Sous dosage : bouffées de chaleur, asthénie et dépression, céphalées, arthromyalgies, troubles urinaires, sécheresse vaginale."
+          ],
+
+          questionSet: [
+            { "id": "q_suiviménop_1", "patterns":["combinaison", "oestrogènes", "oestrogène", "progestérone"], "answer":"Ok donc le traitement continent des oestrogènes et de la progestérone."},
+            { "id": "q_suiviménop_2", "patterns":["orale", "cutanée", "percutanée", "transdermique"], "answer":"Ah il y a plusieurs voies d'administration ok." },
+            { "id": "q_suiviménop_3", "patterns":["privilégier les voies parentérales", "privilégier la voie cutanée", "privilégier la voie transdermique", "diminuent le risque thromboembolique"], "answer":"Ah donc la voie cutanée et transdermique permettent d'avoir moins de risque de caillots, je comprend." },
+            { "id": "q_suiviménop_4", "patterns":["durée", "5 ans", "cinq ans"], "answer":"Ok donc on le laisse 5 ans en général." },
+            { "id": "q_suiviménop_5", "patterns":["prise avec règle", "prise sans règles", "schémas"], "answer":"D'accord je vois, je vais réfléchir à ce que je préfère." },
+            { "id": "q_suiviménop_6", "patterns":["réévaluation annuelle", "réévaluer tous les ans"], "answer":"Oui pas de soucis pour ça." },
+            { "id": "q_suiviménop_7", "patterns":["symptômes", "diminuera vos symptômes"], "answer":"Ah ça ça me fait plaisir !" },
+            { "id": "q_suiviménop_8", "patterns":["fractures", "ostéoporose", "ostéoporotiques"], "answer":"C'est rassurant." },
+            { "id": "q_suiviménop_9", "patterns":["augmente le risque de cancer du sein", "augmente le risque de cancer de l'ovaire", "augmente les risques de cancer du sein et de l'ovaire", "diminue le risque de cancer colorectal"], "answer":"Hmmm je vois." },
+            { "id": "q_suiviménop_10", "patterns":["augmente le risque cardiovasculaire", "cardiovasculaire", "cardio-vasculaire"], "answer":"Ok c'est entendu." },
+            { "id": "q_suiviménop_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Depuis 6 mois j'ai des bouffées de chaleurs, des troubles du sommeil et des douleurs articulaires et musculaires. Je n'ai pas eu mes règles depuis 12 mois. On m'a parlé de traitement hormonal de la ménopause, comment ça marche ?"},
+            { "id": "q_suiviménop_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." }
+          ]
         }
       ]
     }
