@@ -2492,6 +2492,37 @@ const data = {
             { "id": "q_allaitement_14", "patterns":["leucémie", "cancer pédiatrique", "cancer du sang"], "answer":"Ah oui ça c'est vraiment intéressant." },
             { "id": "q_allaitement_15", "patterns":["lien", "lien mère enfant", "lien mère-enfant"], "answer":"Je m'en doutais un peu oui." }
           ]
+        },
+                {
+          id: "SDD18",
+          title: "Consultation de suivi en gynécologie",
+          intro: "Mme FOUFH, une patiente de 40 ans consulte dans le cadre de son suivi gynécologique. La patiente n'a pas consulté de gynécologue depuis 5 ans, c'est la première fois que vous la voyez. Réalisez un interrogatoire orienté, décrivez votre examen clinique, proposez un suivi adapté.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interroger la patiente sur ces ATCD gynéco-obs, ATCD familiaux, mode de contraception, contraception adaptée en cherchant les CI, rechercher FdR IST, calendrier vaccinal notamment HPV.",
+            "- Consentement pour examen clinique, examen gynéco sous spéculum, examen sénologique, prise de TA, frotti / prélèvement HPV, dépistage IST proposé.",
+            "- Expliquer qu'il existe un programme de dépistage du cancer du sein à partir de 50a, recontrôler le frotti tous les 5 ans, consultation de contrôle proposée tous les ans."
+          ],
+
+          questionSet: [
+            { "id": "q_consultgynéco_1", "patterns":["ATCD gynéco", "antécédents gynécologiques", "antécédents obstétricaux", "ATCD gynéco-obs"], "answer":"J'ai eu un enfant il y a 10 ans que j'ai accouché par voie basse. Ah et à mes 18 ans aussi j'ai fait une IVG suite à un rapport non protégé. Ah aussi , j'ai eu une chlamydia il y a 4 ans qui est passée sous antibiotiques." },
+            { "id": "q_consultgynéco_2", "patterns":["ATCD familiaux", "antécédents familiaux"], "answer":"Il n'y a pas d'antécédents familiaux particuliers." },
+            { "id": "q_consultgynéco_3", "patterns":["contraception"], "answer":"Je prends une contraception depuis mon IVG." },
+            { "id": "q_consultgross_4", "patterns":["cancer du sein", "cancer de l'endomètre", "dyslipidémie", "diabète", "HTA", "hypertension artérielle", "migraine avec aura", "maladie thromboembolique", "thromboembolique", "thromboemboliques"], "answer":"Je n'ai pas d'antécédents particuliers." },
+            { "id": "q_consultgynéco_5", "patterns":["premier partenaire", "plusieurs partenaires", "tabac", "fumez", "alcool", "drogues", "prostitution", "prison", "incarcération", "incarcérée", "ATCD d'IST", "antécédents d'IST", "antécédents d'infections sexuellement transmissibles", "endo-utérine"], "answer":"Oui j'ai divorcé il y a 5 ans et depuis j'ai plusieurs partenaires. J'ai une pilule que mon médecin me prescrit mais je n'utilise pas de préservatif." },
+            { "id": "q_consultgynéco_6", "patterns":["vaccin", "vaccination", "HPV"], "answer":"Ah euh le vaccin je sais pas, par contre j'ai eu un frotti à 25 puis 30 ans qui étaient normaux et je n'ai vu personne depuis." },
+            { "id": "q_consultgynéco_7", "patterns":["consentement", "êtes d'accord", "est-ce que je peux vous examiner", "êtes vous d'accord", "puis-je vous examiner"], "answer":"Oui il y a pas de soucis mais c'est gentil de demander." },
+            { "id": "q_consultgross_8", "patterns":["examen gynécologique", "spéculum"], "answer":"Absence d'anomalies." },
+            { "id": "q_consultgynéco_9", "patterns":["examen sénologique", "inspection mammaire", "palpation mammaire"], "answer":"Absence d'anomalies." },
+            { "id": "q_consultgynéco_10", "patterns":["tension artérielle", "pression artérielle"], "answer":"TA normale." },
+            { "id": "q_consultgynéco_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir pour vérifier que je suis à jour car je n'ai pas vu de gynécologue depuis 5 ans."},
+            { "id": "q_consultgynéco_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_consultgynéco_13", "patterns":["dépistage des IST", "dépistage des infections sexuellement transmissibles"], "answer":"D'accord je veux bien qu'on fasse ça." },
+            { "id": "q_consultgynéco_14", "patterns":["dépistage du cancer du sein", "à partir de 50 ans", "50 ans"], "answer":"D'accord j'essaierai de m'en souvenir." },
+            { "id": "q_consultgynéco_15", "patterns":["contrôle du frotti", "recontrôler le frotti", "tous les 5 ans"], "answer":"Ok donc tous les 5 ans c'est bien." },
+            { "id": "q_consultgynéco_16", "patterns":["frotti", "prélèvement vaginal"], "answer":"Oui vous pouvez réaliser un frotti." },
+            { "id": "q_consultgynéco_17", "patterns":["consultation de contrôle", "nouvelle consultation"], "answer":"D'accord on peut reprendre rendez-vous ensemble dans un an si tout va bien." }
+          ]
         }
       ]
     }
