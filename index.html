@@ -118,25 +118,50 @@ button {
   margin-top: 10px;
 }
 
-    .choices button {
-      width: calc(50% - 4px);
-      padding: 12px;
-      color: white;       
-      font-weight: bold;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      background: #FD6C9E; 
-    }
+.choices button {
+  width: calc(50% - 4px);
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
 
-    .choices button:hover {
-      filter: brightness(1.1);
-    }
-  </style>
+/* === Couleurs par thème === */
+
+.choices button[title="Hépato-gastro-entérologie"] {
+  background: #cd9575;
+}
+
+.choices button[title="Rhumatologie, orthopédie, médecine physique et réadaptation"] {
+  background: #ded8d8;
+}
+
+.choices button[title="Endocrinologie, diabétologie et nutrition"] {
+  background: #98777b;
+}
+
+.choices button[title="Gynécologie obstétrique"] {
+  background: #873260;
+}
+
+.choices button[title="Anatomopathologie"] {
+  background: #f4bbff;
+}
+  
+</style>
 </head>
 <body>
 
-  <div class="choices"></div>
+<div class="chat-container">
+  <div class="messages" id="messages"></div>
+  <div class="input-area">
+    <input id="input" placeholder="Écris ta question…">
+    <button onclick="send()">➤</button>
+    <button id="finishBtn" onclick="calculateScore()" disabled>🏁 Terminer</button>
+  </div>
+</div>
 
 <script>
 // ===== DATA =====
