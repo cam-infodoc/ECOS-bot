@@ -2523,6 +2523,40 @@ const data = {
             { "id": "q_consultgynéco_16", "patterns":["frotti", "prélèvement vaginal"], "answer":"Oui vous pouvez réaliser un frotti." },
             { "id": "q_consultgynéco_17", "patterns":["consultation de contrôle", "nouvelle consultation"], "answer":"D'accord on peut reprendre rendez-vous ensemble dans un an si tout va bien." }
           ]
+        },
+                {
+          id: "SDD19",
+          title: "Dépistage du diabète gestationnel chez une femme enceinte",
+          intro: "Vous êtes gynécologue et vous suivez la grossesse de Mme NOVO, une patiente de 36 ans, enceinte à 25 SA. La patiente vous consulte avec les résultats du test d'hyperglycémie provoquée par voie orale que vous lui avez prescrit et qui montre une glycémie à H+2 à 2,1 g/L. Interprétez les résultats d'analyse de la patiente, expliquez les modalités de surveillance glycémique et les objectifs glycémiques au cours de la grossesse, expliquez les principes de PEC nutritionnelle durant la grossesse.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Diagnostique un DG. Expliquer la nécessité d'autosurveillance des glycémie, pré et post prandiale ou 4-6 fois par jour, expliquer les modalités d'utilisation d'un lecteur glycémique (piquer le bout du doigt, goutte de sang sui la bandelette et activation du lecteur), rappeler les objectifs <0,95 à jeun et <1,2 g/L en post-prandial.",
+            "- Recommande une alimentation équilibrée normocalorique ou dit de ne pas réduire son alimentation ou dit 1600-2000kcal/j, décrit la répartition en 3 repas + 2 collations, recommande une activité physique régulière et adaptée à la grossesse. Précise concernant les glucides 50% de glucides et favoriser les sucres lents.",
+            "DG : ",
+            "-T1 : >= 1,26g/L = DT pré existant, >=0,92g/L et <1,26 = DR gestationnel, <0,92 = dépistage négatif à recontrôler à 24-28SA.",
+            "-24-28SA : H+A >=1,8 ou H+2 >=1,53 g/L = DG",
+            "Complications foetales : macrosomie"
+            "Complications néonatale : dystocie épaule, paralysie plexus brachial, hypoglycémie néonatale",
+            "Complications maternelle : HTA et prééclampsie, césarienne, traumatisme de la filière génitale, hémorragie de la délivrance."
+          ],
+
+          questionSet: [
+            { "id": "q_dépistageDG_1", "patterns":["diabète gestationnel"], "answer":"J'ai donc un diabète gestationnel..." },
+            { "id": "q_dépistageDG_2", "patterns":["autosurveillance", "surveiller vous-même"], "answer":"Ah d'accord il va falloir que je me teste moi même alors, mais quand ?" },
+            { "id": "q_dépistageDG_3", "patterns":["4 à 6 fois par jour", "pré et post-prandial", "avant et après manger"], "answer":"D'accord donc avant et après chaque repas." },
+            { "id": "q_dépistageDG_4", "patterns":["piqure au bout du doigt", "goutte de sang", "bandelette"], "answer":"Ok donc je me pique le doigt et je met la goutte sur la bandelette qui active le lecteur. Mais c'est quoi les objectifs ?" },
+            { "id": "q_dépistageDG_5", "patterns":["0,95", "1,2"], "answer":"Ok donc 0,95g/L à jeun et 1,2 g/L en post-prandial." },
+            { "id": "q_dépistageDG_6", "patterns":["alimentation équilibrée", "normocalorique", "ne pas diminuer votre alimentation", "ne pas rédiure", "1600 à 2000 kcal par jour"], "answer":"Ok donc je mange sainement et ça devrait aller..." },
+            { "id": "q_dépistageDG_7", "patterns":["3 repas", "2 collations"], "answer":"Oui donc je mange comme les autres avec des collations si besoin. Et je dois faire quoi concernant le sucre, et quel pourcentage de glucides je dois manger ?" },
+            { "id": "q_dépistageDG_8", "patterns":["50% glucides", "sucres lents"], "answer":"D'accord donc 50% de glucides et surtout des sucres lents." },
+            { "id": "q_dépistageDG_9", "patterns":["activité physique", "activité physique adaptée", "sport"], "answer":"Je vois je peux donc reprendre le sport." },
+            { "id": "q_dépistageDG_10", "patterns":["première grossesse", "parité", "combien d'enfants"], "answer":"Oui c'est ma première grossesse." },
+            { "id": "q_dépistageDG_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je reviens avec les résultats du test de l'hyperglycémie."},
+            { "id": "q_dépistageDG_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_dépistageDG_13", "patterns":["antécédents", "diabète", "diabétique", "ATCD"], "answer":"Je n'ai aucun antécédents, pas de diabète rien." },
+            { "id": "q_dépistageDG_14", "patterns":["suivi", "glycémie à jeun au premier trimestre", "T1"], "answer":"Mon premier trimestre était normal, je n'avais pas d'hyperglycémie et l'échographie était normale." },
+            { "id": "q_dépistageDG_15", "patterns":["IMC", "poids", "taille"], "answer":"Mon IMC est dans les normes." }
+          ]
         }
       ]
     }
