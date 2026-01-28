@@ -2590,6 +2590,33 @@ const data = {
             { "id": "q_violences_13", "patterns":["accompagnement psychologique", "psychologue", "psychiatre"], "answer":"Je n'ai aucun antécédents, pas de diabète rien." },
             { "id": "q_violences_14", "patterns":["combien d'enfants"], "answer":"J'ai deux enfants, un de 4 ans et un de 6 ans." }
           ]
+        },
+                {
+          id: "SDD21",
+          title: "Demande d'interruption volontaire de grossesse",
+          intro: "Vous êtes gynécologue et recevez en consultation Mme ANFINIRE, une patiente de 17 ans pour une demande d'interruption volontaire de grossesse. Interrogez la patiente sur sa demande et complétez l'anamnèse, expliquez les différentes méthodes d'IVG et les risque, le cadre légal et les étapes de PEC.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Dépister les difficultés psychosociales, rechercher les FdR d'IST.",
+            "- Expliquer qu'il existe 2 méthode, IVG médicamenteuse (2 médicaments à 48h d'intervelle mifépristone puis misoprostol), IVG instrumentale (aspiration), risque d'échec plus élevé pour IVG médicamenteuse, principales complications (douleur, saignements, infection), date a grossesse avec échographie, prescrire GS + Rh + RAI, entretien psychosocial obligatoire puisque mineure accompagnée de la personne majeure de son choix, 2e consultation pour choisir la méthode avec signature de consentement écrit, proposer contraception, réaliser dépistage IST, 3e consultation de suivi à J14-21 obligatoire."
+          ],
+
+          questionSet: [
+            { "id": "q_ivg_1", "patterns":["2 méthodes", "deux", "deux méthodes"], "answer":"Ok je savais pas."},
+            { "id": "q_ivg_2", "patterns":["IVG médicamenteuse", "médicamenteuse", "2 médicaments", "48h d'intervalle", "mifépristone", "misoprostol"], "answer":"Je vois." },
+            { "id": "q_ivg_3", "patterns":["IVG instrumentale", "aspiration endo-utérine", "aspiration"], "answer":"Ok ok." },
+            { "id": "q_ivg_4", "patterns":["échec est plus élevé pour l'IVG médicamenteuse"], "answer":"D'accord donc y a plus de risques que ça échoue avec les médicaments quoi." },
+            { "id": "q_ivg_5", "patterns":["douleur", "saignements", "infections", "infection", "complications"], "answer":"D'accord." },
+            { "id": "q_ivg_6", "patterns":["dater", "échographie"], "answer":"Ok je comprends." },
+            { "id": "q_ivg_7", "patterns":["groupe sanguin", "RAI", "recherche d'agglutinines irrégulières"], "answer":"On fera ce bilan alors." },
+            { "id": "q_ivg_8", "patterns":["entretien psychosocial obligatoire", "personne majeure de votre choix", "personne majeure de ton choix"], "answer":"Ok je vois et ça c'est parce que je suis mineure." },
+            { "id": "q_ivg_9", "patterns":["signature", "consentement", "consentement écrit"], "answer":"Ok faudra signer un consentement écrit." },
+            { "id": "q_ivg_10", "patterns":["contraception"], "answer":"Oui effectivement il faudrait que je me protège." },
+            { "id": "q_ivg_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir pour parler d'une IVG."},
+            { "id": "q_ivg_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_ivg_13", "patterns":["dépistage des IST", "IST", "dépistage des infections sexuellement transmissibles"], "answer":"Oui on va le faire ça aussi." },
+            { "id": "q_ivg_14", "patterns":["consultation de suivi", "14 jours", "21 jours"], "answer":"Ok je vois on fera cette consultation de suivi alors, je suis ok avec ça." }
+          ]
         }
       ]
     }
