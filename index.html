@@ -2709,7 +2709,101 @@ const data = {
           ]
         }
       ]
-    }
+    },
+  {
+      id: "Anapath",
+      title: "Anatomopathologie",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Réaction inflammatoire sur pièce opératoire / biopsie",
+          intro: `Un homme de 54 ans consulte aux urgences pour une céphalée unilatérale pulsatile. Le patient est fébrile et vous explique qu'il a eu une perte de vision transitoire. Un bilan biologique a déjà été réalisé et retrouve une élévation de la CRP, une anémie et une thrombocytose. Vous suspectez une artérite à cellules géante. Expliquez quel examen de référence pourra confirmer votre diagnostic en précisant le site / la nature précise du prélèvement / le mode de conservation et le délai de réalisation, décrivez les éléments sémiologiques anatomopathologiques.<img src= "maladiedehorton.png" style ="max-width:100%; border-radius:8px; margin-top:10px;"`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer qu'il faut réaliser une biopsie ou prélèvement tissulaire, que le prélèvement sera au niveau de l'artère temporale, qu'il devra faire 1 cm, qu'il ne devra pas retarder le traitement, que la biopsie peut être faite dans les 14j, qu'elle sera fixée dans le formol.",
+            "- Infiltrat inflammatoire avec cellules mononuclées, infiltration des 3 tuniques ou panartérite, fragmentation de la LEI, hyperplasie de l'intima ou occlusion-sténose de la lumière vasculaire, cellules géantes mononuclées.",
+            "Indication du prélèvement et interprétation des lésions :",
+            "- Indication et prescription : fiche de renseignement, choix et mode de prélèvement (tissulaire ou cellulaire), mode de transmission du prélèvement (fixé ou frais (si examen extemporané, graisse, analyse en immunofluorescende directe, analyse histo-enzymatique, pathologie tumorale avec conservation de matériel congelé)).",
+            "- Transmission au laboratoire",
+            "- Synthèse et CR."
+          ],
+
+          questionSet: [
+            { "id": "q_maladiehorton_1", "patterns":["biopsie", "prélèvement tissulaire"], "answer":"Ok."},
+            { "id": "q_maladiehorton_2", "patterns":["artère temporale"], "answer":"D'accord." },
+            { "id": "q_maladiehorton_3", "patterns":["1cm", "1 cm", "1 centimètre", "un centimètre"], "answer":"Je vois." },
+            { "id": "q_maladiehorton_4", "patterns":["ne doit pas retarder le traitement", "pas retarder"], "answer":"Ok on traite d'abord." },
+            { "id": "q_maladiehorton_5", "patterns":["14 jours", "14j", "quatorze jours"], "answer":"Ok donc faut faire ce prélèvement sous 14 jours." },
+            { "id": "q_maladiehorton_6", "patterns":["formol", "fixé"], "answer":"D'accord." },
+            { "id": "q_maladiehorton_7", "patterns":["infiltrat inflammatoire", "cellules mononuclées"], "answer":"Noté." },
+            { "id": "q_dépistagecancer_8", "patterns":["infiltration des 3 tuniques", "panartérite"], "answer":"Noté." },
+            { "id": "q_maladiehorton_9", "patterns":["fragmentation de la limitante élastique interne", "fragmentation de la LEI", "fragmentation de la LLI"], "answer":"Noté." },
+            { "id": "q_maladiehorton_10", "patterns":["hyperplasie de l'intima", "occlusion de la lumière", "sténose de la lumière"], "answer":"Noté." },
+            { "id": "q_maladiehorton_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Alors c'est quoi ce test à faire ?"},
+            { "id": "q_maladiehorton_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_maladiehorton_13", "patterns":["cellules géantes mononuclées", "cellules géantes"], "answer":"Noté." }
+          ]
+        },
+        {
+          id: "SDD2",
+          title: "Interprétation du CR d'anatomopathologie",
+          intro: "Vous êtes en consultation de gynécologie, une patiente de 27 ans vient pour analyse du CR de son premier frottis cervico-utérin. Voici la CR : 'Renseignements cliniques : Pas de vaccination HPV. Pas de ménométrorragies. Partenaires sexuels multiples. Tabagisme actif. Qualité du prélèvement : Frottis interprétable. Microscopie : La population cellulaire épithéliale est constituée - Cellules malpighiennes : cellules métaplastiques peu différenciées à rapport nucléocytoplasmique augmenté avec chromatine hétérogène et contours nucléaires irréguliers, présentes sur 2/3 de la hauteur de l'épithélium avec respect de la membrane basale. - Cellules glandulaires : régulières isolées ou en petits placards. Conclusion : Lésion malpighienne intra-épithéliale de haut grade histologique HSIL ou LIHG. Identifiez et expliquez à la patiente les différents éléments sémiologiques décrits, confrontez les résultats avec le contexte clinique, expliquez de manière claire les différentes étapes de la CAT.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer à la patiente qu'elle a des FdR de cancer du col (absence de vaccination, partenaires sexuels multiples, tabagisme), le col est constitué de 2 types de cellules (malpighiennes exocol, glandulaires endocol), cellules malpighiennes atteites, métaplsie = tb de la différenciation des cellules, atypes car modification de leur noyau / cytoplasme, en faveur d'une lésion pré-cancéreuse, probablement localisée car MB non franchie, s'assure que la patiente a compris.",
+            "- Expliquer qu'il faudra réaliser une colposcopie avec biopsie, examen visualisant le col de manière précise, biopsie = prélèvements tissulaires du col infirmant ou affirmant le diag, utilisation de colorants, biopsies en zone suspecte, PEC décidée suivant les résultats."
+          ],
+
+          questionSet: [
+            { "id": "q_lihg_1", "patterns":["facteurs de risque", "partenaires sexuels", "tabagisme", "absence de vaccination"], "answer":"Ok je vois."},
+            { "id": "q_lihg_2", "patterns":["malpighiennes", "glandulaires"], "answer":"D'accord." },
+            { "id": "q_lihg_3", "patterns":["cellules malpighiennes sont atteintes", "cellules malpighiennes sont touchées"], "answer":"Je vois." },
+            { "id": "q_lihg_4", "patterns":["trouble de la différenciation"], "answer":"Ok je ne connaissais pas ce mot." },
+            { "id": "q_lihg_5", "patterns":["modification du noyau", "modification de leur noyau", "modification du cytoplasme", "modification de leur cytoplasme"], "answer":"Ok..." },
+            { "id": "q_lihg_6", "patterns":["lésion pré-cancéreuse"], "answer":"D'accord, je ne pensais pas..." },
+            { "id": "q_lihg_7", "patterns":["localisée", "probablement localisée"], "answer":"Tant mieux." },
+            { "id": "q_lihg_8", "patterns":["colposcopie"], "answer":"Ok on le fera." },
+            { "id": "q_lihg_9", "patterns":["visualiser le col", "précis", "loupe"], "answer":"D'accord." },
+            { "id": "q_lihg_10", "patterns":["prélèvements tissulaires", "biopsies"], "answer":"Ok." },
+            { "id": "q_lihg_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends rien à ce compte-rendu, je dois m'inquiéter ?"},
+            { "id": "q_lihg_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_lihg_13", "patterns":["colorants"], "answer":"Noté." },
+            { "id": "q_lihg_14", "patterns":["zone suspecte", "zones suspectes"], "answer":"Noté." },
+            { "id": "q_lihg_15", "patterns":["prise en charge dépendra des résultats", "en fonction des résultats"], "answer":"D'accord !" },
+          ]
+        },
+        {
+          id: "SDD3",
+          title: "Tumeurs malignes sur pièce opératoire / biopsies",
+          intro: "Vous prenez en charge une patiente de 53 dans le cadre d'un diagnostic de cancer du sein. L'annonce a déjà été réalisée. La patiente vient vous voir car elle ne comprend pas le CR d'anatomopathologie, elle a pourtant travaillé en laboratoire est a quelques bases en anapath. Ci-joint une partie du CR : Renseignements cliniques : Biopsie mammaire d'une masse de 4 cm localisée dans le quadrant supéro externe gauche. Antécédents familiaux de cancer du sein chez la mère et la sœur. Qualité du prélèvement : Qualité satisfaisante pour interprétation. Conclusion : - Présence d'une lésion tumorale - Type histologique : Carcinome canalaire infiltrant - Grade EE : II - Récepteurs aux œstrogènes : 50 % de cellules positives - Récepteurs à la progestérone : 50 % de cellules positives - HER2: 3+ - Cellules Ki 67+: 20-30%. Expliquez les principes et mises en oeuvre des techniques d'analyses tissulaires, immunohistochimiques et moléculaires et expliquez les significations diagnostiques, pronostiques et théranostiques des éléments du CR.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer que la biopsie a permis une analyse sur le tissu et sur l'ADN (ou biologie moléculaire), que le type histologique retrouvé est le + fréquent, que le grade EE est histologique et pronostic et est un critère combiné, que les Rc aux oestrogènes et à la progestérone et le statut HER2 permettent de prédire la réponse à certains traitements, que les Rc aux oestrogènes et à la progestérones sont recherchés en immunohistochimie, que le principe de l'IHC est la liaison d'un Ac avec des Rc d'intérêt, que HER2 est un gène, que sa quantification est faite par hybridation in situ, que l'hybridation in situ utilise une séquence ADN complémentaire, que Ki67 traduit la prolifération.",
+            "- Dire à la patiente qu'elle est éligible à une hormonothérapie, à une thérapie ciblée par trastuzumab et que la positivité des Rc hormonaux et HER2 est de bon pronostic."
+          ],
+
+          questionSet: [
+            { "id": "q_cancerseinanapath_1", "patterns":["tissu", "ADN", "biologie moléculaire"], "answer":"Noté."},
+            { "id": "q_cancerseinanapath_2", "patterns":["plus fréquent", "type histologique le plus fréquent"], "answer":"D'accord." },
+            { "id": "q_cancerseinanapath_3", "patterns":["grade histologique", "grade pronostic", "critère combiné"], "answer":"Je vois." },
+            { "id": "q_cancerseinanapath_4", "patterns":["prédire la réponse aux traitements", "réponse aux traitements"], "answer":"Ok." },
+            { "id": "q_cancerseinanapath_5", "patterns":["immunohistochimie"], "answer":"Noté" },
+            { "id": "q_cancerseinanapath_6", "patterns":["gène"], "answer":"Noté" },
+            { "id": "q_cancerseinanapath_7", "patterns":["hybridation in situ"], "answer":"D'accord." },
+            { "id": "q_cancerseinanapath_8", "patterns":["ADN complémentaire"], "answer":"Noté." },
+            { "id": "q_cancerseinanapath_9", "patterns":["prolifération", "prolifération cellulaire"], "answer":"D'accord." },
+            { "id": "q_cancerseinanapath_10", "patterns":["hormonothérapie"], "answer":"Ok." },
+            { "id": "q_cancerseinanapath_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends rien à ce compte-rendu, vous pouvez m'expliquer ?"},
+            { "id": "q_cancerseinanapath_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_cancerseinanapath_13", "patterns":["thérapie ciblée", "trastuzumab"], "answer":"Noté." },
+            { "id": "q_cancerseinanapath_14", "patterns":["bon pronostic"], "answer":"Noté." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
