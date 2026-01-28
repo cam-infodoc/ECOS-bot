@@ -2675,6 +2675,38 @@ const data = {
             { "id": "q_suiviménop_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Depuis 6 mois j'ai des bouffées de chaleurs, des troubles du sommeil et des douleurs articulaires et musculaires. Je n'ai pas eu mes règles depuis 12 mois. On m'a parlé de traitement hormonal de la ménopause, comment ça marche ?"},
             { "id": "q_suiviménop_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." }
           ]
+        },
+                {
+          id: "SDD24",
+          title: "Prévention et dépistage des cancers de l'adulte",
+          intro: "Vous êtes médecin généraliste et vous recevez en consultation Mme Rousse, une patiente de 50 ans pour le renouvellement de son ordonnance de Ramipril qu'elle prend pour une hypertension artérielle bien contrôlée. Mme Rousse n'a pas d'autre antécédent, elle boit 2 à 3 verres d'alcool par jour, fume 10 cigarettes par jour depuis 10 ans. Son IMC est à 27. Cette consultation est l'occasion pour vous d'introduire la prévention du cancer du sein. Expliquez à la patiente les modalités de prévention primaire et secondaire du cancer du sein, expliquez la balance bénéfice / risque du programme de prévention secondaire.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Recommande de diminuer la conso d'alcool pour diminuer le risque de cancer du sein, sevrage tabagique, pratiquer une AP régulière, alimentation équilibrée de type méditerranéenne, privilégier l'eau aux sodas, vérifier que la patiente est à risque moyen (ATCD familiaux de cancer du sein et de l'ovaire), éligible au dépistage organisé par mammographie tous les 2 ans, mammographie recommandées de 50 à 74 ans, prévient que les informations seront envoyées par courrier, prévient que le dépistage est PEC à 100%.",
+            "- Explique le bénéfice de détecter des cancers à un stade précoce, programme diminue la mortalité, risque de traiter des lésions qui seraient restées stables ou auraient involuer, risque de créer de l'anxiété si mammographie faussement positive, risque de cancer radio-induit (mais 1/100 000 femmes pour un mortalité diminuée de 20% donc négligeabe).",
+            "Rappel dépistages organisés :",
+            "Cancer du col de l'utérus : vaccination (11-14a) avec rattrapage jusqu'à 19a (26a si HSH), sevrage tabagique. Dépistage 25-65a, frottis tous les 3 ans jusqu'à 29a après 2 frottis normaux à 1 an d'intervalle, test HPV tous les 5 ans de 30-65a.",
+            "Cancer colorectal : régime méditerranéen, sevrage tabagique, conso alcool maîtrisée. Test immunologique de recherche de sang dans les selles tous les 2 ans de 50 à 74a. Si risque élevé coloscopie tous les 5 ans."
+          ],
+
+          questionSet: [
+            { "id": "q_dépistagecancer_1", "patterns":["diminuer consommation alcool", "alcool"], "answer":"Oui faudrait que je diminue ça, voire même que j'arrête si je peux."},
+            { "id": "q_dépistagecancer_2", "patterns":["sevrage tabagique", "arrêter de fumer"], "answer":"Oui je sais..." },
+            { "id": "q_dépistagecancer_3", "patterns":["activité physique", "activité physique régulière", "sport"], "answer":"Je vais me remettre à faire du vélo alors !" },
+            { "id": "q_dépistagecancer_4", "patterns":["alimentation équilibrée", "régime méditerranéen", "eau", "moins de sodas"], "answer":"Oui je vois." },
+            { "id": "q_dépistagecancer_5", "patterns":["antécédents familiaux", "cancer du sein", "cancer de l'ovaire"], "answer":"Aucuns antécédents dans ma famille ou chez moi de cancer." },
+            { "id": "q_dépistagecancer_6", "patterns":["mammographie", "tous les 2 ans"], "answer":"D'accord." },
+            { "id": "q_dépistagecancer_7", "patterns":["de 50 à 74 ans", "de cinquante à soixante quatorze ans"], "answer":"Ah oui c'est pendant longtemps quand même hun" },
+            { "id": "q_dépistagecancer_8", "patterns":["courrier", "lettre"], "answer":"Ah d'accord." },
+            { "id": "q_dépistagecancer_9", "patterns":["pris en charge", "100%"], "answer":"Tant mieux !" },
+            { "id": "q_dépistagecancer_10", "patterns":["stade précoce"], "answer":"Oui c'est vrai." },
+            { "id": "q_dépistagecancer_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Vous me parliez donc de dépistage du cancer du sein c'est ça ?"},
+            { "id": "q_dépistagecancer_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_dépistagecancer_13", "patterns":["diminue la mortalité", "moralité"], "answer":"Ok." },
+            { "id": "q_dépistagecancer_14", "patterns":["traiter des lésions", "stables", "involué", "involués"], "answer":"Je vois." },
+            { "id": "q_dépistagecancer_15", "patterns":["anxiété", "faux positif", "faussement positive"], "answer":"Ah bah oui forcément." },
+            { "id": "q_dépistagecancer_16", "patterns":["cancer radio-induit"], "answer":"Je vois, je vois." }
+          ]
         }
       ]
     }
