@@ -136,47 +136,6 @@ button {
 </head>
 <body>
 
-    <div class="choices"></div>
-  
-  <script>
-    // Thèmes + couleurs
-    const themeButtons = [
-      { id: "HGE", title: "Hépato-gastro-entérologie" },
-      { id: "Rhumato", title: "Rhumatologie, orthopédie, médecine physique et réadaptation" },
-      { id: "Endoc", title: "Endocrinologie, diabétologie et nutrition" },
-      { id: "Gynéco", title: "Gynécologie obstétrique" },
-      { id: "Anapath", title: "Anatomopathologie" }
-    ];
-
-    const themeColors = {
-      "Hépato-gastro-entérologie": "#cd9575",
-      "Rhumatologie, orthopédie, médecine physique et réadaptation": "#ded8d8",
-      "Endocrinologie, diabétologie et nutrition": "#98777b",
-      "Gynécologie obstétrique": "#873260",
-      "Anatomopathologie": "#f4bbff"
-    };
-
-    // Conteneur des boutons
-    const container = document.querySelector('.choices');
-
-    // Génération des boutons
-    themeButtons.forEach(theme => {
-      const btn = document.createElement('button');
-      btn.textContent = theme.title;
-
-      // Couleur de fond
-      btn.style.background = themeColors[theme.title] || "#0084FF";
-
-      // Texte sombre si couleur claire
-      if (theme.title === "Rhumatologie, orthopédie, médecine physique et réadaptation" || 
-          theme.title === "Anatomopathologie") {
-        btn.style.color = "#333";
-      }
-
-      container.appendChild(btn);
-    });
-  </script>
-
 <script>
 // ===== DATA =====
 const data = {
