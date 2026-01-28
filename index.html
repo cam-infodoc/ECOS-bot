@@ -2557,6 +2557,39 @@ const data = {
             { "id": "q_dépistageDG_14", "patterns":["suivi", "glycémie à jeun au premier trimestre", "T1"], "answer":"Mon premier trimestre était normal, je n'avais pas d'hyperglycémie et l'échographie était normale." },
             { "id": "q_dépistageDG_15", "patterns":["IMC", "poids", "taille"], "answer":"Mon IMC est dans les normes." }
           ]
+        },
+                {
+          id: "SDD20",
+          title: "Dépistage et prévention des violences faites aux femmes",
+          intro: "Vous recevez une femme de 32 ans en consultation avec les résultats d'une prise de sang retrouvant un diagnostic de syphilis. La patiente est très anxieuse, elle se dit très fatiguée, vous remarquez un bleu sur la joue. Evaluez la situation médico-sociale de la patiente, informez la de ses droits et initiez une PEC.",
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Evaluer le contexte social (travail, revenus, soutien, hébergement), contexte psychologique / santé mentale (tristesse, idées suicidaires, troubles de la personnalité), existence de violences passées et/ou présentes (psychologiques, physiques, sexuelles, économiques), niveau de dangerosité (menaces de mort, chantage de suicide, arme, alcool ou stup au domicile), impact sur état de santé (douleurs, fractures), impact sur les enfant (comportement, troubles du sommeil, troubles alimentaires, surinvestissement scolaire ou rupture, plaintes somatiques).",
+            "- Questionne sur le souhait de porter plainte, chercher le consenement pour le signalement judiciaire, chercher le consentement pour un certificat médical initial, informer sur la présence d'associations d'aide aux victimes, proposer un accompagnement psychologique.",
+            "Reconnaître les situations à risque élevé de violences: ",
+            "- Femme victime de violences : jeune, peu instruite, exposition dans l'enfance, maltraitance dans l'enfance, acceptation de la violence, grossesse / naissance, handicap / maladie longue durée, pb de santé mentale, dépendance financière, conduites addictives.",
+            "- Homme violent : jeune, peu instruit, ATCD violences ou exposition dans l'enfance, abus de toxiques, tb personnalité, banalisation de la violence.",
+            "- Facteurs relationnels ou conjoncturels : insatisfaction dans le couple, séparation conflictuelle, domination masculine dans la famille, stress économique, vulnérabilité liée à une dépendance, écart entre les niveaux d'instruction, différence d'âge importante, déracinement géographique."
+            "La PEC doit être globale et pluridisciplinaire : ",
+            "Médicale mais aussi médico-légale, psychologique, sociale et associative."
+          ],
+
+          questionSet: [
+            { "id": "q_violences_1", "patterns":["travail", "revenus", "soutien", "hébergement", "social"], "answer":"Je travaillais dans un supermarché mais j'ai arrêté depuis un an après avoir déménagé avec mon conjoint dans la campagne normande. Ca m'a éloignée de ma famille et mes amis mais bon, il a dit que c'était mieux pour nous... Et c'est mon mari qui gère les finances dans notre foyer."},
+            { "id": "q_violences_2", "patterns":["santé mentale", "triste", "idées suicidaires", "trouble de la personnalité", "pathologies psychiatriques"], "answer":"Je suis très angoissée depuis peu et je fais même des crises d'angoisse dans la rue... c'est nouveau. Mais je n'avais pas de suivi avant ça. Et non je n'ai pas d'idées suicidaires, c'est juste dur..." },
+            { "id": "q_violences_3", "patterns":["violences", "violences psychologiques", "violences physiques", "violences sexuelles", "violences économiques"], "answer":"Mmm... des fois mon mari me met des coups, de temps en temps, mais rien de très grave par contre !" },
+            { "id": "q_violences_4", "patterns":["niveau de dangerosité", "menaces de mort", "chantage", "arme", "alcool", "drogues", "stupéfiants"], "answer":"C'est vrai que récemment ça s'est aggravé il a menacé de se suicider après que j'ai découvert qu'il me trompait... j'ai dit que j'allais partir avec les enfants et il m'a répondu ça..." },
+            { "id": "q_violences_5", "patterns":["douleurs", "fractures"], "answer":"Non je n'ai pas de douleurs ou de fractures." },
+            { "id": "q_violences_6", "patterns":["comportement", "scolaire", "plaintes somatiques", "enfants"], "answer":"Les enfants sont en bonne santé ils ne sont pas au courant de ce qui se passe en fait..." },
+            { "id": "q_violences_7", "patterns":["porter plainte", "déposer plainte"], "answer":"Non je ne veux pas porter plainte... ça reste mon mari." },
+            { "id": "q_violences_8", "patterns":["signalement judiciaire"], "answer":"Non je ne veux pas de ça, ça va faire des problèmes..." },
+            { "id": "q_violences_9", "patterns":["certificat médical", "certificat médical initial", "CMI"], "answer":"Moui pourquoi pas, sait on jamais..." },
+            { "id": "q_violences_10", "patterns":["associations", "association", "association d'aide aux victimes"], "answer":"D'accord c'est gentil de m'en parler." },
+            { "id": "q_violences_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. En ce moment j'ai des crises d'angoisse et ça va pas trop... vous pourriez m'aider ?"},
+            { "id": "q_violences_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"J'ai compris Docteur." },
+            { "id": "q_violences_13", "patterns":["accompagnement psychologique", "psychologue", "psychiatre"], "answer":"Je n'ai aucun antécédents, pas de diabète rien." },
+            { "id": "q_violences_14", "patterns":["combien d'enfants"], "answer":"J'ai deux enfants, un de 4 ans et un de 6 ans." }
+          ]
         }
       ]
     }
