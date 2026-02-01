@@ -2805,6 +2805,790 @@ const data = {
         }
       ]
     },
+    {
+      id: "Cardio",
+      title: "Cardiologie",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Découverte d'anomalies à l'auscultation cardiaque",
+          intro: "Vous êtes cardiologue libéral installé en cabinet de ville. Vous recevez en consultation une nouvelle patiente de 45 ans qui souhaite débuter une activité sportive de compétition. Elle se présente en vue de la rédaction d'un certificat de non-contre-indication à la pratique sportive. Lors de votre examen clinique, vous percevez un souffle à l'auscultation cardiaque. Identifiez et caractérisez le souffle, évaluez le retentissement cardiovasculaire, interrogez la patiente afin de mener l'enquête étiologique, évoquez votre hypothèse diagnostique principale, prescrivez un examen paraclinique et énumérez les 3 critères de sévérité.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Caractériser le souffle : mésosystolique, éjectionnel, intense, rude, râpeux, max au 2e EIC droit, irradiant aux carotides, se renforçant après diastole longue (4/8). Vérifier l'absence de signe de gravité = abolition B2.",
+            "- Rechercher triade symptomatique : dyspnée d'effort, syncope d'effort, angor d'effort. Rechercher des signes d'IC gauche (dyspnée repos, orthopnée, crépitants), rechercher palpitations.",
+            "- Rechercher FdR CVS, ATCD perso dilatation aortique / coarctation aortique, ATCD fam valvulopathies / dilatation aorte ascendante.",
+            "- Evoquer le diag de rétrécessiment aortique sur bicuspidie aortique.",
+            "- Proposer la réalisation d'une échocardiographie transthoracique, rechercher critères de RAo serré (gradient moyen > 40mmHG, surface <1cm² ou 0,6cm²/m² et vmax > 4m/s.",
+            "Rappel valvulopathies :",
+            "- RAo : dyspnée effort / syncope effort / angor effort, auscultation souffle râpeux / mésosystolique / prédominant au foyer aortique / irradiant aux carotides / abolition B2 si serré.",
+            "- IAo : dyspnée / angor d'effort, auscultation souffle protodiastolique / doux / aspiratif / foyer aortique / irradiant bord gauche sternum. Si sévère roulement diastoique de Flint, galop, pistol-shot.",
+            "RM : dyspnée / asthénie / palpitations, auscultation roulement diastolique / foyer mitral / éclat B1 / dédoublement B2 si HTAP.",
+            "IM : dyspnée aigue si rupture cordage ou pilier / dyspnée progressive, auscultation souffle doux / jet de vapeur / holosystolique si sévère / prédominant au foyer mitral / irradie aisselle G. Galop protodiastolique si importante et éclat B2 si HTAP associée.",
+          ],
+
+          questionSet: [
+            { "id": "q_bicuspidie_1", "patterns":["mésosystolique", "éjectionnel", "intense", "rude", "râpeux", "2e espace intercostale droit", "carotides"], "answer":"Le souffle est râpeux, au foyer aortique, mésosystolique, éjectionnel, rude, au 2e EIC droit, irradiant aux carotides, se renforçant après une diastole longue.."},
+            { "id": "q_bicuspidie_2", "patterns":["abolition du B2", "B2 aboli"], "answer":"Le B2 n'est pas aboli." },
+            { "id": "q_bicuspidie_3", "patterns":["dyspnée d'effort", "difficultés à respirer à l'effort", "syncope d'effort", "pertes de connaissance à l'effort", "douleurs thoraciques à l'effort", "angor d'effort"], "answer":"Je suis totalement asymptomatique." },
+            { "id": "q_bicuspidie_4", "patterns":["dyspnée de repos", "orthopnée", "du mal à respirer couchée", "crépitants"], "answer":"Non je n'ai rien de tout ça." },
+            { "id": "q_bicuspidie_5", "patterns":["palpitations"], "answer":"Non je ne ressens pas de palpitations." },
+            { "id": "q_bicuspidie_6", "patterns":["diabète", "tabac", "fumez", "tabagisme", "hypertendue", "hypertension artérielle", "dyslipidémie", "trop de cholestérol", "obésité"], "answer":"Non je n'ai pas de facteurs de risque cardiovasculaires connus." },
+            { "id": "q_bicuspidie_7", "patterns":["dilatation de l'aorte", "antécédents cardiologiques personnels", "antécédents personnels", "coarctation de l'aorte", "coarctation aortique"], "answer":"Je n'ai jamais fait d'examens du coeur donc je ne sais pas du tout. J'ai juste eu une cholécystectomie c'est tout." },
+            { "id": "q_bicuspidie_8", "patterns":["antécédents familiaux", "dilatation de l'aorte ascendante", "valvulopathies", "problèmes de valves"], "answer":"Oui alors dans ma famille mon papa a une dilatation de l'aorte ascendante et mon oncle une valve avec 2 feuillets sur 3 de ce que j'ai compris. C'est tout." },
+            { "id": "q_bicuspidie_9", "patterns":["rétrecissement aortique", "bicuspidie aortique"], "answer":"D'accord je vois." },
+            { "id": "q_bicuspidie_10", "patterns":["échocardiographie transthoracique", "échographie cardiaque thoracique", "ETT", "échocardiographie thoracique"], "answer":"On fera cette échographie alors." },
+            { "id": "q_maladiehorton_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir pour un certificat de non contre-indication pour un triatlon."},
+            { "id": "q_bicuspidie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_bicuspidie_13", "patterns":["gradient moyen > 40 mmHg", "gradient moyen supérieur à 40 mmHg", "surface aortique < 1cm²", "surface aortique inférieure à 1 cm²", "surface aortique < 0,6cm²/m²", "surface aortique inférieure à 0,6 cm²/m²", surface aortique < 1 cm²", surface aortique < 0,6 cm²/m²", "vitesse maximale > 4m/s", "vitesse max > 4m/s", "vmax > 4m/s", "vitesse maximale supérieure à 4m/s", "vitesse max supérieure à 4m/s", "vmax > 4 m/s", "vitesse maximale > 4m/s", "vitesse maximale > 4 mètres par seconde"], "answer":"D'accord." },
+            { "id": "q_bicuspidie_14", "patterns":["IMC", "poids", "taille", "indice de masse corporelle"], "answer":"Je fais 160cm pour 60kg, soit un IMC à 23,4 kg/m²." }
+          ]
+        },
+        {
+          id: "SDD2",
+          title: "Découverte d'un souffle vasculaire",
+          intro: "Vous êtes interne de cardiologie au CHU. On vous adresse Monsieur C, un patient de 73 ans, pour la découverte d'un souffle du membre inférieur droit. Menez l'interrogatoire cardiovasculaire du patient, faites l'examen cardiovasculaire et recherchez spécifiquement les pouls périphériques (montrez les zones palpées), expliquez au patient le principe d'un index de pression systolique et calculez les IPS.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher les FdR CVS du patoent (diabète, HTA, hypercholestérolémie, tabagisme, obésité), interroger sur les ATCD cardiovasculaires (AVC, IDM, AOMI...), interroger sur une douleur (localisation, type, distance de marche, cède à l'arrêt de l'effort).",
+            "- Préciser que le patient doit être déshabillé, rechercher bilatéralement les pouls radiaux / temporaux / poplités / tibiaux post / pédieux, rechercher des ulcères, rechercher dépilation / calcul TRC / examen des espaces interdigitaux / coloration et chaleur du pied (2/4), auscultation des axes artériels.",
+            "- Expliquer que les IPS = prise de TA aux 2 bras et 2 chevilles en prenant la PAS la plus élevée des chevilles et en la divisant par la PAS la plus élevée des bras. Préciser que l'AOMI est définie par IPS < 0,9. Calculer les IPS du patient (0,5 à droite et 1 à gauche).",
+            "Rappel des normes d'IPS :",
+            "- Entre 1 et 1,4 : sain",
+            "- < 0,9 : AOMI",
+            "- < 0,7 : AOMI sévère",
+            "- > 1,4 : médiacalcose (diabétique ou dialysé rénal ++). Dans ce cas faire les IPS au niveau des orteils en sachant qu'un IPS < 0,7 signe une AOMI."
+          ],
+
+          questionSet: [
+            { "id": "q_aomi_1", "patterns":["diabète", "hypertendu", "HTA", "hypertension artérielle", "hypercholestérolémie", "trop de cholestérol", "dyslipidémie", "surpoids", "obésité", "tabac", "tabagisme", "fumez"], "answer":"Alors fumer oui je fume, à peu près un paquet par jour depuis mes 23 ans alors vous voyez. J'ai aussi de l'hypertension qu'on arrive pas trop à gérer malgré l'hydrochloro truc et l'amlor. J'ai aussi du cholestérol mais comme tout le monde et je prends des statines pour ça. Et il y a 20 ans on m'a trouvé un diabète du coup je mange mieux et j'ai des biguanides. Je bois pas d'alcool. Et j'ai un IMC à 28 d'après le docteur."},
+            { "id": "q_aomi_2", "patterns":["antécédents cardiovasculaires", "AVC", "IDM", "infarctus", "artériopathie oblitérante des membres inférieurs", "AOMI"], "answer":"Oui alors j'ai fait un infarctus il y a 12 ans maintenant et on m'a mit un stent dans l'artères interventriculaire et puis je prends de l'aspirine, du bisoprolol, de la spiroloactone, du ramipril et une gliflozine. Un bon cocktail quoi. J'ai pas d'autres antécédents." },
+            { "id": "q_aomi_3", "patterns":["douleurs à la marche", "douleur à l'effort", "où", "type", "décrire la douleur", "distance de marche", "distance", "cède à l'arrêt", "s'arrête à l'arrêt"], "answer":"Bah oui vous voyez j'ai mal quand je marche depuis 4 mois. C'est comme une crampe du mollet droit quand je marche 500 mètres. Du coup je m'arrête puis ça s'arrête au bout de quoi, 2-3 minutes max. Mais le reste du temps j'ai pas mal, même quand je suis couché ou quoi j'ai pas de douleurs, c'est seulement pendant les balades." },
+            { "id": "q_aomi_4", "patterns":["déshabillé", "déshabiller", "enlever vos vêtements"], "answer":"Ok j'enlève tous mes vêtements alors." },
+            { "id": "q_aomi_5", "patterns":["pouls radiaux", "pouls radial", "pouls temporaux", "pouls temporal", "pouls poplités", "pouls poplité", "pouls tibiaux postérieurs", "pouls tibial postérieur", "pouls pédieux"], "answer":"Pouls tous retrouvés à gauche. Présence pouls fémoral droit. Absence de pouls poplités, tibial postérieur et pédiaux à droite. Pouls radiaux et temporaux retrouvés bilatéralement." },
+            { "id": "q_aomi_6", "patterns":["ulcères", "ulcère"], "answer":"Absence de troubles trophique bilatéralement." },
+            { "id": "q_aomi_7", "patterns":["dépilation", "dépilée", "temps de recoloration cutanée", "TRC", "espaces interdigitaux", "coloration", "couleur", "chaleur", "chaud", "froid"], "answer":"Absence de dépilation, les 2 membres sont chauds, de couleur normale et avec un TRC à 2 secondes chacun." },
+            { "id": "q_aomi_8", "patterns":["auscultation des axes artériels", "auscultation des vaisseaux", "auscultation des artères"], "answer":"Absence de souffle artériel et auscultation cardiopulmonaire normale." },
+            { "id": "q_aomi_9", "patterns":["aux deux bras", "aux 2 bras", "aux 2 chevilles", "aux deux chevilles", "IPS < 0,9", "index de pression systolique < 0,9", "IPS inférieur à 0,9"], "answer":"Ok je vois." },
+            { "id": "q_aomi_10", "patterns":["0,5", "1"], "answer":"Noté." },
+            { "id": "q_aomi_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car on m'a dit que j'avais une artère de la jambe droite qui soufflait. Bon j'ai rien compris hun, vous pourriez regarder ? "},
+            { "id": "q_aomi_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_aomi_13", "patterns":["tensions"], "answer":"Huméral droite : 153mmHg, huméral gauche 160mmHg. Pédieuse droite : 60mmHg, pédieuse gauche : 140mmHg. Tibile post droite : 80mmHg, tibiale post gauche : 160mmHg." }
+          ]
+        },
+        {
+          {
+          id: "SDD3",
+          title: "Hypertension artérielle",
+          intro: "Vous êtes médecin généraliste installé en ville. Vous recevez en consultation Monsieur H, un patient de 37 ans que vous ne connaissez pas car nouvellement installé dans votre région, pour des chiffres tensionnels élevés au domicile. Expliquez au patient les principes de l'automesure tensionnelle et de la MAPA, recherchez des signes lors de l'interrogatoire et à l'examen clinique évocateurs d'HTA secondaire, donnez votre principale hypothèse diagnostique et expliquez les grands principes de PEC.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquez le principe de l'automesure tensionnelle (3 mesures à 2mn d'intervalle en position assise après 5 mn de repos, 3 jours de suite), expliquez le principe de la MAPA (mesures systématiques pendant 24h, en période diurne et nocturne).",
+            "- Rechercher des ATCD familiaux de néphropathie ou polyendocrinopathies, rechercher des néphropathies (maladie rénale connue, IU à répétition, hématurie, AINS), rechercher conso de toxiques et substances pressives (réglisse, anis, cocaïne, amphét, corticoïdes, AINS), rechercher signes hyperaldostéronisme primaire (tétanie, faiblesse musculaire : 1/2), rechercher des signes de phéochromocytomes (céphalées, sueurs, palpitation), rechercher signes SAOS (ronflement, somnolence, céphalées matinales, sensation étouffement, sommeil non réparateur, éveils répétés pdt sommeil, nycturie, difficultés de concentration), rechercher des signes d'endocrinopathie (acromégalie, sd Cushing).",
+            "- Donner l'hypothèse diagnostique d'un phéochromocytome, PEC par alpha/bêta-bloquants puis PEC chir (laparoscopie).",
+            "2 méthodes sont validées pour diagnostiquer une HTA : ",
+            "- AMT : PAS > 135mmHg ou PAD > 85mmHg",
+            "- MAPA : >130/80 sur 24h, >135/85 de jour ou >120/70 de nuit.",
+            "Une fois HTA diagnostiquée faire un bilan : Na, K, créat avec DFG, GàJ, EAL, protéinurie (RPC), ECG de repos.",
+            "Origine secondaire doit être suspectée devant : HTA d'emblée  sévère, < 40a, associée à hypoK, situations évocatrices (résistante, atteinte organes cibles disporportionnée au regard de l'ancienneté de l'HTA)."
+          ],
+
+          questionSet: [
+            { "id": "q_phéochro_1", "patterns":["3 mesures", "2 minutes d'intervalle", "position assise", "après 5 minutes de repos"], "answer":"Ok je comprends."},
+            { "id": "q_phéochro_2", "patterns":["mesures automatiques", "sur 24h", "pendant 24h", "sur 24 heures", "pendant 24 heures", "diurne et nocturne"], "answer":"D'accord." },
+            { "id": "q_phéochro_3", "patterns":["antécédents de néphropathies", "polykystose", "polyendocrinopathies"], "answer":"Je n'ai pas d'antécédents connus par contre mon père vient d'être diagnostiqué d'une NEM 2 sur un cancer de la thyroïde." },
+            { "id": "q_phéochro_4", "patterns":["maladie rénale", "infections urinaires" "hématurie", "sang quand vous urinez", "sang dans les urines", "AINS"], "answer":"Non je n'ai pas de problèmes urinaires." },
+            { "id": "q_phéochro_5", "patterns":["réglisse", "anis", "cocaïne", "amphétamines", "corticoïdes"], "answer":"Non je ne prends rien de tout ça, j'aime pas du tout la réglisse d'ailleurs." },
+            { "id": "q_phéochro_6", "patterns":["tétanie", "faiblesse musculaire"], "answer":"Non je n'ai pas ces symptômes." },
+            { "id": "q_phéochro_7", "patterns":["céphalées", "maux de tête", "sueurs", "palpitations"], "answer":"Oui j'ai des céphalées récurrentes et des palpitations." },
+            { "id": "q_phéochro_8", "patterns":["ronflements", "somnolence", "ronflez", "céphalées matinales", "maux de tête le matin", "sensation d'étouffement", "sommeil non réparateur", "éveils répétés", "nycturie", "uriner pendant la nuit", "difficultés à se concentrer", "difficultés de concentration"], "answer":"Ma compagne ne se plaint pas de ronflement et je suis pas particulièrement fatigué pendant ma journée ou somnolent non." },
+            { "id": "q_phéochro_9", "patterns":["nez épais", "pommettes saillantes", "front bombé", "lèvres épaisses", "prognathisme", "vergetures pourpres", "faciès lunaire", "obésité tronculaire", "bosse de bison", "peau fine", "ecchymoses"], "answer":"Faciès normal, pas de vergetures, pas d'ecchymoses, pas de bosse de bison." },
+            { "id": "q_phéochro_10", "patterns":["phéochromocytome"], "answer":"Ok." },
+            { "id": "q_phéochro_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car je suis nouveau dans la région et je n'ai pas vu de médecin pour le moment."},
+            { "id": "q_phéochro_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur, merci." },
+            { "id": "q_phéochro_13", "patterns":["alpha-bloquants", "bêta-bloquants", "alpha bloquants", "bêta bloquants", "chirurgie", "laparoscopie"], "answer":"Noté." },
+            { "id": "q_lihg_14", "patterns":["tension", "tension artérielle", "hypertension"], "answer":"J'ai pris un appareil d'automesure à la maison sur les conseils d'un ami et j'ai pris quelques mesures à intervalle régulier pour me donner une idée, en général c'était autour de 150/95mmHg." },
+            { "id": "q_lihg_15", "patterns":["bilan biologique", "bilan bio"], "answer":"J'ai fait un bilan il y a 3 mois ! Il était revenu parfaitement normal." }
+          ]
+        },
+{
+          id: "SDD4",
+          title: "Découverte d'une hypotension artérielle",
+          intro: "Vous êtes interne de garde dans les étages. Vous êtes appelé par l'infirmière du service de maladies infectieuses car elle a retrouvé lors de son tour des constantes une patiente de 79 ans au sol. Votre principale hypothèse diagnostique est une hypotension orthostatique. Expliquez au patient comment confirmer le diagnostic, recherchez les causes à l'origine de cette hypotension, proposez des mesures permettant de lutte contre l'hypotension, nommez un médicament utilisé en 2e ligne dans le traitement de l'hypotension orthostatique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Savoir diagnostiquer une HTO (baisse > 20mmHg PAS, > 10mmHg PAD, PAS =< 90mmHg reproduisant les symptomes dans les 5mn suivant le passage à l'orthostatisme).",
+            "- Rechercher iatrogénie (antihypertenseurs, dérivés nitrés, alpha-bloqueurs, AD tricycliques et IMAO, L-Dopa, anticholinergiques, morphine... 1/8), signes de déshydratation et pathologie aigue, anémie (asthénie, vertiges, tachycardie, pâleur, souffle 2/5), signes d'IC (crépitants, orthopnée, RHJ, TJ, OMI, hépatalgie d'effort), dysautonomie (Parkinson, Corps de Lewy, alitement prolongé, diabète, alcool, amylose, IR, carences...).";
+            "- Retirer un antihypertenseur et les ISRS, hydrater correctement, décomposer le mouvement pour le passage en orthostatisme, bas de contention classe 2.",
+            "- Traitement 2e intention : midorine ou fludrocortisone."
+          ],
+
+          questionSet: [
+            { "id": "q_hypota_1", "patterns":["baisse de la PAS > 20mmHg", "baisse de la PAD > 10mmHg", "baisse de la pression artérielle systolique > 20", "baisse de la pression artérielle diastolique > 10", "PAS < 90mmHg"], "answer":"Critères validés."},
+            { "id": "q_hypota_2", "patterns":["antihypertenseurs", "dérivés nitrés", "alpha-bloqueurs", "alpha-bloquants", "antidépresseurs tricycliques", "IMAO", "L-dopa", "anticholinergiques", "phénothiazine", "morphine", "traitements"], "answer":"Je prends une trithérapie pour ma tension (IEC, inhibiteurs calciques, DT), et un ISRS pour ma dépression depuis 3 ans, et une statine pour mon cholestérol." },
+            { "id": "q_hypota_3", "patterns":["déshydratation", "pathologie aiguë", "pathologie aigue"], "answer":"Je suis sous Augmentin depuis 5 jours pour une pneumonie à pneumocoque. Signes de déshydratation intracellulaire : langue sèche, fatigue cernes. Signes de déshydratation extracellulaire : pli cutané, hypotonie des globes oculaires." },
+            { "id": "q_hypota_4", "patterns":["anémie", "asthénie", "fatigue", "fatiguée", "vertiges", "tachycardie", "pâleur", "pâle", "souffle"], "answer":"Je suis un peu fatiguée récemment mais c'est surement la pneumonie." },
+            { "id": "q_hypota_5", "patterns":["crépitants", "orthopnée", "difficultés à respirer couchée", "du mal à respirer couchée", "reflux hépato-jugulaire", "RHJ", "turgescence jugulaire", "TJ", "OMI", "oedèmes des membres inférieurs", "hépatalgie", "douleur hépatique"], "answer":"Je suis dyspnéique sans orthopnée. Absence de crépitants, absence de signes d'IC droite." },
+            { "id": "q_hypota_6", "patterns":["dysautonomie", "Parkinson", "Lewy", "alcool", "diabète", "amylose", "insuffisance rénale", "carences"], "answer":"Je n'ai pas de maladie neurologique, je ne fume pas et je ne bois pas." },
+            { "id": "q_hypota_7", "patterns":["retirer un antihypertenseur", "enlever un antihypertenseur", "retirer l'ISRS", "enlever l'ISRS", "retirer l'antidépresseur", "enlever l'antidépresseur"], "answer":"D'accord." },
+            { "id": "q_hypota_8", "patterns":["hydratation", "décomposition du mouvement", "bas de contention", "classe 2"], "answer":"Ok." },
+            { "id": "q_hypota_9", "patterns":["midodrine", "fludrocortisone"], "answer":"Noté." },
+            { "id": "q_hypota_10", "patterns":["chute"], "answer":"Je suis tombée il y a  3 mois dans ma maison, mais j'ai pas consulté parce que ça ne m'a pas inquiétée plus que ça." },
+            { "id": "q_lihg_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_lihg_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur, merci à vous." }
+          ]
+        },
+{
+          id: "SDD5",
+          title: "Malaise / Perte de connaissance",
+          intro: "Vous êtes interne de garde aux urgences. Vous voyez dans un box Monsieur X, 53 ans, qui consulte accompagné de sa femme car il a présenté un malaise à domicile. Interrogez le patient afin de caractériser son malaise, recherchez une cause iatrogène ou toxique, proposez les 2 examens complémentaires à faire en 1e intention devant tout malaise.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander s'il y a eu une perte de connaissance et de combien de temps, rechercher prodromes / dl thoracique / palpitations, facteurs déclenchants, mouvements anormaux, posture au moment du malaise et activité, courbature, confusion / perte d'urines, morsure de langue.",
+            "- Arguments pour intox au monoxyde de carbone (cas groupés, chaudière à gaz, appart ancien), prise antihypertenseurs / bêta-bloquants / psychotropes / allongent QT / sub illicites.",
+            "- Proposer la réalisation d'un ECG et d'une glycémie capillaire ou veineuse.",
+            "En cardiologie les syncopes sont dues à : ",
+            "- Obstacle mécanique : rétrécissement aortique, embolie pulmonaire, CMO, tamponnandes, thromboses valve mécanique.",
+            "- Causes rythmiques : TV, bradycardie par BAV ou dysfonction sinusale, torsade de pointes.",
+            "- Hypotension artérielle orthostatique souvent iatrogène.",
+            "- Syncope réflèxe : vasovagale ou situationnelle, sd du sinus carotidien."
+          ],
+
+          questionSet: [
+            { "id": "q_syncope_1", "patterns":["perte de connaissance", "combien de temps"], "answer":"Oui j'ai perdu connaissance, environ 30 secondes d'après ma femme."},
+            { "id": "q_syncope_2", "patterns":["prodromes", "douleur thoraciques", "maux de tête", "céphalées", "palpitations"], "answer":"Non je n'ai as eu de signes avant ce malaise c'était vraiment brutal, pas de douleurs thoraciques, pas de céphalées." },
+            { "id": "q_syncope_3", "patterns":["facteurs déclenchants", "facteurs ayant déclenché"], "answer":"Je faisais le repassage donc rien de particulier." },
+            { "id": "q_syncope_4", "patterns":["mouvements anormaux"], "answer":"Non je n'ai pas fait de mouvements anormaux." },
+            { "id": "q_syncope_5", "patterns":["posture", "allongé", "assis", "debout", "repos", "effort"], "answer":"J'étais chez moi entrain de repasser debout." },
+            { "id": "q_syncope_6", "patterns":["courbatures"], "answer":"Non je n'ai pas de courbatures." },
+            { "id": "q_syncope_7", "patterns":["confusion", "perte d'urines"], "answer":"Je n'ai pas été confus après mon réveil et je ne me suis pas uriné dessus." },
+            { "id": "q_syncope_8", "patterns":["morsure de la langue", "morsure", "langue", "mordu"], "answer":"Oui je me suis mordu le bout de la langue." },
+            { "id": "q_syncope_9", "patterns":["monoxyde de carbone", "NO", "chaudière", "cas groupés"], "answer":"On habite tous les deux avec ma femme et elle va bien. Notre appartement est tout neuf sans chaudière à gaz. D'ailleurs aucun appareil n'a sonné dans les mains des pompiers quand ils sont arrivés chez nous." },
+            { "id": "q_syncope_10", "patterns":["antihypertenseurs", "bêta-bloquants", "bêta-bq", "bêta bloquants", "psychotropes", "allongeant le QT", "allongent le QT", "cocaïne", "amphétamines", "drogues"], "answer":"Je ne prends ni traitements ni drogues." },
+            { "id": "q_syncope_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai fait un malaise, je suis content de vous voir Docteur."},
+            { "id": "q_syncope_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_syncope_13", "patterns":["ECG", "18 dérivations"], "answer":"Noté." },
+            { "id": "q_syncope_14", "patterns":["glycémie"], "answer":"Noté." }
+          ]
+        },
+{
+          id: "SDD6",
+          title: "Oedème localisé ou diffus",
+          intro: "Vous êtes médecin en ville et vous recevez une patiente de 57 ans pour une augmentation du volume de ses jambes depuis 1 mois. Détaillez les 3 grandes causes d'oedèmes généralisés, orientez l'enquête étiologique en fonction des caractéristiques cliniques de l'oedème et des signes associés, expliquez les règles hygiéno-diététiques à mettre en place.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Les 3 causes sont : cirrhose hépatique (éthylisme, hépatite virale chronique, hépatite métabolique), l'insuffisance cardiaque (insuffisance respiratoire chronique, coeur pulmonaire, anomalies valvulaires) et l'insuffisance rénale et le syndrome néphrotique (IRA et IRC).",
+            "- Recherchez des signes inflammatoire (chaleur, douleur, rougeur), rechez des signes de cirrhose (hépatomégalie ferme, bord tranchant, angiomes stellaires, CVC, astérixis, érythrose palmaire, leuconychies 2/7), recherchez des signes d'IC (crépitants bilat, orthopnée, RHJ, TJ, hépatalgie d'effort, ATCD connu de cardiopathie 2/6), recherchez des signes d'IRA ou IRC (HTA, ATCD d'élévation de la créatinémie, ATCD d'échographie rénale normale, ATCD protéinurie à la BU, ATCD maladie rénale connue), recherchez d'autres épanchements des séreuses (ascite, pleural, péricardique).",
+            "- Limiter la consommation de sel à <5g/j, exercice physique et sevrage tabagique."
+          ],
+
+          questionSet: [
+            { "id": "q_omi_1", "patterns":["inflammation", "chaleur", "rougeur", "douleur"], "answer":"Absence de signes inflammatoires."},
+            { "id": "q_omi_2", "patterns":["cirrhose", "hépatomégalie", "bord tranchant", "angiomes stellaires", "circulation veineuse collatérale", "astérixis", "érythrose palmaire, "leuconychies"], "answer":"Absence d'ATCD hépatique. Absence de signe d'insuffisance hépatique / cirrhose." },
+            { "id": "q_omi_3", "patterns":["crépitants", "orthopnée", "difficultés à respirer couchée, "reflux hépato-jugulaire", "RHJ", "turgescence jugulaire", "TJ", "hépatalgie d'effort", "cardiopathie"], "answer":"Absence de dyspnée. Crépitants bilatéraux jusque 1/3 des champs. Reflux hépato-jugulaire avec turgescence jugulaire." },
+            { "id": "q_omi_4", "patterns":["hypertension", "élévation créatinémie", "échographie rénale anormale", "protéinurie", "maladie rénale"], "answer":"Absence d'antécédents de pathologie rénale. Absence de signes d'IR ou de syndrome néphrotique." },
+            { "id": "q_omi_5", "patterns":["anasarque", "ascite", "épanchement pleural", "épanchement péricardique"], "answer":"Absence de tableau d'anasarque." },
+            { "id": "q_omi_6", "patterns":["moins de 5 grammes par jour", "moins de 5g/j", "moins de 5 g/j", "<5g/j", "< 5g/j", "< 5 g/j"], "answer":"La patiente est avisé de la restriction sodée à 5g/j." },
+            { "id": "q_omi_7", "patterns":["exercise physique", "activité physique", "sport", "sevrage", "arrêter de fumer"], "answer":"La patiente est avisée de la reprise du sport ainsi que de la nécessité de sevrage tabagique." },
+            { "id": "q_omi_8", "patterns":["antécédents"], "answer":"J'ai eu une cardiopathie ischémique stentée 3 fois." },
+            { "id": "q_omi_9", "patterns":["traitements", "ordonnance"], "answer":"Je prend : ramipril, dapagliflozine, aspirine, bisoprolol, spironoloactone et rosuvastatine." },
+            { "id": "q_omi_10", "patterns":["alimentation", "repas"], "answer":"Je mange beaucoup de charcuterie et de fromage malgré les recommandations de mon cardiologue." },
+            { "id": "q_omi_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens parce que mes jambes gonflent."},
+            { "id": "q_omi_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_omi_13", "patterns":["fumez", "fumer", "buvez de l'alcool", "alcool"], "answer":"Je fume 30 PA et je bois un verre de vin par jour." }
+          ]
+        },
+{
+          id: "SDD7",
+          title: "Claudication intermittente d'un membre",
+          intro: "Vous êtes cardiologue libéral. On vous adresse un homme de 58 ans qui présente depuis 2 mois une douleur à la jambe droite lors de la marche. Il n'a encore consulté aucun médecin pour le moment. Différenciez à l'interrogatoire et à l'examen clinique les éléments orientant vers une atteinte vasculaire ou médullaire, localisez l'atteinte en fonction de l'examen clinique et recherchez les autres localisations vasculaires.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Préciser la distance d'apparition (toujours la même si vasculaire), évaluez la douleur (crampe, obligeant l'arrêt), temps de récupération (rapide à l'arrêt), évaluer le contexte et les comorbidités (terrain athéromateux).",
+            "- Auscultation des axes artériels, recherche bilatérale des pouls radiaux / temporaux / fémoraux / polpités / tibiaux post / pédieux, localiser la sténose de l'artère fémorale superficielle droite."
+          ],
+
+          questionSet: [
+            { "id": "q_aomifemd_1", "patterns":["distance", "combien de mètre", "toujours la même distance", "même distance"], "answer":"C'est toujours au même moment de ma balade, et si je monte une pente c'est encore plus rapide."},
+            { "id": "q_aomifemd_2", "patterns":["douleur", "crampes", "musculaire", "obligent arrêt", "oblige l'arrêt"], "answer":"Oui je dirais que c'est des crampes vives du mollet droit. On dirait qu'elles sont musculaires." },
+            { "id": "q_aomifemd_3", "patterns":["temps de récupération", "en combien de temps", "rapide"], "answer":"Quand je m'arrête la douleur disparait assez vite, en quelques minutes je dirais." },
+            { "id": "q_aomifemd_4", "patterns":["contexte", "comorbidités", "athérome", "athéromateux", "antécédents"], "answer":"Je suis suivi pour une maladie de Horton et une sténose de la carotide interne droite." },
+            { "id": "q_aomifemd_5", "patterns":["auscultation", "souffles"], "answer":"Souffle au dessus du genou droit. Souffle au niveau de la carotide droite connu depuis quelques années." },
+            { "id": "q_aomifemd_6", "patterns":["pouls radiaux", "pouls radial"], "answer":"Présence." },
+            { "id": "q_aomifemd_7", "patterns":["pouls temporaux", "pouls temporal"], "answer":"Présence." },
+            { "id": "q_aomifemd_8", "patterns":["pouls poplités", "pouls poplité"], "answer":"Absence du pouls poplité droit." },
+            { "id": "q_aomifemd_9", "patterns":["pouls tibiaux postérieurs", "pouls tibial postérieur"], "answer":"Absence du pouls tibial postérieur droit." },
+            { "id": "q_aomifemd_10", "patterns":["pouls pédieux"], "answer":"Absence du pouls pédieux droit." },
+            { "id": "q_aomifemd_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens car j'ai mal à la jambe droite quand je marche depuis 2 mois environ."},
+            { "id": "q_aomifemd_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_aomifemd_13", "patterns":["sténose de l'artère fémorale superficielle droite", "artère fémorale superficielle droite", "artère fémorale droite"], "answer":"Noté." },
+            { "id": "q_aomifemd_14", "patterns":["ischémie mésentérique", "AVC", "IDM", "infarctus"], "answer":"Non je n'ai jamais eu ces maladies." },
+            { "id": "q_aomifemd_15", "patterns":["fumez", "tabac", "alcool", "buvez"], "answer":"Je fume 15PA et je vois 2 verres de vin au déjeuner et au dîner" }
+          ]
+        },
+{
+          id: "SDD8",
+          title: "Jambes lourdes",
+          intro: "Vous êtes médecin généraliste et vous recevez madame X, une patiente de 63 ans. Vous la suivez dans le cadre d'un syndrome des anticorps antiphospholipides diagnostiqué il y a une quinzaine d'années. Ce syndrome avait été repéré à la suite de multiples thromboses veineuses profondes bilatérales récidivantes. Elle se plaint dorénavant de lourdeur des jambes. Vous suspectez en premier lieu une insuffisance veineuse d'origine post-thrombotique. Cherchez à l'examen clinique les signes d'insuffisance veineuse, prescrivez de manière adaptée une compression élastique et précisez la classe.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher : varicosités / télangiectasies, varices, oedème des membres inférieurs (mou, blanc, prend le godet, recrudescence vespérale), dermite ocre, eczéma, lipodermatosclérose ou dermohypodermite de stase, atrophie blanche, ulcère veineux.",
+            "- Dire qu'il ne faut pas porter les contentions la nuit, que l'efficacité est max si la pose est faite le matin dans l'heure suivant le lever, prescrire une classe 4 car elle présente un ulcère veineux ouvert non cicatrisé.",
+            "Indications de bas de contention et classes : ",
+            "- Varices: classe II ou III au long cours.",
+            "- Oedème chronique d'origine veineuse : classe II ou III pendant 4-6 semaines",
+            "- Pigmentation, eczéma veineux, lipodermatosclérose, hypodermite veineuse, atrophie blanche : classe III au long cours avec réévaluation régulière",
+            "- Ulcère cicatrisé : classe III ou IV",
+            "- Ulcère ouvert : classe IV jusqu'à cicatrisation"
+          ],
+
+          questionSet: [
+            { "id": "q_varices_1", "patterns":["varicosités", "télangiectasies"], "answer":"Absence de varicosités ou télangiectasies."},
+            { "id": "q_varices_2", "patterns":["varices"], "answer":"Absence de varices." },
+            { "id": "q_varices_3", "patterns":["odèmes", "OMI"], "answer":"Oedème bilatéral prenant le godet, blanc, mou." },
+            { "id": "q_varices_4", "patterns":["dermite ocre"], "answer":"Présence d'une dermite ocre." },
+            { "id": "q_varices_5", "patterns":["eczéma", "eczéma des membres inférieurs"], "answer":"Absence d'eczéma variqueux." },
+            { "id": "q_varices_6", "patterns":["lipodermatosclérose", "dermohypodermite de stase", "hypodermite"], "answer":"Absence d'hypodermite de stase." },
+            { "id": "q_varices_7", "patterns":["atrophie blanche"], "answer":"Légères plages d'atrophie blanche." },
+            { "id": "q_varices_8", "patterns":["ulcère", "ulcère veineux"], "answer":"Présence d'un ulcère veineux périmalléolaire gauche ouvert." },
+            { "id": "q_varices_9", "patterns":["pas les porter la nuit", "pas la nuit", "que de jour"], "answer":"D'accord." },
+            { "id": "q_varices_10", "patterns":["matin", "dans l'heure du réveil"], "answer":"Ok." },
+            { "id": "q_varices_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai depuis quelques temps une lourdeur des jambes, ça se majore au cours de la journée et surtout s'il fait chaud. Vous pouvez m'examiner ?"},
+            { "id": "q_varices_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_varices_13", "patterns":["classe IV", "classe quatre", "classe 4"], "answer":"Noté." },
+            { "id": "q_varices_14", "patterns":["antécédents"], "answer":"J'ai de multiples antécédents de TVP bilatérales secondaires à un SAPL." }
+          ]
+        },
+{
+          id: "SDD9",
+          title: "Bradycardie",
+          intro: `Vous venez de prendre votre garde en unité de soins intensifs de cardiologie (USIC). Le service a accueilli aujourd'hui une patiente de 69 ans, diabétique, pour un malaise au domicile. Vous n'avez pas encore eu le temps de faire les transmissions avec vos collègues que l'infirmière vient vous voir paniquée pour vous dire que le scope de madame B, cette fameuse patiente, sonne en raison d'une fréquence cardiaque à 43 bpm. Vous vous empressez d'aller voir la patiente et demandez sans délai la réalisation d'un électrocardiogramme, que voici ci-dessous. Donnez le diagnostic électrocardiographique, identifiez les signes de mauvaise tolérance, instaurez une prise en charge en urgence et à long terme. <img src= "bradycardie.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Donner le diagnostic de BAV 3 ou BAV complet, rechercher des signes de choc (marbrures, oligurie, hypotension 2/3), rechercher des troubles de la conscience, rechercher des signes d'IC (crépitants, orthopnée, dyspnée, RHJ, TJ, OMI 4/6), rechercher un angor.",
+            "- Mise en place d'une VVP, prescrire un ionogramme sanguin, doser la troponine, réaliser une ETT, administrer de l'isoprénaline et discuter la mise en place d'un pacemaker ou stimulateur cardiaque à long terme."
+          ],
+
+          questionSet: [
+            { "id": "q_bav3_1", "patterns":["bloc atrioventriculaire complet", "BAV3", "BAV 3", "BAV complet"], "answer":"Noté."},
+            { "id": "q_bav3_2", "patterns":["signes de choc", "marbrures", "oligurie", "hypotension"], "answer":"Absence de marbrures, extrémités chaudes. TA 120/82 mmHg. Urines il y a 15mn absence d'oligurie." },
+            { "id": "q_bav3_3", "patterns":["troubles de la conscience", "Glasgow"], "answer":"SGW 13." },
+            { "id": "q_bav3_4", "patterns":["insuffisance cardiaque", "crépitants", "orthopnée", "dyspnée", "reflux hépato-jugulaire", "reflux hépatojugulaire", "RHJ", "turgescence jugulaire", "TJ", "OMI", "oedèmes des membres inférieurs"], "answer":"Absence de signes d'insuffisance cardiaque." },
+            { "id": "q_bav3_5", "patterns":["angor", "douleur thoracique"], "answer":"Absence de douleur thoracique." },
+            { "id": "q_bav3_6", "patterns":["voie veineuse périphérique", "VVP"], "answer":"Noté." },
+            { "id": "q_bav3_7", "patterns":["ionogramme sanguin", "iono sanguin", "kaliémie"], "answer":"Noté." },
+            { "id": "q_bav3_8", "patterns":["troponine", "troponines"], "answer":"Noté." },
+            { "id": "q_bav3_9", "patterns":["échographie cardiaque", "ETT", "échocardiographie transthoracique"], "answer":"Noté." },
+            { "id": "q_bav3_10", "patterns":["isoprénaline"], "answer":"Noté." },
+            { "id": "q_bav3_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis l'infirmière, il faudrait vraiment passer voir la patiente de 69 ans Mme B, son scope est anormal."},
+            { "id": "q_bav3_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_bav3_13", "patterns":["pacemaker", "stimulateur cardiaque"], "answer":"Noté." },
+            { "id": "q_bav3_14", "patterns":["antécédents"], "answer":"Patiente diabétique sans autre antécédent connu." },
+            { "id": "q_bav3_15", "patterns":["qu'est-ce qui s'est passé", "motif", "anamnèse"], "answer":"Syncope au domicile et hospitalisation depuis ce midi en USIC." },
+            { "id": "q_bav3_16", "patterns":["constantes", "paramètres vitaux", "fréquence cardiaque", "FC", "tension", "PA", "saturaiton", "température"], "answer":"FC 43bpm, FR 16, sat 96%, T° 36,8°C." }
+          ]
+        },{
+          id: "SDD10",
+          title: "Douleur thoracique",
+          intro: "Vous êtes médecin généraliste installé en cabinet de ville. Vous recevez en urgence monsieur D, 52 ans, pour une douleur thoracique de repos, constrictive, depuis environ 1 h. Vous réalisez dans les premiers instants un électrocardiogramme qui retrouve un sus décalage du segment ST dans le territoire antérieur (dérivations VI à V4) avec un miroir inférieur (dérivations D2, D3 et aVF). Vous posez donc le diagnostic de syndrome coronaire aigu avec sus décalage du segment ST (SCAST+ ou STEMI). Indiquez la première chose à effectuer, indiquez les médicaments que le patient recevra avant son transfert sur le plateau technique, expliquez au patient le principe d'une coronarographie et d'une angioplastie transluminale.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Appeler le SAMU. Prescrire des antalgies, de l'aspirine, un inhibiteur de P2Y12 (ticagrélor ou prasugrel), prescrire de l'héparine (HNF ou HBPM).",
+            "- Savoir que cet examen se fait au bloc dans des conditions de stérilité, que la voie d'abord est une poction artérielle le + souvent radiale, qu'il y a une injection de produit de contraste iodé, que la coro permet l'identification de la lésion coronaire coupable, que l'angioplasie se fait en gonflant un ballonet, qu'un stent ou endoprothèse métallique sera posé.",
+            "Devant toute douleur thoracique 3 examens sont à prescrire systématiquement : ECG, radiographie thoracique, troponine.",
+            "Il y a 4 urgences à éliminer (PIED) : péricardite, IDM, embolie pulmonaire, dissection aortique."
+          ],
+
+          questionSet: [
+            { "id": "q_idm_1", "patterns":["SAMU", "appeler le SAMU", "régulation"], "answer":"Vous contactez le SAMU."},
+            { "id": "q_idm_2", "patterns":["antagliques", "palier 1 et palier 3"], "answer":"Des antalgiques sont prescrits." },
+            { "id": "q_idm_3", "patterns":["aspirine"], "answer":"Aspirine prescrite." },
+            { "id": "q_idm_4", "patterns":["inhibiteur de P2Y12", "P2Y12", "ticagrélor", "prasugrel"], "answer":"Un inhibiteur de P2Y12 est prescrit." },
+            { "id": "q_idm_5", "patterns":["héparine", "HNF", "HBPM"], "answer":"Une héparine est prescrite." },
+            { "id": "q_idm_6", "patterns":["bloc opératoire", "bloc", "stérile"], "answer":"Noté." },
+            { "id": "q_idm_7", "patterns":["ponction artérielle", "radiale"], "answer":"Noté." },
+            { "id": "q_idm_8", "patterns":["injecté", "injection de produit de contraste", "produit de contraste", "iodé", "iode"], "answer":"Noté." },
+            { "id": "q_idm_9", "patterns":["identifier la lésion", "identifier", "trouver"], "answer":"Noté." },
+            { "id": "q_idm_10", "patterns":["angioplastie", "gonfle un ballonnet", "ballonnet"], "answer":"Noté." },
+            { "id": "q_idm_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. C'est quoi la suite de ma prise en charge alors ?"},
+            { "id": "q_idm_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_idm_13", "patterns":["stent", "prothèse", "endoprothèse métallique"], "answer":"Noté." },
+            { "id": "q_idm_14", "patterns":["facteurs de risque", "diabète", "hypertension", "obésité", "dyslipidémie", "hypercholestérolémie"], "answer":"Le patient a pour antécédents une hypertension artérielle, un DT2, une hérédité coronaire paternelle et un tabagisme actif à 39PA." },
+            { "id": "q_idm_15", "patterns":["allergies", "allergique"], "answer":"Absence d'allergie médicamenteuse." }
+          ]
+        },
+{
+          id: "SDD11",
+          title: "Palpitations",
+          intro: `Vous êtes cardiologue libéral installé en ville et vous recevez madame P, une patiente de 36 ans, pour des sensations de « cœur qui s'emballe » ces derniers temps, de manière intermittente. Cette patiente n'a pas d'antécédent médical connu. Votre interrogatoire conjugué à votre examen clinique ne retrouve pas de cause cardiaque à première vue. Vous réalisez un l'électrocardiogramme suivant. Interrogez et examinez la patiente à la recherche d'une cause extracardiaque de palpitations, expliquez au patient les différentes possibilités d'enregistrement ambulatoire des palpitations. <img src= "palpitations.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher des signes de déshydratation (muqueuses sèches, langue rôtie, soif intense, oligurie, pli cutané, asthénie 2/6), substance excitante (alcool, tabac, cocaïne, amphétamines), prise de sympathomimétiques et hormones thyroïdiennes, signes hyperthyroïdie (transpiration excessive, bouffées de chaleur, tremblement, tb du sommeil, irritabilité, amaigrissement, diarrhée 2/7), fièvre, SAOS (ronflement, pauses respi pendant le sommeil, sensation d'étouffement, micro-éveils à répétition, nycturie, sommeil non réparateur, difficultés de concentration, somnolence diurne, céphalées matinales, tb libido), grossesse.",
+            "- Savoir expliquer à quoi correspond un holter ECG (durée 24-96h), ECG ambulatoire de longue durée (7-21j), holter implantable (3-5a).",
+            "Rappel des causes cardiologiques :",
+            "- QRS réguliers et fins : tachycardie sinusale, tachycardie jonctionnelle, tachycardie atriale, flutter à conduction normale.",
+            "- QRS réguliers et larges : tachycardie ventriculaire, fibrillation ventriculaire, tachycardie supra-ventriculaire + BBD/BBG.",
+            "- QRS irréguliers et fins : fibrillation atriale, flutter.",
+            "- QRS irréguliers et larges : fibrillation atriale + BBD/BBG."
+          ],
+
+          questionSet: [
+            { "id": "q_palpitations_1", "patterns":["déshydratation", "muqueuses sèches", "langue rôtie", "pli cutané", "soif", "oligurie", "asthénie", "fatigue"], "answer":"Absence de signes de déshydratation."},
+            { "id": "q_palpitations_2", "patterns":["alcool", "tabac", "cocaïne", "amphétamines"], "answer":"Absence de consommation de tabac, alcool ou substances illicites." },
+            { "id": "q_palpitations_3", "patterns":["sympathomimétiques", "hormones thyroïdiennes"], "answer":"Absence de prise de traitements." },
+            { "id": "q_palpitations_4", "patterns":["hyperthyroïdie", "transpiration", "sueurs", "bouffées de chaleur", "tremblements", "troubles du sommeil", "irritabilité", "amaigrissement", "diarrhée"], "answer":"Absence de signes d'hyperthyroïdie." },
+            { "id": "q_palpitations_5", "patterns":["fièvre"], "answer":"Absence de fièvre." },
+            { "id": "q_palpitations_6", "patterns":["apnées du sommeil", "ronflement", "pauses respiratoires", "étouffement", "micro-réveils", "nycturie", "uriner la nuit", "sommeil non réparateur", "difficultés de concentration", "somnolence", "céphalées matinales", "troubles de la libido"], "answer":"Absence de signes d'apnées du sommeil." },
+            { "id": "q_palpitations_7", "patterns":["grossesse"], "answer":"Absence d'éléments en faveur d'une grossesse." },
+            { "id": "q_palpitations_8", "patterns":["holter ECG", "holter-ECG", "24 à 96h"], "answer":"Noté." },
+            { "id": "q_palpitations_9", "patterns":["ECG ambulatoire", "7 à 21 jours", "7 à 21j"], "answer":"Noté." },
+            { "id": "q_palpitations_10", "patterns":["holter implantable", "3 à 5 ans", "capteur sous-cutané"], "answer":"Noté." },
+            { "id": "q_palpitations_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai l'impression d'avoir des palpitations de temps en temps depuis 1 mois et demi, mais là je ne ressens rien pendant la consultation, je suis désolée."},
+            { "id": "q_palpitations_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci à vous Docteur." },
+          ]
+        },
+{
+          id: "SDD12",
+          title: "Tachycardie",
+          intro: `Vous êtes médecin généraliste en cabinet de ville et recevez un de vos patients, monsieur T 50 ans, pour un bilan clinique annuel. Lors de votre examen clinique, vous remarquez des bruits du cœur accélérés et irréguliers. Le patient n'a aucune plainte fonctionnelle. Vous réalisez l'électrocardiogramme suivant. Posez un diagnostic, répondez à la question suivante 'Le patient présente t'il une indication de traitement anticoagulant au long cours', et expliquez au patient les complications de sa pathologie. <img src= "tachycardie.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Reconnaître une fibrillation atriale. Rechercher tous les éléments composant le CHA2DS2-VASc. Savoir dire qu'il y a une indication de traitement AC au long cours",
+            "- Savoir qu'il existe un risque embolique (AIT, AVC, EP), un risque d'IC, un risque de maladie rythmique de l'oreillette, un risque d'ischémie fonctionnelle (angor).",
+            "Devant la découverte d'une FA 3 classes s'offrent à nous :",
+            "- Réduction spontanée : < 7j = paroxystique, >7j = persistante.",
+            "- Pas de réduction spontanée.",
+            "- FA permanente.",
+            "Si la FA est permanente il faut adopter une stratégie de ralentissement.",
+            "Si la FA est de réduction spontanée il faut adopter une stratégie antiarythmique.",
+            "S'il n'y a pas de réduction spontanée il faut tenter une cardioversion (électrique ou médicament) après 3 semaines d'AC ou une ETO. En cas de succès on adopte la stratégie thérapeutique des FA réductibles, en cas d'échec on peut réessayer ou passer à la stratégie thérapeutique des FA permanentes.",
+            "Rappel du CHA2DS2-VASc :",
+            "- C = cardiopathie : décompensation cardiaque G ou dysfonction ventriculaire gauche.",
+            "- H = hypertension artérielle.",
+            "- A = âge > 75a.",
+            "- D = diabète.",
+            "- S = stroke : AVC, AIT ou embolie systémique.",
+            "- V = vasculaire : cardiopathie ischémique, artériopathies, athérome.",
+            "- A = âge > 65a.",
+            "- S = sexe féminin."
+          ],
+
+          questionSet: [
+            { "id": "q_tachy_1", "patterns":["fibrillation atriale", "FA", "ACFA"], "answer":"Diagnostique de fibrillation atriale posé."},
+            { "id": "q_tachy_2", "patterns":["anticoagulant", "anticoaguler"], "answer":"Le patient sera mis sous anticoagulants." },
+            { "id": "q_tachy_3", "patterns":["risque embolique"], "answer":"Noté." },
+            { "id": "q_tachy_4", "patterns":["risque d'insuffisance cardiaque"], "answer":"Noté." },
+            { "id": "q_tachy_5", "patterns":["maladie rythmique de l'oreillette", "fibrose auriculaire"], "answer":"Noté." },
+            { "id": "q_tachy_6", "patterns":["ischémie fonctionnelle", "risque d'angor"], "answer":"Noté." },
+            { "id": "q_tachy_7", "patterns":["insuffisance cardiaque", "OAP", "oedème aigu pulmonaire"], "answer":"Je n'ai jamais eu de poussée d'insuffisance cardiaque." },
+            { "id": "q_tachy_8", "patterns":["hypertendu", "hypertension", "HTA"], "answer":"Je suis hypertendu sous bithérapie ramipril + hydrochlorothiazide." },
+            { "id": "q_tachy_9", "patterns":["âge", "plus de 75 ans", "plus de 65 ans"], "answer":"J'ai 50 ans." },
+            { "id": "q_tachy_10", "patterns":["diabète", "diabétique"], "answer":"Je suis diabétique de type 2 traité par metformine." },
+            { "id": "q_tachy_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_tachy_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci beaucoup Docteur." },
+            { "id": "q_tachy_13", "patterns":["embolie", "AVC", "AIT"], "answer":"Je n'ai jamais fait d'embolies, AVC ou AIT." },
+            { "id": "q_tachy_14", "patterns":["artériopathie", "athérome", "AOMI"], "answer":"Je n'ai pas de localisation athéromateuse connue." },
+            { "id": "q_tachy_15", "patterns":["homme", "femme", "sexe"], "answer":"Je suis effectivement un homme." }
+          ]
+        },
+{
+          id: "SDD13",
+          title: "Réalisation et interprétation d'un ECG",
+          intro: `Vous êtes médecin généraliste et recevez en consultation un patient de 23 ans pour la réalisation d'un ECG dans le cadre d'un certificat de non-contre-indication à la pratique sportive. Expliquez comment réaliser un ECG de repos, interprétez de manière structurée l'ECG. <img src= "ECG.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Placer le patient en décubitus dorsal, dénuder le torse et les 4 membres, placer V1 au 4e EICD / V2 au 4e EICG / V3 entre V2 et V4 / V4 au croisement entre 5e EIC et la ligne médioclaviculaire G / V5 entre V4 et V6 / V6 entre 5e EIC et la ligne axillaire moyenne G. Electrode rouge sur MSD, noire sur le MID, jaune sur MSG et verte sur MIG. Vérifier que la vitesse est bien de 25mm/s et l'amplitude à 0,1mV/mm.",
+            "- Savoir calculer une FC (environ 65bpm), dire que le rythme est sinusal et régulier, onde P morphologie normale, axe normal (car entre -30° et +90°), pas de trouble de la conduction (PR < 200ms et QRS fins), pas HVG (indice Sokolow SV1+RV5<35mm), pas de trouble ischémique (T positives, ST isoéléctrique, pas ondes Q de nécrose)."
+          ],
+
+          questionSet: [
+            { "id": "q_ecg_1", "patterns":["décubitus dorsal", "allongé"], "answer":"Noté."},
+            { "id": "q_ecg_2", "patterns":["enlever le tee-shirt", "enlever le t-shirt", "dénuder le torse"], "answer":"Noté." },
+            { "id": "q_ecg_3", "patterns":["4e espace intercostal droit"], "answer":"Noté." },
+            { "id": "q_ecg_4", "patterns":["4e espace intercostal gauche"], "answer":"Noté." },
+            { "id": "q_ecg_5", "patterns":["5e espace intercostal", "ligne médioclaviculaire gauche"], "answer":"Noté." },
+            { "id": "q_ecg_6", "patterns":["ligne axillaire moyenne gauche"], "answer":"Noté." },
+            { "id": "q_ecg_7", "patterns":["rouge", "membre supérieur droit"], "answer":"Noté." },
+            { "id": "q_ecg_8", "patterns":["noir", "membre inférieur droit"], "answer":"Noté." },
+            { "id": "q_ecg_9", "patterns":["jaune", "membre supérieur gauche"], "answer":"Noté." },
+            { "id": "q_ecg_10", "patterns":["vert", "membre inférieur gauche"], "answer":"Noté." },
+            { "id": "q_ecg_11", "patterns":["25 mm/s", "0,1 mV/mm", "25mm/s", "0,1mV/mm"], "answer":"Noté"},
+            { "id": "q_ecg_12", "patterns":["fréquence", "FC", "65"], "answer":"Noté." },
+            { "id": "q_ecg_13", "patterns":["sinusal", "régulier"], "answer":"Noté." },
+            { "id": "q_ecg_14", "patterns":["onde P", "morphologie normale"], "answer":"Noté." },
+            { "id": "q_ecg_15", "patterns":["axe normal", "entre -30° et +90°"], "answer":"Noté." },
+            { "id": "q_ecg_16", "patterns":["pas de trouble de la conduction", "PR < 200ms", "QRS fins"], "answer":"Noté." },
+            { "id": "q_ecg_17", "patterns":["pas d'hypertrophie ventriculaire", "pas d'HVG", "indice de Sokolow < 35mm"], "answer":"Noté." },
+            { "id": "q_ecg_18", "patterns":["pas d'ischémie", "ondes T positives", "ST isoélectrique", "pas d'ondes Q de nécrose"], "answer":"Noté." }
+          ]
+        },
+{
+          id: "SDD14",
+          title: "Analyse du bilan lipidique",
+          intro: "Vous êtes médecin généraliste et recevez Mme L, une patiente de 45 ans qui vous rapporte un bilan lipidique réalisé à titre de dépistage. CH total = 2,8 g/L, HDL-c = 0,5 g/L, TG = 1 g/L et LDL-c en attente. Interprétez le bilan lipidique, cherchez des signes cliniques évocateurs de cette dyslipidémie, cherchez une cause secondaire.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Savoir utiliser la formule de Friedwald (LDL-c = CH - HDL-c - TG/5), expliquer que la patiente a une hypercholestérolémie pure.",
+           "- Rechercher : xanthélasma, arc cornéen, xanthomes tendineux, xanthomes plans cutanés.",
+            "- Rechercher des signes d'hypothyroïdie (asthénie, froid, prise de poids, bradycardie, peau sèche, constipation, crampes, dépression 3/8), signes de cholestase (prurit, asthénie, ictère, urines foncées, selles décolorées 2/5), cause iatrogénique (ciclosporine++).",
+            "Les dyslipidémies sont souvent intriquées dans le sd métabolique (3/5) :",
+            "- Obésité androïde : >102cm H et >88cm F.",
+            "- TG : >1,5 g/L.",
+            "- HDL-c : <0,4 g/L H et <0,5 g/L F.",
+            "- PA : >130/85.",
+            "- GàJ : >1,10 g/L."
+          ],
+
+          questionSet: [
+            { "id": "q_eal_1", "patterns":["Friedewald", "LDL-c = cholestérol total - HDL-c - triglycérides / 5", "LDL-c = cholestérol total - HDL-c - TG/5"], "answer":"Noté."},
+            { "id": "q_eal_2", "patterns":["hypercholestérolémie", "hypercholestérolémie pure"], "answer":"Diagnostic validé." },
+            { "id": "q_eal_3", "patterns":["xanthélasma"], "answer":"Absence de xanthélasma." },
+            { "id": "q_eal_4", "patterns":["arc cornéen"], "answer":"Présence d'un léger arc cornéen bilatéral." },
+            { "id": "q_eal_5", "patterns":["xanthomes tendineux"], "answer":"Absence de xanthome tendineux." },
+            { "id": "q_eal_6", "patterns":["xanthomes cutanés"], "answer":"Absence de xanthomes cutanés." },
+            { "id": "q_eal_7", "patterns":["hypothyroïdie", "asthénie", "fatigue", "sécheresse cutanée", "prise de poids", "pris du poids", "froid", "frilosité", "bradycardie", "crampes", "dépression", "déprimée", "constipation", "constipée"], "answer":"J'ai souvent froid et je trouve que mon transit est lent en ce moment. Mon mari lui vous dirait qu'il me trouve fatiguée. Et j'ai la peau sèche donc ma pharmacienne me donne une crème. Ah aussi j'ai pris 5 kilos en 2 mois. Et mon mental va bien !" },
+            { "id": "q_eal_8", "patterns":["cholestase", "prurit", "ictère", "urines foncées", "selles claires"], "answer":"Je dirai que mes urines sont normales, comme mes selles. Ca ne me gratte pas et je ne semble pas jaune." },
+            { "id": "q_eal_9", "patterns":["iatrogénie", "iatrogénique", "traitements"], "answer":"Je ne prend aucun traitement." },
+            { "id": "q_eal_10", "patterns":["antécédents"], "answer":"Je n'ai aucun antécédent médical personnel ou familial." },
+            { "id": "q_lihg_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens avec les résultats de ma prise de sang."},
+            { "id": "q_eal_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_eal_13", "patterns":["fréquence cardiaque", "FC"], "answer":"53 bpm." }
+          ]
+        },
+{
+          id: "SDD15",
+          title: "Elévation des marqueurs biochimiques cardiaques",
+          intro: "Vous êtes interne de garde en cardiologie et vous vous préparez à prendre la garde d'USIC de ce soir. Vous faites votre tour des patients vers 19 h 40 quand, tout à coup, vous recevez un appel de l'urgentiste pour vous parler d'une patiente. Il s'agit de madame T, 53 ans, qui s'est présentée au SAU à 17 h pour une douleur thoracique typique. L'électrocardiogramme réalisé dans les 10 min suivant le premier contact médical était « normal » selon votre collègue urgentiste, « mis à part des ondes T légèrement négatives ». Il vous communique les résultats de biologie suivants : NFS normale, ionogramme sanguin normal, créatinémie 80 umol/L, CRP 10 mg/L, Troponine US 513 ng/mL (N < 14), BNP 50 pg/mL. Lorsque vous venez examiner la patiente au SAU, elle n'est plus douloureuse. Interprétez le dosage de troponine et expliquez à la patiente sa signification, interprétez le dosage du BNP et expliquez à la patiente sa signification, posez un diagnostic et expliquez à la patiente la suite de sa PEC.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Savoir dire que la troponine est élevée et qu'elle témoigne d'une nécrose des cardiomyocytes liées à une ischémie aigue du myocarde.",
+            "- Savoir dire que le BNP est normal et qu'il est un marqueur pronostic et qui élimine une IC aigue surajoutée.",
+            "- Diagnostiquer un SCA sans élévation du ST ou SCA non ST+ ou NSTEMI, orienter la patiente vers l'USIC et savoir dire qu'elle bénéficiera d'une coronarographie dans les 24h.",
+            "La PEC d'un NSTEMI est la suivante :",
+            "- doser la troponine à H0 : si + diagnostic fait, si - répéter à H1 ou H3.",
+            "Attention une augmentation isolée des CPK sans élévation de la troponine doit faire évoquer une rhabdomyolyse.",
+            "En ville il n'y a aucun intérêt à doser les troponines. En cas du suspicion de SCA la prise en charge doit se faire par le SAMU ou au SAU.",
+          ],
+
+          questionSet: [
+            { "id": "q_nstemi_1", "patterns":["troponines sont élevées", "troponines élevées"], "answer":"D'accord je comprends, et ça veut dire quoi quand les troponines sont élevées ?"},
+            { "id": "q_nstemi_2", "patterns":["nécrose", "ischémie aigue", "infarctus"], "answer":"D'accord je vois." },
+            { "id": "q_nstemi_3", "patterns":["BNP est normal", "BNP normal"], "answer":"C'est rassurant, il sert à quoi ce marqueur ?" },
+            { "id": "q_nstemi_4", "patterns":["insuffisance cardiaque", "pronostic"], "answer":"Ok je ne savais pas." },
+            { "id": "q_nstemi_5", "patterns":["syndrome coronarien aigu sans élévation du segment ST", "SCA ST-", "SCA non ST+", "NSTEMI"], "answer":"Ok..." },
+            { "id": "q_nstemi_6", "patterns":["unité de soins intensifs", "USIC", "SIC"], "answer":"D'accord, je ne pensais pas que c'était si grave..." },
+            { "id": "q_nstemi_7", "patterns":["coronarographie", "24h"], "answer":"Ok je vous fais confiance." },
+            { "id": "q_nstemi_8", "patterns":["douleur"], "answer":"C'est une douleur de repos, constricive, rétro-sternale, irradiant l'épaule gauche et apparue vers 15h50." },
+            { "id": "q_nstemi_9", "patterns":["tabac", "fumez", "alcool"], "answer":"Je ne fume pas et je ne bois pas d'alcool." },
+            { "id": "q_nstemi_10", "patterns":["dyspnée", "du mal à respirer", "oedèmes", "OMI"], "answer":"Absence de signes d'insuffisane cardiaque." },
+            { "id": "q_nstemi_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Vous pouvez m'expliquer ce que c'est ces marqueurs là ?"},
+            { "id": "q_nstemi_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_nstemi_13", "patterns":["constantes", "paramètres vitaux", "fréquence cardiaque", "FC", "saturation", "tension artérielle", "température"], "answer":"FC 92 bpm, PA 133/82mmHg, sat en AA 96%, T° 37,4°C." }
+          ]
+        },
+{
+          id: "SDD16",
+          title: "Prescription et suivi d'un anticoagulant et/ou antiagrégant",
+          intro: "Vous êtes cardiologue libéral et recevez Mme F, 48 ans, adressée par son médecin généraliste. Celui ci vous dit qu'il a observé à l'ECG un épisode de fibrillation atriale. Recherchez et justifiez l'indication et le choix d'un traitement antithrombotique, prescrivez les bilans biologiques nécessaires à la mise en oeuvre de ce traitement et éduquez la patiente sous AC au long cours.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interroger sur les items du CHA2DS2-VASc, rechercher des CI (rétrécissement mitral, valve mécanique, SPAL, IR sévère), prescrire des AVK (warfarine en 1e intention). Prescrire une NFS et un bilan d'hémostase.",
+            "- Eviter l'automédication et la co-prescription avec des inducteurs enzymatiques, consulter rapidement en cas de saignements, contrôler l'INR au moins une fois par mois, consulter rapidement en cas d'augmentation trop importante de l'INR, informer tous les médecins du traitement grâce à sa carte de traitement, ne pas pratiquer de sports violents.",
+            "Que faire en cas de surdosage en AVK :",
+            "INR cible 2,5 : 4<INR<6 = saut d'une prise, 6<INR<10 = arrêt et prise 1-2mg vitamine K, INR > 10 = arrêt et 5mg de vitamine K.",
+            "INR cible >3 : 6<INR<10 = saut d'une prise et avis spécialisé, INR > 10 = avis spécialisé ou hospitalisation."
+          ],
+
+          questionSet: [
+            { "id": "q_avk_1", "patterns":["insuffisance cardiaque"], "answer":"Je n'ai pas d'insuffisance cardiaque connue mais j'ai une prothèse valvulaire."},
+            { "id": "q_avk_2", "patterns":["hypertension", "hypertendue"], "answer":"Je suis hypertendue traitée par amlodipine." },
+            { "id": "q_avk_3", "patterns":["âge"], "answer":"J'ai 48 ans." },
+            { "id": "q_avk_4", "patterns":["diabète", "diabétique"], "answer":"Je ne suis pas diabétique." },
+            { "id": "q_avk_5", "patterns":["embolie", "AVC", "AIT", "accident vasculaire"], "answer":"Je n'ai pas eu d'accident embolique." },
+            { "id": "q_avk_6", "patterns":["athérome", "artériopathie", "AOMI"], "answer":"Je ne suis pas athéromateuse." },
+            { "id": "q_avk_7", "patterns":["rétrécissement mitral", "valve mécanique", "SAPL", "antiphospholipides", "insuffisance rénale"], "answer":"J'ai une valve mécanique." },
+            { "id": "q_avk_8", "patterns":["AVK", "anti vitamine K", "warfarine"], "answer":"Ok !" },
+            { "id": "q_avk_9", "patterns":["NFS"], "answer":"D'accord." },
+            { "id": "q_avk_10", "patterns":["bilan d'hémostase", "TP", "TCA", "fibrinogène"], "answer":"Ok." },
+            { "id": "q_avk_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens sur mot de mon généraliste, il m'a trouvé une anomalie au niveau du coeur apparement."},
+            { "id": "q_avk_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Merci, tout est clair Docteur." },
+            { "id": "q_avk_13", "patterns":["automédication", "inducteurs enzymatiques"], "answer":"Noté." },
+            { "id": "q_avk_14", "patterns":["saignement"], "answer":"Noté." },
+            { "id": "q_avk_15", "patterns":["contrôle de l'INR", "contrôler l'INR", "tous les mois"], "answer":"D'accord !" },
+            { "id": "q_avk_16", "patterns":["augmentaion", "augmentation de l'INR"], "answer":"D'accord !" },
+            { "id": "q_avk_17", "patterns":["informer", "carte de traitement", "carte"], "answer":"Pas de soucis." },
+            { "id": "q_avk_15", "patterns":["sport violent", "arrêt des sports violents", "arrêter les sports violents"], "answer":"Ca tombe bien ce n'est pas mon cas ! J'ai déjà trois enfants c'est assez sportif comme ça !" },
+          ]
+        },
+{
+          id: "SDD17",
+          title: "Prescription d'un hypolipémiant",
+          intro: "Vous êtes médecin généraliste et vous recevez un patient de 58 ans dans les suites d'une hospitalisation en CHU. Ce patient, il y a 1 semaine, a présenté un infarctus du myocarde revascularisé à un stade précoce sur l'interventriculaire antérieure proximale. Sa FEVG en sortie d'USIC était estimée à 53 %. Il vient vous voir avec l'ordonnance suivante et souhaite avoir quelques renseignements : Aspirine 75 mg, Ticagrélor 180 mg, Rosuvastatine 5 mg, Bisoprolol 10 mg. Déterminez l'objectif de LDL-c, expliquez les modes d'action des statines / ézétimibe / résines / fibrates, planifiez la surveillance de l'efficacité et de la tolérance de la statine.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Savoir dire que le patient rentre dans le cadre de la prévention secondaire et est à risque CVS très élevé, avoir comme cible un LDL-c < 0,55 g/L.",
+            "- Savoir que les statines inhibent la HMG-CoA réductase, que l'éztimibe inhibe l'absorption intestinale de CH, que les résines baissent la réabsorption intestinales des acides biliaires, que les fibrates activent la PPAR-alpha.",
+            "- Evaluer l'efficacité par un bilan lipique à 2-3M après l'initiation du traitement puis annuellement, évaluer la tolérance par la recherche de myalgies et prescrire un dosage de CPK UNIQUEMENT si myalgies, évaluer la tolérance biologique par un dosage des transaminaes avant et dans les 3M suivant l'instauration du traitement."
+          ],
+
+          questionSet: [
+            { "id": "q_statines_1", "patterns":["prévention secondaire", "risque  cardiovasculaire très élevé", "très élevé"], "answer":"Ok je vois."},
+            { "id": "q_statines_2", "patterns":["<0,55", "LDL-c <0,55"], "answer":"D'accord." },
+            { "id": "q_statines_3", "patterns":["HMG-CoA reductase", "HMG-CoA réductase"], "answer":"Je vois." },
+            { "id": "q_statines_4", "patterns":["absorption intestinale"], "answer":"Ok." },
+            { "id": "q_statines_5", "patterns":["réabsorption intestinales", "acides biliaires"], "answer":"Ok." },
+            { "id": "q_statines_6", "patterns":["PPAR-alpha", "PPAR-a", "peroxisome proliferator-activated receptor alpha"], "answer":"D'accord, je ne connaissais pas." },
+            { "id": "q_statines_7", "patterns":["2 mois", "3 mois", "annuellement"], "answer":"Ok on fera ça." },
+            { "id": "q_statines_8", "patterns":["myalgies"], "answer":"Je vous tiendrais au courant." },
+            { "id": "q_statines_9", "patterns":["transaminases"], "answer":"D'accord." },
+            { "id": "q_statines_10", "patterns":["antécédents", "maladies"], "answer":"J'ai eu un SCA récemment, je n'ai pas de diabète, pas d'hypertension, pas de dyslipidémie. Je fume toujours, environ 40 PA." },
+            { "id": "q_statines_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Pourriez vous me parler un peu mon cholestérol ? "},
+            { "id": "q_statines_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+          ]
+        },
+{
+          id: "SDD18",
+          title: "Prescription des diurétiques",
+          intro: "Vous êtes urgentiste de garde au CHU un 25 décembre et vous recevez à 19 h une patiente de 62 ans qui se plaint d'une gêne respiratoire depuis 1 h 30. Elle a un antécédent de cancer du sein traité par anthracyclines. Votre gaz du sang retrouve une acidose respiratoire. L'électrocardiogramme est normal et la radiographie de thorax retrouve des opacités floconneuses bilatérales avec une ascension des hiles vers le sommet. Vous entendez des crépitants bilatéraux jusqu'à mi-champs. Vous diagnostiquez brillamment un œdème aigu pulmonaire (OAP), très probablement révélateur d'une cardiopathie dilatée aux anthracyclines, décompensée par une surconsommation de sel (les fameuses huîtres de Noël...). Ses constantes sont les suivantes : PA 125/78 mmHg, FC 103 bpm, SpO2 92 % en AA, FR 24/min. Quelles sont les 3 mesures à visée symptomatique à prescrire en 1e intention, mettez en place la surveillance clinique des traitements introduits, recherchez les principaux effets secondaires.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Prescrire du furosémide, des dérivés nitrés et une oxygénothérapie ou VNI. Vérifier la TA, l'absence de signes cliniques de déshydratation, peser la patiente, vérifier l'amélioration de la dyspnée.",
+            "- Réaliser un dosage de la créatinémie pour vérifier l'absence d'IRF et un ionogramme pour vérifier l'absence d'hypoK et hypoNa de déplétion.",
+            "Rappel sur les diurétiques, leur site d'action, leurs EI et leurs indications :",
+            "- Acétazolamide -> tubule proximal : risque d'hypoK et d'acidose métabolique. Indiqué pour les glaucomes et en cas d'alcalose métabolique de reventilation.",
+            "- Diurétiques de l'anse -> anse de Henlé : risque d'hypoK, d'hyperuricémie et d'hypoMg. Indiqué devant un sd oedémateux, et une HTA si IR.",
+            "- Diurétiques thiazidiques -> tube distal : risque d'hypoK, d'hypoNa et d'hyperuricémie. Indiqué si HTA et sd oedémateux (potentialise les DA).",
+            "- Diurétiques épargneurs de K -> tube collecteur : risque d'hyperK, d'acide métabolique, de gynécomastie. Indiqué si sd oedémateux avec hyperaldostéronisme."
+          ],
+
+          questionSet: [
+            { "id": "q_oap_1", "patterns":["furosémide", "lasilix"], "answer":"Vous prescrivez du furosémide."},
+            { "id": "q_oap_2", "patterns":["dérivés nitrés"], "answer":"Vous prescrivez des dérivés nitrés." },
+            { "id": "q_oap_3", "patterns":["oxygène", "oxygénothérapie", "VNI", "ventilation non invasive"], "answer":"Vous prescrivez une oxygénothérapie ou une VNI." },
+            { "id": "q_oap_4", "patterns":["tension", "pression"], "answer":"La tension est à présent à 115/72 mmHg." },
+            { "id": "q_oap_5", "patterns":["déshydratation", "pli cutané", "cernes", "soif", "muqueuses"], "answer":"Absence de signes de déshydratation." },
+            { "id": "q_oap_6", "patterns":["peser", "poids"], "answer":"Le poids de base de la patiente est de 56kg, son poids au SAU est de 62kg. Après traitement son poids est évalué à 58kg." },
+            { "id": "q_oap_7", "patterns":["dyspnée"], "answer":"Nette amélioration de la gène respiratoire." },
+            { "id": "q_oap_8", "patterns":["créatinémie", "insuffisance rénale"], "answer":"Créatinémie dans la norme pour le sexe et la taille." },
+            { "id": "q_oap_9", "patterns":["ionogramme", "hypokaliémie", "hyponatrémie"], "answer":"Ionogramme sans particularités." },
+            { "id": "q_oap_10", "patterns":["antécédents"], "answer":"La patiente n'a aucun ATCD cardiovasculaire connu." },
+          ]
+        },
+{
+          id: "SDD19",
+          title: "Prescription et surveillance d'une voie d'abord vasculaire",
+          intro: "Vous êtes réanimateur dans votre service lorsque vous recevez un appel des urgences. On veut vous transférer une patiente de 46 ans qui présente une instabilité hémodynamique dans les suites d'une probable pyélonéphrite aiguë. L'ECBU a trouvé la présence de nombreuse E. Coli, le compte rendu de l'imagerie des voies urinaires est encore en attente. Le remplissage par sérum physiologique (NaCI 0,9 %) sur voies veineuses périphériques n'a pas
+permis de rétablir une pression artérielle convenable et laisse la patiente à 83/57 mmHg. Le dosage du lactate prélevé en urgences revient à 7 mmol/L. À son arrivée dans le service, ses constantes sont : PA 83/57 mmHg, FC 128 bpm, FR 24/min, SpO2 96 %, T° 38,9 °C, GCS 14 (la patiente est légèrement confuse). Pourquoi devriez-vous poser rapidement une VVC, expliquez les modalités de pose d'une VVC, et donnez les complications principales d'une VVC jugulaire à rechercher.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Savoir dire qu'on va devoir utiliser des catécholamines car la patiente est en choc septique, et que les catécholamines étant veinotoxiques il va falloir poser une VVC.",
+            "- Savoir que la pose se fait en conditions stériles, sous anesthésie locale, sous guidage échographique et en position de Trendelenburg.",
+            "- Rechercher une infection de cathéter, une thrombose de cathéter, une hémorragie et un pneumothorax.",
+            "Types de voies d'abord et durée :",
+            "- PICC line (VVC) : insertion périphérique avec extrémité dans la VCS, durée 1-3M.",
+            "- VVC : insertion en sous-clavière et extrémité dans la VCS, durée 1-3M.",
+            "- Chambre implantable (VVC) : insertion en sous-clavière et extrémité dans la VCS, dure plusieurs années.",
+            "- VVP : insertion périphérique et extrémité périphérique, durée 96h max.",
+            "- Midline (VVP) : insertion périphérique et extrémité périphérique, durée 28j."
+          ],
+
+          questionSet: [
+            { "id": "q_vvc_1", "patterns":["catécholamines", "noradrénaline", "choc septique"], "answer":"Noté."},
+            { "id": "q_vvc_2", "patterns":["veinotoxiques"], "answer":"Noté." },
+            { "id": "q_vvc_3", "patterns":["stérile", "stériles"], "answer":"Noté." },
+            { "id": "q_vvc_4", "patterns":["anesthésie locale"], "answer":"Noté." },
+            { "id": "q_vvc_5", "patterns":["échographie", "échographique"], "answer":"Ok..." },
+            { "id": "q_vvc_6", "patterns":["Trendelenburg"], "answer":"Noté." },
+            { "id": "q_vvc_7", "patterns":["infection", "infection de cathéter"], "answer":"Noté." },
+            { "id": "q_vvc_8", "patterns":["thrombose"], "answer":"Noté." },
+            { "id": "q_vvc_9", "patterns":["hémorragie", "perforation"], "answer":"Noté." },
+            { "id": "q_vvc_10", "patterns":["pneumothorax"], "answer":"Noté." },
+          ]
+        },
+
+{
+          id: "SDD20",
+          title: "Prescription médicamenteuse, consultation de suivi et éducation du patient hypertendu",
+          intro: "Vous êtes médecin généraliste et recevez monsieur H, 58 ans, dans le cadre du suivi de son hypertension artérielle. Il s'agit d'un patient que vous connaissez bien et chez qui vous avez du mal à équilibrer sa tension artérielle. Initialement, vous aviez placé le patient sous ramipril + indapamide. La tolérance clinique et biologique était satisfaisante mais les chiffres tensionnels sont restés élevés au domicile. Devant ce manque d'efficacité, vous avez décidé de rajouter il y a environ 6 mois de l'amlodipine. Le patient revient ce jour en consultation avec les résultats d'une automesure prescrite par son
+cardiologue : la moyenne calculée est à 139/92 mmHg. Expliquez les mesures non médicamenteuses à associer au traitement, nommez le type d'hypertension que présente le patient, prescrivez un traitement et nommez l'élément de la biologie que vous surveillez particulièrement.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Mesures HD à associer : activité physique régulière adaptée, perte de poids si surcharge pondérale, suppression ou réduction de la conso d'alcool, réduction de l'apport sodé, sevrage tabagique, alimentation saine.",
+            "- Dire qu'il s'agit d'une HTA résistante, prescrire un antialdostérone (spironolactone en 1e intention), surveiller la kaliémie.",
+            "Chez un patient hypertendu il faut :",
+            "- Vérifier que l'observance est optimale et qu'il n'y a pas de facteurs de résistance au traitement (mauvaise hygiène de vie).",
+            "- Vérifier que la trithérapie est optimale.",
+            "- Si la TA est contrôlée à 6M les consultations de suivi doivent être programmées tous les 3-6M.",
+            "- Un contrôle biologique doit être effectué tous les 1-2 ans, une GàJ et un EAL contrôlés tous les 3 ans, un ECG fait chez le cardiologue tous les 3-5 ans."
+          ],
+
+          questionSet: [
+            { "id": "q_suivihta_1", "patterns":["activité physique", "sport", "activité physique adaptée", "activité physique régulière"], "answer":"C'est vrai que je suis particulièrement sédentaire..."},
+            { "id": "q_suivihta_2", "patterns":["perte de poids", "perdre du poids"], "answer":"Oui je comprends je suis pas particulièrement maigre ahah." },
+            { "id": "q_suivihta_3", "patterns":["arrêt de l'alcool", "réduire la consommation d'alcool", "arrêter la consommation d'alcool"], "answer":"Je devrais arrêter c'est vrai, je bois de temps en temps pour l'apéritif quoi..." },
+            { "id": "q_suivihta_4", "patterns":["arrêter de fumer", "sevrage tabagique"], "answer":"Oui il faudrait que j'arrête je fume 10 PA." },
+            { "id": "q_suivihta_5", "patterns":["réduire l'apport sodé", "diminuer la consommation de sel"], "answer":"Ok..." },
+            { "id": "q_suivihta_6", "patterns":["alimentation saine", "alimentation méditerranéenne"], "answer":"Oui j'avoue que je ne mange pas sainement, j'aime tout ce qu'il y a de bon, comme la charcuterie ou le fromage..." },
+            { "id": "q_suivihta_7", "patterns":["hypertension artérielle résistante", "HTA résistante", "résistante"], "answer":"Ah d'accord." },
+            { "id": "q_suivihta_8", "patterns":["antialdostérone", "spironolactone"], "answer":"Ok pas de soucis." },
+            { "id": "q_suivihta_9", "patterns":["kaliémie", "potassium"], "answer":"D'accord." },
+            { "id": "q_suivihta_10", "patterns":["poids", "taille", "IMC"], "answer":"Je pèse 92kg pour 1m78..." },
+            { "id": "q_suivihta_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Il semblerait que mon hypertension n'aille pas mieux, qu'est-ce que je dois faire ?"},
+            { "id": "q_suivihta_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, vous êtes au top Docteur." },
+          ]
+        },
+{
+          id: "SDD21",
+          title: "Consultation de suivi et éducation thérapeutique d'un patient avec un ATCD cardiovasculaire",
+          intro: "Vous êtes cardiologue libéral installé en cabinet.
+Monsieur C, un homme de 64 ans, vous consulte à la demande d'un de vos confrères.
+Ce patient n'est pas venu les mains vides, puisqu'il vous apporte 2 compte-rendus d'examens réalisés dans le mois précédent. Il vous tend premièrement le résultat d'une coronarographie réalisée en raison de douleurs angineuses d'effort. Le deuxième examen présenté est une échographie des axes vasculaires cervicaux en raison d'un souffle perçu lors de l'auscultation carotidienne. Prenez connaissance des résultats et expliquez les au patient, expliquer l'intérêt des séances d'éducation thérapeutique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer qu'une sténose est un rétrécissement du diamètre d'une artère et empêche le sang d'être transporté vers l'organe cible, qu'elle est significative à partir du 70%, qu'un stent est une prothèse métallique qui augmente le diamètre de l'artère, qu'un stent est actif s'il y a une substance anti-angiogénique permettant de ralentir et améliorer la cicatrisation, que le traitement médication consiste en la prise du BASIC, qu'une sténose coronaire trop serrée peut donner une IC et des SCA, qu'une plaque d'athérome est une formation de lipides accumulés, qu'une sténose bilatérale est à risque d'AVC ischémique.",
+            "- L'éducation thérapeutique permet de mieux connaitre et comprendre sa maladie et ses traitement, favoriser une bonne observance, s'adapter aux changements de vie quotidienne, éviter le mésusage, repérer les situations d'urgence."
+          ],
+
+          questionSet: [
+            { "id": "q_educationcvs_1", "patterns":["rétrécissement", "rétrécissement du diamètre"], "answer":"Ok je vois."},
+            { "id": "q_educationcvs_2", "patterns":["significative", "70%"], "answer":"D'accord." },
+            { "id": "q_educationcvs_3", "patterns":["prothèse métallique", "ressort"], "answer":"Je vois." },
+            { "id": "q_educationcvs_4", "patterns":["anti-angiogénique"], "answer":"Ok je ne connaissais pas ce mot." },
+            { "id": "q_educationcvs_5", "patterns":["BASIC", "bêta-bloquants", "B-bloquants", "aspirine", "kardegic", "statine", "statines", "contrôle des facteurs de risque"], "answer":"Ok." },
+            { "id": "q_educationcvs_6", "patterns":["insuffisance cardiaque", "syndrome coronarien aigu", "SCA"], "answer":"D'accord, je ne pensais pas..." },
+            { "id": "q_educationcvs_7", "patterns":["lipides accumulés"], "answer":"Ok je comprends." },
+            { "id": "q_educationcvs_8", "patterns":["AVC", "accident vasculaire cérébral"], "answer":"Hmm c'est pas top ça." },
+            { "id": "q_educationcvs_9", "patterns":["connaître", "comprendre"], "answer":"D'accord." },
+            { "id": "q_educationcvs_10", "patterns":["observance"], "answer":"Oui c'est sur." },
+            { "id": "q_educationcvs_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je vous amène les résultats de mes examens. Vous pourriez m'expliquer ?"},
+            { "id": "q_educationcvs_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_educationcvs_13", "patterns":["changements"], "answer":"Oui c'est vrai." },
+            { "id": "q_educationcvs_14", "patterns":["mésusage", "surdosage"], "answer":"Pas faux." },
+            { "id": "q_educationcvs_15", "patterns":["situations d'urgence"], "answer":"D'accord !" },
+            { "id": "q_educationcvs_16", "patterns":["coronarographie"], "answer":"Distribution droit dominante avec sténose serrée signification au niveau du segment proximal de l'IVA associée à une sténose non signification sur la portion distale de la Cx. Pose de stent actif sur la sténose de l'IVA et traitement médical de la sténose de la Cx." },
+            { "id": "q_educationcvs_17", "patterns":["échographie"], "answer":"Echographie doppler cervicale : plaques d'athérome calcifiées pariétales gauche et droite étendue à l'origine de la carotide interne réalisant deux sténoses bilatérales estimées à 70 et 80%." },
+            { "id": "q_educationcvs_18", "patterns":["fumez", "tabac", "alcool", "activité physique"], "answer":"Je fume beaucoup trop ça je le sais, mais je ne vois pas d'alcool. C'est vrai aussi que je suis franchement sédentaire et que je prends la voiture pour le moinde déplacement... c'est peut-être pour ça que je suis en surpoids (IMC 28,5 kg/m²)" },
+            { "id": "q_educationcvs_19", "patterns":["antécédents"], "answer":"Je suis hypertendu et ma tension est difficile à contrôler. Après c'est vrai que je ne prends pas mes médicaments tous les jours parce que c'est pas évident de devoir prendre des comprimés matin et soir pour le restant de sa vie..." },
+          ]
+        },
+{
+          id: "SDD22",
+          title: "Consultation de suivi et éducation thérapeutique d'un patient insuffisant cardiaque",
+          intro: "Vous êtes cardiologue au CHU et vous recevez monsieur D, un homme de 33 ans, dans les suites d'une hospitalisation en USIC pour un œdème aigu pulmonaire. Le bilan étiologique a permis de retrouver une cardiomyopathie dilatée. À l'échographie, la fraction d'éjection du ventricule gauche était estimée visuellement à 35 %. Expliquez au patient le mécanisme de sa cardiopathie et ses complications, informez le des principaux EI des traitements qu'il prend et éduquez le à détecter les signes d'insuffisance cardiaque.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Savoir que la CMD est un trouble primitif du muscle cardiaque, que l'IC est liée à une dysfonction systolique, que la dilatation du VG entraine souvent une IM, que cette IM provoque une dilatation de l'OG, que l'insuffisance cardiaque peut donner des épisodes aigus de décompensation pouvant mener au décès, que la CMD est à risque de FA et de tb du rythme ventriculaires, et qu'elle est à risque de formation de thrombus.",
+            "- Savoir que le principal EI des bêta-bloquants est la bradycardie ou les troubles de la conduction, que le principal EI des IEC est l'hyperK, que le principal EI des antialdostérone est l'hyperK, que le principal EI des iSGLT2 est l'infection urinaire.",
+            "- Savoir que l'orthopnée et la dyspnée d'effort sont des signes d'IC gauche, que les OMI / la TJ / l'hépatalgie d'effort sont des signes d'IC droite.",
+            "Le bilan d'une IC est systématique :",
+            "- ECG.",
+            "- radiographie thoracique.",
+            "- ETT.",
+            "- bilan biologique.",
+            "- BNP."
+          ],
+
+          questionSet: [
+            { "id": "q_cmdic_1", "patterns":["trouble primitif", "trouble primaire"], "answer":"Ok je vois."},
+            { "id": "q_cmdic_2", "patterns":["dysfonction systolique"], "answer":"D'accord." },
+            { "id": "q_cmdic_3", "patterns":["insuffisance mitrale", "IM"], "answer":"Je vois." },
+            { "id": "q_cmdic_4", "patterns":["dilatation de l'oreillette gauche", "dilatation de l'auricule gauche"], "answer":"Ok je ne savais pas." },
+            { "id": "q_cmdic_5", "patterns":["épisodes aigus de décompensation", "décompensation", "OAP", "oedème aigu pulmonaire", "décès"], "answer":"Ok..." },
+            { "id": "q_cmdic_6", "patterns":["fibrillation atriale", "fibrillation auriculaire", "FA", "ACFA", "troubles du rythme ventriculaire"], "answer":"D'accord, je ne pensais pas..." },
+            { "id": "q_cmdic_7", "patterns":["thrombus"], "answer":"Ok je vois." },
+            { "id": "q_cmdic_8", "patterns":["bradycardie"], "answer":"Ok donc les bêta-bloquants peuvent réduire de trop ma fréquence cardiaque." },
+            { "id": "q_cmdic_9", "patterns":["hyperkaliémie", "hyperK"], "answer":"D'accord donc les IEC et les antialdostérones peuvent causer une hyperkaliémie." },
+            { "id": "q_cmdic_10", "patterns":["infection urinaire", "IU"], "answer":"Ok les SGLT2 peuvent causer des infections urinaires." },
+            { "id": "q_cmdic_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends rien à ma maladie, vous pouvez m'expliquer ce que c'est ?"},
+            { "id": "q_cmdic_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_cmdic_13", "patterns":["orthopnée", "dyspnée d'effort", "insuffisance cardiaque gauche"], "answer":"D'accord." },
+            { "id": "q_cmdic_14", "patterns":["oedèmes de membres inférieurs", "OMI", "turgescence jugulaire", "TJ", "hépatalgie", "hépatalgie d'effort", "insuffisance cardiaque droite"], "answer":"Noté." },
+            { "id": "q_cmdic_15", "patterns":["mode de vie", "antécédents"], "answer":"Je n'ai pas d'antécédents et j'ai un mode de vie tout à fait sain (sportif, pas d'alcool, pas de tabac)." },
+            { "id": "q_cmdic_16", "patterns":["traitements", "médicaments"], "answer":"A la sortie de mon hospitalisation j'avais du bisoprolol, du ramipril, de la spironolactone, et des dapagliflozine." },
+          ]
+        },
+{
+          id: "SDD23",
+          title: "Prévention des maladies cardiovasculaires",
+          intro: "Vous êtes médecin généraliste fraîchement installé et recevez en consultation de routine une patiente de 59 ans. Elle vient pour son renouvellement d'ordonnance et vous en profitez pour faire de la prévention cardiovasculaire. Chercher les facteurs de risque CVS, définissez et identifiez la présence d'un sd métabolique, proposez des modifications thérapeutiques du mode de vie et traitements adaptés aux FdR cardiovasculaires identifiés.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher : diabète, HTA, dyslipidémie, hérédité coronarienne, tabagisme, obésité.",
+            "- Savoir que le sd métabolique se définit par la présence de 3/5 critères parmi : tour de taille > 102 H ou > 88 F, TA > 135/85, GàJ > 1,1g/L, TG > 1,5 g/L, HDL-c < 0,4 H  ou <0,5 F. SAvoir dire que la patiente présente un sd métabolique.",
+            "- Proposer un sevrage tabagique, une activité physique régulière, la prescription de biguanide, la prescription de statine et d'adopter une alimentation de type méditerranéenne."
+          ],
+
+          questionSet: [
+            { "id": "q_facteursderisquecvs_1", "patterns":["diabète", "diabétique"], "answer":"Oui je suis DT2 sous régime seul depuis 3 ans. Je ne suis pas vraiment suivie et ma dernière glycémie était à 1,32g/L et mon HbA1c à 7,3%."},
+            { "id": "q_facteursderisquecvs_2", "patterns":["hypertension", "hypertendue"], "answer":"Je suis hypertendue sous régime seul." },
+            { "id": "q_facteursderisquecvs_3", "patterns":["dyslipidémie", "cholestérol"], "answer":"Mon dernier bilan n'était pas normal. J'avais une augmentation du LDL-c. Les TG et l'HDL-c étaient normaux." },
+            { "id": "q_facteursderisquecvs_4", "patterns":["antécédents familiaux", "coronarien", "coronarienne"], "answer":"Il n'y a pas d'histoire de maladie coronaire dans ma famille." },
+            { "id": "q_facteursderisquecvs_5", "patterns":["tabagisme", "tabac", "fumez"], "answer":"Je fume un paquet par jour depuis mes 23 ans." },
+            { "id": "q_facteursderisquecvs_6", "patterns":["obésité", "poids", "IMC"], "answer":"J'ai un IMC de 32kg/m²." },
+            { "id": "q_facteursderisquecvs_7", "patterns":["tour de taille > 88cm", "tour de taille supérieur à 88 cm", "tension artérielle > 130/85", "glycémie à jeun > 1,10", "GàJ > 1,10", "TG > 1,5", "triglycérides > 1,5", "HDL-c < 0,5"], "answer":"La patiente présente un tour de taille à 96cm, une tension à 140/90 mmHg, une glycémie à jeun à 1,32g/L, des TG à 1g/L, un HDL-c à 0,6 g/L." },
+            { "id": "q_facteursderisquecvs_8", "patterns":["syndrome métabolique"], "answer":"D'accord je ne savais pas." },
+            { "id": "q_facteursderisquecvs_9", "patterns":["sevrage tabagique", "arrêter de fumer"], "answer":"D'accord." },
+            { "id": "q_facteursderisquecvs_10", "patterns":["activité physique régulière"], "answer":"Ok, c'est vrai que j'ai plutôt tendance à prendre la voiture pour tous mes déplacements..." },
+            { "id": "q_facteursderisquecvslihg_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Vous vouliez évaluer mes facteurs de risque cardiovasculaires c'est ça ?"},
+            { "id": "q_facteursderisquecvs_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci beaucoup Docteur." },
+            { "id": "q_facteursderisquecvs_13", "patterns":["biguanides", "metformine"], "answer":"Noté." },
+            { "id": "q_facteursderisquecvs_14", "patterns":["statine", "statines"], "answer":"Noté." },
+            { "id": "q_facteursderisquecvs_15", "patterns":["alimentation", "méditerranéenne"], "answer":"D'accord !" },
+          ]
+        },
+{
+          id: "SDD24",
+          title: "Identifier une situation de déconditionnement",
+          intro: "Vous êtes médecin en service de gériatrie et vous prenez en charge madame D, 74 ans, hospitalisée dans vos lits depuis plus de 2 semaines. Vous craignez que madame D soit en situation de déconditionnement. Identifiez les signes cliniques d'un déconditionnement, réalisez un test de marche de 6mn (à simuler pendant moins de 3 minutes en réalité).",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Chercher : diminution de la force musculaire, une diminution de l'équilibre statural, une diminution de la distance de marche, une dyspnée d'effort, une difficulté à réaliser les activités habituelle, l'existence de tb cognitifs, asthénie récent.",
+            "- Dire que le but est la mesure de la distance max en marchant 6 mn, expliquer que le patient doit faire autant d'allers-retours que possible, prendre au repos la FC / TA / sat avant la marche et évaluer la dyspnée sur l'échelle de Borg, dire que le patient ne peut pas courrir mais qu'il peut ralentir ou accélérer, prendre la FC / TA / sat à la fin du test."
+          ],
+
+          questionSet: [
+            { "id": "q_testdemarche_1", "patterns":["force musculaire", "diminution de la force musculaire"], "answer":"J'ai constaté qu'il était de plus en plus difficile de tenir un verre d'eau pendant longtemps."},
+            { "id": "q_testdemarche_2", "patterns":["équilibre", "diminution de l'équilibre", "perte de l'équilibre"], "answer":"Je suis hospitalisée parce que je me suis cassée le col du fémur en tombant, mais je ne crois pas avoir de soucis d'équilibre. Après vous me direz, ça fait 10j que je suis pas sortie du lit." },
+            { "id": "q_testdemarche_3", "patterns":["diminution de la distance de marche"], "answer":"Je ne sais pas du tout, je ne marche plus..." },
+            { "id": "q_testdemarche_4", "patterns":["dyspnée d'effort"], "answer":"Je n'ai pas de mal à respirer non." },
+            { "id": "q_testdemarche_5", "patterns":["difficulté à réaliser les activités habituelles"], "answer":"De ce que je peux faire je n'ai pas l'impression d'avoir du mal à réaliser mes activités habituelles." },
+            { "id": "q_testdemarche_6", "patterns":["troubles cognitifs"], "answer":"Ma famille me dit que j'ai des trous de mémoire oui." },
+            { "id": "q_testdemarche_7", "patterns":["asthénie", "fatigue"], "answer":"Ah ça oui je suis particulièrement fatiguée ces derniers temps, pourtant j'ai toujours été en pleine forme." },
+            { "id": "q_testdemarche_8", "patterns":["distance maximale"], "answer":"D'accord." },
+            { "id": "q_testdemarche_9", "patterns":["autant d'allers-retours que possible", "allers-retours"], "answer":"D'accord." },
+            { "id": "q_testdemarche_10", "patterns":["fréquence cardiaque au repos", "tension artérielle au repos", "saturation au repos"], "answer":"Ok." },
+            { "id": "q_testdemarche_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_testdemarche_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_testdemarche_13", "patterns":["ne pas courir", "ne faut pas courir", "ralentir", "accélérer"], "answer":"Noté." },
+            { "id": "q_testdemarche_14", "patterns":["fréquence cardiaque à la fin", "tension artérielle à la fin", "saturation à la fin"], "answer":"Noté." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
