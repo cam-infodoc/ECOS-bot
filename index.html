@@ -3584,6 +3584,412 @@ const data = {
         }
       ]
     },
+{
+      id: "Pneumo",
+      title: "Pneumologie",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Découverte d'anomalies à l'auscultation pulmonaire",
+          intro: `Vous êtes médecin de garde aux urgences quand vous recevez via les pompiers un jeune homme de 27 ans. Monsieur P a appelé le 18 pour une douleur thoracique brutale. L'examen sommaire réalisé par les pompiers retrouve une abolition du murmure vésiculaire à gauche. Cherchez les éléments de l'interrogatoire et les signes cliniques pulmonaires et extra-pulmonaires pour affiner votre diagnostic, interprétez la radiographie du thorax en rapport avec l'anomalie.<img src= "pneumothorax.png" style ="max-width:100%; border-radius:8px; margin-top:10px;"`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Prendre les constantes, rechercher une toux sèche irritative, préciser les caractéristiques de la douleur, rechercher une dyspnée, une abolition des vibrations vocales, un tympanisme, une distention d'un hémithorax, une déviation du choc du pointe (PNO compressif).",
+            "- Savoir dire que la radiographie présente les critères de bonne qualité (centrée, debout, 6 arcs costaux ant, clavicules symétriques), hyperclarté hémichamps pulmonaire G, médiastin non refoulé vers la droite. Conclure à un pneumothorax complet gauche non compressif.",
+            "Différentes pathologies pulmonaires en fonction des anomalies auscultatoires :",
+            "- Ronchis : expiratoire, situés sur les grosses bronches, signe d'encombrement bronchique / bronchite chronique / bronchectasies / fibrose kystique.",
+            "- Sibilants : expiratoire, situés sur les bronches, signe d'asthme ou de BPCO.",
+            "- Wheezing : expiratoire, situés sur la trachée et les bronches proximales, signe de sténose bronchique.",
+            "- Sous-crépitants : inspiratoire, situés sur les petites bronches et bronchioles, signe de sécrétions bronchiques et d'infection BP.",
+            "- Crépitants : fin d'inspiration, situés sur les alvéoles, signe de pneumonie / OAP / PID / atélectasie.",
+            "- Frottement : inspiratoire + expiratoire, situé au niveau de la plèvre, signe de pleurésie."
+          ],
+
+          questionSet: [
+            { "id": "q_pneumothorax_1", "patterns":["constantes", "saturation", "fréquence respiratoire", "FR", "fréquence cardiaque", "FC", "tension artérielle", "TA", "PA", "température"], "answer":"TA 135/82 mmHg, FC 108 bpm, FR 18/mn, saturation 96% AA, température 37°C."},
+            { "id": "q_pneumothorax_2", "patterns":["toux sèche", "irritative"], "answer":"Oui j'ai une toux sèche." },
+            { "id": "q_pneumothorax_3", "patterns":["brutale", "latéralisée", "insidieuse", "diffuse", "rythmée par la respiration", "augmente à la toux", "augmente à l'inspiration profonde"], "answer":"La douleur est arrivée il y a 1h30, j'étais dans mon lit. Elle est arrivée spontanément, et est augmentée quand je respire profondément." },
+            { "id": "q_pneumothorax_4", "patterns":["dyspnée", "difficulté respiratoire", "gêne respiratoire"], "answer":"Non je n'ai pas de gêne respiratoire." },
+            { "id": "q_pneumothorax_5", "patterns":["abolition des vibrations vocales", "diminution des vibrations vocales", "abolition des VV"], "answer":"Abolition des vibrations vocales à gauche, abolition du murmure vésiculaire gauche." },
+            { "id": "q_pneumothorax_6", "patterns":["tympanisme", "matité"], "answer":"Tympanisme de l'hémithorax gauche." },
+            { "id": "q_pneumothorax_7", "patterns":["distention", "distention hémithoracique"], "answer":"Hémithorax gauche légèrement distendu." },
+            { "id": "q_pneumothorax_8", "patterns":["déviation du choc de pointe", "choc de pointe"], "answer":"Absence de déviation du choc de pointe." },
+            { "id": "q_pneumothorax_9", "patterns":["critères de bonne qualité", "centrée", "6 arcs costaux antérieurs", "clavicules symétriques", "debout", "poche à air gastrique"], "answer":"Noté." },
+            { "id": "q_pneumothorax_10", "patterns":["hyperclarté", "hyperclarté de l'hémichamps gauche", "hyperclarté pulmonaire gauche"], "answer":"Noté." },
+            { "id": "q_pneumothorax_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai mal au niveau du thorax, qu'est-ce que j'ai ?"},
+            { "id": "q_pneumothorax_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_pneumothorax_13", "patterns":["médiastin n'est pas refoulé", "pas refoulé", "pas dévié", "pas de déviation médiastinale", "pas de déviation"], "answer":"Noté." },
+            { "id": "q_pneumothorax_14", "patterns":["pneumothorax complet gauche non compressif", "pneumothorax complet non compressif gauche"], "answer":"Noté." },
+          ]
+        },
+        {
+          id: "SDD2",
+          title: "Ronflements",
+          intro: "Vous êtes médecin généraliste. Vous recevez au cabinet monsieur et madame S. Monsieur S est un homme de 57 ans et il ne comprend pas vraiment pourquoi il est là. Madame S, son épouse, l'a poussé à venir consulter car elle se plaint depuis quelque temps de ronflements incessants de la part de son mari, ce qui l'empêche souvent de trouver le sommeil. Cherchez les signes fonctionnels diurnes et nocturnes évocateurs d'un sd d'apnées-hypopnées obstructives du sommeil, quel questionnaire utilisez vous et quel est son seuil de positivité, proposez les 2 examens complémentaires permettant d'affirmer le diagnostic de SAOS.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Chercher une somnolence diurne excessive, des céphalées matinales, des difficultés de concentration, une asthénie diurne, une baisse de libido, une sensation d'étouffement pendant le sommeil, une sensation de sommeil non réparateur, des micro-réveils répétés, une nycturie.",
+            "- On utilise l'échelle d'Epworth qu'on considère positive à partir de 11 points. On prescrira une polygraphie ventilatoire et une polysomnographie.",
+            "On oublie pas que l'index d'apnées hypopnées (IAH) doit être > 5/h pour pouvoir signer le diagnostic positif de SAHOS."
+          ],
+
+          questionSet: [
+            { "id": "q_saos_1", "patterns":["somnolence", "somnolence diurne"], "answer":"C'est vrai que j'ai tendance à m'endormir dans la journée, d'ailleurs il y a un mois j'ai eu un accident de la route parce que je me suis endormi au volant ..."},
+            { "id": "q_saos_2", "patterns":["céphalées matinales", "maux de tête le matin"], "answer":"Ah oui j'ai un gros mal de tête en me levant le matin." },
+            { "id": "q_saos_3", "patterns":["difficultés de concentration", "difficulté à vous concentrer", "du mal à vous concentrer"], "answer":"Je ne trouve pas que j'ai du mal à me concentrer non." },
+            { "id": "q_saos_4", "patterns":["fatigue", "asthénie"], "answer":"Oui je suis fatiguée la journée, mais pas particulièrement non plus, même après mon accident." },
+            { "id": "q_saos_5", "patterns":["baisse de la libido", "diminution de la libido"], "answer":"Ma femme se plaint de la baisse de fréquence de nos rapports oui..." },
+            { "id": "q_saos_6", "patterns":["étouffement", "suffocation"], "answer":"Ma femme me dit qu'elle est réveillée par des accès de suffocation mais moi j'en sais trop rien." },
+            { "id": "q_saos_7", "patterns":["micro-réveils"], "answer":"Oui j'ai pleins de petits réveils dans la nuit, je trouve pas que mon sommeil soit réparateur." },
+            { "id": "q_saos_8", "patterns":["nycturie", "uriner la nuit"], "answer":"Dans la nuit je me lève 2-3 fois pour uriner oui." },
+            { "id": "q_saos_9", "patterns":["Epworth"], "answer":"D'accord." },
+            { "id": "q_saos_10", "patterns":["11 points", "11", "onze"], "answer":"Ok." },
+            { "id": "q_saos_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne sais pas pourquoi je suis là mais ma femme dit que je ronfle trop."},
+            { "id": "q_saos_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_saos_13", "patterns":["polygraphie"], "answer":"Noté." },
+            { "id": "q_saos_14", "patterns":["polysomnographie"], "answer":"Noté." },
+            { "id": "q_saos_15", "patterns":["antécédents", "tabac", "alcool",  "traitements"], "answer":"Alors moi j'ai de l'hypertension traitée par ramipril. Sinon j'ai eu une cholécystectomie à 38 ans et une cure d'hernie inguinale droite à 49ans. C'est tout ! Et bien sur je ne fume pas et je ne bois pas." },
+          ]
+        },
+        {
+          {
+          id: "SDD3",
+          title: "Détresse respiratoire aigue",
+          intro: "Vous êtes médecin aux urgences de secteur et vous recevez au SAUV (salle d'accueil des urgences vitales) une femme de 33 ans via le SMUR à 3 h du matin. Cette femme a présenté au domicile une dyspnée d'apparition rapidement progressive pendant la nuit pour laquelle elle a décidé d'appeler le SAMU sur les conseils de son pneumologue. Elle est capable de parler. Identifiez les éléments cliniques permettant de poser le diagnostic de détresse respiratoire aigue, identifiez les situations nécessitant de discuter une intubation.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher : tachypnée, mise en jeu des muscles inspiratoire accessoires, mise en jeu des muscles expiratoires, respiration abdominale paradoxale, cyanose, signes neurologiques de faillite (céphalées, astérixis, altération du comportement et de la vigilance), instabilité hémodynamique, signes d'insuffisance cardiaque, un pouls paradoxal.",
+            "- Savoir qu'une altération de la vigilance avec un SGW < 9 est une indication à l'IOT, qu'un état de choc est une indication à l'IOT, qu'une DRA au cours d'un polytraumatisme est une indication à une IOT et qu'une IOT est indiquée en 2e intention en cas d'échec de la VNI.",
+            "Récapitulatif d'une intubation hors urgence : ",
+            "- monitorer le patient",
+            "- pré-oxygéner par masque à 100% de FiO2 pendant 3mn",
+            "- sédater le patient (étomidate, kétamine, propofol), puis le curariser (atracurium, rocuronium, succinylcholine).",
+            "- prendre un laryngoscope et s'introduire dans les VAS, possibilité d'établir le score de Cormack.",
+            "- gonfler le ballonet à 20mHg.",
+            "- ventiler le patient au BAVU et vérifier le soulèvement symétrique du thorax, auscultation pulmonaire symétrique, EtCO2.",
+            "- fixer la sonde et la connecter au ventilateur.",
+          ],
+
+          questionSet: [
+            { "id": "q_dra_1", "patterns":["tachypnée", "FR > 25", "fréquence respiratoire > 25"], "answer":"Fréquence respiratoire 28 /mn."},
+            { "id": "q_dra_2", "patterns":["muscles inspiratoires", "muscles accessoires"], "answer":"Tirage sus-claviculaire et sus-sternal." },
+            { "id": "q_dra_3", "patterns":["muscles expiratoire", "expiration abdominale active"], "answer":"Absence d'expiration abdominale active." },
+            { "id": "q_dra_4", "patterns":["respiration abdominale paradoxale", "respiration paradoxale"], "answer":"Absence de respiration abdominale paradoxale." },
+            { "id": "q_dra_5", "patterns":["signes neurologiques", "céphalées", "astérixis", "altération du comportement", "altération de la vigilance"], "answer":"Importants maux de tête, pas de troubles de la vigilance, pas d'astérixis." },
+            { "id": "q_dra_6", "patterns":["instabilité", "instable", "tension artérielle", "signes de choc", "marbrures", "chaudes", "oligurie"], "answer":" Extrémités chaudes, couleur normale, pas de marbrures. Absence d'oligurie." },
+            { "id": "q_dra_7", "patterns":["insuffisance cardiaque", "turgescence jugulaire", "reflux hépato-jugulaire", "TJ", "RHJ", "hépatalgie", "hépatomégalie"], "answer":"Pas de signe d'insuffisance ventriculaire droite." },
+            { "id": "q_dra_8", "patterns":["pouls paradoxal"], "answer":"Absence de pouls paradoxale." },
+            { "id": "q_dra_9", "patterns":["Glasgow < 9", "SGW < 9"], "answer":"Noté." },
+            { "id": "q_dra_10", "patterns":["état de choc", "choc"], "answer":"Noté." },
+            { "id": "q_dra_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_dra_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_dra_13", "patterns":["polytraumatisme", "polytraumatisé", "polytrauma"], "answer":"Noté." },
+            { "id": "q_dra_14", "patterns":["échec de la VNI", "échec de la ventilation non invasive"], "answer":"Noté." },
+            { "id": "q_dra_15", "patterns":["antécédents"], "answer":"J'ai un asthme persistant modéré, difficilement équilibré par l'association entre anticholinergique et bêta-2-mimétiques." },
+            { "id": "q_dra_16", "patterns":["motif", "qu'est-ce qui vous arrive", "qu'est-ce qui vous amène", "urgences", "qu'est-ce qui s'est passé", "ce qui s'est passé", "qu'est-ce qui se passe"], "answer":"Je suis en vacances depuis 3 jours dans un appartement que j'ai loué. J'ai trouvé des poils de chat dans l'appartement sauf que je suis allergique donc j'ai pris peur. Et la j'étais entrain de dormir dans mon lit et j'ai eu une sensation comme d'oppression thoracique. J'ai eu du mal à respirer et j'avais l'impression de siffler, et ça m'est déjà arrivé il y a 6 mois." },
+          ]
+        },
+{
+          id: "SDD4",
+          title: "Dyspnée",
+          intro: `Vous êtes médecin généraliste installé en ville et recevez monsieur P, un patient de 33 ans, qui vient pour une gêne respiratoire. Sa température est mesurée à 38,8 °C au domicile. Il a réalisé une radiographie thoracique juste avant de venir sur prescription d'un de ses amis, chef de clinique en oncologie. Décrivez les caractéristiques cliniques et les circonstances de survenue de cette dyspnée, interprétez les résultat de l'imagerie thoracique, posez un diagnostic et prescrivez le traitement de première intention. <img src= "pneumopathie.png" style ="max-width:100%; border-radius:8px; margin-top:10px;"`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Décrire la temporalité, définir la phase du cycle respiratoire où la dyspnée est apparue, demander si une position modifie la dyspnée, demander s'il y a un horaire précis, demander s'il y a des signes cliniques pulmonaires, et demander s'il y a des d'autres anomalies pulmonaires à l'examen clinique.",
+            "- Vérifier que les critères de bonne qualité, condensation avec bronchogramme aérique, délimitée par la scissure et correspond à une PFLA, dire que l'image se trouve lobe supérieur droit. Posez le diagnostic de PAC, prescrire de l'amoxicilline en 1e intention.",
+            "Rappel des échelles de dyspnée :",
+            "- mMRC : 0 pas de dyspnée, 1 dyspnée lors de la marche rapide en terrain plat ou en montant une pente douce, 2 dyspnée à la marche sur terrain plat en suivant quelqu'un de son âge ou nécessité de s'arrêter en raison de dyspnée en marchant à son rythme sur terrain plat, 3 dyspnée obligeant de s'arrêter pour reprendre son souffle après avoir marché une centaine de mètres ou qlq mn en terrain plat, 4 dyspnée empêchant de quitter la maison ou présente à l'habillage.",
+            "- NYHA : 1 pas de réduction de l'activité physique, 2 légère limitation de l'AP mais sans gène au repos, 3 limitation marquée mais sans gène au repos, 4 impossibilité de poursuivre une AP sans gêne et symptômes présents même au repos.",
+            "Attention ces échelles ne sont utilisables qu'en cas de dyspnée chronique"
+          ],
+
+          questionSet: [
+            { "id": "q_pfla_1", "patterns":["temporalité", "aigue", "aiguë", "chronique"], "answer":"J'ai eu du mal à respirer il y a 6 jours et depuis je suis gêné."},
+            { "id": "q_pfla_2", "patterns":["inspiratoire", "expiratoire"], "answer":"Je ne sais pas vous dire quelle si la dyspnée est pire à l'inspiration ou à l'expiration, désolé. Je pense que c'est pareil." },
+            { "id": "q_pfla_3", "patterns":["position", "orthopnée", "antépnée", "platypnée"], "answer":"La dyspnée est présente tout le temps que ce soit quand je suis couché, penché en avant ou même debout." },
+            { "id": "q_pfla_4", "patterns":["horaire", "diurne", "nocturne"], "answer":"Je crois pas qu'il y ait d'horaires, c'est tout le temps là." },
+            { "id": "q_pfla_5", "patterns":["toux", "douleur thoracique", "expectorations", "bruits respiratoires", "wheezing", "sifflements", "toux grasse"], "answer":"C'est vrai que je tousse et j'ai l'impression de cracher du pus. Et j'ai aussi une petite douleur thoracique. Par contre il n'y a pas de bruits respiratoires associés." },
+            { "id": "q_pfla_6", "patterns":["auscultation", "percussion", "palpation", "signes de défaillance", "signes de lutte"], "answer":"Nette diminution du MV à droite avec des crépitants en foyer, augmentation des VV associées à une matité à la percussion. Absence de signes de défaillance ou du lutte." },
+            { "id": "q_pfla_7", "patterns":["critères de bonne qualité", "centrée", "debout", "6 arcs costaux", "symétriques"], "answer":"Noté." },
+            { "id": "q_pfla_8", "patterns":["condensation", "bronchogramme aérique"], "answer":"Noté." },
+            { "id": "q_pfla_9", "patterns":["scissure", "PFLA", "pneumopathie franche lobaire aigue"], "answer":"Noté." },
+            { "id": "q_pfla_10", "patterns":["PAC", "pneumonie aigue communautaire"], "answer":"Noté." },
+            { "id": "q_pfla_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis gêné pour respirer, vous pourriez m'aider ? "},
+            { "id": "q_pfla_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_pfla_13", "patterns":["amox", "amoxicilline"], "answer":"Noté." },
+            { "id": "q_pfla_14", "patterns":["antécédents", "traitements", "hospitalisation", "allergies"], "answer":"Je n'ai pas d'antécédents médico-chirurgicaux et je ne prend aucun traitement. Je suis allergique aux oeufs mais je n'en ai pas mangé récemment. Je n'ai pas eu de vaccin récemment non plus." }
+          ]
+        },
+{
+          id: "SDD5",
+          title: "Expectoration",
+          intro: "Vous êtes médecin aux urgences et vous recevez un patient de 63 ans pour des expectorations de plus en plus fréquentes récemment. Caractérisez les expectorations, interrogez le patient à la recherche du diagnostic étiologique le plus probable, donnez les éléments devant figurer sur votre ordonnance de kiné respi de désobstruction bronchique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander l'ancienneté des expectoration (chronique si > 8S), odeur, aspect visuel, élément déclencheur, autres symptômes. Demander les ATCD personnels et familiaux, les évènements cliniques récents. Probable exacerbation aigue de BPCO.",
+            "- Inscrire les coordonnées du prescripteur, le nom et prénom du patient, la date du jour, la mention "kinésithérapie respiratoire", l'indication médicale = drainage bronchique, la mention 'à domicile' si nécessaire ainsi que 'dimanche et jours fériés inclus' si nécessaire, inscrire les éventuelles CI aux méthodes utilisées couramment.",
+            "Rappel des seuils de significativité des prélèvements :",
+            "- 10^4 : LBA.",
+            "- 10^5 : aspiration bronchique.",
+            "- 10^7 : ECBC.",
+            "Critère de qualité ECBC : >25 neutrophiles par champ et < 10 cellules épithéliales par champ."
+          ],
+
+          questionSet: [
+            { "id": "q_exacerbpco_1", "patterns":["ancienneté", "aigu", "aiguë", "chronique"], "answer":"Ca fait 4 jours environs que je trouve que je crache plus régulièrement que d'habitude."},
+            { "id": "q_exacerbpco_2", "patterns":["odeur", "fétide"], "answer":"Oui je trouve que mes crachats puent." },
+            { "id": "q_exacerbpco_3", "patterns":["aspect", "transparentes", "transparents", "visqueux", "visqueuses", "épais", "épaisses", "verdâtres", "rouges"], "answer":"Mes expectorations sont verdâtres à présent." },
+            { "id": "q_exacerbpco_4", "patterns":["élément déclencheur"], "answer":"Je ne vois rien qui ait pu déclencher ça." },
+            { "id": "q_exacerbpco_5", "patterns":["autres symptômes"], "answer":"J'ai du mal à respirer, mais habituellement déjà parce que je suis mMRC2, sauf que là même quand je m'habille c'est compliqué. Je n'ai pas de fièvres, je ne me sens pas fatigué ou altéré. Par contre mes poumons sifflent plus que d'habitude" },
+            { "id": "q_exacerbpco_6", "patterns":["antécédents", "ATCD"], "answer":"Je suis BPCO Gold 4 et tabagique non sevré à 60PA. Je suis traité par une association de 2 bronchodilatateurs. J'ai été hospitalisé il y a 4 mois en réanimation carrément." },
+            { "id": "q_exacerbpco_7", "patterns":["évènements récents", "récemment"], "answer":"Je ne vois rien de particulier récemment." },
+            { "id": "q_exacerbpco_8", "patterns":["exacerbation aiguë de BPCO"], "answer":"Noté." },
+            { "id": "q_exacerbpco_9", "patterns":["prescripteur", "coordonnées"], "answer":"Noté." },
+            { "id": "q_exacerbpco_10", "patterns":["nom du patient", "prénom du patient"], "answer":"Noté." },
+            { "id": "q_exacerbpco_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis BPCO et là je suis gêné pour respirer..."},
+            { "id": "q_exacerbpco_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_exacerbpco_13", "patterns":["date du jour", "date"], "answer":"Noté." },
+            { "id": "q_exacerbpco_14", "patterns":["kinésithérapie respiratoire"], "answer":"Noté." },
+            { "id": "q_exacerbpco_15", "patterns":["drainage bronchique"], "answer":"Noté" },
+            { "id": "q_exacerbpco_16", "patterns":["à domicile", "dimanche et jours fériés inclus"], "answer":"Noté." },
+            { "id": "q_exacerbpco_17", "patterns":["contre-indications"], "answer":"Noté." },
+          ]
+        },
+{
+          id: "SDD6",
+          title: "Toux",
+          intro: `Vous recevez dans votre cabinet en consultation de pneumologie, Mr B 67 ans pour une toux. Menez un interrogatoire ciblé pour caractériser la toux et son retentissement, prescrire les 2 examens complémentaires de 1e intention, interpréter l'examen complémentaire présenté.<img src= "spirométrie.png" style ="max-width:100%; border-radius:8px; margin-top:10px;"`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander : durée de la toux, intox tabagique, sèche ou productive, diurne ou nocturne, facteurs déclenchants (odeurs, position, parfum, spray, température, rire, parole), signes associés (pyrosis, jetage postérieur, bronchite chronique), traitements entrepris et efficacité, retentissement et complications.",
+            "- Demander une radio de thorax et une EFR. Présence d'un sd ventilatoire obstructif non réversible (VEMS/CVF post BD 25%), présence d'une distention thoracique (CPT = 143%).",
+            "Causes principales de toux chronique chez l'adulte : ",
+            "- Toux primitives : sd de toux par excès de sensibilité.",
+            "- Toux secondaires : sd de toux des VAS, asthme, RGO, mdc, BPCO, pneumonies interstitielles diffuses, cancer bronchique, dilatation des bronches, SAOS, causes cardiaques, causes neuro, toux psychogène.",
+          ],
+
+          questionSet: [
+            { "id": "q_spirobpco_1", "patterns":["durée", "combien de temps"], "answer":"Ca fait 4 mois que je tousse."},
+            { "id": "q_spirobpco_2", "patterns":["tabac", "tabagique", "fumez"], "answer":"Je fume 1 paquet de cigarettes par jour depuis mes 20 ans." },
+            { "id": "q_spirobpco_3", "patterns":["sèche", "productive", "expectorations"], "answer":"Ma toux est productive avec des crachats verts surtout le matin." },
+            { "id": "q_spirobpco_4", "patterns":["facteurs déclenchants", "odeur", "position", "parfum", "spray", "température", "rire", "parole"], "answer":"Il n'y a pas de facteurs déclenchants, c'est de jour comme de nuit." },
+            { "id": "q_spirobpco_5", "patterns":["signes associés", "pyrosis", "jetage postérieur", "bronchite chronique"], "answer":"Je n'ai pas de signes associés et pas de reflux gastro-oesophagien." },
+            { "id": "q_spirobpco_6", "patterns":["traitements"], "answer":"Actuellement je suis sous IEC depuis 5 ans pour une HTA. Je n'ai jamais rien essayé pour la toux." },
+            { "id": "q_spirobpco_7", "patterns":["handicap", "dépression", "anxiété", "sommeil", "fatigue", "céphalées", "fractures de côtes", "douleurs thoraciques", "hernie inguinale", "reflux gastro-oesophagien", "RGO", "vomissements", "incontinence urinaire"], "answer":"J'ai fait 2 épisodes de bronchite cette années, mais spontanément résolutif. Et ça m'embête parce que je tousse tout le temps et les gens ont l'impression que j'ai le COVID. Puis à force je commence à avoir un peu mal aux côtes." },
+            { "id": "q_spirobpco_8", "patterns":["radiographie"], "answer":"Noté." },
+            { "id": "q_spirobpco_9", "patterns":["épreuve fonctionnelle respiratoire", "EFR"], "answer":"Noté." },
+            { "id": "q_spirobpco_10", "patterns":["obstructif non réversible"], "answer":"Noté." },
+            { "id": "q_spirobpco_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne tousse beaucoup et je commence à en avoir marre..."},
+            { "id": "q_spirobpco_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_spirobpco_13", "patterns":["distention"], "answer":"Noté." }
+          ]
+        },
+{
+          id: "SDD7",
+          title: "Traumatisme thoracique",
+          intro: "Interne de pneumologie, vous êtes de garde aux urgences et recevez à 21 h 30 dans la Salle d'Accueil des Urgences Vitales (SAUV), Monsieur T, 23 ans, pour accident de la voie publique. Il a été projeté de sa moto. Le SAMU vous dit suspecter un traumatisme thoracique. Réaliser un examen clinique ciblé de son traumatisme thoracique pour éliminer une urgence vitale, évoquez un diagnostic et mettez en place immédiatement une mesure thérapeutique, expliquez oralement les grands principes de cette mesure.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demande des constantes. Rechercher : asymétrie ampliation thoracique, anomalie à l'auscultation, anomalie à la percussion, emphysème sous-cutané, signes IC droite, fractures costales ou volet costal.",
+            "- Diagnostiquer un pneumothorax compressif, proposer une exsufflation pleurale en urgence. Réaliser une asepsie chirurgicale, demander une anesthésie locle, ponctionner avec une aiguille dans le 2e EIC par voie antérieure sur la ligne médioclaviculaire, ponctionner le bord sup de la côte inférieure."
+          ],
+
+          questionSet: [
+            { "id": "q_pnocompressif_1", "patterns":["constantes", "paramètres vitaux"], "answer":"PA 90/50mmHg, FC 120 bpm, FR 32/mn, saturation 91% AA, température 37°C."},
+            { "id": "q_pnocompressif_2", "patterns":["asymétrie", "ampliation thoracique"], "answer":"Hémithorax gauche immobile." },
+            { "id": "q_pnocompressif_3", "patterns":["auscultation"], "answer":"Abolition du MV gauche." },
+            { "id": "q_pnocompressif_4", "patterns":["percussion"], "answer":"Tympanisme gauche." },
+            { "id": "q_pnocompressif_5", "patterns":["emphysème sous-cutané"], "answer":"Emphysème sous cutané à gauche." },
+            { "id": "q_pnocompressif_6", "patterns":["insuffisance cardiaque"], "answer":"Marbrures aux genoux, turgescence des veines jugulaires." },
+            { "id": "q_pnocompressif_7", "patterns":["fractures costales", "côtes cassées", "volet costal"], "answer":"Absence de fractures costales ou de volet costal à première vue." },
+            { "id": "q_pnocompressif_8", "patterns":["pneumothorax compressif", "pneumothorax suffocant"], "answer":"Noté." },
+            { "id": "q_pnocompressif_9", "patterns":["exsufflation"], "answer":"Noté." },
+            { "id": "q_pnocompressif_10", "patterns":["asepsie", "aspesie chirurgicale"], "answer":"Noté." },
+            { "id": "q_pnocompressif_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Le patient est dyspnéique avec une douleur thoracique gauche. Il a des vertiges et des sueurs ainsi qu'une toux sèche."},
+            { "id": "q_pnocompressif_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair." },
+            { "id": "q_pnocompressif_13", "patterns":["anesthésie locale"], "answer":"Noté." },
+            { "id": "q_pnocompressif_14", "patterns":["aiguille", "seringue"], "answer":"Noté." },
+            { "id": "q_pnocompressif_15", "patterns":["2e espace intercostal", "médioclaviculaire"], "answer":"Noté" },
+            { "id": "q_pnocompressif_16", "patterns":["bord supérieur", "côte inférieure"], "answer":"Noté." }
+          ]
+        },
+{
+          id: "SDD8",
+          title: "Analyse d'un résultat de gaz du sang",
+          intro: "Interne de garde aux urgences, vous recevez madame G, 61 ans pour dyspnée aiguë. La radiographie de thorax réalisée est normale. L'examen clinique retrouve une tachycardie avec une auscultation cardio-pulmonaire normale. L'ECG retrouve un bloc de branche droit non connu. La NFS est normale et les NT-proBNP sont légèrement augmentés. Quel examen de 1e intention manque t'il,  expliquez au patient l'intérêt de cet examen et expliquez à l'aide de termes médicaux les grands principes de sa réalisation, interprétez l'examen prescrit.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Réaliser les gaz du sang. Expliquer que les GDS permettent : quantifier taux d'O2 sanguin, quantifier le taux de CO2 sanguin, de connaître la réponse du corps à cette dyspnée, d'orienter la PEC. Modalités : vérification identité, consentement, vérification des CI, préparation matéril, gants non stériles, antisepsie locale, lavage main, seringue hépainée, position confortable. Réaliser test d'Allen, ponctionner au niveau radial, biseau vers le haut, sang rouge vif et saccadé, comprimer le point de ponction pendant 5 minutes.",
+            "- Présence alcalose, respiratoire avec effet shunt, non compensée."
+          ],
+
+          questionSet: [
+            { "id": "q_alcaloserespi_1", "patterns":["gaz du sang", "gazométrie artérielle", "GDS"], "answer":"D'accord."},
+            { "id": "q_alcaloserespi_2", "patterns":["taux d'oxygène"], "answer":"D'accord." },
+            { "id": "q_alcaloserespi_3", "patterns":["taux de CO2", "taux de dioxyde de carbone"], "answer":"Je vois." },
+            { "id": "q_alcaloserespi_4", "patterns":["réponse du corps"], "answer":"Ok." },
+            { "id": "q_alcaloserespi_5", "patterns":["prise en charge", "orientation"], "answer":"Ok, d'accord." },
+            { "id": "q_alcaloserespi_6", "patterns":["identité", "consentement", "contre-indications", "matériel", "gants stériles", "antisepsie", "lavage des mains", "seringue héparinée", "confortable"], "answer":"D'accord." },
+            { "id": "q_alcaloserespi_7", "patterns":["test d'Allen"], "answer":"Allez-y." },
+            { "id": "q_alcaloserespi_8", "patterns":["radial"], "answer":"D'accord." },
+            { "id": "q_alcaloserespi_9", "patterns":["biseau vers le haut"], "answer":"D'accord." },
+            { "id": "q_alcaloserespi_10", "patterns":["rouge", "vif", "saccadé"], "answer":"Ok." },
+            { "id": "q_alcaloserespi_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_alcaloserespi_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_alcaloserespi_13", "patterns":["point de ponction"], "answer":"Noté." },
+            { "id": "q_alcaloserespi_14", "patterns":["alcalose"], "answer":"Noté." },
+            { "id": "q_alcaloserespi_15", "patterns":["respiratoire"], "answer":"Noté." },
+            { "id": "q_alcaloserespi_16", "patterns":["effet shunt"], "answer":"Noté." },
+            { "id": "q_alcaloserespi_17", "patterns":["non compensée", "décompensée"], "answer":"Noté." }
+          ]
+        },
+{
+          id: "SDD9",
+          title: "Analyse des bicarbonates",
+          intro: "Interne aux urgences, le SAMU vous amène pour un patient, Monsieur A, 72 ans, qui présente une instabilité hémodynamique. Ses constantes sont les suivantes : PA : 90/50 mmHg après remplissage, FC : 100 bpm, FR : 28/min, Saturation : 92 %, Température : 38,5 °C. L'infirmière vous montre les premiers résultats : Natrémie : 138 mmol/l ; Kaliémie : 3,6 mmol/l ; Chlorémie : 99 mmol/l ; Glycémie : 5,5 mmol/l. Gaz du sang artériel en air ambiant : pH : 7,28 ; PaCO2 : 35 mmHg ; HCO3- : 15 mmol/l ; PaO2 : 78 mmHg. Interprétez le GDS et calculez le trou anionique (sans la kaliémie), quelles sont les 4 grandes étiologies générales de ce tb acido-basique, quels sont les examens biologiques à prescrire, quels sont les grands principes de PEC.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Diagnostiquer une : acidose, métabolique, partiellement compensée, avec un trou anionique à 24 donc augmenté.",
+            "- Les 4 grandes étiologies sont : acidose lactique, acidocétose, IR sévère et l'intox avec un acide exogène. On dose la lactatémie artérielle, la créatinémie et la cétonémie.",
+            "- On oriente vers un service de réa ou de soins intensifs. Le traitement de la cause se fait par C3G + macrolides ou C3G + lévofloxacine, on continue le remplissage, on met une oxygénothérapie et de la noradrénaline.",
+            "Rappel analyse PaCO2 et HCO3- :.",
+            "- pH diminué, HCO3- diminué, PaCO2 augmenté : acidose métabolique",
+            "- pH augmenté, HCO3- augmenté, PaCO2 augmenté : alcalose métabolique",
+            "- pH diminué, HCO3- augmenté, PaCO2 augmenté : acidose respiratoire",
+            "- pH augmenté, HCO3- diminué, PaCO2 diminué: alcalose respiratoire",
+            "Rappel calcul TA :",
+            "- TA = Na + K - Cl - HCO3- = 16 +/- 4",
+            "- TA = Na - CL - HOC3- = 12 +/- 4"
+
+          ],
+
+          questionSet: [
+            { "id": "q_gdstap_1", "patterns":["acidose"], "answer":"Noté."},
+            { "id": "q_gdstap_2", "patterns":["métabolique"], "answer":"Noté." },
+            { "id": "q_gdstap_3", "patterns":["partiellement compensée"], "answer":"Je vois." },
+            { "id": "q_gdstap_4", "patterns":["24", "augmenté"], "answer":"Ok je ne connaissais pas ce mot." },
+            { "id": "q_gdstap_5", "patterns":["acidose lactique"], "answer":"Tout à fait." },
+            { "id": "q_gdstap_6", "patterns":["acidocétose"], "answer":"Tout à fait." },
+            { "id": "q_gdstap_7", "patterns":["insuffisance rénale sévère"], "answer":"Tout à fait." },
+            { "id": "q_gdstap_8", "patterns":["acides exogènes", "acide exogène"], "answer":"Tout à fait." },
+            { "id": "q_gdstap_9", "patterns":["lactatémie"], "answer":"Noté." },
+            { "id": "q_gdstap_10", "patterns":["créatininémie", "créatinémie"], "answer":"Noté." },
+            { "id": "q_gdstap_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_gdstap_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_gdstap_13", "patterns":["cétonémie"], "answer":"Noté." },
+            { "id": "q_gdstap_14", "patterns":["réanimation", "soins intensifs"], "answer":"Oui. On vous apprend que votre patient souffre en réalité d'un choc septique sur pneumopathie aiguë communautaire." },
+            { "id": "q_gdstap_15", "patterns":["C3G", "macrolides", "lévofloxacine"], "answer":"Vous lancez une bi-antibiothérapie" },
+            { "id": "q_gdstap_16", "patterns":["remplissage", "NaCl"], "answer":"Vous lancez un remplissage par NaCl 0,9%." },
+            { "id": "q_gdstap_17", "patterns":["oxygène", "oxygénothérapie"], "answer":"Vous prescrivez une oxygénothérapie." },
+            { "id": "q_gdstap_18", "patterns":["noradrénaline"], "answer":"Vous lancez de la noradrénaline." }
+          ]
+        },
+{
+          id: "SDD10",
+          title: "Consultation de suivi et éducation thérapeutique d'un patient asthmatique",
+          intro: "Vous êtes pneumologue au CHU et recevez en consultation monsieur A, un patient de 27 ans, qui a un asthme connu depuis son enfance. Il vient dans le cadre d'une consultation de suivi périodique de son asthme. La dernière consultation remonte à 6 mois. Evaluez le contrôle de l'asthme de votre patient, évaluez la technique de prise du traitement inhalé, expliquez les vaccinations recommandées chez un patient asthmatique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander si au court des 4 dernières semaines l'asthme a empêché de pratiquer des activités, si le patient a été essoufflé, si ça l'a réveillé, s'il a utilisé son inhalateur / aérosol doseur de secours, comment le patient évalue sa maîtrise de l'asthme. Conclure que le patient présente un asthme bine contrôlé.",
+            "- Demander au patient de mimer sa prise de traitement, expliquer qu'il faut agiter le dispositif / qu'il faut inspirer profondément / qu'il faut expirer à fond / qu'il faut retenir sa respiration pendant 10s. Préciser que dans le cas des corticoïdes il faut se rincer la bouche.",
+            "- Recommander les vaccinations : grippe, COVID et pneumocoque.",
+            "Rappel à titre indicatif des valeurs de spirométrie :",
+            "- TVO : VEMS/CVF < 70%. Réversible si post-BD le VEMS +12% et +200mL. Réversibilité totale si VEMS/CF > 70% et VEMS > 80%.",
+            "- TVR : CPT < 80%.",
+            "- Diffusion du CO : mesure DLCO, pathologique si < 70%.",
+
+          ],
+
+          questionSet: [
+            { "id": "q_asthme_1", "patterns":["activités", "travail", "école", "université"], "answer":"Mon asthme m'a rarement empêcher de pratiquer mes activités habituelles."},
+            { "id": "q_asthme_2", "patterns":["essoufflé", "essoufflement"], "answer":"Je me suis senti essoufflé 1 à 2 fois par semaine pendant ce dernier mois." },
+            { "id": "q_asthme_3", "patterns":["réveillé"], "answer":"Je n'ai jamais été réveillé par mes symptômes durant ce dernier mois." },
+            { "id": "q_asthme_4", "patterns":["de secours"], "answer":"Au cours du dernier mois je n'ai pas eu à utiliser mon traitement de secours." },
+            { "id": "q_asthme_5", "patterns":["maîtrise de votre asthme", "maitrise", "maitrisé"], "answer":"Je pense que mon asthme est bien contrôlé." },
+            { "id": "q_asthme_6", "patterns":["bien contrôlé", "contrôlé"], "answer":"D'accord." },
+            { "id": "q_asthme_7", "patterns":["mimer", "me montrer"], "answer":"Le patient prend son inhalateur, le met à la bouche et prend une expiration normale, il inspire puis reprend son souffle normalement." },
+            { "id": "q_asthme_8", "patterns":["agiter"], "answer":"Ok je l'agiterais à présent." },
+            { "id": "q_asthme_9", "patterns":["expirer à fond"], "answer":"D'accord." },
+            { "id": "q_asthme_10", "patterns":["inspirer"], "answer":"Ok." },
+            { "id": "q_asthme_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis asthmatique depuis mes 8h, je suis traité par corticoïdes inhalés et B2 mimétiques inhalés. J'ai aussi du salbutamol à la demande en cas de crise. Je viens vous voir pour le suivi de mon asthme."},
+            { "id": "q_asthme_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_asthme_13", "patterns":["retenir sa respiration"], "answer":"Je le ferais à présent." },
+            { "id": "q_asthme_14", "patterns":["corticoïdes", "se rincer la bouche"], "answer":"Je ne savais pas, je le ferais." },
+            { "id": "q_asthme_15", "patterns":["grippe"], "answer":"D'accord j'y penserais car je n'ai pas eu le temps de le faire." },
+            { "id": "q_asthme_16", "patterns":["COVID"], "answer":"Je suis vacciné pour le COVID !" },
+            { "id": "q_asthme_17", "patterns":["pneumocoque"], "answer":"D'accord !" },
+          ]
+        },
+
+{
+          id: "SDD11",
+          title: "Consultation de suivi été éducation thérapeutique d'un patient BPCO",
+          intro: "Vous recevez en consultation de pneumologie, Monsieur B, 60ans, qui vient d'être diagnostiqué BPCO. Il est fumeur actif estimé à 30PA. Il présente une obésité avec un IMC à 31 kg/m². Il a une HTA depuis 5 ans traitée par IEC. Vous le voyez pour la première fois. Encouragez le sevrage tabagique en exposant les bénéfices et encouragez une activité physique, expliquez au patient les signes d'alerte et la CAT en cas d'exacerbation de BPCO, exposez les bénéfices attendus et l'importance des vaccinations.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demande au patient son avis sur l'arrêt du tabac et s'il pratique un sport, expliquer les possibilités d'aide au sevrage, expliquer que l'arrêt du tabac est la seule mesure qui modifie l'histoire de sa maladie, sevrage tabagique permet d'interrompre la progression de l'ob bronchique et de retarder l'insuffisance respiratoire, permet de réduire le risque de cancer et de maladies CVS. Expliquer que l'activité physique permet de réduire la mortalité, d'augmenter l'endurance, de diminuer la dyspnée et de perdre du poids.",
+            "- Signes d'exacerbation : aggravation symptômes > 24h nécessitant modification traitement, peuvent être traitées en ville, certains signes doivent faire consulter en urgence (dyspnée moindre effort, absence de réponse au traitement, purulence, aggravation rapide, signes gravité immédiate).",
+            "- Demander vaccinations effectuées, nécessité de se faire vacciner COVID / grippe / pneumocoque, expliquer qu'il est plus à risque de forme grave de COVID / grippe / pneumocoque ou de décompenser sa BPCO."
+          ],
+
+          questionSet: [
+            { "id": "q_suivibpco_1", "patterns":["avis", "pratiquez une activité physique", "arrêt du tabac"], "answer":"J'ai pas très envie d'arrêter de fumer parce que de toute façon je suis déjà malade et on m'a bien dit qu'on pourrait pas me guérir de cette maladie donc bon. Puis du sport j'en fais pas parce que je travaille beaucoup, qu'est-ce que je pourrais faire ?"},
+            { "id": "q_suivibpco_2", "patterns":["aide au sevrage", "tabac info service", "ligne téléphonique", "substituts nicotiniques", "TCC", "thérapie cognitivo-comportementales"], "answer":"D'accord, je connaissais pas." },
+            { "id": "q_suivibpco_3", "patterns":["seule mesure", "histoire naturelle"], "answer":"Je vois." },
+            { "id": "q_suivibpco_4", "patterns":["progression de l'obstruction", "retarder l'apparition"], "answer":"Je vois." },
+            { "id": "q_suivibpco_5", "patterns":["réduit le risque de cancer du poumons", "cardiovasculaire"], "answer":"Ah c'est intéressant." },
+            { "id": "q_suivibpco_6", "patterns":["30 minutes par jour", "5 fois par semaine"], "answer":"D'accord je vois." },
+            { "id": "q_suivibpco_7", "patterns":["réduit la mortalité", "augmente l'endurance", "diminue la dyspnée", "perdre du poids"], "answer":"Ah oui c'est pas mal." },
+            { "id": "q_suivibpco_8", "patterns":["aggravation de plus de 24h", "aggravation > 24h", "modification du traitement"], "answer":"Ok je retiens ça." },
+            { "id": "q_suivibpco_9", "patterns":["en ville", "BDCA", "bronchodilatateurs de courte durée d'action"], "answer":"D'accord." },
+            { "id": "q_suivibpco_10", "patterns":["dyspnée au moindre effort", "absence de réponse", "purulentes", "purulents", "aggravation rapide", "signes de gravité"], "answer":"Ok je vois." },
+            { "id": "q_suivibpco_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_suivibpco_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_suivibpco_13", "patterns":["vaccinations", "vacciné"], "answer":"Je suis vacciné COVID et les vaccins obligatoires mais avec tout ce qu'on entend je ne veux pas m'injecter d'autres vaccins." },
+            { "id": "q_suivibpco_14", "patterns":["grippe", "COVID", "pneumocoque"], "answer":"D'accord.." },
+            { "id": "q_suivibpco_15", "patterns":["forme grave", "décompenser", "décompensation"], "answer":"Je vois." }
+          ]
+        },
+{
+          id: "SDD12",
+          title: "Découverte d'une anomalie cardio-thoracique à l'imagerie médicale",
+          intro: `Vous recevez en consultation de pneumologie, Madame F, 52 ans, adressé par son médecin traitant. Elle est suivie depuis 5 ans pour une sclérodermie systémique. Récemment elle a noté l'apparition d'une dyspnée et d'une toux sèche. Elle vous amène ce jour, les résultats d'une imagerie thoracique prescrit par son médecin traitant. Identifiez le type d'imagerie et ses caractéristiques techniques, décrivez les caractéristiques sémiologiques de l'anomalie et en se basant sur le contexte clinique quel diagnostic évoquer et quelle pathologie pulmonaire devez vous rechercher dans ce contexte. <img src= "pid.png" style ="max-width:100%; border-radius:8px; margin-top:10px;"`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- TDM thoracique, fenêtre parenchymateuse, coupe axiale, examen irradiant, examen se basant sur l'émission de rayons X.",
+            "- Présence de verre dépoli, réticulations et bronchectasies.",
+            "- Tableau de PID de type pneumopathie interstitielle non spécifique, risque d'hypertension artérielle pulmonaire."
+          ],
+
+          questionSet: [
+            { "id": "q_pidhtap_1", "patterns":["TDM thoracique", "tomodensitométrie", "scanner thoracique"], "answer":"Noté."},
+            { "id": "q_pidhtap_2", "patterns":["parenchymateuse"], "answer":"Noté." },
+            { "id": "q_pidhtap_3", "patterns":["coupe axiale"], "answer":"Noté." },
+            { "id": "q_pidhtap_4", "patterns":["irradiant", "irradie"], "answer":"Noté." },
+            { "id": "q_pidhtap_5", "patterns":["rayons X"], "answer":"Noté." },
+            { "id": "q_pidhtap_6", "patterns":["verre dépoli"], "answer":"Noté." },
+            { "id": "q_pidhtap_7", "patterns":["réticulations"], "answer":"Noté." },
+            { "id": "q_pidhtap_8", "patterns":["bronchectasies"], "answer":"Noté." },
+            { "id": "q_pidhtap_9", "patterns":["pneumopathie interstitielle diffuse", "pneumopathie interstitielle non spécifique", "PINS", "PID"], "answer":"Noté." },
+            { "id": "q_pidhtap_10", "patterns":["hypertension artérielle pulmonaire", "HTAP"], "answer":"Noté." },
+            { "id": "q_pidhtap_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis suivie pour une sclérodermie et j'ai l'impression de tousser sèchement en ce moment. Ca me dérange vraiment donc je vous ai apporté l'imagerie prescrite par mon généraliste."},
+            { "id": "q_pidhtap_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
