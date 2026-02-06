@@ -3989,6 +3989,678 @@ const data = {
         }
       ]
     },
+{
+      id: "Néphro",
+      title: "Néphrologie et Urologie",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Troubles sexuels et troubles de l'érection",
+          intro: "Vous recevez dans votre cabinet en consultation d'urologie, Monsieur X 62 ans car depuis quelques semaines ses érections ont changé et ne lui permettent plus d'avoir des rapports sexuels satisfaisants. Réalisez un interrogatoire détaillé, précisez les éléments pertinents à rechercher à l'examen clinique pour orienter la démarche étiologique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (toxiques, ATCD, médicaments), préciser la dysfonction (brutale ou progressive, érections nocturnes, libido, trauma ou déclenchants, partenaire stable), état du coupe (stable, relations extraconjuguales, âge, motivation sexuelle, statut hormonal, ATCD gynéco), symptômes d'une maladie CVS (dyspnée, douleur à la marche, ATCD IDM / AVC / diabète), hypogonadisme (perte mémoire, tb attention, asthénie, anorexie, humeur dépressive).",
+            "- Taille et poids, anomalie CVS (souffle, palpation pouls, IPS, TA), gynécomastie, palpation OGE, obésité abdominale, atrophie cutanée ou dépilation, TR, examen neurologique ciblé (ROT, sensibilité MI, anesthésie en selle).",
+            "Différencier l'origine organique de fonctionnelle :",
+            "- Origine organique prédominante : progressive, disparition érections nocturnes, conservation libido, éjaculation verge molle, partenaire stable, pas de facteurs déclenchants, étiologie organique évidente, examen clinique anormal, personnalité et humeur stable, examens complémentaires anormaux.",
+            "- Origine fonctionnelle prédominante : brutale, conservation érections nocturnes, diminution libido, absence d'éjaculation, conflits conjugaux, facteur déclenchant, dépression, examen clinique normal, anxiété ou tb de l'humeur, examens complémentaires normaux."
+          ],
+
+          questionSet: [
+            { "id": "q_dysfoncsex_1", "patterns":["toxiques", "fumez", "ATCD", "antécédents", "médicaments", "traitements"], "answer":"Je suis fumeur depuis mes 18 ans à raison d'un demi-paquet par jour. Je vois aussi un verre de vin par jour. Je suis cadre dans une banque. J'ai de l'hypertension traitée par amlodipine."},
+            { "id": "q_dysfoncsex_2", "patterns":["brutale", "progressive", "brutal", "progressif", "érections nocturnes", "libido", "traumatisme", "déclenchant", "partenaire"], "answer":"Ca fait 3 mois je dirais et ça a été plutôt progressif. Je n'ai plus du tout d'érection mais ma libido est pourtant conservée. Je ne crois pas qu'il y a ait d'élément déclencheur." },
+            { "id": "q_dysfoncsex_3", "patterns":["stable", "relations extraconjuguales", "âge", "motivation sexuelle", "hormonal", "antécédents gynécologiques"], "answer":"Je suis marié depuis 30 ans et avec 3 enfants. Je n'ai pas de relations extraconjuguales. Aussi ma femme est ménopausée mais a toujours de la libido, et elle a pour seuls antécédents gynécologiques 3 grossesses." },
+            { "id": "q_dysfoncsex_4", "patterns":["dyspnée", "douleur à la marche", "IDM", "infarctus", "AVC", "accident vasculaire cérébral", "diabète", "diabétique"], "answer":"Je me trouve essoufflé quand je monte les 3 étages pour arriver à mon appartement. Je n'ai par contre pas de douleurs à la marche. Je n'ai également pas d'autre antécédent cardiovasculaire que mon hypertension." },
+            { "id": "q_dysfoncsex_5", "patterns":["mémoire", "attention", "irritabilité", "asthénie", "fatigue", "fatigué", "anorexie", "dépressive", "dépression", "déprimé"], "answer":"Je ne suis pas fatigué, mon humeur est normal et j'ai un appétit conservé." },
+            { "id": "q_dysfoncsex_6", "patterns":["taille", "poids", "IMC"], "answer":"Noté." },
+            { "id": "q_dysfoncsex_7", "patterns":["souffle", "pouls", "IPS", "tension"], "answer":"Noté." },
+            { "id": "q_dysfoncsex_8", "patterns":["palpation des organes génitaux", "palpation des OGE", "atrophie testiculaire", "anomalies du pénis", "anomalies péniennes"], "answer":"Noté." },
+            { "id": "q_dysfoncsex_9", "patterns":["obésité", "obésité abdominale"], "answer":"Noté." },
+            { "id": "q_dysfoncsex_10", "patterns":["atrophie cutanée", "dépilation"], "answer":"Noté." },
+            { "id": "q_dysfoncsex_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai du mal à garder une érection suffisante, on pourrait en discuter pour savoir d'où ça vient ?"},
+            { "id": "q_dysfoncsex_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_dysfoncsex_13", "patterns":["TR", "toucher rectal"], "answer":"Noté." },
+            { "id": "q_dysfoncsex_14", "patterns":["examen neurologique", "ROT", "réflexes ostéo-tendineux", "réflexes cutanéo-plantaires", "sensibilité", "anesthésie en selle"], "answer":"Noté." }
+          ]
+        },
+        {
+          id: "SDD2",
+          title: "Incontinence urinaire",
+          intro: "Vous recevez dans votre cabinet en consultation d'urologie, Madame X 58 ans pour incontinence urinaire. Réalisez un interrogatoire pour préciser l'incontinence urinaire, recherchez les FdR d'incontinence urinaire et signes urinaires associés, proposez 3 examens complémentaires de 1e intention en expliquant leur pertinence.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Date d'apparition et circonstances (brutale ou progressive), lors de l'effort (physique, toux, rire, éternuement, port de charges lourdes), urgenturie associée.",
+            "- Recherche signes en phase de stockage (énurésie, pollakiurie, nycturie, urgenturie), en phase de vidange (dysurie, brûlures mictionnelles), post mictionnelle (gouttes retardataires, vidange incomplète), FdR d'incontinence urinaire (obésité, sédentarité, ATCD fam, ethnie, nombre de grossesse, AVB, chirurgie pelvienne, irradiation pelvienne, diabète, tb cognitifs, ATCD pathos neuro), retentissement (port de couches, dépression, proposition réaliser questionnaire USP).",
+            "- Réaliser un calendrier mictionnel, un ECBU et une échographie réno-vésicale avec mesure du résidu post-mictionnel (RPM), dire que le calendrier permet de quantifier le nombre de mictions et objectiver l'incontinence, dire que l'ECBU éliminera une IU et détectera une hématurie microscopique, dire que l'échographie permettra de mesurer le RPM et vérifier l'intégrité des organes urologiques.",
+            "Pour rappel l'incontinence urinaire est un diagnostic clinique ne nécessitant pas d'examens complémentaires pour son diagnostic, ils permettent d'évaluer le retentissement et d'orienter sur l'étiologie c'est tout."
+          ],
+
+          questionSet: [
+            { "id": "q_incontinence_1", "patterns":["date", "depuis quand", "combien de temps", "brutale", "brutal", "progressive", "progressif"], "answer":"Ca fait quelques mois, c'est plutôt progressif, mais depuis 2 semaines c'est encore pire. Je fais pipi disons entre 4 à 6 fois par jour."},
+            { "id": "q_incontinence_2", "patterns":["effort", "toux", "rire", "port de charges lourdes", "éternuement"], "answer":"Oui c'est des fuites urinaires involontaires survenant à l'effort, ou quand je rigole, ou quand je tousse..." },
+            { "id": "q_incontinence_3", "patterns":["urgenturie"], "answer":"Non je n'ai pas d'envies pressantes." },
+            { "id": "q_incontinence_4", "patterns":["phase de stockage", "énurésie, pollakiurie", "nycturie", "urgenturie"], "answer":"Non je n'ai pas ces symptômes là." },
+            { "id": "q_incontinence_5", "patterns":["phase de vidange", "dysurie", "brûlures mictionnelles"], "answer":"J'ai parfois des brûlures lors de la miction." },
+            { "id": "q_incontinence_6", "patterns":["post-mictionnelle", "gouttes retardataires", "vidange incomplète"], "answer":"Non je n'ai pas ces symptômes là." },
+            { "id": "q_incontinence_7", "patterns":["obésité", "sédentarité", "antécédents familiaux", "ethnie", "grossesses", "accouchement voie basse", "accouchements voie basse", "AVB", "diabète", "chirurgie", "irradiation", "troubles cognitifs", "pathologies neurologiques"], "answer":"Je suis infirmière en pédiatrie. J'ai eu 3 grossesses dont une par césarienne et un de mes enfants faisait 4kg2 à la naissance. Je fais 1m65 pour 71 kg et je suis ménopausée depuis 6 ans." },
+            { "id": "q_incontinence_8", "patterns":["couches", "humeur", "USP"], "answer":"Oui je suis obligée de porter des couches pour ne pas me changer au travail, ça me donne l'impression de devenir un enfant à nouveau, c'est horrible." },
+            { "id": "q_incontinence_9", "patterns":["calendrier mictionnel", "quantifier", "objectiver"], "answer":"D'accord." },
+            { "id": "q_incontinence_10", "patterns":["ECBU", "infection urinaire"], "answer":"Ok." },
+            { "id": "q_incontinence_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai des soucis d'incontinence urinaire, on peut en discuter ? "},
+            { "id": "q_incontinence_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_incontinence_13", "patterns":["échographie", "résidu post-mictionnel", "RPM"], "answer":"D'accord." }
+          ]
+        },
+
+        {
+          {
+          id: "SDD3",
+          title: "Dyscalcémie",
+          intro: "Vous recevez dans votre cabinet en consultation, Madame X 62 ans pour nausées, vomissement et altération de l'état général. Elle a comme principal antécédent un adénome hypophysaire traité chirurgicalement il y a 3 ans, non supplémenté. Un bilan biologique a été réalisé et retrouve une hypercalcémie totale à 2,95 mmol/L. Expliquez l'intérêt du dosage de l'albuminémie ou de la calcémie ionisée en cas d'hypercalcémie totale, prescrivez et interprétez le bilan étiologique de première intention, cherchez les complications chroniques de la pathologie retrouvée.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- La calcémie totale varie dans le même sens que l'albuminéalie, la calcémie ionisée est la forme régulée de la calcémie non liée à l'albumine et reflète mieux la calcémie.",
+            "- Prescrire un dosage de : PTH, vit D active ou 1-25-OH vitamine D ou calcitriol, 25-OH vit D, calciurie des 24h, phasphatémie. Expliquer qu'on est face à une hypercalcémie à PTH normale avec hyopphosphatémie et vit D normale, l'hypothèse principale est donc une hyperparathyroïdie primaire.",
+            "- Rechercher des signes d'ostéoporose (douleurs os, fractures basse cinétique, DMO), signes de néphrocalcinose (échographie rénale, ATCD d'IRC, lithiases urinaires), ATCD de lithiases urinaires (coliques néphrétiques, explorations, dl lombaire, hématurie microscopique, caillot par les urines).",
+            "Causes d'hypercalcémie et variations biologiques :",
+            "- Hyperparathyroïdie primaire : Ca augmentée, Ca ionisée augmentée, PTH N ou augmentée, P diminuée, 25-OH-vit D N, 1-25 OH vit D augmentée, CaU augmentée.",
+            "- HyperCa osseuse : Ca augmentée, Ca ionisée augmentée, PTH diminutée, P N ou augmentée, 25-OH-vit D N, 1-25 OH vit D N, CaU augmentée.",
+            "- Intoxication à la vit D : Ca augmentée, Ca ionisée augmentée, PTH diminuée, P augmentée, 25-OH-vit D augmentée, 1-25 OH vit D augmentée, CaU augmentée.",
+            "- Hypercalcitriolémie : Ca augmentée, Ca ionisée augmentée, PTH diminuée, P N ou augmentée, 25-OH-vit D N, 1-25 OH vit D augmentée, CaU augmentée."
+          ],
+
+          questionSet: [
+            { "id": "q_hyperca_1", "patterns":["varie dans le même sens", "liée à l'albuminémie", "liée à l'albumine"], "answer":"Noté."},
+            { "id": "q_hyperca_2", "patterns":["régulée", "non liée à l'albumine", "non liée à l'albuminémie"], "answer":"Noté." },
+            { "id": "q_hyperca_3", "patterns":["PTH"], "answer":"Prescription faite." },
+            { "id": "q_hyperca_4", "patterns":["vitamine D active", "1-25-OH vitamine D", "1-25 OH", "calcitriol"], "answer":"Prescription faite." },
+            { "id": "q_hyperca_5", "patterns":["25-Oh vitamine D", "25-OH"], "answer":"Prescription faite." },
+            { "id": "q_hyperca_6", "patterns":["calciurie", "calciurie des 24h", "calciurie des 24 heures"], "answer":"Prescription faite." },
+            { "id": "q_hyperca_7", "patterns":["phosphatémie"], "answer":"Prescription faite." },
+            { "id": "q_hyperca_8", "patterns":["hypercalcémie à PTH normale", "hypophosphatémie", "vitamine D normale"], "answer":"Noté." },
+            { "id": "q_hyperca_9", "patterns":["hyperparathyroïdie primaire"], "answer":"Validé." },
+            { "id": "q_hyperca_10", "patterns":["ostéoporose", "fractures", "douleurs osseuses", "DMO"], "answer":"J'ai eu une fracture du col du fémur en trébuchant simplement d'un trottoir." },
+            { "id": "q_hyperca_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_hyperca_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_hyperca_13", "patterns":["néphrocalcinose", "échographie rénale", "IRC", "insuffisance rénale chronique"], "answer":"Je n'ai jamais fait d'échographie rénale." },
+            { "id": "q_hyperca_14", "patterns":["lithiases urinaires", "coliques néphrétiques", "explorations fonctionnelles", "douleurs lombaires", "hématurie microscopique", "caillots dans les urines", "sang dans les urines"], "answer":"J'ai eu une colique néphrétique il y a un an et demi que je n'ai pas exploré parce que le calcul est parti tout seul." }
+          ]
+        },
+{
+          id: "SDD4",
+          title: "Dyskaliémie",
+          intro: "Interne de garde aux urgences le 6 août, vous recevez Monsieur X 65 ans pour une Hyperkaliémie à 6,5 mmol/L. Evaluez le degré d'urgence de la prise en charge, cherchez une cause médicamenteuse ou toxique, donnez les indications d'épuration extra-rénale en urgence.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Urgence dépend de : hyperkaliémie sévère ou menaçante > 7 mmol/L, paralysie flasque ascendante, signes EG ( bradycardie, QRS larges, disparition ondes T, arythmies ventriculaires), hypotension artérielle.",
+            "- Rechercher la prise : b-bloquants non sélectifs, digitaliques / ciclosporine / tacrolimus, AINS, IEC / ARA2, DEP / triméthoprime / pentamidine.",
+            "- Indications à l'EER : hyperK symptomatique (> 6,5 mmol/L + signes ECG), associée à une anurie, associée à une acidose métabolique sévère (pH < 7,2) ou hyperhydratation résistante au traitement diurétique.",
+          ],
+
+          questionSet: [
+            { "id": "q_dyskal_1", "patterns":["sévère", "menaçante", "> 7 mmol/L"], "answer":"Noté."},
+            { "id": "q_dyskal_2", "patterns":["paralysie flasque", "ascendante"], "answer":"Absence de faiblesse musculaire mais picotements au niveau des doigts de façon bilatérale." },
+            { "id": "q_dyskal_3", "patterns":["signes ECG", "bradycardie", "pas ondes P", "arythmies ventriculaires", "QRS larges"], "answer":"Noté." },
+            { "id": "q_dyskal_4", "patterns":["hypotension"], "answer":"Tension à l'accueil 125/85mmHg." },
+            { "id": "q_dyskal_5", "patterns":["bêta-bloquants", "b-bloquants"], "answer":"Absence de prise de b-bloquants." },
+            { "id": "q_dyskal_6", "patterns":["digitaliques", "ciclosporine", "tacrolimus"], "answer":"Absence de prise de digitaliques, ciclosporine ou tacrolimus." },
+            { "id": "q_dyskal_7", "patterns":["AINS"], "answer":"Prise d'AINS après des douleurs musculaires après un footing." },
+            { "id": "q_dyskal_8", "patterns":["IEC", "ARA2"], "answer":"Prise d'IEC pour une HTA depuis 3 ans, sans rdv de contrôle effectué." },
+            { "id": "q_dyskal_9", "patterns":["diurétiques épargneurs potassiques", "triméthoprime", "pentamidine"], "answer":"Absence de prise de DEP, triméthoprime ou pentamidine." },
+            { "id": "q_dyskal_10", "patterns":["symptomatique"], "answer":"Validé." },
+            { "id": "q_dyskal_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_dyskal_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_dyskal_13", "patterns":["anurie"], "answer":"Validé." },
+            { "id": "q_dyskal_14", "patterns":["acidose métabolique sévère"], "answer":"Noté." },
+            { "id": "q_dyskal_15", "patterns":["résistante au traitement diurétique"], "answer":"Validé." }
+          ]
+        },
+{
+          id: "SDD5",
+          title: "Dysnatrémie",
+          intro: "Vous réalisez un bilan biologique pour votre patient, Monsieur X, 77 ans, hospitalisé depuis 5 jours pour altération de l'état général et pneumonie à pneumocoque traité par Augmentin. Il y a une hyponatrémie à 128 mmol/l. Réaliser un examen clinique orienté, estimer l'osmolalité plasmatique et urinaire avec les éléments du ionogramme sanguin et urinaire.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Déterminez un score de Glasgow, recherchez des symptômes d'hypoNa modérée (nausée, confusion, céphalées) et d'hypoNa sévère (vomissements, détresse cardio-respi, somnolence, comitialité, tb conscience, coma), des signes de déshydratation extracellulaire (perte de poids, pli cutané, tachycardie, sécheresse peau, aplatissement veines superficielles), diurèse, soif, hypotension orthostatique, sd oedémateux / HTA / surcharge hydrosodée.",
+            "- Osmolalité plasmatique = 261 mmol/L, osmolalité urinaire = 228 mmol/L.",
+            "Rappel calculs osmolalité : ",
+            "- Osmolalité plasmatique = Na x2 + glycémie (mmol/L) (= 285 mmol/L).",
+            "- Osmolalité urinaire = (Na+K) x2 + urée."
+          ],
+
+          questionSet: [
+            { "id": "q_dysna_1", "patterns":["SGW", "Glasgow"], "answer":"SGW 15."},
+            { "id": "q_dysna_2", "patterns":["nausées", "confusion", "céphalées", "maux de tête", "confuse", "nausée"], "answer":"Absence de confusion. Présence de céphalées et de nausées." },
+            { "id": "q_dysna_3", "patterns":["vomissements", "vomis", "détresse cardio-respiratoire", "somnolence", "somnolente", "comitialité", "troubles de conscience", "coma"], "answer":"Absence de vomissements, absence de troubles de la conscience. TA 130/80mmHg et FC 78 bpm." },
+            { "id": "q_dysna_4", "patterns":["perte de poids", "pli cutané", "tachycardie", "sécheresse cutanée", "aplatissement des veines"], "answer":"Absence de pli cutané, absence d'aplatissement des veines superficielles." },
+            { "id": "q_dysna_5", "patterns":["diurèse"], "answer":"Diurèse normale." },
+            { "id": "q_dysna_6", "patterns":["soif"], "answer":"Absence de soif." },
+            { "id": "q_dysna_7", "patterns":["hypotension orthostatique"], "answer":"Test réalisé et normal." },
+            { "id": "q_dysna_8", "patterns":["syndrome oedémateux", "hypotension artérielle", "surcharge hydrosodée", "surcharge"], "answer":"Absence d'OMI, auscultation cardio-pulmonaire normale." },
+            { "id": "q_dysna_9", "patterns":["261", "261 mmol/L"], "answer":"D'accord." },
+            { "id": "q_dysna_10", "patterns":["228", "228 mmol/L"], "answer":"Ok." },
+            { "id": "q_dysna_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_dysna_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_dysna_13", "patterns":["ionogramme sanguin"], "answer":"Hb : 13 g/100mL, GB 12,7 G/L, plaquettes : 220 G/L, Na : 128 mmol/L, K : 4,5 mmol/L, Cl : 99 mmol/L, Ca : 2,2 mmol/L, glycémie : 5 mmol/L, protides : 40 g/L, créatininémie : 90 mmol/L, urée : 4,8 mmol/L." },
+            { "id": "q_dysna_14", "patterns":["ionogramme urinaire"], "answer":"Na : 35 mmol/L, K : 19 mmol/L, Cl : 12 mmol/L, créatininurie : 11 mmol/L, urée urinaire : 120 mmol/L." }
+          ]
+        },
+
+{
+          id: "SDD6",
+          title: "Brûlures mictionnelles",
+          intro: "Vous recevez en consultation un patient de 28 ans qui se plaint de brûlures mictionnelles depuis 2 jours. Menez un interrogatoire pour orienter vos hypothèses diagnostiques, prescrire des examens complémentaires, expliquez au patient votre ou vos hypothèse(s) diagnostique(s) ainsi que la pertinence des examens réalisés.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander constantes, rechercher d'autres signes fonctionnels urologiques (urgenturie, pollakiurie, nycturie) / diminution diurèse / douleur lombaire, rechercher sd infectieux (frissons, fièvre), rechercher rapports à risque et écoulement urétral, rechercher antécédents.",
+            "- Prescrire une BU suivie d'un ECBU, une NFS + CRP + hémocultures + créatinémie + urée, échographie rénale, bilan d'IST.",
+            "- Expliquer qu'on évoque en priorité une pyélonéphrite aigue mais aussi possiblement une IST, que pour diagnostiquer une IU on utilise la BU / ECBU, que l'imagerie permet d'éliminer une obstruction ou des foyers de néphrite, que le bilan d'IST est justifié devant la symptomatologie et le rapport à risque récent, et que le bilan biologique permet de documenter un sd infectieux.",
+            "Rappel des facteurs de risque de complication des infections urinaires :",
+            "- Anomalie anatomique ou fonctionnelle de l'arbre urinaire.",
+            "- Sexe masculin.",
+            "- > 75 ans.",
+            "- > 65 ans avec au moins 3 critères de fragilité de Fried.",
+            "- immunodépression.",
+            "- grossesse.",
+            "- IRC sévère.",
+            "Rappel des examens à réaliser :",
+            "- Pyélonéphrite aigue simple non grave : hémoc que si doute diagnostic, ATB par monothérapie, surveillance clinique si bonne évolution et ECBU + uroscanner si fièvre à 72h du début de l'ATB adaptée.",
+            "- Pyélonéphrite aigue à risque de complication non grave (notre cas) : hémoc que si doute diagnostic ou fièvre, bilan bio (NFS, CRP, créat + urée), imagerie, ATB par monothérapie, surveillance clinique si bonne évolution et ECBU + uroscanner si fièvre à 72h du début de l'ATB adaptée.",
+            "- Pyélonéphrite aigue grave : hémoc, bilan bioologique (NFS + CRP + Créat + urée), imagerie, ATB par bithérapie, surveillance clinique si bonne évolution et ECBU + uroscanner si fièvre à 72h du début de l'ATB adaptée."
+          ],
+
+          questionSet: [
+            { "id": "q_bruluresmic_1", "patterns":["constantes", "paramètres vitaux"], "answer":"PA 125/85 mmHg, FC 80 bpm, température 38,1°C, FR 18/mn, saturation 100%."},
+            { "id": "q_bruluresmic_2", "patterns":["signes fonctionnels urinaires", "urgenturie", "pollakiurie", "nycturie", "diurèse", "douleur lombaire"], "answer":"J'ai des brûlures mictionnelles depuis 2 jours avec une douleur dans le dos à droite qui irradie vers le sexe." },
+            { "id": "q_bruluresmic_3", "patterns":["frissons", "fièvre"], "answer":"J'ai eu des frissons cette nuit." },
+            { "id": "q_lihg_4", "patterns":["rapports sexuels à risque", "non protégés", "écoulement urétral"], "answer":"J'ai eu un rapport sexuel non protégé il y a 2 semaines, mais je n'ai pas d'écoulement urétral." },
+            { "id": "q_bruluresmic_5", "patterns":["antécédents"], "answer":"Je n'ai pas d'antécédents médico-chirurgicaux." },
+            { "id": "q_bruluresmic_6", "patterns":["BU", "ECBU"], "answer":"Prescription d'une BU suivie d'une ECBU." },
+            { "id": "q_bruluresmic_7", "patterns":["NFS", "CRP", "hémocultures", "créatinémie", "urée"], "answer":"Prescription d'un bilan biologique avec des hémocultures." },
+            { "id": "q_bruluresmic_8", "patterns":["échographie", "imagerie des voies urinaires"], "answer":"Prescription d'une échographie des voies urinaires." },
+            { "id": "q_bruluresmic_9", "patterns":["bilan d'IST", "bilan d'infections sexuellement transmissibles"], "answer":"Prescription d'un bilan d'IST." },
+            { "id": "q_bruluresmic_10", "patterns":["pyélonéphrite aigue", "IST"], "answer":"D'accord je vois." },
+            { "id": "q_bruluresmic_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends rien à ce compte-rendu, je dois m'inquiéter ?"},
+            { "id": "q_bruluresmic_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"C'est clair, merci Docteur." },
+            { "id": "q_bruluresmic_13", "patterns":["infection urinaire"], "answer":"OK." },
+            { "id": "q_bruluresmic_14", "patterns":["obstruction", "foyers de néphrite"], "answer":"D'accord." },
+            { "id": "q_bruluresmic_15", "patterns":["syndrome infectieux"], "answer":"D'accord !" },
+          ]
+        },
+
+{
+          id: "SDD7",
+          title: "Ecoulement urétral",
+          intro: "Vous recevez en consultation d'urologie, un patient de 24 ans pour découverte d'une urétrite à gonocoque lors d'un écoulement urétral apparu il y a une semaine traitée médicalement. Il vient vous voir ce jour pour la suite de la prise en charge. Identifiez les facteurs de risque d'IST, expliquez les conseils de prévention des IST.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher l'orientation sexuelle, un changement de partenaire récent, des ATCD d'IST chez un partenaire, des ATCD perso d'IST, une autre IST active, des ATCD de violences sexuelles, prostitution.",
+            "- Protection des rapports sexuels par l'usage de préservatif, vaccination préventive contre VHB / VHA / HPV jusqu'à 26 ans révolus, proposer un dépistage / diagnostic / traitement probabiliste du ou des partenaire(s), proposer systématiquement un bilan d'IST (sérologie VIH, test tréponémique, sérologie VHB, PCR urinaire Chlamydia et Gonocoque +/- PCR pharyngée et anale selon pratiques), insiste sur les risques de recontamination, envisager un traitement de type PrEP."
+          ],
+
+          questionSet: [
+            { "id": "q_ist_1", "patterns":["orientation sexuelle", "rapports sexuels avec des hommes"], "answer":"Oui je suis homosexuel."},
+            { "id": "q_ist_2", "patterns":["changement de partenaire"], "answer":"Je n'ai pas de partenaire fixe donc j'ai récemment vu plusieurs personnes..." },
+            { "id": "q_ist_3", "patterns":["IST chez le partenaire"], "answer":"Mon ancien conjoint avec un VIH mais traité et avec une charge virale indétectable." },
+            { "id": "q_ist_4", "patterns":["antécédents"], "answer":"J'ai eu une syphilis primaire traitée il y a 1 an." },
+            { "id": "q_ist_5", "patterns":["autre infection sexuellement transmissible active", "autre IST"], "answer":"Mmm bah à part cette syphilis traité je n'ai pas eu d'autres choses je crois." },
+            { "id": "q_ist_6", "patterns":["violences sexuelles"], "answer":"Je n'ai pas vécu de violences sexuelles, mais comme je ne prends aucune drogue ça doit aider à ce que je reste conscient des situations." },
+            { "id": "q_ist_7", "patterns":["prostitution"], "answer":"Non pas du tout." },
+            { "id": "q_ist_8", "patterns":["préservatifs"], "answer":"Oui je comprends." },
+            { "id": "q_ist_9", "patterns":["vaccination préventive", "hépatite A", "hépatite B", "HPV"], "answer":"D'accord." },
+            { "id": "q_ist_10", "patterns":["dépistage du partenaire", "diagnostic du partenaire", "traitement du partenaire"], "answer":"Ok." },
+            { "id": "q_ist_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens car j'ai eu un écoulement urétral et je voudrais parler prévention avec vous..."},
+            { "id": "q_ist_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_ist_13", "patterns":["bilan d'IST", "bilan d'infections sexuellement transmissibles"], "answer":"Oui je comprends, après je vous avoue être stressé à l'idée d'avoir une seconde IST en 1 an..." },
+            { "id": "q_ist_14", "patterns":["recontamination"], "answer":"Je vois..." },
+            { "id": "q_ist_15", "patterns":["PrEP"], "answer":"Je vois, et c'est quoi l'intérêt de tout ça ?" },
+            { "id": "q_ist_16", "patterns":["prévenir une infection VIH"], "answer":"D'accord, je vous crois..." }
+          ]
+        },
+
+{
+          id: "SDD8",
+          title: "Rétention aiguë d'urines",
+          intro: "Vous recevez aux urgences un patient de 75 ans, Monsieur R, accompagné de son épouse pour douleur abdominale basse. Monsieur R est confus. Son épouse vous dit lors de l'interrogatoire qu'il n'a pas uriné depuis 2 jours. Donnez votre hypothèse diagnostique et expliquez les signes cliniques à rechercher pour le diagnostiquer, cherchez un ou des facteur(s) déclenchant(s) à l'interrogatoire, donnez les 3 complications potentielles et les mesures de prévention associées.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Evoquer une rétention aigue d'urines, rechercher une douleur hypogastrique une matité sus-pubienne et une voussure hypogastrique.",
+            "- Rechercher au moins 3 causes parmi : HBP, cancer prostate, lithiase, corps étranger, fécalome, tumeur vessie, tumeurs pelviennes, constipation, vessie claquée, neuropathies périphériques, neuropathies centrales, iatrogène (opiacés, analgésie péridurale, antiparkinsoniens, benzos).",
+            "- Les complications sont : hématurie à vacuo (prévention par vidange progressive de la vessie avec clampage de la sonde tous les 500mL), sd de levée d'obstacles (prevention par compensation hydrique IV) et claquage ou rupture de la vessie (prévention par dérivation rapide des urines par cathéter sus-pubien ou sondage vésical)."
+          ],
+
+          questionSet: [
+            { "id": "q_rau_1", "patterns":["rétention aiguë d'urines", "RAU"], "answer":"D'accord."},
+            { "id": "q_rau_2", "patterns":["douleur hypogastrique"], "answer":"Il n'a pas de douleur hypogastrique." },
+            { "id": "q_rau_3", "patterns":["matité sus-pubienne"], "answer":"Il n'a pas de matité sus-pubienne." },
+            { "id": "q_rau_4", "patterns":["voussure hypogastrique"], "answer":"Il n'a pas de voussure hypogastrique." },
+            { "id": "q_rau_5", "patterns":["hypertrophie bénigne de la prostate", "cancer de la prostate", "lithiases", "corps étranger", "fécalome", "tumeurs de vessie", "tumeurs pelviennes", "sténose urétrale", "constipation"], "answer":"Il a une hypertrophie bénigne de la prostate diagnostiquée il y a 5 ans traitée par alpha-bloquants. Il n'est pas constipé habituellement." },
+            { "id": "q_rau_6", "patterns":["vessie claquée", "diabète", "alcool", "syndrome de Guillain-Barré", "syndrome de la queue de cheval", "sclérose en plaque", "Parkinson", "lésions cérébrales", "lésions médullaires"], "answer":"Il n'est pas atteint de ces maladies." },
+            { "id": "q_rau_7", "patterns":["opiacés", "analgésie péridurale", "anticholinergiques", "antiparkinsoniens", "benzodiazépines"], "answer":"Son médecin traitant lui a prescrit de la morphine il y a 5 jours pour des douleurs lombaires résistantes au tramadol." },
+            { "id": "q_rau_8", "patterns":["hématurie à vacuo"], "answer":"Noté." },
+            { "id": "q_rau_9", "patterns":["vidange progressive", "clampage tous les 500 mL"], "answer":"Noté." },
+            { "id": "q_rau_10", "patterns":["syndrome de levée d'obstacle"], "answer":"Noté." },
+            { "id": "q_rau_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon mari n'est pas allé aux toilettes depuis 2 jours alors qu'il n'est pas constipé d'habitude. J'aimerais savoir ce qu'il a..."},
+            { "id": "q_rau_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_rau_13", "patterns":["hydratation IV"], "answer":"Noté." },
+            { "id": "q_rau_14", "patterns":["claquage de vessie", "rupture de vessie"], "answer":"Noté." },
+            { "id": "q_rau_15", "patterns":["cathéter sus-pubien", "sondage vésical"], "answer":"Noté." }
+          ]
+        },
+
+{
+          id: "SDD9",
+          title: "Diminution de la diurèse",
+          intro: "Vous recevez aux urgences un patient de 62 ans, Monsieur L, pour diminution de la diurèse depuis 48 h. Il est greffé rénal depuis 5 ans. Déterminez si la diminution de la diurèse est pré-rénale / rénale / post-rénle à l'aide de l'interrogatoire et/ou l'examen clinique et/ou les examens complémentaires, proposez une modalité de prise en charge.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher : ATCD personnels, créatininémie de base, traitements, mdc néphrotoxiques, ATCD urologique et néphrologiques. Estimer la diurèse. Demander les constantes. Rechercher les signes de déshydratation, signes de globe vésical. Demander une créatinémie et une échographie rénale, une BU/ECBU et un ionogramme urinaire.",
+            "- Dériver les urines par sonde JJ, arrêter les IEC dans le contexte d'IRA."
+          ],
+
+          questionSet: [
+            { "id": "q_ira_1", "patterns":["antécédents"], "answer":"Je suis greffé rénal depuis 5 ans suite à un syndrome néphrotique dans l'enfance."},
+            { "id": "q_ira_2", "patterns":["créatininémie de base"], "answer":"Ma créatininémie de base est à 121 umol/L, je fais d'ailleurs 88kg pour 1m70" },
+            { "id": "q_ira_3", "patterns":["traitements"], "answer":"Je prends un IEC et de l'amlodipine depuis 10 ans pour une HTA. J'ai aussi des statines pour une dyslipidémie." },
+            { "id": "q_ira_4", "patterns":["néphrotoxiques", "médicaments néphrotoxiques", "AINS", "lithium"], "answer":"Ok je ne connaissais pas ce mot." },
+            { "id": "q_ira_5", "patterns":["antécédents urologiques", "antécédents néphrologiques"], "answer":"Donc je suis greffé rénal, j'ai aussi eu deux épisodes de coliques néphrétiques il y a 10 ans mais qu'on a pas explorés." },
+            { "id": "q_ira_6", "patterns":["diurèse"], "answer":"Ma diurèse est à 300mL sur les dernières 24h. Je n'ai d'ailleurs pas de douleurs ou de signes fonctionnels urinaires." },
+            { "id": "q_ira_7", "patterns":["constantes", "paramètres vitaux"], "answer":"PA 135/85mmHg, FC 80bpm, Sat 100% AA, FR 15/mn, Temp 37,1°C." },
+            { "id": "q_ira_8", "patterns":["déshydratation", "pli cutané", "soif", "sécheresse", "aplatissement des veines"], "answer":"Absence de signes de déshydratation." },
+            { "id": "q_ira_9", "patterns":["globe vésical"], "answer":"Absence de globe vésical et abse,ce de douleurs à l'ébranlement lombaire." },
+            { "id": "q_ira_10", "patterns":["créatinémie", "créatininémie", "BU"], "answer":"Créatininémie actuelle à 214 umol/L. Une BU a été réalisée et retrouve une hématurie à 3+, sans leucocytes ni nitrites. ECBU en attente. Ionogramme urinaire en attente." },
+            { "id": "q_ira_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends rien à ce compte-rendu, je dois m'inquiéter ?"},
+            { "id": "q_ira_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_ira_13", "patterns":["sonde JJ", "sondes JJ"], "answer":"Noté." },
+            { "id": "q_ira_14", "patterns":["arrêt des IEC", "arrêter les IEC"], "answer":"Noté." },
+            { "id": "q_ira_15", "patterns":["échographie rénale"], "answer":"Echographie rénale réalisée avec dilatation des cavités pyélocalicielles du greffon, lithiase urinaire au niveau de l'uretère." }
+          ]
+        },
+
+{
+          id: "SDD10",
+          title: "Anomalie de la miction",
+          intro: "Vous recevez en consultation d'urologie, Monsieur H, 58 ans, pour anomalie de la miction. Vous suspectez une hypertrophie bénigne de prostate. Menez un interrogatoire ciblé concernant les anomalies des différentes phases de la miction, prescrire 2 examens permettant d'objectiver la/les anomalie(s) retrouvée(s) des différentes phases de la miction et les interpréter, cherchez les 4 complications chroniques de l'HBP.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher d'autres SBAU en phase de stockage (énurésie, pollakiurie, nycturie, urgenturie), en phase de vidange (dysurie, brûlures mictionnelles), en phase post-mictionnelles (gouttes retardataires, sensation de vidange incomplète). Prescrire un calendrier mictionnel et une débimétrie, dire que l'image donnée est une débimétrie et que la courbe est aplatie et que le débit maximal est < 15 ml/s signant le caractère pathologique.",
+            "- Rechercher une rétention chronique d'urine (fuites urinaires, échographie rénale), lithiase de stase (majoration des SBAU, infections urinaires, hématurie macroscopique), IRC obstructive (dilatation bilatérale des cavités pyélocalicielles, élévation de la créatininémie, signes d'IR), une hernie de l'aine (effort de poussées abdominales, boule au niveau de l'aine).",
+            "Paramètres clés de l'interprétation de la débimétrie :",
+            "- Volume uriné > 150 mL = évaluation + fiable.",
+            "- débit max > 15 ml/s = normal.",
+            "- courbe normale en cloche.",
+            "- courbe aplatie = tb de la vidange."
+          ],
+
+          questionSet: [
+            { "id": "q_anomaliesmiction_1", "patterns":["phase de stockage", "énurésie", "pollakiurie", "nycturie", "urgenturie"], "answer":"Oui je me lève une ou deux fois par nuit pour aller aux toilettes."},
+            { "id": "q_anomaliesmiction_2", "patterns":["dysurie", "brûlures mictionnelles", "phase de vidange"], "answer":"J'ai du mal à uriner mais je n'ai pas de brûlures. J'ai l'impression de devoir pousser pour uriner et mon jet est faible." },
+            { "id": "q_anomaliesmiction_3", "patterns":["post-mictionnelles", "gouttes retardataires", "vidange incomplète"], "answer":"Parfois j'ai quelques gouttes après avoir uriné oui mais je n'ai pas de fuites urinaires ou d'incontinence pour autant." },
+            { "id": "q_anomaliesmiction_4", "patterns":["calendrier mictionnel"], "answer":"Prescription effectuée." },
+            { "id": "q_anomaliesmiction_5", "patterns":["débimétrie"], "answer":`Voici la débimétrie réalisée : <img src= "débimétrie.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_anomaliesmiction_6", "patterns":["courbe aplatie"], "answer":"Je vois." },
+            { "id": "q_anomaliesmiction_7", "patterns":["débit maximal < 15 ml/s", "débit maximal inférieur à 15"], "answer":"Ok !" },
+            { "id": "q_anomaliesmiction_8", "patterns":["rétention chronique d'urines", "fuites urinaires", "échographie rénale"], "answer":"J'avais fait une échographie vésicale qui ne retrouvait pas de rétention chronique." },
+            { "id": "q_anomaliesmiction_9", "patterns":["lithiase de stase", "infections urinaires", "majoration des symptômes", "hématurie"], "answer":"Il n'y avait pas de lithiases sur mon échographie rénale que j'ai fait avant de venir." },
+            { "id": "q_anomaliesmiction_10", "patterns":["insuffisance rénale chronique", "dilatation bilatérale des cavités pyélocalicielles", "créatininémie", "insuffisance rénale"], "answer":"Je n'ai pas de notion d'insuffisance rénale chronique." },
+            { "id": "q_anomaliesmiction_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis bien Monsieur H."},
+            { "id": "q_anomaliesmiction_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_anomaliesmiction_13", "patterns":["hernie de l'aine", "boule dans l'aine", "poussées abdominales"], "answer":"Ah oui j'ai repéré une petite boule au niveau de mon aine depuis 2 semaines." }
+          ]
+        },
+
+{
+          id: "SDD11",
+          title: "Découverte d'une anomalie au toucher rectal",
+          intro: "Vous recevez en consultation d'urologie, Monsieur H, 58 ans, qui vient dans le cadre d'un dépistage du cancer de la prostate. Vous souhaitez réaliser un toucher rectal. Cherchez à l'interrogatoire les signes orientant vers un cancer, expliquez au patient les conditions / le déroulement / le but d'un examen proctologique, prescrivez le premier examen à demander.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher : ATCD familiaux de cancer, AEG (asthénie, anorexie, amaigrissement), FdR de cancer (origine ethnique, expositions pro, sd métabolique), signes extenstion (tb mictionnels, dl osseuses, tb neurologiques, OMI).",
+            "- Expliquer que l'examen se réalise en position genu pectorale ou décubitus latéral gauche, au cabinet sans anesthésie, ganté avec un lubrifiant, non douloureux mais inconfortable, permet d'analyser le rectum / la contractilité du sphincter de l'anus / vérifier le volume la texture et la constitance de la prostate, dire qu'il peut refuser l'examen. Prescrire un dosage de PSA."
+          ],
+
+          questionSet: [
+            { "id": "q_cancerprostate_1", "patterns":["antécédents familiaux de cancer"], "answer":"Ma mère a eu un cancer du sein à 51 ans, c'est tout."},
+            { "id": "q_cancerprostate_2", "patterns":["altération de l'état général", "asthénie", "anorexie", "amaigrissement"], "answer":"Je suis fatigué en ce moment et je mange moins. D'ailleurs j'ai perdu 4kg sur le dernier mois." },
+            { "id": "q_cancerprostate_3", "patterns":["facteurs de risque", "ethnie", "professionnel", "syndrome métabolique"], "answer":"Je suis comptable, je fais 88kg pour 1m71. Je n'ai pas d'autres antécédents qu'une hypertrophie bénigne de la prostate et une dyslipidémie non traitée." },
+            { "id": "q_cancerprostate_4", "patterns":["signes d'extension", "troubles mictionnels", "douleurs osseuses", "troubles neurologiques", "OMI", "oedèmes des membres inférieur"], "answer":"J'ai un peu de mal à uriner oui, mon jet est comme haché et j'ai l'impression que je ne fais pas assez pipi. Je n'ai pas de douleurs osseuses, de signes neurologiques ou d'oedèmes des membres inférieurs." },
+            { "id": "q_cancerprostate_5", "patterns":["genu pectoral", "décubitus latéral gauche"], "answer":"Ok..." },
+            { "id": "q_cancerprostate_6", "patterns":["au cabinet", "sans anesthésie"], "answer":"D'accord." },
+            { "id": "q_cancerprostate_7", "patterns":["gants", "lubrifiant", "un doigt"], "answer":"Tant mieux." },
+            { "id": "q_cancerprostate_8", "patterns":["non douloureux", "pas douloureux", "inconfortable"], "answer":"Ok ça me rassure." },
+            { "id": "q_cancerprostate_9", "patterns":["analyser", "paroi", "contractilité", "volume", "consistance", "texture"], "answer":"D'accord." },
+            { "id": "q_cancerprostate_10", "patterns":["le droit de refuser"], "answer":"Ok." },
+            { "id": "q_cancerprostate_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens pour me faire dépister du cancer de la prostate."},
+            { "id": "q_cancerprostate_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_cancerprostate_13", "patterns":["PSA"], "answer":"Prescription faite." }
+          ]
+        },
+
+{
+          id: "SDD12",
+          title: "Douleur testiculaire",
+          intro: "De garde aux urgences, il est 20 h quand vous recevez Victor 8 ans, accompagné de ses parents pour douleur testiculaire brutale avec nausées et vomissement. La douleur est apparue vers 18 h. Après interrogatoire et examen clinique, vous diagnostiquez une torsion testiculaire. Vous vous adressez aux parents pour leur expliquer la suite de la prise en charge. Que devez vous prévoir dans les plus brefs délais, que devez vous impérativement recueillir avant votre PEC et expliquez aux parents l'intérêt de votre PEC et les conséquences potentielles.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Amener le patient au bloc opératoire en urgence, recueillir le consentement des parents avant l'exploration chirurgicale.",
+            "- Expliquer que le torsion testiculaire est une urgence chirurgicale, que le risque d'ischémie et de nécrose est important si la PEC est retardée, que le risque est corrélé à la durée de l'ischémie, que la chir permettra la détorsion du testicule / d'explorer le testicule controlatéral / limiter le risque infectieux, permet de réaliser une orchidopexie ou orchidectomie, une prothèse ne peut pas être posée au même moment mais ultérieurement en cas d'orchidectomie à cause du risque infectieux, qu'il y a un risque ultérieur d'atrophie testiculaire et qu'il y a aussi un risque d'hypofertilité.",
+            "La torsion testiculaire est une urgence chirurgicale +++ On retient : toute bourse aiguë douloureuse est une torsion du cordon spermatique jusqu'à preuve du contraire et quel que soit l'âge.",
+            "Les signes de torsion sont unilatéraux et souvent incomplet : ",
+            "- Bourse douloureuse.",
+            "- Testicule ascensionné, rétracté à l'anneau inguinal et horizontalisé.",
+            "- Abolition du réflexe crémastérien.",
+            "- Palpation du tour de spire.",
+            "- Œdème scrotal unilatéral."
+          ],
+
+          questionSet: [
+            { "id": "q_torsiontest_1", "patterns":["bloc opératoire", "chirurgie", "chirurgie en urgence"], "answer":"D'accord… ça semble grave ça."},
+            { "id": "q_torsiontest_2", "patterns":["consentement", "consentement des parents"], "answer":"Oui on va vous signer ça de suite." },
+            { "id": "q_torsiontest_3", "patterns":["urgence chirurgicale"], "answer":"Mon dieu une urgence carrément ? Mais il risque quoi exactement ? C'est quoi le risque pour le testicule ?" },
+            { "id": "q_torsiontest_4", "patterns":["ischémie", "nécrose"], "answer":"Ok je vois." },
+            { "id": "q_torsiontest_5", "patterns":["durée ischémie", "durée"], "answer":"Oui donc faut pas traîner quoi." },
+            { "id": "q_torsiontest_6", "patterns":["détorsion", "testicule controlatéral", "limiter le risque infectieux"], "answer":"Oui essayez de le remettre en place ça me semble bien." },
+            { "id": "q_torsiontest_7", "patterns":["orchidopexie", "orchidopexie controlatérale", "orchidectomie"], "answer":"Ok ça va." },
+            { "id": "q_torsiontest_8", "patterns":["prothèse"], "answer":"Oui s'il y a besoin d'une prothèse on verra ça plus tard." },
+            { "id": "q_torsiontest_9", "patterns":["atrophie", "atrophie testiculaire"], "answer":"Mmm je vois, c'est surtout esthétique ça c'est pas grave. Et en terme de fertilité ? Il pourra avoir des enfants quand même non ?" },
+            { "id": "q_torsiontest_10", "patterns":["hypofertilité", "diminution de la fertilité"], "answer":"Le pauvre, j'espère qu'il perdra pas sa fertilité pour autant." },
+            { "id": "q_torsiontest_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Victor a donc une torsion testiculaire, comment est-ce qu'on le traite ?"},
+            { "id": "q_torsiontest_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Merci beaucoup Docteur, c'est tout clair." }
+          ]
+        },
+
+{
+          id: "SDD13",
+          title: "Prolapsus",
+          intro: "Vous recevez en consultation d'urologie, Madame P 56 ans pour sensation de boule dans le vagin. Vous suspectez un prolapsus génital. Recherchez les signes urologiques / génitosexuels / digestifs associés à la survenue de ce prolapsus, expliquez comment vous distinguez les différents types de prolapsus cliniquement, une fois réduit recherchez une incontinence urinaire et expliquez quel type d'incontinence vous recherchez et par quel moyen au cours de l'examen clinique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Recherchez des signes urologiques (sd hyperactivité vésicale avec urgenturie voire incontinence urinaire par urgenturie, dysurie, IU récidivantes, rétention urinaire, manoeuvres digitales de réintégration), signes génitosexuels (dyspareunie, béance vulvaire, arrêt de l'activité sexuelle), signes digestifs (constipation terminale, manoeuvres digitale de réintégration, faux besoins, incontinence fécale).",
+            "- Examen au spéculum, la valve refoule la paroi vaginale antérieure puis postérieure puis les deux, la patiente doit pousser à chaque fois, atteinte compartiment antérieur = cystocèle, atteinte du comportement = hystérocèle, atteinte du comportement postérieur = rectocèle ou cul-de-sac de Douglas = élytrocèle-entérocèle.",
+            "- Recherche d'une incontinence urinaire d'effort, réalisation d'un test d'effort de poussée abdominale et de toux vessie pleine une fois le prolapsus réduit."
+          ],
+
+          questionSet: [
+            { "id": "q_prolapsus_1", "patterns":["hyperactivité vésicale", "incontinence urinaire", "infections urinaires", "rétention urinaire", "manoeuvres digitales"], "answer":"Parfois j'ai des envies pressantes mais sans incontinence. Parfois j'ai aussi du mal à uriner et il m'est arrivé une fois de réaliser des manoeuvres digitales pour pouvoir faire pipi. Ah aussi j'ai eu 4 infections urinaires dans les 6 derniers mois."},
+            { "id": "q_prolapsus_2", "patterns":["dyspareunie", "béance vulvaire", "absence d'activité sexuelle", "arrêt de l'activité sexuelle"], "answer":"J'ai des douleurs pendant les rapports avec mon époux donc on n'a plus trop de relations sexuelles..." },
+            { "id": "q_prolapsus_3", "patterns":["constipation terminale", "dyschésie", "faux besoins", "incontinence fécale"], "answer":"Je n'ai pas de constipation ou de difficultés d'exonération." },
+            { "id": "q_prolapsus_4", "patterns":["spéculum"], "answer":"D'accord." },
+            { "id": "q_prolapsus_5", "patterns":["paroi vaginale", "paroi postérieure"], "answer":"Je vois." },
+            { "id": "q_prolapsus_6", "patterns":["pousser"], "answer":"D'accord." },
+            { "id": "q_prolapsus_7", "patterns":["compartiment antérieur", "prolapsus vésical", "cystocèle"], "answer":"Je vois." },
+            { "id": "q_prolapsus_8", "patterns":["compartiment moyen", "hystérocèle"], "answer":"Je vois." },
+            { "id": "q_prolapsus_9", "patterns":["compartiment postérieur", "rectocèle", "élytrocèle-entérocèle"], "answer":"Je vois." },
+            { "id": "q_prolapsus_10", "patterns":["incontinence urinaire d'effort"], "answer":"D'accord." },
+            { "id": "q_prolapsus_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai une sensation de boule vaginale depuis 6 mois..."},
+            { "id": "q_prolapsus_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_prolapsus_13", "patterns":["test d'effort de poussée abdominale"], "answer":"Noté." },
+            { "id": "q_prolapsus_14", "patterns":["antécédents", "antécédents gynécologiques", "accouchements", "grossesses"], "answer":"J'ai eu 3 grossesses par AVB mais je suis ménopausée depuis 2 ans maintenant." }
+          ]
+        },
+
+{
+          id: "SDD14",
+          title: "Anomalie des bourses",
+          intro: "Vous recevez en consultation d'urologie, Monsieur C, 26 ans pour augmentation de la bourse testiculaire gauche avec autopalpation d'une masse depuis 2 mois. Vous suspectez en premier lieu un cancer testiculaire. Réalisez un interrogatoire ciblé, expliquez comment différencier une pathologie testiculaire d'une pathologie des annexes, expliquez comment réaliser une trans illumination scrotale et l'interprétation de cette dernière, expliquez au patient l'intérêt des examens complémentaires de 1e intention que vous devez réaliser dans ce contexte de suspicion de tumeur testiculaire.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Recherche de FdR de tumeurs germinales (ATCD perso ou fam de tumeurs germinales, cryptorchidie ou ectopie testiculaire, atrophie testiculaire, infertilité, cannabis), douleur testiculaire / gynécomastie / autopalpation d'un ganglion / difficulté à respirer.",
+            "- Rechercher un signe de Chevassu (sillon épididymo-testiculaire conservé), palpation du cordon spermatique (normal et libre), orifices inguinaux.",
+            "- La trans illumination consiste à placer une lumière derrière le scrotum et observer la transparence, si contenu liquidien la bourse est trans illuminée, si contenu solide la bourse ne sera pas trans illuminée.",
+            "- Réalisation d'une échographie scrotale, permet d'affirmer l'origine de la masse palpée, doser les marqueurs sériques (AFP, HCG totales, LDH), dosage des marqueurs permet d'orienter le diagnostic et intérêt pronostique."
+          ],
+
+          questionSet: [
+            { "id": "q_cancertest_1", "patterns":["facteurs de risque", "antécédents", "cryptorchidie", "ectopie testiculaire", "atrophie testiculaire", "infertilité", "cannabis"], "answer":"Il n'y a pas d'antécédents de cancer dans ma famille. Récemment moi j'ai vu que j'avais une gynécomastie. Aussi oui je fume un joint de cannabis par jour depuis 10 ans, je ne fume pas autrement. Et j'ai eu une cryptorchidie opérée il y a un an."},
+            { "id": "q_cancertest_2", "patterns":["douleur testiculaire", "gynécomastie", "ganglion", "difficulté à respirer", "dyspnée"], "answer":"Non je n'ai pas ces symptômes." },
+            { "id": "q_cancertest_3", "patterns":["signe de Chevassu", "Chevassu"], "answer":"Noté." },
+            { "id": "q_cancertest_4", "patterns":["palpation du cordon spermatique"], "answer":"Noté." },
+            { "id": "q_cancertest_5", "patterns":["orifices inguinaux"], "answer":"Noté." },
+            { "id": "q_cancertest_6", "patterns":["transparence", "lumière derrière"], "answer":"Validé." },
+            { "id": "q_cancertest_7", "patterns":["liquidien", "trans illuminée"], "answer":"Validé." },
+            { "id": "q_cancertest_8", "patterns":["solide", "pas de trans illumination"], "answer":"Validé." },
+            { "id": "q_cancertest_9", "patterns":["échographie", "échographie scrotale"], "answer":"Prescription effectuée." },
+            { "id": "q_cancertest_10", "patterns":["origine de la masse"], "answer":"Noté." },
+            { "id": "q_cancertest_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_cancertest_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_cancertest_13", "patterns":["marqueurs", "AFP", "HCG totales", "LDH"], "answer":"Prescription des marqueurs sériques faite." },
+            { "id": "q_cancertest_14", "patterns":["diagnostique", "thérapeutique"], "answer":"Noté." }
+          ]
+        },
+
+{
+          id: "SDD15",
+          title: "Analyse de la bandelette urinaire",
+          intro: "Vous recevez en consultation, Madame I, 24 ans, pour brûlures mictionnelles depuis 2 jours. Elle n'a pas de fièvre ni de douleur lombaire. Quelle est votre principale hypothèse diagnostique et quel est le premier examen à réaliser, expliquez à la patiente comment réaliser cet examen et comment lire les résultats, interprétez les résultats de cet examen.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Suspicion de cystite aigue, réalisation d'une BU.",
+            "- Expliquer que ce n'est pas un geste stérile, qu'il faut se laver les mains, qu'il faut un récipient propre et sec, qu'elle doit éliminer le premier jet d'urine dans les toilettes, qu'elle doit uriner dans le pot sans toucher le bord supérieur, qu'on doit tremper la bandelette dans le flacon, mettre des gants non stériles pour prendre la bandelette.",
+            "- Présence de leucocytes, présence de nitrites, absence d'hématurie, diagnostic de cystite aigue devant les éléments retrouvés."
+          ],
+
+          questionSet: [
+            { "id": "q_cystite_1", "patterns":["cystite", "cystite aiguë", "cystite aigue"], "answer":"D'accord et on fait quoi comme examen pour confirmer ça ?"},
+            { "id": "q_cystite_2", "patterns":["bandelette urinaire", "BU"], "answer":`D'accord. Voici les résultats : <img src= "bandeletteurinaire.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_cystite_3", "patterns":["pas en stérile"], "answer":"Je vois." },
+            { "id": "q_cystite_4", "patterns":["laver les mains"], "answer":"Ok." },
+            { "id": "q_cystite_5", "patterns":["propre", "sec"], "answer":"Ok." },
+            { "id": "q_cystite_6", "patterns":["éliminer le premier jet"], "answer":"D'accord." },
+            { "id": "q_cystite_7", "patterns":["sans toucher"], "answer":"D'accord je vois." },
+            { "id": "q_cystite_8", "patterns":["bandelette dans le flacon"], "answer":"Ok." },
+            { "id": "q_cystite_9", "patterns":["gants non stériles"], "answer":"D'accord." },
+            { "id": "q_cystite_10", "patterns":["présence de leucocytes"], "answer":"Validé." },
+            { "id": "q_cystite_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_cystite_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_cystite_13", "patterns":["présence de nitrites"], "answer":"Validé." },
+            { "id": "q_cystite_14", "patterns":["absence d'hématurie"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD16",
+          title: "Hématurie",
+          intro: "De garde aux urgences, vous recevez Monsieur H, 65 ans qui vient, angoissé, car il dit avoir uriné « tout rouge » avec une douleur dans le bas-ventre. L'infirmière d'accueil des urgences a réalisé une bandelette urinaire qui retrouve trois croix de sang. Précisez à l'interrogatoire les caractéristiques de cette hématurie / les signes urologiques et le mode évolutif, quelle complication redoutez vous, par quel mécanisme et la rechercher ainsi que les signes de gravité potentielle à l'aide de l'interrogatoire et l'examen clinique, décrivez votre PEC dans l'immédiat.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Recherchez le type d'hématurie (initiale, terminale, totale), le mode évolutif (quand, épisodes similaires), signes associés (douleurs lombaires ou pelviennes, caillots, brûlures mictionnelles), signes urologiques associés (pollakiurie, dysurie, urgenturie, incontinence urinaire, épisode d'infections urinaires).",
+            "- Penser au globe urinaire sur hématurie caillotante, rechercher les signes (caillot dans les urines, dysurie récente, douleur hypogastrique, matité à la percussion, voussure hypogastrique), signes de gravité (tachycardie, hypotension artérielle, marbrures, sepsis, anémie, tb hémostase, insuffisance rénale).",
+            "- Poser une sonde vésicale à double courant, décaillotage manuel à la seringue avec lavage continu au sérum physiologique, réalisation d'un bilan sanguin complet (NFS, TP/TCA, groupe ABO Rh RAI)."
+          ],
+
+          questionSet: [
+            { "id": "q_hématurie_1", "patterns":["initiale", "terminale", "totale"], "answer":"L'urine est normale puis devient rouge."},
+            { "id": "q_hématurie_2", "patterns":["depuis quand", "combien de temps", "déjà eu des épisodes"], "answer":"C'était aujourd'hui il y a 4h et c'est bien la première fois." },
+            { "id": "q_hématurie_3", "patterns":["douleurs lombaires", "douleurs pelviennes", "caillots", "brûlures mictionnelles"], "answer":"Non je n'ai pas de douleurs, par contre j'ai remarqué un petit caillot dans les toilettes." },
+            { "id": "q_hématurie_4", "patterns":["pollakiurie", "dysurie", "urgenturie", "incontinence urinaire", "infections récidivantes", "incontinences urinaires"], "answer":"Je fais pipi plus souvent que d'habitudes et parfois avec des envies pressantes mais sans fuites urinaires. J'ai du mal à lancer la miction." },
+            { "id": "q_hématurie_5", "patterns":["globe urinaire"], "answer":"Validé." },
+            { "id": "q_hématurie_6", "patterns":["hématurie caillotante"], "answer":"Validé." },
+            { "id": "q_hématurie_7", "patterns":["caillots sanguins dans les urines", "dysurie", "douleur hypogastrique", "matité", "voussure hypogastrique"], "answer":"Voussure hypogastrique avec douleur à la palpation et augmentation de l'envie d'uriner. Matité hypogastrique." },
+            { "id": "q_hématurie_8", "patterns":["tachycardie", "hypotension", "marbrures", "sepsis", "anémie", "troubles de l'hémostase", "insuffisance rénale", "IR"], "answer":"Tachycardie à 105 bpm." },
+            { "id": "q_hématurie_9", "patterns":["sonde vésicale", "sondage vésical", "sonde vésicale à double courant"], "answer":"Validé." },
+            { "id": "q_hématurie_10", "patterns":["lavage continu", "sérum physiologique"], "answer":"Validé." },
+            { "id": "q_hématurie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai fait pipi du sang..."},
+            { "id": "q_hématurie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_hématurie_13", "patterns":["bilan sanguin", "NFS", "TP", "TCA", "groupe sanguin", "RAI"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD17",
+          title: "Analyse d'un examen cytobactériologique des urines",
+          intro: `Interne en urologie, vous avez un patient, Monsieur C, 71 ans,  hospitalisé depuis 1 semaine. Il est sondé à demeure depuis 3 mois pour un cancer de prostate. L'infirmière a réalisé un examen cytobactériologique des urines (ECBU) il y a 2 jours dont les résultats sont disponibles ce jour. Interprétez les résultats de l'ECBU, orientez votre examen clinique et l'interrogatoire selon l'étiologie suspectée, expliquez au patient la PEC ou l'abstention thérapeutique. <img src= "ecbu.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Présence d'une leucocyturie significative, d'une bactériurie significative, d'une hématurie non significative et d'une souche d'E. Coli résistante à l'amoxicilline.",
+            "- Rechercher des signes fonctionnels urinaires (pollakiurie, urgenturie, brûlures mictionnelles, incontinence urinaire, dysurie), des signes de sepsis (sd confusionnel, fièvre, frissons, sueurs, tb hémodynamiques), signes de pyélonéphrite aigue (douleur lombaire, douleur à la percussion des fosses lombaires, irradiation aux OGE), anomalie au TR (prostate augmentée de volume, tendue, régulière, très douloureuse).",
+            "- Présence d'une colonisation urinaire, expliquez l'absence thérapeutique devant l'absence de symptômes, rassurer en expliquant que 100% des patients sondés sont colonisés au bout d'un mois, expliquer que l'ECBU n'était pas indiqué.",
+            "Rappel des règles de réalisation d'un ECBU : lavage des mains, toilette intime, éliminer le premier jet d'urine et recueillir les urines dans le pot."
+          ],
+
+          questionSet: [
+            { "id": "q_colonisation_1", "patterns":["leucocyturie significative", "leucocyturie"], "answer":"Validé."},
+            { "id": "q_colonisation_2", "patterns":["bactériurie significative", "bactériurie"], "answer":"Validé." },
+            { "id": "q_colonisation_3", "patterns":["hématurie non significative"], "answer":"Validé." },
+            { "id": "q_colonisation_4", "patterns":["Eschrichia Coli résistante à l'amoxicilline", "E Coli résistante à l'amoxicilline", "E. Coli résistante à l'amoxicilline"], "answer":"Validé." },
+            { "id": "q_colonisation_5", "patterns":["pollakiurie", "urgenturie", "brûlures mictionnelles", "incontinence urinaire", "dysurie"], "answer":"Je n'ai pas de difficultés pour uriner, pas de brûlures mictionnelles ni de signes fonctionnels urinaires. Couleur et quantité des urines normales." },
+            { "id": "q_colonisation_6", "patterns":["syndrome confusionnel", "fièvre", "frissons", "sueurs", "troubles hémodynamiques"], "answer":"Constantes normales." },
+            { "id": "q_colonisation_7", "patterns":["douleur lombaire", "douleur à la percussion des fosses lombaires", "irradiation aux organes génitaux", "irradiation aux OGE"], "answer":"Absence de frissons ou de douleur lombaire." },
+            { "id": "q_colonisation_8", "patterns":["prostate augmentée", "prostate très douloureuse"], "answer":"Noté." },
+            { "id": "q_colonisation_9", "patterns":["colonisation urinaire"], "answer":"Validé." },
+            { "id": "q_colonisation_10", "patterns":["abstention thérapeutique"], "answer":"D'accord." },
+            { "id": "q_colonisation_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. On m'a fait faire un examen des urines vous pourriez le regarder ?"},
+            { "id": "q_colonisation_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_colonisation_13", "patterns":["100% des patients sondés sont colonisés"], "answer":"Ah ok je ne savais pas, c'est rassurant finalement." },
+            { "id": "q_colonisation_14", "patterns":["ECBU n'était pas indiqué", "pas d'indication de l'ECBU"], "answer":"Ah bah tiens, je le saurais pour la prochaine fois." }
+          ]
+        },
+
+{
+          id: "SDD18",
+          title: "Analyse du sédiment urinaire",
+          intro: "De garde aux urgences, vous recevez Monsieur I, 56 ans pour douleur lombaire gauche brutale. L'infirmière d'accueil des urgences a réalisé une bandelette urinaire qui retrouve trois croix de sang. Menez un interrogatoire et un examen clinique, évoquez un diagnostic et l'étiologie la plus probable dans ce contexte, citez un examen complémentaire permettant de faire le diagnostic.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Recherche des ATCD personnels et familiaux, ATCD de colique néphrétique, caractériser la douleur (type, localisation, intensité, horaire, irradiation, facteurs déclenchants ou aggravants, position antalgique), hématurie macroscopique, signes fonctionnels urinaires (pollakiurie, impériosités, dysurie), constantes, douleur à la palpation des fosses lombaires, globe vésical, anomalies à l'auscultation cardiaque, ATCD de palpitations (FA).",
+            "- Evoquer le diagnostic d'infarctus rénal par embolie artérielle sur fibrillation auriculaire. Examens acceptés : écho doppler, TDM, angio-IRM, artériographie."
+          ],
+
+          questionSet: [
+            { "id": "q_infarctusrenal_1", "patterns":["antécédents"], "answer":"Alors moi je suis suivi pour une hypertension artérielle depuis 10 ans pour laquelle je prends des IEC et de l'hydrochlorothiazide, une dyslipidémie traitée par statines depuis 5 ans et un diabète sous régime. Je fais d'ailleurs 1m74 pour 91kg. Mon papa lui a eu un IDM à 56 ans."},
+            { "id": "q_infarctusrenal_2", "patterns":["antécédents de colique néphrétique", "coliques néphrétiques"], "answer":"Je n'ai pas d'antécédents chirurgicaux et je n'ai pas fait d'épisode de colique néphrétique." },
+            { "id": "q_infarctusrenal_3", "patterns":["douleur", "localisation", "où", "horaire", "matin", "soir", "irradiation", "facteurs déclenchants", "facteurs aggravants", "position antalgique"], "answer":"Oui j'ai une douleur lombaire depuis 2h, continue, en coup de poignard. Je dirais que c'est à 8/10 en terme de douleur. Aucune position ne me soulage. Et ça n'irradie nul part." },
+            { "id": "q_infarctusrenal_4", "patterns":["hématurie macroscopique", "hématurie"], "answer":"J'ai uriné rouge quelques minutes après l'apparition de la douleur lombaire oui." },
+            { "id": "q_infarctusrenal_5", "patterns":["signes fonctionnels urinaires", "dysurie", "pollakiurie", "impériosités"], "answer":"Non je n'ai pas de symptômes urinaires." },
+            { "id": "q_infarctusrenal_6", "patterns":["constantes", "paramètres vitaux"], "answer":"PA 180/120mmHg, FC 120 bpm, FR 15/mn, saturation 100% AA, température 38,5°C." },
+            { "id": "q_infarctusrenal_7", "patterns":["douleur lombaire", "douleurs lombaires"], "answer":"Absence de douleur à la palpation des fosses lombaires, pas de contact lombaire." },
+            { "id": "q_infarctusrenal_8", "patterns":["globe vésical"], "answer":"Absence de globe vésical." },
+            { "id": "q_infarctusrenal_9", "patterns":["anomalies à l'auscultation cardiaque", "auscultation cardiaque"], "answer":"Bruits du cœur irréguliers avec une tachycardie." },
+            { "id": "q_infarctusrenal_10", "patterns":["palpitations"], "answer":"Ah oui j'ai fait 2 épisodes la semaine dernière mais ça c'est résolu tout seul." },
+            { "id": "q_infarctusrenal_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai fait pipi du sang et j'ai mal au dos."},
+            { "id": "q_infarctusrenal_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_infarctusrenal_13", "patterns":["infarctus rénal"], "answer":"Validé." },
+            { "id": "q_infarctusrenal_14", "patterns":["embolie sur fibrillation", "embolie artérielle sur fibrillation", "embolie sur FA"], "answer":"Validé." },
+            { "id": "q_infarctusrenal_15", "patterns":["échographie", "écho-Doppler", "TDM spiralée", "TDM", "angio-IRM", "artériographie"], "answer":"Noté." },
+          ]
+        },
+
+{
+          id: "SDD19",
+          title: "Créatinine augmentée",
+          intro: "Interne aux urgences, vous recevez Madame C, 71 ans, adressé par son médecin traitant pour une créatininémie à 189 umol/l. A l'aide de l'interrogatoire et/ou de l'examen clinique et/ou de la biologie et/ou de l'imagerie différencier le caractère aigue ou chronique de l'élévation de la créatinine, précisez la cause de l'insuffisance rénale en expliquant pourquoi, quels sont les critères d'épuration extrarénale en urgence.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Recherche ATCD de maladie rénale, anciennes valeurs de créat, contexte favorisant, anémie à la biologie, hypoCa à la biologie, morphologie rénale, évoquer la caractère aigu.",
+            "- IRAF. Eléments en faveur : NaU < 20mmol/L, rapport Na/KU <1, FeNa <1%, Fe urée < 35%, rapport urée / créat > 100, rapport urée / urée > 10, échographie sans obstruction.",
+            "- Critères d'épuration extrarénale en urgence : hyperK symptomatique, hyperK + anurie, hyperK + acidose métabolique sévère, hyperhydratation résistante au traitement diurétique.",
+            "Particularités en terme de différenciation du caractère aigu / chronique :",
+            "- IRC avec gros reins ou taille normale : diabète, hydronéphrose bilatérale, amylose, PKRAD, néphropathie associée au VIH.",
+            "- IRC sans hypoCa : myélome, sarcoïdose ou autre granulomatose.",
+            "- IRA avec hypoCa : rhabdomyolyse, sd de lyse tumorale.",
+            "- IRA avec anémie : SHU et choc hémorragique."
+          ],
+
+          questionSet: [
+            { "id": "q_créat_1", "patterns":["antécédents de maladie rénale", "antécédents"], "answer":"Je suis suivi pour une hypertension traitée par IEC depuis 10ans, une ostéoporose traitée par biphosphonates et des douleurs lombaires chroniques. Je n'ai pas de maladie rénale connue."},
+            { "id": "q_créat_2", "patterns":["anciennes valeurs", "ancienne valeurs de créatininémie"], "answer":"Je n'ai pas de notion de créatinémie augmentée dans mes anciens bilan." },
+            { "id": "q_créat_3", "patterns":["contexte favorisant", "médicaments", "hypovolémie", "état de choc"], "answer":"J'ai pris de l'ibuprofène pendant 5 jours car j'avais mal au dos. J'ai remarqué que j'urinais moins ces derniers jours." },
+            { "id": "q_créat_4", "patterns":["anémie"], "answer":"Hb : 13 g/100mL." },
+            { "id": "q_créat_5", "patterns":["hypocalcémie", "bilan sanguin", "bilan biologique"], "answer":"Créatinémie : 191 umol/l ; Urée : 20 mmol/l ; Protides : 80 g/l ; bicarbonates : 19 mmol/l. Natrémie : 138 mmol/l ; Kaliémie : 5,8 mmol/l ; Chlorémie : 100 mmol/l ; Calcémie : 2,2 mmol/l. Glycémie : 5 mmol/l." },
+            { "id": "q_créat_6", "patterns":["morphologie rénale", "échographie"], "answer":"Absence de dilatation des cavvités pyélocalicielles. Les 2 reins font 12 cm de longueur avec une bonne différenciation cortico-médullaire." },
+            { "id": "q_créat_7", "patterns":["aigu"], "answer":"Validé." },
+            { "id": "q_créat_8", "patterns":["insuffisance rénale aigue fonctionnelle"], "answer":"Validé." },
+            { "id": "q_créat_9", "patterns":["Na urinaire < 20", "Rapport Na/K urinaire < 1", "fraction d'excrétion de Na < 1", "fraction d'excrétion de l'urée < 35", "rapport urée sur créatinine > 100", "rapport urée urinaire sur urée plasmatique > 10", "absence d'obstruction à l'échographie"], "answer":"Validé." },
+            { "id": "q_créat_10", "patterns":["hyperkaliémie symptomatique"], "answer":"Validé." },
+            { "id": "q_créat_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_créat_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_créat_13", "patterns":["hyperkaliémie associée à une anurie", "hyperkaliémie avec anurie", "anurie"], "answer":"Validé." },
+            { "id": "q_créat_14", "patterns":["hyperkaliémie associée à une acidose métabolique sévère", "acidose métabolique sévère"], "answer":"Validé." },
+            { "id": "q_créat_15", "patterns":["hyperhydratation résistante aux diurétiques"], "answer":"Validé." },
+            { "id": "q_créat_16", "patterns":["bilan urinaire", "bilan biologique urinaire"], "answer":"Na : 14 mmol/L ; K : 19 mmol/L ; Cl : 12 mmol/L. Créatininémie : 11 mmol/L ; Urée urinaire : 120 mmol/L." },
+            { "id": "q_créat_17", "patterns":["gaz du sang", "gazométrie artérielle", "GDS"], "answer":"pH : 7,36, HCO3- : 19 mmol/l, PCO2 : 38 mmHg, PO2 : 90 mmHg." },
+            { "id": "q_créat_18", "patterns":["ECG", "électrocardiogramme"], "answer":"Absence de signes d'hyperkaliémie." }
+          ]
+        },
+
+{
+          id: "SDD20",
+          title: "Protéinurie",
+          intro: "Vous recevez en urgence, Monsieur S, 53 ans, pour apparition d'œdèmes des paupières et des membres inférieurs ce matin au réveil. Il a constaté avoir pris 5 kg sur la dernière semaine, ce qui est inhabituel car il fait « très attention ». Vous suspectez un syndrome néphrotique. Prescrire les 2 examens complémentaires pour confirmer votre hypothèse diagnostique, votre hypothèse est-elle confirmée si oui pourquoi, vous réalisez une ponction biopsie rénale expliquez le déroulé / les complications potentielles / les précautions à prendre.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander une protéinurie ou un rapport protéinurie sur créatininurie et un dosage de l'albuminémie. Confirmer le sd néphrotique car la protéinurie est > 3g/g et l'albuminémie < 30 g/L.",
+            "- Expliquer que la PBR a un intérêt diagnostic et pronostic, qu'il existe des CI (rein unique, HTA mal contrôlée, anomalies anatomiques, pyélonéphrite aigue, tb de la coagulation), réaliser la PBR en hospitalisation, biopsie percutanée sous contrôle échographique après anesthésie locale, 2 prélèvements réalisés, possibilité de complications aigues (hématome périnéal, hématome intrarénal, hématome rétropéritonéal) et chroniques (fistule AV, risque de rupture, souffle, HTA), après la biopsie surveillance hospitalière avec alitement, recueillir le consentement oral et écrit."
+          ],
+
+          questionSet: [
+            { "id": "q_sdnephrotique_1", "patterns":["protéinurie", "rapport protéinurie sur créatininurie"], "answer":"Protéinurie : 350 mg/mmol de créatininurie."},
+            { "id": "q_sdnephrotique_2", "patterns":["albuminémie"], "answer":"Albuminémie : 28 g/L." },
+            { "id": "q_sdnephrotique_3", "patterns":["syndrome néphrotique"], "answer":"Diagnostic de syndrome néphrotique validé." },
+            { "id": "q_sdnephrotique_4", "patterns":[">3g/g", "<30g/L"], "answer":"Validé." },
+            { "id": "q_sdnephrotique_5", "patterns":["diagnostic", "diagnostique", "pronostic", "pronostique"], "answer":"D'accord." },
+            { "id": "q_sdnephrotique_6", "patterns":["rein unique", "HTA mal contrôlée", "anomalies anatomiques", "pyélonéphrite", "troubles de la coagulation"], "answer":"Je n'ai pas d'antécédents rénaux particuliers." },
+            { "id": "q_sdnephrotique_7", "patterns":["hospitalisation", "hospitalisé"], "answer":"Ok ça me va." },
+            { "id": "q_sdnephrotique_8", "patterns":["biopsie percutanée", "percutanée"], "answer":"D'accord." },
+            { "id": "q_sdnephrotique_9", "patterns":["2 prélèvements", "deux prélèvements"], "answer":"Ok on en fera 2 alors." },
+            { "id": "q_sdnephrotique_10", "patterns":["hématome périnéal", "hématome intrarénal", "hématome rétropéritonéal"], "answer":"Ok." },
+            { "id": "q_sdnephrotique_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai plein d'oedème partout, qu'est-ce que c'est ?"},
+            { "id": "q_sdnephrotique_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_sdnephrotique_13", "patterns":["fistule artérioveineuse", "risque de rupture", "souffle", "hypertension"], "answer":"Validé." },
+            { "id": "q_sdnephrotique_14", "patterns":["surveillance hospitalière"], "answer":"Validé." },
+            { "id": "q_sdnephrotique_15", "patterns":["consentement oral", "consentement écrit"], "answer":"Je consents à faire cette biopsie, je vous fais un papier écrit aussi alors !" }
+          ]
+        },
+
+{
+          id: "SDD21",
+          title: "Suivi d'un patient en insuffisance rénale chronique",
+          intro: "Vous recevez en consultation de néphrologie, Madame I, 67 ans pour suivi de sa maladie rénale chronique. Elle était suivie pour une néphropathie vasculaire. Son dernier DFG est estimé à 21 ml/min/1,73 m2. Identifiez et expliquez à la patiente les facteurs de progression de sa maladie rénale chronique, expliquez lui les modalités des traitements de suppléance.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Recherche des valeurs de la PA habituelle de la patiente, expliquer la nécessité d'un contrôle strict (<130/80), rechercher la valeur de la protéinurie et expliquer la nécessité d'une protéinurie <0,5 g/g, expliquer la nécessité de prévenir la néphrotoxicité et les épisode d'IRA, nécessité d'une restriction protidique modérée 0,6-0;8 g/24h, recherche d'une conso de tabac et d'un diabète avec une HbA1c, nécessité d'une HbA1c entre 7-8%.",
+            "- 3 techniques de suppléance (transplantation, hémodialyse, dialyse péritonéale), avantages de la transplantation rénale (meilleure méthode, meilleure qualité de vie, espérance de vie supérieure, coût de traitement <), hémodyalise (plus utilisée, à l'hôpital 3x par semaine, 4-6h, épure les déchets sanguins), dialyse péritonéale (à domicile, épuration continue, filtre avec transferts diffusifs)."
+          ],
+
+          questionSet: [
+            { "id": "q_survirc_1", "patterns":["pression artérielle", "PA", "tension artérielle", "TA"], "answer":"Ma tension est à 150/80mmHg."},
+            { "id": "q_survirc_2", "patterns":["contrôle strict de la tension artérielle", "130", "80"], "answer":"D'accord." },
+            { "id": "q_survirc_3", "patterns":["protéinurie"], "answer":"Ma protéinurie est à 0,6 g/g de créatinine." },
+            { "id": "q_survirc_4", "patterns":["0,5"], "answer":"Ok je ne connaissais pas ce mot." },
+            { "id": "q_survirc_5", "patterns":["néphrotoxicité", "insuffisance rénale aigue"], "answer":"Ok je vois." },
+            { "id": "q_survirc_6", "patterns":["restriction protidique", "0,6", "0,8"], "answer":"D'accord." },
+            { "id": "q_survirc_7", "patterns":["tabac", "diabète"], "answer":"Je ne fume pas. J'ai un diabète avec une HbA1c à 7%." },
+            { "id": "q_survirc_8", "patterns":["HbA1c", "7", "8"], "answer":"Bon ça c'est parfait." },
+            { "id": "q_survirc_9", "patterns":["trois techniques", "hémodialyse", "dialyse péritonéale", "transplantation"], "answer":"D'accord." },
+            { "id": "q_survirc_10", "patterns":["qualité de vie", "coût de traitement inférieur"], "answer":"Ok." },
+            { "id": "q_survirc_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens pour mon suivi habituel."},
+            { "id": "q_survirc_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_survirc_13", "patterns":["plus utilisée", "3 séances par semaine", "4 à 6 heures", "4-6h", "4 à 6h", "épuration"], "answer":"Ok j'entends." },
+            { "id": "q_survirc_14", "patterns":["à domicile", "continue", "transferts diffusifs"], "answer":"D'accord c'est pas mal." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
