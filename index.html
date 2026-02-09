@@ -4659,6 +4659,740 @@ const data = {
         }
       ]
     },
+    {
+      id: "Pédia",
+      title: "Pédiatrie",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Régurgitations du nourrisson",
+          intro: "Vous êtes pédiatre en ville et vous recevez en consultation un couple de parents et leur jeune nourrisson, Romain 6 mois, pour des inquiétudes concernant des rejets postprandiaux par la bouche. Différenciez à l'interrogatoire les régurgitations des vomissements, identifiez les signes et symptômes en faveur d'un RGO pathologique, mettez en place et expliquez les mesures adaptées et raisonnables en évitant la surenchère thérapeutique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Les régurgitations sont des rejets soudains sans effortr d'une petite quantité de liquide gastrique, et ne s'accompagnent pas de contractions musculaires ou abdominales.",
+            "- Rechercher : ATCD encéphalopathies, ATCD chir d'atrésie de l'oesophage, ATCD mucoviscidose, ATCD hernie diaphragmatique congénitale, dypsnée laryngée ou dysphonie, toux chronique, ATCD de bronchiolites ou pneumopathies à répétition, ATCD de malaises du nourrisson.",
+            "- Rassurer par rapport à la bénignité des régurgitations, proposer un épaississement du lait infantile et une réduction du volume des biberons si trop important pour l'âge.",
+            "Indication du prélèvement et interprétation des lésions :",
+            "- Le reflux gastro-œsophagien est un processus physiologique avant l'âge de la marche. Il peut par son abondance ou ses complications propres devenir pathologique. Il est lié à une immaturité fonctionnelle du sphincter inférieur de l'oesophage avant 1 an.",
+            "- La pH-métrie est l'examen de référence pour objectiver un RGO acide. Elle est indiquée lorsqu'on suspecte un RGO sans objectiver de régurgitations, et plus particulièrement avec la présence de signes digestifs. ",
+            "- La fibroscopie œso-gastro-duodénale est l'examen de référence pour objectiver la présence d'une œsophagite peptique."
+          ],
+
+          questionSet: [
+            { "id": "q_regurgitations_1", "patterns":["soudains", "sans effort"], "answer":"Ok je vois, c'est vrai que c'est soudain."},
+            { "id": "q_regurgitations_2", "patterns":["pas de contractions", "pas de contractions abdominales"], "answer":"Effectivement il n'a pas de contractions abdominales ou de signes particuliers avant de régurgiter mais bon... " },
+            { "id": "q_regurgitations_3", "patterns":["antécédents d'encéphalite"], "answer":"Non il n'a pas eu d'encéphalite." },
+            { "id": "q_regurgitations_4", "patterns":["atrésie de l'oesophage"], "answer":"Il n'a pas d'atrésie de l'oesophage non plus." },
+            { "id": "q_regurgitations_5", "patterns":["mucoviscidose"], "answer":"Son test était négatif à la maternité." },
+            { "id": "q_maladiehorton_6", "patterns":["hernie diaphragmatique"], "answer":"Non il n'a pas d'hernie." },
+            { "id": "q_regurgitations_7", "patterns":["dyspnée laryngée", "dysphonie"], "answer":"Non il n'a pas de mal à respirer et ne fait pas de bruits bizarres." },
+            { "id": "q_regurgitations_8", "patterns":["toux chronique"], "answer":"Non il ne tousse pas." },
+            { "id": "q_regurgitations_9", "patterns":["bronchiolites", "pneumopathies à répétition"], "answer":"Noté." },
+            { "id": "q_regurgitations_10", "patterns":["malaises du nourrisson"], "answer":"Il n'a jamais fait de malaises." },
+            { "id": "q_regurgitations_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis le papa de Romain. Je suis très anxieux, et sa mère aussi, car il vomit après manger depuis quelques temps…"},
+            { "id": "q_regurgitations_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_regurgitations_13", "patterns":["bénin", "pas grave"], "answer":"Je vois, et vous êtes sur.e alors... Et comment je l'aide alors si c'est pas grave ? Parce que ça doit pas être agréable pour autant hun..." },
+            { "id": "q_regurgitations_14", "patterns":["épaississement du lait"], "answer":"Ok je vois." },
+            { "id": "q_regurgitations_15", "patterns":["réduction du volume des biberons", "diminuer le volume"], "answer":"D'accord je verrais avec Madame si on ne lui donne pas des volumes trop importants quitte à réduire un peu." },
+            { "id": "q_regurgitations_16", "patterns":["grossesse"], "answer":"La grossesse était normale, sans complications. Il est né à terme sans pathologies particulières." }
+          ]
+        },
+
+        {
+          id: "SDD2",
+          title: "Nausées / vomissements",
+          intro: "Vous êtes pédiatre en ville et vous recevez un couple de parents avec leur fils de 6 semaines, Benjamin. Il s'agit de leur premier enfant. Depuis une dizaine de jours, Benjamin vomit après les repas et cela les inquiète beaucoup. Cherchez les signes d'interrogatoire et les signes cliniques pour orienter l'enquête étiologique, demandez un examen de première intention, posez un diagnostic et proposez une prise en charge adaptée.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander : couleur des vomissements, abondance, la distance avec les repas, la perte d'appétit, la courbe de croissance, les signes associés (diarrhées, douleurs, fièvre, déshydratation), un contage infectieux récent, des ATCD familiaux de sténose du pylore.",
+            "- Demander une échographie abdominale et rechercher un aspect en cocadre ou épaississement du muscle > ou = à 4mm, diagnostiquer une sténose hypertrophique du pylore et proposer un traitement chirurgical (pyloromyotomie longitudinale extramuqueuse).",
+            "Une association de vomissements et de douleurs abdominales chez un enfant doit faire évoquer par argument de fréquence une gastroentérite aiguë mais attention à ne pas oublier l'acidocétose diabétique !"
+          ],
+
+          questionSet: [
+            { "id": "q_stenosepylore_1", "patterns":["couleur"], "answer":"Il vomit des jets blancs comme du lait caillé."},
+            { "id": "q_stenosepylore_2", "patterns":["abondance", "quantité"], "answer":"En terme de quantité je sais pas vraiment, en tout cas c'est abondant." },
+            { "id": "q_stenosepylore_3", "patterns":["distance des repas"], "answer":"C'est environ une heure après les repas." },
+            { "id": "q_stenosepylore_4", "patterns":["perte d'appétit"], "answer":"Ah non au contraire j'ai l'impression qu'il a de plus en plus faim." },
+            { "id": "q_stenosepylore_5", "patterns":["courbe de croissance"], "answer":"Cassure de la courbe de croissance sur le plan pondéral uniquement." },
+            { "id": "q_stenosepylore_6", "patterns":["signes associés", "diarrhées", "douleur", "fièvre", "déshydratation"], "answer":"Je ne crois pas qu'il ait mal, et son transit est normal. D'ailleurs il a 37°C de température donc ça va." },
+            { "id": "q_stenosepylore_7", "patterns":["contage infectieux", "contage"], "answer":"C'est notre premier enfant donc il est avec nous à la maison seulement et non personne n'est malade en ce moment." },
+            { "id": "q_stenosepylore_8", "patterns":["antécédents familiaux de sténose du pylore"], "answer":"Ca me dit rien du tout, je dirais que non du coup." },
+            { "id": "q_stenosepylore_9", "patterns":["échographie abdominale"], "answer":"Echographie abdominale faite. Poser une question avec le.s signe.s principal(aux) recherché.s ." },
+            { "id": "q_stenosepylore_10", "patterns":["cocarde", "4mm", "4 mm"], "answer":"Image en cocarde avec un muscle pylorique estimé à 6mm." },
+            { "id": "q_stenosepylore_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Benjamin vomit beaucoup depuis 10 jours vous pourriez venir le voir ?"},
+            { "id": "q_stenosepylore_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_stenosepylore_13", "patterns":["sténose hypertrophique du pylore", "sténose du pylore"], "answer":"D'accord je ne connaissais pas cette maladie." },
+            { "id": "q_stenosepylore_14", "patterns":["traitement chirurgical", "chirurgie", "pyloromyotomie longitudinale extramuqueuse"], "answer":"Oh le traitement est une chirurgie ? Je vois." },
+            { "id": "q_stenosepylore_15", "patterns":["grossesse"], "answer":"La grossesse s'est déroulée normalement. Aujourd'hui il est d'ailleurs exclusivement allaité au sein." }
+          ]
+        },
+
+        {
+          {
+          id: "SDD3",
+          title: "Emission de sang par la bouche",
+          intro: "Vous êtes pédiatre de garde aux urgences et recevez via le SMUR une petite fille de 16 mois pour hématémèse. Evaluez le retentissement hémodynamique et respiratoire, à l'aide d'un interrogatoire ciblé donnez votre principale hypothèse diagnostique, donnez une prise en charge en urgence, et décrivez votre principe de PEC thérapeutique au long cours.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander les constantes, repérer les signes de choc (TRC allongé>3s, extrémités froides, marbrures, pouls périphériques mal perçus, pâleur, oligurie), signes de détresse respiratoire (tirage, battement des ailes du nez, cyanose, respiration paradoxale).",
+            "- Demander les ATCD médicaux de l'enfant, comment se déroulent les repas, le sommeil, rechercher une cassure de la courbe de croissance. Evoquer une oesophagite peptique et demander une FOGD en urgence. Prescrire des IPP 1 fois par jour avant le premier repas de la journée."
+          ],
+
+          questionSet: [
+            { "id": "q_oesophagiteped_1", "patterns":["constantes", "paramètres vitaux"], "answer":"TA 89/54mmHg, FC 120 bpm, FR 32/mn, SpO2 97%, T 37,2°C."},
+            { "id": "q_oesophagiteped_2", "patterns":["signes de choc", "TRC", "extrémités froides", "marbrures", "oligurie", "pâleur", "pouls"], "answer":"TRC à 2s, absence de marbrures. Extrémités chaudes et de couleur normale. Absence de trouble mictionnel. Pouls normalement perçu." },
+            { "id": "q_oesophagiteped_3", "patterns":["tirage", "respiration paradoxale", "battement des ailes du nez", "cyanose"], "answer":"Absence de signes de détresse respiratoire aiguë." },
+            { "id": "q_oesophagiteped_4", "patterns":["antécédents"], "answer":"Elle est suivie pour un RGO connu depuis ses 4 mois, qui persiste malgré tous ce qu'on a fait." },
+            { "id": "q_oesophagiteped_5", "patterns":["repas"], "answer":"J'ai l'impression qu'elle refuse le biberon après quelques succions." },
+            { "id": "q_oesophagiteped_6", "patterns":["sommeil"], "answer":"Au cours du sommeil elle a des crises de pleurs quand c'est une sieste juste après manger par exemple." },
+            { "id": "q_oesophagiteped_7", "patterns":["cassure de la courbe de croissance"], "answer":"Absence de cassure de la courbe staturo-pondérale." },
+            { "id": "q_oesophagiteped_8", "patterns":["oesophagite peptique"], "answer":"D'accord je ne connaissais pas." },
+            { "id": "q_oesophagiteped_9", "patterns":["FOGD", "fibroscopie oeso-gastro-duodénale"], "answer":"La FOGD retrouve votre diagnostic." },
+            { "id": "q_oesophagiteped_10", "patterns":["inhibiteurs de la pompe à protons", "IPP", "une fois par jour avant le premier repas"], "answer":"D'accord on lui donnera ça." },
+            { "id": "q_oesophagiteped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Ma fille a vomi du sang de manière brutale aujourd'hui."},
+            { "id": "q_oesophagiteped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." }
+          ]
+        },
+{
+          id: "SDD4",
+          title: "Déshydratation de l'enfant",
+          intro: "Vous êtes pédiatre à l'hôpital et effectuez une garde aux urgences pédiatriques. Vous recevez un enfant de 6 ans amené par ses parents pour une symptomatologie digestive bruyante ces derniers jours à type de vomissements et diarrhées. Il est décrit comme étant particulièrement asthénique depuis. Evaluez l'état de déshydratation de cet enfant et calculez le % de perte de poids, demandez vous des examens complémentaires et si oui lesquels, comment orientez vous l'enfant et initiez le traitement de la déshydratation en fonction de la sévérité.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander le nombre de selles, évaluez si les vomissements permettent une réhydratation orale, chercher des cernes péri-oculaires, la présence d'un pli cutané, l'humidité des muqueuses / larmes / soif, chercher des signes de choc hypovolémique (TRC allongé, extrémités froides, marbrures, pouls périphériques mal perçus, tachycardie, baisse de la PAS), signes neurologiques (tb conscience, apathie, somnolence, hypotonie), calculer la déshydratation à 12,5% ((20-17,5)/20).",
+            "- Demander un ionogramme sanguin et un bilan rénal, indiquer l'hospitalisation (conventionnelle), prescrire une hydratation IV ou entérale pendant au moins 6h puis relai avec SRO selon l'évolution.",
+            "Modalités de reconstitution et de prise du SRO : sachet à diluer dans 200mL d'eau, donner à la demande de l'enfant de manière fractionnée par portions de 40-50mL toutes les 15mn. A donner dès les premiers symptômes."
+          ],
+
+          questionSet: [
+            { "id": "q_déshydratped_1", "patterns":["nombre de selles", "combien de fois par jour"], "answer":"Il a environ une dizaine de selles par jour, mais il vomit assez peu disons 3 fois par jour."},
+            { "id": "q_déshydratped_2", "patterns":["cernes"], "answer":"Présence de cernes péri-oculaires." },
+            { "id": "q_déshydratped_3", "patterns":["pli cutané"], "answer":"Absence de pli cutané." },
+            { "id": "q_déshydratped_4", "patterns":["muqueuses", "larmes", "soif"], "answer":"Les muqueuses sont sèches, il présente encore quelques larmes." },
+            { "id": "q_déshydratped_5", "patterns":["TRC allongé", "extrémités froides", "marbrures", "pouls périphériques mal perçus", "tachycardie", "baisse de la tension", "hypotension"], "answer":"Etat hémodynamique stable. FC 100 bpm, TA 105/69mmHg." },
+            { "id": "q_déshydratped_6", "patterns":["troubles de conscience", "apathie", "somnolence", "hypotonie"], "answer":"L'enfant parait particulièrement fatigué." },
+            { "id": "q_déshydratped_7", "patterns":["12,5"], "answer":"Validé." },
+            { "id": "q_déshydratped_8", "patterns":["ionogramme sanguin"], "answer":"Ionogramme sanguin prescrit." },
+            { "id": "q_déshydratped_9", "patterns":["bilan rénal", "créatinémie", "créatininémie"], "answer":"Bilan rénal prescrit." },
+            { "id": "q_déshydratped_10", "patterns":["hospitalisation"], "answer":"D'accord s'il faut l'hospitaliser faites le." },
+            { "id": "q_déshydratped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai mon fils qui présente des diarrhées et des vomissements. Il est en CP et il y a pleins d'enfants malades dans sa classe, mais bon je suis assez stressée... "},
+            { "id": "q_déshydratped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_déshydratped_13", "patterns":["hydratation IV", "hydratation intraveineuse", "hydratation entérale", "relai par SRO"], "answer":"Noté." },
+            { "id": "q_déshydratped_14", "patterns":["poids"], "answer":"Le poids de base est de 20kg, l'enfant est pesé à l'accueil et pèse 17,5kg." }
+          ]
+        },
+
+{
+          id: "SDD5",
+          title: "Eruptions chez l'enfant",
+          intro: `Vous êtes médecin généraliste en ville. Vous recevez Nathan, un petit garçon de 20 mois qui consulte avec ses parents pour une éruption fébrile suivante depuis 2 jours. Caractérisez l'éruption cutanée, identifiez à l'interrogatoire et à l'examen clinique les éléments d'orientation étiologique et donnez votre principale hypothèse diagnostique, identifiez les complications possibles et mettez en place un suivi adapté. <img src= "seinrouge.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Savoir dire que l'éruption est érythémateuse, qu'il s'agit d'un exanthème maculopapuleux et qu'il est morbiliforme.",
+            "- Demander les ATCD médicaux, le carnet de santé et les vaccinations, une prise médicamenteuse, une notion de contage médicamenteux, des signes ORL associés (angine, conjonctivite, chéilite, stomatite, pharyngite), des adénopathies, un œdème et une desquamation des extrémités, depuis combien de temps l'enfant a de la fièvre, si la fièvre est sensible aux antipyrétiques. Diagnostiquer une maladie de Kawasaki. Connaitre la myo(péri)cardite comme complication, savoir que les anévrismes coronaires en sont une complication et faire une échographie au diagnostic et au cours du suivi.",
+            "La maladie de Kawasaki est une vascularite aiguë multisystémique. La majorité des enfants ont moins de 5 ans avec un pic de fréquence à 1 an et surtout dans les populations asiatiques.",
+            "Le diagnostic est clinique et repose sur : ",
+            "- 1 critère indispensable : fièvre > 5 jours qui ne cède pas sous antipyrétique et antibiotiques.",
+            "ET 4 des 5 critères suivants : conjonctivite, atteinte buccopharyngée, éruption cutanée, adénopathies cervicales et atteinte des extrémités.",
+            "Le traitement repose sur des IgIV associées à de l'aspirine à dose anti-inflammatoire. On poursuit l'aspirine à dose antiagrégante pendant un minimum de 6-8 semaines."
+          ],
+
+          questionSet: [
+            { "id": "q_kawasaki_1", "patterns":["érythémateuse"], "answer":"Ok je vois."},
+            { "id": "q_kawasaki_2", "patterns":["maculopapuleux"], "answer":"D'accord." },
+            { "id": "q_kawasaki_3", "patterns":["morbiliforme"], "answer":"Je vois." },
+            { "id": "q_kawasaki_4", "patterns":["antécédents"], "answer":"Nathan n'a pas d'antécédent médical particulier. La grossesse s'est bien déroulée également." },
+            { "id": "q_kawasaki_5", "patterns":["carnet de santé", "vaccinations"], "answer":"J'ai son carnet de santé, il a tous les vaccins obligatoires pour son âge." },
+            { "id": "q_kawasaki_6", "patterns":["médicaments"], "answer":"Il n'a pas pris de médicament récemment hormis du paracétamol depuis 3 jours pour calmer sa fièvre." },
+            { "id": "q_kawasaki_7", "patterns":["contage"], "answer":"Il est gardé à la maison par une nourrice, mais il n'y a pas de notion de contage infectieux." },
+            { "id": "q_kawasaki_8", "patterns":["angine", "conjonctivite", "chéilite", "stomatite", "pharyngite"], "answer":"Je trouve qu'il a des lèvres trop gonflées par rapport à d'habitude, il a également les yeux rouges et se les gratte beaucoup ces derniers temps. Il n'a pas d'angine pour autant." },
+            { "id": "q_kawasaki_9", "patterns":["adénopathies"], "answer":"Adénopathies cervicales volumineuses (2cm)." },
+            { "id": "q_kawasaki_10", "patterns":["œdème", "desquamation"], "answer":"Absence d'oedème et absence de desquamation." },
+            { "id": "q_kawasaki_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon fils a cette éruption depuis 2 jours..."},
+            { "id": "q_kawasaki_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_kawasaki_13", "patterns":["depuis quand", "combien de temps"], "answer":"Il a de la fièvre depuis 7 jours déjà..." },
+            { "id": "q_kawasaki_14", "patterns":["sensible aux antipyrétiques", "efficacité du paracétamol"], "answer":"Non le paracétamol ne marchait pas du tout." },
+            { "id": "q_kawasaki_15", "patterns":["maladie de Kawasaki"], "answer":"D'accord..." },
+            { "id": "q_kawasaki_16", "patterns":["myocardite", "péricardite", "myopéricardite"], "answer":"D'accord." },
+            { "id": "q_kawasaki_17", "patterns":["anévrismes coronaires", "échographie", "échocardiographie"], "answer":"Je vois." }
+          ]
+        },
+
+{
+          id: "SDD6",
+          title: "Etat de mort apparente",
+          intro: "Vous êtes urgentiste de garde au SMUR pédiatrique lorsque vous êtes appelé par le centre 15 pour vous rendre auprès d'une petite fille de 3 ans, qui a fait un 'malaise' à domicile selon les parents. Comment identifiez vous un ACR chez l'enfant, expliquez les manoeuvres de réanimation de base chez cet enfant, citez les 4 causes réversibles d'arrêt cardiorespiratoire.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Vérifier que l'enfant : n'est pas réveillable, n'a pas de respiration spontanée ou alors des gasps, ne présente pas de toux.",
+            "- Libérer les VAS avec une canule de Guedel, commencer par 5 insufflations au ballon, placer l'enfant sur un plan dur, réaliser les compressions à une main, moitié inférieure du sternum au rythme de 100-120/mn, 15 compressions puis 2 insufflations.",
+            "- Citer : hypoxie, hypo/hyperK, hypothermie, causes toxiques, pneumothorax, tamponnade, thrombose pulmonaire / coronaire.",
+            "Rappel de la PEC d'un ACR de l'enfant :",
+            "- RCP 15 compressions / 2 insufflations.",
+            "- Si rythme choquable on choque à 4J. Au bout de 3 choc on peut mettre de l'adrénaline 0,01mg/kg et amiodarone 5mg/kg.",
+            "- Si rythme non choquable on administre de l'adrénaline 0,01mg/kg tous les 2 cycles."
+          ],
+
+          questionSet: [
+            { "id": "q_acrped_1", "patterns":["non réveillable"], "answer":"Non réveillable."},
+            { "id": "q_acrped_2", "patterns":["pas de respiration", "gasps"], "answer":"Absence de respiration, absence de gasps." },
+            { "id": "q_acrped_3", "patterns":["pas de toux"], "answer":"Absence de toux." },
+            { "id": "q_acrped_4", "patterns":["libérer les voies aériennes supérieures", "canule de Guedel"], "answer":"Voies aériennes supérieures libérées." },
+            { "id": "q_acrped_5", "patterns":["5 insufflations"], "answer":"Validé." },
+            { "id": "q_acrped_6", "patterns":["plan dur"], "answer":"Validé." },
+            { "id": "q_acrped_7", "patterns":["une seule main"], "answer":"Validé." },
+            { "id": "q_acrped_8", "patterns":["moitié inférieure du sternum", "1/3 de son diamètre antéro-postérieur", "100", "120"], "answer":"Validé." },
+            { "id": "q_acrped_9", "patterns":["15 compressions", "2 insufflations"], "answer":"Validé." },
+            { "id": "q_acrped_10", "patterns":["hypoxie"], "answer":"Validé." },
+            { "id": "q_acrped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Ma fille dormait et quand je suis venu pour voir si tout allait bien je me suis rendu compte qu'elle ne se réveillait pas. Du coup j'ai appelé le 15 tout de suite, allez la voir s'il vous plait !"},
+            { "id": "q_acrped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_acrped_13", "patterns":["hypokaliémie", "hyperkaliémie"], "answer":"Validé." },
+            { "id": "q_acrped_14", "patterns":["hypothermie"], "answer":"Validé." },
+            { "id": "q_acrped_15", "patterns":["toxiques"], "answer":"Validé." },
+            { "id": "q_acrped_16", "patterns":["pneumothorax"], "answer":"Validé" },
+            { "id": "q_acrped_17", "patterns":["tamponnade"], "answer":"Validé." },
+            { "id": "q_acrped_18", "patterns":["thrombose"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD7",
+          title: "Examen du nouveau né à terme",
+          intro: "Vous êtes pédiatre de garde dans le service de néonatalogie. Vous êtes appelé en salle de naissance car madame N, 34 ans, vient de mettre au monde un charmant petit garçon. L'accouchement était eutocique. Il s'agit de son premier enfant et elle s'interroge sur beaucoup de thématiques différentes. Transmettez les bases de puériculture aux parents, donnez les catégories qui composent le score d'APGAR et calculez-le.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Effectuer le change après chaque tété, ne pas utiliser de cotons tiges, ne pas décalotter le garçon, prévention de la mort subite du nourrisson (19°C, couché sur le dos, matelas ferme, éviter coussins / oreillers / couette, ne pas dormir dans le même lit qu'un adulte), se laver les mains avant chaque soins, ne jamais laisser seul à domicile, éviter le tabagisme passif, protéger du soleil.",
+            "- Le score d'APGAR : FC, mouvements respiratoires, tonus musculaire, coloration, réactivité à la stimulation, côté à 8/10.",
+            "Le score d'APGAR : ",
+            "- A - Apparence : Bleu / pâle (0), extrémités bleues (1), rose (2).",
+            "- P - Pouls : Absence (0), < 100 bpm (1), > 100 bpm (2).",
+            "- G - Grimace : nul (0), grimaces (1), vif / cris / toux (2).",
+            "- A - Agitation : nulle (0), légère flexion (1), quadriflexion / mvt actifs (2).",
+            "- R - Respiration : absence (0), lents / irréguliers (1), vigoureux / cris (2)."
+          ],
+
+          questionSet: [
+            { "id": "q_puériculture_1", "patterns":["après chaque tété"], "answer":"Ok je vois. Et est-ce qu'on peut utiliser des coton-tige ?"},
+            { "id": "q_puériculture_2", "patterns":["ne pas utiliser de coton-tige"], "answer":"D'accord. Et est-ce qu'on devra décalotter mon fils ?" },
+            { "id": "q_puériculture_3", "patterns":["ne pas décalotter"], "answer":"Je vois. Et on m'a parlé de la mort du nourrisson, ça me fait assez peur, vous auriez des conseils de prévention ? " },
+            { "id": "q_puériculture_4", "patterns":["19°C", "sur le dos", "matelas ferme", "éviter les coussins", "éviter les oreillers", "éviter les couettes", "ne pas dormir dans le même lit qu'un adulte"], "answer":"Ok merci. Et avant chaque soin y a t'il quelque chose à faire à chaque fois ?" },
+            { "id": "q_puériculture_5", "patterns":["se laver les mains"], "answer":"Ok. Et s'il hurle y a t'il une chose à ne surtout pas faire ?" },
+            { "id": "q_puériculture_6", "patterns":["ne jamais secouer"], "answer":"D'accord, et est-ce qu'on peut le laisser seul ?" },
+            { "id": "q_puériculture_7", "patterns":["ne jamais laisser seul"], "answer":"Oui je m'en doutais. Et je peux continuer de fumer ?" },
+            { "id": "q_puériculture_8", "patterns":["éviter le tabagisme passif", "arrêter de fumer"], "answer":"Ok on arrêtera alors. Et par rapport au soleil ?" },
+            { "id": "q_puériculture_9", "patterns":["protéger du soleil"], "answer":"D'accord." },
+            { "id": "q_puériculture_10", "patterns":["fréquence cardiaque", "FC"], "answer":"FC 150 bpm." },
+            { "id": "q_puériculture_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis maman pour la première fois et j'ai pleins de questions. D'abord quand est-ce que je dois le changer ?"},
+            { "id": "q_puériculture_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_puériculture_13", "patterns":["mouvements respiratoires"], "answer":"Mouvements lents et irréguliers." },
+            { "id": "q_puériculture_14", "patterns":["tonus musculaire"], "answer":"Quadriflexion." },
+            { "id": "q_puériculture_15", "patterns":["coloration"], "answer":"Enfant rose." },
+            { "id": "q_puériculture_16", "patterns":["réactivité", "stimulation"], "answer":"Grimace à la stimulation." },
+            { "id": "q_puériculture_17", "patterns":["8/10"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD8",
+          title: "Hypotonie / malaise du nourrisson",
+          intro: "Vous êtes pédiatrie au CHU et vous recevez via les pompiers Clémence, un jeune nourrisson de 4 mois. Cette dernière est devenue « toute molle » subitement selon les parents. Ils disent également qu'elle était « toute blanche ». Il n'y avait pas de perte de connaissance cependant. Ils ont rapidement appelé les pompiers. Recherchez les signes de gravité d'un malaise, cherchez les éléments qui orientent vers une situation de maltraitance, identifiez les situations où une hospitalisation est nécessaire.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher : signes de gravité hémodynamique (gris, brady ou tachycardie, hypo ou hypertension, allongement du TRC, état de choc, signes d'IC), signes de gravité respiratoire (cyanose, bradypnée / apnée, signes de lutte, SpO2 < 90%AA), signes de gravité neurologiques (geignement, bombement fontanelle, tb conscience, déficit localisé hypotonie / hypertonie axiale ou périphérique, mvt anormaux).",
+            "- Rechercher : lésion allure traumatique, lésions 'en forme', délai inexplicable entre début des signes et consultation médicale, incohérence entre motif et tableau clinique, responsabilité reportée sur une tierce personne, manque d'intérêt pronostic des lésions. Une anamnèse faisant redouter une cause grave justifie une hospitalisation, des signes de gravité justifient une hospitalisation, reconnaître une inquiétude parentale majeure, rechercher des conditions difficiles de retour au domicile."
+          ],
+
+          questionSet: [
+            { "id": "q_hypotonieped_1", "patterns":["gris", "bradycardie", "tachycardie", "hypotension", "hypertension", "allongement du temps de recoloration cutanée", "allongement du TRC", "état de choc", "signes d'insuffisance cardiaque"], "answer":"Les constantes sont toutes dans les normes, le teint est de couleur normale."},
+            { "id": "q_hypotonieped_2", "patterns":["cyanose", "bradypnée", "apnée", "signes de lutte", "saturation < 90%", "SpO2 < 90%"], "answer":"Absence de signes de détresse respiratoire aigue." },
+            { "id": "q_hypotonieped_3", "patterns":["geignement", "bombement de la fontanelle", "troubles de la conscience", "déficit localisé", "hypotonie", "hypertonie", "mouvements anormaux"], "answer":"Fontanelle non bombée, bon contact. Examen neurologique normal, tonus normal." },
+            { "id": "q_hypotonieped_4", "patterns":["lésions traumatiques", "traumatiques"], "answer":"Absence d'ecchymoses ou de lésions traumatiques." },
+            { "id": "q_hypotonieped_5", "patterns":["lésions en forme", "lésions"], "answer":"Absence de lésions en forme." },
+            { "id": "q_hypotonieped_6", "patterns":["délai"], "answer":"Délai entre le malaise et la consultation court." },
+            { "id": "q_hypotonieped_7", "patterns":["incohérence"], "answer":"Cohérence entre le tableau clinique et le motif de la consultation." },
+            { "id": "q_hypotonieped_8", "patterns":["responsabilité reportée"], "answer":"Les parents ne rejettent la responsabilité sur personne d'autre." },
+            { "id": "q_hypotonieped_9", "patterns":["manque d'intérêt"], "answer":"Les parents sont particulièrement inquiet du devenir de leur fille." },
+            { "id": "q_hypotonieped_10", "patterns":["cause grave"], "answer":"Validé." },
+            { "id": "q_hypotonieped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_hypotonieped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_hypotonieped_13", "patterns":["signes de gravité"], "answer":"Validé." },
+            { "id": "q_hypotonieped_14", "patterns":["inquiétude"], "answer":"Validé." },
+            { "id": "q_hypotonieped_15", "patterns":["conditions difficiles de retour au domicile"], "answer":"Validé." },
+          ]
+        },
+
+{
+          id: "SDD9",
+          title: "Ictère chez le nouveau-né",
+          intro: "Vous êtes pédiatre en néonatalogie. Vous vous occupez de Mathilde, 4 jours. Votre dépistage systématique avec le bilirubinomètre transcutané retrouve un dosage de bilirubine totale au 80e percentile selon la courbe de référence. Comment confirmez vous votre diagnostic, recherchez les signes anamnestiques et cliniques orientant vers un ictère pathologique, demandez des explorations complémentaires.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Doser la bilirubine totale et la bilirubine conjuguée.",
+            "- Rechercher une survenue précoce <24h de vie, ictère prolongé > 10 jours, ictère s'étendant jusqu'aux plantes de pied, des signes de sepsis (fièvre, troubles hémodynamiques, hypotonie), retentissement sur l'état général, signes d'hémolyse (sd anémique, splénomégalie), signes de cholestase (hépatomégalie, urines foncées, selles décolorées), signes neurologiques (somnolence, hypotonie axiale, opisthotonos). Demander un bilan hépatique complet (ASAT/ALAT, GGT, PAL, hémostase), et une échographie abdominale.",
+            "Se souvenir des complications de la photothérapie :",
+            "- Hyperthermie (surveillance systématique pluriquotidienne).",
+            "- Déshydratation (rapprochement des prises alimentaires).",
+            "- Atteinte oculaire et gonadique (lunettes et couches)."
+          ],
+
+          questionSet: [
+            { "id": "q_hyperbiliped_1", "patterns":["bilirubine totale"], "answer":"Prescription de la bilirubine totale faite. La mesure de la bilirubine transcutanée la veille était estimée au 72e percentile."},
+            { "id": "q_hyperbiliped_2", "patterns":["bilirubinémie conjuguée"], "answer":"Prescription de la bilirubine conjuguée faite." },
+            { "id": "q_hyperbiliped_3", "patterns":["précoce", "<24h de vie"], "answer":"Validé." },
+            { "id": "q_hyperbiliped_4", "patterns":["ictère prolongé", "> 10 jours", ">10j", "> 10j"], "answer":"Validé." },
+            { "id": "q_hyperbiliped_5", "patterns":["plantes de pieds"], "answer":"Il existe un discret ictère conjonctival, les téguments sont de coloration normale." },
+            { "id": "q_hyperbiliped_6", "patterns":["sepsis", "fièvre", "troubles hémodynamiques", "hypotonie"], "answer":"Absence de fièvre. Hémodynamique stable." },
+            { "id": "q_hyperbiliped_7", "patterns":["état général"], "answer":"Légèrement plus asthénique ce jour." },
+            { "id": "q_hyperbiliped_8", "patterns":["hémolyse", "syndrome anémique", "splénomégalie"], "answer":"Absence de syndrome anémique, absence de splénomégalie." },
+            { "id": "q_hyperbiliped_9", "patterns":["cholestase", "hépatomégalie", "urines foncées", "selles décolorées"], "answer":"Hépatomégalie. Urines foncées. Selles claires." },
+            { "id": "q_hyperbiliped_10", "patterns":["somnolence", "hypotonie axiale", "opisthotonos"], "answer":"Absence de signes neurologiques." },
+            { "id": "q_hyperbiliped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_hyperbiliped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_hyperbiliped_13", "patterns":["bilan hépatique", "ASAT", "ALAT", "gamma-GT", "GGT", "PAL", "phosphatases alcalines", "hémostase"], "answer":"Bilan hépatique prescrit." },
+            { "id": "q_hyperbiliped_14", "patterns":["échographie", "échographie abdominale"], "answer":"Echographie abdominale prescrite." },
+            { "id": "q_lihg_15", "patterns":["prise en charge dépendra des résultats", "en fonction des résultats"], "answer":"D'accord !" },
+          ]
+        },
+
+{
+          id: "SDD10",
+          title: "Pâleur de l'enfant",
+          intro: "Vous êtes pédiatre en ville et recevez ce jour en consultation Charlotte, 14 ans, pour une pâleur remarquée par son entourage et une fatigue récente inexpliquée. Elle est un peu plus essoufflée ces derniers temps pour des efforts de moins en moins importants. Donnez votre principale hypothèse diagnostique et comment la confirmez vous, prenez connaissance des résultats de(s) (l')examen(s) et que cherchez vous cliniquement, prescrivez un examen et dites le résultat attendu.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Suspecter un sd anémique et prescrire un hémogramme.",
+            "- Rechercher : sd hémorragique cutanéo-muqueux, fièvre inexpliquée, angines récidivantes ou ne cédant pas sous ATB, hépatosplénomégalie, sd tumoral périphérique, dl osseuses, sd cave sup (œdème en pèlerine, dyspnée, circulation thoracique collatérale, comblement claviculaire, signe de Pemberton), signes neuro périphériques (compression médullaire sur tassement).",
+            "- Prescrire un myélogramme et s'attendre à observer > 20% de cellules blastique.",
+            "S'orienter devant une anémie :",
+            "- Microcytaire : bilan martial (ferritine, CST), bilan inflammatoire (CRP, VS), 2e intention électrophorèse de l'Hb et dosage du plomb.",
+            "- Normo- ou macrocytaire : agénérative (myélogramme, enquête infectieuse), régénérative (bilan hémolyse avec bilirubine / LDH / haptoglobine).",
+            "- Si hémolyse aigue : frotti sanguin, test de Coombs direct, dosage G6PD, créat et protéinurie.",
+            "- Si hémolyse chronique : test de Coombs diret, étude des globules rouges."
+          ],
+
+          questionSet: [
+            { "id": "q_anemiecanceroped_1", "patterns":["syndrome anémique", "anémie"], "answer":"D'accord."},
+            { "id": "q_anemiecanceroped_2", "patterns":["hémogramme", "NFS"], "answer":"Résultats de la NFS : Hb 9,4 g/dL, VGM 94 fL, réticulocytes 50 G/L, leucocytes 20 G/L, PNN 0,7 G/L, lymphocytes 1,6 G/L, monocytes 0,4 G/L, cellules anormales 18 G/L, plaquettes 88 G.L." },
+            { "id": "q_anemiecanceroped_3", "patterns":["purpura", "gingivorragies", "épistaxis"], "answer":"Absence de saignement muqueux, examen clinique sans particularités." },
+            { "id": "q_anemiecanceroped_4", "patterns":["fièvre"], "answer":"Température 37,2°C." },
+            { "id": "q_anemiecanceroped_5", "patterns":["angines récidivantes", "ne cédant pas sous antibiotiques"], "answer":"Odynophagie il y a 2 semaines, traitée par amoxicilline pendant 5 jours sans efficacité." },
+            { "id": "q_anemiecanceroped_6", "patterns":["hépatosplénomégalie", "hépatomégalie", "splénomégalie"], "answer":"Présence d'une hépatosplénomégalie." },
+            { "id": "q_anemiecanceroped_7", "patterns":["syndrome tumoral", "adénopathies"], "answer":"Adénopathies axillaires bilatérales." },
+            { "id": "q_anemiecanceroped_8", "patterns":["douleurs osseuses"], "answer":"Absence de douleurs osseuses." },
+            { "id": "q_anemiecanceroped_9", "patterns":["syndrome cave supérieur", "œdème en pélerine", "circulation thoracique collatérale", "comblement claviculaire"], "answer":"Absence d'un syndrome cave supérieur." },
+            { "id": "q_anemiecanceroped_10", "patterns":["signes neurologiques"], "answer":"Examen neurologique normal." },
+            { "id": "q_anemiecanceroped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je trouve que ma fille est pâle et très fatiguée. Elle a eu une toux et puis là je la trouve essoufflée, vous pourriez la voir ? "},
+            { "id": "q_anemiecanceroped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_anemiecanceroped_13", "patterns":["myélogramme"], "answer":"Prescription faite." },
+            { "id": "q_anemiecanceroped_14", "patterns":[">20%", "> 20", "blastes"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD11",
+          title: "Tâche cutanée du nourrisson",
+          intro: "Vous recevez en consultation, Théo, né à terme, âgé de 3 semaines, accompagné de ses parents pour une lésion sur le visage. Interrogez l'entourage sur le mode d'installation et l'évolutivité, évoquez un diagnostic et expliquez ce que vous attendez à retrouver cliniquement, expliquez les différentes phases évolutives de l'hémangiome, expliquez aux parents si un traitement doit être entrepris et si oui pourquoi.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander si la lésion est apparue à la naissance ou quelques jours après, demander l'évolutivité. Evoquer le diagnostic d'hémangiome infantile, expliquer cliniquement qu'on retrouve une tuméfaction / élastique / surface mamelonnée / non battante / sans frémissement / sans souffle / plus chaude que la peau péri lésionnelle.",
+            "- Expliquer que l'hémangiome a 2 phases, une phase de croissance (pendant 5-6 mois), phase d'involution (2-10a), que 50% des hémangiomes régressent totalement sans séquelles et 50% ont des séquelles. Expliquer que la zone est à risque, que le risque est l'amblyopie été qu'il faut mettre un traitement par propranolol per os en 2 prises par jour.",
+            "Différencier un hémangiome d'une malformation vasculaire : ",
+            "- Hémangiome infantile : absent à la naissance, évolution en volume puis régression et disparition.",
+            "- Malformation vasculaire : présente à la naissance, évolution stable ou aggravation et persistance."
+          ],
+
+          questionSet: [
+            { "id": "q_hemangiome_1", "patterns":["naissance", "quelques jours après"], "answer":"La lésion est apparue à 6 jours de vie."},
+            { "id": "q_hemangiome_2", "patterns":["augmente", "stagne", "régresse", "augmentation", "stable", "stagnation", "régression"], "answer":"Depuis la lésion grandit." },
+            { "id": "q_hemangiome_3", "patterns":["hémangiome"], "answer":"Diagnostic validé, l'hémangiome se trouve au niveau de la paupière supérieure de l'oeil gauche." },
+            { "id": "q_hemangiome_4", "patterns":["tuméfaction", "élastique", "mamelonnée", "non battante", "sans frémissement", "pas de souffle", "absence de souffle", "plus chaude", "chaude"], "answer":"Examen clinique validé." },
+            { "id": "q_hemangiome_5", "patterns":["2 phases", "deux phases"], "answer":"Validé." },
+            { "id": "q_hemangiome_6", "patterns":["phase de croissance", "5 à 6 mois", "5-6 mois"], "answer":"Validé." },
+            { "id": "q_hemangiome_7", "patterns":["phase d'involution", "2 à 10 ans", "2-10 ans"], "answer":"Validé." },
+            { "id": "q_hemangiome_8", "patterns":["50% qui régressent", "50% qui ont des séquelles"], "answer":"Validé." },
+            { "id": "q_hemangiome_9", "patterns":["zone à risque", "à risque"], "answer":"Validé." },
+            { "id": "q_hemangiome_10", "patterns":["amblyopie"], "answer":"Validé." },
+            { "id": "q_hemangiome_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon fils à une bosse avec des vaisseaux dessus sur son visage, qu'est-ce que c'est ?"},
+            { "id": "q_hemangiome_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_hemangiome_13", "patterns":["propranolol"], "answer":"Prescription effectuée." }
+          ]
+        },
+
+{
+          id: "SDD12",
+          title: "Vésicules, éruption vésiculeuse",
+          intro: `Vous recevez dans votre cabinet de médecine générale, Lucille, 4 ans, accompagnée de sa mère pour éruption cutanée. Réalisez un interrogatoire pour orienter votre diagnostic, décrivez les lésions, évoquez un diagnostic, expliquez à la maman les principes de PEC pour Lucille. <img src= "varicelle.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher : ATCD, si elle a déjà eu la varicelle, contage, symptômes précédant l'éruption, la temporalité et l'évolutivité, le retentissement (prurit, difficultés du sommeil, difficultés à s'alimenter).",
+            "- Présence de macules érythémateuses, de vésicules ombiliquées, de vésicules à contenu clair et trouble, lésions d'âge différent.",
+            "- Poser le diagnostic de varicelle. Expliquer à la mère qu'il s'agit d'un traitement symptomatique et ambulatoire, que l'éviction de la collectivité n'est pas obligatoire, qu'il y a une CI absolue aux AINS et à l'aspirine, expliquer les modalités spécifiques de PEC (paracétamol si fièvre, antihistaminiques pour prurit, ongles coupés et propres, douches quotidiennes tempérées, badigeons en chlorhexidine en solution aqueuse ou antiseptiques).",
+            "Situations nécessitant une hospitalisation avec traitement par Aciclovir IV et Augmentin + Clinda IV si surinfection bactérienne toxinique :",
+            "- immunodéprimé.",
+            "- > 12 ans.",
+            "- femme enceinte.",
+            "- 1-3 mois de vie et mère non immunisée.",
+            "- prématurés < 28SA et poids < 1000g.",
+            "- varicelle néonatale si infection de la mère dans les 3 dernières semaines de grossesse.",
+            "- forme sévère du nouveau né si varicelle maternelle 5j avant et 2j après l'accouchement."
+          ],
+
+          questionSet: [
+            { "id": "q_varicelle_1", "patterns":["antécédents"], "answer":"Elle n'a pas d'antécédents, sa courbe de croissance est d'ailleurs tout à fait normale."},
+            { "id": "q_varicelle_2", "patterns":["déjà eu la varicelle"], "answer":"Non elle n'a jamais eu la varicelle." },
+            { "id": "q_varicelle_3", "patterns":["contage", "entourage"], "answer":"Je me souviens qu'il y a 2 semaines l'école nous a appelé pour nous signaler un cas de varicelle dans sa classe." },
+            { "id": "q_varicelle_4", "patterns":["symptômes", "fatigue", "fière"], "answer":"Elle était fatiguée il y a 5 jour puis elle a eu un peu de fièvre à 38°C max qui a cédé sous paracétamol. Pour moi c'était une petite rhino comme d'habitude." },
+            { "id": "q_varicelle_5", "patterns":["temporalité", "évolution", "depuis quand", "évolue comment", "évoluent comment"], "answer":"Elle était fatiguée donc il y a 5 jours et là il y a 2 jours elle a eu des petits boutons. Ca a commencé derrière l'oreille puis s'est descendu sur tout le corps." },
+            { "id": "q_varicelle_6", "patterns":["retentissement", "prurit", "sommeil", "alimenter", "alimentation", "dort", "mange"], "answer":"Ah oui elle se gratte beaucoup Docteur, elle a pas dormi de la nuit à cause de ça. Mais bon elle mange normalement c'est déjà ça." },
+            { "id": "q_varicelle_7", "patterns":["macules", "érythémateuses"], "answer":"Validé." },
+            { "id": "q_varicelle_8", "patterns":["ombiliquées"], "answer":"Validé." },
+            { "id": "q_varicelle_9", "patterns":["contenu clair", "contenu trouble"], "answer":"Validé." },
+            { "id": "q_varicelle_10", "patterns":["âges différents", "lésions d'âge", "lésions d'âges"], "answer":"Validé." },
+            { "id": "q_varicelle_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Ma fille a des boutons un peu partout, qu'est-ce que c'est ?"},
+            { "id": "q_varicelle_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_varicelle_13", "patterns":["symptomatique", "ambulatoire"], "answer":"D'accord ça me va." },
+            { "id": "q_varicelle_14", "patterns":["pas d'éviction de la collectivité"], "answer":"Tant mieux elle adore l'école." },
+            { "id": "q_varicelle_15", "patterns":["contre indication à l'aspirine", "CI à l'aspirine", "contre-indication à l'aspirine", "contre indication aux AINS", "CI aux AINS", "contre-indication aux AINS"], "answer":"Ok je ne donnerai ni AINS ni aspirine." },
+            { "id": "q_varicelle_16", "patterns":["paracétamol", "antihistaminiques", "anti histaminiques", "ongles coupés", "couper les ongles", "douches quotidiennes", "chlorhexidine", "antiseptique"], "answer":"D'accord, merci pour vos conseils Doc !" }
+          ]
+        },
+{
+          id: "SDD13",
+          title: "Anomalie du développement psychomoteur",
+          intro: "Pédiatre de ville, vous recevez en consultation, Thomas, 4 ans, accompagné de ses parents, qui est adressé parson médecin traitant pour suspicion d'anomalie du développement psychomoteur. Réalisez un interrogatoire, vous suspectez que Thomas présente des signes d'un trouble du spectre autistique (TSA) quels signes pourriez vous repérer, annoncez votre suspicion aux parents et orienter vers un(des) spécialiste(s).",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher : ATCD familiaux (consanguinité, cas dans la fratrie, ATCD médicaux), informations sur la grossesse / accouchement / périnatal (grossesse, accouchement, durée du travail, déclenchement, asphyxie périnatale, APGAR 3/7), demander des infos sur son dvt psychomoteur, moment où les troubles ont commencé, ATCD médicaux de Thomas depuis sa naissance.",
+            "- TSA : anomalies de la communication et des interactions sociales (déficit de la réciprocité sociale ou émotionnelle, déficit des comportements non verbaux, anomalies des relations sociales), caractère restreint et répétitif des comportements / intérêts / activités (comportements répétitifs et stéréotypés, adhésion inflexible et intolérance au changement, intérêts fixes et restreints, particularités sensorielles). Annonce la suspicion du trouble du spectre autistique, expliquer qu'il faut éliminer un trouble sensoriel à type de surdité en consultant un ORL, expliquer la nécessité d'aller voir un centre ressource autisme (CRA) pour avoir un diagnostic définitif.",
+            "Signes d'alerte précoces d'anomalies du dvt moteur :",
+            "- ne tient pas sa tête à 3 mois (head)",
+            "- ne tient pas assis à 9 mois (shoulders)",
+            "- ne marche pas à 18 mois (knees)",
+            "- ne pédale pas à 3 ans (toes)"
+          ],
+
+          questionSet: [
+            { "id": "q_tsaped_1", "patterns":["antécédents familiaux", "consanguinité"], "answer":"Nous sommes cousins germains, et ma cousine maternelle a eu un fils autiste. Le frère et la sœur de Thomas sont en parfaite santé."},
+            { "id": "q_tsaped_2", "patterns":["grossesse", "accouchement", "APGAR", "asphyxie périnatale"], "answer":"Il est né par voie basse à 36SA après une grossesse spontanée. Le travail a duré 8h, son APGA était à 6 puis 9 puis 10. Je me rappelle avoir fait une séroconversion toxoplasmique au 3e trimestre mais sans complications foetales." },
+            { "id": "q_tsaped_3", "patterns":["développement psychomoteur", "marche", "assis", "parle"], "answer":"Tout était normal jusqu' 3 ans. Maintenant il parle de moins en moins et peut rester des heures à regarder le plafond. Il peut même parler tout seul Docteur c'est vraiment bizarre. Il marche normalement cependant. Mais il a du mal à s'endormir et parfois se lève plusieurs fois, et même assez rarement mais quand même il fait pipi au lit." },
+            { "id": "q_tsaped_4", "patterns":["début des symptômes", "depuis quand", "moment où vous avez remarqué", "quand"], "answer":"Ca fait 6 mois qu'on voit bien que quelque chose ne va pas." },
+            { "id": "q_tsaped_5", "patterns":["antécédents"], "answer":"Il a eu une méningite à 29 mois et a été hospitalisé. C'est sur que c'est à cause de cette méningite docteur, ça a commencé quelques semaines après le retour à la maison..." },
+            { "id": "q_tsaped_6", "patterns":["déficit de la réciprocité sociale", "déficit de la réciprocité émotionnelle", "déficit de la communication non verbale", "communication non verbale", "anomalies des relations sociales", "relations sociales"], "answer":"Validé." },
+            { "id": "q_tsaped_7", "patterns":["répétitifs", "stéréotypés", "intolérance au changement", "restreints et fixes", "sensoriel", "sensorielles"], "answer":"Validé." },
+            { "id": "q_tsaped_8", "patterns":["trouble du spectre autistique", "TSA"], "answer":"Ah bon ? Vous êtes sur que c'est pas la méningite ? Qui est-ce qu'on doit voir pour vérifier tout ça ?" },
+            { "id": "q_tsaped_9", "patterns":["éliminer un trouble sensoriel", "surdité", "ORL"], "answer":"Oui d'accord ça me semble pas mal ça déjà." },
+            { "id": "q_tsaped_10", "patterns":["CRA", "centre ressource autisme"], "answer":"Ok on connaissait pas mais on va essayer d'avoir un rendez-vous." },
+            { "id": "q_tsaped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon généraliste m'a renvoyé vers vous à propos de Thomas. Je sais pas comment dire mais j'ai l'impression qu'il régresse..."},
+            { "id": "q_tsaped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." }
+          ]
+        },
+
+{
+          id: "SDD14",
+          title: "Evaluation et PEC de la douleur de l'enfant et du nourrisson",
+          intro: "Interne aux urgences pédiatriques, vous recevez, Mathis, 3 ans, accompagné de son père, pour suspicion d'appendicite. Il semble douloureux. Evaluez la douleur à l'aide d'un outil d'évaluation adapté (mettre ce qui est observé : la note, exemple expression verbale : 1), prescrivez les antalgiques et non antalgiques pour cette situation clinique. Vous souhaitez réaliser une prise de sang avant la PEC chir expliquez aux parents les modalités d'administration du MEOPA, les effets secondaires et CI à rechercher.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander une évaluation EVENDOL. Côter : 3 expression verbale, 1 mimique, 1 mouvements, 0 positions, 1 relation avec environnement soit 6/15.",
+            "- Prescrire du paracétamol avec des antispasmodiques. Associer avec un palier 2 si antalgie non suffisante.",
+            "- MEOPA : inhalation 3mn avant le geste, associer par la distraction. EI : nausées, vomissements, sédation, réversible en quelques minutes à l'arrêt. CI : HTIC, troubles de la conscience, oxygénodépendance > 50%, pneumothorax, traumatisme craniofacial."
+          ],
+
+          questionSet: [
+            { "id": "q_douleurped_1", "patterns":["EVENDOL"], "answer":`<img src= "evendol.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`},
+            { "id": "q_douleurped_2", "patterns":["expression verbale", "3"], "answer":"Validé." },
+            { "id": "q_douleurped_3", "patterns":["Mimique : 1"], "answer":"Validé." },
+            { "id": "q_douleurped_4", "patterns":["Mouvements : 1"], "answer":"Validé." },
+            { "id": "q_douleurped_5", "patterns":["Positions : 0"], "answer":"Validé." },
+            { "id": "q_douleurped_6", "patterns":["Relation avec l'environnement : 1"], "answer":"Validé." },
+            { "id": "q_douleurped_7", "patterns":["6/15", "6", "six"], "answer":"EVENDOL côté à 6/15." },
+            { "id": "q_douleurped_8", "patterns":["paracétamol"], "answer":"Paracétamol prescrit." },
+            { "id": "q_douleurped_9", "patterns":["antispasmodiques"], "answer":"Phloroglucinol prescrit." },
+            { "id": "q_douleurped_10", "patterns":["palier 2"], "answer":"Antalgiques de palier 2 prescrit si la douleur résiste au palier 1." },
+            { "id": "q_douleurped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon fils a mal au ventre depuis cet après midi avec fièvre, nausées et vomissements. Il pleure sans cesse et parfois il s'agite ou se prostre. Il crit et gémit à la moindre mobilisation, parfois il a le front plissé, il se crispe quand on palpe la fosse iliaque droite. Quand on ne le touche pas il est calme. Aussi quand je le porte dans les bras et qu'il prend un jouet il est calme quelques minutes puis se remet à pleurer en lâchant son jouet."},
+            { "id": "q_douleurped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_douleurped_13", "patterns":["3 minutes"], "answer":"Noté." },
+            { "id": "q_douleurped_14", "patterns":["distraction"], "answer":"Noté." },
+            { "id": "q_douleurped_15", "patterns":["nausées", "vomissements", "sédation", "réversible"], "answer":"Noté." },
+            { "id": "q_douleurped_16", "patterns":["HTIC", "hypertension intra crânienne", "hypertension intra-crânienne", "hypertension intracrânienne", "troubles de la conscience", "oxygénodépendance", "pneumothorax", "traumatisme crâniofacial", "traumatisme crânio-facial"], "answer":"Absence de contre-indications" }
+          ]
+        },
+
+{
+          id: "SDD15",
+          title: "Consultation de suivi d'un nourrisson en bonne santé",
+          intro: "Vous recevez en consultation, Léa Dupont, 2 mois, née le 4 février 2025, amenée par sa mère pour vaccination. La maman a ramené les vaccins du jour. Nommez les vaccinations obligatoires que la maman a ramené, réaliser la vaccination, remplir le carnet de santé, fixer le prochain rendez-vous en lui disant quels vaccins la maman devra se procurer.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Citer les vaccins obligatoires : DTP et Coqueluche, Haemophilus Influenzae B, Hépatite B et Pneumocoque.",
+            "- Expliquer le geste réalisé (IM face antéro-latérale de la cuisse, un vaccin par cuisse), demander consentement à la maman, utiliser des méthodes d'analgésie (distraire enfant, saccharose, confortable, rassurer, aide des parents, anesthésie locale par crème EMLA), maitriser la procédure (désinfection, compression coton après geste, pansement post-procédure), maitriser l'injection (ne pas purger la seringue, positionnel vertical, aiguille adaptée à l'âge, enfocer l'aiguille en 1 fois, ne pas aspirer avant l'injection, rapide).",
+            "- Sur le carnet mettre : nom prénom et date de naissance de Léa, date du jour nom du vaccin et numéro de lot, signature.",
+            "- Prochaine vaccination à 3 mois, vaccin du Méningocoque B."
+          ],
+
+          questionSet: [
+            { "id": "q_vaccinsped_1", "patterns":["DTP", "diphtérie", "tétanos", "coqueluche", "poliomyélite", "haemophilus influenzae B", "hépatite B", "pneumocoque"], "answer":"Ok je vois."},
+            { "id": "q_vaccinsped_2", "patterns":["intramusculaire", "intra musculaire", "intra-musculaire", "IM", "face antéro-latérale", "un vaccin par cuisse"], "answer":"D'accord." },
+            { "id": "q_vaccinsped_3", "patterns":["consentement"], "answer":"Oui il n'y a pas de soucis allez-y." },
+            { "id": "q_vaccinsped_4", "patterns":["distrait", "distraire", "distraction", "saccharose", "confortable", "confortablement", "rassurant", "aide", "EMLA"], "answer":"D'accord je vois." },
+            { "id": "q_vaccinsped_5", "patterns":["désinfection", "compression", "compresse", "pansement"], "answer":"Ok." },
+            { "id": "q_vaccinsped_6", "patterns":["ne pas purger", "ne purge pas", "aiguille adaptée", "en une seule fois", "n'aspire pas", "pas d'aspiration", "rapide", "rapidement", "vite"], "answer":"Parfait." },
+            { "id": "q_vaccinsped_7", "patterns":["nom", "prénom", "date de naissance"], "answer":"C'est Léa Dupont, elle est née le 4 février 2025." },
+            { "id": "q_vaccinsped_8", "patterns":["date", "nom du vaccin", "numéro de lot"], "answer":"Allez-y." },
+            { "id": "q_vaccinsped_9", "patterns":["signature", "signer"], "answer":"Top." },
+            { "id": "q_vaccinsped_10", "patterns":["3 mois", "trois mois"], "answer":"Ok." },
+            { "id": "q_vaccinsped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens pour les vaccinations des 2 mois pour ma fille."},
+            { "id": "q_vaccinsped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_vaccinsped_13", "patterns":["méningocoque B"], "answer":"Pas de soucis." },
+            { "id": "q_vaccinsped_14", "patterns":["taille", "poids", "périmètre crânien", "PC"], "answer":"Elle fait 53cm pour 4,9kg et son PC est de 37 cm." },
+            { "id": "q_vaccinsped_15", "patterns":["examen clinique", "douleurs", "symptômes"], "answer":"Examen clinique normal." }
+          ]
+        },
+
+{
+          id: "SDD16",
+          title: "Consultation de suivi pédiatrique",
+          intro: "Vous recevez en consultation de suivi pédiatrique, Emma, 16 ans. Menez un entretien sur les axes de suivi habituels et ceux adaptés à l'âge, évaluer la puberté en respectant son intimité.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Créer une relation de confiance avec la patiente, se renseigner sur son parcours scolaire et un projete d'avenir, se relation avec ses camarades en classe et ses amis, sa situation familiale, des problèmes orthopédiques, des problèmes d'acné potentiels et si elle veut évoquer des moyens de contraception.",
+            "- Demander si elle veut aborder la puberté, la date des premières règles, la régularité des cycles, l'accord pour l'examen clinique, côter le développement mammaire S4, côter le développement de la pilosité pubienne à P4, se renseigne sur le vécu psychologique de la patiente sur ce changement morphologique.",
+            "Rappel des stades de Tanner :",
+            `<img src= "stadetanner.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`
+
+          ],
+
+          questionSet: [
+            { "id": "q_puberteped_1", "patterns":["confiance", "confidentiel", "ne pas brusquer"], "answer":"Ok tant mieux."},
+            { "id": "q_puberteped_2", "patterns":["parcours scolaire", "projet d'avenir", "classe", "notes", "projet professionnel"], "answer":"Je suis en première dans un lycée public. J'aimerai bien être chirurgienne, j'en rêve depuis petite. J'ai de bons résultats donc je suis confortée dans cette idée." },
+            { "id": "q_puberteped_3", "patterns":["cercle d'ami", "intégration", "camarades"], "answer":"Je suis plutôt réservée mais j'ai un bon petit cercle d'ami, je suis quand même super bien entourée. J'ai même un petit copain depuis un an maintenant." },
+            { "id": "q_puberteped_4", "patterns":["situation familiale", "frères", "soeurs", "relation avec ta fratrie", "problèmes à la maison"], "answer":"J'ai deux grands frères et une petite sœur. Heureusement tout se passe bien à la maison." },
+            { "id": "q_puberteped_5", "patterns":["problèmes orthopédiques", "douleur au dos", "genou", "hanche", "pieds plats"], "answer":"Je n'ai pas de problème orthopédique, mon dos est bien droit et je n'ai aucune douleur." },
+            { "id": "q_puberteped_6", "patterns":["acné"], "answer":"Oui j'ai de l'acné et je suis même suivie par un dermato depuis 1 an. Bientôt on commencera l'isotrétinoïne car apparamment dans 1 an je n'aurais plus du tout d'acné avec ça ! Et tant mieux parce que c'est super moche." },
+            { "id": "q_puberteped_7", "patterns":["contraception"], "answer":"Non je préfèrerai pas en parler." },
+            { "id": "q_puberteped_8", "patterns":["est-ce que tu es d'accord pour parler de la puberté", "puberté"], "answer":"Oui on peut." },
+            { "id": "q_puberteped_9", "patterns":["date des premières règles", "premières règles"], "answer":"J'ai eu mes premières règles à 12 ans." },
+            { "id": "q_puberteped_10", "patterns":["régulières"], "answer":"Au départ c'était n'importe quoi, mais depuis 3 ans c'est plutôt stable." },
+            { "id": "q_puberteped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends rien à ce compte-rendu, je dois m'inquiéter ?"},
+            { "id": "q_puberteped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_puberteped_13", "patterns":["examen clinique", "je peux t'examiner"], "answer":"Oui sans soucis. A l'examen clinique : saillie de l'aérole et du mamelon sur la glande avec sillon sous-mammaire, pilosité pubienne triangulaire n'atteignant pas la racine des cuisses." },
+            { "id": "q_puberteped_14", "patterns":["développement mammaire", "S4"], "answer":"Noté." },
+            { "id": "q_puberteped_15", "patterns":["développement de la pilosité pubienne", "pilosité pubienne", "P4"], "answer":"Noté" },
+            { "id": "q_puberteped_16", "patterns":["vécu psychologique", "changement morphologique", "corps change"], "answer":"Au départ c'était compliqué puis maintenant je me sens plutôt bien dans mon corps." }
+          ]
+        },
+
+{
+          id: "SDD17",
+          title: "Dépistage prénatal de la trisomie 21",
+          intro: "Vous recevez en consultation, Madame T, 33 ans, pour le suivi de sa première grossesse. Elle est actuellement à 10 SA. Proposez à la patiente une stratégie de dépistage de la trisomie 21 en tenant compte du terme et en expliquant brièvement les modalités. Le résultat revient à 1/35 expliquez les possibilités de prise en charge diagnostique, la patiente demande le risque de récurrence pour une prochaine grossesse répondez lui.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Proposer un dépistage combiné du premier trimestre, basé sur 3 marqueurs (clarté nucale, PAPP-A et b-HCG libre) et âge, explique que le calcul permettra de déterminer un risque qui déterminera la prise en charge, consentement signé à demander.",
+            "- Dire que le risque est élevé et nécessite un diagnostic anténatal par caryotype foetal, consentement signé, 2 possibilités (choriocentèse par biopsie du trophoblaste ou amniocentèse), choriocentèse (11-12SA) et amniocentèse (15-15SA), permettent aussi de dépister d'autres anomalies chromosomiques.",
+            "- Le risque dépend du type d'anomalies chromosomiques. Si T21 libre (un K en plus) le risque est de 1%, si T21 par translocation de novo pas d'augmentation du risque de récurrence, si translocation héritée risque augmenté avec caryotype à faire pour le prochain foetus.",
+            "Rappel de la PEC en fonction du niveau de risque :",
+            "- Risque < 1/1000 = faible : fin de la procédure de dépistage.",
+            "- Risque > 1/1000 et < 1/50 = modéré : faire test ADN LC T21. Si négatif risque faible si positif risque élevé.",
+            "- Risque > 1/50 = élevé : possibilité de proposer une est ADN LC T21, réaliser une amniocentèse ou choriocentèse pour faire un caryotype. Non obligatoire, voir avec la maman et faire signer un consentement écrit."
+          ],
+
+          questionSet: [
+            { "id": "q_t21ped_1", "patterns":["dépistage combiné"], "answer":"Ok je vois, comment on fait ce test ?"},
+            { "id": "q_lihg_2", "patterns":["clarté nucale", "PAPP-A", "b-HCG", "b-hCG", "bêta-hCG", "âge"], "answer":"D'accord je vois." },
+            { "id": "q_t21ped_3", "patterns":["calcul du risque"], "answer":"Ok." },
+            { "id": "q_t21ped_4", "patterns":["consentement signé"], "answer":"Pas de soucis." },
+            { "id": "q_t21ped_5", "patterns":["élevé", "diagnostic anténatal", "caryotype"], "answer":"Oh non je ne pensais pas qu'il serait malade moi... Comment on vérifie ça ? " },
+            { "id": "q_t21ped_6", "patterns":["choriocentèse", "11 à 12SA", "11-12SA", "AA à 12", "11-12"], "answer":"D'accord..." },
+            { "id": "q_t21ped_7", "patterns":["amniocentèse", "15 à 16", "15-16"], "answer":"D'accord." },
+            { "id": "q_t21ped_8", "patterns":["autres anomalies"], "answer":"Ok ça peut être rassurant de savoir du coup." },
+            { "id": "q_t21ped_9", "patterns":["libre", "1%"], "answer":"D'accord." },
+            { "id": "q_t21ped_10", "patterns":["translocation de novo", "pas augmenté"], "answer":"Ok j'espère que c'est ça." },
+            { "id": "q_t21ped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir dans le cadre de ma grossesse."},
+            { "id": "q_t21ped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_t21ped_13", "patterns":["hérité", "risque augmenté"], "answer":"J'espère pas que ce soit cette anomalie là..." }
+          ]
+        },
+
+{
+          id: "SDD18",
+          title: "Dépistage néonatal systématique",
+          intro: "Pédiatrie dans un service de maternité, la maternité des ECOS, vous souhaitez réaliser le dépistage néonatal systématique à Léo Leblanc, 3 jours. Il est né le 4 février 2023 à 12 h 45, à 41 SA, avec les mensurations suivantes : taille : 51 cm, poids : 3,500 kg, PC : 35 cm. Il est le premier enfant de la famille. Donnez les informations nécessaires aux parents concernant ce dépistage néonatal systématique, réalisez le test de Guthrie à Léo.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer que ce dépistage est systématiquement réalisé à tous les nourrissons à 72h de vie, consentement écrit pour la recherche d'un gène de mucoviscidose si test +, 100% remboursé, objectif de prévention secondaire (maladies rares mais forte morbi-mortalité), que les parents seront mis au courant que si le résultat est anormal, permet le dépistage de 13 maladies, que le test est rapide et sans danger.",
+            "- Se laver les mains et porter des gants, réchauffer le pied, abaisser la jambe, nettoyer le talon avec de l'alcool et sécher, ponctionner la face latérale ou médiale du talon, essuyez la première goutte et laisser une goutte se former et imprégner le cercle complètement, laisse sécher le buvard 2h puis remplir les informations sur le carton 'Guthrie'.",
+            "Les 13 maladies dépistées sont : phénylcétonurie, hypothyroïdie congénitale, hyperplasie congénitale des surrénales, mucoviscidose, drépanocytose, déficit en MCAD, 3 aminoacidopathies (homocystinurie, leucinose, tyrosinémie de type 1), 2 aciduries organiques (GA-1, IVA) et 2 déficits de béta-oxydation (LCADH et CUD)."
+          ],
+
+          questionSet: [
+            { "id": "q_guthrie_1", "patterns":["systématiquement réalisé", "systématique", "systématiquement", "tous les nourrissons", "tous les bébés"], "answer":"D'accord, et il sert à quoi ce test ?"},
+            { "id": "q_guthrie_2", "patterns":["consentement écrit", "positif pour la mucoviscidose"], "answer":"D'accord." },
+            { "id": "q_guthrie_3", "patterns":["100% remboursé", "remboursé à 100%"], "answer":"Parfait, et est-ce que c'est dangereux ?" },
+            { "id": "q_guthrie_4", "patterns":["prévention secondaire", "dépistage"], "answer":"Je vois, et c'est rembrousé ?" },
+            { "id": "q_guthrie_5", "patterns":["avertis en cas de résultats anormaux", "que si les résultats sont anormaux", "prévenus qu'en cas de résultats anormaux"], "answer":"Ok..." },
+            { "id": "q_guthrie_6", "patterns":["13 maladies", "treize maladies"], "answer":"D'accord." },
+            { "id": "q_guthrie_7", "patterns":["rapide", "sans danger"], "answer":"Tant mieux, et on sera prévenu des résultats ?" },
+            { "id": "q_guthrie_8", "patterns":["laver les mains", "lavage des mains", "gants"], "answer":"Noté." },
+            { "id": "q_guthrie_9", "patterns":["réchauffe le pied", "réchauffer le pied"], "answer":"Noté." },
+            { "id": "q_guthrie_10", "patterns":["abaisser la jambe", "abaisse la jambe"], "answer":"Noté." },
+            { "id": "q_guthrie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. On nous a parlé d'un test de Guthrie, on ne connait pas du tout. Est-il fait tout le temps ce test ?"},
+            { "id": "q_guthrie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_guthrie_13", "patterns":["alcool", "sèche", "sécher"], "answer":"Noté." },
+            { "id": "q_guthrie_14", "patterns":["face latérale", "face médiale", "talon"], "answer":"Noté." },
+            { "id": "q_guthrie_15", "patterns":["essuyer la première goutte", "essuie la première goutte", "cercle rempli", "cercle imprégné totalement", "cercle"], "answer":"Noté." },
+            { "id": "q_guthrie_16", "patterns":["sécher pendant 2h", "2h"], "answer":"Noté." },
+            { "id": "q_guthrie_17", "patterns":["carton", "remplir les informations"], "answer":"Noté." }
+          ]
+        },
+
+{
+          id: "SDD19",
+          title: "Prévention des risques foetaux",
+          intro: "Vous recevez en consultation, Madame P, 28 ans, pour suivi de sa grossesse. Il s'agit de sa deuxième de grossesse. Elle est actuellement à 14 SA. Il s'agit de la première consultation pour cette grossesse. Après interrogatoire prescrire les examens de dépistage, 2 semaines plus tard Mme P vous consulte pour fièvre à 39°C sans point d'appel nommez votre démarche diagnostique et PEC initiale.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Se renseigner sur le statut vaccinal (VHB, ROR, diphtérie, tétanos, polio, coqueluche, grippe, COVID), statut immunitaire toxoplasmose / rubéole / VBH, évènements intercurrents de la précédente grossesse, FdR diabète gestationnel (>35a, IMC > 25, ATCD fam de DT2, ATCD perso de DG, macrosomie), proposer un dépistage VIH / VHC, expliquer que la séro toxoplasmose est obligatoire, expliquer que le test tréponémique est obligatoire, que doser l'Ag HbS est obligatoire, proposer systématiquement un ECBU.",
+            "- Réaliser ECBU et hémocultures, NFS et CRP, sérologie toxoplasmique, analyse rythme cardiaque foetal / tocométrie / échographie obstétricale, paracétamol, ATB préventive active sur Listéria (amox 3g/L)."
+          ],
+
+          questionSet: [
+            { "id": "q_listeriaped_1", "patterns":["statut vaccinal"], "answer":"Niveau vaccin je ne suis pas vaccinée contre la grippe et mon dernier rappel de la coqueluche a été fait à mes 25ans. Je suis vaccinée contre la COVID par contre."},
+            { "id": "q_listeriaped_2", "patterns":["statut sérologique", "toxoplasmose", "rubéole", "hépatite B"], "answer":"Je ne suis pas immunisée contre la toxoplasmose et l'hépatite B mais je suis lui contre ROR." },
+            { "id": "q_listeriaped_3", "patterns":["précédente grossesse", "dernière grossesse"], "answer":"Ma dernière grossesse date d'il y a 2 ans et j'ai eu 2 infections urinaires traitées par Amoxicilline si je rappelle bien." },
+            { "id": "q_listeriaped_4", "patterns":["facteurs de risque de diabète gestationnel", "35 ans", "IMC > 25", "antécédents de diabète de type 2", "macrosomie"], "answer":"J'ai 28ans, je fais 55kg pour 1m69, je n'ai pas d'antécédents personnels ou familiaux de diabète et mon dernier enfant était de corpulence normale à la naissance." },
+            { "id": "q_listeriaped_5", "patterns":["dépistage VIH", "dépistage VHC"], "answer":"Ok je vois." },
+            { "id": "q_listeriaped_6", "patterns":["sérologie toxoplasmose"], "answer":"D'accord." },
+            { "id": "q_listeriaped_7", "patterns":["test tréponémique"], "answer":"Pourquoi pas." },
+            { "id": "q_listeriaped_8", "patterns":["antigène HbS"], "answer":"Ok on le fera." },
+            { "id": "q_listeriaped_9", "patterns":["ECBU"], "answer":"D'accord." },
+            { "id": "q_listeriaped_10", "patterns":["hémocultures"], "answer":"Ok." },
+            { "id": "q_listeriaped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens consulter dans le cadre de ma grossesse."},
+            { "id": "q_listeriaped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_listeriaped_13", "patterns":["NFS", "CRP"], "answer":"Noté." },
+            { "id": "q_listeriaped_14", "patterns":["rythme cardiaque foetal", "tocométrie", "échographie obstétricale"], "answer":"Noté." },
+            { "id": "q_listeriaped_15", "patterns":["paracétamol"], "answer":"Prescription faite" },
+            { "id": "q_listeriaped_16", "patterns":["antibiothérapie", "amoxicilline", "Listéria", "listeria", "listériose"], "answer":"Prescription faite." },
+            { "id": "q_listeriaped_17", "patterns":["streptocoque B", "groupe sanguin", "rhésus", "GS"], "answer":"Le dépistage du portage du Streptocoque B était négatif lors de ma dernière grossesse et je suis O+ par ailleurs." }
+          ]
+        },
+
+{
+          id: "SDD20",
+          title: "Prévention de la mort inexpliquée du nourrisson",
+          intro: "Vous recevez en consultation, dans votre cabinet de médecine générale, le 23 décembre, Romain, 1 mois, accompagné de sa mère. Cherchez les principaux FdR de mort inexpliquée du nourrisson, communiquez à la mère les facteurs de prévention de la MIN.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Antécédents personnels Romain (prématurité, RCIU, tabagisme anténatal 2/3), contexte social (âge mère, situation familiale, suivi grossesse, défavorisé ou non), mode de couchage (comment, où, positionnement tête, température pièce, co-sleeping 3/5), tabagisme parental, mode d'allaitement.",
+            "- Expliquer qu'il faut modifier certaines choses, co sleeping est proscrit, expliquer comment dormir (décubitus dorsal, berceau rigide, matelas ferme, pas d'oreiller, pas de couette, pas de couverture 4/7), peut dormir dans la même pièce les premiers mois, température 18-20°C, tabagisme proscrit, ne pas surcouvrir, allaitement doit être continué si possible, tétine à l'endormissement possible, demande si bien compris et que des organismes existent.",
+            "Avoir en tête 3 définitions :",
+            "- MIN : mort brutale chez un enfant < 2a alors que rien dans ses ATCD ne pouvait la laisser prévoir.",
+            "- Mort Subite du Nourrisson : mort d'un nourrisson sans aucune directe identifiée malgré les investigations.",
+            "- Mort inattendue du nourrisson de cause indeterminée : MIN avec investigations post mortem incomplètes.",
+            "Les causes les plus fréquentes de MIN sont : infections respiratoires apnéisantes, infections graves, déshydratation aigue, accidents domestiques et maltraitance."
+          ],
+
+          questionSet: [
+            { "id": "q_minped_1", "patterns":["antécédents", "prématurité", "RCIU", "retard de croissance in utéro", "tabagisme anténatal", "tabagisme pendant la grossesse"], "answer":"Romain est né à 36SA sans complications, je fumais d'ailleurs un paquet par jour avant sa grossesse et j'ai diminué pendant."},
+            { "id": "q_minped_2", "patterns":["contexte social", "âge", "célibataire", "mariée", "grossesse a été suivie", "défavorisé"], "answer":"Je vis seule, je suis au chômage et j'habite dans un studio. Je ne parle plus à son père. Et la grossesse a été mal suivi à cause de problèmes familiaux, je veux pas rentrer dans les détails si c'est possible..." },
+            { "id": "q_minped_3", "patterns":["chambre", "positionnement de la tête", "comment sa tête est elle positionnée", "température", "co-sleeping", "co sleeping"], "answer":"Romain dort avec moi dans mon lit le temps que je trouve un lit pour bébé. Il fait à peu près 22-23°C dans le studio car je mets le chauffage pour ne pas avoir froid." },
+            { "id": "q_minped_4", "patterns":["tabagisme"], "answer":"Je fume toujours un peu oui..." },
+            { "id": "q_minped_5", "patterns":["allaitement"], "answer":"Oui il est allaité au sein." },
+            { "id": "q_minped_6", "patterns":["modifier", "changer"], "answer":"D'accord, je préfère le savoir ..." },
+            { "id": "q_minped_7", "patterns":["arrêter le co-sleeping", "arrêter le co sleeping"], "answer":"D'accord, je sais que c'est pas bien de dormir avec lui mais je n'avais pas d'autres solutions pour le moment..." },
+            { "id": "q_minped_8", "patterns":["décubitus dorsal", "berceau rigide", "matelas ferme", "pas d'oreillers", "sans oreiller", "sans couette", "sans couettes", "sans couverture", "sans couvertures"], "answer":"D'accord je me note tout ça." },
+            { "id": "q_minped_9", "patterns":["dans votre chambre", "dans la même pièce", "dans la chambre parentale"], "answer":"D'accord tant mieux." },
+            { "id": "q_minped_10", "patterns":["18", "18 à 20", "19", "20"], "answer":"Ok, je baisserai la température du studio." },
+            { "id": "q_minped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. On m'a parlé de la mort inattendue du nourrisson et je voulais quelques informations pour l'éviter."},
+            { "id": "q_minped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_minped_13", "patterns":["arrêter de fumer", "arrêt du tabac"], "answer":"Je vais essayer pour lui." },
+            { "id": "q_minped_14", "patterns":["pas surcouvrir", "pas trop couvrir"], "answer":"Oui je comprends." },
+            { "id": "q_minped_15", "patterns":["continuer l'allaitement", "continuer d'allaiter", "pas arrêter l'allaitement", "pas arrêter d'allaiter"], "answer":"Parfait." },
+            { "id": "q_minped_16", "patterns":["tétine"], "answer":"D'accord !" },
+            { "id": "q_minped_15", "patterns":["organismes"], "answer":"Super je vais me rapprocher d'eux alors, merci." }
+          ]
+        },
+
+{
+          id: "SDD21",
+          title: "Suspicion de maltraitance et enfance en danger",
+          intro: "PH aux urgences, vous recevez, Lucas 4 ans, accompagné de sa mère pour suspicion de fracture du poignet gauche. Sa mère vous explique qu'il est tombé il y a 3 jours du canapé. Vous n'avez pas consulté avant car il n'a eu mal qu'hier. Lors de votre examen clinique vous constatez des ecchymoses d'âges différents au niveau de l'abdomen, du cou et des joues. Le poignet gauche est déformé. Vous remarquez aussi une lésion pouvant correspondre à une brûlure de cigarette sur le bras droit. La mère vous dit qu'il n'arrête pas de tomber car « c'est un enfant très agité ». La mère s'agite parfois avec l'enfant en le prenant assez violemment. L'enfant est en retrait, ne souhaite pas parler et a l'air triste. Vos examens biologiques sont normaux. La radiographie du poignet retrouve une fracture avec un cal osseux déjà en place. Vous suspectez une maltraitance. Justifiez auprès de la mère la nécessité d'hospitalisation de Lucas, prenez les mesures nécessaires, rédigez le certificat qu'on vous a donné.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer à la maman que l'enfant doit être hospitalisé, que vous suspectez une maltraitance potentielle, que vous allez devoir prévenir les autorités compétentes, que vous n'accusez personne et souhaitez mettre Lucas en sécurité, la maman conserve un droit de correspondance et de visite avec Lucas.",
+            "- Faire un signalement judiciaire. Remplir les informations permettant de dater le certificat, informations de l'enfant, son identité, reprendre les allégations sans donner son avis, informations sur l'examen clinique et signer le certificat."
+          ],
+
+          questionSet: [
+            { "id": "q_maltraitance_1", "patterns":["hospitalisé", "hospitalisation"], "answer":"Ah non non il est hors de question que vous l'hospitalisiez, on va rentrer chez nous hun c'est tout. Pourquoi on l'hospitaliserait même ?"},
+            { "id": "q_maltraitance_2", "patterns":["maltraitance"], "answer":"De la maltraitance ? Vous rigolez j'espère." },
+            { "id": "q_maltraitance_3", "patterns":["autorités compétentes"], "answer":"Ah ouais carrément, donc je suis une criminelle moi c'est de ça dont vous m'accusez finalement ?" },
+            { "id": "q_maltraitance_4", "patterns":["n'accuse personne", "en sécurité"], "answer":"Et donc moi on m'enlève mon fils et je le verrais plus jamais ? Comment je vais faire moi ? Je ne sais pas quoi vous dire..." },
+            { "id": "q_maltraitance_5", "patterns":["droit de correspondance", "droit de visite"], "answer":"Non mais oui je suis totalement dépassée je l'avoue et là ça me stresse d'entendre tout ça. Mais si ça peut nous aider ma foi..." },
+            { "id": "q_maltraitance_6", "patterns":["signalement", "signalement judiciaire"], "answer":"D'accord, je ne pensais pas..." },
+            { "id": "q_maltraitance_7", "patterns":["date", "dater"], "answer":"Validé." },
+            { "id": "q_maltraitance_8", "patterns":["identité", "nom de l'enfant"], "answer":"Validé." },
+            { "id": "q_maltraitance_9", "patterns":["reprend les allégations"], "answer":"Validé." },
+            { "id": "q_maltraitance_10", "patterns":["examen clinique"], "answer":"Validé." },
+            { "id": "q_maltraitance_11", "patterns":["bonjour"], "answer":"Ah enfin un Docteur. Je ne comprends rien à ce qui se passe là, je peux rentrer avec mon fils c'est bon ?"},
+            { "id": "q_maltraitance_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_maltraitance_13", "patterns":["signer", "signature"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD22",
+          title: "Prévention de l'exposition aux écrans",
+          intro: "Vous recevez en consultation, Simon, 7 ans dans votre cabinet de médecine générale accompagné de son père. Evaluez l'activité physique de Simon et conseillez une activité physique adaptée à l'âge, évaluez les comportements et habitudes liés au sommeil et appliquez les conseils de bon comportement, expliquez au père la règle 3-6-12.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Se renseigne sur l'activité physique (scolaires et extrascolaires), moments de sédentarité, expliquer les bénéfices (diminution obésité, amélioration condition physique, diminution risque cardiovasculaire, exutoire des tensions, amélioration sommeil, liens sociaux 3/6), au moins 60 mn/j d'activité physique modérée, 20mn d'activité intense, ne pas dépasser 120mn en continu d'activité sédentaire.",
+            "- Se renseigne sur nombre d'heures de sommeil, méthodes d'endormissement, environnement autour du sommeil (horaire diner, régularité horaires, objets connectés, température chambre, horaire AP), dormir entre 9-10h, respecter règles hygiène du sommeil (régularité des horaires, sortir dans la journée et s'exposer à la lumière, pas d'AP après 18h, limiter les objets connectés en fin de journée, température 18°C, le lit ne sert qu'à dormir, activité rituelle avant le coucher, diner léger mais consistant, éviter les excitants après 14h), limiter l'utilisation des écrans. Règle pas de télévision avant 3ans, pas de console avant 6 ans, pas d'internet avant 9ans, pas d'internet seul avant 12 ans."
+          ],
+
+          questionSet: [
+            { "id": "q_écransped_1", "patterns":["scolaire", "extra scolaire", "extra-scolaires"], "answer":"Alors Simon fait du sport avec l'école et il fait du foot tous les dimanches pendant 2h. Je pense qu'il a besoin de se défouler mais je ne sais pas si l'inscrire à une autre activité physique ça serait pas trop pour son âge."},
+            { "id": "q_écransped_2", "patterns":["sédentaire", "sédentarité"], "answer":"En rentrant de l'école il a tendance à se mettre devant la télé pour regarder des dessins animés, et parfois il reste 2h comme ça sans bouger." },
+            { "id": "q_écransped_3", "patterns":["diminue le risque d'obésité", "diminue l'obésité", "diminution de l'obésité", "amélioration de la condition physique", "diminution du risque cardiovasculaire", "diminue le risque cardiovasculaire", "améliore le sommeil", "amélioration du sommeil", "liens sociaux"], "answer":"Je vois." },
+            { "id": "q_écransped_4", "patterns":["60 minutes par jour", "60 mn/j", "activité physique modérée"], "answer":"Ok." },
+            { "id": "q_écransped_5", "patterns":["20 minutes", "20mn", "intense"], "answer":"Ok." },
+            { "id": "q_écransped_6", "patterns":["120 minutes", "120mn"], "answer":"D'accord." },
+            { "id": "q_écransped_7", "patterns":["nombre d'heures"], "answer":"Je dirais qu'il dort 8h par nuit avec parfois des réveils dans la nuit." },
+            { "id": "q_écransped_8", "patterns":["méthodes d'endormissement"], "answer":"J'avoue que là on assure pas, Simon a du mal à s'endormir donc on a tendance à le laisser devant un dessin animé, mais pour l'arrêter c'est l'horreur. Une fois par semaine il dort même avec nous..." },
+            { "id": "q_écransped_9", "patterns":["horaire du dîner", "régularité des horaires", "heure des repas", "à quelle heure", "objets connectés", "température", "horaire des activités physiques"], "answer":"On mange tous les soirs à la même heure, sa chambre est à 18°C, et son sport c'est le dimanche matin." },
+            { "id": "q_écransped_10", "patterns":["9 à 10h", "9 à 10 heures", "9-10h"], "answer":"Ok je vois." },
+            { "id": "q_écransped_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_écransped_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_écransped_13", "patterns":["régularité des horaires", "à la même heure", "sortir dans la journée", "s'exposer à la lumière", "pas de sport après 18 heures", "pas de sport après 18h", "pas d'activité physique après 18h", "18°C", "qu'à dormir", "rituel", "léger", "éviter les excitants après 14h"], "answer":"Ok je note tout ça." },
+            { "id": "q_écransped_14", "patterns":["limiter l'utilisation des écrans"], "answer":"Oui je m'en doutais." },
+            { "id": "q_écransped_15", "patterns":["pas de télévision avant 3", "pas de console avant 6", "pas d'internet seul avant 12"], "answer":"D'accord !" },
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
