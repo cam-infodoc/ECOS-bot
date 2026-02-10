@@ -5592,6 +5592,212 @@ const data = {
         }
       ]
     },
+    {
+      id: "Géria",
+      title: "Gériatrie",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Chute de la personne âgée",
+          intro: "Vous êtes médecin urgentiste en CHU. Vous recevez via les pompiers une femme de 84 ans, retrouvée par sa voisine au sol à domicile. Elle a directement appelé la fille de la patiente pour la prévenir. Cette dernière est arrivée aussi vite que possible, et a appelé les pompiers. Repérez les principaux facteurs de risque prédisposants aux chutes, évaluez à l'examen clinique les complications de la chute.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher des ATCD de chutes et de fractures traumatiques, un état dépressif caractérisé, ATCD de tb neurocognitifs, état de dénutrition, polymédication, iatrogénie, troubles sensoriels.",
+            "- Absence de sd post-chute (rétropulsion spontanée, anxiété majeure à la verticalisation, petits pas glissés, élargissement du polygone du sustentation, freezing, hypertonie oppositionnelle), douleur, attitude vicieuse / déformation, points d'appuis cutanés / escarres, pneumopathie d'inhalation, hypothermie.",
+            "5 tests sont à votre disposition :",
+            "- Station unipodale : impossibilité de tenir >5s et/ou écarter les bras.",
+            "- Timed up and go test : impossibilité de faire en moins de 20s le lever d'une chaise à accoudoirs de marcher 3m en ligne droite de faire demi-tour et retourner s'assoir",
+            "- Stop walking while talking test : impossibilité de faire une tâche attentionnelle sans arrêter de marcher",
+            "- Five times sit-to-stand test : impossibilité de faire <15s le test consistant à demander à la personne de se lever et de se rassoir 5 fois aussi vite que possible sur une chaise sans s'aider des bras",
+            "- Test de poussée sternale : déséquilibre lors 3 légères poussées sur le sternum avec la paume de la main sur un patient debour avec les pieds aussi rapprochés que possible."
+          ],
+
+          questionSet: [
+            { "id": "q_chutegéria_1", "patterns":["chutes", "fractures traumatiques"], "answer":"Je suis déjà tombée à 3 reprises sur les 12 derniers mois."},
+            { "id": "q_chutegéria_2", "patterns":["état dépressif"], "answer":"Mon moral est plutôt bon, je suis heureuse de vivre et de pouvoir voir grandir mes 5 petits-enfants, avec qui je passe le plus de temps possible." },
+            { "id": "q_chutegéria_3", "patterns":["troubles neurocognitifs"], "answer":"Je n'ai pas de troubles neurocognitifs." },
+            { "id": "q_chutegéria_4", "patterns":["dénutrition"], "answer":"Je ne suis pas dénutrie, je mange à ma faim et je n'ai pas perdu de poids récemment." },
+            { "id": "q_chutegéria_5", "patterns":["polymédication"], "answer":"J'ai de l'hypertension sous amlodipine et ramipril, j'ai un diabète sous metformine, une fibrillation atriale permanente sous dabigatran et bêta-bloquants et une insomnie chronique sous lorazépam. J'ai aussi une cataracte à l'oeil droit qui va être opérée le mois prochain et une presbyacousie bilatérale appareillée." },
+            { "id": "q_chutegéria_6", "patterns":["iatrogénie"], "answer":"Vous évaluez la iatrogénie." },
+            { "id": "q_chutegéria_7", "patterns":["troubles sensoriels"], "answer":"Absence de troubles sensoriels." },
+            { "id": "q_chutegéria_8", "patterns":["syndrome post-chute", "rétropulsion", "anxiété", "petits pas glissés", "élargissement du polygone de sustentation", "freezing", "hypertonie oppositionnelle"], "answer":"Absence d'éléments en faveur d'un syndrome post-chute." },
+            { "id": "q_chutegéria_9", "patterns":["douleur"], "answer":"J'ai très mal au niveau de l'aine droite." },
+            { "id": "q_chutegéria_10", "patterns":["attitude vicieuse", "déformation"], "answer":" Déformation du membre inférieur droit en rotation externe et raccourcissement." },
+            { "id": "q_chutegéria_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Alors c'est quoi ce test à faire ?"},
+            { "id": "q_chutegéria_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_chutegéria_13", "patterns":["point d'appuis cutanés", "escarres"], "answer":"Absence de points d'appui cutanés." },
+            { "id": "q_chutegéria_14", "patterns":["pneumopathie d'inhalation"], "answer":"L'auscultation cardio montre des bruits du cœur irréguliers sans souffle. L'auscultation pulmonaire retrouver un foyer de crépitants en base gauche, associée à une matité à la percussion et une abolition du MV en regard." },
+            { "id": "q_chutegéria_15", "patterns":["hypothermie"], "answer":"TA 102/63 mmHg, FC 94 bpm, FR 23 /mn, SpO2 93%, T 37,3°C." },
+            { "id": "q_chutegéria_16", "patterns":["mode de vie"], "answer":"Je vis seule au domicile depuis le décès de mon époux en 2013." }
+          ]
+        },
+
+        {
+          id: "SDD2",
+          title: "Coma et troubles de la conscience",
+          intro: "Vous êtes médecin réanimateur en CHU. Le SMUR vous contacte pour un patient de 73 ans présentant des troubles de la conscience. La femme du patient se trouve dans le camion du SMUR à leur arrivée devant l'hôpital. Interrogez l'entourage et les témoins pour recueillir l'histoire de la maladie et orientez les hypothèses diagnostiques, calculez le score de Glasgow et déduisez en la profondeur du coma, donnez votre principale hypothèse diagnostique et demandez un examen en urgence.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander : ATCD médicaux, traitements habituels, traumatisme crânien, céphalées avant le coma, lieu du coma, circonstances d'apparition, contexte suicidaire, animal ou un proche a aussi des troubles de la conscience.",
+            "- Dire que le score de Glasgow est Y1M4V2 = 7/15, évoquez une hémorragie méningée ou hémorragie sous-arachnoïdienne, demandez un scanner cérébral non injecté en urgence."
+          ],
+
+          questionSet: [
+            { "id": "q_comageria_1", "patterns":["antécédents"], "answer":"Cardiopathie hypertrophique liée à un rétrécissement aortique ancien, ostéoporose fracturaire et gonarthrose droite."},
+            { "id": "q_comageria_2", "patterns":["traitements"], "answer":"Traitements : ramipril, amlodipine et biphosphonates." },
+            { "id": "q_comageria_3", "patterns":["traumatisme crânien"], "answer":"Il n'y a eu aucun traumatisme avant la perte de connaissance." },
+            { "id": "q_comageria_4", "patterns":["céphalées"], "answer":"Il s'est plaint d'une violente céphalée brutale puis s'est effondré avant de ne plus répondre, et j'ai appelé le 15." },
+            { "id": "q_comageria_5", "patterns":["lieu du coma", "lieu", "où"], "answer":"Le trouble de la conscience a eu lieu au domicile." },
+            { "id": "q_comageria_6", "patterns":["circonstances d'apparition", "circonstances"], "answer":"Mon mari déjeunait tranquillement dans la cuisine." },
+            { "id": "q_comageria_7", "patterns":["contexte suicidaire", "envies suicidaires", "suicide"], "answer":"Il n'était pas suicidaire." },
+            { "id": "q_comageria_8", "patterns":["contage", "animal", "autre proche"], "answer":"Ni moi ni mon chien n'avait de trouble de la conscience ou du comportement." },
+            { "id": "q_comageria_9", "patterns":["Y1", "M4", "V2", "7/15", "Glasgow 7"], "answer":"Glasgow validé." },
+            { "id": "q_comageria_10", "patterns":["hémorragie méningée", "hémorragie sous-arachnoïdienne"], "answer":"Validé." },
+            { "id": "q_comageria_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_comageria_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_comageria_13", "patterns":["scanner cérébral non injecté"], "answer":"Validé." },
+            { "id": "q_comageria_14", "patterns":["réponse verbale", "mouvements", "yeux", "stimulation douloureuse", "douleur", "parole", "réponse verbale"], "answer":"Aucune réponse verbale, réaction de retrait et ouverture des yeux à la stimulation douloureuse." }
+          ]
+        },
+
+        {
+          {
+          id: "SDD3",
+          title: "Contracture musculaire localisée ou généralisée",
+          intro: "Vous êtes urgentiste de garde en cette belle soirée de septembre. Vous recevez madame S, 78 ans, pour une douleur abdominale intense depuis 3 jours. Ses constantes à 1'1 AO sont les suivantes : TA 98/63 mmHg, SpO2 96 %, FC 106 bpm, T 38,2 °C, FR 23/min, Score de Glasgow 15. Réalisez l'examen clinique abdominal de la patiente, demandez l'examen d'imagerie et interprétez le, citez les éléments majeurs de votre prise en charge.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Réaliser une palpation abdominale des 9 quadrants, ausculter l'abdomen, effectuer une percussion abdominale, inspecter l'abdomen.",
+            "- Demander un scanner abdominal injecté, dire qu'il s'agit d'un scanner abdominal, injectée au temps veineux, infiltration de la graisse périsigmoïdienne. Dire qu'il existe un pneumopéritoine massif, conclure à une diverticulite sigmoïdienne perforée. Proposer une PEC en urgence, effectuer un remplissage par cristalloïdes, instaurer une ATB probabiliste."
+          ],
+
+          questionSet: [
+            { "id": "q_diverticuliteger_1", "patterns":["palpation abdominale"], "answer":"Absence d'organomégalie dans les limites de l'examen. Douleur intense en fosse iliaque gauche. Orifices herniaires libres. Contracture généralisée."},
+            { "id": "q_diverticuliteger_2", "patterns":["auscultation abdominale"], "answer":"BHA faiblement retrouvés." },
+            { "id": "q_diverticuliteger_3", "patterns":["percussion abdominale"], "answer":"Légèrement tympanique." },
+            { "id": "q_diverticuliteger_4", "patterns":["inspection abdominale"], "answer":"Absence de cicatrice et pas de circulation veineuse collatérale." },
+            { "id": "q_diverticuliteger_5", "patterns":["scanner abdominal injecté"], "answer":`Voici le scanner réalisé aux urgences : <img src= "diverticulite.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_diverticuliteger_6", "patterns":["scanner abdominal"], "answer":"Validé." },
+            { "id": "q_diverticuliteger_7", "patterns":["temps veineux"], "answer":"Validé." },
+            { "id": "q_diverticuliteger_8", "patterns":["infiltration de la graisse"], "answer":"Validé." },
+            { "id": "q_diverticuliteger_9", "patterns":["pneumopéritoine"], "answer":"Validé." },
+            { "id": "q_diverticuliteger_10", "patterns":["diverticulite sigmoïdienne perforée"], "answer":"Validé." },
+            { "id": "q_diverticuliteger_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_diverticuliteger_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_diverticuliteger_13", "patterns":["prise en charge chirurgicale", "chirurgie"], "answer":"Validé." },
+            { "id": "q_diverticuliteger_14", "patterns":["remplissage", "cristalloïdes"], "answer":"Validé." },
+            { "id": "q_diverticuliteger_15", "patterns":["antibiothérapie probabiliste"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD4",
+          title: "Dénutrition / malnutrition",
+          intro: "Vous êtes médecin généraliste en cabinet de ville et vous recevez madame N, 71 ans, dans le cadre d'une consultation périodique de suivi. Vous souhaitez profiter de ce moment privilégié pour faire le point sur son statut nutritionnel. Recherchez les critères étiologiques et phénotypiques de dénutrition, expliquez à la patiente et aux aidants les conséquences et les risque d'une dénutrition, proposez une PEC nutritionnelle.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Quantifier la perte de poids, calculer l'IMC, rechercher une réduction de la prise alimentaire, rechercher une situation d'agression, une situation de malabsorption / maldigestion.",
+            "- Informer sur : risque toxicité médicamenteuse, risque majoré de chute et fracture, baisse des réserves immunitaires, mauvaise circulation, troubles de l'humeur. Proposer une alimentation enrichie, compléments nutritionnels oraux et réévaluer à une semaine de distance.",
+            "Stratégie de PEC nutritionnelle d'une personne âgée :",
+            "- Apports alimentaires spontanés normaux + dénutrition : conseils diététiques, alimentation enrichie, réévaluation à 1 mois.",
+            "- Apports alimentaires spontanés normaux + dénutrition sévère : conseils diététiques, alimentation enrichie + CNO, réévaluation à 15j.",
+            "- Apports alimentaires diminués mais >50% + statut nutritionnel normal : conseils diététiques, alimentation enrichie, réévaluation à 1 mois.",
+            "- Apports alimentaires diminués mais >50% + dénutrition : conseils diététiques, alimentation enrichie, réévaluation à 15j et si échec CNO.",
+            "- Apports alimentaires diminués mais >50% + dénutrition sévère : conseils diététiques, alimentation enrichie + CNO, réévaluation à 1 semaine et si échec NE.",
+            "- Apports alimentaires <50% + statut nutritionnel normal : conseils diététiques, alimentation enrichie, réévaluation à 1 semaine et si échec CNO.",
+            "- Apports alimentaires <50% + dénutrition : conseils diététiques, alimentation enrichie + CNO, réévaluation à 1 semaine et si échec NE.",
+            "- Apports alimentaires <50% + dénutrition sévère : conseils diététiques, alimentation enrichie, NE d'emblée, réévaluation à 1 semaine."
+
+          ],
+
+          questionSet: [
+            { "id": "q_dénutritiongeria_1", "patterns":["perte de poids"], "answer":"Mon dernier poids de référence à 6 mois était à 60kg, aujourd'hui je fais 50 kg."},
+            { "id": "q_dénutritiongeria_2", "patterns":["IMC"], "answer":"Je fais donc 50kg pour 1m60." },
+            { "id": "q_dénutritiongeria_3", "patterns":["réduction de la prise alimentaire"], "answer":"Je mange moins que d'habitude depuis 3 semaines environ, mais je mange quand même >50% de ma prise alimentaire habituelle." },
+            { "id": "q_dénutritiongeria_4", "patterns":["agression", "pathologie aigue", "pathologie chronique", "pathologie maligne évolutive"], "answer":"J'ai un cancer de l'endomètre en cours de prise en charge oncologique." },
+            { "id": "q_dénutritiongeria_5", "patterns":["malabsorption", "maldigestion"], "answer":"Je n'ai pas de pathologies à l'origine de malabsorption ou de mal digestion." },
+            { "id": "q_dénutritiongeria_6", "patterns":["toxicité médicamenteuse"], "answer":"Je comprends." },
+            { "id": "q_dénutritiongeria_7", "patterns":["chute", "fracture"], "answer":"Oui c'est évident." },
+            { "id": "q_dénutritiongeria_8", "patterns":["baisse des réserves immunitaires"], "answer":"Je vois." },
+            { "id": "q_dénutritiongeria_9", "patterns":["mauvaise cicatrisation"], "answer":"D'accord." },
+            { "id": "q_dénutritiongeria_10", "patterns":["troubles de l'humeur", "apathie", "dépression", "perte de l'élan vital", "syndrome de glissement"], "answer":"Bien sûr je comprends." },
+            { "id": "q_dénutritiongeria_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Alors on se voit pour mon suivi habituel, vous vouliez parler de ma nutrition ?"},
+            { "id": "q_dénutritiongeria_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_dénutritiongeria_13", "patterns":["alimentation enrichie"], "answer":"D'accord ça me va." },
+            { "id": "q_dénutritiongeria_14", "patterns":["compléments nutritionnels", "CNO"], "answer":"Oui si les gouts sont bons ahah." },
+            { "id": "q_dénutritiongeria_15", "patterns":["réévaluer à 1 semaine", "une semaine", "1 semaine"], "answer":"D'accord, on se reverra très vite alors !" }
+          ]
+        },
+
+{
+          id: "SDD5",
+          title: "PE d'un patient en décubitus prolongé",
+          intro: "Vous recevez dans votre service de gériatrie, Madame C, 83 ans, pour la suite de prise en charge d'une fracture de l'extrémité supérieure du fémur opérée chirurgicalement. Cherchez à l'interrogatoire les FdR d'escarre chez cette patiente, comment allez vous prévenir la survenue d'escarres chez Madame C, citez les principales autres complications précoces du décubitus prolongé (6 réponses attendues), expliquez brièvement comment les prévenir.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher des facteurs prédisposants (diabète, artériopathie oblitérante, dénutrition, anémie, neuropathies périphériques, BPCO, dyslipidémie, tabac 5/8), précipitants (hyperthermie, hypotension, tb conscience, incontinence urinaire, diarrhée).",
+            "- Soins de nursing (surveillance cutanée, hydratation de la peau, protection des zones à risque, lutte contre la macération, éviction corps étrangers dans le lit), changement de position toutes les 2-3h, utilisation de supports dynamiques, installation au fauteil adaptée, optimisation des apports nutritionnels.",
+            "- Complications respiratoires, maladie thromboembolique veineuse, hypotension orthostatique, complications mécaniques, complications éliminatoires (constipation, infection urinaire), tb psychiques.",
+            "- Mesures de prévention : alterner les postures, tête de lit 30-45°, positions assises pour repas, contention veineuse des MI, verticalisation la + précoce possible, optimisation de l'hydratation, éviter les positions segmentaires en flexion, mobilisation articulaire."
+          ],
+
+          questionSet: [
+            { "id": "q_escarres_1", "patterns":["diabète", "artériopathie", "dénutrition", "anémie", "neuropathies périphériques", "BPCO", "dyslipidémie", "tabac"], "answer":"J'ai de l'hypertension sous IEC et hydrochlorothiazide, une diabète de type 2 sous insuline et une AOMI avec un périmètre de marche à 800m."},
+            { "id": "q_escarres_2", "patterns":["hyperthermie", "hypotension", "troubles de la conscience", "incontinence urinaire", diarrhée"], "answer":"Mon transit est normal, j'ai un IMC à 23, pas de troubles psychiques. JE n'ai jamais fumé et mes constantes sont normales pour le moment." },
+            { "id": "q_escarres_3", "patterns":["surveillance cutanée", "hydratation", "protection des zones à risque", "lutte contre macération", "éviction corps étrangers"], "answer":"Je vois." },
+            { "id": "q_escarres_4", "patterns":["changement de position", "toutes les 2-3h", "toutes les 2 à 3 heures"], "answer":"Ok." },
+            { "id": "q_escarres_5", "patterns":["supports dynamiques", "matelas dynamique"], "answer":"Super." },
+            { "id": "q_escarres_6", "patterns":["installation au fauteuil"], "answer":"J'aimerais bien aller au fauteuil oui." },
+            { "id": "q_escarres_7", "patterns":["apports nutritionnels"], "answer":"Pas de soucis je mangerai ce qu'il faut." },
+            { "id": "q_escarres_8", "patterns":["respiratoires", "encombrement", "atélectasie", "infections"], "answer":"Validé." },
+            { "id": "q_escarres_9", "patterns":["maladie thromboembolique"], "answer":"Validé." },
+            { "id": "q_escarres_10", "patterns":["hypotension orthostatique"], "answer":"Validé." },
+            { "id": "q_escarres_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je me suis cassé le fémur, vous vouliez me voir ?"},
+            { "id": "q_escarres_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_escarres_13", "patterns":["complications mécaniques", "ankyloses"], "answer":"Validé." },
+            { "id": "q_escarres_14", "patterns":["constipation", "infections urinaires"], "answer":"Validé." },
+            { "id": "q_escarres_15", "patterns":["troubles psychiques"], "answer":"Validé." },
+            { "id": "q_escarres_16", "patterns":["alterner les positions", "30-45°", "assis pendant les repas", "contention veineuse", "verticalisation précoce", "hydratation", "mobilisation articulaire"], "answer":"Validé." }
+          ]
+        },
+{
+          id: "SDD7",
+          title: "Consultation de suivi gériatrique",
+          intro: "Vous recevez en consultation de suivi gériatrique, Monsieur S, 78 ans. A l'aide de l'interrogatoire réviser l'ordonnance de Monsieur S, expliquez au patient les principes FdR de décompensation chez les sujets âgés.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Se renseigner sur : ATCD patient, traitements, signes d'hypotension orthostatique, thymie, troubles du sommeil, indicition de l'oméprazole. Proposer d'arrêt un antihypertensuer, l'antidépression, faire un sevrage progressif de la benzo, d'arrêter l'oméprazole et se renseigner sur l'observance.",
+            "- FdR de décompensation : iatrogénie (nouveau mdc, sevrage ttt, modification posologie, toxiques), pathologies intercurrentes (infection, anémie, globe, fécalome, troubles ioniques, trouble du rythme, hypoglycémie, IDM, AVC), traumatismes physiques (chutes, fractures, canicule, douleur) et psychologiques (conflit, deuil, déménagement)."
+          ],
+
+          questionSet: [
+            { "id": "q_iatrogénie_1", "patterns":["antécédents"], "answer":"Moi j'ai de l'hypertension, une dépression suite au décès de mon épouse, un diabète de type 2 sans complications micro ou macrovasculaires."},
+            { "id": "q_iatrogénie_2", "patterns":["traitements"], "answer":"J'ai des IEC, des inhibiteurs calciques et hydrochlorothiazide, de la fluoxétine, de la metformine. J'ai aussi des benzodiazépines car j'avais du mal à dormir." },
+            { "id": "q_iatrogénie_3", "patterns":["hypotension orthostatique", "vertiges", "chutes", "étourdissement", "vision trouble"], "answer":"J'ai des vertiges quand je me lève la nuit pour aller aux toilettes, et je suis même tombé une fois la semaine dernière mais sans me faire mal. Je me sens fatigué aussi et je pensais que tout ça c'était à cause de ma tension mais quand je la prend elle et à 10/6 donc j'ai plus d'hypertension." },
+            { "id": "q_iatrogénie_4", "patterns":["thymie", "humeur dépressive", "idées suicidaires", "sorties"], "answer":"Non je n'ai pas d'idées suicidaires, seulement une tendance dépressive. J'essaie de m'aérer et de voir mes petits enfants, et d'aller au café puis jouer à la belote avec des amis." },
+            { "id": "q_iatrogénie_5", "patterns":["troubles du sommeil"], "answer":"Les troubles du sommeil ça va mieux. Ce qui m'embête c(est que j'entends pas bien pendant les réunions de famille par exemple. Ma petite fille me dit que la télévision hurle alors que moi je ne l'entends qu'à peine..." },
+            { "id": "q_iatrogénie_6", "patterns":["indication de l'oméprazole"], "answer":"J'ai eu il y a 6 mois un reflux gastro-oesophagien alors mon médecin m'a prescrit de l'oméprazole. Je le continue encore parce que je ne sais pas quand l'arrêter donc bon, je veux pas mal faire moi." },
+            { "id": "q_iatrogénie_7", "patterns":["arrêter l'antihypertenseur", "arrêt de l'antihypertenseur"], "answer":"D'accord je vois, parce que ma tension est trop basse donc." },
+            { "id": "q_iatrogénie_8", "patterns":["arrêter l'antidépresseur", "arrêt de l'antidépresseur"], "answer":"Ok pourquoi pas." },
+            { "id": "q_iatrogénie_9", "patterns":["sevrage des benzodiazépines", "sevrer les benzodiazépines"], "answer":"Oui d'accord." },
+            { "id": "q_iatrogénie_10", "patterns":["arrêter l'oméprazole", "arrêt de l'oméprazole"], "answer":"Ok ça va." },
+            { "id": "q_iatrogénie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Vous vouliez me voir ? "},
+            { "id": "q_iatrogénie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_iatrogénie_13", "patterns":["observance"], "answer":"Je prend bien tous mes traitements." },
+            { "id": "q_iatrogénie_14", "patterns":["iatrogénie", "nouveau traitement", "sevrage d'un traitement", "modification de posologie"], "answer":"Ok je vois." },
+            { "id": "q_iatrogénie_15", "patterns":["infection", "anémie", "globe urinaire", "fécalome", "déshydratation", "troubles ioniques", "hypoglycémie", troubles du rythme", "infarctus", "IDM", "AVC", "accident vasculaire cérébral"], "answer":"D'accord." },
+            { "id": "q_iatrogénie_16", "patterns":["chutes", "fractures", "canicule", "douleur"], "answer":"D'accord." },
+            { "id": "q_iatrogénie_17", "patterns":["conflit", "deuil", "déménagement"], "answer":"D'accord." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
