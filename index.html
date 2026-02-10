@@ -5392,6 +5392,206 @@ const data = {
         }
       ]
     },
+    {
+      id: "Soins pall",
+      title: "Soins palliatifs",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Prévention de la douleur liée aux soins",
+          intro: "Vous êtes hématologue à l'hôpital public. Vous avez dans vos lits un patient de 61 ans chez qui vous avez diagnostiqué un lymphome B diffus à grandes cellules. Vous lui avez annoncé ce matin que vous réaliserez cet après-midi une ponction lombaire. Justifiez la prescription de ce soin douloureux, anticipez et évaluez l'anxiété associée aux douleurs, créez un environnement favorable pour la réalisation du soin douloureux, réalisez une anesthésie locale.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Savoire dire que son lymphome est agressif, que la ponction lombaire est systématique dans le bilan pour chercher une dissémination méningée.",
+            "- Demander son ressenti et ses appréhensions, quantité l'anxiété sur une échelle, dire au patient qu'on peut prescrire des anxiolytiques en amont, et expliquer en amont chaque étape.",
+            "- Dire de bien s'enrouler autour d'un oreiller, qu'on peut lui tenir la main, dire qu'on peut mettre de la musique (musicothérapie), prévenir de chaque étape.",
+            "- Remplir la seringue avec un produit anesthésique, désinfection cutanée en plusieurs temps, introduire et injecter le produit lentement de la profondeur vers la superficie, vérifier systématiquement qu'on est pas dans un vaisseaux en aspirant légèrement."
+          ],
+
+          questionSet: [
+            { "id": "q_pllymphome_1", "patterns":["lymphome agressif", "agressif"], "answer":"D'accord."},
+            { "id": "q_pllymphome_2", "patterns":["systématique", "bilan", "dissémination méningée"], "answer":"Je vois." },
+            { "id": "q_pllymphome_3", "patterns":["ressenti", "appréhensions"], "answer":"Je suis très stressé. J'ai déjà eu une ponction lombaire à 30 ans pour une suspicion de méningite et j'ai eu très mal... donc j'ai assez peur d'en avoir une nouvelle." },
+            { "id": "q_pllymphome_4", "patterns":["échelle"], "answer":"Je suis anxieux à 8/10 là je dirais." },
+            { "id": "q_pllymphome_5", "patterns":["anxiolytiques"], "answer":"Ah oui on peut envisager ça..." },
+            { "id": "q_pllymphome_6", "patterns":["expliquer en amont", "expliquer chaque étape"], "answer":"D'accord, c'est rassurant." },
+            { "id": "q_pllymphome_7", "patterns":["bien s'enrouler", "dos rond", "autour d'un oreiller"], "answer":"Je vois." },
+            { "id": "q_pllymphome_8", "patterns":["donner la main"], "answer":"C'est gentil..." },
+            { "id": "q_pllymphome_9", "patterns":["musique"], "answer":"Ah oui pourquoi pas." },
+            { "id": "q_pllymphome_10", "patterns":["remplir seringue"], "answer":"Validé." },
+            { "id": "q_pllymphome_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. On m'a dit qu'on me ferait une ponction lombaire… vous pourriez me dire pourquoi il faut la faire ? J'avoue que ça m'angoisse particulièrement…"},
+            { "id": "q_pllymphome_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_pllymphome_13", "patterns":["désinfection cutanée", "désinfecter la peau"], "answer":"Validé." },
+            { "id": "q_pllymphome_14", "patterns":["profondeur à la superficie"], "answer":"Validé." },
+            { "id": "q_pllymphome_15", "patterns":["aspirer", "vérifier qu'on est pas dans un vaisseaux", "vérifier l'absence de reflux sanguin", "pas dans un vaisseaux"], "answer":"Validé." }
+          ]
+        },
+
+        {
+          id: "SDD2",
+          title: "Evaluation et PEC de la douleur aiguë",
+          intro: "Vous êtes médecin urgentiste de garde ce soir. Vous recevez via les pompiers un jeune homme de 19 ans agité pour une douleur aiguë. Le patient était en plein match de rugby lorsqu'il a ressenti subitement une violente douleur après un plaquage. Nommez 2 échelles d'autoévaluation, évaluez la douleur de ce patient, cherchez et traitez la cause de la douleur.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Citer l'échelle numérique, citer l'échelle visuelle analogique, demander au patient de côter sa douleur, savoir dire qu'une douleur > ou =7/10 est considérée comme intense.",
+            "- Interrogez sur la localisation de la douleur, examinez la zone douloureuse, faire une radiographie de face et de profil, proposer une réduction de la luxation antérieure, proposer des mesures antalgiques associées à la réduction (MEOPA, musique, distraction), prescrire un antalgique de palier 1 et une coanalgésie par palier 1, demander des radiographies de face et de profil de l'épaule droite pour contrôler la bonne réduction."
+          ],
+
+          questionSet: [
+            { "id": "q_douleurépaule_1", "patterns":["échelle numérique"], "answer":"Validé."},
+            { "id": "q_douleurépaule_2", "patterns":["échelle visuelle analogique"], "answer":"Validé." },
+            { "id": "q_douleurépaule_3", "patterns":["côter sa douleur", "coter sa douleur", "à combien"], "answer":"Je dirais que ma douleur est à 8/10." },
+            { "id": "q_douleurépaule_4", "patterns":["sévère", "intense"], "answer":"Oui ma douleur est intense effectivement." },
+            { "id": "q_douleurépaule_5", "patterns":["localisation", "où", "à quel endroit"], "answer":"Ma douleur touche mon épaule droite, c'est bien la première fois que j'ai mal comme ça." },
+            { "id": "q_douleurépaule_6", "patterns":["examiner", "examen clinique", "examinez"], "answer":"Attitude vicieuse en abduction-rotation externe. Signe de l'épaulette et coup de hâche externe de l'épaule droite. Sillon delto-pectoral droit comblé. Vacuité de la glène avec vide sous-acromial droit. Signe de Berger." },
+            { "id": "q_douleurépaule_7", "patterns":["radiographie de face", "radiographie de profil"], "answer":"Radiographie montrant une luxation de l'épaule droite." },
+            { "id": "q_douleurépaule_8", "patterns":["réduction"], "answer":"Oui il faut réduire ma luxation et vite." },
+            { "id": "q_douleurépaule_9", "patterns":["MEOPA", "musique", "distraction"], "answer":"D'accord j'apprécie la proposition." },
+            { "id": "q_douleurépaule_10", "patterns":["palier 3"], "answer":"Prescription faite." },
+            { "id": "q_douleurépaule_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends rien à ce compte-rendu, je dois m'inquiéter ?"},
+            { "id": "q_douleurépaule_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_douleurépaule_13", "patterns":["palier 1"], "answer":"Prescription faite." },
+            { "id": "q_douleurépaule_14", "patterns":["radiographie de contrôle"], "answer":"Prescription faite." }
+          ]
+        },
+
+          {
+          id: "SDD3",
+          title: "Evaluation et PEC de la douleur chronique",
+          intro: "Vous recevez en consultation de douleur, Madame P, 53 ans. Elle présente depuis 2 ans des lombalgies chroniques qui sont devenues très invalidantes. Le questionnaire DN4 a mis en évidence l'existence d'une composante neuropathique à sa douleur. Les antalgiques de palier 1, 2 et 3 n'ont que peu d'effets sur ses douleurs. Elle vient ce jour pour réévaluation. Cherchez à l'interrogatoire les facteurs d'entretien de la chronicité, proposez à la patiente une PEC pharmacologique et non pharmacologique adaptée à ses douleurs. La patiente refuse la prise de médicaments par voie orale et vous parle du traitement par stimulation électrique transcutanée, expliquez le principe et les modalités pratiques de cette technique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Se renseigner sur l'humeur de la patiente (anxiété, stress, tendance à l'humeur dépressive, retrait des activités sociales), attitude et représentation de sa maladie (actif ou passif, implication dans sa PEC, représentation de sa maladie), comportements douloureux (évitement, réduction des activités, kinésiophobie, temps passé au lit), travail (arrêt de travail, insatisfaction professionnelle, pb liés à l'indemnisation).",
+            "- Proposer des AD tricycliques (amitriptyline), antiépileptique (gabapentine) ou ISRS, proposer PEC non pharmaco (TENS, kiné, sport, surpoids). Expliquer que TENS stimulation électrique avec électrodes sur la peau, possibilité d'auto-utilisation, analgésie de plusieurs heures, remboursable par la sécurité sociale si prescrite par un spécialiste."
+          ],
+
+          questionSet: [
+            { "id": "q_dlchro_1", "patterns":["anxiété", "dépressive", "déprimée", "activités sociales", "retrait des activités sociales"], "answer":"Cette situation me rend vraiment triste car je sors de moins en moins et j'ai peur que mes amies me prennent pour une vieille mamie."},
+            { "id": "q_dlchro_2", "patterns":["actif", "passif", "implication", "représentation", "proactive"], "answer":"D'accord." },
+            { "id": "q_dlchro_3", "patterns":["évitement", "réduction des activités", "peur de la kinésithérapie", "appréhension quant à la kinésithérapie", "kinésiophobie", "temps passé au lit", "orthostatisme"], "answer":"Parfois je reste des journées entières au lit. Je limite au maximum les gestes douloureux parce que sinon je peux rester bloquée pendant plusieurs jours. j'ai essayé la kiné mais c'était trop douloureux pour continuer." },
+            { "id": "q_dlchro_4", "patterns":["arrêt de travail", "insatisfaction professionnelle", "travail", "indemnisation", "revenus"], "answer":"Je travaille dans les ressources humaines pour une banque mais je suis en arrêt depuis 6 mois. Et ce n'est pas plus mal, j'aimais plus du tout ce que je faisais." },
+            { "id": "q_dlchro_5", "patterns":["antidépresseurs tricycliques", "tricycliques", "amitriptyline", "antiépileptiques", "gabapentine", "ISRS"], "answer":"Ok je vois. Pour être franche je préfèrerai ne plus prendre de traitements par la bouche, j'en ai assez pris et ça ne marche pas de toute facon. En plus j'ai lu qu'une technique, 'TENS' je crois, existait. Vous pourriez me parler de mesures non thérapeutiques et de la stimulation TENS ?" },
+            { "id": "q_dlchro_6", "patterns":["TENS", "surpoids", "rééducation", "activité physique régulière"], "answer":"D'accord..." },
+            { "id": "q_dlchro_7", "patterns":["stimulation électrique", "électrodes sur la peau"], "answer":"Ok je vois." },
+            { "id": "q_dlchro_8", "patterns":["auto-utilisation"], "answer":"Ca c'est sympa à savoir." },
+            { "id": "q_dlchro_9", "patterns":["plusieurs heures"], "answer":"Ok c'est déjà ça de pris, plusieurs heures de repos." },
+            { "id": "q_dlchro_10", "patterns":["remboursable", "remboursée", "structure spécialisée", "spécialiste"], "answer":"Parfait." },
+            { "id": "q_dlchro_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai toujours mes lombalgies et c'est très invalidant au quotidien. J'ai mal depuis un an et les douleurs sont parfois tellement intenses qu'elles me paralysent… c'est plus supportable."},
+            { "id": "q_dlchro_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_dlchro_13", "patterns":["traitements", "déjà essayé", "déjà essayés"], "answer":"J'ai déjà pris des paliers 1, 2 et même 3 avec peu d'effets sur mes douleurs. J'ai encore mal à 7/10 en permanence et jusqu'à 10/10 parfois." }
+          ]
+        },
+
+{
+          id: "SDD4",
+          title: "Consultation de suivi en cancérologie",
+          intro: "Vous recevez en consultation de suivi de cancérologie, Monsieur C, 56 ans. Vous êtes son médecin traitant. Il a un cancer du côlon gauche, découvert il y a 6 mois, qui a été traité par chirurgie (hémicolectomie gauche avec rétablissement de la continuité digestive et préservation du sphincter anal) et chimiothérapie néoadjuvante par 5-fluoro-uracile et oxaliplatine. Son poids avant début du traitement était de 75 kg. Il a réalisé sa dernière chimiothérapie il y a 15 jours. Le cancérologue a considéré Monsieur C en rémission à la suite de son protocole de soins. Evaluez l'état général selon l'indice OMS et l'état nutritionnel de votre patient, cherchez des effets indésirables des traitements antitumoraux, évaluez le retentissement psychologique / sociale / professionnel de la maladie et proposez des mesures adaptées.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Se renseigner sur l'état général du patient (autonomie, maintien activité, reprise travail, temps passé allongé ou assis), coter l'état OMS 2, se renseigner sur les critères phénotypiques de dénutrition (quantifier perte de poids, poids, taille, IMC), sur les critères étiologiques de dénutrition (quantifier la prise alimentaire, repérer d'autres situations d'agression), demande si un dosage d'albumine a été réalisé, expliquer que le patient n'est pas dénutri.",
+            "- Rechercher des EI du 5-FU : spasme coronaire, dl thoracique, anomalies NFS, nausées, vomissements, sd main-pied, diarrhées, mucite, conjonctivite, MAT.",
+            "- Rechercher des EI de l'oxaliplatine : anomalies NFS, vomissements, neuropathie périphérique sensible au froid, diarrhée, alopécie.",
+            "- Evaluer le retentissement psychologique (thymie, vécu, signes de dépression, TSPT, projets futurs), social (relation amis, famille, sorties, peur et angoisses du regard des autres), professionnel (reprise travail ou non, souhait de reprendre ou non, changer de travail). Proposer une consultation avec un psychologue, une visite avec le médecin du travail et proposer un temps partiel thérapeutique.",
+            "Classification OMS :"
+            "- 0 : activité normale.",
+            "- 1 : activité physique diminuée mais patient ambulatoire et capable de mener un travail.",
+            "- 2 : malade ambulatoire et capable de prendre soin de lui-même mais incapable de travailler, alité ou en chaise moins de 50% de son temps de veille.",
+            "- 3 : capable seulement de quelques soins, alité ou en chaise +50% de son temps de veille.",
+            "- 4 : alité en permanence, aide permanente nécessaire."
+          ],
+
+          questionSet: [
+            { "id": "q_suivicancer_1", "patterns":["autonomie", "activité", "reprise du travail", "temps passé assis", "temps passé couché", "sédentarité"], "answer":"Je n'ai pas repris le travail pour le moment car je suis fatigué et je passe beaucoup de temps couché. Après je passe moins de 50% de mon temps dans mon lit vous inquiétez pas."},
+            { "id": "q_suivicancer_2", "patterns":["2"], "answer":"Validé." },
+            { "id": "q_suivicancer_3", "patterns":["perte de poids", "poids", "taille", "IMC"], "answer":"Je fais 69kg pour 1m80 pour un IMC à 21,2 kg/m²." },
+            { "id": "q_suivicancer_4", "patterns":["prise alimentaire", "autres situations d'agression"], "answer":"Je commence à retrouver mon appétit ça me fait plaisir." },
+            { "id": "q_suivicancer_5", "patterns":["dosage de l'albumine", "albuminémie"], "answer":"Oui j'ai eu un dosage de mon albumine, elle était à 36 g/L." },
+            { "id": "q_suivicancer_6", "patterns":["pas en situation de dénutrition", "pas dénutri"], "answer":"Tant mieux, c'est ça de pris ahah." },
+            { "id": "q_suivicancer_7", "patterns":["spasme coronaire", "douleur thoracique", "syndrome main-pieds", "syndrome mains-pieds", "diarrhées", "mucite", "conjonctivite", "micro-angiopathie thrombotique", "microangiopathie thrombotique"], "answer":"Je n'ai pas de douleur thoracique, et j'ai eu un syndrome main pieds il y a 2 semaines. J'ai eu des diarrhées aussi mon transit a pas mal changé depuis la chirurgie, je vais beaucoup plus souvent aux toilettes." },
+            { "id": "q_suivicancer_8", "patterns":["anomalies à la NFS", "nausées", "vomissements", "neuropathie périphérique", "alopécie"], "answer":"Je suis nauséeux par moment mais ma NFS est normale. J'ai eu des petits picotements des bouts des doigts quand je sors dehors, et ça depuis 1 mois." },
+            { "id": "q_suivicancer_9", "patterns":["thymie", "humeur", "vécu", "dépression", "déprimée", "trouble du stress post-traumatique", "projets prévus"], "answer":"Je me sens fatigué c'est sur. Il faut dire que la période post-opératoire était difficile, notamment à cause de la chimio qui était intense. J'étais un peu déprimé mais ça va mieux depuis l'annonce de rémission. Je compte même partir en vacances avec ma femme." },
+            { "id": "q_suivicancer_10", "patterns":["relation avec vos amis", "famille", "sorties", "peur", "angoisse", "regard des autres"], "answer":"Justement là on prépare des vacances avec ma femme donc je ne suis pas seul. Après je vous avoue que j'ai un peu peur du regard des autres depuis que j'ai eu mon cancer." },
+            { "id": "q_suivicancer_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens pour le suivi de mon cancer du côlon traité par chirurgie et chimiothérapie."},
+            { "id": "q_suivicancer_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_suivicancer_13", "patterns":["reprise du travail", "reprendre le travail", "changer de travail"], "answer":"Pour le moment honnêtement je ne me sens pas de reprendre le travail à plein temps ne serait-ce qu'à cause de mes soucis de transit..." },
+            { "id": "q_suivicancer_14", "patterns":["psychologue"], "answer":"Oui je suis d'accord pour voir un psy, je pourrais lui parler de ces 6 derniers mois." },
+            { "id": "q_lihg_15", "patterns":["médecin du travail"], "answer":"Oui je verrais un médecin du travail." },
+            { "id": "q_lihg_16", "patterns":["temps partiel thérapeutique", "mi-temps thérapeutique"], "answer":"Oui ça peut tout à fait être une option." }
+          ]
+        },
+
+{
+          id: "SDD5",
+          title: "Prescrire des soins associés à l'initiation d'une chimiothérapie",
+          intro: "Cancérologue dans un CHU, vous suivez Madame S, 34 ans pour un cancer du sein nouvellement diagnostiqué. Il a été décidé en RCP que Madame S allait suivre un protocole de 6 séances de chimiothérapie néoadjuvante par anthracyclines et cyclophosphamide. Sa première cure est prévue dans 2 jours. Cherchez les signes clinico-biologiques contre indiquant la réalisation d'une cure de chimiothérapie, évaluez le risque émétogène de ce protocole et proposez un protocole antiémétique adapté, expliquer au patient les signes d'alarme devant l'amener à consulter.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demander les résultats de la NFS (neutropénie ou thrombopénie), dosage b-hCG (grossesse), évalue l'indice de performance status (PS >2 = CI à la chimiothérapie), rechercher un sd infectieux.",
+            "- Expliquer que le protocole a un fort potentiel émétisant, proposez des benzos (nausées anticipées), sétrons, corticoïdes, aprépitants (anti-NK1). Expliquer à la patiente la nécessité de consulter si elle a de la fièvre, un point d'appel infectieux, une situation à risque de déshydratation, un effet indésirable inattendu.",
+            "Rappel du potentiel émétisant des principales chimiothérapies :",
+            "- FORT : cisplatine, anthracycline, cyclophosphamide",
+            "- MODERE : carboplatine, doxorubicine, oxaliplatine",
+            "- FAIBLE: bléomycine, 5-FU, gemcitabine",
+            "Protocole en fonction du risque émétique :",
+            "- Faible risque : métoclopramide +/- corticoïdes",
+            "- Risque modéré : sétrons + corticoïdes",
+            "- Risque élevé : sétrons + aprépitant + corticoïdes"
+
+          ],
+
+          questionSet: [
+            { "id": "q_nauséeschimio_1", "patterns":["NFS", "neutropénie", "thrombopénie"], "answer":"Ma NFS était normale."},
+            { "id": "q_nauséeschimio_2", "patterns":["b-hCG", "bêta-hCG", "grossesse"], "answer":"Mes b-hCG sont normaux." },
+            { "id": "q_nauséeschimio_3", "patterns":["performance status"], "answer":"Mon PS est coté à 0." },
+            { "id": "q_nauséeschimio_4", "patterns":["syndrome infectieux"], "answer":"Je n'ai pas de fièvre ou de point d'appel infectieux." },
+            { "id": "q_nauséeschimio_5", "patterns":["fort potentiel émétisant", "fort risque de nausées"], "answer":"Ok..." },
+            { "id": "q_nauséeschimio_6", "patterns":["benzodiazépines", "benzos"], "answer":"Prescription faite." },
+            { "id": "q_nauséeschimio_7", "patterns":["sétrons", "anti-5HT3"], "answer":"Prescription faite." },
+            { "id": "q_nauséeschimio_8", "patterns":["corticoïdes"], "answer":"Prescription faite." },
+            { "id": "q_nauséeschimio_9", "patterns":["aprépitants", "anti-NK1"], "answer":"Prescription faite." },
+            { "id": "q_nauséeschimio_10", "patterns":["fièvre"], "answer":"D'accord je consulterai si j'ai de la fièvre." },
+            { "id": "q_nauséeschimio_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends rien à ce compte-rendu, je dois m'inquiéter ?"},
+            { "id": "q_nauséeschimio_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_nauséeschimio_13", "patterns":["point d'appel infectieux"], "answer":"D'accord je consulterai si j'ai un point d'appel infectieux." },
+            { "id": "q_nauséeschimio_14", "patterns":["déshydratation"], "answer":"D'accord je consulterai si je suis déshydratée." },
+            { "id": "q_nauséeschimio_15", "patterns":["effet indésirable"], "answer":"D'accord je consulterai si j'ai des effets indésirables inattendus." },
+          ]
+        },
+
+{
+          id: "SDD6",
+          title: "Consultation d'anesthésie",
+          intro: "Vous êtes anesthésiste-réanimateur au CHU et recevez en consultation pré-anesthésique monsieur B, 64 ans, pour une chirurgie de hernie inguinale gauche prévue dans 3 semaines. Gérez spécifiquement les traitements habituels dans la période péri-opératoire, informez sur les règles du jeûne pré-anesthésique, le chirurgien avait prescrit un bilan de débrouillage pour vous aider le patient est venu avec les résultats quelle anomalie évoquez vous.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Arrêter l'hydrochlorothiazide, poursuivre l'aspirine / le ramipril / le bisoprolol.",
+            "- Interdire de manger pendant les 6h avant l'opération, interdir le lait et le jus de fruits pendant 6h, interdire de boire des liquides clairs 2h avant l'opération, interdiction du fumer 2h avant l'intervention, autoriser la prise d'un verre d'eau pour prendre les traitements le matin de l'intervention. Evoquer une hémophilie acquise avec Ac anti facteur VII."
+          ],
+
+          questionSet: [
+            { "id": "q_csanest_1", "patterns":["arrêter l'hydrochlorothiazide", "arrêt de l'hydrochlorothiazide"], "answer":"Ok je vois."},
+            { "id": "q_csanest_2", "patterns":["poursuivre l'aspirine"], "answer":"D'accord." },
+            { "id": "q_csanest_3", "patterns":["poursuivre le ramipril"], "answer":"Je vois." },
+            { "id": "q_csanest_4", "patterns":["poursuivre le bisoprolol"], "answer":"Ok pas de soucis." },
+            { "id": "q_csanest_5", "patterns":["pas manger 6h"], "answer":"Ok..." },
+            { "id": "q_csanest_6", "patterns":["lait 6h", "jus de fruits 6h"], "answer":"D'accord..." },
+            { "id": "q_csanest_7", "patterns":["liquides 2h"], "answer":"Ok ça me va." },
+            { "id": "q_csanest_8", "patterns":["verre d'eau pour prendre les médicaments"], "answer":"Tant mieux." },
+            { "id": "q_csanest_9", "patterns":["hémophilie acquise", "anticorps antifacteur VII"], "answer":"D'accord." },
+            { "id": "q_csanest_10", "patterns":["antécédents", "traitements"], "answer":"J'ai de l'hypertension artérielle sous hydrochlorothiazide, une cardiopathie ischémique traitée au long cours par aspirine bisoprolol et ramipril. Je ne prends pas d'autres traitements. J'ai eu de l'hémarthrose spontanée il y a 3 ans." },
+            { "id": "q_csanest_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je ne comprends rien à ce compte-rendu, je dois m'inquiéter ?"},
+            { "id": "q_csanest_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_csanest_13", "patterns":["bilan biologique", "bilan sanguin"], "answer":"Hb 14,5 g/dL, leucocytes 7 G/L, formule leucocytaire normale, plaquettes 349 G/L. Na 139 mmol/L, K 4,2 mmol/L, créatinémie 79 µmol/L, DFG estimé à 93 mL/mn. TP 83%, TCA témoin 32s, TCA patient 59s, FV 93%, FVII 4%, FIX 83%." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
