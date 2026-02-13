@@ -5797,6 +5797,616 @@ const data = {
         }
       ]
     },
+    
+{
+      id: "Dermato",
+      title: "Dermatologie",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Eruption de l'enfant",
+          intro: "Vous recevez en consultation de médecine générale une mère et son enfant de 6 ans. Elle est très inquiète car la petite Chloé présente de la fièvre et des tâches rouges. Il s'agit d'un exanthème morbiliforme. Réalisez un interrogatoire détaillé, posez une hypothèse diagnostique, nommez le signe pathognomonique que vous recherchez à l'examen clinique, expliquez à la mère la maladie et comment elle aurait pu l'éviter, ainsi que les principales complications possibles.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (ATCD, ATCD fam, traitements, allergies), interroger la mère sur les vaccinations, rechercher la présence d'un contage, rechercher une cattarhe oculo-respiratoire (larmoiement, yeux rouges (conjonctivite), nez qui coule, toux), interroger sur la chronologie.",
+            "- Evoquer le diagnostic de rougeole, chercher le signe de Köplick. Expliquer que c'est une maladie infectieuse virale et contagieuse, que la meilleure prévention est la vaccination, qu'il existe des complications infectieuses (infections respiratoire, otite), qu'il existe des complications neurologiques précoces ou à distance. Dire qu'il faudra faire un rattrapage vaccinale et qu'il y a une éviction de la collectivité pendant 5 jours après le début de l'éruption cutanée.",
+            "Rappels :",
+            "- Complications possibles : bronchite, pneumopathie, OMA purulente, encéphalite aigue, panencéphalite sclérosante subaigue, cécité, kératite, pancréatite, hépatite.",
+            "- La rougeole est une maladie à déclaration obligatoire -> réaliser une confirmation biologique systématiquement (PCR ++ ou sérologie)."
+          ],
+
+          questionSet: [
+            { "id": "q_rougeole_1", "patterns":["antécédents", "antécédents familiaux", "traitements", "médicaments", "allergies"], "answer":"Elle n'a pas d'antécédents particuliers et il n'y a pas d'antécédents dans la famille. Elle ne prend aucun traitement et n'a pas d'allergies."},
+            { "id": "q_rougeole_2", "patterns":["vaccins", "vaccination", "vaccinations"], "answer":"Je ne crois pas qu'elle soit à jour de ses vaccins." },
+            { "id": "q_rougeole_3", "patterns":["contage", "cas similaires"], "answer":"C'est la seule malade de son entourage." },
+            { "id": "q_rougeole_4", "patterns":["catarrhe", "larmoiement", "yeux rouges", "conjonctivite", "nez qui coule", "rhinorrhée", "toux"], "answer":"Elle a de la fièvre, elle tousse beaucoup, a les yeux rouges et le nez qui coule depuis 2 jours. Il n'y a pas d'oedème des joues ou des extrémités." },
+            { "id": "q_rougeole_5", "patterns":["chronologie", "depuis quand", "quand", "combien de jours"], "answer":"Les tâches ont débuté à l'arrière des oreilles et sont descendues il y a 2 jours." },
+            { "id": "q_rougeole_6", "patterns":["rougeole"], "answer":"D'accord je vois." },
+            { "id": "q_rougeole_7", "patterns":["Köplick"], "answer":"Validé." },
+            { "id": "q_rougeole_8", "patterns":["infectieuse", "virale", "virose", "virus", "contagieuse", "contagieux"], "answer":"Ok je vois, et comment on fait pour prévenir cette maladie ?" },
+            { "id": "q_rougeole_9", "patterns":["se faire vacciner"], "answer":"Ah d'accord." },
+            { "id": "q_rougeole_10", "patterns":["complications infectieuses", "bronchite", "pneumopathie", "otite", "OMA"], "answer":" Je vois." },
+            { "id": "q_rougeole_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Ma fille a de la fièvre et des tâches rouges, vous pensez que c'est quoi ?"},
+            { "id": "q_rougeole_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_rougeole_13", "patterns":["complications neurologiques", "encéphalite"], "answer":"D'accord je comprends." },
+            { "id": "q_rougeole_14", "patterns":["rattrapage vaccinal"], "answer":"Oui on fera les vaccins nécessaires." },
+            { "id": "q_rougeole_15", "patterns":["éviction de la collectivité", "5 jours"], "answer":"Ah d'accord, elle n'ira pas à l'école du coup." },
+          ]
+        },
+
+        {
+          id: "SDD2",
+          title: "Jambe lourde",
+          intro: `Une patiente de 75 ans vous consulte dans votre cabinet de médecine générale pour une sensation de jambes lourdes. Vous suspectez une insuffisance veineuse. <img src= "insuffisanceveineuse.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Réalisez un interrogatoire général et ciblé sur les facteurs favorisants et soulageants la symptomatologie, expliquez les signes que vous chercher à l'examen clinique, expliquez à la patiente la maladie suspectée et votre PEC adaptée.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, toxiques, ATCD, ATCD fam, traitements, allergies), poids / taille / nombre de grossesses / ATCD phlébite / symptomatologie identique dans la famille, aggravation de la symptomatologie (dans la journée, après station debout ou assise prolongée, par la chaleur), amélioration de la symptomatologie (froid, surélévation, position allongée, à l'effort, lors port compression veineuse).",
+            "- Rechercher varicosités ou varices / télangiectasies / oedème / dermite ocre / eczéma variqueux / atrophie blanche / capillarites hypertrophiques / hypoodermit ou lipodermatosclérose / ulcère veineux.",
+            "- Expliquer qu'elle est atteinte d'une insuffisance veineuse (mauvais retour sanguin), importance de suréléver ses jambes, lutter contre sédentarité, lutter contre surpoids, éviter de croiser les jambes, éviter station debout et immobile prolongées, éviter exposition prolongée à la chaleur, port de bas de contention (dès le lever, toute la journée, tous les jours)."
+          ],
+
+          questionSet: [
+            { "id": "q_insuffveineuse_1", "patterns":["profession", "toxiques", "travail", "antécédents", "médicaments", "traitements", "allergies"], "answer":"J'ai 3 enfants issus de 3 grossesse avec accouchement par voie basse. Je suis ancienne coiffeuse, je passais la plupart de mes journées debout. Je ne fume pas et je ne bois pas. Je n'ai pas d'allergies et pas de traitements."},
+            { "id": "q_insuffveineuse_2", "patterns":["poids", "taille", "IMC", "nombre de grossesses", "antécédents de phlébite", "identique dans la famille"], "answer":"Je 1m60 pour 80kg. Ma mère et ma grand-mère avaient les jambes pleines de varices." },
+            { "id": "q_insuffveineuse_3", "patterns":["au cours de la journée", "station debout prolongée", "station assise prolongée", "chaleur", "soleil"], "answer":"Mes jambes sont plus lourdes en fin de journée après une longue période à piétiner et lorsque je vais chez mon frère qui a un sol chauffant." },
+            { "id": "q_insuffveineuse_4", "patterns":["froid", "surélévation", "position allongée", "exercice physique", "port de collants", "port de bas"], "answer":"Je me sens beaucoup mieux quand je surélève la jambe ou quand je suis couchée. Le froid et le sport m'apaisent également." },
+            { "id": "q_insuffveineuse_5", "patterns":["varicosités", "varices", "télangiectasies", "oedème", "dermite ocre", "eczéma variqueux", "atrophie blanche", "capillarites hypertrophiques", "hypodermite", "lipodermatosclérose", "ulcère"], "answer":"J'ai des varices, une dermite ocre, des atrophies blanches parcourues de télangiectasies, et un œdème modéré des 2 jambes." },
+            { "id": "q_insuffveineuse_6", "patterns":["insuffisance veineuse"], "answer":"D'accord c'est ce que je pensais." },
+            { "id": "q_insuffveineuse_7", "patterns":["surélever vos jambes"], "answer":"Je le ferais oui." },
+            { "id": "q_insuffveineuse_8", "patterns":["favoriser l'activité physique"], "answer":"Oui ça me soulage en plus." },
+            { "id": "q_insuffveineuse_9", "patterns":["lutter contre le surpoids", "lutter contre l'obésité"], "answer":"Oui je comprends." },
+            { "id": "q_insuffveineuse_10", "patterns":["éviter de croiser les jambes"], "answer":"D'accord." },
+            { "id": "q_insuffveineuse_11", "patterns":["bonjour"], "answer":"Bonjour Docteur, j'ai les jambes lourdes et moches depuis plusieurs années, vous pourriez me dire ce que vous en pensez ?"},
+            { "id": "q_insuffveineuse_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_insuffveineuse_13", "patterns":["éviter la chaleur", "éviter l'exposition au soleil"], "answer":"Oui bien sûr." },
+            { "id": "q_insuffveineuse_14", "patterns":["port de bas de contention", "dès le lever", "tous les jours", "toute la journée"], "answer":"Oui je ferais ça." }
+          ]
+        },
+
+          {
+          id: "SDD3",
+          title: "Acné",
+          intro: `Une patiente de 16 ans accompagnée de ses parents vous consulte dans votre cabinet de dermatologie pour de l'acné évoluant depuis quelques années sur l'ensemble du visage. Elle est traitée par topiques depuis plusieurs mois et par cycline en voie orale depuis 3 mois, mais souhaite désormais un traitement plus fort devant la persistance des lésions. <img src= "acné.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Expliquez les lésions observées, proposez un traitement, donnez des explications et consignes concernant ce traitement, donnez lui des règles hygiéno-diététiques à respecter.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Examen clinique : séborrhée, comédons ouverts (points noirs), papules, pustules.",
+            "- Proposer un traitement par isotrétinoïne. Prévenir du risque d'aggravation le 1e mois, risque de sécheresse cutanéo-muqueuse, rechercher un tb de l'humeur, prévenir du risque tératogène (contraception 1 mois avant et 1 mois après et dosage des b-hCG mensuellement jusqu'à 5S après arrêt), risque dyslipidémie et surveillance biologique régulière (bilan lipidique et hépatique trimestriel), risque de douleurs ligamentaires, carnet de prescription pour suivre sa PEC, signer consentement, CI l'association avec cyclines.",
+            "- Eviter cosmétiques comédogènes, de manipuler les lésions, pas de régime particulier à suivre, l'antisepsie des lésions n'a pas d'intérêt, prescrire une photoprotection."
+          ],
+
+          questionSet: [
+            { "id": "q_acné_1", "patterns":["séborrhée"], "answer":"Validé."},
+            { "id": "q_acné_2", "patterns":["comédons ouverts", "points noirs"], "answer":"Validé." },
+            { "id": "q_acné_3", "patterns":["papules"], "answer":"Validé." },
+            { "id": "q_acné_4", "patterns":["pustules"], "answer":"Validé." },
+            { "id": "q_acné_5", "patterns":["isotrétinoïne"], "answer":"Prescription faite."},
+            { "id": "q_acné_6", "patterns":["aggravation le premier mois"], "answer":"D'accord je vois." },
+            { "id": "q_acné_7", "patterns":["sécheresse"], "answer":"Ok." },
+            { "id": "q_acné_8", "patterns":["trouble de l'humeur"], "answer":"Je n'ai pas de troubles de l'humeur, j'y ferai attention." },
+            { "id": "q_acné_9", "patterns":["risque tératogène", "contraception obligatoire", "b-hCG mensuellement"], "answer":"Je suis déjà sous contraception car j'ai des rapports sexuels mais protégés." },
+            { "id": "q_acné_10", "patterns":["dyslipidémie", "bilan hépatique", "trimestriel", "bilan lipidique"], "answer":"D'accord ça me va." },
+            { "id": "q_acné_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_acné_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_acné_13", "patterns":["douleurs ligamentaires"], "answer":"Ok je vois." },
+            { "id": "q_acné_14", "patterns":["carnet"], "answer":"Ah je ne savais pas que j'aurais un carnet, je le prendrais à chaque fois alors." },
+            { "id": "q_acné_15", "patterns":["consentement"], "answer":"D'accord je demanderai à mes parents de signer ce consentement." },
+            { "id": "q_acné_16", "patterns":["contre-indique l'association avec les cyclines"], "answer":"Ok je note." },
+            { "id": "q_acné_17", "patterns":["cosmétiques comédogènes", "manipuler", "pas de régime", "pas besoin de désinfecter", "désinfection", "photoprotection", "protection solaire"], "answer":"Merci de vos conseils Doc." },
+          ]
+        },
+
+{
+          id: "SDD4",
+          title: "Alopécie et chute de cheveux",
+          intro: `Un homme de 43 ans vous consulte dans votre cabinet de dermatologie pour son fils de 6 ans. Celui-ci présente une zone sur le cuir chevelu où il perd ses cheveux depuis quelques temps. <img src= "teigne.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Interrogez le patient et le père, citez le diagnostic suspecté et expliquez le au père de l'enfant, expliquez à l'évaluateur comment confirmer le diagnostic et expliquez la PEC.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (ATCD perso, ATCD fam, traitements, allergies, loisirs, contact avec animaux, vaccins), symptômes similaires dans l'entourage, présence de démangeaisons, présence de lésions sur d'autres localisations.",
+            "- Evoquer le diagnostic de teigne microsporique (tondante), dire qu'il s'agit d'une infection cutanée et des cheveux contagieuse due à un champignon de la famille des dermatophytes.",
+            "- Expliquer qu'on peut réaliser un prélèvement de squames et de cheveux pour un examen mycologique, et qu'on peut réaliser un examen à la lampe de Wood.",
+            "- Dire que le traitement est local et per os pendant plusieurs semaines, on coupe les cheveux autour de la plaque on met de la poudre un shampooing désinfectant et un traitement antifongique local, on donne un antifongique oral pendant 4-6S par terbinafine si on a pas les résultats ou itraconazole si on a les résultats et que c'est bien microsporique on doit examiner le reste de la famille, on préconise l'éviction scolaire jusqu'à présentation d'un certificat médical attestant de la prescription du traitement / de l'examen et du traitement des cas contacts.",
+             "Différencier la teigne microsporique de la teigne trichophytique :",
+             "- Microsporique : grandes plaques alopéciques avec squames, uniques ou peu nombreuses, arrondies, extension centrifuge, cheveux cassés jaune vert à lampe de Wood. Traitement par itraconazole 6S si > 10kg (sinon hospit et CI chez FE et allaitante).",
+            "- Trichophhytique : multiples petites plaques alopéciques, squames et croûtes voire pustules, pas de fluorescence car pas de cheveux à la lampe de Wood. Traitement par terbinafine 4S si >10kg (sinon hospit et CI chez FE et allaitante)."
+
+          ],
+
+          questionSet: [
+            { "id": "q_teigne_1", "patterns":["antécédents", "traitements", "alleregies", "loisirs", "contact avec des animaux", "animaux", "vaccins"], "answer":"Léo a 6 ans, il n'a aucun antécédents personnels ou dans la famille. Son développement est normal, il est en CP et ses vaccins sont à jour. Il n'y a pas d'animal à la maison. Il n'a ni traitements ni allergies."},
+            { "id": "q_teigne_2", "patterns":["contage", "symptômes similaires"], "answer":"Personne dans la famille n'a de symptômes. Mais il faut savoir qu'il revient d'une colonie de vacances où ils ont fait du poney en se pretant les bombes. Et de ce que j'ai entendu des parents d'autres enfants présents à la colonie ont des symptômes similaires." },
+            { "id": "q_teigne_3", "patterns":["démangeaisons", "prurit", "gratte"], "answer":"Oui sa plaque le gratte beaucoup." },
+            { "id": "q_teigne_4", "patterns":["autres endroits", "autres localisations", "ailleurs"], "answer":"Pour le moment il n'a pas d'autres atteintes." },
+            { "id": "q_teigne_5", "patterns":["teigne", "teigne tondante", "teigne tondante microsporique", "teigne microsporique"], "answer":"D'accord je ne connaissais pas, c'est quoi ?" },
+            { "id": "q_teigne_6", "patterns":["infection cutanée et des cheveux", "contagieuse", "mycose", "champignon", "dermatophytes"], "answer":"D'accord, et comment on peut le vérifier ?" },
+            { "id": "q_teigne_7", "patterns":["prélèvement de squames", "prélèvement de cheveux", "examen mycologique"], "answer":"D'accord je vois." },
+            { "id": "q_teigne_8", "patterns":["lampe de Wood"], "answer":"Ok pas de soucis." },
+            { "id": "q_teigne_9", "patterns":["traitement local et per os", "4 à 6 semaines", "4-6 semaines"], "answer":"D'accord." },
+            { "id": "q_teigne_10", "patterns":["poudre antifongique", "shampooing désinfectant", "antifongique local"], "answer":"Bien sûr je comprends." },
+            { "id": "q_teigne_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon fils a une plaque dans les cheveux, vous pourriez regarder ?"},
+            { "id": "q_teigne_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_teigne_13", "patterns":["terbinafine 4 semaines", "itraconazole 6 semaines"], "answer":"D'accord je comprend." },
+            { "id": "q_teigne_14", "patterns":["examiner le reste de la famille", "examiner toute la famille", "examiner les proches"], "answer":"Oui pas de soucis." },
+            { "id": "q_teigne_15", "patterns":["éviction de la collectivité", "éviction scolaire"], "answer":"D'accord, on le garde à la maison alors." }
+          ]
+        },
+
+{
+          id: "SDD5",
+          title: "Anomalie des ongles",
+          intro: `Un patient de 28 ans vous consulte pour anomalie des ongles de pieds : <img src= "mycose.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Interrogez le patient pour caractériser l'atteinte, évoquez un diagnostic et expliquez le au patient, exprimez ce que vous rechercher particulièrement à l'examen clinique, prescrivez un(des) examen(s), indiquez le traitement le plus approprié et les conseils à fournir si le diagnostic est confirmé.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, toxiques, antécédents, traitements, allergies, loisir, contact avec des animaux), caractériser la lésion (date et évolution), recherchez facteurs traumatiques, précisez l'alimentation, recherchez la présence de psoriasis, recherchez des facteurs aggravants d'onychomycose (eau, chaussures fermées, séchage insuffisant).",
+            "- Evoquez le diagnostic d'onychomycose, recherchez une autre localisation (mains, cheveux, peau glabre), prescrivez un prélèvement unguéal.",
+            "- Proposez un traitement antifongique par voie orale (terbinafine) pendant 3-6 mois, expliquez qu'il faut bien sécher les pieds / changer régulièrement de chaussettes / utiliser des serviettes personnelles.",
+            "Devant une anomalie unguéale penser : traumatisme - mycose - carence - psoriasis - tumeur.",
+            "Les traitements par voie locale à base de vernis antifongiques sur plusieurs semaines peuvent se discuter mais sont souvent peu efficaces. On utilise donc principalement la voie oral pendant plusieurs mois si atteinte de la matrice ou atteinte diffuse.",
+          ],
+
+          questionSet: [
+            { "id": "q_mycose_1", "patterns":["profession", "toxiques", "antécédents", "traitements", "allergies", "loisir", "animaux"], "answer":"Je n'ai aucun antécédent personnel ou familial et je ne prends donc aucun traitement. Je n'ai pas non plus d'allergies. Je ne fume pas et je ne bois pas. Pour ce qui est de mes loisirs j'adore aller à la piscine, j'y vais 5 fois par semaine en moyenne."},
+            { "id": "q_mycose_2", "patterns":["date d'apparition", "quand", "évolution", "évolue"], "answer":"J'ai remarqué que mes ongles changeaient il y a plusieurs semaines maintenant. Ca a commencé par l'extrémité puis ça s'est étendu au fur et à mesure." },
+            { "id": "q_mycose_3", "patterns":["facteurs traumatiques", "traumatisme"], "answer":"Je ne me suis pas cogné particulièrement non." },
+            { "id": "q_mycose_4", "patterns":["alimentation"], "answer":"Je mange sainement." },
+            { "id": "q_mycose_5", "patterns":["psoriasis"], "answer":"Je ne crois pas avoir de psoriasis." },
+            { "id": "q_mycose_6", "patterns":["eau", "chaussures fermées", "séchage", "séchez"], "answer":"Effectivement je vais à la piscine et j'avoue que j'enfile rapidement mes baskets sans forcément bien me sécher les pieds." },
+            { "id": "q_mycose_7", "patterns":["onychomycose"], "answer":"D'accord." },
+            { "id": "q_mycose_8", "patterns":["autre localisation", "ongles des mains", "cheveux", "peau glabre"], "answer":"Absence d'autres atteintes." },
+            { "id": "q_mycose_9", "patterns":["prélèvement unguéal"], "answer":"Ok pas de soucis." },
+            { "id": "q_mycose_10", "patterns":["antifongique per os", "antifongique par voie orale"], "answer":"Ok je vois." },
+            { "id": "q_mycose_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. j'ai deux ongles de pieds qui sont franchement pas beau. Qu'est-ce que vous en dites ?"},
+            { "id": "q_mycose_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_mycose_13", "patterns":["bien sécher", "changer de chaussettes", "serviettes personnelles", "ne pas partager les serviettes", "secs"], "answer":"Ok je retiens ça." }
+          ]
+        },
+
+{
+          id: "SDD7",
+          title: "Bulles, éruption bulleuse",
+          intro: `Une patiente de 87 ans présentant une maladie d'Alzheimer et vivant en EHPAD consulte aux urgences accompagnée de sa fille pour apparition de nombreuses lésions cutanées. <img src= "pemphigoide.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Interrogez la patiente et décrivez votre examen clinique et ce que vous observerez, donnez une hypothèse diagnostique et expliquez la maladie à la patiente, expliquez simplement à la patiente et sa fille les examens que vous prescrivez, proposez une PEC générale.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, toxiques, antécédents, traitements, allergies, loisirs, animaux ou plantes, brûlures), préciser la localisation / date d'apparition / évolution / lésions muqueuses / nouveau traitement, rechercher prurit et signe de Nikolsky, décrire des bulles tendues avec des érosions post bulleuses et un placard urticarien ou eczématiforme.",
+            "- Evoquer le diagnostic de pemphigoïde bulleuse, expliquer que c'est une maladie auto immune des sujets âgés aux pathologies lourdes. Dire qu'il faudra faire une prise de sang à la recherche des Ac et un prélèvement de peau qui sera analysé. Hospitalisation en dermatologie, application de dermocorticoïdes très fort et bains antiseptiques, bonne hydratation et nutrition hypercalorique.",
+            "Rappels différences pemphigoïde bulleuse / pemphigus :",
+            "- Pemphigoïde bulleuse : >70 a terrain débilité / diabète / IC, prurit et placard érythémateux, bulles tendues, symétrique à la racine des membres en face de flexion et face antéro-interne des cuisses et de l'abdomen, atteinte muqueuse rare. Hyperéosinophilie, bulle sous épidermique, dépôts IgG et C3, Ac anti-MB.",
+            "- Pemphigus : 40-50a iatrogène / maladie auto-immune / paranéoplasique, signe Nikolsky positif, érosions post-bulleuses, plis ou zone de frottement / cuir chevelu, atteinte muqueuse souvent inaugurale. Bulle intra épidermique, dépôts en maille IgG et C3, Ac anti-SIC. Traitement par corticoïdes PO, rituximab, autres immunosuppresseurs (ciclosporine, azathioprine, cyclophosphamide)"
+          ],
+
+          questionSet: [
+            { "id": "q_pemphigoide_1", "patterns":["toxiques", "allergies", "loisirs", "traitements", "brûlures", "animaux", "plantes", "profession", "antécédents"], "answer":"Ma mère a une maladie d'Alzheimer et un diabète non insulino-dépendant. Elle prend seulement de la metformine mais depuis des années. Elle n'a pas d'allergies et ne consomme pas de toxiques. Avant sa retraite elle était professeur de SVT. Elle ne sort pas de l'EHPAD donc n'a pas de contact avec des animaux ou des plantes, et elle ne s'est pas brûlée."},
+            { "id": "q_pemphigoide_2", "patterns":["localisation", "où", "date d'apparition", "quand", "combien de temps", "évolution", "évolue", "muqueuses", "nouveau traitement"], "answer":"Elle a des démengeaisons depuis plusieurs semaines. Puis j'ai remarqué ensuite l'apparition de zones rouges. C'est surtout au niveau du haut des cuisses, des mains et des avant-bras. Et là depuis quelques jours je trouve qu'elle a de plus en plus de lésions sur ces mêmes zones." },
+            { "id": "q_pemphigoide_3", "patterns":["prurit", "démangeaisons", "signe de Nikolsky"], "answer":"Oui ça la gratte pas mal. Signe de Nikolsky négatif." },
+            { "id": "q_pemphigoide_4", "patterns":["bulles tendues", "érosions post-bulleuses", "érosions", "urticaire", "urticarien", "eczématiforme"], "answer":"Présence de bulles tendues et érosions post-bulleuse. Placard urticarien ou eczématiforme." },
+            { "id": "q_pemphigoide_5", "patterns":["pemphigoïde bulleuse"], "answer":"Ok je vois, et c'est quoi comme maladie ?" },
+            { "id": "q_pemphigoide_6", "patterns":["maladie auto-immune"], "answer":"D'accord je comprends, on doit faire des examens ?" },
+            { "id": "q_pemphigoide_7", "patterns":["prise de sang", "anticorps"], "answer":"Ok très bien." },
+            { "id": "q_pemphigoide_8", "patterns":["prélèvement cutané"], "answer":"D'accord je ne pensais pas." },
+            { "id": "q_pemphigoide_9", "patterns":["hospitalisation"], "answer":"Oh mince." },
+            { "id": "q_pemphigoide_10", "patterns":["dermocorticoïdes", "très forts", "très forte"], "answer":"D'accord." },
+            { "id": "q_pemphigoide_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Ma mère a des plaques sur le corps, qu'est-ce que ça peut être ?"},
+            { "id": "q_pemphigoide_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci pour votre temps Docteur." },
+            { "id": "q_pemphigoide_13", "patterns":["bains antiseptiques", "hydratation", "hypercalorique"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD8",
+          title: "Lésion cutanée, grain de beauté",
+          intro: `Une patiente de 55 ans, rousse aux yeux bleus avec de nombreuses tâches de rousseurs, vous consulte dans votre cabinet de dermatologie. Elle est adressée par son médecin traitant inquiet devant l'aspect évolutif d'une lésion cutanée pigmentée de l'avant bras gauche de 5 cm. <img src= "seinrouge.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Interrogez la patiente, décrivez la lésion cutanée et votre examen clinique à l'évaluateur, expliquez à la patiente votre hypothèse diagnostique, proposez une PEC à ce stade.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, toxiques, allergies, antécédents, traitements, loisirs), antécédents de coup de soleil, antécédents perso et familiaux de cancers cutanés.",
+            "- Rechercher un nombre élevé de naevi multiples communs, atypiques, congénital géant. Enoncer la règle ABCDE (asymétrie, bords irréguliers, couleur inhomogène, diamètre > 6mm, évolutivité). Enoncer la théorie du vilain petit canard, rechercher une autre lésion évocatrice de cancer cutané, rechercher des adénopathies et des métastases.",
+            "- Evoquer le diagnostic de mélanome, expliquer que son grain de beauté est potentiellement cancéreux développé à partir des mélanocytes. Proposer une chirurgie complète de la lésion, sous AL en consultation et que le prélèvement sera analysé au microscope pour confirmer ou non la suspicion diagnostique.",
+            "Selon la règle ABCDE on suspecte un mélanome si au moins 2 critères sont remplis."
+          ],
+
+          questionSet: [
+            { "id": "q_mélanome_1", "patterns":["loisirs", "antécédents", "traitements", "allergie", "profession", "toxiques"], "answer":"Je n'ai aucun antécédents, et je ne prend aucun traitement. Je n'ai pas d'allergies. Je suis assistante dentaire, je ne fume pas et je ne bois pas."},
+            { "id": "q_mélanome_2", "patterns":["coup de soleil"], "answer":"Ah oui j'ai eu beaucoup de coup de soleil quand j'étais jeune, il parait que c'est parce que je suis rousse, j'ai la peau plus fragile." },
+            { "id": "q_mélanome_3", "patterns":["antécédents de cancers cutanés", "antécédents familiaux de cancers cutanés", "antécédents de cancer cutané"], "answer":"Ma mère et mon frère ont eu un cancer cutané." },
+            { "id": "q_mélanome_4", "patterns":["naevi multiples communs", "naevi atypiques", "naevus congénital géant"], "answer":"Absence de syndrome des naevi atypiques, absence de naevus congénital géant." },
+            { "id": "q_mélanome_5", "patterns":["ABCDE"], "answer":"Ok je vois, et donc mon grain de beauté remplit certains de ces critères." },
+            { "id": "q_mélanome_6", "patterns":["vilain petit canard"], "answer":"Oui effectivement c'est un peau le vilain petit canard de la bande ahah." },
+            { "id": "q_mélanome_7", "patterns":["autre lésion", "autre localisation"], "answer":"Absence d'autres lésions suspectes." },
+            { "id": "q_mélanome_8", "patterns":["adénopathies", "métastases"], "answer":"Absence d'adénopathies." },
+            { "id": "q_mélanome_9", "patterns":["mélanome"], "answer":"Oh je vois." },
+            { "id": "q_mélanome_10", "patterns":["cancéreux", "mélanocytes", "cancer"], "answer":"D'accord, c'est pas rassurant tout ça... Comment on le traite ?" },
+            { "id": "q_mélanome_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car mon médecin traitant m'a trouvé un grain de beauté pas beau."},
+            { "id": "q_mélanome_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_mélanome_13", "patterns":["chirurgie complète", "exérèse complète", "enlever complètement"], "answer":"Oui l'enlever ça serait pas mal déjà. Je dois passer au bloc opératoire du coup ?" },
+            { "id": "q_mélanome_14", "patterns":["anesthésie locale", "en consultation"], "answer":"Ah ouf tant mieux." },
+            { "id": "q_mélanome_15", "patterns":["analyse au microscope", "analyse microscopique"], "answer":"Ok ça me va." }
+          ]
+        },
+
+{
+          id: "SDD9",
+          title: "Erythème",
+          intro: "Un patient de 65 ans consulte aux urgences car il se trouve rouge sur une grande partie du corps depuis une semaine, avec d'importantes démangeaisons. Il vous dit également se sentir fébrile. À l'examen clinique le médecin retrouve une éruption maculopapuleuse confluente avec certaines zones de peau saines couvrant 95 % du tégument. Interrogez le patient et décrivez ce que vous recherchez à l'examen clinique, quel diagnostic suspectez vous, quelle en est la cause et pourquoi, expliquez à l'évaluateur le bilan prescrit et la première mesure mise en place par vos soins.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, toxiques, allergies, traitements, antécédents, loisirs, animaux, comportements sexuels à risque), médicaments et depuis combien de temps, adénopathies / oedème du visage ou des extrémités, signes de gravité (hémodynamiques, neurologiques, respiratoire), signes de complication (hépatite, myocardite).",
+            "- Evoquer un DRESS sur prise récente d'allopurinol. Dire qu'on fait un hémogramme pour recherche d'une éosinophilie et d'un sd mononucléosique. On fait un bilan hépatique (hépatite) et rénale (IR). On contre indique à vie l'allopurinol.",
+            "Attention pour parler d'érythrodermir il faut que l'érythème couvre > 90% du corps depuis >6S.",
+            "Le DRESS est à évoquer devant un érythème, prurit et fièvre, avec un nouveau traitement depuis 2-6S, peau oir et réactivations virales (HHV6 principalement)."
+          ],
+
+          questionSet: [
+            { "id": "q_dress_1", "patterns":["antécédents", "toxiques", "allergies", "médicaments", "profession", "loisir", "animaux", "à risque"], "answer":"J'ai de l'hypertension artérielle et de la goutte. Je suis ancien conducteur de bus et je ne fume pas et ne bois pas. Je n'ai pas d'animaux et pas de comportement sexuel à risque."},
+            { "id": "q_dress_2", "patterns":["traitements"], "answer":"Je prend de la nicadipine depuis 10 ans pour mon hypertension et il y a un mois on m'a prescrit de l'allopurinol pour ma goutte." },
+            { "id": "q_dress_3", "patterns":["adénopathies", "oedème de la face", "oedème des extrémités"], "answer":"Œdème du visage et des mains. Adénopathies diffuses." },
+            { "id": "q_dress_4", "patterns":["constantes", "anurie", "oligurie", "marbrures", "temps de recoloration cutanée", "TRC", "somnolence", "confusion", "dyspnée", "toux", "expectorations", "hémoptysie"], "answer":"Température à 40°C. Stable sur le plan hémodynamique. Pas de signes de gravité." },
+            { "id": "q_dress_5", "patterns":["hépatite", "douleur abdominale", "ictère", "AEG", "altération de l'état général", "douleur thoracique", "asthénie", "turgescence jugulaire", "TJ", "hépatalgie", "reflux hépato-jugulaire", "RHJ"], "answer":"Absence e signes d'hépatite ou de myocardite." },
+            { "id": "q_dress_6", "patterns":["DRESS"], "answer":"D'accord, mais c'est à cause de quoi ça ?" },
+            { "id": "q_dress_7", "patterns":["allopurinol"], "answer":"Ah bah mince alors." },
+            { "id": "q_dress_8", "patterns":["hémogramme", "éosinophilie", "mononucléosique"], "answer":"Ok." },
+            { "id": "q_dress_9", "patterns":["bilan hépatique"], "answer":"D'accord." },
+            { "id": "q_dress_10", "patterns":["bilan rénal", "insuffisance rénale", "IR"], "answer":"Ok ça va." },
+            { "id": "q_dress_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Depuis une semaine environ je me trouve rouge sur la plupart de mon corps et ça me gratte pas mal."},
+            { "id": "q_dress_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"C'est clair, merci pour tout Docteur." },
+            { "id": "q_dress_13", "patterns":["contre-indication à vie", "contre indiqué à vie", "contre indication à vie"], "answer":"Ok j'en prendrais plus jamais alors." }
+          ]
+        },
+
+{
+          id: "SDD10",
+          title: "Escarre",
+          intro: `Vous êtes réanimateur de garde. Lors de votre tour de salle, vous remarquez une escarre chez une de vos patiente. Votre externe vous pose des questions à se propos. Quel est le stade de l'escarre, citez les 3 facteurs de risque extrinsèque à chercher, les 3 facteurs de risque intrinsèques à chercher, les moyens de prévention et le premier geste à effectuer.<img src= "seinrouge.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Escarre de stade 4.",
+            "- FdR extrinsèque : intensité de la pression, durée de la pression, friction, cisaillements, macération de la peau (sudation, incontinence), éléments traumatisants (plis du drap, plis du lève malade, miettes, contention).",
+            "- FdR intrinsèque : réduction de l'oxygénation (tabac, AOMI), lésions cutanées pré existantes, dénutrition ou obésité, incontinence urinaire ou fécale, maladie neurologique entrainant des troubles de la sensibilité ou mobilité, tb de la conscience, état psychologique.",
+            "- Support adapté pour répartir les pressions, examiner de façon pluriquotidienne les zones à risque, changer de position toutes les 2-3h, mettre au fauteuil et verticaliser le plus tôt possible, installer correctement pour éviter les frottements et mauvais appuis, hygiène cutanée correcte, ne pas masser la zone, équilibre nutritionnel et bonne hydratation, éduquer l'entourage à respecter ses mesures. 1e chose à faire est de lever l'appui",
+            "Rappel des stades des escarres :",
+            "- stade 0 : hyperhémie réactionnelle",
+            "- stade 1 : érythème persistant",
+            "- stade 2 : abrasion, phlyctène ou ulcération peu profonde",
+            "- stade 3 : ulcération profonde",
+            "- stade 4 : destruction importante des tissus sous-cutanés et des fascias"
+          ],
+
+          questionSet: [
+            { "id": "q_escarre_1", "patterns":["stade 4", "4"], "answer":"D'accord et tu peux me dire quels seraient des facteurs extrinsèques causant des escarres ?"},
+            { "id": "q_escarre_2", "patterns":["intensité de la pression", "durée de la pression", "friction", "cisaillements", "macération", "traumatisants", "traumatiques"], "answer":"Ok je vois merci. Et des éléments intrinsèques tu en connais ?" },
+            { "id": "q_escarre_3", "patterns":["tabagisme", "AOMI", "lésions cutanées", "dénutrition", "obésité", "incontinence", "maladie neurologique", "trouble de la conscience", "état psychologique"], "answer":"Ok je comprends mieux. Et en terme de mesures maintenant qu'est-ce qu'on peut faire ?" },
+            { "id": "q_escarre_4", "patterns":["support adapté", "répartir les pressions", "matelas dynamique"], "answer":"Oui j'en ai déjà vu." },
+            { "id": "q_escarre_5", "patterns":["examnier plusieurs fois par jour", "pluriquotidienne", "plusieurs fois par jour"], "answer":"Oui pour voir comment ça évolue je comprends." },
+            { "id": "q_escarre_6", "patterns":["changer de position", "2 à 3h", "2 à 3 heures", "2-3h"], "answer":"Ok je ne savais pas que c'était toutes les 2 à 3 heures." },
+            { "id": "q_escarre_7", "patterns":["fauteuil", "verticaliser"], "answer":"Oui pour limiter l'appui, je vois." },
+            { "id": "q_escarre_8", "patterns":["correctement installée"], "answer":"Logique." },
+            { "id": "q_escarre_9", "patterns":["hygiène cutanée"], "answer":"Oui d'accord." },
+            { "id": "q_escarre_10", "patterns":["ne pas masser"], "answer":"Ok je me le note." },
+            { "id": "q_escarre_11", "patterns":["bonjour"], "answer":"Bonjour. Tu pourrais me dire quel est le stade de cet escarre ? "},
+            { "id": "q_escarre_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair merci t'es au top." },
+            { "id": "q_escarre_13", "patterns":["nutrition", "hydratation"], "answer":"Oui je comprends que c'est important." },
+            { "id": "q_escarre_14", "patterns":["informer la famille", "éducation thérapeutique"], "answer":"Ok je vois." },
+            { "id": "q_escarre_15", "patterns":["lever l'appui"], "answer":"D'accord." }
+          ]
+        },
+
+{
+          id: "SDD12",
+          title: "Grosse jambe rouge aiguë",
+          intro: "Vous êtes interne aux urgences. Une femme de 64 ans consulte pour grosse jambe rouge aiguë remontant jusqu'à la moitié de la crète tibiale droite, apparue il y a 3 jours, avec douleur et fièvre pour laquelle elle s'automédique par AINS. Interrogez la patiente et décrivez ce que vous recherchez à l'examen clinique, quel(s) diagnostic(s) principal(aux) évoquez vous et comment l'expliquez vous à la patiente, quel(s) examen(s) prescrivez vous, expliquez à l'examinateur la PEC étiologique et symptomatologique que vous proposez. Hospitalisez vous la patiente et que lui expliquez vous concernant l'évolution de sa pathologie.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (antécédents, traitement, loisir, profession, toxiques, animaux), recherchez une allergie médicamenteuse, faire préciser la localisation / date / mode d'apparition / évolution, rechercher des signes locaux de gravité (douleur très intense, œdème induré, extension très rapide, hypoanesthésie, zone de nécrose / tâches cyaniques / lividités, bulles hémorragiques, crépitants sous cutané), signes généraux de gravité (neurologiques, hémodynamiques, respiratoires).",
+            "- Rechercher une prise médicamenteuse et une porte d'entrée. Evoquer le diagnostic de dermohypodermite bactérienne non nécrosante ou érysipèle et expliquer que c'est une infection de la peau par une bactérie. Evoquer le diagnostic d'intertrigo interorteil et expliquer qu'il s'agit d'une infection par champignon. Aucun examen complémentaire n'est nécessaire.",
+            "- Arrêter les AINS et prescrire une antalgie adaptée. Prescrire de la pristinamycine ou de la clindamycine, prescrire des topiques imidazolés. Prescrire une vaccination antitétanique. Expliquer que la patiente pourra retourner au domicile avec réévaluation dans 3 jours, que les signes peuvent persister une semaine et que la fièvre peut durer 48-72h."
+          ],
+
+          questionSet: [
+            { "id": "q_dhnn_1", "patterns":["profession", "toxiques", "loisirs", "antécédents", "traitements", "animaux"], "answer":"Je n'ai pas d'antécédents, pas de traitement. Je suis allergique à la pénicilline. Je suis autonome au domicile, retraitée et ancienne coiffeuse. Je ne consomme pas de toxiques."},
+            { "id": "q_dhnn_2", "patterns":["allergie médicamenteuse"], "answer":"D'accord." },
+            { "id": "q_dhnn_3", "patterns":["localisation", "où", "date", "depuis quand", "mode d'apparition", "brutal", "progressif", "évolution", "évolue"], "answer":"C'est sur ma jambe droite, c'est arrivé rapidement, et ça évolue depuis 3 jours. C'est la première fois que je vois ça. Ca monte progressivement je trouve." },
+            { "id": "q_dhnn_4", "patterns":["douleur très intense", "oedème induré", "extension très rapide", "hypoanesthésie", "zone de nécrose", "tâches cyaniques", "bulles hémorragiques", "crépitants", "crépitations"], "answer":"Œdème, rougeur, chaleur? Température à 40°C. Absence de zones de nécrose, d'hypoesthésie, de crépitation ou d'autres signes de gravité." },
+            { "id": "q_dhnn_5", "patterns":["neurologique", "confusion", "somnolence", "hémodynamiques", "constantes", "respiratoires", "dyspnée"], "answer":"Absence de signes neurologiques." },
+            { "id": "q_dhnn_6", "patterns":["prise médicamenteuse"], "answer":"J'ai pris 4 comprimés d'ibuprofène depuis hier mais c'est tout." },
+            { "id": "q_dhnn_7", "patterns":["porte d'entrée"], "answer":"Présence d'une pâte blanche avec plaie au niveau des orteils du pied droit." },
+            { "id": "q_dhnn_8", "patterns":["dermohypodermite non-nécrosante", "dermo-hypodermite non nécrosante", "dermohypodermite non nécrosante", "DHNN", "érysipèle"], "answer":"Validé." },
+            { "id": "q_dhnn_9", "patterns":["intertrigo"], "answer":"Validé." },
+            { "id": "q_dhnn_10", "patterns":["aucun examen complémentaire", "pas d'examen complémentaire", "aucuns examens complémentaires"], "answer":"Ok ça va." },
+            { "id": "q_dhnn_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai un placard rouge sur ma jambe droite."},
+            { "id": "q_dhnn_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_dhnn_13", "patterns":["arrêt des AINS", "arrêter les AINS"], "answer":"Ok j'arrête les AINS de suite." },
+            { "id": "q_dhnn_14", "patterns":["antalgie", "antalgiques", "repos au lit", "jambe surélevée"], "answer":"Oui s'il vous plait je prendrais bien un antalgique." },
+            { "id": "q_dhnn_15", "patterns":["pristinamycine", "clindamycine"], "answer":"D'accord." },
+            { "id": "q_dhnn_16", "patterns":["topiques imidazolés"], "answer":"D'accord." },
+            { "id": "q_dhnn_17", "patterns":["vaccination antitétanique", "tétanos"], "answer":"Ok pas de souci." },
+            { "id": "q_dhnn_18", "patterns":["rentrer", "domicile", "réévaluation dans 3 jours", "48-72h"], "answer":"Ok ok." }
+          ]
+        },
+
+{
+          id: "SDD13",
+          title: "Prurit",
+          intro: "Un homme de 53 ans vient vous voir en consultation de médecine générale pour démangeaisons. Interrogez le patient à propos de ce prurit et examinez le, quel diagnostic suspectez vous et comment l'expliquez vous, nommez le(s) examen(s) complémentaire(s) pouvant vous orienter et qu'en attendez vous, prescrire un bilan, proposer une PEC et dire ce que vous faires pour son entourage.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, loisir, antécédents, médicaments, allergies, animaux, comportements sexuels à risque), caractériser le prurit (localisation, intensité, durée, rythme, entourage, déclenché ou aggravé par, prise de mdc, exposition professionnelle 4/8). Evoquer le diagnostic de gale commune, que vous retrouvez des sillons scabieux et des nodules scabieux.",
+            "- Possibilité de réaliser une dermatoscopie ou examen parasitologique (1/2), on attend de retrouver le signe du deltaplane et proposer un bilan de dépistage des IST. Expliquer que le traitement se fait par ivermectine avec 2e prise à 7-14j / par perméthrine en application locale à répéter à 1S / par benzoate de benzyle locale à répéter à 1S. Mettre en place des mesures d'hygiène (lavage textiles à 60° ou dans un sac pendant 3j), traiter épouse et enfant de 5 ans par ivermectine à répéter à 1S, traiter son enfant d'un an par benzoate de benzyle ou perméthrine à répéter à 1S. Réaliser un arrêt de travail de 3j, traiter le personnel et les patients en contact.",
+            "Rappel l'ivermectine est CI avant 2ans et avant 15kg."
+          ],
+
+          questionSet: [
+            { "id": "q_gale_1", "patterns":["antécédents", "traitements", "loisir", "profession", "animaux", "comportement sexuel à risque", "allergies"], "answer":"J'ai eu une appendicectomie mais c'est tout. Je n'ai donc pas de traitements tous les jours et pas d'allergies non plus. Je fume 10 cigarettes par jour depuis 30 ans. Je suis aide-soignant dans un EHPAD et assez actif."},
+            { "id": "q_gale_2", "patterns":["localisation", "où", "intensité", "durée", "depuis combien de temps", "quand", "diurne", "nocturne", "entourage", "déclenché", "aggravé", "prise de médicaments", "exposition professionnelle"], "answer":"C'est assez important comme démangeaison. C'est surtout le soir et ça ne touche pas mon visage, c'est surtout entre les doigts, les poignets, les aisselles et mes organes génitaux. Rien n'améliore ou n'aggrave les démangeaisons. Puis mes enfants de 1 et 5 ans et ma femme se grattent aussi..." },
+            { "id": "q_gale_3", "patterns":["gale commune"], "answer":"D'accord je vois." },
+            { "id": "q_gale_4", "patterns":["sillons scabieux"], "answer":"Validé." },
+            { "id": "q_gale_5", "patterns":["nodules scabieux"], "answer":"Validé." },
+            { "id": "q_gale_6", "patterns":["dermatoscopie", "examen parasitologique"], "answer":"Vous réalisez une dermatoscopie, que vous attendez vous à voir (1 signe) ?" },
+            { "id": "q_gale_7", "patterns":["deltaplane"], "answer":"Validé." },
+            { "id": "q_gale_8", "patterns":["infections sexuellement transmissibles", "IST"], "answer":"Je vois." },
+            { "id": "q_gale_9", "patterns":["ivermectine", "perméthrine", "benzoate de benzyle"], "answer":"Oui d'accord." },
+            { "id": "q_gale_10", "patterns":["laver à 60°", "60°", "pendant 3 jours"], "answer":"Ok ça va, on fera ça à la maison." },
+            { "id": "q_gale_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je me gratte depuis quelques semaines, j'aimerai bien avoir un traitement pour ça."},
+            { "id": "q_gale_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_gale_13", "patterns":["épouse par ivermectine", "enfant de 5 ans par ivermectine"], "answer":"Ok." },
+            { "id": "q_gale_14", "patterns":["enfant d'un an par benzoate de benzyle", "enfant d'1 an par benzoate", "enfant d'un an par perméthrine", "enfant d'1 an par perméthrine"], "answer":"Ok je vois." },
+            { "id": "q_gale_15", "patterns":["arrêt de travail"], "answer":"Oui que je contamine pas tout le monde." },
+            { "id": "q_gale_16", "patterns":["personnel", "patients"], "answer":"D'accord, je comprends." }
+          ]
+        },
+
+{
+          id: "SDD14",
+          title: "Anomalies des muqueuses",
+          intro: `Vous recevez dans votre cabinet de médecine générale un patient de 68 ans pour une sensation de chaud et goût métallique désagréable dans la bouche. Voici ce que vous retrouvez à l'examen endobuccal, sans autres anomalies à l'examen des autres muqueuses, de la peau et des phanères. <img src= "seinrouge.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Réalisez un interrogatoire, posez un diagnostic, prescrivez un examen complémentaire pour confirmer votre suspicion diagnostique si nécessaire, nommez l'examen biologique le plus pertinent, expliquez le traitement prescrit au patient.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, toxiques, antécédents, médicaments, allergies, vaccins), interrogatoire orienté (immunosuppresseur, comportement sexuel à risque, prothèse dentaire, antibiotiques récents), difficulté à avaler ou sensation de blocage des aliments.",
+            "- Diagnostic de candidose buccale ou muguet, infection due à un champignon qui se développe dans la bouche et sur la langue. Diagnostic clinique sans examen complémentaire nécessaire. Faire une sérologie VIH/ Prescrire un antifongique (ampho B), prescrire pendant 1-3S, les produits doivent être maintenus en contact avec la muqueuse pendant quelques minutes, les soins sont à réaliser à distance des repas.",
+            "Si toxicomanie IV penser à dépister les folliculites à Candida douloureuses de la barbe et du cuir chevelu."
+          ],
+
+          questionSet: [
+            { "id": "q_muguet_1", "patterns":["antécédents", "traitements", "allergies", "toxiques", "comportement sexuel à risque", "allergies", "vaccins"], "answer":"Je suis retraité depuis peu, ancien postier. Je n'ai pas d'antécédents à part des prothèses dentaires. Je ne prends pas de traitements et je n'ai pas d'allergies connues."},
+            { "id": "q_muguet_2", "patterns":["immunosuppresseurs", "prothèse dentaire", "antibiotiques"], "answer":"J'ai pris des antibiotiques pour une pneumonie récemment mais je ne saurais pas vous dire le nom. Et si je suis honnête c'est vrai que depuis la retraite je batifole un peu quoi." },
+            { "id": "q_muguet_3", "patterns":["difficultés à avaler", "blocage des aliments"], "answer":"Je ne sens plus les aliments comme d'habitude et vous voyez bien ma langue est blanche. A ça vous rajouter une sensation d'avoir la bouche sèche et chaude et ce gout dégoutant et voilà mes symptômes." },
+            { "id": "q_muguet_4", "patterns":["candidose buccale", "muguet"], "answer":"Je vois." },
+            { "id": "q_muguet_5", "patterns":["champignon"], "answer":"Ah oui c'est étonnant ça et comment on confirme votre drôle d'hypothèse ?" },
+            { "id": "q_muguet_6", "patterns":["clinique", "pas d'examen complémentaire"], "answer":"Ah bon pas d'examen ? Bon ma foi je vous crois, vous savez mieux que moi." },
+            { "id": "q_muguet_7", "patterns":["sérologie VIH"], "answer":"Ah euh oui pourquoi pas mais bon... (A noter : la sérologie reviendra négative)" },
+            { "id": "q_muguet_8", "patterns":["antifongique", "amphotéricine B"], "answer":"Si ça me soigne c'est ok !" },
+            { "id": "q_muguet_9", "patterns":["1 à 3 semaines", "1-3 semaines"], "answer":"Oui d'accord." },
+            { "id": "q_muguet_10", "patterns":["pendant quelques minutes"], "answer":"Ok ça va." },
+            { "id": "q_muguet_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Faut que vous m'aidiez ce gout dans ma bouche m'insupporte."},
+            { "id": "q_muguet_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_muguet_13", "patterns":["à distance des repas"], "answer":"Je ferais attention." }
+          ]
+        },
+
+{
+          id: "SDD15",
+          title: "Vésicules, éruption",
+          intro: `Un patient de 72 ans vous consulte dans votre cabinet de médecine générale pour éruption douloureuse dorso-lombaire droite évoluant depuis hier avec fébricule et adénopathie satellite que voici : <img src= "seinrouge.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`. Interrogez et caractérisiez la lésion, posez un diagnostic et expliquez l évolution, de quel(s) examen(s) avez vous besoin pour confirmer le diagnostic, quel traitement prescrivez vous et pourquoi.`,
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (allergies, antécédents, traitements, toxiques, profession, comportements à risque), caractériser la douleur (intensité, type, prise de traitement), rechercher un ATCD de varicelle ou zona, rechercher vaccination contre VZV, décrire la lésion (placard érythémateux, vésicules en bouquet, unilatéral ou métamérique).",
+            "- Evoquer le diagnostic de zona (multiplication du virus de la varicelle par réactivation lors d'une période de fatigue ou stress), évolution (croûtes sur une dizaine de jours, cicatrices possibles, persistance possible des douleurs pendant plusieurs mois). Aucun examen complémentaire n'est nécessaire. Prescrire paracétamol + antalgique de palier 2. Prescrire un traitement étiologique antiviral (valaciclovir ou famciclovir), prescrire un traitement locale (douche tiède, chlorehexidine pour éviter les surinfections).",
+            "Les algies post-zostériennes sont prévenues par un antiviral prescrit dans les 72h à partir de 50ans. Un vaccin en une injection est possible entre 64 et 75a si le patient n'est pas immunodéprimé."
+          ],
+
+          questionSet: [
+            { "id": "q_zona_1", "patterns":["antécédents", "allergies", "traitements", "profession", "loisir", "sexuels à risque", "toxiques"], "answer":"J'ai une fibrillation atriale et je prends donc de l'apixaban et du bisoprolol. Je n'ai pas d'allergies particulières. Je suis autonome, ancien fromager. Je ne prends aucun toxique."},
+            { "id": "q_zona_2", "patterns":["intensité", "cotez", "type", "antidouleurs", "médicaments pour la douleur"], "answer":"Mes douleurs sont comme des brûlures vous voyez, et ça me fait mal à bien 6/10. J'ai pris du paracétamol mais je n'ai rien mis sur les lésions." },
+            { "id": "q_zona_3", "patterns":["antécédent de varicelle", "antécédent de zona"], "answer":"Alors j'ai eu la varicelle étant petit. Et j'ai eu une atteinte similaire il y a quelques années mais je ne saurais plus vous dire ce que c'était." },
+            { "id": "q_zona_4", "patterns":["vaccination"], "answer":"J'ai fait mes vaccins obligatoire mais pas ceux recommandés pour mon âge." },
+            { "id": "q_zona_5", "patterns":["placard érythémateux", "vésicules en bouquet", "unilatéral", "unilatérale", "métamérique"], "answer":"Validé." },
+            { "id": "q_zona_6", "patterns":["zona"], "answer":"Ah d'accord." },
+            { "id": "q_zona_7", "patterns":["croûtes", "cicatrices", "douleurs pendant plusieurs mois"], "answer":"D'accord je vois, j'espère que j'aurais pas si mal pendant longtemps." },
+            { "id": "q_zona_8", "patterns":["aucun examen complémentaire", "pas d'examen complémentaire", "clinique"], "answer":"Ok je vous crois alors." },
+            { "id": "q_zona_9", "patterns":["paracétamol", "palier 2"], "answer":"Oui merci de penser à ça, parce que c'est quand même pas agréable cette histoire." },
+            { "id": "q_zona_10", "patterns":["antiviral", "valaciclovir", "famciclovir"], "answer":"Ok ça va." },
+            { "id": "q_zona_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Ecoutez j'ai depuis hier une éruption bien rouge au niveau lombaire et ça me fait très mal."},
+            { "id": "q_zona_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_zona_13", "patterns":["douche à l'eau tiède", "chlorhexidine"], "answer":"Ok je note." },
+            { "id": "q_zona_15", "patterns":["examen clinique", "température", "constantes", "adénopathies"], "answer":"Absence d'autres lésions du tégument. Température à 38,5°C, adénopathie axillaire homolatérale." }
+          ]
+        },
+
+{
+          id: "SDD16",
+          title: "Brûlure",
+          intro: `En qualité de médecin du SMUR, vous êtes sollicité pour vous rendre au domicile de M. P, âgé de 30 ans, à la suite d une brûlure survenue dans le cadre d un incendie déclenché par sa cigarette. Le patient présente une brûlure de la jambe gauche du 2e degré sans atteinte des organes génitaux ainsi qu une brûlure de la main gauche, toutes deux non contaminées." <img src= "brulure.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Evaluez dans un premier temps l état général du patient, l état cutané du patient, expliquez votre prise en charge globale face à ces brûlures.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, allergies, antécédents, toxiques, traitements), règle ABCDE (airway, breathing, circulation, disability, exposure), lésion associée (TC, trauma thoracique, inhalation de fumées, inhalation de liquide gastrique, sd hémorragique, ingestion de toxiques (2/4)), intensité de la douleur.",
+            "- Evaluez la surface cutanée brûlée à 19%, évaluez la profondeur de la brûlure de la main au 2e degré. Retirer les vêtements, refroidir la brûlure, oxygénothérapie, voie d'abord veineuse et monitorage continu (1/2), protéger la plaie avec drap ou champ stérile, vérifier le statut antitétanique, administrer un antalgique adapté (palier 3).",
+            "Se rappeler que les brûlures du 1e degré ne rentre pas dans le calcul du % de surface brûlée."
+          ],
+
+          questionSet: [
+            { "id": "q_brulure_1", "patterns":["allergies", "toxiques", "traitements", "profession", "antécédents"], "answer":"Je n'ai aucun antécédent et aucun traitement. Une allergie au chat. Et he suis infirmier à domicile. Je consomme de l'alcool occasionnellement et je fume un paquet par jour depuis 13 ans."},
+            { "id": "q_brulure_2", "patterns":["ABCDE", "voies aériennes supérieures", "VAS", "VADS", "respiration", "respiratoire", "pouls", "neurologique", "conscience", "conscient", "fracture", "exposition"], "answer":"Conscient, orienté. Bonnes constantes hémodynamiques. Douleur à 9/10." },
+            { "id": "q_brulure_3", "patterns":["traumatisme crânien", "traumatisme thoracique", "inhalation de fumées", "inhalation de liquide gastrique", "syndrome hémorragique", "hémorragie", "ingestion de toxiques"], "answer":"Absence de traumatisme, d'inhalation, de saignement. Pas d'autres symptômes que les brûlures.." },
+            { "id": "q_brulure_4", "patterns":["19%"], "answer":"Je vois." },
+            { "id": "q_brulure_5", "patterns":["2e degré", "deuxième degré"], "answer":"Oui." },
+            { "id": "q_brulure_6", "patterns":["retirer les vêtements", "déshabiller"], "answer":"Validé." },
+            { "id": "q_brulure_7", "patterns":["refroidir"], "answer":"Validé." },
+            { "id": "q_brulure_8", "patterns":["oxygène", "oxygénothérapie"], "answer":"Validé." },
+            { "id": "q_brulure_9", "patterns":["voie veineuse", "monitoring", "monitorage continu", "monitorer"], "answer":"Validé." },
+            { "id": "q_brulure_10", "patterns":["drap", "champ stérile"], "answer":"Validé." },
+            { "id": "q_brulure_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai super mal."},
+            { "id": "q_brulure_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_brulure_13", "patterns":["statut antitétanique", "tétanos"], "answer":"Validé." },
+            { "id": "q_brulure_14", "patterns":["antalgie", "palier 3", "morphine", "morphinique"], "answer":"Prescription faite." },
+            { "id": "q_brulure_15", "patterns":["qu'est-ce qui s'est passé", "expliquez moi", "comment"], "answer":"Je me suis endormi avec une cigarette allumée à la main. Je n'ai rien consommé pour autant je vous le jure." }
+          ]
+        },
+
+{
+          id: "SDD17",
+          title: "Ulcère",
+          intro: `Vous êtes généraliste et recevez Mr N 76 ans pour des plaies très douloureuses des pieds présentes depuis plusieurs mois. <img src= "ulcere.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Recherchez à l'interrogatoire et à l'examen clinique les éléments orientant vers un ulcère artériel et décrivez ce que vous observez, prescrivez un examen complémentaire, expliquez simplement la maladie au patient, proposez une prise en charge adaptée.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, allergies, antécédents, traitements, loisir), présence de facteurs de risque CVS (diabète, tabac, hypertension, dyslipidémie, obésité), douleur à la marche et au décubitus, recherchez peau froide / peau dépilée / érythrocyanose de déclivité / allongement du TRC, décrire ulcères (distaux, profonds, bords nets et réguliers, petite taille 3/4), examen vasculaire (pouls, souffle) et mesure des IPS.",
+            "- Réaliser une écho-doppler artérioveineuse des membres inférieurs. Expliquer que les plaies sont liées à une mauvaise qualité des artères qui peuvent être bouchées, et que cette maladie peut être expliquée par le tabac et l'hypertension. Expliquer qu'il faut contrôler les facteurs de risque CVS (arrêt tabac, contrôle hypertension), traiter la maladie artérielle par médicaments ou une chirurgie, soins locaux pour la plaie, antalgiques adaptés, vérifier statut antitétanique.",
+            "Rappel différences entre ulcère artériel et veineux :",
+            "- Ulcère veineux : femme > 50a obèse de grande taille, ulcère unique grande taille peu creusant peu douloureux, périmalléolaire interne, exsudatif. Présence de varices, examen artériel normal. Echo-doppler des veines des MI et index de pression systolique pour rechercher AOMI",
+            "- Ulcère artériel: homme > 50a avec FdR CVS, ulcère unique ou multiple à l'emporte pièce creusant douloureux pâle, distal, douleur aggravée en décubitus, sec. Abolition des pouls périphériques, douleur intense +/- nécrose. Echo-doppler artériel et index de pression systolique pour rechercher AOMI (si < 0,7 = ulcère artériel pur, si 0,7<IPS<0,9 ulcère mixte à prédominance veineuse. Si ischémie critique (PAS < 50 cheville ou PAS < 30 orteil) = hospitalisation."
+          ],
+
+          questionSet: [
+            { "id": "q_ulcere_1", "patterns":["traitements", "toxiques", "loisirs", "profession", "allergies", "antécédents"], "answer":"Moi j'ai de l'hypertension mal contrôlée et des ressorts dans le cœur. Du coup j'ai de la nicardipine et de l'amlodipine. Après je n'ai pas d'allergies. Je suis retraité."},
+            { "id": "q_ulcere_2", "patterns":["diabète", "tabac", "hypertension", "HTA", "dyslipidémie", "obésité"], "answer":"J'ai de l'hypertension et je fume oui, un paquet de cigarette par jour depuis 40 ans." },
+            { "id": "q_ulcere_3", "patterns":["douleur à la marche", "douleur au décubitus"], "answer":"J'ai des douleurs quand je marche oui mais quand je m'arrête elles arrêtent aussi. J'ai des brûlures dans les jambes aussi quand je suis allongé et je suis obligé de me lever du coup." },
+            { "id": "q_ulcere_4", "patterns":["peau froide", "peau dépilée", "érythrocyanose de déclivité", "allongement du temps de recoloration cutanée", "TRC"], "answer":"Peau froide et dépilée. Allongement du TRC et érythrocyanose de déclivité." },
+            { "id": "q_ulcere_5", "patterns":["distaux", "profonds", "bords nets", "bords réguliers", "petite taille"], "answer":"Ulcères distaux de petite taille, à bords nets et réguliers et profonds." },
+            { "id": "q_ulcere_6", "patterns":["pouls", "souffle"], "answer":"Absence de pouls pédieux et poplités. Absence de souffle." },
+            { "id": "q_ulcere_7", "patterns":["IPS", "index de pression systolique"], "answer":"IPS à 0,6." },
+            { "id": "q_ulcere_8", "patterns":["écho-doppler"], "answer":"Echo-doppler retrouve une étiologie purement artérielle." },
+            { "id": "q_ulcere_9", "patterns":["mauvaise qualité", "bouchées"], "answer":"Oui d'accord." },
+            { "id": "q_ulcere_10", "patterns":["due au tabac", "due à l'hypertension", "du au tabac", "du à l'hypertension"], "answer":"Eh je me doutais que fumer c'était pas bien mais là quand même, c'est pas beau hun." },
+            { "id": "q_ulcere_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai ces plaies là qui ne partent pas, vous en pensez quoi ?"},
+            { "id": "q_ulcere_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_ulcere_13", "patterns":["arrêter de fumer", "sevrage tabagique", "arrêt du tabac", "contrôler l'hypertension", "contrôle de l'hypertension", "contrôler l'HTA", "contrôle de l'HTA"], "answer":"Je comprends je vais essayer." },
+            { "id": "q_ulcere_14", "patterns":["médicaments", "chirurgie"], "answer":"Ok je vois." },
+            { "id": "q_ulcere_15", "patterns":["soins locaux"], "answer":"D'accord." },
+            { "id": "q_ulcere_16", "patterns":["antalgie", "antalgiques"], "answer":"Merci." },
+            { "id": "q_ulcere_17", "patterns":["antitétanique", "tétanos"], "answer":"Vous vérifierez son statut antitétanique." }
+          ]
+        },
+
+{
+          id: "SDD18",
+          title: "Prescription et interprétation de tests allergologiques",
+          intro: `Un homme de 37 ans travaillant dans le bâtiment depuis quelques mois vous consulte à la suite d'une éruption cutanée initialement localisée aux mains pis au bras et au tronc : <img src= "seinrouge.png" style ="max-width:100%; border-radius:8px; margin-top:10px;".> Interrogez le patient afin de caractériser les lésions et décrivez les, évoquez un diagnostic, quels examens prescrivez vous et expliquez lui le déroulement, interprétez les résultats, proposez un traitement.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, toxiques, antécédents, traitements, allergies, loisirs, contact animaux), caractériser la lésion et date d'apparition et mode d'évolution (topographie, présence de dl, prurit, expo professionnelles, autres personnes atteintes), rythme professionnel (aggravation travail et amélioration pendant les vacances), décrire les lésions (placard érythémateux, érosions, squames), application d'un traitement local.",
+            "- Diagnostic de dermatite ou eczéma de contact d'origine professionnel. Proposer la réalisation de tests épicutanés ou patch tests ou épidermotests. Expliquez le déroulement (application d'allergènes, en peau saine sur le dos, à distance environ 1 mois de la poussée, lecture 48-72h). Interprétez le test (positif).",
+            "- Expliquer qu'il faut arrêter de rentrer en contact avec l'allergène, appliquer un émollient ou crème hydratante, dermocorticoïdes, anti-H1 si les démangeaisons sont trop importantes. Proposer une consultation avec le médecin du travail pour une adaption de poste, demander une reconnaissance en maladie professionnelle.",
+            "Patch-test : allergènes disposés sur la peau sous occlusion, au niveau du dos en peau saine, lecture à 48-72h, positif si érythème et papules (+) / papules et vésicules (++) / papules et vésico-bulles (+++). Explore les réactions allergiques retardées.",
+            "Pricks-test : allergène dans l'épiderme, au niveau de l'avant-bras en peau saine, lecture à 15mn, positif si >3mm. Explore les réactions allergiques immédiate.",
+          ],
+
+          questionSet: [
+            { "id": "q_allergiepro_1", "patterns":["antécédents", "profession", "toxiques", "animaux", "traitements"], "answer":"J'ai une dermatite atopique et je mets de temps en temps une crème pour ça, mais je me souviens pas du nom. Je sais aussi que mon fils à une rhinoconjonctivite et ma soeur de l'asthme. Je travaille dans le bâtiment depuis peu, genre 6 mois, et je suis donc en contact avec des sacs de ciment. Je ne bois pas et je ne fume pas."},
+            { "id": "q_allergiepro_2", "patterns":["caractériser", "topographie", "localisation", "douleurs", "exposition", "autres personnes"], "answer":"C'est des zones rouges au niveau des mains puis qui se couvrent de lésions translucides qui se percent et coulent. Ensuite ça me laisse des croûtes. J'ai pas mal mais ça me gratte énormément. Parfois ça s'entend au reste du corps. Mes collègues n'ont rien eu." },
+            { "id": "q_allergiepro_3", "patterns":["rythme professionnel", "aggravation au travail", "amélioration pendant les vacances", "s'aggrave au travail", "s'améliore pendant les vacances"], "answer":"Ah oui quand je suis en congé ça va beaucoup mieux, et quand j'applique de la crème aussi." },
+            { "id": "q_allergiepro_4", "patterns":["placard érythémateux", "érythème", "érosions", "squames"], "answer":"Validé." },
+            { "id": "q_allergiepro_5", "patterns":["local", "crèmes"], "answer":"La crème me soulage oui." },
+            { "id": "q_allergiepro_6", "patterns":["dermatite", "eczéma", "d'origine professionnelle"], "answer":"D'accord." },
+            { "id": "q_allergiepro_7", "patterns":["test épicutanés", "patch-test" "patchs tests", "patch test", "épidermotests"], "answer":"Ok faisons le." },
+            { "id": "q_allergiepro_8", "patterns":["application d'allergène", "peau saine", "dos", "1 mois de la poussée", "48-72h"], "answer":"D'accord je vois. Le test revient avec un érythème avec des papules au chrome (ciment)." },
+            { "id": "q_allergiepro_9", "patterns":["positif", "positifs"], "answer":"Ah c'est positif ? Comment je fais alors ?" },
+            { "id": "q_allergiepro_10", "patterns":["arrêter le contact"], "answer":"Ok..." },
+            { "id": "q_allergiepro_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai des tâches sur les mains qui me dérangent, c'est du à quoi ? "},
+            { "id": "q_allergiepro_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_allergiepro_13", "patterns":["émollient", "crème hydratante"], "answer":"D'accord de toute façon la crème m'aide toujours." },
+            { "id": "q_allergiepro_14", "patterns":["dermocorticoïdes"], "answer":"Ok tous les jours pendant que j'ai ces lésions alors." },
+            { "id": "q_allergiepro_15", "patterns":["anti-H1"], "answer":"D'accord que si les démangeaisons sont horribles." },
+            { "id": "q_allergiepro_16", "patterns":["médecin du travail", "maladie professionnelle"], "answer":"Oui parce que bon, c'est quand même lié au boulot tout ça. J'aimerais bien qu'on adapte mon poste au minimum." }
+          ]
+        },
+
+{
+          id: "SDD19",
+          title: "Prise en charge d'une ectoparasitose",
+          intro: "Une patiente de 38 ans vous consulte dans votre cabinet de médecine générale car elle souhaiterait un traitement pour son fils unique de 6 ans, qui se plaint de démangeaisons du cuir chevelu et qui présente des lésions croûteuses de petite taille, notamment au niveau de la nuque. Elle en profite pour vous expliquer qu'elle est elle-même victime de démangeaisons, au niveau de la vulve depuis quelques jours. Quels sont les 2 diagnostic que vous suspectez chez l'enfant, quels traitement(s) et mesures proposez vous, interrogez la mère sur sa symptomatologie, posez un diagnostic et proposez un bilan, traitez la patiente.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Evoquer le diagnostic de poux de tête et d'impétigo ou lésions impétiginisées. Shampooing à la diméticone / peignes antilentes / 2e application à une semaine, lavage des textiles à 60°C. Traitement des lésions impétiginisées par crème à la mupirocine 2 fois par jour pendant 5 jours, protéger d'un pansement.",
+            "- Interrogatoire général (profession, antécédents, traitements, loisir, allergies), comportements sexuels à risque, signes en faveur d'une infection génitale basse (leucorrhées, douleurs, SFU). Evoquer le diagnostic de poux de pubis / morpions. Proposer un bilan de dépistage des IST. Rasage de la zone, perméthrine et 2e dose à une semaine d'intervalle."
+          ],
+
+          questionSet: [
+            { "id": "q_morpions_1", "patterns":["traitements", "profession", "loisir", "antécédents", "allergies"], "answer":"Ni mon fils ni moi n'avons d'antécédents ou de traitement. Je suis maraichère je ne fume pas et je bois pas. Je suis divorcée."},
+            { "id": "q_morpions_2", "patterns":["poux de tête"], "answer":"Ok on s'en doutait." },
+            { "id": "q_morpions_3", "patterns":["impétigo", "lésions impétiginisées"], "answer":"D'accord je vois." },
+            { "id": "q_morpions_4", "patterns":["shampooing à la diméticone", "laisser poser puis rincer", "peigne antilentes", "à une semaine d'intervalle", "dans une semaine"], "answer":"D'accord je lui ferai ça." },
+            { "id": "q_morpions_5", "patterns":["60°"], "answer":"Ah d'accord je ne savais pas qu'on pouvait tout laver à 60°C." },
+            { "id": "q_morpions_6", "patterns":["mupirocine", "2 fois par jour pendant 5 jours", "pansement"], "answer":"Ok on fera ça." },
+            { "id": "q_morpions_7", "patterns":["comportements sexuels à risque"], "answer":"Oui j'ai des démangeaisons à la suite d'un rapport que vous avez eu il y a une dizaine de jours avec un partenaire que je connaissais pas." },
+            { "id": "q_morpions_8", "patterns":["leucorrhées", "douleurs", "signes fonctionnels urinaires", "brûlures urinaires", "dysurie", "nycturie"], "answer":"Je n'ai pas d'écoulement, pas d'odeur anormale, ni douleurs et pas de signes urinaires. J'ai l'impression de voir des petites bêtes." },
+            { "id": "q_morpions_9", "patterns":["morpions"], "answer":"Oh bah mince." },
+            { "id": "q_morpions_10", "patterns":["bilan des IST", "infections sexuellement transmissibles"], "answer":"Oui ok je comprends." },
+            { "id": "q_morpions_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon fils se gratte le crâne, vous pourriez regarder ?"},
+            { "id": "q_morpions_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_morpions_13", "patterns":["rasage", "perméthrine", "à une semaine d'intervalle", "une semaine"], "answer":"Ok je vais faire ça." }
+          ]
+        },
+
+{
+          id: "SDD20",
+          title: "Consultation post évènement allergique",
+          intro: "Vous recevez en consultation d'allergologie le jeune Léo 14 ans accompagné de sa mère. Le diagnostic d'allergie au venin d'hyménoptère a été posé lors de la précédente consultation. Expliquez le concept d'allergie au patient, les mesures prophylactiques pour éviter une nouvelle réaction, expliquez le traitement à suivre en cas de nouvelle réaction. Expliquez la désensibilisation ou immunothérapie allergénique (principe, modalités pratiques, efficacité et surveillance).",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer : allergie est une réaction excessive du corps face à une exposition à une substance qui n'entraine pas de symptômes chez les non allergiques. Consignes de prudence : vêtements couvrants, éviter de rester près d'arbres à la fleur ou à fruit, éviter de restes de nourriture, éviter de marcher pied nus, éviter les crèmes et parfums odorants, rester calme face aux insectes, retirer les nids. Expliquer la nécessité de détenir une carte pour personne allergique, nécessité d'avoir une trousse d'urgence.",
+            "- En cas de piqûre d'hyménoptère il faut retirer le dard, si réaction locale (rougeur, œdème, démangeaisons) refroidir la zone avec de la glace et prendre un antihistaminique si les démangeaisons sont trop importantes. Expliquer qu'en cas de réaction étendue il faut prendre un antihistaminique et des corticoïdes par la bouche quelques jours. Si l'atteinte est plus grave il faut s'injecter de l'adrénaline et appeler le 15",
+            "- Expliquer que l'immunothérapie allergénique ou désensibilisation permet d'exposer son corps à des petites doses de venin d'hyménoptère pour qu'il s'habitue. Traitement dure au moins 3 ans, est le seul traitement qui permet de guérir complètement, qu'il peut se prendre par la bouche ou en injection. Expliquer que la désensibilisation permet d'éviter la survenue et réduire les symptômes allergiques, doit faire la preuve de son efficacité sous un an sinon sera arrêtée."
+          ],
+
+          questionSet: [
+            { "id": "q_allergie_1", "patterns":["réaction excessive", "pas de symptômes chez les non allergiques"], "answer":"Okkk je vois, et comment je peux éviter de me faire piquer ?"},
+            { "id": "q_allergie_2", "patterns":["vêtements couvrants", "vêtements clairs", "pas rester près de fleurs", "pas rester près de restes de nourriture", "pas marcher pied nu", "crèmes", "parfums odorants", "mouvements brusques", "retirer les nids"], "answer":"Je vois. J'aurais des trucs à prendre avec moi tout le temps du coup ?" },
+            { "id": "q_allergie_3", "patterns":["carte"], "answer":"Ah d'accord." },
+            { "id": "q_allergie_4", "patterns":["trousse d'urgence"], "answer":"Ok je vois." },
+            { "id": "q_allergie_5", "patterns":["retirer le dard"], "answer":"D'accord donc on retire le dard au plus vite." },
+            { "id": "q_allergie_6", "patterns":["réaction locale", "glace", "antihistaminiques"], "answer":"Ok je vois." },
+            { "id": "q_allergie_7", "patterns":["corticoïdes"], "answer":"Ok si ça dure trop je peux prendre des corticoïdes quelques jours quoi." },
+            { "id": "q_allergie_8", "patterns":["grave", "du mal à respirer", "douleurs abdominales", "maux de tête", "baisse de tension", "perte de connaissance", "adrénaline", "15"], "answer":"Oui c'est en cas d'urgence que je prends l'adrénaline en gros." },
+            { "id": "q_allergie_9", "patterns":["immunothérapie", "petites doses", "s'habitue"], "answer":"OK je vois." },
+            { "id": "q_allergie_10", "patterns":["3 ans", "guérir", per os", "par la bouche", "injection"], "answer":"D'accord c'est plutôt long comme thérapie." },
+            { "id": "q_allergie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Il parait que j'ai des allergies, comment ça s'explique ça ? "},
+            { "id": "q_allergie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_allergie_13", "patterns":["désensibilisation", "première année"], "answer":"Ok donc ça, ça a un an pour marcher, sinon c'est mort." }
+          ]
+        },
+
+{
+          id: "SDD21",
+          title: "Prévention / dépistage des cancers de l'adulte",
+          intro: `Un patient de 78 ans, ancien agriculteur, que vous suivez pour traitement de kératoses actiniques, aux antécédents d'hypertension sous IEC et de dyslipidémie sous statines, sans allergies, tabagique 40 PA, vous consulte dans votre cabinet de dermatologie pour consultation de contrôle. Vous ne l'avez pas vu depuis 2 ans car il ne s'est pas présenté aux derniers rendez vous. <img src= "carcinome.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Rappelez les mesures de prévention au patient. Le patient se plaint d'une lésion du bras droit qu'il vous montre, décrivez la et décrivez ce que vous rechercher particulièrement, posez un diagnostic et expliquez le au patient, expliquez la suite de la PEC dans un langage adapté.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer l'importance de la photoprotection (crème 50+, vêtements longs, éviter l'exposition durant les heures de fort ensoleillement), l'importante de l'auto surveillance régulière. Que les lésions devant l'alerter sont celles différentes des grains de beauté habituels, qui le grattent, qui saignent, qui augmentent en taille et/ou se modifient. Vérifier aux cs de contrôle de manière régulière.",
+            "- Décrire la lésion (ulcération, croûtes), mesurer la lésions et contrôler sa mobilité avec le plan profond, rechercher une autre lésion cutanée sur la peau et les muqueuses, rechercher des adénopathies. Evoquer le diagnostic de carcinome épidermoïde ou spinocellulaire, dire que c'est une plaie potentiellement cancéreuse se développant sur une peau exposée au soleil. Dire qu'il faudra faire une petite chirurgie pour l'enlever et qu'on l'analysera au microscope pour confirmer ou non le diagnostic."
+          ],
+
+          questionSet: [
+            { "id": "q_cancerdermato_1", "patterns":["photoprotection", "crème solaire", "vêtements amples", "éviter l'exposition"], "answer":"C'est vrai que je suis pas mal au soleil puisque que je suis agriculteur."},
+            { "id": "q_cancerdermato_2", "patterns":["autosurveillance"], "answer":"D'accord je ferais plus attention, surtout que j'ai pas mal de lésions de kératoses qu'on suit. Et là c'est faisait 2 ans qu'on s'était pas vus." },
+            { "id": "q_cancerdermato_3", "patterns":["différentes", "différent", "grattent", "gratte", "saigne", "saignent", "augmente en taille", "évolue", "évoluent"], "answer":"Je vois. Moi je peux vous dire que ça fait un an qu'elle augmente de taille cette lésion." },
+            { "id": "q_cancerdermato_4", "patterns":["consultations de contrôle"], "answer":"Eh oui je comprends bien." },
+            { "id": "q_cancerdermato_5", "patterns":["ulcération", "croûtes"], "answer":"Validé." },
+            { "id": "q_cancerdermato_6", "patterns":["mesurer la lésion", "mobilité", "plan profond"], "answer":"Validé." },
+            { "id": "q_cancerdermato_7", "patterns":["autre lésion"], "answer":"Absence d'autres lésions visibles." },
+            { "id": "q_cancerdermato_8", "patterns":["adénopathies"], "answer":"Absence d'adénopathies palpables." },
+            { "id": "q_cancerdermato_9", "patterns":["carcinome épidermoïde", "carcinome spinocellulaire"], "answer":"Oh je vois, c'est quoi un carcinome et c'est du à quoi ?" },
+            { "id": "q_iatrogénie_10", "patterns":["cancer", "exposition solaire prolongée"], "answer":"Ah mince... Et vous allez me l'enlever quand même ?" },
+            { "id": "q_cancerdermato_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai cette lésion moche là. Comment j'aurais du faire pour pas qu'elle se développe ?"},
+            { "id": "q_iatrogénie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_cancerdermato_13", "patterns":["chirurgie", "exérèse", "biopsie"], "answer":"Ok ça va. Et on est surs que c'est un cancer ?" },
+            { "id": "q_cancerdermato_14", "patterns":["microscope", "microscopie"], "answer":"Ok je vois..." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
