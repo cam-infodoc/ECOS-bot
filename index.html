@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MédiBot+</title>
+<title>MédiBot</title>
 <style>
 body {
   font-family: system-ui;
@@ -6403,6 +6403,513 @@ const data = {
             { "id": "q_iatrogénie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
             { "id": "q_cancerdermato_13", "patterns":["chirurgie", "exérèse", "biopsie"], "answer":"Ok ça va. Et on est surs que c'est un cancer ?" },
             { "id": "q_cancerdermato_14", "patterns":["microscope", "microscopie"], "answer":"Ok je vois..." }
+          ]
+        }
+      ]
+    },
+
+  {
+      id: "Med interne",
+      title: "Médecine interne",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Anomalies de couleur des extrémités",
+          intro: `Une femme de 48 ans aux antécédent d'asthme sous bronchodilatateur de courte durée d'action, vous consule pour une modification récente et récidivante de la couleur de l'extrémité de ses doigts durant une dizaine de minute, qu'elle a pris en photo. Expliquez ce que vous suspectez et expliquez le à la patiente, interroger la patiente pour préciser sa symptomatologie et rechercher une étiologie, expliquez ce que vous recherchez particulièrement, décrivez ce que vous observez, et les examens que vous voulez prescrire. <img src= "sclérodermie.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Phénomène ou sd de Raynaud, expliquer que c'est fréquent lié à une diminution de la vascularisation des extrémités par rétrécissement transitoire des petits vaisseaux.",
+            "- Rechercher des signes de Raynaud secondaire : unilatérale, touche pouces, début après 40 ans, absence d'ATCD familiaux, absence rémission estivale. Rechercher une étiologie : signes généraux (diminution appétit, fatigue, amaigrissement, fièvre, sécheresse muqueuse), signes digestifs (difficultés à la déglutition), signes CVS (étouffement, toux, dl thoracique), signes ostéoarticulaires (dl articulaires), exposition (b-bloquant, triptans, clonidine, traumatismes répétés, engins vibrants, tabac, cannabis, cocaïne). Rechercher ue gêne dans la vie personnelle et professionnelle.",
+            "- Rechercher des signes de sclérodermie (ulcères digitaux, sclérodactylie, calcinose sous cutanée, télangiectasies, hémorragies sous unguéales), palper les pouls et ausculter les trajets vasculaires, expliquer les manoeuvre d'Allen (absence de revascularisation de la main lors de la levée de la compression d'une des deux artères).",
+            "- Dire qu'il s'agit de nécrose digitale et de télangiectasies. Qu'il faut doser les Ac antinucléaires (AAN) et réaliser une capillaroscopie."
+          ],
+
+          questionSet: [
+            { "id": "q_sclérodermie_1", "patterns":["phénomène de Raynaud", "syndrome de Raynaud"], "answer":"D'accord je vois."},
+            { "id": "q_sclérodermie_2", "patterns":["fréquent", "diminution de la vascularisation des extrémités"], "answer":"Ok je comprends." },
+            { "id": "q_sclérodermie_3", "patterns":["unilatéral", "unilatérale", "pouces", "40 ans", "absence d'antécédents", "absence de rémission estivale"], "answer":"Ca atteint tous mes doigts, c'est plutôt par crise et c'est très douloureux. C'est tout ce que je peux dire." },
+            { "id": "q_sclérodermie_4", "patterns":["diminution de l'appétit", "fatigue", "fatiguée", "amaigrissement", "amaigrie", "fièvre", "sécheresse des muqueuses", "difficulté à la déglutition", "du mal à avaler", "douleurs articulaires", "étouffement", "douleur thoracique", "toux", "bêta-bloquants", "b-bloquants", "triptans", "traumatismes répétés", "tabac", "cocaïne", "cannabis"], "answer":"J'ai une sensation de blocage des aliments solides lors des repas depuis quelques temps." },
+            { "id": "q_sclérodermie_5", "patterns":["vie personnelle", "vie professionnelle", "au travail"], "answer":"Oui ça commence à me gêner dans ma vie quotidienne." },
+            { "id": "q_sclérodermie_6", "patterns":["ulcères digitaux", "sclérodactylie", "calcinose sous cutanée", "télangiectasies", "hémorragies sous-unguéales"], "answer":`<img src= "nécrosedigitale.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`},
+            { "id": "q_sclérodermie_7", "patterns":["pouls", "trajets vasculaires"], "answer":"Absence d'anomalies." },
+            { "id": "q_sclérodermie_8", "patterns":["manoeuvre d'Allen", "levée de la compression"], "answer":"Absence d'anomalies à la manoeuvre d'Allen." },
+            { "id": "q_sclérodermie_9", "patterns":["nécrose digitale"], "answer":"Validé." },
+            { "id": "q_sclérodermie_10", "patterns":["télangiectasies"], "answer":"Validé." },
+            { "id": "q_sclérodermie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Qu'est-ce que j'ai aux doigts selon vous ?"},
+            { "id": "q_sclérodermie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_sclérodermie_13", "patterns":["anticorps antinucléaires", "AAN", "Ac antinucléaires", "anticorps anti nucléaires"], "answer":"Prescription faite." },
+            { "id": "q_sclérodermie_14", "patterns":["capillaroscopie"], "answer":"Prescription faite." }
+          ]
+        },
+
+        {
+          id: "SDD2",
+          title: "Adénopathie unique ou multiple",
+          intro: `Vous recevez dans votre cabinet en consultation de médecine générale, M. A 42 ans car il présente une boule au niveau de l'aisselle droite. Réalisez un interrogatoire détaillé, l'examen clinique de l'adénopathie, précisez les éléments que vous recherchez à l'examen clinique pour orienter la démarche étiologique, nommez votre principale hypothèse diagnostique et citez l'examen à réaliser pour confirmer votre hypothèse diagnostique. <img src= "adénopathie.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Réaliser un interrogatoire général (profession, toxiques, ATCD personnels et familiaux, traitements, allergies), interrogatoire orienté (vaccins, contact / griffures / morsures, voyages, rapports sexuels à risque, date et mode de début), signes généraux (fièvre, fatigue, amaigrissement, sueurs nocturnes, démangeaisons, saignements, dl osseuses). Rechercher d'autres adénopathies, localisation, consistance, adhérence, inflammatoire, sensible ou douloureux.",
+            "- Rechercher atteinte lymphoïde extra-ganglionnaire (hépatomégalie, splénomégalie, hypertrophie amygdalienne, hypoesthésie de la houppe du menton), plaie sur bras / gril costal), constantes. Evoquer le diagnostic de maladie des griffes du chat ou Bartonellose, réaliser une sérologie Bartonella henselae."
+          ],
+
+          questionSet: [
+            { "id": "q_bartonellose_1", "patterns":["antécédents", "toxiques", "fumez", "buvez", "profession", "traitements", "allergies"], "answer":"Je n'ai aucun antécédent et je ne prends aucun traitement. Je n'ai pas d'allergies particulières et je suis agent de sécurité. Je ne fume pas et ne bois pas."},
+            { "id": "q_bartonellose_2", "patterns":["vaccins", "vaccinations", "griffure", "morsure", "animaux domestiques", "animaux sauvages", "voyages", "rapports sexuels à risque", "début", "depuis quand", "combien de temps"], "answer":"Mes vaccins sont à jour et je n'ai pas eu de comportement sexuels à risque. Ca fait quelques jours que j'ai cette boule. J'ai eu un contact avec le chaton de mon frère avec qui j'ai joué il y a quelques semaines." },
+            { "id": "q_bartonellose_3", "patterns":["fièvre", "fatigue", "asthénie", "amaigrissement", "diminution de l'appétit", "sueurs nocturnes", "démangeaisons", "saignements", "douleurs osseuses", "saignement"], "answer":"Je n'ai aucun symptôme hormis cette boule." },
+            { "id": "q_bartonellose_4", "patterns":["adénopathies", "autres localisations"], "answer":"Absence d'autres adénopathies." },
+            { "id": "q_bartonellose_5", "patterns":["hépatomégalie", "splénomégalie", "hypertrophie amygdalienne", "hypoesthésie de la houppe du menton"], "answer":"Examen clinique normal hormis adénopathie axillaire droite." },
+            { "id": "q_bartonellose_6", "patterns":["plaie", "bras", "gril costal"], "answer":"Présence d'une griffure de chat sur la main droite." },
+            { "id": "q_bartonellose_7", "patterns":["fréquence cardiaque", "FC", "saturation", "sat", "fréquence respiratoire", "FR", "température", "constantes", "paramètres vitaux"], "answer":"Constantes normales." },
+            { "id": "q_bartonellose_8", "patterns":["maladie des griffes du chat", "bartonellose"], "answer":"D'accord je vois." },
+            { "id": "q_bartonellose_9", "patterns":["sérologie"], "answer":"Prescription faite." },
+            { "id": "q_comageria_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai cette boule au niveau de l'aisselle, qu'est-ce que ça peut être ?"},
+            { "id": "q_comageria_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." }
+          ]
+        },
+
+        {
+          id: "SDD3",
+          title: "Amaigrissement",
+          intro: "Vous recevez dans votre cabinet de médecine générale, une patiente de 76 ans pour amaigrissement. Interrogez la patiente, décrivez ce que vous recherchez à l'examen clinique, évaluez le retentissement de l'amaigrissement, proposez à l'évaluateur un bilan biologique et radiologique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Réaliser un interrogatoire général (profession, toxiques, ATCD, traitements, allergies, loisir, contact avec animaux, comportements sexuels à risque, mode de vie), affirmer l'amaigrissement (peser, mesurer, préciser le nombre de kg perdus estimés), évaluer les ingesta (évaluer son appétit, estimer ses apports à l'aide d'une échelle), rechercher des signes de malabsorption ou maldigestion (selles trop fréquentes ou abondantes, consistance molles / liquides / grasses, inconfort digestif et douleurs abdominales), humeur triste ou perte de plaisir.",
+            "- Rechercher une pathologie de la cavité buccale et de la déglutition, sarcopénie (diminution force au dynamomètre ou hand grip, diminution fonction musculaire), OMI, présence adénopathies / goitre / nodules thyroïdiens. Rechercher une hypotension et bradycardie, hypothermie, fatigue / constipation / hypoglycémie symptomatique.",
+            "- Réaliser un bilan biologique (hémogramme, CRP, ionogramme, créatininémie, calcémie, glycémie, albumine et transthyrétine, bilan hépatique, TSH, IDR à la tuberculine, sérologie VIH, bandelette urinaire 6/12). Réaliser une imagerie (radio ou scanner thoracique, scanner ou échographie abdominopelvien(ne), radiocinéma de la déglutition 2/3)."
+          ],
+
+          questionSet: [
+            { "id": "q_amaigrissement_1", "patterns":["profession", "toxiques", "alcool", "tabac", "antécédents", "traitements", "allergies", "loisir", "animaux", "comportements sexuels à risque", "mode de vie"], "answer":"J'ai un peu d'hypertension pour laquelle je prends du ramipril. Sinon j'ai pas d'allergies, je ne fume pas et ne bois pas. Je n'ai pas de comportement sexuel à risque."},
+            { "id": "q_amaigrissement_2", "patterns":["peser", "mesurer", "nombre de kg perdus", "nombre de kilos perdus"], "answer":"Poids actuel : 61kg. Taille 172 cm. Perte de poids estimée de 4kg en un mois passant de 65kg à 61 kg." },
+            { "id": "q_amaigrissement_3", "patterns":["appétit", "apports"], "answer":"Mon appétit est inchangé et je mange comme d'habitude avec 3 repas équilibrés par jour." },
+            { "id": "q_amaigrissement_4", "patterns":["trop fréquentes", "abondantes", "consistance", "molles", "liquides", "grasses", "inconfort digestif", "douleurs abdominales"], "answer":"Mon transit est régulier et normal." },
+            { "id": "q_amaigrissement_5", "patterns":["humeur triste", "perte de plaisir"], "answer":"Non je vais bien." },
+            { "id": "q_amaigrissement_6", "patterns":["cavité buccale", "déglutition"], "answer":"Absence d'anomalies de la cavité buccale." },
+            { "id": "q_amaigrissement_7", "patterns":["sarcopénie", "dynamomètre", "hand grip", "fonction musculaire", "vitesse de marche"], "answer":"Absence de signes de sarcopénie." },
+            { "id": "q_amaigrissement_8", "patterns":["oedèmes des membres inférieurs", "OMI"], "answer":"Absence d'OMI." },
+            { "id": "q_amaigrissement_9", "patterns":["adénopathie", "goitre", "nodules thyroïdiens"], "answer":"Absence d'adénopathies ou de goitre thyroïdien." },
+            { "id": "q_amaigrissement_10", "patterns":["hypotension", "bradycardie"], "answer":"Absence d'hypotension et de bradycardie." },
+            { "id": "q_amaigrissement_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai perdu un peu de poids j'aimerais en discuter avec vous."},
+            { "id": "q_amaigrissement_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_amaigrissement_13", "patterns":["hypothermie"], "answer":"Absence d'hypothermie." },
+            { "id": "q_amaigrissement_14", "patterns":["fatigue", "constipation", "hypoglycémie", "malaise", "troubles visuels", "fatigue", "anxiété", "tremblements", "pâleur", "nausée"], "answer":"Ah oui quand même je me sens plus fatiguée que d'habitude." },
+            { "id": "q_amaigrissement_15", "patterns":["hémogramme", "CRP", "ionogramme", "créatininémie", "calcémie", "glycémie", "albumine", "transthyrétine", "bilan hépatique", "TSH", "IDR", "VIH", "bandelette urinaire", "BU"], "answer":"Prescription faite." },
+            { "id": "q_amaigrissement_16", "patterns":["radiographie thoracique", "scanner thoracique", "scanner abdominopelvien", "échographie abdominopelvienne", "radiocinéma"], "answer":"Prescription faite." }
+          ]
+        },
+
+{
+          id: "SDD4",
+          title: "Asthénie",
+          intro: "Vous recevez dans votre cabinet une jeune femme de 25 ans, disant être très fatiguée et avoir des douleurs articulaires d'apparition récente. Interrogez la patiente, évoquez un diagnostic et expliquez le à la patiente, prescrivez des examens, décrivez les conseils principaux à donner à la patiente, si votre diagnostic est confirmé proposez un traitement de première ligne.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Réaliser un interrogatoire général (profession, toxiques, antécédents, traitements, allergies, loisir, animaux, comportements sexuels à risque), nature des arthralgies (localisation, nombre d'articulations, intensité, horaire douleur, raideur matinale), autres symptômes (cutanéo-muqueux (éruption cutanée zones photoexposées), néphrologiques (œdème, hypertension), cardiovasculaires (douleur thoracique, dyspnée, thromboses, Raynaud), respiratoire (dyspnée, toux).",
+            "- Evoquer le diagnostic de lupus érythémateux systémique, expliquer la maladie dans un langage adapté (MAI chronique, surtout jeune femme en période d'activité génitale favorisé par la contraception / tabac / soleil).",
+            "- Faire doser les autoanticorps (AAN, anti-ADN natif), un bilan sanguin (hémogramme, CRP, bilan hémostase, créatininémie, albumine, complément), demander une BU, demander un ECG.",
+            "- Eduquer la patiente : arrêt tabac, protection solaire, modification de la contraception par progestatif ou DIU au cuivre. Expliquer qu'il s'agit d'une maladie chronique nécessitant une surveillance régulière.",
+             "- Proposer de l'hydroxychloroquine, un antalgique adapté et éduquer la patiente sur l'observance du traitement."
+
+          ],
+
+          questionSet: [
+            { "id": "q_LES_1", "patterns":["profession", "toxiques", "antécédents", "traitements", "loisirs", "allergies", "animaux", "comportements sexuels à risque"], "answer":"Je n'ai pas d'antécédents et je ne prends donc pas de traitement. Je suis juste sous contraception OP orale. Je suis maîtresse des écoles, et je fume 1/2 paquet par jour depuis 8 ans. J'ai aussi un chat. Vivant dans le sud évidemment je vais beaucoup à la plage."},
+            { "id": "q_LES_2", "patterns":["localisation", "où", "nombre d'articulation", "intensité", "horaire de la douleur", "partie de la nuit", "raideur matinale"], "answer":"Mes douleurs sont surtout au repos, en deuxième partie de nuit avec une raideur le matin pendant bien 2 heures. C'est bilatéral et symétrique au niveau des métacarpo-phalangiennes et des interphalangiennes proximales. Je n'ai pas de déformations pour autant, et l'intensité est à 3/10." },
+            { "id": "q_LES_3", "patterns":["éruption cutanée", "photoexposées", "érosions muqueuses", "œdème", "hypertension", "douleur thoracique", "dyspnée", "thromboses", "Raynaud", "toux"], "answer":"Oui j'ai eu une éruption du visage post exposition solaire il y a quelques semaines. C'était sur les joues sous les yeux." },
+            { "id": "q_LES_4", "patterns":["lupus érythémateux systémique"], "answer":"Oh d'accord je vois et c'est quoi ?" },
+            { "id": "q_LES_5", "patterns":["maladie auto-immune", "jeune femme", "contraception", "poussées"], "answer":"D'accord je vois." },
+            { "id": "q_LES_6", "patterns":["anticorps antinucléaires", "anticorps anti-ADN natif"], "answer":"Prescription faite." },
+            { "id": "q_LES_7", "patterns":["hémogramme", "CRP", "bilan d'hémostase", "créatininémie", "albumine", "complément"], "answer":"Prescription faite." },
+            { "id": "q_LES_8", "patterns":["bandelette urinaire", "BU"], "answer":"Prescription faite." },
+            { "id": "q_LES_9", "patterns":["électrocardiogramme", "ECG"], "answer":"Prescription faite." },
+            { "id": "q_LES_10", "patterns":["arrêt du tabac", "arrêter de fumer", "protection solaire", "modification de la contraception", "progestatif", "DIU au cuivre"], "answer":"Bien sûr je comprends, je fais arrêter de fumer et changer de contraception." },
+            { "id": "q_LES_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je me trouve fatiguée et j'ai des douleurs articulaires..."},
+            { "id": "q_LES_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_LES_13", "patterns":["surveillance régulière", "maladie chronique"], "answer":"D'accord ça me va, je prendrais des rendez vous réguliers." },
+            { "id": "q_LES_14", "patterns":["hydroxychloroquine"], "answer":"D'accord je veux bien prendre ce traitement." },
+            { "id": "q_LES_15", "patterns":["antalgique", "palier 1"], "answer":"Merci !" },
+            { "id": "q_LES_16", "patterns":["observance"], "answer":"Oui je ferais bien attention à prendre mon traitement correctement" }
+          ]
+        },
+
+{
+          id: "SDD5",
+          title: "Splénomégalie",
+          intro: "Vous recevez en consultation Mr B 53 ans pour inconfort en hypocondre gauche. Vous suspectez une splénomégalie. Expliquez à votre externe comment examiner une splénomégalie, les signes d'hépatopathies à rechercher et les mesures prophylactiques à réaliser avant et après une splénectomie.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer qu'il faut que le patient soit en décubitus dorsal ou latéral droit, le bras gauche surélévé et les mains de l'examinateur sous le rebord costal en crochet. Les jambes du patient doivent être semi-fléchies pour détendre la paroi abdominale. La palpation doit être douce et synchrone avec la respiration. La masse s'abaisse lors de l'inspiration profonde, peut dépasser l'ombilic si volumineuse, mate à la percussion, commencer la palpation de la FIG vers l'hypocondre G. Il faut réaliser un schéma de la taille de la rate pour le suivi évolutif.",
+            "- Rechercher une hépatomégalie, signes d'insuffisance hépatocellulaire (angiomes stellaires, érythrose palmaire / plantaire, ongles blancs, hippocratisme digital, agrandissement de la lunule, ictère conjonctival ou cutané, foetor hepaticus, inversion du cycle nycthéméral, astérixis, confusion et troubles de la conscience, hypogonadisme (5/11). Rechercher des signes d'hypertension portale (ascite, splénomégalie, circulation veineuse collatérale (2/3).",
+            "- Prévention avant splénectomie : mise à jour des vaccins, vaccin annuel grippe, vaccin anti pneumococcique, vaccin contre Haemophilus B, vaccin méningocoque.",
+            "- Prévention post-splénectomie : antibioprophylaxie par pénicilline V ou oracilline long cours pendant au moins 2 ans, éducation thérapeutique (consulter devant toute fièvre et ATB en urgence par C3G)."
+          ],
+
+          questionSet: [
+            { "id": "q_splénomégalie_1", "patterns":["décubitus dorsal", "décubitus latéral droit", "crochet"], "answer":"Ok je vois."},
+            { "id": "q_splénomégalie_2", "patterns":["jambes semi-fléchies"], "answer":"D'accord donc jambes semi fléchies." },
+            { "id": "q_splénomégalie_3", "patterns":["palpation douce", "synchrone avec la respiration"], "answer":"Oui bien sur." },
+            { "id": "q_splénomégalie_4", "patterns":["s'abaisse lors de l'inspiration", "dépasser l'ombilic", "mate", "de la fosse iliaque gauche vers l'hypochondre gauche"], "answer":"Ok, je comprends." },
+            { "id": "q_splénomégalie_5", "patterns":["schéma"], "answer":"Faire un schéma d'accord." },
+            { "id": "q_splénomégalie_6", "patterns":["hépatomégalie"], "answer":"Ok je vois." },
+            { "id": "q_splénomégalie_7", "patterns":["angiomes stellaires", "érythrose palmaire", "érythrose plantaire", "ongles blancs", "leuconychies", "hippocratisme digital", "agrandissement de la lunule", "ictère", "foetor hepaticus", "inversion du cycle nycthéméral", "astérixis", "confusion", "troubles de la conscience", "hypogonadisme"], "answer":"Ok donc on vérifie qu'il n'y ait pas de signes d'insuffisance hépatocellulaire." },
+            { "id": "q_splénomégalie_8", "patterns":["ascite", "splénomégalie", "circulation veineuse collatérale"], "answer":"Ok on cherche aussi des signes d'hypertension portale." },
+            { "id": "q_splénomégalie_9", "patterns":["mise à jour des vaccins", "grippe", "antipneumococcique", "pneumocoque", "haemophilus B", "méningocoque"], "answer":"Ok je vois donc on vérifie bien les vaccins." },
+            { "id": "q_splénomégalie_10", "patterns":["pénicilline V", "oracilline", "2 ans"], "answer":"Ok donc on met un antibiotique pendant 2 ans." },
+            { "id": "q_splénomégalie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Vous pourriez m'expliquer comment on examine une splénomégalie ?"},
+            { "id": "q_splénomégalie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_splénomégalie_13", "patterns":["éducation thérapeutique", "consulter devant toute fièvre", "antibiothérapie en urgence"], "answer":"Ok donc s'il a de la fièvre il doit consulter." }
+          ]
+        },
+
+{
+          id: "SDD6",
+          title: "Tendance au saignement",
+          intro: `Vous recevez aux urgences un patient de 35 ans se plaignant de tâches au niveau des jambes. Les lésions ne s'effacent pas à la vitropression. Il ne se plaint de rien d'autre et n'a pas d'AEG. C'est la première fois qu'il présente cette symptomatologie. Il s'agit d'un mécanicien sans ATCD particuliers. Il n'a pas d'allergies, ne prend aucun traitement et ne consomme pas de toxiques. Il n'a pas de relations sexuelles à risque. Nommez la lésions décrivez la et expliquez la simplement au patient, expliquez les 2 premières étiologies que vous recherchez et comment vous le faites, expliquez ce que vous recherchez à la clinique. Tous les examens reviennent normaux, citez le diagnostic suspecté et expliquez le au patient.<img src= "purpura.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Dire qu'il s'agit d'un purpura pétéchial, que ce sont des macules érythémateuses monomorphes et punctiformes avec intervalle de peau saine, que le purpura est un passage de sang dans la peau qui peut être causé par une baisse des plaquettes ou une maladie des vaisseaux.",
+            "- Expliquer qu'il faut rechercher un purpura infectieux, qu'il faut prendre la température, qu'il faut rechercher un purpura thrombotique et qu'il faut réaliser une NFS.",
+            "- Rechercher un purpura cutanéo-muqueux extensif ou nécrotique, rechercher des bulles hémorragiques intrabuccales, des signes de focalisation ou un sd méningé / épistaxis / hémorragies fond oeil / hématurie macroscopique. Rechercher une hémorragie digestive extériorisée, présence organomégalies et adénopathies.",
+            "- Evoquer le diagnostic de purpura thrombopénique et idiopathique. Expliquer qu'il s'agit d'une maladie auto-immune dont les défenses immunitaires détruisent les plaquettes ce qui peut entraîner des saignements.",
+            "Il y a 2 urgences diagnostiques face à un purpura :",
+            "- Purpura fulminans : fièvre, signes neurologiques, signes de choc, purpura nécrotique et/ou ecchymotique et/ou extensif. Evoquer une infection à méningocoque.",
+            "- Purpura thrombopénique sévère (Pq <20g/L ou <20000/mm3) : purpura des muqueuses, hématurie macroscopique, ménométrorragies, hémorragie digestive, signes d'hémorragie cérébrale.",
+          ],
+
+          questionSet: [
+            { "id": "q_purpura_1", "patterns":["purpura pétéchial"], "answer":"Validé."},
+            { "id": "q_purpura_2", "patterns":["macules érythémateuses", "monomorphes", "punctiformes", "intervalle de peau saine"], "answer":"Validé." },
+            { "id": "q_purpura_3", "patterns":["sang dans la peau", "baisse des plaquettes", "diminution des plaquettes", "maladie des vaisseaux"], "answer":"Ok je vois." },
+            { "id": "q_purpura_4", "patterns":["purpura infectieux"], "answer":"Ok et on doit faire un examen ?" },
+            { "id": "q_purpura_5", "patterns":["température"], "answer":"Température normale." },
+            { "id": "q_purpura_6", "patterns":["purpura thrombopénique"], "answer":"Ok et on vérifie ça comment ?" },
+            { "id": "q_purpura_7", "patterns":["NFS"], "answer":"NFS normale." },
+            { "id": "q_purpura_8", "patterns":["purpura cutanéo-muqueux extensif", "nécrotique"], "answer":"Validé." },
+            { "id": "q_purpura_9", "patterns":["bulles hémorragiques intrabuccales"], "answer":"Validé." },
+            { "id": "q_purpura_10", "patterns":["signes de focalisation", "syndrome méningé", "épistaxis", "hémorragies au fond d'oeil", "hématurie"], "answer":"Validé." },
+            { "id": "q_purpura_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai ces tâches là..."},
+            { "id": "q_purpura_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_purpura_13", "patterns":["hémorragie digestive extériorisée"], "answer":"Je prend bien tous mes traitements." },
+            { "id": "q_purpura_14", "patterns":["organomégalies", "adénopathies"], "answer":"Validé." },
+            { "id": "q_purpura_15", "patterns":["purpura thrombopénique idiopathique"], "answer":"Diagnostic validé." },
+            { "id": "q_purpura_16", "patterns":["maladie auto-immune", "détruisent les plaquettes"], "answer":"D'accord, je vois." }
+          ]
+        },
+
+{
+          id: "SDD7",
+          title: "Hémorragie aiguë",
+          intro: "Vous recevez aux urgences de votre CHU, un patient de 55 ans pour hémoptysie évoluant depuis 2h, d'environ un demi-verre de sang. Vous avez éliminé les diagnostics différentiels et lui avez administré un traitement par terlipressine. Recherchez des signes de gravité à l'interrogatoire et à l'examen clinique, poursuivez votre interrogatoire / examen clinique à visée étiologique, citez l'examen clé à prescrire, le diagnostic suspecté et l'examen biologique le + pertinent pour confirmer votre hypothèse",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Evaluer l'abondance, analyser le terrain (patho respiratoire sous-jacente, autres ATCD, profession, traitement, toxiques, allergies, vaccins), persistance du saignement sous vasoconstricteur. Prise des constantes, recherche de signes de détresse respiratoire, recherche latéralisation de la gêne.",
+            "- Interrogatoire (histoire médicale récente, drogues, ATCD tuberculose, infections respiratoires récurrentes, AEG), examen clinique (température, hippocratisme digital, examen CP, signes de vascularite). Réaliser un scanner thoracique injecté au temps artériel. Evoquer une granulomatose éosinophilique avec polyangéite ou maladie de Churg-strauss. Doser les ANCA."
+          ],
+
+          questionSet: [
+            { "id": "q_GEPA_1", "patterns":["abondance", "quantité"], "answer":"J'ai craché environ la moitié d'un verre de sang depuis presque 2h."},
+            { "id": "q_GEPA_2", "patterns":["pathologie respiratoire"], "answer":"J'ai de l'asthme depuis peu, et il est difficile à traiter." },
+            { "id": "q_GEPA_3", "patterns":["antécédents", "profession", "traitements", "médicaments", "tabac", "alcool", "toxiques", "allergies", "vaccins", "vaccination"], "answer":"Je n'ai que de l'asthme et j'ai des BDLA et des corticostéroïdes inhalés. Je suis pépiniériste, je ne fume pas et ne bois pas. Je n'ai pas d'allergies. Mes vaccinations sont à jour." },
+            { "id": "q_GEPA_4", "patterns":["persistance", "vasoconstricteur", "vasoconstricteurs"], "answer":"J'ai eu de la terlipressine et ça a amélioré un peu ma symptomatologie." },
+            { "id": "q_GEPA_5", "patterns":["constantes", "paramètres vitaux", "signes de lutte", "polypnée", "tirage", "abdominale active", "signe de faillite", "paradoxale", "cyanose", "latéralisation de la gêne", "d'un côté"], "answer":"Mes constantes sont normales. Je ne présente pas de signes de gravité. Ma gêne est localisée du côté gauche de mon corps." },
+            { "id": "q_GEPA_6", "patterns":["histoire médicale récente", "chirurgie", "alitement", "drogues", "tuberculose", "infections respiratoires récentes", "AEG", "altération de l'état général", "amaigrissement", "asthénie", "fatigue", "baisse d'appétit"], "answer":"Je n'ai pas été alité récemment et je n'ai pas subi de chirurgie. Je ne prends pas de drogues d'ailleurs. J'ai un appétit normal, je n'ai pas perdu de poids et je ne me sens pas plus fatigué que d'habitude." },
+            { "id": "q_GEPA_7", "patterns":["température", "hippocratisme digital", "examen cardiovasculaire", "examen pulmonaire", "polype", "rhinite", "sinusite", "purpura", "asthme"], "answer":"Présence de polypes nasaux, sinusite, nodules sous-cutanés. Absence d'autres anomalies à l'examen clinique. Constantes sans anomalies. Fonction rénale normale." },
+            { "id": "q_GEPA_8", "patterns":["scanner thoracique", "TDM thoracique"], "answer":"Validé." },
+            { "id": "q_GEPA_9", "patterns":["injecté"], "answer":"Validé." },
+            { "id": "q_GEPA_10", "patterns":["temps artériel", "artériel"], "answer":"Le scanner thoracique injecté au temps artériel retrouve un syndrome d'hémorragie alvéolaire intéressant le lobe inférieur gauche." },
+            { "id": "q_GEPA_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai craché du sang..."},
+            { "id": "q_GEPA_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_GEPA_13", "patterns":["granulomatose éosinophilique avec polyangéite", "Churg-strauss", "GEPA", "GEAP"], "answer":"D'accord je vois." },
+            { "id": "q_GEPA_14", "patterns":["ANCA"], "answer":"Prescription validée." }
+          ]
+        },
+
+{
+          id: "SDD8",
+          title: "Purpura / ecchymose / hématome",
+          intro: `Une femme de 36 ans consulte aux urgences pédiatriques au mois de novembre, pour son fils de 7 ans pour des tâches rouges sur les jambes depuis ce matin, qui ne s'effacent pas à la vitropression. Citez 2 mesures à demander en priorité, interrogez la maman pour caractériser son atteinte et décrivez la lésion et réalisez un examen clinique orienté, citez la pathologie suspectée et expliquez la à la maman, expliquez le bilan à demander en urgence et à distance, et proposez une mesure de surveillance. <img src= "purpurarhumatoïde.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Faire prélever un hémogramme et prendre une température. Décrire les lésions (purpura aspect vasculaire, déclive, infiltré et polymorphe), rechercher d'autres lésions sur le corps et muqueuses, rechercher un facteur favorisant récent (rhinopharyngite, vaccination, médicaments), interrogatoire et examen clinique orienté (douleurs articulaires, douleur abdominale, sd occlusif par invagination, péritonite, dénutrition, insuffisance rénale.",
+            "- Evoquer le diagnostic de purpura rhumatoïde, dire qu'il s'agit d'une vascularite fréquente de l'enfant liée à une dérégulation des défenses immunitaires qui attaquent les vaisseaux. Prescrire un bilan d'urgence (CRP, ionogramme, créatinine, BU ou protéinurie), prescrire un bilan auto-immun (AAN, cryoglobuline 1/2). Expliquer la nécessité de réaliser une BU régulière (pot propre non stérile, urines du matin, élimination du premier jet, tremper la BU après avoir recueilli les urines).",
+            "Eliminer les 2 urgences : purpura fulminans et thrombopénie profonde.",
+            "Rappel : il n'y a jamais d'atteinte des gros vaisseaux dans les vascularites."
+          ],
+
+          questionSet: [
+            { "id": "q_purpurarhumatoïde_1", "patterns":["hémogramme"], "answer":"Hémogramme revenant sans particularités."},
+            { "id": "q_purpurarhumatoïde_2", "patterns":["température"], "answer":"Absence de fièvre." },
+            { "id": "q_purpurarhumatoïde_3", "patterns":["vasculaire", "déclive", "infiltré", "polymorphe"], "answer":"Validé." },
+            { "id": "q_purpurarhumatoïde_4", "patterns":["corps entier", "muqueuses"], "answer":"Tâches remontant jusqu'au dessus des genoux. Absence d'autre atteinte. Absence d'atteintes muqueuses." },
+            { "id": "q_purpurarhumatoïde_5", "patterns":["rhinopharyngite", "vaccinations", "vaccins", "médicaments"], "answer":"Oui il a présenté un épisode de rhinopharyngite il y a une dizaine de jours." },
+            { "id": "q_purpurarhumatoïde_6", "patterns":["douleurs articulaires", "douleurs abdominales", "invagination", "arrêt des gaz", "arrêt des selles", "nausées", "vomissements", "absence de bruits hydro-aériques", "défense", "contracture abdominale", "perte de poids", "diminution de l'appétit", "perte d'appétit", "oligo-anurie", "oedèmes", "prise de poids", "hypertension artérielle"], "answer":"Il n'a pas de défense ni de contracture mais une sensibilité diffuse. Depuis hier il se plaint de douleurs des chevilles bilatérales et de douleurs abdominales. Il ne vomit pas et n'a pas de rectorragies. N'a pas perdu ou pris de poids. Il urine normalement, n'a pas d'œdème et a une pression artérielle normale." },
+            { "id": "q_purpurarhumatoïde_7", "patterns":["purpura rhumatoïde"], "answer":"D'accord, et qu'est-ce que c'est ?" },
+            { "id": "q_purpurarhumatoïde_8", "patterns":["vascularite la plus fréquente", "inflammation des vaisseaux", "suite à une infection"], "answer":"Ok je vois." },
+            { "id": "q_purpurarhumatoïde_9", "patterns":["CRP", "ionogramme", "créatinine", "BU", "bandelette urinaire", "protéinurie"], "answer":"Prescription faite." },
+            { "id": "q_purpurarhumatoïde_10", "patterns":["anticorps antinucléaires", "AAN", "cryoglobuline"], "answer":"Prescription faite." },
+            { "id": "q_purpurarhumatoïde_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon fils a des tâches sur les chevilles... "},
+            { "id": "q_purpurarhumatoïde_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_purpurarhumatoïde_13", "patterns":["bandelette urinaire régulière", "BU régulière", "pot propre", "urines du matin", "élimination du premier jet"], "answer":"Ok on fera ça." }
+          ]
+        },
+
+{
+          id: "SDD9",
+          title: "Syndrome inflammatoire aigu ou chronique",
+          intro: `Vous recevez en consultation hospitalière, Mr X, 70 ans car depuis 6 semaines, il se plaint de douleurs au niveau des épaules sans facteur déclenchant. Il est fatigué et mange moins depuis quelque temps. Il est fébrile à 38,5 °C. Il a comme principaux antécédents une hypertension artérielle bien contrôlée par IEC et une dyslipidémie traitée par statine. Son médecin généraliste lui a prescrit un bilan (ci-dessous). Le reste du bilan biologique (Créatine kinase, TSH ultrasensible, Facteur rhumatoïde, Anticorps antipeptide cyclique citrullinés) est normal. Faire préciser la nature des douleurs de M. X et que devez vous rechercher à l'interrogatoire et à l'examen clinique, citez le diagnostic suspecté en priorité, réalisez une imagerie et interprétez la, proposez un traitement et expliquez lui l'évolution de sa pathologie. <img src= "bilansanguin.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher les caractéristiques d'une douleur d'horaire inflammatoire, raideur matinale de +30mn, survenue au repos, amélioration à l'activité. Rechercher des arguments en faveur d'une artérite à cellules géantes (maux de tête, douleur au passage du peigne, douleur à la mastication se calmant à l'arrêt, baisse temporaire de la vision), palper les artères temporales (absence de pouls, artères indurées ou sensibles).",
+            "- Evoquer le diagnostic de pseudo-polyarthrite rhizomélique (PPR), réaliser une radiographie des épaules. Interpréter les examens comme ne montrant pas d'anomalies. Prescrire une corticothérapie, traitement pris par la bouche à ne pas arrêter brutalement progressivement diminué et dure 1 an à 1 an et demi. Expliquer que les symptômes disparaitront sous 1-3j, que le bilan pourra prendre 1 mois à redevenir normal, que la pathologie est de bon pronostic, nécessite un suivi clinique et biologique régulier."
+          ],
+
+          questionSet: [
+            { "id": "q_PPR_1", "patterns":["réveil en deuxième partie de nuit", "réveil nocturne"], "answer":"Oui mes douleurs me réveillent en général vers 4h du matin."},
+            { "id": "q_PPR_2", "patterns":["raideur matinale", "plus de 30 minutes"], "answer":"Oh mes épaules sont raides pendant au moins 2h Docteur." },
+            { "id": "q_PPR_3", "patterns":["au repos"], "answer":"Mes douleurs ne sont pas calmées par le repos ça non." },
+            { "id": "q_PPR_4", "patterns":["amélioration à l'activité", "s'améliore à l'effort"], "answer":"Oui par contre quand je bricole j'ai un peu moins mal." },
+            { "id": "q_PPR_5", "patterns":["maux de tête", "céphalées", "signe du peigne", "douleur au passage du peigne", "douleur à la mastication", "baisse temporaire de vision"], "answer":"Je n'ai pas de céphalées, pas de douleurs du scalp au passage du peigne, pas de claudication de la mâchoire, pas de baisse d'acuité visuelle." },
+            { "id": "q_PPR_6", "patterns":["palper les artères temporales", "absence de pouls", "artères indurées", "artères sensibles"], "answer":"Les pouls temporaux sont bien perçus." },
+            { "id": "q_PPR_7", "patterns":["pseudo-polyarthrite rhizomélique", "PPR"], "answer":"D'accord." },
+            { "id": "q_PPR_8", "patterns":["radiographie des épaules"], "answer":`<img src= "PPR.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">. Une échographie montre une bursite sous acromiale bilatérale.`},
+            { "id": "q_PPR_9", "patterns":["sans anomalies", "pas d'anomalies", "normales", "normale"], "answer":"Validé." },
+            { "id": "q_PPR_10", "patterns":["corticothérapie"], "answer":"Ok ça va." },
+            { "id": "q_PPR_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai mal aux épaules et je me sens fatigué en ce moment. "},
+            { "id": "q_PPR_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_PPR_13", "patterns":["par la bouche", "per os", "pas arrêter brutalement", "progressivement diminué", "diminue progressivement", "un an", "un an et demi", "1 an"], "answer":"Ok je comprends." },
+            { "id": "q_PPR_14", "patterns":["1 à 3 jours", "un à trois jours"], "answer":"Ok j'espère." },
+            { "id": "q_PPR_15", "patterns":["1 mois"], "answer":"D'accord." },
+            { "id": "q_PPR_16", "patterns":["bon pronostic"], "answer":"Tant mieux." },
+            { "id": "q_PPR_17", "patterns":["suivi clinique", "suivi biologique", "absence de rechutes"], "answer":"D'accord, c'est ok." }
+          ]
+        },
+
+{
+          id: "SDD10",
+          title: "Prescrire des AINS",
+          intro: "Vous êtes rhumatologue et vous venez de diagnostiquer une spondyloarthrite chez un jeune homme de 22 ans sans traitement. Vous souhaitez introduire des AINS par voie orale à visée antalgique. Rechercher les CI aux AINS, informez le patient sur les principaux effets indésirables, expliquez au patient les principales associations médicamenteuses à éviter.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher une allergie médicamenteuse connue, rechercher les CI digestives (UGD évolutif, MICI, ATCD UGD ou d'hémorragie digestive récurrente), rechercher une IR, rechercher les autres CI (infection évolutive, sd de Widal, IHC sévère, IC sévère, tb de la coagulation).",
+            "- Expliquer les EI digestifs (nausées, douleur ou inconfort gastrique, ulcères avec risque de perforation et d'hémorragie), expliquer les EI rénaux (IR, hypertension), expliquer les autres effets secondaires (thromboses, IC, céphalées, vertiges, acouphènes, hépatite, baisse des cellules sanguines).",
+            "- Eviter d'associer 2 AINS, éviter d'associer AINS et corticoïdes, éviter d'associer AINS et anticoagulant ou AAP, éviter d'associer AINS avec IEC / sartan / diurétiques.",
+            "Ne pas oublier que les AINS sont aussi CI en cas de grossesse à partir du 6e mois et d'allaitement.",
+            "Arrêter la prise d'AINS en cas d'infection et en cas de risque de déshydratation."
+          ],
+
+          questionSet: [
+            { "id": "q_AINS_1", "patterns":["allergie médicamenteuse"], "answer":"Je n'ai pas d'allergie médicamenteuse."},
+            { "id": "q_AINS_2", "patterns":["ulcère gastro-duodénal évolutif", "maladie inflammatoire chronique de l'intestin", "MICI", "antécédent d'ulcère gastro-duodénal", "antécédent d'hémorragie digestive"], "answer":"Je n'ai pas d'ulcère gastro-duodénal ou de MICI." },
+            { "id": "q_AINS_3", "patterns":["insuffisance rénale", "IR"], "answer":"Je n'ai pas d'insuffisance rénale." },
+            { "id": "q_AINS_4", "patterns":["infection évolutive", "infection", "Widal", "insuffisance hépatocellulaire", "insuffisance cardiaque", "trouble de la coagulation"], "answer":"Je n'ai pas d'infection, pas d'insuffisance hépatocellulaire ou d'insuffisance cardiaque, et je  n'ai pas de trouble de la coagulation." },
+            { "id": "q_AINS_5", "patterns":["nausées", "douleur gastrique", "inconfort gastrique", "risque de perforation", "risque d'hémorragie"], "answer":"D'accord, je surveillerai ces effets indésirables gastriques." },
+            { "id": "q_AINS_6", "patterns":["hypertension"], "answer":"D'accord je vérifierai ne pas avoir d'hypertension ." },
+            { "id": "q_AINS_7", "patterns":["thromboses", "vertiges", "acouphènes", "hépatite", "baisse des cellules sanguines"], "answer":"Ok je ferais attention." },
+            { "id": "q_AINS_8", "patterns":["2 AINS"], "answer":"Ok donc je n'associe pas deux AINS." },
+            { "id": "q_AINS_9", "patterns":["corticoïdes"], "answer":"Ok donc je ne prends pas de corticoïdes avec les AINS." },
+            { "id": "q_AINS_10", "patterns":["anticoagulant", "antiagrégants plaquettaires", "AAP", "anticoagulants"], "answer":"Ok pas d'AAP ou d'anticoagulants." },
+            { "id": "q_AINS_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Alors vous allez me donner des AINS ? "},
+            { "id": "q_AINS_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_AINS_13", "patterns":["IEC", "sartan", "diurétiques", "antihypertenseurs"], "answer":"Pas d'antihypertenseurs avec les AINS." }
+          ]
+        },
+
+{
+          id: "SDD11",
+          title: "Prescrire des antalgiques",
+          intro: "Vous recevez un patient de 45ans sans ATCD ni allergies, aux urgences pour pancréatite aigue. Vous souhaitez évaluer et traiter sa douleur. Citez les 3 échelles que vous pouvez utiliser et évaluez la douleur avec l'une d'entre elles, proposer une PEC pharmacologique et non pharmacologique, expliquez au patient les principaux effets secondaires des opiacés et prescrivez une meure préventive.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Les 3 échelles sont : échelle verbale simple, échelle numérique et échelle analogique. EVS si 0 pas de douleurs, si 1 faible, si 2 modérée, si 3 intense et 5 très / extrêmement intense. EN 0 = pas de douleur à 10 = douleur max imaginable. EVA échelle horizontale de 0 à 10.",
+            "- Proposer une analgésie multimodale, palier 1 (paracétamol ou néfopam) et palier 3 (opiacés ou morphiniques). Passer les antalgiques par voie IV. Proposer du froid sur l'abdomen et laisser le patient à jeun tant qu'il est douloureux.",
+            "- Expliquer le risque de constipation, difficultés respiratoires, somnolence ou confusion, démangeaisons / difficultés à uriner / nausées ou vomissements / convulsions / dépendance (2/5). Prescrire un laxatif.",
+            "En cas de surdosage en morphiniques : tb de la conscience + respiration irrégulière + FR < 10. Myosis = signe d'imprégnation et si serré = coma. On prescrira de la naloxone et orientera vers la réa en cas de détresse respiratoire (FR < 10)."
+          ],
+
+          questionSet: [
+            { "id": "q_antalgie_1", "patterns":["échelle verbale simple", "EVS"], "answer":"Validé. Si le patient choisissait cette échelle il dirait : ma douleur est très intense."},
+            { "id": "q_antalgie_2", "patterns":["échelle numérique", "EN"], "answer":"Validé. Si le patient choisissait cette échelle il dirait : 9/10." },
+            { "id": "q_antalgie_3", "patterns":["analogique", "EVA"], "answer":"Validé. Si le patient choissisait cette échelle il pointerait sur 9." },
+            { "id": "q_antalgie_4", "patterns":["très intense", "très importante"], "answer":"Validé." },
+            { "id": "q_antalgie_5", "patterns":["multimodale"], "answer":"D'accord." },
+            { "id": "q_antalgie_6", "patterns":["palier 1", "paracétamol", "néfopam"], "answer":"Ok je veux bien un paracétamol." },
+            { "id": "q_antalgie_7", "patterns":["palier 3", "opiacé", "morphine", "morphinique"], "answer":"D'accord ça sera plus efficace j'imagine." },
+            { "id": "q_antalgie_8", "patterns":["voie veineuse"], "answer":"Ok il faudra me piquer alors." },
+            { "id": "q_antalgie_9", "patterns":["froid"], "answer":"Oui d'accord pourquoi pas si ça peut aider." },
+            { "id": "q_antalgie_10", "patterns":["à jeun"], "answer":"Ok ça va." },
+            { "id": "q_antalgie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai pris un gros repas il y a 3h, depuis j'ai une douleur abdominale forte et je suis venu aux urgences. On m'a dit que c'était une pancréatite aigue, on peut pas faire quelque chose pour la douleur ? "},
+            { "id": "q_antalgie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_antalgie_13", "patterns":["constipation"], "answer":"Je comprends." },
+            { "id": "q_antalgie_14", "patterns":["difficultés respiratoires"], "answer":"Ok je vois." },
+            { "id": "q_antalgie_15", "patterns":["somnolence", "confusion"], "answer":"D'accord." },
+            { "id": "q_antalgie_16", "patterns":["démangeaisons", "prurit", "difficultés à uriner", "rétention aigue d'urines", "nausées", "vomissements", "convulsions", "dépendance"], "answer":"D'accord." },
+            { "id": "q_antalgie_17", "patterns":["laxatif"], "answer":"Ok je prendrais les laxatifs sans soucis." }
+          ]
+        },
+
+{
+          id: "SDD12",
+          title: "Prescrire des corticoïdes",
+          intro: "Vous instaurez une corticothérapie de 0,5 mg/kg pour au moins un an et demi chez votre patiente Mme H atteinte d'une maladie de Horton. Réalisez un interrogatoire général et dites ce que vous cherchez particulièrement à l'interrogatoire et à l'examen, expliquez le bilan pré-thérapeutique prévu et les mesures médicamenteuses et non médicamenteuses que vous proposez à la patiente.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général (profession, loisirs, antécédents, traitements, allergies, toxiques, contact avec animaux), interrogatoire orienté (diabète, maladie psy, HTA, UGD, infection récente, tuberculose non ou mal traitée, IC), rechercher un voyage en zone tropicale, examen clinique (TA, mesurer la patiente et la peser, chercher un foyer infectieux).",
+            "- Prescrire : NFS, EPP, ionogramme sanguin, Ph, Ca, 25-OH vit D, GàJ, EAL, BU (6/9), ECG, radiographie du thorax, ostéodensitométrie.",
+            "- Expliquer qu'il faut augmenter les apports en Ca et protéines (1/2), maintenir une AP et proposer une aide au sevrage tabagique (1/2), supplémenter en vit D et potassium selon dosage (1/2), vacciner contre gruppe / covid / pneumocoque (2/3), traiter par biphosphonate, limiter apports en sucres rapides et sel, ne pas arrêter brutalement le traitement.",
+            "Moyen mnémotechnique = CORTICOIDES : complications CVS, Osseuses, Rétention hydrosodée, Tb neuropsychiques, Infection Cutanées Oculaires, IsR aigue à arrêt brutal, Diabète, Estomac."
+          ],
+
+          questionSet: [
+            { "id": "q_corticothérapie_1", "patterns":["antécédents", "profession", "toxiques", "fumez", "traitements", "loisirs", "animaux"], "answer":"J'ai eu une diverticulite non compliquée et je ne prend aucun traitement. Je suis ancienne ornithologue et je vis avec mon époux et on a une famille très présente. Je fume 10 cigarettes par jour depuis 30 ans."},
+            { "id": "q_corticothérapie_2", "patterns":["diabète", "psychiatrique", "hypertension", "HTA", "ulcère", "UGD", "infection", "tuberculose", "IC", "insuffisance cardiaque"], "answer":"Non je n'ai eu aucune de ces maladies." },
+            { "id": "q_corticothérapie_3", "patterns":["voyage"], "answer":"Je n'ai jamais voyagé hors de France." },
+            { "id": "q_corticothérapie_4", "patterns":["tension", "mesurer", "peser", "IMC", "foyer infectieux"], "answer":"Validé." },
+            { "id": "q_corticothérapie_5", "patterns":["NFS", "EPP", "électrophorèse des protéines plasmatiques", "ionogramme sanguin", "phosphore", "phosphate", "calcium", "Ca", "25-OH", "25 OH", "glycémie à jeun", "GàJ", "GAJ", "EAL", "anomalies lipidiques", "BU", "bandelette urinaire"], "answer":"Prescription faite." },
+            { "id": "q_corticothérapie_6", "patterns":["ECG", "électrocardiogramme"], "answer":"Prescription faite." },
+            { "id": "q_corticothérapie_7", "patterns":["radiographie du thorax", "radio thoracique", "radio du thorax"], "answer":"Prescription faite." },
+            { "id": "q_corticothérapie_8", "patterns":["ostéodensitométrie"], "answer":"Prescription faite." },
+            { "id": "q_corticothérapie_9", "patterns":["apports en calcium", "apports en protéines"], "answer":"Oui d'accord." },
+            { "id": "q_corticothérapie_10", "patterns":["activité physique", "sevrage tabagique", "arrêter de fumer"], "answer":"Ok je vais me remettre au sport et arrêter de fumer." },
+            { "id": "q_corticothérapie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai mal à la tête depuis 1 mois avec parfois de la fièvre et surtout une impossibilité de me brosser les cheveux comme avant. On m'a dit que c'était une maladie de Horton et qu'il fallait vous voir avant de mettre un traitement..."},
+            { "id": "q_corticothérapie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_corticothérapie_13", "patterns":["supplémenter en vitamine D", "supplémentation en vitamine D", "supplémenter en potassium"], "answer":"Je vais le faire." },
+            { "id": "q_corticothérapie_14", "patterns":["grippe", "covid", "pneumocoque", "antipneumococcique"], "answer":"Ok je vois." },
+            { "id": "q_corticothérapie_15", "patterns":["biphosphonates"], "answer":"D'accord." },
+            { "id": "q_corticothérapie_16", "patterns":["apports en sucres", "apports en sel"], "answer":"D'accord." },
+            { "id": "q_corticothérapie_17", "patterns":["pas arrêter brutalement"], "answer":"C'est noté." }
+          ]
+        },
+
+{
+          id: "SDD13",
+          title: "Adaptation des traitements sur terrain particulier",
+          intro: "Un patient de 79 ans que vous ne connaissez pas vous consulte dans votre cabinet de médecine générale adressé par un confrère prenant sa retraite pour un renouvellement d'ordonnance. Vous savez que ce patient est atteint d'une maladie rénale chronique avec au dernier bilan un DFG à 20 ml/mn/1,73m². Réalisez un interrogatoire général et lisez son ordonnance, adaptez son traitement de l'HTA et expliquez pourquoi, adaptez son traitement de FA et expliquez le protocole, adaptez son traitement de la goutte.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, arrêter l'hydrochlorothiazide car inefficace et augmente le risque de gutte, introduire un inhibiteur calcique.",
+            "- Arrêter l'apixaban et introduire des HNF surveillée par prise de sang et AVK surveillés par INR avec arrêt des HNF après un chevauchement de 4-5 jours et 2 INR à 24h d'intervalle dans la cible. Arrêter l'allopurinol et la colchicine, introduire fébuxostat en traitement de fond et des corticoïdes PO en cas de crise."
+          ],
+
+          questionSet: [
+            { "id": "q_adaptationttt_1", "patterns":["antécédents", "traitements", "loisirs", "profession", "allergies", "toxiques", "fumez"], "answer":"J'ai de l'hypertension, une fibrillation atriale non valvulaire permanente et de la goutte. J'ai aussi une maladie rénale chronique d'origine hypertensive que je ne suis plus trop. Je suis allergique aux pénicillines. Je suis ancien tabagique."},
+            { "id": "q_adaptationttt_2", "patterns":["arrêt de l'hydrochlorothiazide"], "answer":"D'accord et pourquoi on l'arrête ?" },
+            { "id": "q_adaptationttt_3", "patterns":["inefficace", "ne fonctionne pas"], "answer":"Ok je vois." },
+            { "id": "q_adaptationttt_4", "patterns":["augmente le risque de crise de goutte"], "answer":"Ah bah oui c'est contre productif cette histoire." },
+            { "id": "q_adaptationttt_5", "patterns":["inhibiteur calcique"], "answer":"Ok bon ça me va." },
+            { "id": "q_adaptationttt_6", "patterns":["arrêter l'apixaban"], "answer":"D'accord et on met quoi à la place ?" },
+            { "id": "q_adaptationttt_7", "patterns":["héparines non fractionnées", "HNF", "héparine non fractionnée"], "answer":"D'accord.." },
+            { "id": "q_adaptationttt_8", "patterns":["prise de sang"], "answer":"Ok pas de problème." },
+            { "id": "q_adaptationttt_9", "patterns":["AVK", "anti vitamine K"], "answer":"Ok ok." },
+            { "id": "q_adaptationttt_10", "patterns":["INR", "2-3"], "answer":"Ok ça va." },
+            { "id": "q_adaptationttt_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Voici mon ordonnance : RAMIPRIL 5mg / HYDROCHLOROTHIAZIDE 12,5 mg 1 par jour le matin, PROPRANOLOL 40 mg 1 matin midi et soir, APIXABAN 5 mg 1 matin et soir, ALLOPURINOL 100 mg un le midi, COLCHICINE 1mg dès le début de la crise suivi d'un demi 1h plus tard 1,5mg le 1e jour et 0,5 mg x2-3 par jour en jonction de l'évolution les jours suivants."},
+            { "id": "q_adaptationttt_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_adaptationttt_13", "patterns":["arrêter les héparine après un chevauchement de 4-5 jours", "2 INR à 24h d'intervalle sont dans la cible", "4-5 jours", "2 INR à 24h"], "answer":"Ok on surveillera de près donc." },
+            { "id": "q_adaptationttt_14", "patterns":["arrêter l'allopurinol"], "answer":"Ok pourquoi pas mais j'aurais quoi en traitement de fond de ma goutte alors ?" },
+            { "id": "q_adaptationttt_15", "patterns":["fébuxostat"], "answer":"D'accord." },
+            { "id": "q_adaptationttt_16", "patterns":["arrêter la colchicine"], "answer":"Ok et on remplace par ?" },
+            { "id": "q_adaptationttt_17", "patterns":["corticoïdes"], "answer":"Allez ça me va." }
+          ]
+        },
+
+{
+          id: "SDD14",
+          title: "Consultation de suivi d'un patient polymédiqué",
+          intro: "Vous recevez en consultation de médecine générale au mois de novembre, Mr E,un patient âgé de 75 ans pour renouvellement d'ordonnance et contage coquelucheux chez ce patient non vacciné. Il s'agit d'un patient qui vous consulte pour la première fois à la suite du départ à la retraite de son ancien médecin. Réalisez un interrogatoire général, proposez un traitement contre la coqueluche, proposez une adaptation du traitement de son diabète, ajouter un traitement à visée préventive, adaptez le traitement post-IDM de ce patient et proposez lui des vaccins.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général. Prescrire du cotrimoxazole pendant 14 jours. Arrêter les sulfamides et introduire de la metformine. Ajouter des IPP.",
+            "- Arrêter les fibrates et prescrire des statines et un bilan biologique. Arrêter le clopidogrel. Proposer vaccination grippe, COVID, DTP."
+          ],
+
+          questionSet: [
+            { "id": "q_polymédiqué_1", "patterns":["antécédents", "traitement", "mode de vie", "loisirs", "toxiques", "fumez", "allergies"], "answer":"Alors j'ai de la goutte traitée par allopurinol et colchicine. De l'hypertension sous ramipril. Du diabète sous sulfamide. Et pour un infarctus que j'ai eu il y a 2 ans et qui est stenté je suis traité par métoprolol, aspirine, clopidogrel, ramipril et fibrates. Je n'ai pas d'allergies sinon et je suis ancien vétérinaire. Je ne fume pas je ne bois pas."},
+            { "id": "q_polymédiqué_2", "patterns":["cotrimoxazole"], "answer":"D'accord." },
+            { "id": "q_polymédiqué_3", "patterns":["14 jours", "2 semaines"], "answer":"Ok." },
+            { "id": "q_polymédiqué_4", "patterns":["arrêter les sulfamides"], "answer":"Et vous me mettez autre chose à la place ?" },
+            { "id": "q_polymédiqué_5", "patterns":["metformine"], "answer":"Ah oui j'en ai entendu parler." },
+            { "id": "q_polymédiqué_6", "patterns":["IPP", "inhibiteur de la pompe à protons"], "answer":"Ok pourquoi pas." },
+            { "id": "q_polymédiqué_7", "patterns":["arrêter les fibrates"], "answer":"D'accord je vois." },
+            { "id": "q_iatrogénie_8", "patterns":["statines"], "answer":"Ok ok." },
+            { "id": "q_polymédiqué_9", "patterns":["bilan biologique"], "answer":"Je le ferai." },
+            { "id": "q_iatrogénie_10", "patterns":["arrêter le clopidogrel"], "answer":"Ok." },
+            { "id": "q_polymédiqué_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_polymédiqué_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_polymédiqué_13", "patterns":["grippe"], "answer":"Je veux bien faire le vaccin contre la grippe." },
+            { "id": "q_polymédiqué_14", "patterns":["COVID"], "answer":"Je veux bien faire le vaccin COVID." },
+            { "id": "q_polymédiqué_15", "patterns":["DTP"], "answer":"Je veux bien être à jour sur ce vaccin oui." },
+            { "id": "q_polymédiqué_16", "patterns":["coqueluche"], "answer":"Je n'étais pas à jour de mon vaccin DTP et mon petit fils a une coqueluche, je l'ai vu il y a 2 jours." },
+            { "id": "q_polymédiqué_17", "patterns":["contrôlé", "hémoglobine glyquée", "HbA1c"], "answer":"Mon hémoglobine glyquée est dans la norme mais je fais souvent des hypoglycémies par contre." }
+          ]
+        },
+
+{
+          id: "SDD15",
+          title: "Consultation de suivi d'un patient polymorbide",
+          intro: "Vous recevez en HDJ pour suivi diabétique un patient de 65 ans en rupture de traitement depuis 2 ans. Son hémoglobine glyquée est actuellement à 9,5 %. Il n'a pas d'allergie et ne consomme pas de toxiques. Il est également obèse et présente une hypercholestérolémie. Il est ancien boucher. Réalisez un interrogatoire ciblé et un examen clinique pour rechercher les principales complications de son diabète, proposez une prise en charge globale au patient.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rétinopathie diabétique (BAV, consultation ophtalmo pour FO), néphropathie diabétique (polyuro-polydipsie, oedèmes, TA, faire BU et RAC), neuropathie diabétique (douleur d'allure neuropathique des MI, hypo ou anesthésie, abolition ROT, test au monofilament, test froid / chaud, signes en faveur d'une neuropathie autonome (tachycardie / bradycardie, allongement QT, hypotension orthostatique, tb sudation, tb transit / sensation satiété rapide, RAU ou incontinence)), coronaropathie (dl tho, dyspnée, palpitation, asthénie, baisse TA, réaliser ECG), atteinte moyens et gros vaisseaux (dysfonction érectile, claudication, tb trophiques, pouls périphériques, ausculter pour souffle et prendre IPS), rechercher mal perforant plantaire.",
+            "- Proposer une AP régulière adaptée, alimentation équilibrée de type régime méditerranéen (réduire surcharge pondérale, améliorer équilibre diabétique, améliorer dyslipidémie), expliquer que son atteinte ophtalmo et ses douleurs sont en lien avec un mauvais équilibre diabétique et qu'il faut avoir une bonne observance du traitement, sur le plan ophtalmo effectuer un examen régulier et qu'une vision normale ne veut pas dire pas d'atteinte et qu'un tb de la vision doit le faire consulter en urgence, que son diabète doit être mieux contrôlé (HbA1c < 7%, voir régulièrement son méd G)."
+          ],
+
+          questionSet: [
+            { "id": "q_polymorbide_1", "patterns":["rétinopathie diabétique", "baisse acuité visuelle", "consulter un ophtalmologue", "fond d'oeil"], "answer":"Au niveau des yeux je me suis fait opéré au laser il y a plusieurs années. On m'a dit de surveiller l'oeil gauche régulièrement mais je ne l'ai pas fait, je n'ai pas de symptômes de toute façon."},
+            { "id": "q_polymorbide_2", "patterns":["néphropathie diabétique", "polyuro-polydipsie", "oedèmes", "tension artérielle", "pression artérielle", "BU", "bandelette urinaire", "rapport albuminurie / créatininurie", "RAC"], "answer":"Je n'ai pas envie d'uriner ou de boire plus que d'habitude. Ma tension est normale. On peut faire les examens que vous voulez." },
+            { "id": "q_polymorbide_3", "patterns":["neuropathie diabétique", "douleurs", "brûlures", "froid douloureux", "fourmillement", "engourdissement", "hypoesthésie", "anesthésie", "abolition des ROT", "test au monofilament", "test chaud / froid", "dysautonomie"], "answer":"Oui j'ai des fourmis dans les deux jambes jusqu'au tibia. On peut faire vos examens pour regarder ce que c'est." },
+            { "id": "q_polymorbide_4", "patterns":["douleur thoracique", "dyspnée", "palpitations", "asthénie", "troubles digestifs", "ECG", "électrocardiogramme"], "answer":"Je n'ai pas de douleur thoracique ou du mal à respirer. On peut faire ce que vous voulez." },
+            { "id": "q_polymorbide_5", "patterns":["dysfonction érectile", "claudication", "troubles trophiques", "pouls périphériques", "souffle", "IPS"], "answer":"Je n'ai pas de douleurs quand je marche, de troubles érectiles ou autres. Faites les examens nécessaires." },
+            { "id": "q_polymorbide_6", "patterns":["mal perforant plantaire"], "answer":"Absence de mal perforant plantaire." },
+            { "id": "q_polymorbide_7", "patterns":["activité physique"], "answer":"D'accord je peux faire plus de sport." },
+            { "id": "q_polymorbide_8", "patterns":["régime méditerranéen", "alimentation de type méditerranéenne", "réduire la surcharge", "améliorer la dyslipidémie"], "answer":"Ok je mangerai mieux." },
+            { "id": "q_polymorbide_9", "patterns":["mauvais équilibre diabétique", "bonne observance"], "answer":"Oui je vois." },
+            { "id": "q_polymorbide_10", "patterns":["examen ophtalmologique", "vision normale ne veut pas dire qu'il n'y a pas", "consulter en urgence"], "answer":"Ok ça va je comprends." },
+            { "id": "q_polymorbide_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Depuis 2 ans j'ai un peu laissé tomber mon suivi et je prend de temps en temps ma metformine et mes statines parce que bon globalement j'en ai marre..."},
+            { "id": "q_polymorbide_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_polymorbide_13", "patterns":["hémoglobine glyquée", "HbA1c", "<7%", "médecin traitant"], "answer":"Je comprends." }
+          ]
+        },
+
+{
+          id: "SDD16",
+          title: "Suivi du patient immunodéprimé",
+          intro: "Vous suivez une patiente présentant une maladie de Crohn en hospitalisation en ce mois de décembre dans le cadre de l'introduction d'un traitement par anti-TNF alpha. Réalisez un interrogatoire général et orienté pour rechercher des contre indications aux anti-T?F alpha, expliquez le bilan biologique prévu, expliquez quels vaccins sont contre-indiqués et quels vaccins vous proposez avant le début du traitement.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, cancer de <5 ans / IC / antécédent perso et familial de SEP / contage tuberculeux (3/4), rechercher fièvre / adénopathies / foyers infectieux et néoplasie (2/4). Faire préciser les vaccinations de la patiente.",
+            "- Bilan NFS EPP ASAT/ALAT bilan rénal. Sérologies VIH VHB VHC. Quantiféron ou IDR et radiographie thoracique.",
+            "- Interdiction de vaccin grippe par voie nasale, dengue, fièvre jaune et varicelle (2/4). Proposer vaccins pneumocoque, grippe et covid."
+          ],
+
+          questionSet: [
+            { "id": "q_suivimmunodep_1", "patterns":["antécédents", "profession", "traitements", "allergies", "loisirs", "animaux", "comportements sexuels à risque"], "answer":"Moi je n'ai pas d'antécédents et je prend juste une contraception par progestatifs. Ma mère elle a eu une thyroïdite de Hashimoto. Je suis étudiante en orthophonie et je ne consomme pas de toxiques. Mes rapports sont protégés car je ne souhaite pas d'enfants pour le moment."},
+            { "id": "q_suivimmunodep_2", "patterns":["cancer", "insuffisance cardiaque", "SEP", "contage tuberculeux", "tuberculose"], "answer":"Non je ne suis pas suivie pour un cancer, une insuffisance cardiaque. Je n'ai pas de cas de SEP dans ma famille et je n'ai pas été en contact avec la tuberculose." },
+            { "id": "q_suivimmunodep_3", "patterns":["fièvre", "adénopathies", "foyer infectieux", "néoplasie"], "answer":"Absence de fièvre et d'adénopathies. Absence de points d'appel pour une infection ou néoplasie." },
+            { "id": "q_suivimmunodep_4", "patterns":["vaccinations"], "answer":"En théorie je suis à jour de mes vaccins." },
+            { "id": "q_suivimmunodep_5", "patterns":["NFS", "EPP", "électrophorèse des protéines plasmatiques", "bilan rénal", "bilan hépatique", "ASAT", "ALAT"], "answer":"Ok pas de soucis." },
+            { "id": "q_suivimmunodep_6", "patterns":["VIH", "VHB", "VHC"], "answer":"D'accord." },
+            { "id": "q_suivimmunodep_7", "patterns":["quantiféron", "IDR", "radiographie du thorax"], "answer":"D'accord ça me va." },
+            { "id": "q_suivimmunodep_8", "patterns":["grippe par voie nasale", "dengue", "fièvre jaune", "varicelle"], "answer":"Ok je ne les ferais pas alors." },
+            { "id": "q_suivimmunodep_9", "patterns":["pneumocoque", "antipneumococcique"], "answer":"Je veux bien le faire." },
+            { "id": "q_suivimmunodep_10", "patterns":["grippe"], "answer":"Je veux bien le faire." },
+            { "id": "q_suivimmunodep_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir avant la prescription de mon traitement."},
+            { "id": "q_suivimmunodep_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_suivimmunodep_13", "patterns":["COVID"], "answer":"Je veux bien le faire." }
           ]
         }
       ]
