@@ -6914,6 +6914,762 @@ const data = {
         }
       ]
     },
+{
+      id: "Maladie inf",
+      title: "Maladies infecieuses",
+      chapters: [
+        {
+{
+          id: "SDD1 ",
+          title: "Hyperthermie / fièvre",
+          intro: "Vous recevez en cabinet de médecine générale un enfant de 13 ans accompagné par son père pour fièvre et « gonflement » des joues. L'enfant se plaint de douleurs des oreilles et de la gorge. Ils sont originaires d'Amérique du Sud et viennent d'arriver récemment en France. Complétez l'interrogatoire et décrivez votre examen clinique initial, évoquez un diagnostic et expliquez la maladie et son évolution, expliquez les 3 principales compliques et comment vous les recherchez, expliquez la PEC s'il n'y a pas de complications.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, vaccination, examen des glandes salivaires (palpation et observation canal de Sténon), examen endobuccal, adénopathies, otoscopie. Evoquer le diagnostic d'oreillons et qu'il s'agit d'une infection virale guérissante sans séquelles en une dizaine de jours la plupart du temps",
+            "- Rechercher otite / épididymite par palpation testiculaire, pancréatite (nausées, vomissements, dl épigastrique), méningite (céphalées, raideur méningée, nausées vomissements, photo phonophobie). Prescrire paracétamol, absence d'éviction obligatoire mais éviter de fréquente les lieux de collectivité, mettre à jour les vaccinations."
+          ],
+
+          questionSet: [
+            { "id": "q_oreillons_1", "patterns":["antécédents", "traitement", "allergies"], "answer":"Il n'a pas d'antécédents, pas de traitements, pas d'allergies. Il n'y a pas d'antécédents dans la famille non plus. Nous sommes en France depuis 2 mois."},
+            { "id": "q_oreillons_2", "patterns":["vaccinations"], "answer":"Les vaccinations ne sont surement pas toutes faites." },
+            { "id": "q_oreillons_3", "patterns":["glandes salivaires", "canal de Sténon"], "answer":"Tuméfaction des glandes parotides avec douleur à la palpation et turgescence de l'ostium du canal de Sténon." },
+            { "id": "q_oreillons_4", "patterns":["examen endobuccal"], "answer":"Pharyngite." },
+            { "id": "q_oreillons_5", "patterns":["adénopathies"], "answer":"Adénopathies prétragiennes et sous angulo-maxillaires." },
+            { "id": "q_oreillons_6", "patterns":["otoscopie"], "answer":"Absence d'otite." },
+            { "id": "q_oreillons_7", "patterns":["oreillons"], "answer":"D'accord." },
+            { "id": "q_oreillons_8", "patterns":["infection virale", "dizaine de jours"], "answer":"Ok on comprend." },
+            { "id": "q_oreillons_9", "patterns":["orchite", "épididymite", "palpation testiculaire"], "answer":"Absence d'orchite ou épididymite." },
+            { "id": "q_oreillons_10", "patterns":["pancréatite", "nausées", "vomissements", "douleur épigastrique"], "answer":"Absence de signes de pancréatite." },
+            { "id": "q_oreillons_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon fils ne se sent pas bien depuis quelques jours"},
+            { "id": "q_oreillons_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_oreillons_13", "patterns":["méningite", "céphalées", "raideur méningée"], "answer":"Absence de syndrome méningé." },
+            { "id": "q_oreillons_14", "patterns":["paracétamol"], "answer":"Ok on lui donnera ça." },
+            { "id": "q_oreillons_15", "patterns":["pas d'éviction", "éviter les lieux de collectivités"], "answer":"Ok, pas d'éviction scolaire mais on ne se colle pas aux autres quoi." },
+            { "id": "q_oreillons_16", "patterns":["mettre à jour les vaccins", "mettre à jour les vaccinations"], "answer":"D'accord, on le fera." }
+          ]
+        },
+
+{
+          id: "SDD2",
+          title: "Hypothermie",
+          intro: "Interne aux urgences du CHU de Marseille, vous recevez un patient pour hypothermie à 35 °C (contrôlé à son arrivée aux urgences), accompagné de son épouse. Il était à son domicile et ne se sentait pas bien lorsqu'il a décidé de prendre sa température. Il se plaint de douleurs lombaires et un ECBU a déjà été prélevé. Expliquez à l'évaluateur les signes de gravité cliniques et biologiques que vous recherchez, décrivez les éléments du qSOFA et calculez le, proposez un examen biologique à visée diagnostic à réaliser et que vous attendez vous à retrouver.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, rechercher une défaillance d'organe (confusion / tb conscience, PAS <= 90mmHg / PAM < 65mmHg, polypnée / désaturation / signe de lutte et de faillite), rechercher défaillance organe (CIVD, oligo-anurie / IRA, augmentation bilirubine / saignement, acidose lactique / lactatémie > 2mmol/L), hypoperfusion cutanée (marbrures, TRC > 3s, froideur extrémités).",
+            "- FR >= 22, PAS <= 100mmHg, confusion ou SGW < 15, qSOFA à 3/3. Réaliser des hémocultures et dire qu'on s'attend à retrouver des BGN.",
+            "ATB probabiliste en présence de signes de gravité :",
+            "- Foyer digestif, voies biliaires, infection communautaire : C3G + métronidazole +/- aminoside.",
+            "- Urinaire, infection communautaire : C3G + aminoside.",
+            "- Pneumonie aigue communautaire : C3G +/- macrolides.",
+            "- Pas de foyer (communautaire) : C3G +/- aminoside.",
+            "- Pas de foyer (nosocomiale) : pipé-tazo + amikacine °/- vancomycine +/- échinocandide."
+          ],
+
+          questionSet: [
+            { "id": "q_hypothermie_1", "patterns":["antécédents", "profession", "toxiques", "fumez", "traitements", "allergies", "animaux", "comportements sexuels à risque", "vaccins"], "answer":"Je n'ai aucun antécédent, aucun traitement, aucune allergie. Je suis garagiste et je ne consomme pas de toxiques. Mes vaccins sont à jour. Je n'ai pas de contact avec des animaux et pas de comportements sexuels à risque."},
+            { "id": "q_hypothermie_2", "patterns":["confusion", "troubles de la conscience", "PAS inférieure ou égale à 90", "PAM inférieure à 65", "polypnée", "désaturation", "signes de lutte", "signe de faillite"], "answer":"Absence de troubles de la conscience, tension artérielle à 97/70 mmHg. Absence de signes de lutte ou de faillite. Légère confusion." },
+            { "id": "q_hypothermie_3", "patterns":["CIVD", "oligo-anurie", "augmentation de la bilirubine", "insuffisance rénale aigue", "IRA", "saignement", "acidose lactique", "lactatémie > 2"], "answer":"Absence de CIVD, oligo-anurie ou IRA. Absence d'augmentation de la bilirubine ou de saignements. Absence d'acidose lactique." },
+            { "id": "q_hypothermie_4", "patterns":["marbrures", "TRC > 3", "temps de recoloration", "froideur"], "answer":"Extrémités froides." },
+            { "id": "q_hypothermie_5", "patterns":["FR supérieure ou égale à 22", "PAS inférieure ou égale à 100", "confusion", "Glasgow inférieur à 15", "SGW < 15"], "answer":"FR à 23/mn, TA 97/70 mmHg, légère confusion." },
+            { "id": "q_hypothermie_6", "patterns":["hémocultures"], "answer":"Prescription validée." },
+            { "id": "q_hypothermie_7", "patterns":["bacilles gram négatifs", "BGN"], "answer":"Validé." },
+            { "id": "q_iatrogénie_8", "patterns":["bonjour"], "answer":"Bonjour Docteur. Vous vouliez me voir ? "},
+            { "id": "q_iatrogénie_9", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_iatrogénie_10", "patterns":["qSOFA à 3", "3/3"], "answer":"Le qSOFA est à 3/3." }
+          ]
+        },
+
+{
+          id: "SDD3",
+          title: "Cicatrice anormale",
+          intro: "Vous recevez un patient de 76 ans, opéré d'une prothèse totale de hanche droite il y a 10 mois. Il se plaint de douleurs évoluant depuis 2 mois au niveau de sa cicatrice. On retrouve à l'examen une cicatrice tuméfiée, érythémateuse avec un écoulement purulent. Il n'est pas fébrile. Réalisez un interrogatoire général, évoquez un diagnostic et expliquez le au patient, prescrivez un examen pour confirmer votre diagnostic, expliquez au patient la prise en charge.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, boiterie, douleur du patient. Evoquer une ostéite, infection de l'os causée par une bactérie pouvant faire suite à sa chirurgie.",
+            "- Réaliser une radiographie et une IRM ou un scanner. Prélèvements osseux (au bloc, sous anesthésie, pour identifier la bactérie 2/3). Traitement par antibiotique IV puis PO après prélèvements, une fois le germe identifié on modifiera le traitement ATB, le traitement durera 6-12S, on discutera d'une PEC chirurgicale pour changer sa prothèse, prescrire un antalgique adapté à la douleur.",
+            "Rappel des ATB à la bonne diffusion osseuse :",
+            "- fluoroquinolone, clindamycine, rifampicine, acide fusidique, triméthoprime, cotrimoxazole",
+            "- pristinamycine, métronidazole, cycline, itraconazole, isoniazide, éthambutol."
+          ],
+
+
+          questionSet: [
+            { "id": "q_ostéite_1", "patterns":["antécédents", "profession", "toxiques", "fumez", "allergies"], "answer":"Je suis ancien pilote de ligne à la retraite. Je ne fume pas, je  ne bois pas. J'ai un chien et je suis actif. J'ai de l'arthrose et j'ai une prothèse totale de hanche droite. Je ne prend pas de traitement."},
+            { "id": "q_ostéite_2", "patterns":["boiterie"], "answer":"J'ai du mal à marcher c'est vrai." },
+            { "id": "q_ostéite_3", "patterns":["douleurs"], "answer":"Oui j'ai des douleur au niveau de ma cicatrice de prothèse. La prothèse a été posée il y a 10 mois et j'ai mal depuis 2 mois. Puis c'est tout rouge, gonflé et il y a écoulement purulent. Ma douleur est à 6/10." },
+            { "id": "q_ostéite_4", "patterns":["ostéite"], "answer":"D'accord je vois." },
+            { "id": "q_ostéite_5", "patterns":["infection de l'os", "causée par une bactérie"], "answer":"Ok je comprends." },
+            { "id": "q_ostéite_6", "patterns":["suite à la chirurgie", "causée par la chirurgie", "suite à votre chirurgie"], "answer":"Oh d'accord je vois." },
+            { "id": "q_ostéite_7", "patterns":["radiographie"], "answer":"D'accord on fera ça." },
+            { "id": "q_ostéite_8", "patterns":["IRM", "scanner"], "answer":"Oui on peut faire ça aussi." },
+            { "id": "q_ostéite_9", "patterns":["prélèvements osseux", "bloc opératoire", "sous anesthésie", "identifier la bactérie"], "answer":"D'accord je ne savais pas qu'on faisait des prélèvements." },
+            { "id": "q_ostéite_10", "patterns":["antibiotiques IV puis per os", "après les prélèvements"], "answer":"Ok ça va." },
+            { "id": "q_ostéite_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai mal au niveau de la cicatrice de ma prothèse de hanche."},
+            { "id": "q_ostéite_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_ostéite_13", "patterns":["modifier le traitement pour mieux cibler la bactérie", "modification de l'antibiothérapie pour mieux cibler la bactérie"], "answer":"D'accord on changera si besoin." },
+            { "id": "q_ostéite_14", "patterns":["6 à 12 mois", "6-12 mois"], "answer":"Oh oui c'est plutôt long quand même." },
+            { "id": "q_ostéite_15", "patterns":["prise en charge chirurgicale", "PEC chirurgicale"], "answer":"D'accord." },
+            { "id": "q_ostéite_16", "patterns":["antalgiques", "antalgie"], "answer":"Oui ça serait gentil." }
+          ]
+        },
+
+{
+          id: "SDD4",
+          title: "Brûlure mictionnelle",
+          intro: "Une patiente de 26 ans que vous ne connaissez pas, vous consulte dans votre cabinet de médecine générale pour une sensation de brûlure lorsqu'elle urine, accompagnée d'envies pressantes, une dizaine de fois dans la journée, avec à chaque fois de petits volumes urinés. Elle vous signale qu'elle présente ces symptômes au moins une fois par mois depuis un an, et qu'elle ne supporte plus son traitement par à-coups à base de fosfomycine devant la récidive des symptômes. Evoquez un diagnostic précis, proposez un (des) examen(s) clinique(s) et paraclinique(s), recherchez un facteur favorisant et rappelez les mesures hygiéno-diététiques, proposez une prophylaxie continue après traitement de cet épisode.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Evoquer le diagnostic de cystites aigues récidivantes. Proposer la réalisation d'un calendrier mictionnel, un examen clinique gynécologique, bandelette urinaire, examen cytobactériologique des urines.",
+            "- Rechercher si les récidives sont rythmées par les rapports sexuels, proposer une bonne hydratation. Expliquer qu'il faut uriner de manière fréquente et ne pas se retenir, uriner après les rapports sexuels, traiter une constipation ou diarrhées si présentes, ne pas utiliser de spermicides, faire au maximum une toilette intime par jour avec un savon pH neutre. Proposer une supplémentation orale à base de canneberge / cranberry. Traitement par triméthoprime ou cotrimoxazole 1 comprimé par jour ou fosfomycine-trométamol 1 sachet par semaine, pendant 6 mois minimum à réévaluer."
+          ],
+
+          questionSet: [
+            { "id": "q_cystiterécidivantes_1", "patterns":["cystites aiguës récidivantes"], "answer":"Oh d'accord je vois."},
+            { "id": "q_cystiterécidivantes_2", "patterns":["calendrier mictionnel"], "answer":"Ok je connaissais pas." },
+            { "id": "q_cystiterécidivantes_3", "patterns":["examen gynécologique"], "answer":"Oui y a pas de soucis." },
+            { "id": "q_cystiterécidivantes_4", "patterns":["bandelette urinaire", "BU"], "answer":"Ok ça je connais j'en ai déjà fait une." },
+            { "id": "q_cystiterécidivantes_5", "patterns":["examen cytobactériologique des urines"], "answer":"Oui ok ça me va." },
+            { "id": "q_cystiterécidivantes_6", "patterns":["rythmées par les rapports"], "answer":"Non ce n'est pas particulièrement lié à mes rapports sexuels." },
+            { "id": "q_cystiterécidivantes_7", "patterns":["hydratation"], "answer":"Ok je vois." },
+            { "id": "q_cystiterécidivantes_8", "patterns":["uriner de manière fréquente"], "answer":"Oui je comprends." },
+            { "id": "q_cystiterécidivantes_9", "patterns":["constipation", "diarrhée"], "answer":"Je n'ai ni constipation ni diarrhées." },
+            { "id": "q_cystiterécidivantes_10", "patterns":["ne pas utiliser de spermicides"], "answer":"D'accord." },
+            { "id": "q_cystiterécidivantes_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai des brulures mictionnelles, des envies pressantes d'uriner avec à chaque fois des tout petits volumes d'urines depuis un an. J'ai déjà vu un médecin qui m'avait prescrit de la fosfomycine mais ça revient en permanence..."},
+            { "id": "q_cystiterécidivantes_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_cystiterécidivantes_13", "patterns":["une toilette par jour", "savon à pH neutre"], "answer":"Ok je ferais attention." },
+            { "id": "q_cystiterécidivantes_14", "patterns":["canneberge", "cranberry"], "answer":"Oh ça tombe bien j'adore ça." },
+            { "id": "q_cystiterécidivantes_15", "patterns":["triméthoprime", "cotrimoxazole", "fosfomycine"], "answer":"Ok !" },
+            { "id": "q_cystiterécidivantes_16", "patterns":["6 mois"], "answer":"Ok allons y pour 6 mois alors." }
+          ]
+        },
+
+{
+          id: "SDD5",
+          title: "Ecoulement urétral",
+          intro: "Vous recevez en consultation dans un CeGGID, un patient de 20 ans pour écoulement urétral purulent depuis quelques jours, ainsi que des douleurs lors des mictions. Il ne présente pas d'autres anomalies à l'examen. Réalisez un interrogatoire, posez un diagnostic, expliquez les examens à effectuer, prescrivez un traitement et expliquez les mesures de prévention des IST.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, rapports sexuels à risque / type de pratique (1/2). Evoquer diagnostic d'urétrite qui est une IST pouvant être causée par gonocoque ou chlamydiae. Faire un prélèvement de l'écoulement, faire des prélèvements dans la gorge et l'anus, proposer un bilan des autres IST (VIH, syphilis, VHB, VHC).",
+            "- Prescrire un traitement par ceftriaxone IM en une dose, un traitement par doxycycline PO pendant 7 jours, et revoir le patient dans 7 jours. Expliquer l'importance des préservatifs, risque de recontamination, possibilité de vaccination préventive HPV / VHB / VHA, importance de prévenir les personnes avec qui il y a eu des rapports, envisager une PrEP si prise de risque trop régulière.",
+            "Rappel on prélève le premier jet urinaire à la différence de la BU ou de l'ECBU."
+
+          ],
+
+          questionSet: [
+            { "id": "q_urétrite_1", "patterns":["antécédents", "traitements", "profession", "études", "animaux", "allergie"], "answer":"Je suis étudiant en STAPS. Je ne fume pas et ne bois pas, mes vaccins sont à jour et je n'ai aucun antécédent et donc aucun traitement."},
+            { "id": "q_urétrite_2", "patterns":["rapports sexuels à risque", "type de pratique", "anal", "buccal"], "answer":"Oui j'ai eu un rapport sexuel non protégé il y a 4 jours avec un homme. On a eu des rapports anaux et buccaux..." },
+            { "id": "q_urétrite_3", "patterns":["urétrite"], "answer":"Ok je vois et c'est quoi, c'est du à quoi ?" },
+            { "id": "q_urétrite_4", "patterns":["infection sexuellement transmissible", "gonocoque", "chlamydiae"], "answer":"D'accord... Et comment on vérifie que c'est bien ça ?" },
+            { "id": "q_urétrite_5", "patterns":["prélèvement de l'écoulement"], "answer":"Ok je vois..." },
+            { "id": "q_urétrite_6", "patterns":["prélèvement anal", "prélèvement buccal", "prélèvements anaux", "prélèvements buccaux"], "answer":"Ca m'enchante pas mais je comprends." },
+            { "id": "q_urétrite_7", "patterns":["bilan des IST", "syphilis", "VIH", "VHB", "VHC"], "answer":"Oui je pense que c'est mieux si je fais ce bilan du coup." },
+            { "id": "q_urétrite_8", "patterns":["ceftriaxone IM", "une dose de ceftriaxone", "ceftriaxone en intra-musculaire"], "answer":"Oui pas de soucis." },
+            { "id": "q_urétrite_9", "patterns":["doxycycline", "7 jours"], "answer":"Ok." },
+            { "id": "q_urétrite_10", "patterns":["revoir dans 7 jours", "consulter dans 7 jours", "reconsulter dans une semaine", "revoir dans une semaine", "consulter dans une semaine"], "answer":"Ok on se revoit dans une semaine pour vérifier que tout va bien." },
+            { "id": "q_urétrite_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai des brûlures lorsque j'urine et un écoulement bizarre... "},
+            { "id": "q_urétrite_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_urétrite_13", "patterns":["se protéger", "préservatifs"], "answer":"Oui je me doute ..." },
+            { "id": "q_urétrite_14", "patterns":["recontamination"], "answer":"D'accord, c'est pas une maladie qui nous donne une immunité ou quoi." },
+            { "id": "q_urétrite_15", "patterns":["vaccination préventive"], "answer":"Ah oui pourquoi pas." },
+            { "id": "q_urétrite_16", "patterns":["prévenir les personnes", "prévenir vos partenaires"], "answer":"Ca va être compliqué mais je comprends." },
+            { "id": "q_urétrite_17", "patterns":["PrEP"], "answer":"J'y penserai si ça m'arrive à nouveau d'avoir des rapports comme ça ..." }
+          ]
+        },
+
+{
+          id: "SDD6",
+          title: "Toux",
+          intro: "Un patient de 53 ans vous consulte dans votre cabinet de médecine générale pour toux avec douleur thoracique accompagnée de fièvre, d'apparition brutale et évoluant depuis 48 h. Interrogez le patient et indiquez ce que vous recherchez particulièrement à l'examen clinique, citez votre principale hypothèse diagnostique et le germe suspecté, prescriver des examens si nécessaire, proposez un(des) traitement(s) au patient et donnez lui une consigne.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général. Rechercher allergie, notion de contage. Prendre les constantes, rechercher d'autres signes sur le plan respiratoire (expectorations, dl thoracique, dyspnée), rechercher un sd de condensation alvéolaire (matité, augmentation des VV, foyer de crépitants, diminution du MV, souffle tubaire). Rechercher signes de gravité (hypotension, tachycardie, marbrures, oligo-anurie, tachypnée, battement ailes du nez, tirage, expiration abdominale active, cyanose, respiration paradoxale, tb conscience et confusion).",
+            "- Evoquer le diagnostic de pneumonie possiblement à pneumocoque. Prescrire une radiographie du thorax à faire en ville. Prescrire du paracétamol, un macrolide ou de la pristinamycine pendant 7 jours. Expliquer qu'il faut une nouvelle consultation sous 48-72h et qu'il peut consulter avant si son état s'aggrave."
+          ],
+
+          questionSet: [
+            { "id": "q_pneumonie_1", "patterns":["antécédents", "traitements", "profession", "loisirs"], "answer":"Je n'ai aucun antécédent, pas de traitement et je ne fume pas. Je suis banquier."},
+            { "id": "q_pneumonie_2", "patterns":["allergie"], "answer":"Je suis allergique aux chats mais je n'en ai pas côtoyé récemment." },
+            { "id": "q_pneumonie_3", "patterns":["contage", "entourage"], "answer":"Je suis le seul malade de la famille et on n'a pas voyagé récemment ou quoi." },
+            { "id": "q_pneumonie_4", "patterns":["pression artérielle", "tension artérielle", "fréquence cardiaque", "FC", "température", "saturation", "fréquence respiratoire", "FR"], "answer":"TA : 128/92mmHg, FC 105, fièvre 39,5°C, saturation 96%." },
+            { "id": "q_pneumonie_5", "patterns":["expectorations", "douleur thoracique", "dyspnée", "difficulté à respirer"], "answer":"Oui j'ai des expectorations plutôt sales quand je tousse. Et je me sens plus essoufflé que d'habitude notamment à l'effort. J'ai aussi pris deux comprimés de Doliprane avant que j'oublie !" },
+            { "id": "q_pneumonie_6", "patterns":["matité", "augmentation des vibrations vocales", "foyer de crépitants", "diminution du murmure vésiculaire", "souffle tubaire"], "answer":"Dimunution du murmure vésiculaire en regard du lobe inférieur droit, foyer de crépitant et augmentation des VV avec matité à la percussion." },
+            { "id": "q_pneumonie_7", "patterns":["hypotension", "tachycardie", "marbrures", "oligo-anurie", "tachypnée", "battement des ailes du nez", "tirage", "expiration abdominale active", "cyanose", "respiration paradoxale", "troubles de la conscience", "confusion"], "answer":"Absence de signes de gravité. Auscultation cardiaque sans anomalie et sans signes d'insuffisance cardiaque." },
+            { "id": "q_pneumonie_8", "patterns":["pneumonie"], "answer":"Ok je m'en doutais un peu." },
+            { "id": "q_iatrogénie_9", "patterns":["pneumocoque"], "answer":"Oui d'accord." },
+            { "id": "q_pneumonie_10", "patterns":["radiographie du thorax"], "answer":"Ok ça va je vais prendre rendez-vous en sortant." },
+            { "id": "q_pneumonie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai de la fièvre depuis 48h avec un point douloureux à droite du thorax..."},
+            { "id": "q_pneumonie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_pneumonie_13", "patterns":["paracétamol"], "answer":"Ok ok." },
+            { "id": "q_pneumonie_14", "patterns":["macrolide", "pristinamycine"], "answer":"D'accord." },
+            { "id": "q_pneumonie_15", "patterns":["7 jours", "une semaine"], "answer":"Ok pendant 7 jours." },
+            { "id": "q_pneumonie_16", "patterns":["revoir à 48-72h", "dans deux trois jours", "2-3 jours"], "answer":"Ok on se revoit rapidement alors !" },
+            { "id": "q_pneumonie_17", "patterns":["consulter avant"], "answer":"Oui j'hésiterai pas à vous revoir en cas de problème." }
+          ]
+        },
+
+{
+          id: "SDD7",
+          title: "Morsures et piqûres",
+          intro: `Vous recevez dans votre cabinet en consultation de médecine générale, Valérie 39 ans pour une « plaque rouge » depuis 7 jours sur la jambe. Elle ne présente aucun antécédent particulier, ne prend aucun traitement. Elle est animatrice pour les plus jeunes et organise souvent des balades en forêt. À l'examen clinique vous retrouvez la lésion ci-dessous. Décrivez et nommez cette lésion, suspectez un diagnostic expliquez le à la patiente. Répondez aux questions : est-ce grave ? est-ce que je peux avoir d'autres symptômes ?. Proposez un examen complémentaire pour établir le diagnostic et prescrivez un traitement. <img src= "lyme.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Décrire un érythème migrant, macule érythémateuse centrée par le point de piqûre, bordure annulaire érythémateuse et évolution centrifuge. Evoquer le diagnostic de borréliose ou maladie de Lyme, maladie causée par une bactérie appellée Borrelia transmise par des piqûres de tiques, possible éruption cutanée en forme d'anneau de la fièvre des douleurs articulaires et musculaires des maux de tête et de la fatigue (3/5), à ce stade non grave et traitement qui existe, si non traitée possible atteinte neurologique / cardiaque / cutanée / articulaire (2/4).",
+            "- Aucun examen n'est nécessaire, prescrire de la doxycyline, traitement per os et à prendre pendant 14 jours."
+          ],
+
+          questionSet: [
+            { "id": "q_lyme_1", "patterns":["érythème migrant"], "answer":"Validé."},
+            { "id": "q_lyme_2", "patterns":["macule érythémateuse", "centrée par le point de piqure"], "answer":"Validé." },
+            { "id": "q_lyme_3", "patterns":["bordure annulaire érythémateuse"], "answer":"Validé." },
+            { "id": "q_lyme_4", "patterns":["centrifuge"], "answer":"Validé." },
+            { "id": "q_lyme_5", "patterns":["borréliose", "lyme", "Lyme"], "answer":"Validé." },
+            { "id": "q_lyme_6", "patterns":["bactérie", "piqûres de tiques", "en forêt"], "answer":"D'accord je vois donc c'est une piqure de tique qui m'a donné une bactérie quoi. Et en terme de symptômes je peux avoir quoi ?" },
+            { "id": "q_lyme_7", "patterns":["éruption cutanée", "fièvre", "douleurs articulaires", "douleurs musculaires", "maux de tête", "fatigue"], "answer":"Ok je vois. Et c'est grave ?" },
+            { "id": "q_lyme_8", "patterns":["pas grave", "traitement"], "answer":"Bon tant mieux. Et imaginons que je ne prenne pas le traitement, quels sont les risques ? " },
+            { "id": "q_lyme_9", "patterns":["atteinte neurologique", "cardiaque", "cutanée", "articulaire"], "answer":"Ah oui, donc faut vraiment prendre ce traitement. Mais avant ça il faut faire un examen pour être sur que ce soit ça non ?" },
+            { "id": "q_lyme_10", "patterns":["aucun examen", "pas d'examen"], "answer":"Oh d'accord je vous crois. Et c'est quoi le traitement ?" },
+            { "id": "q_lyme_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis animatrice pour des jeunes et on s'est balladé récemment en forêt. Depuis 7 jours, j'ai cette plaque rouge qui augmente en taille mais qui ne me gratte pas. Je me souviens pas avoir été par une araignée ou quoi. C'est quoi ? C'est grave ?"},
+            { "id": "q_lyme_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_lyme_13", "patterns":["doxycycline"], "answer":"Ok ça va." },
+            { "id": "q_lyme_14", "patterns":["par la bouche", "per os"], "answer":"Tant mieux c'est simple à prendre au moins." },
+            { "id": "q_lyme_15", "patterns":["14 jours", "quatorze jours", "deux semaines"], "answer":"C'est plus long que ce que je pensais mais ok." }
+          ]
+        },
+
+{
+          id: "SDD8",
+          title: "Plaie",
+          intro: "Vous recevez dans votre cabinet en consultation de médecine générale, Mme X 70 ans car elle s'est ce matin coupée avec un sécateur en jardinant. À votre examen la plaie est étendue, pénétrante, peu profonde, sans atteinte nerveuse ou tendineuse mais souillée par de la terre. Réalisez un interrogatoire, expliquer à la patiente ce qu'est le tétanos / ce qu'il peut se produire si elle n'est pas traitée et comment elle aurait pu l'éviter, décrivez les étapes de PEC de cette plaie et les étapes de PEC prophylactique de cette plaie.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, faire préciser le statut vaccinal de la patiente. Expliquer que le tétanos est causée par une bactérie présente dans l'environnement, qu'elle produit une toxine qui peut entraîner une paralysie du corps et le décès, et que la meilleure façon de prévenir le tétanos est la vaccination.",
+            "- Désinfecter la plaie, réaliser un parage et ne pas suturer si le parage n'est pas satisfaisant. Ne pas faire de pansement occlusif. Faire un vaccin antitétanique, une injection d'immunoglobuline tétanique dans l'autre bras. Consulter son médecin pour mettre à jour le reste de ses vaccins."
+          ],
+
+          questionSet: [
+            { "id": "q_tétanos_1", "patterns":["profession", "toxiques", "fumez", "antécédents", "traitements", "allergies"], "answer":"Alors moi j'ai du psoriasis que je traite par des dermocorticoïdes. Sinon je n'ai pas d'allergies. Je suis retraitée, je ne fume pas. Et vous voyez je suis quand même en bonne santé donc bon je vais jamais voir mon médecin, à quoi bon ?"},
+            { "id": "q_tétanos_2", "patterns":["vaccinations"], "answer":"Oh bah elles ne doivent pas être à jour puisque je ne vais jamais voir mon médecin traitant mais bon." },
+            { "id": "q_tétanos_3", "patterns":["bactérie", "terre"], "answer":"D'accord je vois." },
+            { "id": "q_tétanos_4", "patterns":["paralysie", "difficultés respiratoires", "décès"], "answer":"Ah oui oula c'est grave quand même votre truc là. Et comment j'aurai pu éviter ça ?" },
+            { "id": "q_tétanos_5", "patterns":["prévenu par la vaccination", "prévention se fait par la vaccination"], "answer":"Ah bah mince alors, et maintenant on fait quoi sur la plaie ?" },
+            { "id": "q_tétanos_6", "patterns":["désinfection", "antisepsie", "désinfecter"], "answer":"Validé." },
+            { "id": "q_tétanos_7", "patterns":["parage", "ne pas suturer"], "answer":"Validé." },
+            { "id": "q_tétanos_8", "patterns":["pas faire de pansement occlusif"], "answer":"Validé." },
+            { "id": "q_tétanos_9", "patterns":["vaccin antitétanique"], "answer":"Validé." },
+            { "id": "q_tétanos_10", "patterns":["immunoglobulines"], "answer":"Validé." },
+            { "id": "q_tétanos_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je me suis coupée la main droite avec mon vieux sécateur ce matin. Je voulais pas vraiment venir mais ma fille m'a dit de venir vous voir quand même pour pas que ça s'infecte. "},
+            { "id": "q_tétanos_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_tétanos_13", "patterns":["mettre à jour"], "answer":"Oui je comprends mieux pourquoi maintenant." }
+          ]
+        },
+
+{
+          id: "SDD9",
+          title: "Bactérie multirésistante à l'antibiogramme",
+          intro: "Vous êtes réanimateur et vous vous occupez d'un patient de 48 ans, hospitalisé pour bactériémie avec sepsis. Il n'a pas d'allergie. Il est hospitalisé depuis 3 jours pour une première cure de chimiothérapie via une chambre implantable. Les résultats de l'antibiogramme viennent de sortir et de retrouver un staphylocoque aureus résistant à la méticilline, avec comme point de départ la chambre implantable. Vous expliquez à votre externe la prise en charge. Expliquez comment vous avez fait pour confirmer la porte d'entrée, expliquez ce que vous demandez pour la suite de la prise en charge maintenant que vous savez qu'il s'agit d'un SARM, expliquez le traitement à mettre en place.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Faire des hémocultures périphériques et sur la chambre implantable, il faut le même germe sur les hémoc centrales et périphériques, que les hémocultures centrales poussent au moins 2h plus tôt ou qu'elles ont une quantité de germe au moins 5 fois plus importante que les périphériques. Il faut rechercher des signes locaux d'infection sur la chambre implantable (cellulite, tunnelite, écoulement purulent, abcès, rougeur 2/5).",
+            "- Demander une échocardiographie pour rechercher une endocardite, demander une surveillance de l'efficacité du traitement par hémocultures à 48h, retirer la chambre implantable, mettre en place un isolement contact. Prescrire de la vancomycine, par voie IV et pendant 14 jours s'il n'y a pas de localisation secondaire."
+          ],
+
+          questionSet: [
+            { "id": "q_sarm_1", "patterns":["hémocultures périphériques et centrales", "hémocultures périphériques et sur la chambre implantable", "hémocultures"], "answer":"D'accord je vois et que faut-il retrouver sur les hémocultures ?"},
+            { "id": "q_sarm_2", "patterns":["même germe", "2h plus tôt", "5 fois plus importante"], "answer":"Ok je comprends. Et on aurait des signes d'infection à chercher ?" },
+            { "id": "q_sarm_3", "patterns":["signes locaux d'infection", "cellulite", "tunnelite", "écoulement purulent", "abcès", "rougeur"], "answer":"Oui d'accord ça me revient. Et on doit faire des examens ?" },
+            { "id": "q_sarm_4", "patterns":["échocardiographie", "endocardite"], "answer":"Ah oui je comprends. Et comment on surveille ?" },
+            { "id": "q_sarm_5", "patterns":["hémocultures à 48h"], "answer":"Ah d'accord je vois." },
+            { "id": "q_sarm_6", "patterns":["retirer la chambre implantable"], "answer":"Ah oui d'accord." },
+            { "id": "q_sarm_7", "patterns":["isolement contact"], "answer":"Ah oui j'avais oublié ça." },
+            { "id": "q_sarm_8", "patterns":["vancomycine"], "answer":"D'accord de la vancomycine." },
+            { "id": "q_sarm_9", "patterns":["voie intraveineuse", "IV"], "answer":"Ok oui." },
+            { "id": "q_sarm_10", "patterns":["14 jours", "quatorze jours", "deux semaines", "2 semaines"], "answer":"D'accord." },
+            { "id": "q_sarm_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis l'externe du service et j'ai quelques questions. Comment on confirme la porte d'entrée ?"},
+            { "id": "q_sarm_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Doc." }
+          ]
+        },
+
+{
+          id: "SDD10",
+          title: "Découverte de BAAR sur un crachat",
+          intro: "Vous êtes médecin en service d'infectiologie. Ce matin vous avez une nouvelle patiente dans votre service, le motif d'hospitalisation est suspicion de tuberculose avec« découverte de bacilles acido-alcoolo-résistantes sur crachat dans un contexte de toux ». Réalisez un interrogatoire pour connaître le terrain et la symptomatologie de la patiente, proposez un examen d'imagerie à réaliser dans ce contexte, expliquez ce que vous demandez pour compléter l'étude du prélèvement, expliquez à la patiente la maladie que vous suspectez.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, conditions de vie / alcool et tabac / pays d'origine. Signes généraux (fatigue, diminution du poids et de l'appétit, fièvre surtout la nuit, sueurs surtout la nuit), signes fonctionnels (douleur thoracique, toux, crachat sale, crachat avec du sang, difficultés à respirer).",
+            "- Prescrire une radiographie ou un scanner, préciser thoracique, mettre en culture le prélèvement, demander un génotypage (gène de résistance à la rifampicine, confirmer qu'il s'agit d'une mycobactérie du complexe tuberculosis), demander un antibiogramme. Dire que la patiente est probablement atteinte de tuberculose, qu'il s'agit d'une infection qui touche souvent les poumons mais aussi d'autres organes qu'il faut traiter par ATB pendant plusieurs mois.",
+            "Le diagnostic de tuberculose maladie :",
+            "- Prélèvement : multiples, répétés et ciblés (x3 prélèvements sur 3 jours de suite). Si la patiente crache = ECBC, si la patiente ne crache pas = tubage gastrique le matin à jeun. En cas d'échec ou suspicion de tuberculose miliaire = fibroscopie bronchique avec aspiration dirigée +/- LBA.",
+            "- Chez l'enfant on fait une IDR y compris en cas de tuberculose maladie.",
+            "- Bactériologie : examen direct par coloration de Ziehl-Nielsen. Une culture négative n'élimine pas le diagnostic. On fait aussi une culture sur milieu enrichi : milieu solide de Löwenstein ou milieu liquide. Antibiogramme OBLIGATOIRE."
+          ],
+
+          questionSet: [
+            { "id": "q_tuberculose_1", "patterns":["profession", "antécédents", "traitements", "allergies", "vaccins"], "answer":"Je n'ai pas d'antécédents, pas de traitements et pas d'allergies."},
+            { "id": "q_tuberculose_2", "patterns":["conditions de vie", "tabac", "alcool", "pays d'origine"], "answer":"Je suis tabagique et je bois régulièrement de l'alcool et je suis originaire de Niger arrivée en France depuis 2 mois. Je vis dans un logement mis à disposition par la ville de Rennes mais je n'ai pas de papiers." },
+            { "id": "q_tuberculose_3", "patterns":["fatigue", "diminution du poids et de l'appétit", "fièvre nocturne", "sueurs nocturnes"], "answer":"Je me sens fatiguée depuis quelques semaines, je transpire beaucoup surtout la nuit et j'ai l'impression d'être chaude." },
+            { "id": "q_tuberculose_4", "patterns":["douleur thoracique", "toux", "crachats", "crachats avec du sang", "hémoptysie", "difficultés à respirer", "dyspnée"], "answer":"Oui je tousse beaucoup mais c'est tout." },
+            { "id": "q_tuberculose_5", "patterns":["radiographie", "scanner", "tomodensitométrie"], "answer":"Ok je vois." },
+            { "id": "q_tuberculose_6", "patterns":["thoracique"], "answer":"Validé." },
+            { "id": "q_tuberculose_7", "patterns":["culture"], "answer":"Validé." },
+            { "id": "q_tuberculose_8", "patterns":["génotypage", "gène de résistance", "mycobactérie"], "answer":"Validé." },
+            { "id": "q_tuberculose_9", "patterns":["antibiogramme"], "answer":"Validé." },
+            { "id": "q_tuberculose_10", "patterns":["tuberculose"], "answer":"Validé." },
+            { "id": "q_tuberculose_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_tuberculose_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_tuberculose_13", "patterns":["poumons", "autres organes", "antibiotiques", "plusieurs mois"], "answer":"Je comprends." }
+          ]
+        },
+
+{
+          id: "SDD11",
+          title: "Analyse d'un examen cytobactériologique des urines",
+          intro: "Une patiente de 38 ans consulte aux urgences pour fièvre et douleur lombaire droite depuis hier soir. Vous suspectez une pyélonéphrite aiguë et vous avez réalisé une BU qui est revenue positive. La douleur est apparue de manière progressive et elle est actuellement bien calmée sous perfusion de paracétamol aux urgences. Que recherchez vous à l'interrogatoire et à l'examen clinique ? Prescrivez d'autres examens, citez la(les) information(s) obtenue via l'examen qui permet(tent) de confirmer le diagnostic, proposez une PEC et expliquez la PEC adaptée à l'antibiogramme.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, facteurs de complications (grossesse, immunodépression, IRC sévère, uropathie), signes de sepsis ou choc septique (tb conscience, confusion, désaturation, tachypnée, tirage, expiration abdominale active, battement des ailes du nez, cyanose, respiration profonde, hypotension, marbrures, oligo-anurie).",
+            "- Prescrire des b-hCG et un ECBU, dire que le seuil de bactérirurie est significatif si > 10^3 UFC/mL, dire que le seuil de leucocyturie est significatif si > 10^4/mL, dire que la PEC se fait à domicile, de prescrire de la fluoroquinolone par la bouche et la revoir dans 3 jours. Après les résultats de l'antibiogramme continue les fluoroquinolones et dire que l'antibiothérapie durera 7 jours."
+          ],
+
+          questionSet: [
+            { "id": "q_pyélonéphrite_1", "patterns":["antécédents", "traitements", "allergies", "toxiques", "profession"], "answer":"Je n'ai pas d'antécédents et je prends juste une contraception OP orale. Je suis enseignante, je ne fume pas et ne bois pas. Je n'ai pas voyagé récemment, et je suis à jour de mes vaccins."},
+            { "id": "q_pyélonéphrite_2", "patterns":["grossesse", "immunodépression", "immunodéprimée", "insuffisance rénale chronique sévère", "IRC sévère", "uropathie"], "answer":"Je ne suis pas enceinte, pas immunodéprimée, je n'ai pas de maladies rénales ou urologiques." },
+            { "id": "q_pyélonéphrite_3", "patterns":["troubles de la conscience", "confusion", "désaturation", "tachypnée", "tirage", "expiration abdominale active", "battement des ailes du nez", "cyanose", "respiration paradoxale", "hypotension", "marbrures", "oligo-anurie"], "answer":"Aucun signe de gravité." },
+            { "id": "q_pyélonéphrite_4", "patterns":["b-hCG", "bêta-hCG"], "answer":"Les b-hCG reviennent négatifs." },
+            { "id": "q_pyélonéphrite_5", "patterns":["ECBU", "examen cytobactériologique des urines"], "answer":"ECBU : urines troubles jaune claire. Hématies par mL 2000. Leucocytes par mL 50 000. Absence de cristaux. Examen direct : quelques bacilles GRAM négatif. Culture (E. Coli) : 1 000 000 /mL." },
+            { "id": "q_pyélonéphrite_6", "patterns":["> 10^3", ">10^3"], "answer":"Validé." },
+            { "id": "q_pyélonéphrite_7", "patterns":[">10^4", > 10^4", "10/mm^3"], "answer":"Validé." },
+            { "id": "q_pyélonéphrite_8", "patterns":["prise en charge à domicile", "à domicile"], "answer":"D'accord tant mieux." },
+            { "id": "q_pyélonéphrite_9", "patterns":["fluoroquinolone"], "answer":"Ok je vois. L'antibiogramme est le suivant : résistance à ampicilline, Augmentin, ticarcilline, gentamicine, tobramycine, bacrim. Les autres antibiotiques usuels sont sensibles. " },
+            { "id": "q_pyélonéphrite_10", "patterns":["dans 3 jours", "3 jours"], "answer":"Ok je reviendrais dans trois jours." },
+            { "id": "q_pyélonéphrite_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai très mal dans le dos vers la droite, j'ai pris du paracétamol ce matin mais bon. J'ai eu de la fièvre et ces douleurs depuis hier soir."},
+            { "id": "q_pyélonéphrite_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_pyélonéphrite_13", "patterns":["continuer les fluoroquinolones", "continuer le traitement"], "answer":"Ok alors on garde les fluoroquinolones." },
+            { "id": "q_pyélonéphrite_14", "patterns":["7 jours", "sept jours", "une semaine"], "answer":"Ok c'est noté." }
+          ]
+        },
+
+{
+          id: "SDD12",
+          title: "Hémocultures positives",
+          intro: "Mme X,55 ans, traitée par hormonothérapie et chimiothérapie pour un cancer du sein, vous appelle paniquée car depuis 3 jours, elle sesent fébrile, a mal au niveau de sa chambre implantable. La peau est rouge et il existe un écoulement de pus. Il n'existe pas de signes de gravité. Sa dernière cure de chimiothérapie date d'il y a 10 jours, elle avait 0,3 G/L de PNN au bilan de sortie. Vous avez réalisé des hémocultures périphériques et centrales qui reviennent positives à C. albicans (pousse plus rapide pour les hémocultures prélevées sur la voie centrale). Expliquez la maladie à la patiente, répondez à ces questions, proposez un bilan d'imagerie systématique à réaliser, expliquez la PEC spécifique de sa fongémie.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Dire à la patiente qu'elle est atteinte d'une fongémie, et que cette infection peut entrainer une infection dans d'autres organes. Dire que cette atteinte s'explique par la chimiothérapie qui diminue les défenses immunitaires, que la source de cette atteinte est très probablement sa chambre implantable.",
+            "- Faire un scanner corps entier, un fond d'oeil et une échographie cardiaque. Organiser le retrait de la chambre implantable, prescrire de l'échinocandine, que le traitement sera en IV, expliquer que le traitement sera prescrit pour 14j après négativation des hémocultures.",
+            "Généralités sur la candidémie :",
+            "- candida le plus fréquent est le C. albicans, fait partie de la flore commensale, presque toujours sur terrain à risque, porte d'entrée les plus fréquentes (cathéter vasculaire, chir abdo, lésions muqueuses digestives).",
+            "- 40% sont diagnostiquées en réa, 80% sont du genre Candida. Infection grave avec mortalité 50% (dont 50% les 5 premiers jours) et en augmentation globale (fréquente résistance aux antifongiques azolés)."
+          ],
+
+          questionSet: [
+            { "id": "q_candidose_1", "patterns":["fongémie"], "answer":"D'accord je vois, et ça ne touche que le sang ?"},
+            { "id": "q_candidose_2", "patterns":["autres organes"], "answer":"Olala, et à quoi c'est du ? },
+            { "id": "q_candidose_3", "patterns":["chimiothérapie", "défenses immunitaires"], "answer":"Ok je comprends, et c'est rentré par où ?" },
+            { "id": "q_candidose_4", "patterns":["chambre implantable"], "answer":"Oh mon dieu mais je ne peux rien faire ! Faut-il faire des examens ?" },
+            { "id": "q_candidose_5", "patterns":["scanner corps entier", "bodyscan", "TDM corps entier"], "answer":"Ok faisons ça." },
+            { "id": "q_candidose_6", "patterns":["fond oeil"], "answer":"Ok j'entends." },
+            { "id": "q_candidose_7", "patterns":["échographie cardiaque", "échocardiographie", "ETT", "échographie trans-thoracique"], "answer":"D'accord je vois." },
+            { "id": "q_candidose_8", "patterns":["retrait de la chambre implantable"], "answer":"Ok je comprends." },
+            { "id": "q_candidose_9", "patterns":["échinocandine"], "answer":"Ok parfait si on peut traiter cette fongémie." },
+            { "id": "q_candidose_10", "patterns":["intraveineux", "IV"], "answer":"D'accord je comprends." },
+            { "id": "q_candidose_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis paniquée, j'ai depuis 3 jours de la fièvre et j'ai mal au niveau de ma chambre implantable. C'est rouge et y a même du pus..."},
+            { "id": "q_candidose_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_candidose_13", "patterns":["14 jours", "quatorze jours", "deux semaines","2 semaines"], "answer":"Parfait je prendrais tout ce qu'il faut pendant 14 jours." }
+          ]
+        },
+
+{
+          id: "SDD13",
+          title: "Découverte diagnostic positif dépistage rapide VIH",
+          intro: "Vous êtes médecin généraliste et recevez Marc, 24 ans, sans antécédents, traitements ni allergies. Il ne consomme pas de tabac ni d'alcool. Il vous consulte, très inquiet, car il a eu un rapport non protégé 4 semaines auparavant. Il a effectué un autotest VIH qui est positif. Il est totalement asymptomatique. Il est hétérosexuel, sans rapports buccaux et anaux. Le dernier dépistage effectué, il y a 3 mois était négatif. Expliquez la maladie du patient et ce que les traitements actuels permettent, expliquez comment confirmez le diagnostic, expliquez les principales complications non opportunistes et comment les prévenir (en dehors de la prise du traitement antiviral).",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- VIH virus infectant et détruisant les défenses immunitaires, pas de traitement permettant de guérir complétement mais empêche les infections d'évoluer / avoir une qualité de vie et espérance de vie similaire à un non malade / empêcher toute transmission. Réaliser un test ELISA sur prélèvement sanguin, un Western Blot sur le même prélèvement, réaliser un test ELISA sur un autre prélèvement.",
+            "- Pathologie augmente le risque de faire des infections pulmonaires, existe des vaccins pour prévenir les infections pulmonaires, sa pathologie augmente le risque de faire des infections digestives. De nombreuses méthodes préviennent les infections digestives (se laver les mains, séparer les aliments crus des cuits, bien cuire les aliments, laver les fruits et légumes, nettoyer le réfrigérateur 1/5). Expliquer que sa pathologie augmente le risque d'attraper des IST, qu'il existe des méthodes pour prévenir les IST (préservatif, dépistage clinique et sanguin régulier, se faire vacciner contre VHB 2/3)."
+          ],
+
+          questionSet: [
+            { "id": "q_VIH_1", "patterns":["infectant les défenses immunitaires", "détruisant les défenses immunitaires", "augmentent le risque d'infections", "augmentent le risque de cancer"], "answer":"Ok je comprends."},
+            { "id": "q_VIH_2", "patterns":["pas de traitement pour guérir", "empêche l'infection", "qualité de vie", "espérance de vie", "empêcher toute transmission"], "answer":"D'accord donc je n'en guérirai pas mais je vivrais à peu près normalement." },
+            { "id": "q_VIH_3", "patterns":["test ELISA"], "answer":"Validé." },
+            { "id": "q_VIH_4", "patterns":["Western Blot"], "answer":"Validé." },
+            { "id": "q_VIH_5", "patterns":["ELISA sur un autre prélèvement"], "answer":"Validé." },
+            { "id": "q_VIH_6", "patterns":["augmente le risque d'infections pulmonaires"], "answer":"Ok je comprends et on peut prévenir ces infections ?" },
+            { "id": "q_VIH_7", "patterns":["vaccins"], "answer":"Ok." },
+            { "id": "q_VIH_8", "patterns":["augmente le risque d'infections digestives"], "answer":"D'accord et on peut les éviter ces infections ?" },
+            { "id": "q_VIH_9", "patterns":["se laver les mains", "séparer les aliments crus des aliments cuits", "cuire les aliments", "laver les fruits et légumes", "nettoyer le réfrigérateur"], "answer":"ok d'accord." },
+            { "id": "q_VIH_10", "patterns":["augmente le risque d'IST", "augmente le risque d'infections sexuellement transmissibles"], "answer":"Je vois, et là encore y a des mesures de prévention ?" },
+            { "id": "q_VIH_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis assez inquiet parce que j'ai eu un rapport sexuel non protégé il y a 1 mois et mon auto test VIH est positif. Qu'est-cce que c'est le VIH, comment ça fonctionne ?"},
+            { "id": "q_VIH_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_VIH_13", "patterns":["préservatif", "dépistage clinique", "dépistage sanguin", "VHB"], "answer":"Ok parfait." }
+          ]
+        },
+
+{
+          id: "SDD14",
+          title: "Interprétation d'un résultat de sérologie",
+          intro: "Vous recevez au mois de novembre un patient de 35ans, toxicomane avec injection de drogues en IV et rapports sexuels pas toujours protégés, chez qui vous aviez demandé un bilan sérologique. Il boit de l'alcool occasionnellement mais fume un paquet par jour depuis 15 ans. Il n'a pas d'allergies. Posez un diagnostic au vu des résultats des sérologies, expliquez au patient cette pathologie et ces risques évolutifs, expliquez le bilan sérologique et d'imagerie demandés, donnez des consignes au patient.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Poser le diagnostic d'hépatite B chronique, explique qu'il s'agit dune infection du foie par un virus probablement transmis par voie sexuelle ou aiguilles, risque d'évolution vers la cirrhose qui peut entrainer le décès, risque d'évolution vers un cancer du foie, infection peut être contrôlée par ses défenses immunitaires et des traitements mais jamais guérie définitivement et peut récidiver.",
+            "- Demander une sérologie VHD et VHA, compléter le bilan avec évaluation dela fibrose par marqueurs plasmatique ou élastométrie ou échographie (1/2). Consignes : arrêter la conso d'alcool, vacciner contre VHA, utilisation de préservatifs, utiliser du matériel à usage unique pour s'injecter des drogues et ne pas le partager, ne pas donner son sang, bénéficie ALD / aide dans son addiction / dépistages gratuits au CeGIDD (1/3), expliquer le besoin de vaccination de l'entourage contre VHB.",
+            "VHB chronique si portage de l'Ag HBs > 6 mois. Les Ag HBs témoignent d'une vaccination ou guérison et les Ac anti-HBc d'une infection actuelle ou passée. Les Ag HBe permettent de quantifier l'activité de la maladie chronique."
+          ],
+
+          questionSet: [
+            { "id": "q_hépatiteB_1", "patterns":["hépatite B chronique"], "answer":"Ouais ok."},
+            { "id": "q_hépatiteB_2", "patterns":["résultats", "sérologies"], "answer":"Sérologies du mois de février : VIH -, AG HBs +, IgM anti-HBc +, Ac anti-HBs-, PCR VHB+, VHC -. Sérologies du mois d'octobre : VIH-, Ag HBs+, Ig anti-HBc +, Ac anti-HBs  -, PCR+, VHC -." },
+            { "id": "q_hépatiteB_3", "patterns":["infection du foie", "voie sexuelle", "partage d'aiguilles"], "answer":"Je comprends." },
+            { "id": "q_hépatiteB_4", "patterns":["cirrhose", "décès"], "answer":"Ouais ok." },
+            { "id": "q_hépatiteB_5", "patterns":["cancer"], "answer":"J'entends." },
+            { "id": "q_hépatiteB_6", "patterns":["pas en guérir", "pas de guérison, "peut récidiver"], "answer":"Oui donc bon y a rien à faire, bref. Je dois faire des examens ?" },
+            { "id": "q_hépatiteB_7", "patterns":["sérologie VHD", "sérologie VHA", "VHD", "VHA", "hépatite D", "hépatite A"], "answer":"OK." },
+            { "id": "q_hépatiteB_8", "patterns":["marqueurs plasmatiques", "élastométrie", "échographie"], "answer":"Oui pour regarder le foie je vois." },
+            { "id": "q_hépatiteB_9", "patterns":["arrêter l'alcool", "arrêter de boire", "arrêt de la consommation d'alcool", "arrêter la consommation d'alcool"], "answer":"J'essayerai mais je promets rien." },
+            { "id": "q_hépatiteB_10", "patterns":["vaccination contre l'hépatite A", "vaccination contre le VHA"], "answer":"Ok ça va." },
+            { "id": "q_hépatiteB_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens avec mes résultats de sérologie je crois."},
+            { "id": "q_hépatiteB_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_hépatiteB_13", "patterns":["rapports protégés", "préservatifs"], "answer":"Ouais je sais je sais." },
+            { "id": "q_hépatiteB_14", "patterns":["matériel à usage unique", "pas partager votre matériel", "pas partager votre matériel"], "answer":"Ok je ferai attention à mon matériel." },
+            { "id": "q_hépatiteB_15", "patterns":["pas donner votre sang", "pas faire de don de sang"], "answer":"D'accord." },
+            { "id": "q_hépatiteB_16", "patterns":["affection longue durée", "aide contre vos addictions", "centres d'addictologie", "dépistages gratuits", "CeGIDD"], "answer":"D'accord." },
+            { "id": "q_hépatiteB_17", "patterns":["vacciner contre l'hépatite B", "vaccination contre l'hépatite B"], "answer":"Je leur dirai." }
+          ]
+        },
+
+{
+          id: "SDD15",
+          title: "Prescrire un anti-infectieux",
+          intro: "Vous recevez une patiente de 32 ans en consultation spécialisée d'infectiologie pour introduction d'une trithérapie anti-VIH au long cours. Elle prend actuellement une contraception mais elle s'inquiète pour une future grossesse… Elle n'a pas d'autres comorbidités ni allergie et ne consomme pas de toxiques. Ses autres sérologies sont négatives au dernier bilan. Elle n'a pas d'infection ni de signes de néoplasie au bilan clinique et paraclinique. Expliquez les objectifs de la trithérapie, les modalités de prescription / délivrance / prise du traitement, expliquez les 3 critères majeurs de suivi, répondez à la question de la patiente sur son besoin de vaccination.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Le traitement est l'unique moyen de contrôler la présence du virus et de reconstituer ses défenses immunitaires, le traitement permet de ne plus être contagieuse si elle prend correctement son traitement et que le virus n'est plus détectable au bilan, que le traitement permet de réduire les risques de transmission  à son enfant.",
+            "- Le traitement est à prendre à vie car il stabilise la maladie, sa prise tous les jours lors des repas le rend efficace, son médecin traitement peut renouveler sa prescription / le traitement est disponible en pharmacie de ville (1/2), être vigilant lors de l'introduction d'autres médicaments.",
+            "- Efficacité évaluée par : contrôle immunologique LTCD4+ > 500, contrôle virologique charge virale < 50 copies/mL. Evaluer l'observance, évaluer la tolérance (clinique, biologique par NFS / GàJ, EAL, créatininémie, transaminases).",
+            "- Le traitement n'interfère pas sur la possibilité ou non d'effectuer un vaccin, elle peut pas se faire vacciner tant que son système immunitaire n'est pas reconstitué.",
+          ],
+
+          questionSet: [
+            { "id": "q_vihgrossesse_1", "patterns":["contrôler le virus", "reconstituer les défenses immunitaires"], "answer":"Oui je comprends ce point."},
+            { "id": "q_vihgrossesse_2", "patterns":["plus être contagieuse", "pas être contagieuse", "plus détectable"], "answer":"D'accord, c'est rassurant. Et d'un point de vue de la transmission à mon enfant ?" },
+            { "id": "q_vihgrossesse_3", "patterns":["réduit les risques de transmission", "faibles risques de transmission"], "answer":"Ok bon c'est cool." },
+            { "id": "q_vihgrossesse_4", "patterns":["à vie", "stabiliser"], "answer":"Oui je savais que c'était un traitement à vie." },
+            { "id": "q_vihgrossesse_5", "patterns":["tous les jours", "lors des repas"], "answer":"Oui ok je le prendrais bien de cette façon." },
+            { "id": "q_vihgrossesse_6", "patterns":["médecin traitant", "pharmacie de ville"], "answer":"Bon ça c'est bien, je voulais pas aller à l'hôpital tous les mois." },
+            { "id": "q_vihgrossesse_7", "patterns":["introduction d'autres médicaments"], "answer":"Ah ok j'en ferais part à mon médecin traitant." },
+            { "id": "q_vihgrossesse_8", "patterns":["LTCD4 > 500", ">500", "charge virale < 50", "50 copies"], "answer":"Ok je vois." },
+            { "id": "q_vihgrossesse_9", "patterns":["observance"], "answer":"Je fais bien attention à prendre mon traitement tous les jours." },
+            { "id": "q_vihgrossesse_10", "patterns":["tolérance clinique", "NFS", "glycémie", "GàJ", "EAL", "anomalies lipidiques", "créatininémie", "transaminases", "ASAT", "ALAT"], "answer":"Ok on pourra faire un bilan." },
+            { "id": "q_vihgrossesse_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je voudrais avoir un enfant mais j'ai un VIH. Je viens vous voir pour avoir un traitement et j'ai quelques interrogations pour ma vie future. D'abord à quoi sert ce traitement ?"},
+            { "id": "q_vihgrossesse_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_vihgrossesse_13", "patterns":["modifie pas la possibilité de faire des vaccins", "n'interfère pas avec les vaccinations", "n'interfère pas sur la possibilité de faire des vaccins"], "answer":"Ah ok c'est rassurant." },
+            { "id": "q_vihgrossesse_14", "patterns":["pas se faire vacciner"], "answer":"Oui tant que je suis pas mieux je ne fais pas de vaccins mais après on pourra reprendre normalement." }
+          ]
+        },
+
+{
+          id: "SDD16",
+          title: "Prise en charge d'un accès palustre",
+          intro: "Une patiente de 45 ans, revenant de 2 semaines de voyage en Tanzanie consulte aux urgences pour fièvre évoluant depuis la veille avec céphalées et vomissements. Elle est très fatiguée et essoufflée. Vous suspectez en première intention un paludisme, et vous demandez un bilan biologique. Réalisez un interrogatoire général, identifiez les critères de gravité parmi les informations données, expliquez comment vous faites le diagnostic, expliquez la PEC anti palustre proposée ainsi que les modalités de surveillance de l'effet du traitement.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, rechercher une prophylaxie anti palustre, application de mesures anti vectorielles (répulsifs, moustiquaires, vêtements longs 2/3). Saturation < 92%, FR > 30, ictère, bilirubine > 50, hémoglobine < 7 g/dL, glycémie < 2,2 mmol/L.",
+            "- Réaliser un frottis sanguin + goutte épaisse ou frotti sanguin + biologie moléculaire ou frotti sanguin + TDR. La patiente doit être hospitalisée en réanimation, prescrire un traitement par Artésunate, faire un relai par arthéméter-luméfantrine ou arténimol-pipéraquine (1/2), surveiller une anémie hémolytique retardée par NFS à J7-J14-J21-J28, surveiller la parasitémie par frotti sanguin + goutte épaisse à J3-J7-J28.",
+            "Critères d'hospitalisation :",
+            "- Terrain : âge, comorbidités, grossesse, splénectomie.",
+            "- Critères cliniques ou paracliniques : tout signes de gravité, pq < 50 G/L, Hb < 10 g/dL, créat > 150 µmol/L, parasitémie > 2%.",
+            "- Critères diagnostiques : impossibilité d'avoir un diagnostic fiable et rapide.",
+            "- Critères thérapeutiques : tb digestifs compromettant un traitement PO, facteurs socioculturels, éloignement d'un centre hospitalier, impossibilité de suivi, absence de médicaments immédiatement disponibles en pharmacie, échec d'un premier traitement.",
+          ],
+
+          questionSet: [
+            { "id": "q_paludisme_1", "patterns":["antécédents", "profession", "toxiques", "tabac", "alcool", "traitements", "allergies", "animaux", "comportements sexuels à risque"], "answer":"Je n'ai aucun antécédent, pas d'allergies, et seulement une contraception orale oestroprogestative. Je ne fume pas, je ne bois pas et je vis avec mon conjoint. Je n'ai pas de relations sexuelles à risques et mes vaccins sont à jour."},
+            { "id": "q_paludisme_2", "patterns":["prophylaxie antipalustre", "prophylaxie"], "answer":"Alors, je suis restée 2 semaines en Tanzanie mais je n'avais pas de prophylaxie antipalustre." },
+            { "id": "q_paludisme_3", "patterns":["mesures antivectorielles", "répulsifs", "moustiquaires", "vêtements longs"], "answer":"Non je n'ai pas mis de répulsif ou utilisé de vêtements longs ou des moustiquaires le soir." },
+            { "id": "q_paludisme_4", "patterns":["saturation < 92%"], "answer":"Saturation à 91%." },
+            { "id": "q_paludisme_5", "patterns":["fréquence respiratoire > 30", "FR > 30"], "answer":"FR à 33." },
+            { "id": "q_paludisme_6", "patterns":["ictère"], "answer":"Présence d'un ictère." },
+            { "id": "q_paludisme_7", "patterns":["bilirubine > 50"], "answer":"Bilirubine totale à 84 µmol/L." },
+            { "id": "q_paludisme_8", "patterns":["hémoglobine < 7", "Hb < 7"], "answer":"Hb à 6,5 g/dL, plaquettes à 60 G/L." },
+            { "id": "q_paludisme_9", "patterns":["glycémie < 2,2"], "answer":"Glyécmie à 2 mmol/L." },
+            { "id": "q_paludisme_10", "patterns":["frotti sanguin", "goutte épaisse", "biologie moléculaire", "test de diagnostic rapide"], "answer":"Validé." },
+            { "id": "q_paludisme_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai de la fièvre à 39°C depuis hier avec des maux de tête et des vomissements."},
+            { "id": "q_paludisme_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_paludisme_13", "patterns":["réanimation"], "answer":"Oh d'accord je vois..." },
+            { "id": "q_paludisme_14", "patterns":["artésunate"], "answer":"Validé." },
+            { "id": "q_paludisme_15", "patterns":["artéméther-luméfantrine", "arténimol-pipéraquine"], "answer":"Validé." },
+            { "id": "q_paludisme_16", "patterns":["anémie hémolytique"], "answer":"Valudé." },
+            { "id": "q_paludisme_17", "patterns":["J3", "J7", "J28"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD17",
+          title: "PEC d'un patient présentant une tuberculose bacillifère",
+          intro: "Mme X 34 ans vous est transférée pour la prise en charge de sa tuberculose maladie, localisée aux poumons. Elle n'est pas dénutrie ni alcoolique, ni enceinte. Vous devez expliquer à votre externe la prise en charge. Expliquez les traitements de première ligne de la tuberculose (nom des molécules, schéma thérapeutique classique, modalités de prise), expliquez les mesures d'isolement et de déclaration, expliquez les complications fréquentes de chaque molécule.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Traitement par isoniazide, rifampicine, éthambutol et pyrazinamide. Schéma par 2 mois de quadrithérapie et 2 mois de bithérapie (rifampicine + isoniazide). Prendre le traitement tous les jours, existe sous forme d'un comprimé unique, à prendre à distance des repas.",
+            "- Complications isoniazide : tb digestifs, hépatite, polynévrite sensitivomotrice, tb psychiatriques. Complications rifampicine : inducteur enzymatique, réactions immuno-allergiques, coloration des liquides biologiques. Complications de l'éthambutol : névrite optique rétrobulbaire, IR. Complications pyrazinamide : IHC, IR.",
+            "- Mettre en place un isolement air, masque chirurgical, masque FFP2 pour les soignants, notification anonyme à l'ARS et signalement nominatif au CLAT.",
+            "On déclare les TM confirmées ou suspectées, et ITL + < 18 ans.",
+            "On fait une notification ANONYME à l'ARS, un signalement NOMINATIF au CLAT et une déclaration des issues de traitement à l'ARS.",
+          ],
+
+          questionSet: [
+            { "id": "q_tttuberculose_1", "patterns":["isoniazide"], "answer":"Validé."},
+            { "id": "q_tttuberculose_2", "patterns":["rifampicine"], "answer":"Validé." },
+            { "id": "q_tttuberculose_3", "patterns":["éthambutol"], "answer":"Validé." },
+            { "id": "q_tttuberculose_4", "patterns":["pyrazinamide"], "answer":"Validé." },
+            { "id": "q_tttuberculose_5", "patterns":["2 mois de quadrithérapie", "4 mois de bithérapie"], "answer":"Oui d'accord c'est donc 2 mois puis 4 mois de traitements." },
+            { "id": "q_tttuberculose_6", "patterns":["tous les jours", "un seul comprimé", "à distance des repas"], "answer":"Ok je retiens." },
+            { "id": "q_tttuberculose_7", "patterns":["troubles digestifs", "hépatite", "polynévrite sensitivomotrice", "troubles psychiatriques"], "answer":"Ok je vois." },
+            { "id": "q_tttuberculose_8", "patterns":["inducteur enzymatique", "réaction immuno-allergique", "coloration des liquides biologiques", "urines oranges"], "answer":"Ok pourquoi pas." },
+            { "id": "q_tttuberculose_9", "patterns":["névrite optique rétrobulbaire", "insuffisance rénale"], "answer":"Oui d'accord." },
+            { "id": "q_tttuberculose_10", "patterns":["insuffisance hépatocellulaire"], "answer":"Ok ça va." },
+            { "id": "q_tttuberculose_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Vous pourriez m'aider sur ce patient qui a une tuberculose ? Quel est le traitement ?"},
+            { "id": "q_tttuberculose_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_tttuberculose_13", "patterns":["isolement air"], "answer":"Je vois." },
+            { "id": "q_tttuberculose_14", "patterns":["masque chirurgical"], "answer":"Oui d'accord." },
+            { "id": "q_tttuberculose_15", "patterns":["FFP2"], "answer":"D'accord." },
+            { "id": "q_tttuberculose_16", "patterns":["notification anonyme à l'ARS", "ARS"], "answer":"D'accord." },
+            { "id": "q_tttuberculose_17", "patterns":["signalement nominatif au CLAT", "CLAT"], "answer":"D'accord." }
+          ]
+        },
+
+{
+          id: "SDD18",
+          title: "Consultation suite à un contage tuberculeux",
+          intro: "Une patiente de 38 ans vous consulte avec son fils Marius de 14 mois dans un contexte de contage tuberculeux récent. En effet, son époux est atteint d'une tuberculose pulmonaire diagnostiquée il y a 4 jours. Ils sont totalement asymptomatiques et l'examen clinique ne retrouve pas d'anomalies. Réalisez un interrogatoire général, expliquez les examens à réaliser, prescrivez un traitement si nécessaire. (précisez à chaque fois -chez la mère ou -chez le fils)",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général de la mère et de l'enfant, vaccination contre BCG, radiographie du thorax chez la mère, faire une prise de sang ou un test cutané si pas de signes à 2-3 mois,  le fils doit bénéficier d'une radiographie du thorax et un test cutané ou prélèvement sanguin. Le nouveau né devra être revu dans 2-3 mois pour s'assurer de l'absence d'infections.",
+            "- Expliquer qu'elle ne doit pas prendre de traitement pour le moment, que son fils doit prendre une bithérapie à base d'isoniazide et de rifampicine jusqu'à réévaluation dans 2-3 mois, informer sur la coloration orange des larmes et des urines."
+          ],
+
+          questionSet: [
+            { "id": "q_contagetub_1", "patterns":["profession", "toxiques", "toxiques", "fumez", "buvez", "traitements chez la mère", "allergies chez la mère", "comportements sexuels à risque"], "answer":"La mère n'a pas d'antécédents et pas de traitement. Elle travaille comme agent d'entretien, et ne fume et ne bois pas. Elle n'a pas de rapports sexuels à risque."},
+            { "id": "q_contagetub_2", "patterns":["antécédents chez l'enfant", "traitements chez l'enfant", "allergies chez l'enfant", "développement psychomoteur", "vaccinations"], "answer":"Son fils Marius n'a pas d'antécédents, pas de traitements, pas d'allergie. Son développement psychomoteur est normal." },
+            { "id": "q_contagetub_3", "patterns":["vaccination contre le BCG", "BCG"], "answer":"Ni la mère ni le fils ne sont vaccinés contre le BCG." },
+            { "id": "q_contagetub_4", "patterns":["radiographie thoracique chez la mère", "radiographie du thorax chez la mère"], "answer":"La mère est informée de votre prescription de radiographie thoracique." },
+            { "id": "q_contagetub_5", "patterns":["prise de sang chez la mère", "test cutané chez la mère", "IDR chez la mère"], "answer":"La mère est informée qu'elle devra faire une prise de sang ou un IDR dans 2-3 mois." },
+            { "id": "q_contagetub_6", "patterns":["radiographie du thorax chez le fils", "radiographie thoracique chez le fils"], "answer":"La mère accepte la radiographie thoracique pour son fils." },
+            { "id": "q_contagetub_7", "patterns":["test cutané chez le fils", "prélèvement sanguin chez le fils", "IDR chez le fils"], "answer":"La mère accepte votre test cutané pour son fils." },
+            { "id": "q_contagetub_8", "patterns":["revu dans 2 à 3 mois", "reconsulter dans 2 à 3 mois"], "answer":"Ils reconsulteront dans 2 à 3 mois." },
+            { "id": "q_contagetub_9", "patterns":["pas de traitement chez la mère"], "answer":"La mère est informée que vous ne lui fournirez pas de traitement." },
+            { "id": "q_contagetub_10", "patterns":["isoniazide et rifampicine chez le fils", "bithérapie chez le fils"], "answer":"La mère accepte le traitement chez Marius." },
+            { "id": "q_contagetub_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_contagetub_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_contagetub_13", "patterns":["coloration des larmes", "coloration des urines", "coloration des liquides biologiques"], "answer":"La mère est informée de la coloration des liquides biologiques chez Marius à cause de la prise des traitements." }
+          ]
+        },
+
+{
+          id: "SDD19",
+          title: "Consultation aux voyageurs",
+          intro: "Vous recevez un patient de 28 ans en consultation voyage. Interrogez le patient, expliquez lui ce qu'est le paludisme / la nécessité de prendre une prophylaxie et les modalités de prise du traitement, expliquez les principales mesures préventives à respecter, et quels sont les vaccins obligatoire et/ou recommandés que vous pouvez lui proposer.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, faire préciser les caractéristiques du voyage (zone géographique, période, durée, conditions de séjour). Expliquez que le paludisme est une maladie provoquée par des moustiques piquant la nuit et qui transmettent un parasite se multipliant dans les globules rouges en les détruisant ce qui peut être mortel, qu'il peut se protéger par des vêtements couvrants imprégnés de perméthrine / répulsifs en zones cutanées découvertes / moustiquaires imprégnée de pyréthrinoïdes. Expliquez les mesures médicamenteuses (atovaquone proguanil en prise quotidienne puis 1 semaine après le retour ou doxycycline en prise quotidienne et 4 semaines après).",
+            "- Le stock doit être suffisant pour ses traitements habituels avec un stock de quelques jours à avoir sur lui, se laver les mains / ne pas caresser les animaux / ne pas marcher pieds nus / eau en bouteille / pas de glaçons / éviter crudités / laver et peler les fruits / manger viandes poissons et crustacés cuits (5/8).",
+            "- Expliquer la prévention des IST par préservatifs, prescrire une trousse médicale avec paracétamol / racécadotril / antiémétique / ATB large spectre / antipaludiques et répulsifs / antiseptiques cutanés / crème solaire (5/7).",
+            "- Expliquer qu'aucun vaccin n'est obligatoire, proposer une vaccination antiméningocoque ACYW 135, proposer vaccination VHA, proposer vaccination VHB, proposer vaccination typhoïdique, proposer vaccination rage."
+          ],
+
+          questionSet: [
+            { "id": "q_voyageur_1", "patterns":["profession", "toxiques", "tabac", "alcool", "traitements", "antécédents", "allergies", "animaux", "sexuels à risque"], "answer":"J'ai de la dépression et de la spondylarthrite, pour ça je prends des anti-TNF alpha. Je suis avocat en droit des affaires, je n'ai pas d'animaux et pas de rapports sexuels non protégés. Je suis à jour de mes vaccins obligatoires."},
+            { "id": "q_voyageur_2", "patterns":["zone géographique", "période", "durée", "combien de temps", "conditions de séjour", "ville", "zones rurales", "villes"], "answer":"Je retourne au Sénégal rejoindre ma famille pendant 3 mois, car ils ont une ferme là bas. Je pars en zone rurale en période sèche (de janvier à mars)." },
+            { "id": "q_voyageur_3", "patterns":["moustiques", "nuit", "parasite", "détruisent les globules rouges", "détruit les globules rouges", "mortel"], "answer":"D'accord je ne savais pas que ça marchait comme ça. Comment je peux m'en protéger moi ?" },
+            { "id": "q_voyageur_4", "patterns":["vêtements couvrants", "perméthrine", "répulsifs", "moustiquaire", "pyréthrinoïdes"], "answer":"Ok je vois j'y penserai. Et on m'a dit qu'on pouvait prendre certains traitements, c'est possible ?" },
+            { "id": "q_voyageur_5", "patterns":["atovaquone proguanil", "tous les jours et 1 semaine après", "doxycycline", "tous les jours et 4 semaines après", "tous les jours et 1 mois après"], "answer":"Ok j'aimerai bien prendre un de ses traitements alors. Et vous auriez des conseils à me donner ?" },
+            { "id": "q_voyageur_6", "patterns":["stock suffisant de vos traitements", "stock de quelques jours sur vous"], "answer":"Oui bien sûr." },
+            { "id": "q_voyageur_7", "patterns":["lavage des mains", "pas caresser les animaux", "pas marcher pieds nus", "eau en bouteille", "pas de glaçons", "crudités", "laver les fruits", "peler les fruits", "cuits"], "answer":"Ok c'est bien à savoir." },
+            { "id": "q_voyageur_8", "patterns":["préservatifs"], "answer":"Oui évidemment." },
+            { "id": "q_voyageur_9", "patterns":["paracétamol", "racécadotril", "antiémétique", "antibiotiques large spectre", "antipaludique", "répulsifs", "antiseptiques", "crème solaire"], "answer":"Ok super, j'aimerais bien cette trousse de voyage." },
+            { "id": "q_voyageur_10", "patterns":["aucun vaccin obligatoire"], "answer":"Ok." },
+            { "id": "q_voyageur_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je pars en voyage je voulais vous voir avant."},
+            { "id": "q_voyageur_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_voyageur_13", "patterns":["méningocoque", "antiméningococcique", "antiméningocoque"], "answer":"Ok pas de soucis." },
+            { "id": "q_voyageur_14", "patterns":["vaccination anti-VHA", "vaccination anti VHA", "vaccination contre l'hépatite A"], "answer":"Oui je veux bien aussi." },
+            { "id": "q_voyageur_15", "patterns":["vaccination anti-VHB", "vaccination anti VHB", "vaccination contre l'hépatite B"], "answer":"Ok on peut le faire aussi." },
+            { "id": "q_voyageur_16", "patterns":["vaccination typhoïdique", "vaccination contre la fièvre typhoïde"], "answer":"Ok pas de soucis." },
+            { "id": "q_voyageur_17", "patterns":["vaccination contre la rage"], "answer":"Allez, faisons les tous ces vaccins !" }
+          ]
+        },
+
+{
+          id: "SDD20",
+          title: "Dépistage et conseils devant une infection sexuellement transmissible",
+          intro: "Vous êtes médecin dans un CeGIDD et vous recevez un homme de 28 ans pour dépistage dans un contexte de rapports sexuels non protégés chez un patient totalement asymptomatique. Il se souvient d'une lésion sur le gland qu'une de ses partenaires lui avait fait remarquer il y a environ 3 mois. Son dernier bilan de dépistage datant d'il y a 6 mois était négatif. Réalisez un interrogatoire général, expliquez le bilan proposé, expliquez le diagnostic et la PEC, donnez des conseils de prévention.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, interroger sur les pratiques sexuelles. Réaliser une sérologie VIH, une sérologie VHB, un test tréponémique et un test non tréponémique en cas de positivité du test tréponémique, réaliser un prélèvement du premier jet urinaire pour PCR chlamydia et gonocoque.",
+            "- Evoquer le diagnostic de syphilis, expliquer que c'est une IST causée par une bactérie et pouvant devenir chronique, expliquer que le traitement est une injection IM d'antibiotique, le patient doit être suivi régulièrement avec une prise de sang. Rappeler l'importance des préservatifs, il doit informer ses partenaires, expliquer que s'il continue ses comportements à risque il peut bénéficier d'une PrEP et d'une vaccination contre le VHB."
+          ],
+
+          questionSet: [
+            { "id": "q_syphilis_1", "patterns":["antécédents", "traitements", "loisir", "allergies", "profession"], "answer":"Je n'ai pas d'antécédents, pas de traitements, pas d'allergies. Je suis boulanger et je fume 10 cigarettes par jour depuis 10 ans."},
+            { "id": "q_syphilis_2", "patterns":["pratiques sexuelles", "rapports sexuels"], "answer":"J'ai eu des rapports hétérosexuels non protégés avec plusieurs femmes récemment. Je n'ai jamais réalisé de fellations ni eu de rapport anal insertif." },
+            { "id": "q_syphilis_3", "patterns":["sérologie VIH"], "answer":"Ok." },
+            { "id": "q_syphilis_4", "patterns":["sérologie VHB"], "answer":"D'accord." },
+            { "id": "q_syphilis_5", "patterns":["test tréponémique"], "answer":"Ok je veux bien." },
+            { "id": "q_syphilis_6", "patterns":["test non tréponémique"], "answer":"Ok je vois." },
+            { "id": "q_syphilis_7", "patterns":["PCR chlamydia", "PCR gonocoque", "premier jet urinaire"], "answer":"Oui pas de soucis." },
+            { "id": "q_syphilis_8", "patterns":["syphilis"], "answer":"D'accord et c'est du à quoi ?" },
+            { "id": "q_syphilis_9", "patterns":["bactérie", "chronique", "se chroniciser", "infection sexuellement transmissible", "IST"], "answer":"Ok je vois et ça se traite ?" },
+            { "id": "q_syphilis_10", "patterns":["injection intramusculaire", "antibiotique en IM", "IM"], "answer":"Bon tant mieux." },
+            { "id": "q_syphilis_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai eu une lésion sur le gland il y a 3 semaines, mais je n'ai pas d'autres symptômes."},
+            { "id": "q_syphilis_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_syphilis_13", "patterns":["suivi régulier", "suivre régulièrement"], "answer":"Oui pas de soucis." },
+            { "id": "q_syphilis_14", "patterns":["préservatifs"], "answer":"Oui je me doute..." },
+            { "id": "q_syphilis_15", "patterns":["informer vos partenaires", "informer", "se faire dépister"], "answer":"Oui je vais les rapeller." },
+            { "id": "q_syphilis_16", "patterns":["PrEP", "vaccination contre l'hépatite B", "vaccination anti-VHB", "vaccination anti VHB"], "answer":"Ok je retiens vos informations, je vous tiendrais au courant." }
+          ]
+        },
+
+{
+          id: "SDD21",
+          title: "Prévention d'un malade contagieux",
+          intro: "Vous recevez dans votre cabinet de médecine générale en décembre un patient de 75 ans pour toux, sensation de chaud/froid, courbatures et rhinorrhée. Il ne présente pas de signes de gravité à l'examen clinique. Réalisez un interrogatoire, suspectez un diagnostic, proposer un traitement, expliquer les mesures de prévention individuelles et collectives de transmission et expliquez les indications du vaccin antigrippal.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, contact avec patient atteint de la grippe et vaccin contre la grippe (1/2). Evoquer le diagnostic de grippe. Prescrire de l'oseltamivir, en per os, pendant 5 jours, traitement symptomatique par paracétamol.",
+            "- Expliquer l'importance de la vaccination antigrippale chaque année en automne, se faire vacciner chaque année car le vaccin est modifié pour cibler le virus de l'année, tousser en utilisant son coude en couvrant sa bouche / se couvrir le nez lors des éternuements (1/2), se laver les mains régulièrement, se moucher avec des mouchoirs à usage unique, cracher systématiquement dans un mouchoir à usage unique, jeter ces éléments dans une poubelle fermée et se laver les mains.",
+            "- Les personnes pouvant bénéficier du vaccin (+65ans, femmes enceintes, si pathologies majorant le risque de survenue de complications, professionnels de santé, professionnels en contact régulier et prolongé avec des personnes à risque sévère, personnels navigants et professionnels du tourisme."
+          ],
+
+          questionSet: [
+            { "id": "q_grippe_1", "patterns":["antécédents", "traitements", "profession", "allergies"], "answer":"Je suis atteint d'hypertension et d'hypercholestérolémie. Pour ça j'ai des diurétiques thiazidiques, des inhibiteurs calciques et des statines. Je n'ai pas d'allergies particulières, j'étais agriculteur. Je ne fume pas et je bois occasionnellement."},
+            { "id": "q_grippe_2", "patterns":["contact", "vaccin contre la grippe", "vaccin antigrippal"], "answer":"J'ai gardé ma petite fille il y a 2 jours et elle avait les même symptômes que moi. Je suis à jour de tous les vaccins obligatoires, mais je n'ai pas fait mon vaccin grippe cette année." },
+            { "id": "q_grippe_3", "patterns":["grippe"], "answer":"D'accord je vois." },
+            { "id": "q_grippe_4", "patterns":["oseltavimir"], "answer":"Ok je ne savais pas qu'il y avait un traitement. Comment il se prend ?" },
+            { "id": "q_grippe_5", "patterns":["per os", "par la bouche"], "answer":"Ok ça va je le prendrais avec le reste. C'est pendant combien de temps ?" },
+            { "id": "q_grippe_6", "patterns":["pendant 5 jours", "5 jours", "cinq jours"], "answer":"Ok c'est pas trop long c'est bien." },
+            { "id": "q_grippe_7", "patterns":["paracétamol", "doliprane"], "answer":"Oui ok merci." },
+            { "id": "q_grippe_8", "patterns":["chaque année""], "answer":"Oui j'aurai du le faire." },
+            { "id": "q_grippe_9", "patterns":["formes graves"], "answer":"Oui bien sûr." },
+            { "id": "q_grippe_10", "patterns":["tousser en utilisant son coude", "se couvrir le nez"], "answer":"Ok ça va." },
+            { "id": "q_grippe_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai le nez qui coule et des courbatures. J'ai aussi l'impression d'avoir de la fièvre..."},
+            { "id": "q_grippe_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_grippe_13", "patterns":["se laver les mains"], "answer":"Je prend bien tous mes traitements." },
+            { "id": "q_grippe_14", "patterns":["se moucher", "usage unique"], "answer":"Ok je vois." },
+            { "id": "q_grippe_15", "patterns":["cracher dans un mouchoir"], "answer":"D'accord." },
+            { "id": "q_grippe_16", "patterns":["poubelle"], "answer":"D'accord." },
+            { "id": "q_grippe_17", "patterns":["65 ans", "pathologies à risque", "à risque", "professionnels de santé", "professionnels en contact régulier", "personnels navigsants", "tourisme"], "answer":"Ok je ne savais pas qu'on pouvait faire une vaccination antigrippale." }
+          ]
+        },
+
+{
+          id: "SDD22",
+          title: "Prévention des infections liées aux soins",
+          intro: "Vous êtes anesthésiste-réanimateur et vous prenez en charge un patient de 43 ans, dans le coma à la suite d'une tuberculose-neuro-méningée. Il s'agit d'un patient sans antécédents particuliers. Il est actuellement sous ventilation mécanique invasive, il est sondé. Il est équipé de plusieurs voies veineuses, centrales et périphériques et d'un cathéter artériel. Vous souhaitez rappeler les règles de préventions des infections liées aux soins au reste de l'équipe médicale. Rappelez en quoi consiste l'hygiène des mains et les principales indications, mettez en place un isolement, expliquez comment réduire le risque de pneumopathie acquise sous ventilation mécanique, expliquez comment réduire le risque d'infections liées au cathéter, expliquez comment réduire le risque d'infections urinaires.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Hygiène des mains se fait par friction hydroalcoolique en 7 étapes pendant 30 secondes. Rappeler les indications : avant de toucher le patient, après avoir touché le patient, après contact avec l'environnement du patient, avant un geste antiseptique, après retrait des gants (3/5). Rappeler la nécessité de laver ses mains à l'eau et au savon si souillure macroscopique.",
+            "- Mettre en place un isolement air. Porter des gants ou utiliser des compresses stériles lors de la manipulation du matériel / utiliser de l'eau stérile pour les nébulisations / utiliser du matériel à usage unique (2/3). Aspirer régulièrement les VAS / vérifier la pression du ballonet / installer le patient demi-assis / éviter la sédation profonde et curarisation (2/4). Mettre en place une SNG / maintenir une alimentation entérale / préférer le sucralfate aux IPP / réaliser des soins de bouches antiseptiques réguliers (2/4).",
+            "- Pour le cathéter périphérique : respecter les mesures d'asepsie lors de la pause, changer les cathéters posés en urgence le + tôt possible, évaluer les voies de manière quotidiennes et retirer si signes infectieux, mettre un pansement occlusif stérile et transparent (2/4). Pour le cathéter périphérique : respecter l'asepsie chirurgicale lors de la pose, retirer dès que possible, changer le pansement tous les 3 jours, changer les tubulures tous les 3 jours, limiter les manipulations et noter les dates d'intervention, évaluer les voies de manière quotidienne. Réévaluer les indications. Sonde urinaire : respecter les mesures d'asepsie lors de la pose, lors de l'entretien, ne pas changer la sonde s'il n'y a pas d'infection (2/3)."
+          ],
+
+          questionSet: [
+            { "id": "q_IAS_1", "patterns":["friction hydroalcoolique", "7 étapes", "30 secondes"], "answer":"Validé."},
+            { "id": "q_IAS_2", "patterns":["avant de toucher", "après avoir touché", "après contact avec l'environnement", "geste aseptique", "après le retrait des gants"], "answer":"Validé." },
+            { "id": "q_IAS_3", "patterns":["eau", "savon"], "answer":"Validé." },
+            { "id": "q_IAS_4", "patterns":["isolement air"], "answer":"Validé." },
+            { "id": "q_IAS_5", "patterns":["gants", "compresses stériles", "eau stérile", "usage unique"], "answer":"Validé." },
+            { "id": "q_IAS_6", "patterns":["aspirer régulièrement", "pression ballonnet", "demi-assise", "éviter la sédation"], "answer":"Validé." },
+            { "id": "q_IAS_7", "patterns":["sonde nasograstrique", "SNG", "alimentation entérale", "sucralfate", "soins de bouche"], "answer":"Validé." },
+            { "id": "q_IAS_8", "patterns":["mesure d'asepsie", "asepsie", "changer les cathéters posés en urgence", "quotidienne", "pansement occlusif"], "answer":"Validé." },
+            { "id": "q_IAS_9", "patterns":["retirer dès que possible", "tous les 3 jours", "limiter les manipulations", "dates", "évaluer de manière quotidienne"], "answer":"Validé." },
+            { "id": "q_IAS_10", "patterns":["réévaluer", "réévaluer les indications"], "answer":"Validé." },
+            { "id": "q_IAS_11", "patterns":["asepsie lors de la pose", "asepsie lors de l'entretien", "ne pas changer la sonde"], "answer":"Bonjour Docteur. Vous vouliez me voir ? "}
+          ]
+        },
+
+{
+          id: "SDD23",
+          title: "Vaccination de l'adulte et de l'enfant",
+          intro: "Vous recevez à votre cabinet de pédiatrie Lilou 11 mois accompagnée de sa maman pour mettre à jour ses vaccins. Lilou ne présente pas d'antécédents particuliers et ne prend aucun traitement. Elle n'a pas d'allergies. Expliquez les vaccins obligatoires à 11 mois. La mère est inquiète des effets secondaires et s'interroge sur la nécessité de ces vaccins, mettez en balance les bénéfices de la vaccination. Expliquez les modalités d'administration des vaccins (voie d'administration, technique d'injection).",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer que les vaccins obligatoires sont DTP, H. influenzae B, coqueluche, hépatite B, pneumocoque. Tous ces vaccins se font en une seule injection.",
+            "- Avantages : réduisent les risques de contracter certaines maladies infectieuses pouvant être très graves / réduisent le risque de transmission de maladies infectieuses à des personnes fragiles / réduisent la gravité de certaines maladies (2/3), diminuent la mortalité / éradiquent certaines maladies (1/2). Effets secondaires possibles : douleur / rougeur / induration / tuméfaction / fièvre / fatigue / irritabilité / tb du sommeil / maux de tête / malaise / douleur musculaire (5/11).",
+            "- Dire que la plupart des effets secondaires ne sont pas graves et sont passagers, on garde systématiquement en surveillance après l'injection pour s'assurer qu'il n'y ait pas d'allergie, la vaccination en termes de protection contre les infections sont supérieurs aux risque d'avoir une maladie induite par les vaccins. Les voies d'administration sont IM / sous cutanée profonde / intradermique / orale / intranasale. Désinfection du site d'injection / utiliser une aiguille de longueur adaptée à l'âge / ne pas évacuer l'air / induire un relâchement des muscles / insérer l'aiguille rapidement / ne pas aspirer avant l'injection / injecter rapidement / retirer l'aiguille (4/8)."
+          ],
+
+          questionSet: [
+            { "id": "q_vaccinations_1", "patterns":["diphtérie", "poliomyélite", "tétanos", "DTP"], "answer":"OK je vois."},
+            { "id": "q_vaccinations_2", "patterns":["Haemophilus influenzae B"], "answer":"Ok." },
+            { "id": "q_vaccinations_3", "patterns":["coqueluche"], "answer":"Oui ok." },
+            { "id": "q_vaccinations_4", "patterns":["hépatite B", "VHB"], "answer":"Je vois." },
+            { "id": "q_vaccinations_5", "patterns":["pneumocoque"], "answer":"Oui je vois." },
+            { "id": "q_vaccinations_6", "patterns":["une injection", "une seule injection"], "answer":"Ah d'accord tant mieux parce que ça aurait fait beaucoup d'injections." },
+            { "id": "q_vaccinations_7", "patterns":["réduit les risques", "réduisent les risques", "personnes fragiles", "gravité"], "answer":"D'accord je vois." },
+            { "id": "q_vaccinations_8", "patterns":["diminuent la mortalité", "diminue la mortalité", "disparaitre", "éradiquer"], "answer":"Ok je comprends." },
+            { "id": "q_vaccinations_9", "patterns":["douleur", "rougeur", "induration", "tuméfaction", "fièvre", "fatigue", "irritabilité", "troubles du sommeil", "maux de tête", "malaise", "douleur musculaire"], "answer":"Ok ça va rien de bien grave du coup ?" },
+            { "id": "q_vaccinations_10", "patterns":["pas grave", "passager"], "answer":"Ok ça va." },
+            { "id": "q_vaccinations_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Vous vouliez me voir ? "},
+            { "id": "q_vaccinations_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_vaccinations_13", "patterns":["réaction allergique"], "answer":"C'est rassurant à savoir." },
+            { "id": "q_vaccinations_14", "patterns":["supérieurs aux risques", "supérieur au risque"], "answer":"Ok je vois." },
+            { "id": "q_vaccinations_15", "patterns":["voie intramusculaire", "IM", "voie sous-cutanée", "voie intradermique", "voie orale", "per os", "voie intranasale"], "answer":"Ok donc y a plusieurs options." },
+            { "id": "q_vaccinations_16", "patterns":["désinfection", "aiguille", "ne pas évacuer l'air", "relâchement des muscles", "insérer l'aiguille", "ne pas aspirer", "injecter rapidement", "rapide", "retirer l'aiguille"], "answer":"D'accord." }
+          ]
+        },
+
+{
+          id: "SDD24",
+          title: "Exposition accidentelle aux liquides biologiques",
+          intro: "Un infirmier de 35 ans travaillant dans votre hôpital vous consulte aux urgences car il vient de se piquer sur le doigt en faisant une prise de sang. Réalisez un interrogatoire général, rappelez les premières consignes, demandez des examens, expliquez la prise en charge.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire, vaccination contre VHB. Ne pas faire saigner la plaie, nettoyer la plaie à l'eau et au savon, réaliser une antisepsie à base de Dakin ou solution alcoolique ou chlorée.",
+            "- Demander une sérologie VIH, une sérologie VHB, une sérologie VHC. Et des sérologies VHB et VHC chez le patient source. Expliquez qu'il va devoir prendre une thérapie post-exposition pendant 28j, le patient peu bénéficier d'un suivi sérologique à 6 semaines et à 3 mois, prescrire un accident du travail. Ne pas donner son sang jusqu'à la fin de la prise en charge / utiliser un préservatif si rapport sexuel pendant les 12 prochaines semaines."
+          ],
+
+          questionSet: [
+            { "id": "q_EAS_1", "patterns":["antécédents", "traitements", "profession", "allergies"], "answer":"Je n'ai pas d'antécédents, pas de traitements, pas d'allergies. Je suis infirmier. Je ne consomme pas de toxiques."},
+            { "id": "q_EAS_2", "patterns":["vaccination contre le VHB", "vaccination anti hépatite B", "vaccination anti VHB"], "answer":"Je sais que je suis vacciné contre l'hépatite B mais je ne sais pas si mon taux d'anticorps était suffisant." },
+            { "id": "q_EAS_3", "patterns":["ne pas faire saigner"], "answer":"Je vois." },
+            { "id": "q_EAS_4", "patterns":["eau", "savon"], "answer":"D'accord." },
+            { "id": "q_EAS_5", "patterns":["antisepsie", "Dakin", "solution alcoolique", "chlorée"], "answer":"Oui bien sûr." },
+            { "id": "q_EAS_6", "patterns":["sérologie VIH"], "answer":"Oui ok." },
+            { "id": "q_EAS_7", "patterns":["sérologie VHB"], "answer":"Oui pas de soucis." },
+            { "id": "q_EAS_8", "patterns":["sérologie VHC"], "answer":"Ok." },
+            { "id": "q_EAS_9", "patterns":["sérologies VHB et VHC", "patient source"], "answer":"Oui bien sûr." },
+            { "id": "q_EAS_10", "patterns":["thérapie post-exposition", "28 jours"], "answer":"Oui je le ferai." },
+            { "id": "q_EAS_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens de me piquer avec une aiguille intravasculaire il y a même pas une heure. C'était lors d'une prise de sang chez un patient suivi pour VIH avec dernière charge virale réalisée la veille détectable. Je ne me souviens pas de son statut vis à vis du VHB et du VHC."},
+            { "id": "q_EAS_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_EAS_13", "patterns":["suivi sérologique", "6 semaines", "3 mois"], "answer":"Oui bien sûr." },
+            { "id": "q_EAS_14", "patterns":["accident du travail"], "answer":"Oui merci beaucoup." },
+            { "id": "q_EAS_15", "patterns":["ne pas donner son sang", "préservatif", "12 semaines"], "answer":"D'accord." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
