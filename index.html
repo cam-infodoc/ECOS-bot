@@ -7669,6 +7669,75 @@ const data = {
         }
       ]
     },
+    {
+      id: "Pharmaco",
+      title: "Pharmacologie",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Expliquer un traitement au patient",
+          intro: "Vous recevez une patiente de 54 ans, ménopausée, pour introduction de méthotrexate dans un contexte de polyarthrite rhumatoïde chez une patiente sans autres antécédents. Effectuez un interrogatoire général et recherchez des contre-indications au méthotrexate, expliquez les examens recommandés avant l'instauration du traitement, expliquez à la patiente le mode d'administration du traitement, expliquez les modalités de surveillance et les précautions à respecter pendant la prise du traitement.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, rechercher des CI au méthotrexate (hypersensibilité, tb sévère de la fonction hépatique, alcoolisme, tb sévère de la fonction rénale, dyscrasies sanguines préexistantes, infections graves aigues ou chroniques, ulcères de la cavité buccale ou maladie ulcéreuse gastro-intestinale évolutive avérée, administration concomitante de vaccins vivants 4/8).",
+            "- Réaliser une NFS-plaquettes, évaluation de la fonction rénale, réaliser un dosage des enzymes hépatiques, réaliser un dosage de la bilirubine, dosage de l'albuminémie, radiographie thoracique.",
+            "- Traitement à prendre par la bouche, 1 prise en 1 fois par semaine, prendre une supplémentation en vitamine B9/folates 1 à 2 jours après la prise.",
+            "- Expliquez qu'il faudra examiner régulièrement la bouche et la gorge, surveiller la tolérance par un bilan biologique régulier, expliquer qu'il faut arrêter le traitement en cas de fièvre / toux / dyspnée / anomalie sur la radiographie thoracique, vérifier la compatibilité avec le méthotrexate en cas de prise d'un nouveau médicament."
+          ],
+
+          questionSet: [
+            { "id": "q_méthotrexate_1", "patterns":["antécédents", "traitements", "profession", "toxiques", "alcool", "tabac"], "answer":"J'ai une polyarthrite rhumatoïde, je n'ai pas de traitements et pas d'allergies. Je suis professeure de physique chimie. Je ne fume pas et je ne bois pas. Mes vaccins sont à jour."},
+            { "id": "q_méthotrexate_2", "patterns":["hypersensibilité", "insuffisance hépatiques sévères", "alcoolisme", "insuffisance rénale sévère", "dyscrasies sanguines", "infections graves", "infections aigües", "infections chroniques", "ulcères de la cavité buccale", "ulcère gastro-intestinal", "vaccins vivants"], "answer":"Je n'ai pas de troubles rénaux ou hépatiques. Je n'ai pas de troubles digestifs non plus." },
+            { "id": "q_méthotrexate_3", "patterns":["NFS", "plaquettes"], "answer":"Oui pas de soucis." },
+            { "id": "q_méthotrexate_4", "patterns":["bilan rénal, "fonction rénale"], "answer":"Ok pas de problème." },
+            { "id": "q_méthotrexate_5", "patterns":["bilan hépatique", "enzymes hépatiques"], "answer":"Oui d'accord." },
+            { "id": "q_méthotrexate_6", "patterns":["bilirubine"], "answer":"Ok." },
+            { "id": "q_méthotrexate_7", "patterns":["albuminémie"], "answer":"Pas de problèmes." },
+            { "id": "q_méthotrexate_8", "patterns":["radiographie thoracique", "radiographie du thorax"], "answer":"Ok je ferai une radio." },
+            { "id": "q_méthotrexate_9", "patterns":["per os", "par la bouche"], "answer":"C'est plus simple ça me va." },
+            { "id": "q_méthotrexate_10", "patterns":["une prise une fois par semaine", "1 prise 1 fois par semaine"], "answer":"Ok parfait." },
+            { "id": "q_méthotrexate_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir pour introduction de méthotrexate. Je n'ai rien de particulier à vous rapporter à part mes douleurs habituelles aux mains."},
+            { "id": "q_méthotrexate_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_méthotrexate_13", "patterns":["vitamine B9", "folates"], "answer":"Absence de points d'appui cutanés." },
+            { "id": "q_méthotrexate_14", "patterns":["bouche", "gorge"], "answer":"Oui ok." },
+            { "id": "q_méthotrexate_15", "patterns":["bilan biologique"], "answer":"Oui, on pourra faire des bilans biologiques." },
+            { "id": "q_méthotrexate_16", "patterns":["fièvre", "toux", "difficultés à respirer", "dyspnée", "anomalies sur la radiographie"], "answer":"Ok j'arrêterai le traitement si j'ai des symptômes." },
+            { "id": "q_méthotrexate_17", "patterns":["nouveau médicament", "toxicité"], "answer":"Oui faudra faire attention si je prends d'autres traitements." }
+          ]
+        },
+
+        {
+          id: "SDD2",
+          title: "Evaluation de l'observance thérapeutique",
+          intro: "Vous recevez en consultation de médecine générale une jeune patiente de 24 ans pour réévaluation de l'efficacité et de l'observance de son traitement à base de rispéridone dans un contexte de schizophrénie, introduit depuis 1 an. C'est une patiente assistante dans un cabinet dentaire. Elle n'a pas d'autres antécédents. Consomme du tabac 10 cigarettes par jour depuis 7 ans. Elle n'a pas d'allergies. Elle est sous contraception par voie orale à base de contraception oestroprogestative. Expliquez comment vous évaluez l'observance thérapeutique, ce que vous proposez pour améliorer l'observance de son traitement antipsychotique. La patiente vous dit qu'elle oublie souvent de prendre sa pilule et vous demande de lui rappeler la démarche à suivre en cas d'oubli, proposez lui des conseils pour améliorer l'observance de sa contraception.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Demandez à la patiente si elle prend bien son traitement tous les jours, vérifier la surveillance de la régression des symptômes et l'absence de nouvel épisode (1/2). Evaluer la tolérance métabolique (poids, libido, régularité des règles, présence d'écoulement de lait). Evaluer la tolérance neurovégétative (signes anticholinergiques (sécheresse buccale, constipation, difficultés à uriner, palpations, difficultés à avaler, difficultés à lire de près (au moins 2)). Evaluer la tolérance neurologique (sd parkinsonien, difficulté à rester assis / immobile / impatience, ATCD de déformation de la bouche / faiblesse d'un côté du corps, ATCD de crise épileptique). Evaluer la tolérance biologique (tb lipidique, hyperglycémie, élévation des transaminases).",
+            "- Proposer à la patiente de revoir son psychiatre pour prescription d'une forme retard par injection IM. Expliquer que si l'oubli est de <12h il faut prendre le comprimé oublié et continuer la plaquette. Expliquer que si l'oubli est >12h en début ou milieu de plaquette : prendre le comprimé oublié, continuer la plaquette et avoir des rapports protégés au moins 1 semaine. Expliquer que si l'oubli est >12h et en fin de plaquette : enchainer avec la plaquette suivante sans phase d'arrêt. Expliquer que si l'oubli est >12h en début ou milieu de plaquette : prendre une contraception d'urgence. Proposer une contraception par implant ou DIU."
+          ],
+
+          questionSet: [
+            { "id": "q_pilulepsy_1", "patterns":["observance", "tous les jours"], "answer":"Il m'arrive d'oublier de prendre mes traitements depuis que j'ai mon nouveau petit ami depuis quelques mois..."},
+            { "id": "q_pilulepsy_2", "patterns":["comprenez votre maladie", "comprenez l'intérêt du traitement"], "answer":"Oui j'ai bien compris ma maladie et l'intérêt du traitement." },
+            { "id": "q_pilulepsy_3", "patterns":["régression des symptômes", "absence de nouvel épisode"], "answer":"Je suis plutôt bien équilibrée d'un point de vue psychiatrique." },
+            { "id": "q_pilulepsy_4", "patterns":["prise de poids", "libido", "régularité des règles", "écoulement"], "answer":"J'ai pris un peu de poids oui." },
+            { "id": "q_pilulepsy_5", "patterns":["sécheresse buccale", "constipation", "difficultés à respirer", "palpitations", "difficultés à avaler", "difficulté à lire", "baisse de tension"], "answer":"Non je n'ai pas et n'ai jamais eu ces symptômes." },
+            { "id": "q_pilulepsy_6", "patterns":["mouvements anormaux", "tremblement", "difficulté à rester assis", "immobile", "impatience", "déformation de la bouche", "faiblesse", "troubles de la parole", "crise d'épilepsie"], "answer":"Non je n'ai jamais eu ça." },
+            { "id": "q_pilulepsy_7", "patterns":["troubles lipidiques", "hyperglycémie", "élévation des transaminases"], "answer":"Mon dernier bilan biologique était normal." },
+            { "id": "q_pilulepsy_8", "patterns":["forme retard", "psychiatre"], "answer":"Ok je vois." },
+            { "id": "q_pilulepsy_9", "patterns":["moins de 12h", "prendre le comprimé oublié et continuer la plaquette"], "answer":"D'accord." },
+            { "id": "q_pilulepsy_10", "patterns":["plus de 12h en début de plaquette", "plus de 12h en milieu de plaquette", "prendre le comprimé oublié et continuer la plaquette", "préservatifs"], "answer":"D'accord." },
+            { "id": "q_pilulepsy_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir concernant ma rispéridone. C'est un rendez vous de suivi simplement."},
+            { "id": "q_pilulepsy_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_pilulepsy_13", "patterns":["plus de 12h et en fin de plaquette", "enchainer avec la plaquette suivante"], "answer":"D'accord." },
+            { "id": "q_pilulepsy_14", "patterns":["plus de 12h et en début de plaquette", "plus de 12h et en milieu de plaquette", "contraception d'urgence"], "answer":"D'accord." },
+            { "id": "q_pilulepsy_15", "patterns":["implant", "DIU"], "answer":"Ah oui çap peut être intéressant." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
