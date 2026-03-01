@@ -7738,6 +7738,890 @@ const data = {
         }
       ]
     },
+    {
+      id: "Santé pub",
+      title: "Santé publique",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Traumatisé sévère",
+          intro: "Vous êtes réanimateur dans un trauma-center. Vous vous occupez d'un patient dans un contexte d'accident de la voie publique. Répondez aux questions de votre externe sur la prise en charge d'un patient traumatisé sévère. Que doit-on faire si on est témoin d'un accident de la voie publique, expliquez ce que fait le médecin du SAMU lors de l'arrivée sur les lieux de l'accident, expliquez comment le SAMU prend en charge les blessés sur les lieux de l'accident.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Sécuriser les lieux, alerter les secours (15, 18, 112 1/3), secourir le patient en suivant les ordres des secours. Demander le nombre de blessés / circonstance de l'accident (1/2), évaluer les blessés avec la méthode ABCDE (airway, breathing, circulation, disability (neuro), exposure).",
+            "- PEC nécessaire pour arrêter le saignement, monitorage continu, poser 2 VVP, bilan de base (dextro, hémocue, lactatémie), oxygénothérapie ou IOT, remplissage vasculaire et vasopresseur si besoin, immobilisation, antalgique si besoin, nettoyer les plaies / désinfecter / pansements, lutter contre l'hypothermie."
+          ],
+
+          questionSet: [
+            { "id": "q_PECtrauma_1", "patterns":["sécuriser le lieu", "sécuriser l'environnement", "sécuriser"], "answer":"Ok donc d'abord on sécurise le lieu et ensuite on s'occupe des patients."},
+            { "id": "q_PECtrauma_2", "patterns":["alerter", "15", "18", "112"], "answer":"Oui d'accord." },
+            { "id": "q_PECtrauma_3", "patterns":["secourir le patient", "ordres des secours"], "answer":"Oui je vois." },
+            { "id": "q_PECtrauma_4", "patterns":["informations", "nombre de blessés", "circonstances"], "answer":"Ok donc on voit combien on a de patients, comment ils se sont blessé tout ça quoi." },
+            { "id": "q_PECtrauma_5", "patterns":["ABCDE", "airway", "voies aériennes", "breathing", "respiration", "circulation", "hémodynamique", "neurologique", "exposure", "disability", "plaies", "fractures"], "answer":"Ah oui ça me disait quelque chose ce ABCDE." },
+            { "id": "q_PECtrauma_6", "patterns":["arrêter le saignement"], "answer":"Oui bien sûr." },
+            { "id": "q_PECtrauma_7", "patterns":["monitorage", "monitoring"], "answer":"Ok." },
+            { "id": "q_PECtrauma_8", "patterns":["2 VVP", "deux VVP", "2 voies veineuses périphériques", "deux voies veineuses périphériques"], "answer":"D'accord." },
+            { "id": "q_PECtrauma_9", "patterns":["dextro", "hémocue", "lactatémie"], "answer":"Je vois." },
+            { "id": "q_PECtrauma_10", "patterns":["oxygénothérapie", "IOT", "intubation oro-trachéale"], "answer":" Oui évidemment." },
+            { "id": "q_PECtrauma_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis l'externe au trauma-center et je voulais en savoir plus sur la prise en charge pré-hospitalière en SMUR d'un traumatisé sévère. Le rôle du médecin du SAMU, la prise en charge immédiate tout ça tout ça ...."},
+            { "id": "q_PECtrauma_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur vous êtes au top." },
+            { "id": "q_PECtrauma_13", "patterns":["antalgique", "antalgie", "antalgiques", "antidouleurs"], "answer":"Oui faut pas oublier ça." },
+            { "id": "q_PECtrauma_14", "patterns":["nettoyer les plaies", "désinfecter", "pansements"], "answer":"Ok d'accord." },
+            { "id": "q_PECtrauma_15", "patterns":["hypothermie", "couverture de survie"], "answer":"Ah bah oui évidemment." }
+          ]
+        },
+
+        {
+          id: "SDD2",
+          title: "Demande / prescription raisonnée et choix d'un examen diagnostique",
+          intro: "Vous recevez en urgence une patiente de 62 ans se plaignant de douleurs au niveau du mollet droit depuis environ 3 jours. Elle ne présente aucun antécédent médical particulier. La patiente manifeste une sensibilité le long du trajet veineux profond et présente un oedème de la jambe droite qui laisse une empreinte de ses chaussettes. Vous suspectez une thrombose veineuse profonde. Recherchez les FdR majeurs de MTEV, quel(s) examen(s) demandez vous en 1e intention si votre hypothèse clinique a une probabilité faible et expliquez son intérêt, proposez un examen à visée diagnostic et expliquez son intérêt et expliquez les examens étiologiques à réaliser.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher : chirurgie dans les 3 derniers mois, fracture des MI dans les 3 derniers mois et une immobilisation prolongée de +3 jours. Réalisez des D-dimères et dire que ce sont des substances présentes dans le sang qui augmentent en cas de formation de caillots.",
+            "- Réaliser une échographie doppler veineuse du MI, dire qu'elle mettra en évidence une baisse du flux sanguin et de voir le caillot. Prescrire une radio tho, une recherche de sang dans les selles, une mammographie, un examen gynécologique avec frotti, pour rechercher une maladie responsable de phlébite."
+          ],
+
+          questionSet: [
+            { "id": "q_TVP_1", "patterns":["chirurgie dans les 3 derniers mois"], "answer":"Ah non je n'ai pas eu de chirurgie récemment."},
+            { "id": "q_TVP_2", "patterns":["fracture des membres inférieurs dans les 3 derniers mois"], "answer":"Non je n'ai jamais eu de fractures de ma vie." },
+            { "id": "q_TVP_3", "patterns":["immobilisation prolongée de plus de 3 jours"], "answer":"Non je n'ai pas été immobilisée." },
+            { "id": "q_TVP_4", "patterns":["D-dimères"], "answer":"Ok et ça sert à quoi ce dosage ?" },
+            { "id": "q_TVP_5", "patterns":["augmentent en cas de caillots", "résultat normal est rassurant"], "answer":"Ok je vois pas de soucis." },
+            { "id": "q_TVP_6", "patterns":["échographie doppler veineuse", "écho doppler veineuse"], "answer":"D'accord, et on verrait quoi ?" },
+            { "id": "q_TVP_7", "patterns":["baisse du flux sanguin", "voir le caillot"], "answer":"D'accord très bien." },
+            { "id": "q_TVP_8", "patterns":["radiographie pulmonaire"], "answer":"Ok." },
+            { "id": "q_TVP_9", "patterns":["sang dans les selles"], "answer":"D'accord." },
+            { "id": "q_TVP_10", "patterns":["mammographie"], "answer":"Pourquoi pas." },
+            { "id": "q_TVP_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai comme une sensibilité le long du trajet veineux et ma jambe droite semble gonfler car on voit la trace de ma chaussette."},
+            { "id": "q_TVP_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_TVP_13", "patterns":["examen gynécologique", "frottis", "frotti"], "answer":"Ok." },
+            { "id": "q_TVP_14", "patterns":["rechercher la cause", "maladie causant", "pathologie à l'origine", "maladie à l'origine", "pathologie causant"], "answer":"très bien, je comprends votre démarche." }
+          ]
+        },
+
+        {
+          id: "SDD3",
+          title: "Demande d'un examen d'imagerie",
+          intro: `Vous recevez un patient de 72 ans au stroke pour suspicion d'AVC. Les symptômes ont commencé il y a 2 h. Votre externe vous pose la question sur l'examen à prescrire et sesmodalités de réalisation. Expliquez l'examen d'imagerie à demander en 1e intention, expliquez la(les) séquence(s) à demander, expliquez les contre-indications de cet examen, interprétez l'examen situé en haut à gauche. <img src= "IRM.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">.`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Faire une IRM cérébrale. Faire une séquence diffusion qui permet de mettre en évidence un AVC sous forme d'hypersignal, séquence T2* pour rechercher une hémorragie sous forme hyposignal, séquence FLAIR permet de visualiser l'infarctus au bout de quelques heures / permet de rechercher un mismatch FLAIR-diffusion pour un AVC < 4h30 / permet l'identification des AVC plus anciens (1/3), séquence TOF permet de rechercher une obstruction des vaisseaux / pas de produits de contraste (1/2).",
+            "- Expliquer les contre-indications : pacemaker, DAI, cathéter cardio-vasculaire, implant cochléaire, implant oculaire, neurostimulateur, pompe électronique implantable, anciennes valves cardiaques, clips vasculaires, corps étrangers métalliques intraoculaires (3/10). Expliquer qu'il s'agit d'une IRM en séquence de diffusion, coupe axiale ou transversale, hypersignal traduit un AVC localisé en territoire sylvien profond droit."
+          ],
+
+          questionSet: [
+            { "id": "q_AVC_1", "patterns":["IRM cérébrale"], "answer":"Oui c'est ce que je me disais mais j'hésitais avec le scanner. Mais je retiens donc IRM. Et niveau séquences on fait quoi ?"},
+            { "id": "q_AVC_2", "patterns":["diffusion"], "answer":"Ok une séquence diffusion. Et elle nous permet de voir quoi s'il y a un AVC ?" },
+            { "id": "q_AVC_3", "patterns":["hypersignal", "précoce"], "answer":"Ok je vois." },
+            { "id": "q_AVC_4", "patterns":["T2*"], "answer":"Une séquence T2*, je note. Et on peut voir quoi avec cette séquence ?" },
+            { "id": "q_AVC_5", "patterns":["hémorragie", "hyposignal"], "answer":"Ok super. " },
+            { "id": "q_AVC_6", "patterns":["FLAIR"], "answer":"Ok FLAIR je vois. Et qu'est-ce qu'on voit ?" },
+            { "id": "q_AVC_7", "patterns":["quelques heures", "mismatch", "4h30", "tardif", "ancien"], "answer":"Entendu." },
+            { "id": "q_AVC_8", "patterns":["TOF"], "answer":"Ok je connaissais pas celle là. Et on voit quoi ?" },
+            { "id": "q_AVC_9", "patterns":["vaisseaux", "pas d'injection de produit de contraste"], "answer":"Ok je vois." },
+            { "id": "q_AVC_10", "patterns":["pacemaker", "défibrillateur", "cathéter cardiovasculaire", "implant cochléaire", "implant oculaire", "neurostimulateur", "pompe électronique implantable", "anciennes valves", "clips vasculaires", "corps étrangers métalliques intraoculaires"], "answer":"D'accord donc ça ce sont les contre-indications. Notre patient n'en a donc pas." },
+            { "id": "q_AVC_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_AVC_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_AVC_13", "patterns":["IRM en séquence diffusion"], "answer":"Ok." },
+            { "id": "q_AVC_14", "patterns":["coupe axiale", "axiale", "transversale"], "answer":"Oui tout à fait." },
+            { "id": "q_AVC_15", "patterns":["territoire sylvien profond droit"], "answer":"Ok donc on est bien face à un AVC du territoire sylvien profond droit !" }
+          ]
+        },
+
+{
+          id: "SDD4",
+          title: "Demande d'explications d'un patient sur le déroulement, les risques et les bénéfices attendus d'un examen d'imagerie",
+          intro: "Vous souhaitez prescrire une TEP-TDM a une patiente âgée de 36 ans atteinte d'un cancer du sein. Expliquez les bénéfices attendus, le principe de l'examen, ses modalités de déroulement et les potentiels effets indésirables.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Examen permet potentiellement de mettre en évidence d'autres localisations de tumeurs ou métastases, de décider de la prise en charge thérapeutique (1/2).",
+            "- Tumeurs sont des zones où la consommation de sucre est augmentée et elles sont repérées grâce à la TEP et son produit radiotraceur, que cet examen est réaliser en parallèle d'un scanner avec possible injection d'iode pour voir les vaisseaux et potentiellement préciser la localisation des tumeurs. Possibilité de ne pas mettre en évidence une tumeur si elle est trop petite, de mettre en évidence des zones qui sont des inflammations ou infection. La patiente doit rester à jeun et au repos. Qu'après l'injection de produit elle devra patienter une heure et que l'examen prend 30 min (1/2). Elle sera allongée dans un lit qui se déplace dans la machine, qu'elle doit restée immobile, qu'elle sera seule mais pourra communiquer via un microphone avec le personnel médical (1/3).",
+            "- Faible quantité de radiation, injection du radiotraceur a un risque très rare d'effets secondaires ou allergiques, que le produit de contraste iodé peut donner une IR / allergie / IC / surcharge en iode (2/4)."
+
+          ],
+
+          questionSet: [
+            { "id": "q_TEPscan_1", "patterns":["autres localisations", "métastases", "prise en charge"], "answer":"Ok je vois."},
+            { "id": "q_TEPscan_2", "patterns":["consommation de sucre", "tomographie par émission de positons", "radiotraceur"], "answer":"Oui d'accord." },
+            { "id": "q_TEPscan_3", "patterns":["scanner" "produit de contraste"], "answer":"Ah je ne savais pas que c'était un scanner en même temps." },
+            { "id": "q_TEPscan_4", "patterns":["pas en évidence", "petite taille"], "answer":"Oui bien sûr, si la tumeur est trop petite on verra peut-être pas grand chose." },
+            { "id": "q_TEPscan_5", "patterns":["infection", "inflammation"], "answer":"Ok donc tout ce qui s'illumine n'est pas forcément de la tumeur." },
+            { "id": "q_TEPscan_6", "patterns":["à jeun", "repos"], "answer":"Ok je resterai à jeun." },
+            { "id": "q_TEPscan_7", "patterns":["une heure", "patienter", "trente minutes", "30mn", "30 minutes", "trentaine de minutes"], "answer":"Ok je vois." },
+            { "id": "q_TEPscan_8", "patterns":["allongée", "immobile", "seule", "personnel médical", "microphone"], "answer":"Oui bien sûr." },
+            { "id": "q_TEPscan_9", "patterns":["faible quantité de radiation"], "answer":"D'accord, tant mieux." },
+            { "id": "q_TEPscan_10", "patterns":["rares", "rare"], "answer":"C'est bien s'il y a peu d'effets indésirables." },
+            { "id": "q_TEPscan_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'aimerais me renseigner au près de vous concernant ce TEP-scan. A quoi ça sert ?"},
+            { "id": "q_TEPscan_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_TEPscan_13", "patterns":["insuffisance rénale", "insuffisance cardiaque", "allergies", "réactions allergiques", "surcharge en iode"], "answer":"D'accord, c'est entendu." }
+          ]
+        },
+
+{
+          id: "SDD5",
+          title: "Identifier, reconnaître les différents examens d'imagerie",
+          intro: `Vous recevez aux urgences une femme de 52 ans pour céphalées brutales évoluant depuis 2 heures. Elle est somnolente et ne peut répondre à vos questions, c'est donc son époux qui vous répond. Ses constantes sont bonnes hormis une tension artérielle à 170/82 mmHg. <img src= "HSA.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, température, syndrome méningé (raideur nucale, chien de fusil, phonophobie, photophobie, nausées, vomissements 4/6).",
+            "- Diagnostic d'hémorragie sous arachnoïdienne ou méningée.",
+            "- Scanner cérébral, non injecté, en coupe axiale ou transversale, en fenêtre parenchymateuse, hyperdensité spontanée des citernes de la base.",
+            "- Scanner cérébral, injecté, coupe axiale ou transversale, formation ovalatire de la cérébrale moyenne droite, diagnostic de rupture d'anévrisme, diagnostic de polykystose rénale autosomique dominante."
+          ],
+
+          questionSet: [
+            { "id": "q_HSA_1", "patterns":["profession", "toxiques", "fumez", "antécédents", "traitements", "allergies"], "answer":"Elle est suivie pour de l'HTA traitée par ramipril. Mais pour être honnête elle ne prend pas bien son traitement. Elle n'apas d'allergies, et fume un paquet de cigarettes par jour depuis 30 ans. Je sais que son père et sa grand-mère étaient suivis pour une maladie rénale et sont décédés jeunes."},
+            { "id": "q_HSA_2", "patterns":["température"], "answer":"Absence de fièvre. Présence de nausées et photo-phonophobie" },
+            { "id": "q_HSA_3", "patterns":["raideur nucale", "chien de fusil", "phonophobie", "photophobie", "nausées", "vomissements"], "answer":"Présence d'une raideur nucale." },
+            { "id": "q_HSA_4", "patterns":["hémorragie sous arachnoïdienne", "HSA", "hémorragie sous-arachnoïdienne", "hémorragie méningée"], "answer":"Valudé." },
+            { "id": "q_HSA_5", "patterns":["scanner cérébral non injecté"], "answer":"Validé." },
+            { "id": "q_HSA_6", "patterns":["axiale", "transversale"], "answer":"Validé." },
+            { "id": "q_HSA_7", "patterns":["parenchymateuse"], "answer":"Validé." },
+            { "id": "q_HSA_8", "patterns":["hyperdensité des citernes"], "answer":"Validé." },
+            { "id": "q_HSA_9", "patterns":["formation ovalaire de la cérébrale moyenne droite"], "answer":"Validé." },
+            { "id": "q_HSA_10", "patterns":["polykystose rénale autosomique dominante"], "answer":"Validé." },
+            { "id": "q_HSA_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Il y a deux heure ma femme a eu des maux de tête, de façon brutale, et qui ont persisté. Elle était bien seulement allongée les jambes repliées."},
+            { "id": "q_HSA_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_HSA_13", "patterns":["scanner cérébral injecté"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD6",
+          title: "Explication pré opératoire et recueil de consentement d'un geste invasif diagnostic ou thérapeutique",
+          intro: "Vous êtes anesthésiste-réanimateur et vous recevez une patiente de 62 ans en consultation pré-anesthésique en vue d'une cholécystectomie pour colique hépatique sous anesthésie générale. Vous devez expliquer à la patiente le déroulement de l'anesthésie. Expliquez le déroulement de la phase de préparation, de la phase d'induction et d'entretien et de la phase de réveil.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Vérifier son identité et le type d'intervention, constantes vitales surveillées, port d'une blouse recouverte d'un drap, pose d'une VVP,  intubée pour respirer pendant l'anesthésie, oxygène à l'aide d'un masque facial avant l'intubation.",
+            "- Administration d'un traitement pour l'endormir, d'un antidouleur, traitements administrés en IV pendant toute l'intervention. Une fois la chir terminée on arrêtera l'administration des médicaments, elle sera mise en salle de réveil ou surveillance post-interventionnelle, on vérifiera que sa douleur est stabilisée avant de la transporter en service conventionnel.",
+            "Rappel PEC anesthésique :",
+            "- Consultation pré-anesthésique : obligatoire entre 3mois et 48h avant l'intervention HORS URGENCE, permet classification ASA.",
+            "- Visite pré-anesthésique : obligatoire MEME EN URGENCE.",
+          ],
+
+          questionSet: [
+            { "id": "q_opération_1", "patterns":["identité", "type d'intervention"], "answer":"Ok je vois."},
+            { "id": "q_opération_2", "patterns":["constantes vitales", "paramètres vitaux"], "answer":"Oui évidemment." },
+            { "id": "q_opération_3", "patterns":["blouse", "drap", "air chaud"], "answer":"Oh je vois." },
+            { "id": "q_opération_4", "patterns":["voie veineuse périphérique"], "answer":"Oui pas de problème." },
+            { "id": "q_opération_5", "patterns":["intubée", "intubation"], "answer":"D'accord..." },
+            { "id": "q_opération_6", "patterns":["oxygène", "oxygénothérapie"], "answer":"Ok donc de l'oxygène avant l'intubation." },
+            { "id": "q_opération_7", "patterns":["traitement pour l'endormir", "endormir"], "answer":"Oui bien sûr." },
+            { "id": "q_opération_8", "patterns":["antidouleur", "antalgique", "antalgiques", "antidouleurs"], "answer":"Oui que je n'ai pas mal quand même." },
+            { "id": "q_opération_9", "patterns":["pendant toute l'intervention", "pendant toute la durée de l'intervention", "pendant toute la chirurgie", "pendant toute la durée de la chirurgie"], "answer":"Oui d'accord." },
+            { "id": "q_opération_10", "patterns":["arrête l'administration des traitements"], "answer":"Ok ça va." },
+            { "id": "q_opération_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Comment se passe une chirurgie ? "},
+            { "id": "q_opération_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_opération_13", "patterns":["salle de réveil", "salle de surveillance post-interventionnelle", "SSPI"], "answer":"Ok je vois, je monterai pas en service tout de suite." },
+            { "id": "q_opération_14", "patterns":["douleur soit traitée", "douleur soit gérée", "état soit stabilisé", "stable", "transfert", "transferer"], "answer":"Ah oui ok, on me stabilise avant et ensuite je suis transférée." }
+          ]
+        },
+
+{
+          id: "SDD7",
+          title: "Prescription d'un soin ambulatoire",
+          intro: "Vous êtes un médecin généraliste prenant en charge un patient atteint d'ulcère veineux dans un I contexte d'insuffisance veineuse post-thrombotique avec IPS à 0,9. Vous devez expliquer certains soins de votre prescription à son infirmière à domicile. Expliquez à l'infirmière les modalités de PEC de la plaie au stade de détersion, rappelez à l'infirmière l'importance et les modalités d'utilisation de la contention, expliquez à l'infirmière les signes d'alertes devant faire suspecter un cancer cutané.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Nettoyer l'ulcère à l'eau non stérile, ne pas utiliser d'antiseptiques tant qu'il n'y a pas d'infection, enlever manuellement les débris à la surface de l'ulcère, utiliser alginates / hydrogels (1/2), refaire le pansement toutes les 48-72h selon l'importance de l'exsudat et en l'absence d'infection.",
+            "- Mise quotidienne d'une contention, la poser idéalement avant le lever du patient, portée toute la journée. Expliquer qu'un ulcère né guérissant pas après plusieurs mois de traitement optimal est suspect d'un cancer cutané, un ulcère douloureux est suspect d'être un cancer cutané, qu'en cas d'apparition de saignements l'ulcère est suspect d'être un cancer cutané, un bourgeonnement excessif de la plaie est suspect d'être un cancer cutané.",
+            "Rappel des pansements en fonction du stade de l'ulcère :",
+            "- Plaie inflammatoire : pansement à l'argent, antiseptiques.",
+            "- Plaie en phase de détersion : alginates, hydrogels.",
+            "- Plaie en phase de bourgeonnement : tuiles vaselinés, hydrocellulaires, hydrocolloïdes, interfaces.",
+            "- Plaie en phase de ré épithélialisation : hydrocolloïdes, interfaces."
+          ],
+
+          questionSet: [
+            { "id": "q_ulcèrecancer_1", "patterns":["eau non stérile"], "answer":"Validé."},
+            { "id": "q_ulcèrecancer_2", "patterns":["pas utiliser d'antiseptiques"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_3", "patterns":["enlever les débris", "enlever les débris"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_4", "patterns":["alginate", "hydrogels"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_5", "patterns":["48 à 72h"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_6", "patterns":["contention"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_7", "patterns":["avant le lever"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_8", "patterns":["toute la journée"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_9", "patterns":["ne guérissant pas", "ne guérit pas"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_10", "patterns":["douloureux"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Pourriez vous re expliquer la PEC de cet ulcère ? "},
+            { "id": "q_ulcèrecancer_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_ulcèrecancer_13", "patterns":["saignements", "saigne"], "answer":"Validé." },
+            { "id": "q_ulcèrecancer_14", "patterns":["bourgeonnement excessif"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD8",
+          title: "Consultation de suivi d'une pathologie chronique",
+          intro: "Vous recevez en consultation de suivi Jules, un patient asthmatique de 5 ans accompagné de son père. Il s'agit d'un patient sans autres antécédents. Il est actuellement traité par bronchodilatateur de courte durée d'action et corticostéroïdes inhalés. Evaluez le retentissement clinique de l'asthme, recherchez la présence de facteurs déclenchants de l'asthme, proposez une prise en charge adaptée à la situation.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Symptômes d'asthme dans la journée (difficulté respiratoire, toux, sifflements, oppression thoracique 2/4), présence d'au moins un réveil nocturne ou toux nocturne (1/2), bronchodilatateur de secours, présence de limitations dans les activités quotidiennes.",
+            "- Bonne observance du traitement, technique de prise du traitement, allergie, infection respiratoire, bêta-bloquant, exposition (tabagisme, moisissures, produits ménagers, pollution extérieure 2/4).",
+            "- Importance de la PEC de l'environnement (arrêt tabagisme passif, mesures d'hygiène en période d'infection virale saisonnière, bonne aération du domicile, pas d'animaux 2/4), vaccination grippe saisonnière, vaccination COVID, augmenter le traitement de fond en passant d'une corticothérapie inhalée seule à un traitement par corticothérapie inhalée associée à un BDLA.",
+            "Attention chez l'enfant : la pléthysmographie et les prick-tests sont réalisables à partir de 3 ans, la spirométrie et le débit expiratoire de pointe à partir de 6 ans",
+            "Les anti leucotriènes sont utilisables à partir de 6 mois et les bronchodilatateurs de longue durée d'action à partir de 4 ans. On n'utilise jamais de corticothérapie orale comme traitement de fond de l'asthme ! ",
+            "Avant 12 ans, les bronchodilatateurs de courte durée d'action sont utilisés seuls en traitement de secours, puis en association avec les corticostéroïdes inhalés.",
+            "Avant3 ans, on utilise une chambre d'inhalation et un masque facial, entre 3 et 6 ans une chambre d'inhalation, puis à partir de 6 ans un aérosol doseur auto déclenché ou un inhalateur à poudre seuls."
+          ],
+
+          questionSet: [
+            { "id": "q_suiviasthme_1", "patterns":["difficulté respiratoire", "dans la journée", "toux", "sifflements", "oppression thoracique"], "answer":"Oui il tousse et a une gêne respiratoire en moyenne 3 jours par semaine."},
+            { "id": "q_suiviasthme_2", "patterns":["au moins un réveil nocturne", "toux nocturne"], "answer":"Oui il se réveillent plusieurs fois dans la nuit, plusieurs fois par semaine." },
+            { "id": "q_suiviasthme_3", "patterns":["bronchodilatateurs de secours"], "answer":"Oui à cause de sa gêne respiratoire on utilise son BDCA de temps en temps." },
+            { "id": "q_suiviasthme_4", "patterns":["limitations"], "answer":"Il est certain que ces symptômes le gênent dans la réalisation d'activités physiques et de ses loisirs." },
+            { "id": "q_suiviasthme_5", "patterns":["observance", "prise quotidienne"], "answer":"Son traitement qui est un corticostéroïde inhalé, je lui donne bien tous les jours. Et on lui donne son traitement à base de BDCA quand il a une crise." },
+            { "id": "q_suiviasthme_6", "patterns":["technique", "technique de prise", "chambre d'inhalation"], "answer":"Quand il y a une crise on utilise bien la chambre d'inhalation." },
+            { "id": "q_suiviasthme_7", "patterns":["allergie"], "answer":"I est allergique aux poils de chat, mais on n'en a pas. Et aussi aux acariens." },
+            { "id": "q_suiviasthme_8", "patterns":["infection respiratoire"], "answer":"Non il n'a pas eu d'infection respiratoire et n'a pas de fièvre. Absence de signes d'infection des voies respiratoires à l'examen clinique." },
+            { "id": "q_suiviasthme_9", "patterns":["bêta-bloquant", "bêta-bloquants", "b-bloquant", "b-bloquants"], "answer":"Non il ne prend aucun autre traitement." },
+            { "id": "q_suiviasthme_10", "patterns":["tabagisme", "moisissures", "produits ménagers", "pollution"], "answer":"Effectivement il m'arrive de fumer en sa présence. Pour la pollution non, on habite à distance des axes routiers, il n'y a pas de moisissures et on utilise les produits ménagers que quand il est absent." },
+            { "id": "q_suiviasthme_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Vous vouliez qu'on parle de l'asthme de Jules ?"},
+            { "id": "q_suiviasthme_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_suiviasthme_13", "patterns":["arrêt du tabagisme", "hygiène", "bonne aération", "aérer", "pas d'animaux domestiques"], "answer":"Je comprends, merci de vos conseils." },
+            { "id": "q_suiviasthme_14", "patterns":["grippe"], "answer":"Ok on fera la vaccination grippe." },
+            { "id": "q_suiviasthme_15", "patterns":["COVID"], "answer":"D'accord." },
+            { "id": "q_suiviasthme_16", "patterns":["bronchodilatateur de longue durée d'action", "BDLA"], "answer":"Ok pas de soucis, on peut rajouter ce traitement." }
+          ]
+        },
+
+{
+          id: "SDD9",
+          title: "Prévention des risques professionnels",
+          intro: "Vous recevez en consultation de prévention de médecine du travail une nouvelle interne de radiologie âgée de 25 ans. Elle n'a pas d'antécédents particuliers, ne prend aucun traitement et n'a pas d'allergies. Elle ne consomme pas de toxiques. Expliquez la démarche d'évaluation des risques, la démarche de gestion des risque. Rappelez à la patiente les effets principaux sur la santé de l'irradiation, et les 3 principes de radioprotection. Contrôlez les vaccinations principales.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Identifier et caractériser les dangers, évaluer l'exposition et la nécessité d'estimer les risques encourus. Expliquez la nécessité de supprimer les dangers si possible, mettre en place des équipements de protection collective, de mettre en place des équipements de protection individuelle adaptés, d'évaluer l'efficacité des mesures de prévention.",
+            "- Rappeler les effets biologiques de l'exposition aux rayons ionisants (altération ADN, radiolyse 1/2). Rappeler les conséquences de l'exposition sur la santé (effets à court terme dits déterministes, obligatoire à partir d'un certain seuil, gravité proportionnelle à la dose, effet long terme aléatoires, cancers et anomalies génétiques, la fréquence augmente avec la dose, gravité indépendante de la dose 3/5). En cas de grossesse l'embryon est sensible aux rayons pendant toute la grossesse et elle doit prendre des mesures de protection supplémentaires.",
+            "- Justification : les rayonnements ionisants doit apporter un bénéfice par rapport au risque radiologique. Optimisation : les expositions et probabilités d'exposition doivent être aussi basses que raisonnablement possible. Limitation des doses individuelles : supprimer les effets déterministes, maintenir les doses inférieurs aux seuils connus, réduire les effets stochastiques. Vérifier les vaccinations VHB et DTPCa."
+          ],
+
+          questionSet: [
+            { "id": "q_irradiation_1", "patterns":["supprimer les dangers"], "answer":"Oui évidemment."},
+            { "id": "q_irradiation_2", "patterns":["protection collective"], "answer":"Oui." },
+            { "id": "q_irradiation_3", "patterns":["protection individuelle"], "answer":"Evidemment." },
+            { "id": "q_irradiation_4", "patterns":["efficacité"], "answer":"D'accord." },
+            { "id": "q_irradiation_5", "patterns":["altération de l'ADN", "radiolyse", "ionisation des molécules"], "answer":"Ok je ne savais pas que ça fonctionnait comme ça." },
+            { "id": "q_irradiation_6", "patterns":["déterministes", "obligatoire", "gravité est proportionnelle à la dose", "long terme", "aléatoires", "cancers", "anomalies génétiques", "fréquence augmente avec la dose", "gravité est indépendante de la dose"], "answer":"Ok je vois." },
+            { "id": "q_irradiation_7", "patterns":["sensible aux rayons"], "answer":"Bien sûr." },
+            { "id": "q_irradiation_8", "patterns":["justification"], "answer":"Validé." },
+            { "id": "q_irradiation_9", "patterns":["optimisation"], "answer":"Validé." },
+            { "id": "q_irradiation_10", "patterns":["limitation"], "answer":"Validé." },
+            { "id": "q_irradiation_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis néo interne en radiologie et je voulais avoir des conseils de protection. "},
+            { "id": "q_irradiation_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_irradiation_13", "patterns":["VHB", "hépatite B"], "answer":"Pas de soucis." },
+            { "id": "q_irradiation_14", "patterns":["DTPCa", "diphtérie", "tétanos", "poliomyélite", "coqueluche"], "answer":"Pas de problème." }
+          ]
+        },
+
+{
+          id: "SDD10",
+          title: "Identifier les conséquences d'une pathologie / situation sur le maintien d'un emploi",
+          intro: "Vous recevez en visite de pré reprise un patient de 28 ans, en arrêt de travail depuis 2 mois et demi à la suite d'une thrombose veineuse profonde au niveau de la sous clavière droite. Il s'agit d'un patient ingénieur droitier, avec des douleurs séquellaires spontanées et à la mobilisation du bras. Il n'a pas d'autres antécédents, n'a pas d'allergie et ne consomme pas de toxiques. Expliquez les objectifs de la visite de reprise, expliquez les mesures d'aide au maintien en emploi dont il peut bénéficier, expliquez les modalités pour accéder à ces mesures.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Evaluer son état de santé actuel est compatible avec son poste de travail, selon son état on peut transmettre des préconisations à l'employeur qui sera tenu de prendre en considération, possibilité d'adaptation de son poste actuel à son état de santé, possibilité de mutation sur un autre poste, possibilité de licenciement pour inaptitude médicale si pas d'adaptation ou de reclassement possible dans l'entreprise.",
+            "- Peut bénéficier d'un temps partiel thérapeutique, peut être prescrit lors de la reprise de l'activité à temps plein, ne correspond pas obligatoirement à un mi-temps, le salaire est maintenu à 100%. Peut bénéficier de la reconnaissance en qualité de travailleur handicapé, permet de bénéficier d'aide pour favoriser l'insertion professionnelle, peut bénéficier d'une pension d'invalidité, permet une allocation d'invalidité qui peut compenser une baisse de salaire.",
+            "- Le temps partiel thérapeutique peut être prescrit par le médecin traitant, la RQTH nécessite un dossier complété par le médecin traitant / médecin du travail / patient puis adressé à la MDPH, la pension d'invalidité est demandée par le médecin traitant et accordée par le médecin conseil de la sécurité sociale."
+          ],
+
+          questionSet: [
+            { "id": "q_RQTH_1", "patterns":["état de santé actuel", "compatible"], "answer":"D'accord je vois et imaginons que mon état de santé ne soit pas complètement compatible, que pouvez vous faire ?"},
+            { "id": "q_RQTH_2", "patterns":["préconisations"], "answer":"Ok je vois." },
+            { "id": "q_RQTH_3", "patterns":["adaptation de son poste"], "answer":"D'accord." },
+            { "id": "q_RQTH_4", "patterns":["mutation", "changement de poste"], "answer":"Oui bien sûr." },
+            { "id": "q_RQTH_5", "patterns":["licenciement"], "answer":"Ah je ne pensais pas ..." },
+            { "id": "q_RQTH_6", "patterns":["temps partiel thérapeutique"], "answer":"Oui j'en ai entendu parler." },
+            { "id": "q_RQTH_7", "patterns":["temps plein n'est pas possible", "pas obligatoirement un mi-temp", "salaire est maintenu à 100%", "même salaire"], "answer":"Ok je vois, je ne savais pas." },
+            { "id": "q_RQTH_8", "patterns":["reconnaissance en qualité de travailleur handicapé", "RQTH"], "answer":"Ok." },
+            { "id": "q_RQTH_9", "patterns":["aide", "insertion professionnelle"], "answer":"D'accord." },
+            { "id": "q_RQTH_10", "patterns":["pension d'invalidité"], "answer":"Ok, j'écoute." },
+            { "id": "q_RQTH_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. j'ai été arrêté pendant 2 mois et demi et on m'a dit de faire une visite de pré reprise avec vous. Je voulais savoir à quoi ça servait ? "},
+            { "id": "q_RQTH_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_RQTH_13", "patterns":["allocation d'invalidité"], "answer":"Ok je ne savais pas." },
+            { "id": "q_RQTH_14", "patterns":["prescrit par le médecin traitant"], "answer":"Tant mieux c'est vachement plus pratique." },
+            { "id": "q_RQTH_15", "patterns":["complété par le médecin traitant", "maison départementale des personnes handicapées", "MDPH"], "answer":"D'accord." },
+            { "id": "q_RQTH_16", "patterns":["demandée par le médecin traitant", "médecin-conseil", "médecin conseil"], "answer":"D'accord." }
+          ]
+        },
+
+{
+          id: "SDD11",
+          title: "Prévention des accidents domestiques",
+          intro: "Vous voyez une femme en maternité venant de donner naissance il y a quelques jours, accompagnée de son époux, tous deux très anxieux concernant leur enfant. Ils ont plusieurs questions à vous poser : ils veulent connaître les mesures à prendre pour diminuer le risque de mort inattendue du nourrisson et pour éviter le risque d'intoxication. La maman vous dit qu'elle commence à ne plus supporter les pleurs du bébé. Recherchez les facteurs de risque de mort inattendue du nourrisson présents chez les parents et expliquez les mesures de prévention, expliquez les mesures de prévention permettant d'éviter les intoxications, donnez la principale mesure de prévention à donner aux parents vis-à-vis de leur irritabilité face aux pleurs de leur enfant.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire (consommation tabac, âge de la mère, niveau socio-économique 2/3), coucher sur le dos, coucher dans son lit (pas de co-sleeping), dormir dans la même chambre jusqu'à 6 mois, ne rien mettre d'autre qu'un matelas dans le lit, ne pas surcouvrir, ne pas surchauffer la chambre, ne pas fumer, encourager l'allaitement maternel.",
+            "- Ranger les médicaments dans un endroit inaccessible, ranger les produits ménagers dans un endroit inaccessible, installer un détecteur de monoxyde de carbone, ne pas laisser de substances illicites à portée de l'enfant. Ne pas secouer l'enfant car il existe un risque de lésions neurologiques irréveribles."
+          ],
+
+          questionSet: [
+            { "id": "q_MINpleurs_1", "patterns":["tabac", "tabagisme", "fumez", "âge", "niveau socio-économique"], "answer":"Je ne consomme pas de toxiques personnellement mais mon époux fume du tabac quotidiennement et du cannabis de temps en temps."},
+            { "id": "q_MINpleurs_2", "patterns":["coucher sur le dos"], "answer":"Ok je vois." },
+            { "id": "q_MINpleurs_3", "patterns":["pas de co-sleeping", "son lit"], "answer":"D'accord on le laisse dans son lit quoi." },
+            { "id": "q_MINpleurs_4", "patterns":["même chambre", "jusqu'à 6 mois", "co rooming"], "answer":"Ok je vois." },
+            { "id": "q_MINpleurs_5", "patterns":["pas de draps", "pas de couvertures"], "answer":"Ok donc seulement le matelas dans son lit." },
+            { "id": "q_MINpleurs_6", "patterns":["pas surcouvrir"], "answer":"Je vois il ne faut pas qu'il est trop chaud." },
+            { "id": "q_MINpleurs_7", "patterns":["pas surchauffer", "18-20°C", "18°C", "20°C"], "answer":"D'accord je vois." },
+            { "id": "q_MINpleurs_8", "patterns":["pas fumer", "arrêter de fumer"], "answer":"Je lui dirais." },
+            { "id": "q_MINpleurs_9", "patterns":["allaitement maternel"], "answer":"Oui d'accord." },
+            { "id": "q_MINpleurs_10", "patterns":["ranger les médicaments"], "answer":"Ok on fera ça bien." },
+            { "id": "q_MINpleurs_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. On est assez stressés avec mon conjoint car on a entendu parler de la mort inattendu du nourrisson. Puis je dois vous avouer qu'on commence à saturer d'entendre le petit pleurer..."},
+            { "id": "q_MINpleurs_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_MINpleurs_13", "patterns":["ranger les produits ménagers"], "answer":"Oui bien sûr." },
+            { "id": "q_MINpleurs_14", "patterns":["détecteur de monoxyde de carbone"], "answer":"Oui je comprends." },
+            { "id": "q_MINpleurs_15", "patterns":["pas laisser de substances illicites"], "answer":"Oui évidemment." },
+            { "id": "q_MINpleurs_16", "patterns":["ne pas secouer", "lésions neurologiques"], "answer":"D'accord, je comprends bien ..." }
+          ]
+        },
+
+{
+          id: "SDD12",
+          title: "Accident du travail",
+          intro: "Un patient de 42 ans salarié dans une entreprise de manufacture vous consulte pour fracture de la cheville droite survenue lors de l'exercice de ses fonctions dans la matinée. Il souhaiterait un certificat d'accident du travail et des explications sur la démarche à suivre. Dites au patient si c'est lui ou son employeur qui déclare l'accident et des délais dont il dispose, délivrez lui un document et expliquez ce que vous écrivez dessus, expliquez au patient les prestations en nature et en espèces, le patient vous demande s'il peut garder son emploi pendant et après l'arrêt, le patient vous parle de notion d'incapacité permanente répondez lui.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Le patient dispose de 24h pour informer son employeur, son employeur dispose de 48h pour informer la CPAM, le patient a sinon 2 ans pour déclarer si l'employeur ne le fait pas. Rédiger un certificat médical initial, décrire les lésions observées de manière objective, inscrire les allégations du patient entre guillemets, inscrire date accident / identification du patient / identification du médecin / conclure établi à la demande de l'intéressé et remis en main propre",
+            "- Expliquez au patient que les soins sont pris en charge à 100%, dire qu'il pourra bénéficier d'indemnités journalières dès le premier jour, et que les indemnités correspondront à 60% de son salaire les 28 premiers jours puis 80% après.",
+            "- Expliquez au patient que les victimes d'accident du travail bénéficient de mesures de protection de leur emploi pendant l'accident du travail, visite de pré reprise et de reprise si l'arrêt dure +30j, si le médecin du travail le déclare inapte il pourra être reclassé ou avoir des indemnités doublées en cas de licenciement.",
+            "- Expliquer que le certificat médical final sera rédigé à la fin des soins décrivant les séquelles éventuelles, qu'un taux d'incapacité permanente sera déterminé par le médecin conseil te qu'il pourra bénéficier ou non d'indemnités."
+          ],
+
+          questionSet: [
+            { "id": "q_accidentravail_1", "patterns":["24h pour informer votre employeur", "24h"], "answer":"Ok je vois, je vais le faire aujourd'hui alors."},
+            { "id": "q_accidentravail_2", "patterns":["48h pour informer la CPAM", "48h"], "answer":"Ok et s'il ne le fait pas ?" },
+            { "id": "q_accidentravail_3", "patterns":["2 ans"], "answer":"Ok je vois." },
+            { "id": "q_accidentravail_4", "patterns":["certificat médical initial", "CMI"], "answer":"Oui merci de me le faire." },
+            { "id": "q_accidentravail_5", "patterns":["lésions observées", "objective", "objectif"], "answer":"Ok je vois et pour mes allégations personnelles qu'est-ce qu'on fait ?" },
+            { "id": "q_accidentravail_6", "patterns":["allégations entre guillemets"], "answer":"Ok je vois." },
+            { "id": "q_accidentravail_7", "patterns":["date", "identification", "établi à la demande de l'intéressé", "remis en main propre"], "answer":"Validé." },
+            { "id": "q_accidentravail_8", "patterns":["pris en charge à 100%", "100%"], "answer":"Ok tant mieux." },
+            { "id": "q_accidentravail_9", "patterns":["indemnités journalières"], "answer":"Ok je ne savais pas." },
+            { "id": "q_accidentravail_10", "patterns":["60%", "80% à partir du 29e jour"], "answer":"Ok ça va." },
+            { "id": "q_accidentravail_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je me suis fracturé la cheville en tombant d'une échelle lors du travail, je voulais des informations."},
+            { "id": "q_accidentravail_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_accidentravail_13", "patterns":["protection de l'emploi"], "answer":"Tant mieux." },
+            { "id": "q_accidentravail_14", "patterns":["visite de pré reprise", "visite de reprise", "plus de 30 jours"], "answer":"Ok je vois." },
+            { "id": "q_accidentravail_15", "patterns":["reclassement professionnel", "indemnités doublées"], "answer":"D'accord." },
+            { "id": "q_accidentravail_16", "patterns":["certificat médical final", "séquelles"], "answer":"D'accord, parfait." },
+            { "id": "q_accidentravail_17", "patterns":["incapacité permanente", "médecin conseil"], "answer":"D'accord." }
+          ]
+        },
+
+{
+          id: "SDD13",
+          title: "Annonce d'un diagnostic de maladie grave au patient et/ou à sa famille",
+          intro: "Vous recevez en consultation Mme S,60 ans, pour annonce diagnostique d'un carcinome canalaire infiltrant localisé du sein droit suite aux résultats de la biopsie et de l'imagerie. Annoncez le diagnostic de cancer du sein et expliquez lui simplement la maladie et ses évolutions, expliquez les différentes options thérapeutiques possibles, répondez à la patiente quant aux effets secondaires de la chimiothérapie.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquez qu'elle est atteinte d'un cancer du sein c'est à dire une mutation et prolifération anormale des cellules dans le sein, que c'est une maladie fréquente touchant une femme sur dix, en l'absence de traitement le risque est l'extension locale puis à distance par des métastases, grâce aux traitements actuels le taux de guérison est important, la patiente sera accompagnée à chaque étape de sa prise en charge.",
+            "- Un traitement par chirurgie peut être envisagé selon la taille de la tumeur (uniquement sur la zone tumorectomie ou sur l'ensemble du sein mammectomie), chirurgie de reconstruction du sein, radiothérapie des zones atteintes, chimiothérapie, d'autres traitements par voie veineuse comme l'immunothérapie et l'hormonothérapie.",
+            "- Expliquer les effets secondaires (5/10) : infection, saignement, anémie, fatigue diminution de l'appétit et perte de poids, perte des cheveux, nausées et vomissements, inflammation des muqueuses et douleurs et tb digestifs, douleur aux extrémités lors de l'exposition au froid, risque de cancer des cellules du sang à distance, risque d'insuffisance cardiaque."
+          ],
+
+          questionSet: [
+            { "id": "q_cancersein_1", "patterns":["cancer du sein", "mutation des cellules", "prolifération des cellules"], "answer":"Oh je m'y attendais pas...."},
+            { "id": "q_cancersein_2", "patterns":["fréquente", "une femme sur 10"], "answer":"Ok ça me rassure quelque part." },
+            { "id": "q_cancersein_3", "patterns":["évolution locale", "à distance", "métastases"], "answer":"Oui je comprends, et niveau guérison ?" },
+            { "id": "q_cancersein_4", "patterns":["guérison", "taux de guérison est important"], "answer":"Ok tant mieux." },
+            { "id": "q_cancersein_5", "patterns":["accompagnée"], "answer":"C'est bien à savoir..." },
+            { "id": "q_cancersein_6", "patterns":["tumorectomie", "mammectomie"], "answer":"Ok je vois." },
+            { "id": "q_cancersein_7", "patterns":["reconstruction"], "answer":"Tant mieux je le considèrerai." },
+            { "id": "q_cancersein_8", "patterns":["radiothérapie"], "answer":"Ok." },
+            { "id": "q_cancersein_9", "patterns":["chimiothérapie"], "answer":"D'accord." },
+            { "id": "q_cancersein_10", "patterns":["immunothérapie", "hormonothérapie"], "answer":"D'accord." },
+            { "id": "q_cancersein_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis adressée par mon médecin traitant pour une masse dans mon sein droit..."},
+            { "id": "q_cancersein_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_cancersein_13", "patterns":["infection", "saignement", "anémie", "fatigue", "diminution de l'appétit", "perte de poids", "perte des cheveux", "alopécie", "nausées", "vomissements", "inflammation des muqueuses", "troubles digestifs", "exposition au froid", "cancer des cellules sanguines", "insuffisance cardiaque"], "answer":"Ok il y a pas mal d'effets secondaires quand même..." }
+          ]
+        },
+
+{
+          id: "SDD14",
+          title: "Annonce d'une maladie chronique",
+          intro: "Vous recevez dans votre cabinet une patiente de 23 ans chez qui vous venez de diagnostiquer un syndrome de l'intestin irritable. Expliquez simplement les symptômes et la physiopathologie de la maladie à la patiente, expliquez les principes du traitement de la maladie à la patiente.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer que ce n'est pas une maladie grave mais qu'elle est chronique et qu'il n'y a pas de traitement permettant de la guérir, expliquer que la maladie est responsable de douleur abdominale (après avoir mangé, à type de spasmes, en journée, prédominant en FIG et hypogastre 2/4), expliquer qu'elle est responsable de troubles digestifs (diarrhées, constipation, alternance des deux 3/3). Expliquer que la maladie peut être causée par une altération de l'axe cerveau intestin, peut être causée par une dysbiose intestinale, peut être causée par un trouble de la motricité intestinale, une sensibilité accrue de son tube digestif et que le stress aggrave les symptômes.",
+            "- Le but du traitement n'est pas de guérir mais d'améliorer sa qualité de vie, on peut utiliser des antispasmodiques pour limiter la douleur induite par les contractions intestinales, on peut utiliser des laxatifs pour accélérer le transit en cas de constipation, on peut utiliser des ralentisseurs de transit en cas de diarrhée, expliquer que des mesures alimentaires doivent être mises en place (3 repas par jour, manger lentement, éviter aliments gras 1/3)."
+          ],
+
+          questionSet: [
+            { "id": "q_colopathiefonc_1", "patterns":["pas grave", "chronique", "pas de traitement"], "answer":"Ok je vois donc c'est pas grave en soit mais je l'aurais à vie."},
+            { "id": "q_colopathiefonc_2", "patterns":["responsable des douleurs", "après avoir mangé", "après les repas", "à type de spasmes", "journée", "fosse iliaque gauche", "hypogastre"], "answer":"Ok donc c'est cette maladie qui me donne tous mes symptômes." },
+            { "id": "q_colopathiefonc_3", "patterns":["troubles digestifs", "diarrhées", "diarrhée", "constipation", "alternance de diarrhée et constipation", "alternance de diarrhées et constipation"], "answer":"Oui tout à fait j'ai une alternance de diarrhées et constipation." },
+            { "id": "q_colopathiefonc_4", "patterns":["axe cerveau intestin", "axe cerveau-intestin"], "answer":"D'accord je ne savais pas." },
+            { "id": "q_colopathiefonc_5", "patterns":["dysbiose intestinale", "anomalie des contractions intestinales"], "answer":"D'accord je vois." },
+            { "id": "q_colopathiefonc_6", "patterns":["sensibilité accrue", "gaz" "contractions"], "answer":"Oui j'imagine que c'est une sensibilité accrue." },
+            { "id": "q_colopathiefonc_7", "patterns":["stress aggrave les symptômes", "stress", "stress aggrave"], "answer":"Ah oui je vous le confirme, quand je stresse c'est pire." },
+            { "id": "q_colopathiefonc_8", "patterns":["améliorer la qualité de vie"], "answer":"Oui ça serait déjà pas mal." },
+            { "id": "q_colopathiefonc_9", "patterns":["antispasmodiques"], "answer":"Oui d'accord." },
+            { "id": "q_colopathiefonc_10", "patterns":["laxatifs"], "answer":"Ok." },
+            { "id": "q_colopathiefonc_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'aimerais avoir des explications concernant le syndrome de l'intestin irritable et sa prise en charge s'il vous plait."},
+            { "id": "q_colopathiefonc_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_colopathiefonc_13", "patterns":["laxatifs"], "answer":"Je vois." },
+            { "id": "q_colopathiefonc_14", "patterns":["ralentisseurs du transit"], "answer":"D'accord." },
+            { "id": "q_colopathiefonc_15", "patterns":["mesures alimentaires", "3 repas", "manger lentement", "éviter les aliments gras", "éviter les repas gras"], "answer":"Ok je vois j'essayerai de manger lentement, 3 repas par jour et éviter les repas gras." }
+          ]
+        },
+
+{
+          id: "SDD15",
+          title: "CAT devant une demande d'accès à l'information / au DM",
+          intro: "M. T, patient âgé de 79 ans, est décédé dans votre service il y a 1 mois. Son épouse souhaiterait avoir accès à son dossier médical. Expliquez les conditions nécessaires pour avoir accès au dossier, l'épouse du défunt souhaiterait savoir sous quel délai elle aura accès au dossier répondez lui, expliquez les modalités de consultation du dossier médical, et répondez à la patiente qui souhaite savoir qui pourrait demander accès au dossier médical.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Le patient doit être décédé, la demande doit être motivée par une des raisons : connaître les causes, défendre sa mémoire, faire valoir ses droits. Expliquer qu'elle doit justifier sa qualité d'ayant droit, il faut vérifier que le patient ne soit pas opposé de son vivant.",
+            "- Elle pourra y avoir accès au plus tôt dans 48h et au plus tard dans 8 jours. La consultation du dossier médical sur place est gratuite, elle peut obtenir une copie du dossier (frais de photocopie et d'envoi à sa charge, copie envoyée par lettre recommandée avec accusé de réception 1/2). Les professionnels qui font partie de l'équipe de soin peuvent y avoir accès, les autres ayant droits (enfants) peuvent y avoir accès, en cas de procédure judiciaire le médecin expert peut obtenir la communication du dossier médical.",
+            "Le délai de conservation du DM est de : 10 ans après la date du décès, 20 ans après la date du dernier passage à l'hôpital, 30 ans pour un dossier transfusionnel. Pour les enfants le dossier est conservé jusqu'à 28 ans.",
+            "Le délai d'obtention est de 2-8j si le dossier date de moins de 5 ans, sinon de 2j à 2 mois."
+          ],
+
+          questionSet: [
+            { "id": "q_dossiermédical_1", "patterns":["décédé", "doit être décédé"], "answer":"Bien sûr, c'est le cas."},
+            { "id": "q_dossiermédical_2", "patterns":["causes", "défendre la mémoire", "faire valoir ses droits"], "answer":"Ce serait pour en savoir plus sur les causes de sa mort et faire valoir ses droits." },
+            { "id": "q_dossiermédical_3", "patterns":["justifier sa qualité d'ayant droit", "ayant-droit"], "answer":"Oui évidemment, je suis sa femme." },
+            { "id": "q_dossiermédical_4", "patterns":["pas opposé"], "answer":"Non il aurait voulu que je sache." },
+            { "id": "q_dossiermédical_5", "patterns":["48h", "2 jours"], "answer":"Ok." },
+            { "id": "q_dossiermédical_6", "patterns":["8 jours"], "answer":"Ok je vois." },
+            { "id": "q_dossiermédical_7", "patterns":["gratuit", "gratuite"], "answer":"Tant mieux." },
+            { "id": "q_dossiermédical_8", "patterns":["frais de photocopie à votre charge", "frais d'envoi à votre charge", "lettre recommandée", "accusé de réception"], "answer":"D'accord c'est bon à savoir." },
+            { "id": "q_dossiermédical_9", "patterns":["équipe de soin"], "answer":"Je me doute." },
+            { "id": "q_dossiermédical_10", "patterns":["enfants peuvent y avoir accès"], "answer":"D'accord je leur dirai." },
+            { "id": "q_dossiermédical_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon mari est décédé il y a un mois dans l'hôpital, je voudrais avoir accès à son dossier médical mais je ne connais pas les conditions pour y avoir accès..."},
+            { "id": "q_dossiermédical_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_dossiermédical_13", "patterns":["médecin expert", "procédure judiciaire"], "answer":"Ok bien sûr." }
+          ]
+        },
+
+{
+          id: "SDD16",
+          title: "Accompagnement global d'un aidant",
+          intro: "Vous recevez en consultation de neurologie une patiente âgée de 83 ans atteinte de maladie d'Alzheimer accompagnée par son mari de 75 ans et principal aidant. Il vous explique qu'ils ne bénéficient d'aucune aide et qu'il commence à être épuisé par cette situation. Evaluez l'autonomie de la patiente et ses conséquences sur l'aidant, expliquez à l'époux à quelle allocation ils peuvent prétendre et ce qu'elle couvre, expliquez les autres aides humaines ou matérielles non couvertes par l'allocation dont son épouse peut bénéficier, expliquez les différentes mesures de répit possible.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Evaluer l'autonomie de la patiente dans les activités de la vie quotidienne (hygiène corporelle, s'habiller, aller aux toilettes, se déplacer, continence, se nourrir 4/6), autonomie dans les activités instrumentales (courses, aliments, ménage, lessive, transports en commun, gérer ses médicaments, gérer ses finances 6/8), évaluer les conséquences physiques et psychologiques sur l'aidant.",
+            "- Peut bénéficier de l'Allocation Personnalisée d'Autonomie. Elle couvre : achat de protection, téléassistance, portage repas, financement d'heures d'auxiliaire de vie, aménagement du domicile (3/5).",
+            "- Aidant peut bénéficier d'un soutien psychologique (psychothérapie, groupe de parole, association de familles 1/3), passage infirmière, passage aide soignante, aide ménagère, la patiente peut bénéficier de séances de kiné / orthophonie / ergothérapie (1/3). La sécurité sociale peut financer certains dispositifs.",
+            "- Existence de centres d'accueil de jour (centre médicalisé), centres d'activités non médicalisés (clubs de loisirs ou de sports), possibilité d'une institutionnalisation quand le maintien à domicile est impossible."
+          ],
+
+          questionSet: [
+            { "id": "q_aidantalz_1", "patterns":["hygiène", "s'habiller", "aller aux toilettes", "se déplacer", "continence", "incontinente", "incontinence", "se nourrir"], "answer":"Elle ne sort plus du domicile, mais se déplace dans le domicile. Elle mange seule, mais je dois l'aider pour se lever. Aussi elle porte des protections car elle n'arrive pas toujours à temps aux WC. Je l'aide pour s'habiller et pour la toilette car elle n'y arrive pas totalement toute seule."},
+            { "id": "q_aidantalz_2", "patterns":["téléphone", "courses", "aliments", "lessive", "transports en commun", "médicaments", "finances"], "answer":"Elle ne prend plus les transports en commun. C'est moi qui gère les dépenses et ses traitements. Je m'occupe des courses, des repas, du ménage, du linge... Elle sait répondre au téléphone mais pas plus." },
+            { "id": "q_aidantalz_3", "patterns":["conséquences physiques", "conséquences psychologiques", "comment ça va"], "answer":"Je vous avoue que la situation commence à être pesante, d'autant plus qu'on n'a aucune aide humaine ou financière hormis le 100% pour ses traitements. Puis je suis seul à m'occuper d'elle du mieux que je peux, mais elle devient désagréable avec moi. Puis moi j'ai quand même de l'arthrose et des lombalgies chroniques qui sont clairement aggravés par les efforts que je fournis pour mon épouse." },
+            { "id": "q_aidantalz_4", "patterns":["allocation personnalisée d'autonomie", "APA"], "answer":"D'accord je ne connaissais pas." },
+            { "id": "q_aidantalz_5", "patterns":["achat de protection", "téléassistance", "portage des repas", "auxiliaire de vie", "aménagement du domicile"], "answer":"Oui ça serait bien ça." },
+            { "id": "q_aidantalz_6", "patterns":["soutien psychologique", "psychothérapie", "groupe de parole", "association de familles"], "answer":"D'accord, j'avoue que ça me ferait du bien." },
+            { "id": "q_aidantalz_7", "patterns":["infirmière", "infirmier"], "answer":"Oui j'aimerai bien qu'une infirmière passe." },
+            { "id": "q_aidantalz_8", "patterns":["aide soignante", "aide soignant"], "answer":"Oui ça m'aiderait beaucoup." },
+            { "id": "q_aidantalz_9", "patterns":["kinésithérapie", "orthophonie", "ergothérapie"], "answer":"Oui d'accord." },
+            { "id": "q_aidantalz_10", "patterns":["sécurité sociale"], "answer":"Ok parfait." },
+            { "id": "q_aidantalz_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je voulais vous voir au sujet de mon épouse."},
+            { "id": "q_aidantalz_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci grandement Docteur." },
+            { "id": "q_aidantalz_13", "patterns":["centre d'accueil de jour", "centres d'accueil", "centre médicalisé"], "answer":"Ok très bien." },
+            { "id": "q_aidantalz_14", "patterns":["centres d'activité non médicalisés", "clubs de loisirs", "club de sport"], "answer":"Oui ça pourrait lui faire du bien." },
+            { "id": "q_aidantalz_15", "patterns":["institutionnalisation"], "answer":"Ok je garde ça en tête en dernier recours." }
+          ]
+        },
+
+{
+          id: "SDD17",
+          title: "Découverte d'un aléa thérapeutique ou d'une erreur médicale",
+          intro: "Vous suivez Mme X, à la suite d'une prescription de céphalosporine, par son médecin généralisée libéral, alors que cette patiente est connue pour allergie aux bêtalactamines. Elle souhaite actuellement porter plainte et savoir si elle peut bénéficier d'une indemnisation. Expliquez à la patiente le principe d'erreur médicale et qualifiez là, expliquez les différentes responsabilités engagées, expliquez la démarche à suivre pour être indemnisée dans ce contexte.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Erreur involontaire, erreur évitable, rechercher des complications liées à cette erreur médicale. Expliquer que c'est un évènement indésirable grave. Expliquer que la patiente peut engager la responsabilité pénale, la responsabilité ordinale ou disciplinaire et la responsabilité civile.",
+            "- Expliquer que la patiente doit apporter la preuve de la faute et du lien de causalité entre faute et dommage, elle peut demander une indemnisation après d'une commission de conciliation et d'indemnisation ou après du tribunal judiciaire, selon l'expertise du CCI elle pourra être indemnisée par l'assureur du responsable sous 4 mois, sinon l'indemnisation sera effectuée par ONIAM, la procédure est gratuite."
+          ],
+
+          questionSet: [
+            { "id": "q_erreurmédicale_1", "patterns":["involontaire"], "answer":"Ah oui vous pensez que c'était involontaire ? Il était au courant quand même."},
+            { "id": "q_erreurmédicale_2", "patterns":["évitable"], "answer":"Ah bah oui clairement." },
+            { "id": "q_erreurmédicale_3", "patterns":["complications", "liées à cette erreur"], "answer":"Bah j'ai été hospitalisée en réanimation pour choc anaphylactique et j'ai fait un arrêt cardiaque." },
+            { "id": "q_erreurmédicale_4", "patterns":["évènement indésirable grave"], "answer":"Ah oui clairement." },
+            { "id": "q_erreurmédicale_5", "patterns":["responsabilité pénale"], "answer":"Oui j'y compte bien." },
+            { "id": "q_erreurmédicale_6", "patterns":["responsabilité ordinale", "responsabilité disciplinaire"], "answer":"Oui ok." },
+            { "id": "q_erreurmédicale_7", "patterns":["responsabilité civile"], "answer":"D'accord." },
+            { "id": "q_erreurmédicale_8", "patterns":["apporter la preuve", "lien de causalité"], "answer":"Ok ça devrait pas être compliqué." },
+            { "id": "q_erreurmédicale_9", "patterns":["commission de conciliation et d'indemnisation", "CCI", "tribunal judiciaire"], "answer":"D'accord." },
+            { "id": "q_erreurmédicale_10", "patterns":["indemnisée par l'assureur", "4 mois"], "answer":"Ok je vois." },
+            { "id": "q_erreurmédicale_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'aimerai des informations sur les erreurs médicales car mon médecin traitant a failli me tuer !"},
+            { "id": "q_erreurmédicale_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"C'est clair, merci Docteur." },
+            { "id": "q_erreurmédicale_13", "patterns":["office national d'indemnisation des accidents médicaux", "ONIAM"], "answer":"Ok je comprends." },
+            { "id": "q_erreurmédicale_14", "patterns":["procédure gratuite", "gratuit", "gratuite"], "answer":"Oui bah tant mieux, c'est pas de ma faute tout ça." }
+          ]
+        },
+
+{
+          id: "SDD18",
+          title: "Demande d'un certificat médical initial",
+          intro: `Vous recevez à 23 h 30 aux urgences un patient de 25 ans, à la suite d'une agression alors qu'il rentrait chez lui. Il souhaite obtenir un certificat pour porter plainte. Réalisez un interrogatoire général et sur le contexte de l'agression, expliquez les éléments devant figurer dans un CMI et interprétez les 2 iconographies.<img src= "agression.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, circonstances de survenue, signes fonctionnels (toux, crachats, difficulté respiratoire, dl thoracique, douleur, difficultés à la mobilisation des membres, TC et perte de connaissance (au moins 2)), conséquences psychologiques.",
+            "- Identifier le médecin (nom prénom, adresse, numéro d'inscription à l'ordre, signature 2/4), identifier le patient (nom, prénom, date de naissance 1/2), lieu et date examen clinique, allégations entre guillemets, constatations médicales objectives, écrire les résultats positifs et négatifs des examens réalisés, écrire la PEC jusqu'à présent, prendre des photos des blessures avec accord, fixer taux ITT, mentionner établi à la demande de l'intéressé et remis en mains propres.",
+            "- Photo 1 = hématome. Photo 2 = dermabrasion (1/2).",
+            "ITT : ",
+            "- Volontaire : <8j = contravention par tribunal de police.",
+            "- Volontaire : >8j = délit par tribunal correctionnel.",
+            "- Involontaire : <3M = contravention par tribunal de police.",
+            "- Involontaire : >3M = contravention par tribunal correctionnel."
+          ],
+
+          questionSet: [
+            { "id": "q_agression_1", "patterns":["antécédents", "traitements", "profession", "toxiques", "fumez", "allergies"], "answer":"Je n'ai pas d'antécédents, pas de traitements, pas d'allergies. Je ne fume pas et je bois occasionnellement."},
+            { "id": "q_agression_2", "patterns":["circonstances de survenue", "ce qui s'est passé"], "answer":"Il était environ 23h je marchais pour prendre le métro, un gomme d'environ 30 ans m'a insulté et a voulu me voler mon portable. J'ai refusé et il m'a projeté au sol et m'a frappé avant de partir." },
+            { "id": "q_agression_3", "patterns":["toux", "crachats", "difficultés respiratoires", "dyspnée", "douleur", "difficultés de mobilisation", "douleurs", "traumatisme crânien", "perte de connaissance"], "answer":"Oui j'ai du mal à respirer, j'ai mal au niveau des côtes et à l'épaule droite." },
+            { "id": "q_agression_4", "patterns":["conséquences psychologiques", "ça va"], "answer":"Pour le moment c'est trop frais je ne sais pas trop quoi en penser. Etat compatible avec un stress aigu." },
+            { "id": "q_agression_5", "patterns":["nom du médecin", "prénom du médecin", "adresse du médecin", "ordre des médecin", "signature"], "answer":"Validé." },
+            { "id": "q_agression_6", "patterns":["nom du patient", "prénom du patient", "date de naissance"], "answer":"Validé." },
+            { "id": "q_agression_7", "patterns":["lieu examen clinique", "date de l'examen clinique"], "answer":"Validé." },
+            { "id": "q_agression_8", "patterns":["allégations entre guillemets"], "answer":"Validé." },
+            { "id": "q_agression_9", "patterns":["constatations médicales", "objective", "objectif"], "answer":"Validé." },
+            { "id": "q_agression_10", "patterns":["résultats des examens"], "answer":"Les examens retrouve une impotence fonctionnelle partielle du membre supérieur droit avec douleur à la mobilisation de l'épaule sans DSM ni atteinte vasculaire. Présence d'une dyspnée inspiratoire, fracture de 2 côtes gauches sans pneumothorax à la radiographie." },
+            { "id": "q_agression_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je me suis fait agressé dans la rue alors que je rentrais juste chez moi..."},
+            { "id": "q_agression_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_agression_13", "patterns":["prise en charge"], "answer":"Validé." },
+            { "id": "q_agression_14", "patterns":["photographie des blessures", "photos des blessures"], "answer":"Oui je vous y autorise." },
+            { "id": "q_agression_15", "patterns":["taux d'ITT", "ITT"], "answer":"Validé." },
+            { "id": "q_agression_16", "patterns":["établi à la demande de l'intéressé", "remis en mains propres"], "answer":"Validé." },
+            { "id": "q_agression_17", "patterns":["hématome", "dermabrasion"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD19",
+          title: "Demande de traitement et investigation inappropriée",
+          intro: "Vous recevez dans votre cabinet de médecine générale un patient de 35 ans pour suspicion d'angine. Il souhaite absolument un traitement antibiotique pour la traiter. Réalisez un interrogatoire général et un examen clinique, expliquez la prise en charge adaptée face à votre diagnostic. Il revient 1 an plus tard, une consœur lui a diagnostiqué une bronchite et l'a mis sous paracétamol, il vient vous voir car elle refuse de lui faire une radiographie du thorax, que lui expliquez vous.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, prise de traitement face à sa symptomatologie actuelle, contrôler la température, rechercher la toux, examiner la cavité buccale, adénopathies douloureuses, proposer la réalisation d'un strepto-test ou TDR.",
+            "- Expliquer qu'il présente une angine virale, qu'un traitement ATB ,'est pas nécessaire, que la prise d'ATB favorise l'apparition dans le futur de bactéries qui résistent et seront donc plus difficiles à traiter, prescrire un antalgique et un antipyrétique à base de paracétamol.",
+            "- Expliquer qu'une radio est inutile car une bronchite est une infection virale sans gravité le diagnostic est clinique et ne nécessite pas d'imagerie, une radiographie expose à des radiations donc à réserver pour des situations ou elle est susceptible de modifier la PEC."
+          ],
+
+          questionSet: [
+            { "id": "q_bronchitevirale_1", "patterns":["antécédents", "traitements", "toxiques", "fumez", "allergies", "comportements sexuels à risque"], "answer":"Je n'ai pas d'antécédents, pas de traitements, pas d'allergies. Je n'ai pas d'animaux, pas de rapports sexuels à risque."},
+            { "id": "q_bronchitevirale_2", "patterns":["médicaments"], "answer":"Je n'ai pris aucun traitement antalgique pour ma toux." },
+            { "id": "q_bronchitevirale_3", "patterns":["température"], "answer":"Oui j'avais de la température à 39°C." },
+            { "id": "q_bronchitevirale_4", "patterns":["toux"], "answer":"Ah oui je tousse et ça depuis 3 jours. J'ai même mal quand je déglutis." },
+            { "id": "q_bronchitevirale_5", "patterns":["cavité buccale"], "answer":"Présence d'une angine blanche, aspect érythémateux." },
+            { "id": "q_bronchitevirale_6", "patterns":["adénopathies", "adénopathies douloureuses"], "answer":"Absence d'adénopathies douloureuses." },
+            { "id": "q_bronchitevirale_7", "patterns":["strepto-test", "test de diagnostic rapide"], "answer":"Test réalisé et négatif." },
+            { "id": "q_bronchitevirale_8", "patterns":["angine causée par un virus", "angine virale"], "answer":"D'accord." },
+            { "id": "q_bronchitevirale_9", "patterns":["antibiotiques ne sont pas nécessaire", "antibiotique n'est pas nécessaire"], "answer":"Mouais ok je vois." },
+            { "id": "q_bronchitevirale_10", "patterns":["bactéries résistantes"], "answer":"Ah ok je comprends." },
+            { "id": "q_bronchitevirale_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai mal à la gorge depuis 3 jours."},
+            { "id": "q_bronchitevirale_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_bronchitevirale_13", "patterns":["antalgique", "antipyrétique", "paracétamol"], "answer":"D'accord." },
+            { "id": "q_bronchitevirale_14", "patterns":["inutile", "diagnostic clinique"], "answer":"Ok je vois." },
+            { "id": "q_bronchitevirale_15", "patterns":["radiations", "modifier la prise en charge"], "answer":"Ouais ok ok." }
+          ]
+        },
+
+{
+          id: "SDD20",
+          title: "Evaluation de l'aptitude au sport et rédaction d'un certificat de non contre-indication",
+          intro: "Une patiente de 19 ans vous consulte dans votre cabinet de médecine générale pour la rédaction d'un certificat de non contre-indication à la pratique sportive du judo dans un club affilié à une fédération sportive afin d'obtenir sa licence. Réalisez un interrogatoire général et ciblé sur la pratique sportive, réalisez un examen clinique centré sur l'appareil cardiovasculaire et morphologique (ne pas réaliser le reste de l'examen clinique), donnez les principales règles de bonnes conduites à respecter dans la pratique sportive à la patiente.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, vaccinations / état pubertaire et sphère gynécologique / habitudes alimentaires / habitudes sommeil (2/4), antécédents sportifs et pratique actuelle (niveau de pratique, rythme, volume et intensité, objectifs, conditions de pratique sportive 2/5).",
+            "- Evaluer taille / poids / IMC / périmètre physiologique des membres / envergure / empan (largeur paume main du pouce à D5), présence de symptômes CVS (douleur thoracique, difficulté respiratoire, syncope ou malaise > 1), fréquence cardiaque de repos, pression artérielle aux deux bras, pouls périphériques, auscultation souffles cardiaques et périphériques, ECG de repos si le dernier date de +3 ans.",
+            "- Conseils hygiène de vie (repas équilibrés et adaptés, sommeil bonne qualité et bonne quantité, bonne hydratation, apport caclique suffisant, prendre des jours de repos pour récupérer 2/5), matériel sportif et protection de qualité et adapté, s'échauffer en début de séance et s'étirer en fin de séance, aborder la consommation de dosage (interdits et néfastes)."
+          ],
+
+          questionSet: [
+            { "id": "q_sport_1", "patterns":["antécédents", "traitements", "allergies", "loisirs", "profession"], "answer":"Je n'ai pas d'antécédents, je sais juste que mon père est décédé brutalement à l'âge de 45 ans. Je ne prends ni traitement ni allergies ni toxiques. Je suis apprentie en menuiserie. Je ne fume pas et je bois occasionnellement."},
+            { "id": "q_sport_2", "patterns":["vaccinations", "état pubertaire", "sphère gynécologique", "habitudes alimentaires", "sommeil"], "answer":"Mes vaccins sont à jour. Je mange assez varié mais j'ai un petit penchant pour les sucreries. J'ai mes règles depuis mes 11 ans de manière régulière. Au niveau du sommeil je me couche souvent après minuit et je me lève vers 6h pour me rendre sur mon lieu de travail." },
+            { "id": "q_sport_3", "patterns":["niveau de pratique", "rythme", "volume", "intensité", "objectifs", "conditions de pratique"], "answer":"J'aimerai faire du Judo dans un club affilié à une fédération sportive. Je fais du Judo 2h par semaine. Je compte faire du Judo dans un dojo bien équipé, les personnes seront de mon niveau et de ma catégorie de poids." },
+            { "id": "q_sport_4", "patterns":["taille", "poids", "IMC", "périmètre des membres", "envergure", "empan"], "answer":"Validé." },
+            { "id": "q_sport_5", "patterns":["douleur thoracique", "difficultés respiratoires", "syncope", "malaise"], "answer":"Absence de symptômes cardiovasculaires." },
+            { "id": "q_sport_6", "patterns":["fréquence cardiaque de repos"], "answer":"FC de repos prise et normale." },
+            { "id": "q_sport_7", "patterns":["pression artérielle"], "answer":"Tension artérielle prise et normale." },
+            { "id": "q_sport_8", "patterns":["pouls périphériques"], "answer":"Absence d'anomalies des pouls périphériques." },
+            { "id": "q_sport_9", "patterns":["souffles cardiaques", "souffles périphériques"], "answer":"Absence de souffle." },
+            { "id": "q_sport_10", "patterns":["ECG de repos"], "answer":"ECG de repos sans anomalies." },
+            { "id": "q_sport_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir pour une consultation de non contre indication à la pratique sportive."},
+            { "id": "q_sport_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_sport_13", "patterns":["repas équilibrés", "sommeil de bonne qualité", "bien dormir", "apport calcique", "jours de repos"], "answer":"Ok je vois." },
+            { "id": "q_sport_14", "patterns":["matériel sportif", "protection"], "answer":"Oui bien sur tout devra être adapté." },
+            { "id": "q_sport_15", "patterns":["s'échauffer", "s'étirer"], "answer":"D'accord." },
+            { "id": "q_sport_16", "patterns":["dopage", "interdits", "conséquences néfastes"], "answer":"Oui bien sûr." }
+          ]
+        },
+
+{
+          id: "SDD21",
+          title: "Prescription médicale chez un patient en situation de précarité",
+          intro: " Vous êtes médecin dans une PASS et vous recevez M. E, parlant français et venant d'arriver en France il y a 15 jours en situation irrégulière. Réalisez un interrogatoire général et ciblé sur la situation psychosociale du patient (sans examen clinique), prescrire des dépistages de 1e intention à réaliser et lui indiquer où il peut les pratique, expliquez à quelles assurances maladie il pourra prétendre en étant en situation d'irrégularité.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, conditions de logement / entourage / ressources financières / ressources alimentaires / assurance maladie / niveau d'éducation (3/6), pays d'origine / date d'arrivée en France / prévision de retour dans le pays / vaccins / contage tuberculeux (2/5), interroger sur son état psychologique.",
+            "- Sérologie VIH / VHB / VHC / radiographie du thorax, expliquer qu'il peut réaliser ces examens gratuitement dans centres d'examen de santé de la sécurité sociale / centre gratuit d'information de dépistage et de diagnostic (CeGIDD), centre de lutte antituberculeuse (CLAT), permanence d'accès aux soins de santé (PASS).",
+            "- Il faudra prétendre à une assurance maladie via dispositif de soins urgents et vitaux si son pronostic vital est engagé, expliquer qu'il pourra bénéficier d'une assistance psychologique gratuite en centre médico-psychologique (CMP).",
+            "Rappel sur les régimes de protection existant :",
+            "- PUMA : travailler en France ou y résider de manière stable et régulière.",
+            "- CSS : résider en France depuis plus de trois mois et de manière régulière, et ressources inférieures à un plafond annuel de référence.",
+            "- AME : étrangers en situation irrégulière résidant en France depuis au moins 3 mois de manière continue et avec des ressources inférieures à un plafond annuel de référence.",
+          ],
+
+          questionSet: [
+            { "id": "q_migrant_1", "patterns":["antécédents", "traitements", "toxiques", "fumez", "allergies", "animaux", "comportements sexuels à risque"], "answer":"Je n'ai pas d'antécédents, pas de traitements, pas d'allergies. J'ai des rapports sexuels qu'avec mon épouse. Je suis en contact avec des chiens présents là ou je vis. Je crois pas être vacciné."},
+            { "id": "q_migrant_2", "patterns":["logement", "entourage", "finances", "ressources financières", "ressources alimentaires", "assurance maladie", "éducation"], "answer":"Je vis dans un camp de migrant avec ma femme et mes 2 enfants. Je n'ai pas d'assurance maladie. On est nourris grâce à une association car on a peu d'argent." },
+            { "id": "q_migrant_3", "patterns":["pays d'origine", "date d'arrivée", "retour dans pays d'origine", "vaccins", "contage tuberculeux"], "answer":"On est arrivé du Mali il y a 15 jours. Je voudrais rester en France. Je n'ai pas connaissance de tuberculose dans mon entourage mais j'en sais rien." },
+            { "id": "q_migrant_4", "patterns":["état psychologique"], "answer":"Cette situation est difficile pour moi et ma famille, et j'aimerais bien oublier certaines choses que j'ai vues et vécues ..." },
+            { "id": "q_migrant_5", "patterns":["sérologie VIH"], "answer":"Ok." },
+            { "id": "q_migrant_6", "patterns":["sérologie VHB"], "answer":"D'accord." },
+            { "id": "q_migrant_7", "patterns":["sérologie VHC"], "answer":"D'accord." },
+            { "id": "q_migrant_8", "patterns":["radiographie du thorax", "radiographie thoracique", "radio du thorax", "radio thoracique"], "answer":"Ok pourquoi pas." },
+            { "id": "q_migrant_9", "patterns":["centres d'examen de santé de la sécurité sociale", "CeGIDD", "centre gratuit d'information de dépistage et de diagnostic", "CLAT", "centre de lutte antituberculeuse", "PASS", "permanence c'accès aux soins de santé"], "answer":"Merci je ne savais pas." },
+            { "id": "q_migrant_10", "patterns":["soins urgents et vitaux", "pronostic vital engagé"], "answer":"Ok ça va." },
+            { "id": "q_migrant_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_migrant_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_migrant_13", "patterns":["assistance psychologique gratuite", "CMP", "centre médicopsychologique", "centre médico-psychologique"], "answer":"Parfait, ça pourrait nous aider." }
+          ]
+        },
+
+{
+          id: "SDD22",
+          title: "Refus de traitement et de prise en charge recommandés",
+          intro: "Vous recevez dans votre cabinet de médecine générale une patiente de 52 ans pour suspicion d'angine. Elle n'a pas d'allergies. Elle est sous aspirine pour AVC ischémique récent. Elle consomme du tabac à hauteur de 10 cigarettes par jour depuis 30 ans. Le TDR se révèle positif, mais elle refuse la prise d'amoxicilline car elle craint les effets secondaires. Elle refuse également la prise de substitut nicotinique car elle pense que c'est mauvais pour la santé. Expliquez pourquoi il est importante de prendre le traitement antibiotique, expliquez le principe des substituts nicotiniques, répondez à la patiente qui s'interroge sur le fait de fumer en ayant déjà pris le substitut nicotinique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Expliquer que son angine est bactérienne et que le traitement permet d'éliminer cette bactérie, la prise d'antibiotique peut réduire la durée des symptômes, que la prise d'antibiotiques peut diminuer la fréquence et la durée de la contagiosité, la prise d'ATB permet de prévenir des complications graves locales et régionales, que ça prévient d'éventuelles complications graves à distance, les effets secondaire potentiels sont peu fréquents et non graves.",
+            "- Les substituts nicotiniques ne sont pas dangereux pour la santé, ils permettent d'éviter de ressentir le besoin de fumer / double ses chances de sevrage (1/2), entièrement pris en charge pas l'assurance maladie, que si malgré la prise en charge d'un substitut elle a envie de fumer elle peut prendre un substitut à action immédiate.",
+            "- Si elle fume avec un patch elle ne doit pas enlever le patch, la consommation d'une cigarette en plus du port d'un patch ne comporte pas de risque mais elle peut ressentir des effets de surdosage (tachycardie, céphalées, hoquet, nausée, gout amer, inflammation bouche, hypersécrétion salivaire, sécheresse buccale, cauchemars, douleur ou inconfort épigastrique 3/10), rassurer sur le fait que fumer ne veut pas dire échec mais que la dose de patch peut être insuffisante.",
+          ],
+
+          questionSet: [
+            { "id": "q_tabagisme_1", "patterns":["bactérie", "angine bactérienne"], "answer":"Ok je vois et pourquoi il faut prendre des antibiotiques, à quoi ça sert en réalité ?"},
+            { "id": "q_tabagisme_2", "patterns":["diminuer la durée des symptômes", "réduire la durée des symptômes"], "answer":"Ok je vois." },
+            { "id": "q_tabagisme_3", "patterns":["réduire la fréquence", "diminuer la fréquence", "réduire la durée de contagiosité", "diminuer la contagiosité"], "answer":"D'accord." },
+            { "id": "q_tabagisme_4", "patterns":["prévenir des complications locales", "complications locales", "complications régionales"], "answer":"Oui ok." },
+            { "id": "q_tabagisme_5", "patterns":["complications graves à distance"], "answer":"Ok je vois." },
+            { "id": "q_tabagisme_6", "patterns":["effets secondaires", "peu fréquents", "non graves"], "answer":"D'accord donc y a pas vraiment d'effets secondaires, mais il y a des substances cancérigènes la dedans non ?" },
+            { "id": "q_tabagisme_7", "patterns":["pas dangereux", "pas de substance dangereuses", "pas de substances cancérigènes"], "answer":"Ok je suis rassurée." },
+            { "id": "q_tabagisme_8", "patterns":["éviter de ressentir le besoin de fumer", "double les chances de sevrage"], "answer":"Ok c'est cool." },
+            { "id": "q_tabagisme_9", "patterns":["pris en charge", "100%"], "answer":"Ok tant mieux." },
+            { "id": "q_tabagisme_10", "patterns":["action immédiate"], "answer":"Ah ça c'est bien." },
+            { "id": "q_tabagisme_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai plusieurs soucis, d'abord on m'a dit de prendre de l'amoxicilline mais j'ai peur des effets secondaires puis j'ai pas bien compris pourquoi je devais prendre cet antibiotiques. Et aussi je fume et on m'a proposé des substituts mais je crois que c'est mauvais pour la santé donc j'aimerais bien votre avis."},
+            { "id": "q_tabagisme_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_tabagisme_13", "patterns":["pas enlever votre patch", "pas enlever le patch"], "answer":"Ok donc même si je fume je garde le patch, et ça va me faire des symptômes bizarres non ?" },
+            { "id": "q_tabagisme_14", "patterns":["surdosage", "tachycardie", "maux de tête", "céphalées", "hoquet", "nausées", "amer", "hypersécrétion salivaire", "inflammation", "cauchemars", "sécheresse buccale", "douleur épigastrique", "inconfort épigastrique"], "answer":"Ah bah oui je vois." },
+            { "id": "q_tabagisme_15", "patterns":["pas échec", "insuffisante"], "answer":"Ok je comprends." }
+          ]
+        },
+
+{
+          id: "SDD23",
+          title: "Situation de harcèlement",
+          intro: "Vous recevez en cabinet de médecine générale une patiente de 35 ans, employée dans une grande surface, se plaignant de harcèlement moral sur son lieu de travail. Elle souffre actuellement d'état dépressif caractérisé. Elle souhaite porter plainte et vous demande un certificat médical. Evaluez le risque suicidaire de votre patiente, expliquez ce que vous écrivez dans votre certificat médical.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Evaluer le risque suicidaire (idées suicidaires), rechercher d'autres facteurs de risque (ATCD personnels ou fam de TS ou suicide, ATCD personnels psychiatriques ou non, ATCD de maltraitance / décès prématuré / précarité / isolement / séparation ou perte récente / difficultés juridiques / humiliations / suicide d'un proche récent (>3). Evaluer les facteur protecteurs (résilience, soutien sociofamilial, enfants, croyances).",
+            "- Evaluer l'urgence suicidaire (scénario, délai de mise en oeuvre), évaluer la dangerosité suicidaire (létalité du moyen considéré, accessibilité du moyen considéré).",
+            "- Nom et prénom du médecin, date de rédaction du certificat, nom et prénom du patient, allégations du patient entre guillemets, mentionner la présence d'un état dépressif caractérisé, mentionné en conclusion établi à la demande de l'intéressé et remis en mains propre, signature et tampon."
+          ],
+
+          questionSet: [
+            { "id": "q_harcèlement_1", "patterns":["idées suicidaires"], "answer":"Oui depuis quelques jours je pense au suicide même si j'aimerai une autre solution..."},
+            { "id": "q_harcèlement_2", "patterns":["antécédents", "tentative de suicide", "suicide", "antécédents psychiatriques", "antécédents de maltraitance", "décès prématuré", "précarité", "isolement", "séparation récente", "perte récente", "difficultés juridiques", "humiliations"], "answer":"Justement mon médecin traitant m'a diagnostiqué un état dépressif caractérisé qu'on essaie de traiter par de la sertraline. Je n'ai pas d'autres soucis de santé, je n'ai jamais commis de tentative de suicide." },
+            { "id": "q_harcèlement_3", "patterns":["résilience", "soutien sociofamilial", "enfants", "croyances"], "answer":"Oui j'ai des enfants et un époux. Habituellement j'arrive à surmonter toutes les épreuves auxquelles je suis confronté même si je suis athée." },
+            { "id": "q_harcèlement_4", "patterns":["scénario", "délai", "urgence suicidaire"], "answer":"Je n'ai pas encore bien réfléchi à un moyen ou un lieu ou une date." },
+            { "id": "q_harcèlement_5", "patterns":["dangerosité", "létalité", "accessibilité du moyen", "accessible"], "answer":"Je ne sais pas encore quel moyen je pourrais utiliser si j'en arrivais là." },
+            { "id": "q_harcèlement_6", "patterns":["nom du médecin", "prénom du médecin"], "answer":"Validé." },
+            { "id": "q_harcèlement_7", "patterns":["date"], "answer":"Validé." },
+            { "id": "q_harcèlement_8", "patterns":["nom du patient", "prénom du patient"], "answer":"Validé." },
+            { "id": "q_harcèlement_9", "patterns":["allégations", "guillemets"], "answer":"Validé." },
+            { "id": "q_harcèlement_10", "patterns":["état dépressif caractérisé"], "answer":"Validé." },
+            { "id": "q_harcèlement_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Depuis plusieurs moi je suis victime d'harcèlement moral. Une des employés m'insulte, me rabaisse devant les cilents et a même partagé une photo de moi sur les réseaux sociaux ou elle se moque de moi. Je suis au bout..."},
+            { "id": "q_harcèlement_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_harcèlement_13", "patterns":["établi à la demande de l'intéressé", "remis en mains propres"], "answer":"Validé." },
+            { "id": "q_harcèlement_14", "patterns":["signature", "tampon"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD24",
+          title: "Situation de handicap",
+          intro: "Vous recevez en consultation de médecine générale un enfant de 7 ans en situation de handicap avec un taux d'incapacité supérieur à 80 % suite à un accident de la voie publique survenu récemment, accompagné par ses parents. Il nécessite la présence de ses parents de manière soutenue. Ils souhaitent faire ouvrir un dossier pour le handicap de leur fils et connaître les aides auxquelles ils peuvent prétendre. Expliquez simplement le rôle de la MDPH et comment bénéficier de son aide, expliquer les aides financières et sociales existantes, expliquer le principe du plan personnalisé de scolarisation et les différentes modalités de scolarisation possible.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Peuvent bénéficier de l'aide de la part de la MDPH, pour ça il faut remplir un dossier qui sera évalué par la CDAPH (commission des droits et de l'autonomie des personnes handicapées).",
+            "- Pourra bénéficier de l'exonération du TM et de la PEC des frais à 100% car il rentre dans le cadre d'une ALD, allocation d'éducation de l'enfant handicapé (AEEH), allocation journalière de présence parentale (AJPP) pendant 310j sur 3 ans et cumulable avec AEEH, carte invalidité ou carte mobilité inclusion, aides à domicile pris en charge par la sécurité sociale.",
+            "- Projet personnalisé de scolarisation sera mis en place, établi avec l'équipe éducative / de soin / enseignant référent de la MDPH, selon le handicap possibilité de scolarisation dans une école ordinaire, possibilité de scolarisation dans une classe adaptée, possibilité de scolarisation à distance par le CNED, possibilité de scolarisation en milieu spécialisé. Enfant pourra bénéficier sur accord de la CDAPH d'assistant de vie scolaire AVS ou accompagnant en élèves en situation de handicap AESH.",
+            "Rappel des aides qui dépendent de la MDPH : AEEH, PCH, carte invalidité, Istituts médico-éducatifs, Instituts Thérapeutiques Educatifs et Pédagogiques, Instituts d'Education Motrice, Institus Médico-PROfessionnels, SAAAIS / SSEFIS / SAFEP, SESSAD, PPS."
+          ],
+
+          questionSet: [
+            { "id": "q_handicap_1", "patterns":["MDPH", "maison départementale des personnes handicapées"], "answer":"Ok."},
+            { "id": "q_handicap_2", "patterns":["dossier", "évalué par la CDAPH", "commission des droits et de l'autonomie des personnes handicapées"], "answer":"Oui j'avais entendu parler de ce dossier." },
+            { "id": "q_handicap_3", "patterns":["exonération du ticket modération", "exonération du TM", "prise en charge à 100%", "PEC à 100%", "ALD"], "answer":"Ok ça c'est bien." },
+            { "id": "q_handicap_4", "patterns":["AEEH", "allocation d'éducation de l'enfant handicapé"], "answer":"Ok je ne connaissais pas." },
+            { "id": "q_handicap_5", "patterns":["allocation journalière de présence parentale", "AJPP", "310 jours sur 3 ans", "cumulable avec l'AEEH"], "answer":"Ah super." },
+            { "id": "q_handicap_6", "patterns":["carte d'invalidité", "carte mobilité inclusion"], "answer":"Ah oui pourquoi pas." },
+            { "id": "q_handicap_7", "patterns":["aides à domicile"], "answer":"D'accord je vois ça pourrait m'aider." },
+            { "id": "q_handicap_8", "patterns":["projet personnalisé de scolarisation", "PPS"], "answer":"Ok c'est bien ça." },
+            { "id": "q_handicap_9", "patterns":["équipe éducative", "équipe de soin", "enseignant référent"], "answer":"D'accord." },
+            { "id": "q_handicap_10", "patterns":["classe ordinaire", "classe normale"], "answer":"Ok." },
+            { "id": "q_handicap_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Depuis l'accident de mon fils on estime son taux d'incapacité à plus de 80%, du coup je voulais ouvrir un dossier pour son handicap et voir avec vous les aides auxquelles on pourrait prétendre..."},
+            { "id": "q_handicap_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_handicap_13", "patterns":["classe adaptée"], "answer":"Je vois." },
+            { "id": "q_handicap_14", "patterns":["à distance", "centre national d'enseignement à distance", "CNED"], "answer":"Ok." },
+            { "id": "q_handicap_15", "patterns":["milieu spécialisé"], "answer":"D'accord." },
+            { "id": "q_handicap_16", "patterns":["assistant de vie scolaire", "AVS", "accompagnant d'élèves en situation de handicap", "AESH"], "answer":"Super." }
+          ]
+        },
+
+{
+          id: "SDD25",
+          title: "Situation sanitaire exceptionnelle",
+          intro: "Vous souhaitez vous entraîner avec votre externe sur la démarche à suivre en cas de situation sanitaire exceptionnelle comme (à tout hasard) une attaque terroriste. Expliquez les grandes étapes à respecter en phase pré-hospitalière en cas de SSE avec présence de blessés, que pouvez vous dire à l'externe concernant l'algorithme START-ABC et l'algorithme MARCHE, expliquez la notion de damage control resuscitation et de damage control surgery.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Les soignants doivent rester à l'abri tant que la menace est présente, une fois écartée les victimes doivent être conduites à un point de regroupement,  les victimes doivent être triées pour distinguer les urgences absolues et relatives, les premiers soins sont délivrés sur place, le médecin du SAMU oriente les patients selon le tri effectué.",
+            "- Algorithme START-ABC : permet de différencier les urgences absolues et relatives, comprend l'évaluation de la possibilité de se lever / liberté des VAS / FR / FC / conscience (3/5).",
+            "- Algorithme MARCHE : traduit ordre de priorité des traitements à mettre en place, signifie Massive bleeding control / Airway / Respiration / Circulation / head et hypothermie / Evacuation (4/6).",
+            "- Le damage control resuscitation est du ressort de l'anesthésiste réanimateur, concerne la mise en place des ttt strictement nécessaires le + rapidement possible. La damage control chirurgie concerne la PEC chir des patients instables, la priorité est au contrôle du saignement le + rapidement possible, les gestes de réparation anatomiques seront effectués dans un second temps."
+
+          ],
+
+          questionSet: [
+            { "id": "q_terrorisme_1", "patterns":["rester à l'abri"], "answer":"Oui logiquement."},
+            { "id": "q_terrorisme_2", "patterns":["point de regroupement", "poste médical avancé"], "answer":"D'accord." },
+            { "id": "q_terrorisme_3", "patterns":["triées", "trier", "triés", "tri"], "answer":"Oui je vois ." },
+            { "id": "q_terrorisme_4", "patterns":["premiers soins"], "answer":"Oui je vois." },
+            { "id": "q_terrorisme_5", "patterns":["médecin du SAMU oriente", "oriente selon le tri", "oriente en fonction du tri"], "answer":"D'accord je vois." },
+            { "id": "q_terrorisme_6", "patterns":["urgences absolues et relatives", "urgences absolues", "urgences relatives", "urgences relatives et absolues"], "answer":"Oui bien sur." },
+            { "id": "q_terrorisme_7", "patterns":["se lever", "liberté des voies aériennes", "liberté des VAS", "fréquence respiratoire", "FR", "fréquence cardiaque", "FC", "conscience"], "answer":"Ok je vois." },
+            { "id": "q_terrorisme_8", "patterns":["priorité des traitements", "ordre de priorité des traitements"], "answer":"Ok." },
+            { "id": "q_terrorisme_9", "patterns":["massive bleeding control", "airway", "respiration", "circulation", "head", "hypothermie", "évacuation"], "answer":"ok d'accord." },
+            { "id": "q_terrorisme_10", "patterns":["anesthésiste", "réanimateur"], "answer":"Ok." },
+            { "id": "q_terrorisme_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_terrorisme_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_terrorisme_13", "patterns":["thérapeutiques strictement nécessaires", "traitements strictement nécessaires"], "answer":"Oui ok." },
+            { "id": "q_terrorisme_14", "patterns":["prise en charge chirurgicale"], "answer":"Ok je vois." },
+            { "id": "q_terrorisme_15", "patterns":["contrôle du saignement", "contrôle de l'hémorragie"], "answer":"D'accord." },
+            { "id": "q_terrorisme_16", "patterns":["gestes de réparation anatomique", "second temps"], "answer":"D'accord." }
+          ]
+        },
+
+{
+          id: "SDD26",
+          title: "Situation sociale précaire et isolement",
+          intro: "Vous recevez en consultation de PASS un patient de 45 ans en situation de précarité. Réalisez un interrogatoire général et orienté sur la situation du patient, expliquez les couvertures médicales auxquelles il a le droit, expliquez le principe du Revenu de Solidarité Active.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire général, conditions de logement / entourage / ressources financières (2/3), ressources alimentaires / assurance maladie / éducation (2/3), psychologie.",
+            "- Dire qu'il a la PUMA pour prendre en charge des frais de santé, qu'il doit travailler ou résider en France depuis plus de 3 mois et situation régulière. Expliquer la notion de CSS (PEC des frais de santé non remboursés par la PUMA, résider de manière stable en France depuis 3 mois, avoir des ressources < plafond annuel, pas de dépassement d'honoraire 2/4).",
+            "- Le RSA est un dispositif financier sous condition de ressources, il faut résider en France pour bénéficier du RSA et avoir plus de 25 ans ou moins de 25 ans et un enfant à charge, en contrepartie il doit s'inscrire dans un parcours d'insertion sociale ou professionnelle."
+          ],
+
+          questionSet: [
+            { "id": "q_RSA_1", "patterns":["profession", "toxiques", "fumez", "antécédents", "médicaments", "traitements", "allergies"], "answer":"Je n'ai pas d'antécédents, pas de traitements. Je fume du tabac et du cannabis quotidiennement mais je ne bois pas d'alcool. Je n'ai pas de rapports sexuels à risque."},
+            { "id": "q_RSA_2", "patterns":["logement", "entourage", "ressources financières"], "answer":"Je vis dans un studio, je suis divorcé avec un enfant dont je n'ai plus la garde. Je n'i plus trop de revenus..." },
+            { "id": "q_RSA_3", "patterns":["ressources alimentaires", "alimentation", "assurance maladie", "éducation"], "answer":"J'ai du mal à manger correctement et je prends surtout des plats préparés, ça coute moins cher. Je n'ai plus de mutuelle car je ne pouvais plus la payer. Tout ça m'arrive alors que j'ai démissioné de mon emploi que j'ai eu après mon master et je n'ai donc pas accès au chomage." },
+            { "id": "q_RSA_4", "patterns":["psychologique", "psychologiquement", "comment ça va", "idées suicidaires"], "answer":"Je suis à bout clairement, mais je n'ai pas d'idées suicidaires pour autant." },
+            { "id": "q_RSA_5", "patterns":["PUMA", "tout au long de la vie"], "answer":"Ok je ne savais pas." },
+            { "id": "q_RSA_6", "patterns":["travailler en France depuis plus de 3 mois", "résider en France depuis plus de 3 mois", "régulière"], "answer":"Oui tout va bien je sui sné en France et j'y ai toujours vécu." },
+            { "id": "q_RSA_7", "patterns":["CSS", "complémentaire santé solidaire", "prise en charge des frais non remboursés par la PUMA", "résider en France de façon stable", "ressources inférieures à un plafond", "pas de dépassement d'honoraire"], "answer":"Ok je vois." },
+            { "id": "q_RSA_8", "patterns":["RSA", "sous condition de ressources"], "answer":"D'accord." },
+            { "id": "q_RSA_9", "patterns":["pour bénéficier du RSA il faut résider en France"], "answer":"Oui pas de soucis." },
+            { "id": "q_RSA_10", "patterns":["parcours d'insertion sociale", "insertion professionnelle"], "answer":"Ok ça va." },
+            { "id": "q_RSA_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir puisque j'ai quelques soucis en ce moment... plutôt d'ordre social..."},
+            { "id": "q_RSA_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." }
+          ]
+        },
+
+{
+          id: "SDD27",
+          title: "Suspicion d'un EI d'un médicament ou d'un soin",
+          intro: "Vous recevez aux urgences une patiente de 25 ans, hospitalisée pour un signe de Nikolsky positif avec des décollements en vaste lambeau. La surface cutanée concernée est d'environs 25%. Elle présente des érosions de la muqueuse buccale et n'a actuellement pas de signes de défaillance d'organe. Elle est fébrile et asthénique. Citez ce que vous recherchez particulièrement à l'interrogatoire, annoncez votre principale hypothèse diagnostique, expliquez à l'évaluateur les critères d'imputabilité permettant de déterminer l'origine de la symptomatologie et expliquez la démarche effectuée. L'origine est confirmée, expliquez la mesure à suivre pour prévenir une récidive de cette symptomatologie, expliquez la notion d'aléa thérapeutique et la possibilité d'une indemnisation sachant que son taux d'atteinte permanente est de 35%.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher la prise d'un nouveau traitement. Evoquer le sd de Lyelle ou nécrolyse épidermique toxique. Expliquer que l'imputabilité peut être argumentée à l'aide de critères chronologiques et sémiologiques et bibliographique. Déclarer l'effet indésirable suspecté au centre régional de pharmacovigilance.",
+            "- Contre indiquer la prise de lamotrigine à vie. Expliquer qu'il s'agit d'un aléa thérapeutique c'est à dire un effet indésirable non prévisible malgré l'utilisation normale du traitement, qu'une indemnisation est possible par le biais de la Commission Régionale de Conciliation et d'Indemnisation. Une expertise médicale est nécessaire, l'indemnisation sera versée par l'ONIAM selon l'expertise."
+          ],
+
+          questionSet: [
+            { "id": "q_Lyell_1", "patterns":["nouveau traitement", "nouveau médicament"], "answer":"Oui je prends de la Lamotrigine depuis 3 semaines."},
+            { "id": "q_Lyell_2", "patterns":["syndrome de Lyell", "nécrolyse épidermique toxique"], "answer":"Validé." },
+            { "id": "q_Lyell_3", "patterns":["critères chronologiques"], "answer":"Validé." },
+            { "id": "q_Lyell_4", "patterns":["critères sémiologiques"], "answer":"Validé." },
+            { "id": "q_Lyell_5", "patterns":["critères bibliographiques"], "answer":"Validé." },
+            { "id": "q_Lyell_6", "patterns":["centre régional de pharmacovigilance", "CRPV"], "answer":"D'accord je vois." },
+            { "id": "q_Lyell_7", "patterns":["contre-indication à vie", "contre indiquée à vie", "contre indication à vie"], "answer":"Oui de toute façon je ne veux plus en prendre." },
+            { "id": "q_Lyell_8", "patterns":["non prévisible", "effet indésirable médicamenteux"], "answer":"Ok je vois, on pouvait pas s'en douter quoi." },
+            { "id": "q_Lyell_9", "patterns":["commission régionale de conciliation et d'indemnisation", "CRCI", "indemnisation"], "answer":"Ok." },
+            { "id": "q_Lyell_10", "patterns":["expertise médicale"], "answer":"Oui sans problème on pourra faire une expertise médicale." },
+            { "id": "q_Lyell_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis seule avec mon enfant dans mon studio, on m'a diagnostiqué des troubles bipolaires récemment. J'ai la peau qui parait toute brûlée alors que je n'ai rien appliqué sur ma peau et je n'ai pas pris de coup de soleil."},
+            { "id": "q_Lyell_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_Lyell_13", "patterns":["ONIAM", "office national d'indemnisation des accidents médicaux"], "answer":"ok parfait." }
+          ]
+        },
+
+{
+          id: "SDD28",
+          title: "Information et suivi d'un patient en chirurgie ambulatoire",
+          intro: "Vous êtes urologue. Vous suivez un patient de 60 ans pour suspicion de cancer de la prostate. Vous devez lui expliquer les modalités de réalisation des biopsies de prostate et leur objectif. Expliquez l'objectif des biopsies, les modalités de réalisation du geste et les risques et conséquences potentielles du geste.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Les biopsies permettent de prélever une petite partie de la prostate sur différentes zones pour chercher un cancer au microscope, les biopsies permettent de renseigner sur le stade d'évolution potentiel du cancer pour adapter la PEC.",
+            "- Une IRM de la prostate sera réalisée avant les biopsies, elles seront réalisée via une aiguille introduite dans le rectum, le geste sera réalisé sous AL, orienté par une sonde échographique, il devra prendre un ATB avant le geste pour limiter le risque d'infection, un lavement rectal sera à faire avant le geste pour limiter le risque infectieux.",
+            "- Possibilité de : saignement par l'anus, saignement dans les urines, sang dans le sperme, inconfort au niveau de la zone biopsiée, incapacité à vider totalement ou partiellement la vessie, infection urinaire.",
+            "Un ECBU n'est pas nécessaire avant le geste."
+          ],
+
+          questionSet: [
+            { "id": "q_biopsiesprostate_1", "patterns":["prélever une partie de la prostate", "différentes zones", "cancer"], "answer":"Ok je vois."},
+            { "id": "q_biopsiesprostate_2", "patterns":["stade", "évolution", "adapter la prise en charge"], "answer":"Ok je comprends." },
+            { "id": "q_biopsiesprostate_3", "patterns":["IRM", "préciser les zones à biopsier"], "answer":"D'accord, je ne suis pas claustrophobe tout va bien ahah." },
+            { "id": "q_biopsiesprostate_4", "patterns":["aiguille", "le rectum"], "answer":"Mmmm ok." },
+            { "id": "q_biopsiesprostate_5", "patterns":["anesthésie locale"], "answer":"Ah tant mieux j'avais peur de souffrir..." },
+            { "id": "q_biopsiesprostate_6", "patterns":["sonde échographique", "échoguidée", "écho guidée", "échographie"], "answer":"Ok." },
+            { "id": "q_biopsiesprostate_7", "patterns":["antibiotique"], "answer":"D'accord pas de soucis." },
+            { "id": "q_biopsiesprostate_8", "patterns":["lavement rectal"], "answer":"Ok pourquoi pas." },
+            { "id": "q_biopsiesprostate_9", "patterns":["saignement par l'anus", "saignements par l'anus"], "answer":"Oui d'accord." },
+            { "id": "q_biopsiesprostate_10", "patterns":["saignement dans les urines", "saignements dans les urines", "hématurie"], "answer":"Ok." },
+            { "id": "q_biopsiesprostate_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir au sujet des biopsies prostatiques que je dois faire."},
+            { "id": "q_biopsiesprostate_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_biopsiesprostate_13", "patterns":["sang dans le sperme"], "answer":"Ok...." },
+            { "id": "q_biopsiesprostate_14", "patterns":["inconfort"], "answer":"Ok logique." },
+            { "id": "q_biopsiesprostate_15", "patterns":["difficultés à uriner", "dysurie", "vider totalement la vessie", "vider votre vessie"], "answer":"D'accord." },
+            { "id": "q_biopsiesprostate_16", "patterns":["infection urinaire", "IU"], "answer":"Je ne savais pas mais d'accord." }
+          ]
+        }
+      ]
+    },
   ],
   botBehavior: { fallbackAnswer: "Je ne sais pas." }
 };
