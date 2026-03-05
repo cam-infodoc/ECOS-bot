@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MédiBot</title>
+<title>MédiBot+</title>
 <style>
 body {
   font-family: system-ui;
@@ -8618,6 +8618,788 @@ const data = {
             { "id": "q_biopsiesprostate_14", "patterns":["inconfort"], "answer":"Ok logique." },
             { "id": "q_biopsiesprostate_15", "patterns":["difficultés à uriner", "dysurie", "vider totalement la vessie", "vider votre vessie"], "answer":"D'accord." },
             { "id": "q_biopsiesprostate_16", "patterns":["infection urinaire", "IU"], "answer":"Je ne savais pas mais d'accord." }
+          ]
+        }
+      ]
+    },
+    
+{
+      id: "Ophtalmo-ORL-CMF",
+      title: "Ophtalmologie, ORL et Chirurgie maxillo-faciale",
+      chapters: [
+        {
+          id: "SDD1",
+          title: "Odynophagie / dysphagie",
+          intro: `Vous recevez en consultation d'ORL un patient de 78 ans pour dysphagie avec odynophagie et altération de l'état général. C'est un patient aux antécédents d'insuffisance rénale chronique de stade IV sur néphroangiosclérose bénigne, de cardiopathie ischémique triple stentée, de BPCO GOLD3 et d'intoxication éthylo-tabagique chronique évaluée à 3 verres de rosé par repas et 94 paquets-année (2 paquets/j depuis 47 ans). Il rapporte une perte de poids de 18 kg en 6 mois (poids actuel de 62 kg contre un poids de forme à 80 kg) sans réduction des apports alimentaires; accompagnée d'une asthénie franche ne lui permettant plus de réaliser sa marche hebdomadaire. Vous constatez à l'examen endobuccal la lésion suivante. C'est une lésion ulcérée et bourgeonnante reposant sur une base indurée, saignant au contact, avec trouble de motilité linguale, gêne buccale et glossodynie. Expliquez qu'il s'agit d'une probable lésion cancéreuse et qu'il faut réaliser un prélèvement local (vous n'avez aucun examen clinique ni prélèvement à réaliser, c'est une consultation d'annonce). Expliquez la programmation, le déroulé et l'intérêt de la panendoscopie qu'il faudra réaliser dans le bilan de cette lésion linguale. <img src= "cancerlangue.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Sécuriser les lieux, alerter les secours (15, 18, 112 1/3), secourir le patient en suivant les ordres des secours. Demander le nombre de blessés / circonstance de l'accident (1/2), évaluer les blessés avec la méthode ABCDE (airway, breathing, circulation, disability (neuro), exposure).",
+            "- PEC nécessaire pour arrêter le saignement, monitorage continu, poser 2 VVP, bilan de base (dextro, hémocue, lactatémie), oxygénothérapie ou IOT, remplissage vasculaire et vasopresseur si besoin, immobilisation, antalgique si besoin, nettoyer les plaies / désinfecter / pansements, lutter contre l'hypothermie."
+          ],
+
+          questionSet: [
+            { "id": "q_cancerlangue_1", "patterns":["probablement cancéreuse", "cancéreuse", "probablement maligne"], "answer":"Oh quelle mauvaise nouvelle… Après vu la lésion je m'y attendais un peu malgré tout… A quoi ça peut être du ?"},
+            { "id": "q_cancerlangue_2", "patterns":["intoxication tabagique", "tabac", "intoxication éthylique", "alcool"], "answer":"C'est vrai que je bois trois verres de rosé par repas et que je fume 2 paquets par jours depuis 47 ans... J'aurais du m'en douter. Et qu'est-ce qu'on en fait ?" },
+            { "id": "q_cancerlangue_3", "patterns":["prélèvement", "anesthésie locale", "pendant la consultation"], "answer":"Ok je suis d'accord." },
+            { "id": "q_cancerlangue_4", "patterns":["prélèvement local"], "answer":"Oui je vois." },
+            { "id": "q_cancerlangue_5", "patterns":["bonne compréhension", "avez compris", "reformuler", "répéter", "que je répète", "explique", "explications"], "answer":"Oui j'ai compris que c'était surement une lésion cancéreuse et qu'on devait faire un prélèvement." },
+            { "id": "q_cancerlangue_6", "patterns":["voies aériennes supérieures", "voies digestives", "cavité buccale", "trachée", "œsophage", "pharynx", "larynx", "prélèvements possibles"], "answer":"Ok je vois." },
+            { "id": "q_cancerlangue_7", "patterns":["rapidement"], "answer":"Le plus vite possible c'est le mieux." },
+            { "id": "q_cancerlangue_8", "patterns":["anesthésie générale"], "answer":"D'accord." },
+            { "id": "q_cancerlangue_9", "patterns":["à jeun"], "answer":"Je vois." },
+            { "id": "q_cancerlangue_10", "patterns":["hospitalisé", "hospitalisation", "quelques jours"], "answer":" Oui évidemment." },
+            { "id": "q_cancerlangue_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir pour des soucis à déglutir avec des douleurs. Aussi j'ai perdu 18kg en 6 mois sans manger moins pour autant. Je voulais votre avis sur la lésion."},
+            { "id": "q_cancerlangue_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur vous êtes au top." },
+            { "id": "q_cancerlangue_13", "patterns":["anesthésiste", "confirmation pré-chirurgicale","consultation pré-opératoire"], "answer":"Oui faut pas oublier ça." }
+          ]
+        },
+
+        {
+          id: "SDD2",
+          title: "Troubles de déglutition ou fausse-route",
+          intro: "Vous êtes interne de garde aux urgences et prenez en charge une patiente de 65 ans pour dyspnée fébrile ayant comme principal antécédent une sclérose latérale amyotrophique compliquée de troubles de la déglutition. Elle n'a pas d'allergie connue. La dyspnée est apparue la veille et se majore progressivement. Elle est associée à une toux fébrile avec expectorations purulentes. La patiente rapporte un épisode de fausse route avant-hier en fin de soirée. Effectuer un examen clinique ciblé et recherchez des signes de gravité respiratoire (ne cherchez pas des éléments sémiologiques liés à la SLA), suspectez un diagnostic et expliquez comment le confirmer, expliquez ce que vous voyez sur l'examen prescrit, expliquez en quelques mots ce qu'est la SLA, expliquez en quoi la SLA entraine des problèmes pour avaler les boissons et les aliments, expliquez le lien entre problèmes de déglutition et les problèmes respiratoires.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher les constantes, recherchez les signes de lutte respiratoires (polypnée, tirage, expiration abdominale active, battement des ailes du nez, stridor 3/5), signes de faillite respiratoire (cyanose, bradypnée, difficulté pour parler, toux inefficace, respiration paradoxale, hypercapnie 3/6), examen pulmonaire à la recherche d'un foyer (diminution MV, augmentation VV, souffle tubaire, crépitants localisés 4/4).",
+            "- Diagnostiquer une pneumopathie infectieuse d'inhalation ou pneumopathie d'inhalation lobaire, faire une radiographie thoracique de face.",
+            "- Analyser la radio : opacité ou condensation systématisée en regard du lobe inférieur du poumon droit affirmant le diagnostic d'infection pulmonaire. Explication SLA : maladie neurodégénérative entrainant un déficit moteur pur. Lien SLA / déglutition : certains neurones contrôlant les muscles de la déglutition sont atteints et entraine une déglutition inefficace. Lien troubles déglutition et pneumonie : fausses routes entrainent la pénétration dans les voies aériennes du contenu gastrique ou d'une autre substance étrangère qui produit une obstruction et/ou inflammation pulmonaire.",
+            "Devant une dysphagie il faut toujours écarter une origine tumorale : TOUTE DYSPHAGIE EST LESIONNELLE JUSQU'A PREUVE DU CONTRAIRE. Une dysphagie progressive débutant avec les aliments solides, conduisant par la suite à une alimentation mixée ou liquide puis à une aphagie avec stase salivaire est évocatrice d'une obstruction oesophagienne (en particulier néoplasique).",
+          ],
+
+          questionSet: [
+            { "id": "q_pneumonieSLA_1", "patterns":["constantes", "paramètres vitaux"], "answer":"Température 38,9°C. TA 124/66 mmHg. FC 98/mn. FR 14/mn. Saturation 95% en AA."},
+            { "id": "q_pneumonieSLA_2", "patterns":["signes de lutte", "polypnée", "tirage" "expiration abdominale active", "battement des ailes du nez", "stridor"], "answer":"Pas de signes de lutte respiratoire." },
+            { "id": "q_pneumonieSLA_3", "patterns":["signes de faillite", "cyanose", "bradypnée", "toux", "difficulté à parler", "respiration abdominale paradoxale", "hypercapnie", "sueurs", "astérixis"], "answer":"Pas de signes de faillite respiratoire." },
+            { "id": "q_pneumonieSLA_4", "patterns":["foyer de condensation", "diminution du murmure vésiculaire", "augmentation des vibrations vocales", "souffle tubaire", "crépitants", "crépitants localisés"], "answer":"Présence d'un foyer systématisé de condensation alvéolaire au niveau inférieur du poumon droit associant : diminution du MV, augmentation des VV, souffle tubaire et crépitants localisés inspiratoires." },
+            { "id": "q_pneumonieSLA_5", "patterns":["pneumopathie d'inhalation", "pneumonie d'inhalation", "inférieure droite"], "answer":"Ok je vois." },
+            { "id": "q_pneumonieSLA_6", "patterns":["radiographie thoracique", "radio thoracique", "radiographie du thorax", "radio du thorax", "de face"], "answer":`Voici la radiographie demandée : <img src= "pneumonieSLA.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_pneumonieSLA_7", "patterns":["opacité systématisée", "lobe inférieur droit"], "answer":"Validé." },
+            { "id": "q_pneumonieSLA_8", "patterns":["déficit moteur pur", "dégénérescence progressive des neurones des muscles striés"], "answer":"Ok, et comment ma SLA peut elle me faire avoir des fausses routes ?" },
+            { "id": "q_pneumonieSLA_9", "patterns":["muscles permettant de déglutir sont atteints", "déglutition inefficace"], "answer":"D'accord. Et comment les fausses routes peuvent faire des pneumonies ?" },
+            { "id": "q_pneumonieSLA_10", "patterns":["obstruction", "inflammation pulmonaire", "substance étranger dans les voies aériennes"], "answer":"Pourquoi pas." },
+            { "id": "q_pneumonieSLA_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai du mal à respirer depuis la veille et s'est de pire en pire. En plus je tousse, je crache sale et je crois avoir de la fièvre. J'ai fait une fausse route avant-hier donc bon je sais pas si c'est lié mais voilà ..."},
+            { "id": "q_pneumonieSLA_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci beaucoup Docteur." }
+          ]
+        },
+
+        {
+          id: "SDD3",
+          title: "Anomale de la vision",
+          intro: "Vous prenez en charge un homme de 78 ans,admis aux urgences ophtalmologiques après apparition brutale d'une baisse d'acuité visuelle de l'œil gauche. Les antécédents du patient sont marqués par une hypertension artérielle traitée par RAMIPRIL et HYDROCHLOROTIAZIDE, un glaucome à angle ouvert traité par BISOPROLOL collyre et un diabète de type II traité par METFORMINE. À l'examen clinique, l'œil est indolore et n'est pas rouge. Le reste de l'examen clinique est sans particularité. La réfraction du patient est la suivante : - À gauche : décompte des doigts à 1 mètre, -2,5 (-0,5) 80° Add +3 - À droite : 10/10 Parinaud 2/2, -2 (-1) 40° Add +3. Analysez la réfraction de ce patient et citez les verres qui pourraient être utilisés pour traiter son trouble de la réfraction, demandez un fond d'oeil et posez un diagnostic, citez les examens paracliniques que vous demandez pour évaluer le pronostic visuel de votre patient et effectuer son bilan étiologique, expliquez les complications associées à cette pathologie. Votre patient se présente aux urgences 3 mois plus tard pour oeil rouge et douloureux, demandez la photo faite aux urgences, évoquez un diagnostic en priorité et citez le traitement à mettre en place rapidement.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Analyse réfraction : myopie + astigmatisme + presbytie. Proposer des verres cylindriques concaves. Décrire le fond d'oeil (>3/4) : oedème papillaire, nodules cotonneux, veines tortueuses et dilatées, hémorragies en tâche et flammèche. Diagnostiquer une occlusion de la veine centrale de la rétine de l'oeil gauche.",
+            "- Demander : angiographie à la fluorescéine, OCT maculaire, holter ECG sur 24h, bilan biologique (NFS, VS, CRP, GàJ, bilan lipidique 3/5). Photo des urgences : oedème maculaire, néovascularisation rétinienne ou rubéose irienne, néovascularisation pré rétinienne ou pré papillaire. Poser le diagnostic de glaucome néovasculaire, et proposer une photocoagulation panrétinienne.",
+            "Rappel sur OVCR : ",
+            "- Fond oeil : Oedème papillaire, Veines tortueuses et dilatées, nodules Cotonneux, hémoRragies en flammèches et en tâche.",
+            "- Paraclinique systématique : angiographie fluorescéine, OCT maculaire, +/- angio-OCT.",
+            "- Bilan étiologique : holter tensionnel 24h, bilan sanguin.",
+            "- Tonomètre pour rechercher une hypertonie oculaire.",
+            "Rappel sur comment lire une formule de réfraction exemple = OG : +2,50 (-1,00) 80° Add +3,00.",
+            "- OG : oeil gauche.",
+            "- +2,50 : si positif = hypermétropie, si négatif = myopie.",
+            "- (-1,00) 80° : astigmatisme suivi de l'axe en degré.",
+            "- Add + chiffre : correction d'une presbytie."
+          ],
+
+          questionSet: [
+            { "id": "q_OVCR_1", "patterns":["myopie", "astigmatisme", "presbytie"], "answer":"Oui c'est ce que je me disais mais j'hésitais avec le scanner. Mais je retiens donc IRM. Et niveau séquences on fait quoi ?"},
+            { "id": "q_OVCR_2", "patterns":["verres cylindriques concaves", "verres concaves"], "answer":"Ok une séquence diffusion. Et elle nous permet de voir quoi s'il y a un AVC ?" },
+            { "id": "q_OVCR_3", "patterns":["œdème papillaire", "nodules cotonneux", "veines tortueuses", "dilatées", "hémorragies en tâche", "hémorragies en flammèche"], "answer":"Ok je vois." },
+            { "id": "q_OVCR_4", "patterns":["occlusion de la veine centrale de la rétine de l'oeil gauche", "OVCR de l'oeil gauche", "OVCR", "occlusion de la veine centrale de la rétine"], "answer":"Une séquence T2*, je note. Et on peut voir quoi avec cette séquence ?" },
+            { "id": "q_OVCR_5", "patterns":["angiographie à la fluorescéine"], "answer":"Ok super. " },
+            { "id": "q_OVCR_6", "patterns":["OCT maculaire"], "answer":"Ok FLAIR je vois. Et qu'est-ce qu'on voit ?" },
+            { "id": "q_OVCR_7", "patterns":["holter ECG", "holter""], "answer":"Entendu." },
+            { "id": "q_OVCR_8", "patterns":["bilan biologique", "NFS", "VS", "CRP", "GàJ", "glycémie à jeun", "bilan lipidique"], "answer":"Ok je connaissais pas celle là. Et on voit quoi ?" },
+            { "id": "q_OVCR_9", "patterns":["œdème maculaire"], "answer":"Ok je vois." },
+            { "id": "q_OVCR_10", "patterns":["néovascularisation rétinienne", "rubéose irienne"], "answer":"D'accord donc ça ce sont les contre-indications. Notre patient n'en a donc pas." },
+            { "id": "q_OVCR_11", "patterns":["bonjour"], "answer":"Bonjour Docteur."},
+            { "id": "q_OVCR_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_OVCR_13", "patterns":["néovascularisation pré-rétinienne", "néovascularisation pré rétinienne", "pré papillaire", "pré-papillaire"], "answer":"Ok." },
+            { "id": "q_OVCR_14", "patterns":["glaucome néovasculaire"], "answer":"Oui tout à fait." },
+            { "id": "q_OVCR_15", "patterns":["photocoagulation", "photocoagulation panrétinienne"], "answer":"Ok donc on est bien face à un AVC du territoire sylvien profond droit !" },
+            { "id": "q_OVCR_16", "patterns":["fond d'oeil", "FO"], "answer":`<img src= "fondoeilovcr.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_OVCR_17", "patterns":["photo des urgences", "urgences"], "answer":`<img src= "glaucomenéovas.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`},
+          ]
+        },
+
+{
+          id: "SDD4",
+          title: "Anomalie palpébrale",
+          intro: "Une patiente de 18 ans, sans antécédent notable, vient dans votre cabinet de médecine générale car elle ressent « une boule sur sa paupière ». Interrogez la patiente sur cette tuméfaction, évoquez des diagnostics possibles et comment les différencier cliniquement, demandez une photographie de l'oeil et posez un diagnostic final, proposez une prise en charge, répondez aux questions de votre patiente.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Interrogatoire (4/6) : durée d'évolution, brutal / progressif, localisation, douleur, BAV associées, tb de l'occlusion palpébrale.",
+            "- Diagnostics de masses palpébrales douloureuses : chalazion, orgelet. Orgelet = pathologie infectieuse ou folliculite centrée sur un cil. Chalazion = pathologie inflammatoire de la glande de Meibomius sans communication avec le bord libre.",
+            "- Poser le diagnostic de chalazion, proposez une pommade corticoïde locale et massage à l'eau chaude. Ce n'est pas contagieux, on peut l'inciser et le curer sous AL, pas d'antibiotiques car le chalazion est inflammatoire et pas infectieux."
+
+          ],
+
+          questionSet: [
+            { "id": "q_chalazion_1", "patterns":["durée", "depuis quand", "brutal", "progressif", "d'un coup", "où", "localiser", "localisé", "localisation", "douleur", "mal", "baisse d'acuité visuelle", "voyez moins bien", "l'occlusion de la paupière", "l'occlusion palpébrale"], "answer":"Je suis gênée depuis plusieurs jours par cette boule sur ma paupière supérieure droite. C'est plutôt douloureux. Je vois tout aussi bien et ma paupière se ferme correctement par contre."},
+            { "id": "q_chalazion_2", "patterns":["orgelet"], "answer":"Ok je vois." },
+            { "id": "q_chalazion_3", "patterns":["pathologie infectieuse", "centré sur un cil", "centré sur le cil"], "answer":"Mmm je comprends." },
+            { "id": "q_chalazion_4", "patterns":["pathologie inflammatoire", "glande de Meibomius", "granulome inflammatoire", "sans communication avec le bord libre"], "answer":"Oui d'accord." },
+            { "id": "q_chalazion_5", "patterns":["chalazion"], "answer":"Ok je vois." },
+            { "id": "q_chalazion_6", "patterns":["pommade corticoïde", "corticothérapie locale", "corticoïdes en local"], "answer":"Ok je vois et imaginons que cette crème marche pas comment on pourra faire ?" },
+            { "id": "q_chalazion_7", "patterns":["incision", "curage", "anesthésie locale", "AL"], "answer":"Ok, et je ne dois pas prendre d'antibiotiques alors ?" },
+            { "id": "q_chalazion_8", "patterns":["pas d'antibiotiques"], "answer":"Oui bien sûr." },
+            { "id": "q_chalazion_9", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai cette boule sur l'oeil droit là..."},
+            { "id": "q_chalazion_10", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"C'est tout bon, merci Docteur." },
+            { "id": "q_chalazion_11", "patterns":["photographie de l'oeil", "photo", "photographie"], "answer":`<img src= "chalazion.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_chalazion_12", "patterns":["contagieux", "contagieuse", "contagion"], "answer":"Ok j'en suis rassurée." }
+          ]
+        },
+
+{
+          id: "SDD5",
+          title: "Baisse de l'audition, surdité",
+          intro: "Vous êtes en cabinet de médecine générale et prenez en charge un patient de 63 ans pour baisse de l'audition unilatérale droite. C'est un patient maghrébin habitant en France depuis plusieurs dizaines d'années, ingénieur agronome, que vous suivez pour un diabète de type II sous METFORMINE et un asthme bien contrôlé sous corticostéroïdes inhalés à faible dose. Il n'a pas d'allergie connue. On note une intoxication tabagique active évaluée à 42 paquets-année. Il vous relate une baisse de l'audition de l'oreille droite partielle apparue progressivement depuis 2 mois, sans tendance à la guérison spontanée. Il n'y a pas de facteur déclenchant ni positionnel (en particulier pas de notion de traumatisme, ni d'introduction iatrogène ototoxique). En revanche, l'intelligibilité est souvent améliorée dans le bruit lors de conversations de groupe et au téléphone. Il vous rapporte également une sensation d'oreille pleine avec autophonie. Effectuez un examen ciblé, identifiez le type d'hypoacousie et à quoi est elle due, éliminez un diagnostic et expliquez comment vous pouvez le confirmer en 1e intention. Vous remettez au patient une ordonnance afin de consulter un de vos confrères ORL et le laissez partir, appelez votre confrère afin de lui présenter le cas de votre patient et lui faire part de votre suspicion diagnostique.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Réaliser un test de Rinne, un test de Weber, un examen otoscopique bilatéral. Décrire l'otoscopie droite : tympan mat, ambré, parcouru de stries vasculaires, épanchement rétro tympanique, rétraction tympanique (3/5).",
+            "- Surdité de transmission droite, surdité séromuqueuse droite. Evoquer un cancer du cavum ou nasopharynx obstruant la trompe d'Eustache. Proposer une nasofibroscopie avec biopsies guidées en cas de lésion visible au niveau du pharynx.",
+            "- Appel au confrère : se présenter, résumer l'anamnèse et le terrain du patient (63 ans, fumeur, ATCD asthme et diabète, hypoacousie oreille droite progressive depuis 2 mois), résumer l'examen clinique (surdité transmission droite avec otite séromuqueuse associée), émettre son hypothèse et proposer une PEC (suspicion cancer cavum, nasofibroscopie)."
+          ],
+
+          questionSet: [
+            { "id": "q_cancercavum_1", "patterns":["test de Rinne", "devant le pavillon de l'oreille puis sur la mastoïde"], "answer":"Test de Rinne positif à gauche et négatif à droite."},
+            { "id": "q_cancercavum_2", "patterns":["test de Weber", "diapason sur le crâne"], "answer":"Test de Weber latéralisé à l'oreille droite." },
+            { "id": "q_cancercavum_3", "patterns":["examen otoscopique"], "answer":`Otoscopie gauche normale. Voici l'otoscopie droite : <img src= "otoscopiecancercavum.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_cancercavum_4", "patterns":["tympan mat", "mat", "ambré", "stries vasculaires", "épanchement rétro tympanique"], "answer":"Validé." },
+            { "id": "q_cancercavum_5", "patterns":["surdité de transmission"], "answer":"Validé." },
+            { "id": "q_cancercavum_6", "patterns":["otite séromuqueuse droite"], "answer":"Validé." },
+            { "id": "q_cancercavum_7", "patterns":["cancer du cavum", "cancer du nasopharynx"], "answer":"Validé." },
+            { "id": "q_cancercavum_8", "patterns":["nasofibroscopie"], "answer":"Validé." },
+            { "id": "q_cancercavum_9", "patterns":["Bonjour je suis"], "answer":"Validé." },
+            { "id": "q_cancercavum_10", "patterns":["63 ans", "fumeur", "asthme", "diabète", "hypoacousie de l'oreille droite", "progressivement", "progressive", "depuis 2 mois"], "answer":"Validé." },
+            { "id": "q_cancercavum_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens vous voir car j'entends moins bien depuis 2 mois et ça ne va pas mieux. Je n'ai pas de facteur déclenchant, et j'ai surtout l'impression que ça va mieux dans le bruit. Puis j'ai l'impression d'avoir l'oreille pleine aussi, je m'entends parler fort tout ça."},
+            { "id": "q_cancercavum_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"C'est bon, merci Docteur." },
+            { "id": "q_cancercavum_13", "patterns":["surdité de transmission droite avec otite séromuqueuse"], "answer":"Validé." }
+          ]
+        },
+
+{
+          id: "SDD6",
+          title: "Sensation de brûlure oculaire",
+          intro: `Un homme de 34 ans vient vous voir aux urgences ophtalmologiques. Il travaille dans la fabrication de solvants industriels, et a reçu du solvant dans l'œil gauche. Donnez vo(tre)s premier(s) réflexe(s) thérapeutique(s) et expliquez en détail votre prise en charge, citez la symptomatologie clinique que vous pouvez retrouver chez ce patient ayant une brûlure oculaire et détaillez votre examen clinique, en regard de la photographie utilisez une classification, annoncez au patient que son pronostic visuel est sombre. <img src= "lyme.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Lavage oculaire, caractéristiques du lavage oculaire (collyre anesthésiant, solution isotonique ou hypertonique ou sérum physiologique, abondant, pendant 15-30mn 2/4). Collyre corticoïde, collyre cicatrisant.",
+            "- Oeil rouge, larmoiement, photophobie, baisse de l'acuité visuelle. Lampe à fente : kératite ponctuée superficielle / œdème cornéen / ulcération / ischémie du limbe / nécrose (2/5). Classification de Roper-Hall. Pronostic visuel compromis : perte totale de l'acuité visuelle de l'oeil gauche attendue.",
+            "Brûlures oculaires :",
+            "- + fréquemment chimiques (85%) surtout chez homme jeunes, les brûlures par base sont donc pls graves.",
+            "- Une instillation de fluorescéine est nécessaire pour évaluer le pronostic.",
+          ],
+
+          questionSet: [
+            { "id": "q_brulureoculaire_1", "patterns":["lavage oculaire", "lavage oculaire en urgence"], "answer":"Validé."},
+            { "id": "q_brulureoculaire_2", "patterns":["collyre anesthésiant", "solution isotonique", "solution hypertonique", "sérum physiologique", "abondant", "15 à 30 minutes", "15-30 minutes", "15-30mn"], "answer":"Validé." },
+            { "id": "q_brulureoculaire_3", "patterns":["collyre corticoïde"], "answer":"Validé." },
+            { "id": "q_brulureoculaire_4", "patterns":["collyre cicatrisant"], "answer":"Validé." },
+            { "id": "q_brulureoculaire_5", "patterns":["oeil rouge"], "answer":"Validé." },
+            { "id": "q_brulureoculaire_6", "patterns":["larmoiement"], "answer":"Validé." },
+            { "id": "q_brulureoculaire_7", "patterns":["photophobie"], "answer":"Oui bien sûr." },
+            { "id": "q_brulureoculaire_8", "patterns":["baisse de l'acuité visuelle"], "answer":"Validé." },
+            { "id": "q_brulureoculaire_9", "patterns":["kératite ponctuée superficielle", "oedème cornéen", "ulcération", "ischémie du limbe", "nécrose"], "answer":"Validé." },
+            { "id": "q_brulureoculaire_10", "patterns":["fluorescéine"], "answer":"Validé." },
+            { "id": "q_brulureoculaire_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai reçu du solvant dans l'oeil gauche lors de mon travail."},
+            { "id": "q_brulureoculaire_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Je comprends bien, merci Docteur." },
+            { "id": "q_brulureoculaire_13", "patterns":["Roper-Hall", "Roper Hall"], "answer":"Validé." },
+            { "id": "q_brulureoculaire_14", "patterns":["perte totale de l'acuité visuelle", "cécité", "aveugle"], "answer":"Oh mon dieu, j'ai que 34 ans... Je ne m'attendais pas à ça..." }
+          ]
+        },
+
+{
+          id: "SDD7",
+          title: "Corps étranger de l'oreille ou du nez, ingestion ou inhalation d'un corps étranger",
+          intro: "Vous êtes interne d'urgence en salle de transmission. Un(e) infirmier(ère) profite d'une accalmie du flux de patients pour vous poser plusieurs questions concernant les corps étrangers. Vous devez lui répondre en formulant des phrases claires et complètes, vous pouvez user ou non de termes médicaux circonstanciés. Répondre aux questions suivantes : quels sont les signes d'appel clinique à rechercher chez un enfant faisant rechercher un CE intra-auriculaire, quelles sont les complications pouvant être engendrées par un CE intra-auriculaire, quels sont les signes d'appel de CE du nez, que doit on faire devant un CE pharyngolaryngé avec DRA, donnez les signes cliniques retrouvés en cas de CE dans l'oesophage si l'ingestion n'a pas été constatée, comment reconnait on une pile bouton sur une radiographie, qu'est-ce qu'un syndrome de pénétration, quels sont les signes d'un CE inhalé par un nourrisson ou un enfant à la phase initiale, comment retire on le CE inhalé dans les bronches lorsqu'on est certain du diagnostic, si un CE est inhalé sans témoin quels signes peut présenter le patient par la suite qui doivent nous alarmer.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- CE intra-auriculaire : otalgies / hypoacousie / acouphènes / otorrhée purulente (2/4). Complications : otite externe / blessure tympanique voire perforation de la membre tympanique.",
+            "- CE nasal : obstruction nasale chronique / rhinorrhée tenace, purulente , fétide , unilatérale / cacosmie persévérante / cellulite faciale (3/4).",
+            "- Le premier geste devant une DRA secondaire à l'ingestion d'un CE pharyngolaryngé est l'extraction au doigt en urgence. Les signes cliniques sont : dysphagie / hypersialorrhée / gène cervicale basse / douleur cervicale fébrile / empâtement cervical / emphysème sous cutané cervical (4/6). CE dangereux : pile bouton, risque de corrosion chimique avec perforation oesophagienne par nécrose de la muqueuse pouvant être responsable d'une médiastinite ou d'une hémorragie massive par lésion d'un axe vasculaire au contact de l'oesophage. Aspect radiographique : CE radio-opaque de forme arrondie dans l'oesophage avec aspect de double contours.",
+            "- Syndrome de pénétration : accès de suffocation secondaire à l'inhalation et l'obstruction des VA par un CE avec toux violente quinteuse brutale +/6 stridor cornage tirage et cyanose jusqu'à DRA. Signes radiographiques : CE radio-opaque, atélectasie du côté du corps inhalé, emphysème obstructif localisé. Extraction fibroscopique bronchique avec tube endoscopique rigide. Signes chroniques : tout syndrome bronchopulmonaire focalisé, inexpliqué, répétitif ou au long cours doit faire évoquer une inhalation de CE."
+          ],
+
+          questionSet: [
+            { "id": "q_corpsétranger_1", "patterns":["otalgies", "hypoacousie", "acouphènes", "otorrhée purulente"], "answer":"Validé."},
+            { "id": "q_corpsétranger_2", "patterns":["otite externe", "blessure tympannique", "perforation tympanique"], "answer":"Validé." },
+            { "id": "q_corpsétranger_3", "patterns":["obstruction nasale chronique", "purulente", "fétide", "unilatérale", "cacosmie", "cellulite faciale"], "answer":"Validé." },
+            { "id": "q_corpsétranger_4", "patterns":["extraction", "au doigt"], "answer":"Validé." },
+            { "id": "q_corpsétranger_5", "patterns":["dysphagie", "hypersialorrhée", "gène cervicale basse", "douleur cervicale", "empâtement cervical", "emphysème sous-cutané"], "answer":"Validé." },
+            { "id": "q_corpsétranger_6", "patterns":["pile bouton", "corrosion chimique", "nécrose de la muqueuse", "médiastinite", "hémorragie massive"], "answer":"Validé." },
+            { "id": "q_corpsétranger_7", "patterns":["radio-opaque", "forme arrondie", "double contours"], "answer":"Validé." },
+            { "id": "q_corpsétranger_8", "patterns":["suffocation", "toux violente", "quinte", "stridor", "cornage", "cyanose"], "answer":"Validé." },
+            { "id": "q_corpsétranger_9", "patterns":["extraction fibroscopique", "endoscopie", "fibroscopie"], "answer":"Validé." },
+            { "id": "q_corpsétranger_10", "patterns":["syndrome bronchopulmonaire focalisé", "répétitif", "long cours"], "answer":"Validé." },
+            { "id": "q_corpsétranger_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'aimerais que vous me parliez des corps étrangers. Ma premiere question porte sur les signes d'un corps étranger intra-auriculaire."},
+            { "id": "q_corpsétranger_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." }
+          ]
+        },
+
+{
+          id: "SDD8",
+          title: "Diplopie",
+          intro: "Une patiente de 30 ans vient vous voir en consultation d'ophtalmologie car elle voit double de façon intermittente depuis plusieurs mois. Elle a des antécédents de thyroïdite d'Hashimoto sous Lévothyroxine et de tremblement essentiel sous Propranolol. Elle vous décrit également que sa paupière tombe en fin de journée, surtout lorsqu'elle est fatiguée ; et qu'elle ressent parfois une faiblesse musculaire le soir ou après une activité physique. Donnez le terme correspondant au fait d'avoir une vision double, comment éliminer une origine ophtalmologique, décrivez à l'oral l'examen clinique de ce patient, évoquez votre hypothèse diagnostique principale, quels sont les examens paracliniques à demander pour vous conforter dans votre suspicion diagnostique, réalisez une mesure au vu des traitements de la patiente.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Diplopie. Diplopie monoculaire d'ordre ophtalmologique présente à l'occlusion de l'oeil sain mais disparaissant à l'occlusion de l'oeil pathologique.",
+            "- Examen des nerfs oculomoteurs, recherche ptosis, recherche anomalie pupillaire avec étude du réflexe photomoteur, examen sous écran, test de Lancaster, test au verre rouge, examen neurologique général (GSW, sensibilité, motricité, ROT 3/4).",
+            "- Myasthénie. ENMG, Ac anti-RACh ou Ac anti-MuSK (1/2), scanner thoracique. Arrêt des b-bloquants."
+          ],
+
+          questionSet: [
+            { "id": "q_myasthénieoculaire_1", "patterns":["diplopie"], "answer":"Ok je vois."},
+            { "id": "q_myasthénieoculaire_2", "patterns":["diplopie monoculaire", "occlusion de l'oeil sain", "disparait à l'occlusion de l'oeil pathologique", "disparaissant à l'occlusion de l'oeil pathologique"], "answer":"Tout à fait." },
+            { "id": "q_myasthénieoculaire_3", "patterns":["examen des nerfs oculomoteurs"], "answer":"Validé." },
+            { "id": "q_myasthénieoculaire_4", "patterns":["ptosis"], "answer":"Ptosis en fin de journée et lors d'épisodes de fatigue." },
+            { "id": "q_myasthénieoculaire_5", "patterns":["réflexe photomoteur", "pupilles"], "answer":"Validé." },
+            { "id": "q_myasthénieoculaire_6", "patterns":["examen sous écran"], "answer":"Validé." },
+            { "id": "q_myasthénieoculaire_7", "patterns":["test de Lancaster"], "answer":"Validé." },
+            { "id": "q_myasthénieoculaire_8", "patterns":["test au verre rouge"], "answer":"Validé." },
+            { "id": "q_myasthénieoculaire_9", "patterns":["bêta-bloquant", "bêta-bloquants", "b-bloquant", "b-bloquants"], "answer":"Ok on peut arrêter ce médicament." },
+            { "id": "q_myasthénieoculaire_10", "patterns":["glasgow", "GSW", "sensibilité", "motricité", "réflexes ostéo-tendineux", "ROT"], "answer":"Validé." },
+            { "id": "q_myasthénieoculaire_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai ma paupière qui tombe et j'ai une sorte de faiblesse musculaire de la racine des membres. Comment on appele ce phénomène de voir double aussi parce que je l'ai ?"},
+            { "id": "q_myasthénieoculaire_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci." },
+            { "id": "q_myasthénieoculaire_13", "patterns":["myasthénie"], "answer":"Ok je vois." },
+            { "id": "q_myasthénieoculaire_14", "patterns":["électro-neuro-myogramme", "ENMG"], "answer":"Ok on le fera." },
+            { "id": "q_myasthénieoculaire_15", "patterns":["Ac anti-RACh", "anticorps anti-RACh", "Ac anti-MuSK", "anticorps anti-MuSK"], "answer":"Pas de souci pour faire ces dosages." },
+            { "id": "q_myasthénieoculaire_16", "patterns":["scanner thoracique"], "answer":"Ok pas de soucis, on peut rajouter cet examen." }
+          ]
+        },
+
+{
+          id: "SDD9",
+          title: "Douleur cervicofaciale",
+          intro: `Vous êtes interne de chirurgie maxillo-faciale et êtes appelé(e) par le service d'urgences pour un patient de 30 ans consultant pour une tuméfaction sous-mandibulaire douloureuse apparue depuis 4 jours. Le patient vous indique que les symptômes ont commencé il y a plusieurs jours à la suite d'une douleur dentaire avec aggravation progressive. Il vous indique aussi qu'il s'est automédiqué par AINS. Les constantes sont : TA 127/77, saturation 98% AA, FC 86/mn, FR 15/mn, température 38,7°C. L'examen clinique retrouve une masse sous-mandibulaire gauche douloureuse avec une peau inflammatoire en regard, un trismus serré, un érythème cervical et une dysphagie avec sialorrhée. Un bilan réalisé aux urgences retrouve une CRP à 228mg/L et de leucocytes à 13800/mm^3. Un panoramique dentaire est réalisé dont l'imagerie est la suivante : <img src= "cellulitedentaire.png" style ="max-width:100%; border-radius:8px; margin-top:10px;". Décrivez votre suspicion diagnostique et la dent en cause, citez les critères de gravité présentés par votre patient, quel(s) examen(s) devez vous réaliser devant ce tableau, proposer une prise en charge aux urgences dans l'immédiat abordez la suite de la PEC qui sera effectuée (n'abordez pas l'aspect chirurgical).>`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Hypothèse principale : cellulite cervico-faciale d'origine dentaire due à une atteinte de la dent 37.",
+            "- Gravité devant : trismus, érythème facial, dysphagie. Proposer un scanner cervico-facial avec injection de produit de contraste : scanner injecté en coupe axiale, collection hypodense avec rehaussement périphérique au contact de la corticale interne, probable cellulite collectée.",
+            "- Hospitalisation du patient, mise à jeun, ATB IV probabiliste par Augmentin (clindamycine-gentamicine accepté), antalgiques palier 2 voire 3, délimitation rougeur, application de poches de glace, CI formelle aux AINS ou non stéroïdiens."
+          ],
+
+          questionSet: [
+            { "id": "q_cellulitedent_1", "patterns":["cellulite cervicofaciale d'origine dentaire", "cellulite cervico-faciale d'origine dentaire", "cellulite cervicofaciale dentaire", "cellulite cervico-faciale dentaire", "37"], "answer":"Validé."},
+            { "id": "q_cellulitedent_2", "patterns":["trismus", "érythème", "dysphagie"], "answer":"Validé." },
+            { "id": "q_cellulitedent_3", "patterns":["scanner injecté", "scanner cervico-facial", "scanner cervicofacial", "injection de produit de contraste", "injecté"], "answer":`Voici le scanner demandé : <img src= "scannercellulitedentaire.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`." },
+            { "id": "q_cellulitedent_4", "patterns":["coupe axiale", "axiale"], "answer":"Validé." },
+            { "id": "q_cellulitedent_5", "patterns":["collection hypodense", "rehaussement périphérique", "corticale interne"], "answer":"Validé." },
+            { "id": "q_cellulitedent_6", "patterns":["cellulite collectée"], "answer":"Validé." },
+            { "id": "q_cellulitedent_7", "patterns":["hospitalisation", "hospitaliser", "hospitalisé"], "answer":"Bien sûr." },
+            { "id": "q_cellulitedent_8", "patterns":["à jeun"], "answer":"Ok." },
+            { "id": "q_cellulitedent_9", "patterns":["augmentin","amoxicilline acide clavulanique", "IV", "intra-veineuse", "clindamycine", "gentamycine"], "answer":"Prescription faite." },
+            { "id": "q_cellulitedent_10", "patterns":["palier 2", "palier 3"], "answer":"Prescription faite." },
+            { "id": "q_cellulitedent_11", "patterns":["bonjour"], "answer":"Bonjour je suis Dr X des urgences. Je t'appelle parce que j'ai un patient de 30 ans avec une tuméfaction sous-mandibulaire douloureuse, fébrile et inflammatoire depuis 4 jours avec trismus serré, érythème cervical et dysphagie avec sialorrhée. J'aimerais ton avis la dessus, tu penses à quoi ?"},
+            { "id": "q_cellulitedent_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Yes merci beaucoup de ton avis." },
+            { "id": "q_cellulitedent_13", "patterns":["délimitation", "entourer"], "answer":"Pas de soucis, je le ferai." },
+            { "id": "q_cellulitedent_14", "patterns":["poches de glace", "glace"], "answer":"Pas de problème." },
+            { "id": "q_cellulitedent_15", "patterns":["contre indication aux AINS", "contre indication aux AIS", "contre indication aux anti inflammatoire non stéroïdiens", "contre indication aux anti inflammatoire stéroïdiens"], "answer":"Ok je note cette contre indication." }
+          ]
+        },
+
+{
+          id: "SDD10",
+          title: "Douleur pharyngée",
+          intro: "Vous recevez en consultation de médecine générale au mois de janvier un homme de 26 ans pour douleur pharyngée fébrile et odynophagie depuis 2 jours. Il est mécanicien, marié, vit avec son épouse et ses 4 enfants. Il n'a pas d'antécédent particulier, pas de traitement au domicile ni d'allergie notable. Ses vaccinations sont à jour du calendrier vaccinal et ont été réalisées l'année dernière (Diphtérie - Poliomyélite - tétanos - coqueluche). Le patient rapporte une douleur constrictive spontanée de l'oropharynx depuis 48 h, apparue brutalement, majorée à l'alimentation (franche odynophagie) et sans irradiation. Il s'y associe une fièvre à 39 °C avec frissons et sueurs; sans larmoiement ni rhinorrhée, sans prurit oculaire sans toux ni arthromyalgies. Il n'y a pas de contage infectieux au sein de son travail mais il rapporte une angine chez sa fille de 6 ans. Examinez le patient en décrivant ce que vous faites et ce que vous recherchez, suspectez un diagnostic et faites ce qu'il faut dans l'immédiat pour vous en assurer, proposer une PEC pour le patient.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Constantes, examen du fond de gorge. Description d'une angine érythémato-pultacée bilatérale. Rechercher des signes associés (3/4) : adénopathies cervicales, conjonctivite associée, rhinopharyngite, éruption cutanée associée.",
+            "- Angine streptococcique (ou angine érythémato-pultacée à streptocoque A), score de Mac Isaac à 4/4, réalisation d'un TDR.",
+            "- Amoxicilline per os 2 à 3 fois par jour en 3 prises par jour pour 6 jours, antalgiques et antipyrétiques type paracétamol, lavage des mains réguliers, arrêt de travail et éviction collectivité pendant 3 jours. Reconsulter si : fièvre > 3j ou réapparition après 3 jours, persistance des symptômes au delà de 10 jours, gêne respiratoire, conjonctivite purulente, œdème palpébral, éruption cutanée, tb digestifs (5/8).",
+            "Rappel différent type d'angines :",
+            "- Erythémateuse (rouge) ou érythémato pultacée (blanche) : streptocoque 1, VIH, EBV, adénovirus.",
+            "- Pseudo-membraneuse : EBV, diphtérie.",
+            "- Vésiculeuse : TOUJOURS VIRALE, HSV, entérovirus.",
+            "- Ulcéreuse nécrotique : angine de Vincent, chancre syphilitique, cancer OEL, agranulocytose, hémopathies malignes."
+          ],
+
+          questionSet: [
+            { "id": "q_anginebactérienne_1", "patterns":["constantes", "paramètres vitaux", "température", "tension artérielle", "TA", "saturation", "sat", "fréquence cardiaque", "FC"], "answer":"Température 38,8°C. TA 125/75. FC 80. Sat 98% AA."},
+            { "id": "q_anginebactérienne_2", "patterns":["examen de la gorge", "examen physique", "examen de la cavité buccale", "examen du fond de gorge"], "answer":`Examen ORL complémentaire : pas de rhinorrhée, pas d'obstruction nasale, otoscopie normale. Examen endobuccal : <img src= "examenendobuccal.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_anginebactérienne_3", "patterns":["angine érythémato-pultacée", "angine érythématopultacée"], "answer":"Validé." },
+            { "id": "q_anginebactérienne_4", "patterns":["adénopathies cervicales", "conjonctivite", "rhinopharyngite", "éruption cutanée"], "answer":"Adénopathie cervicales antérieures douloureuses. Absence de conjonctivite. Absence de rhinopharyngite. Pas d'éruption scarlatiniforme / roséoliforme / morbiliforme." },
+            { "id": "q_anginebactérienne_5", "patterns":["angine streptococcique", "angine à streptocoque A", "angine érythémato-pultacée à streptocoque A"], "answer":"Validé." },
+            { "id": "q_anginebactérienne_6", "patterns":["score de Mac Isaac à 4/4", "4/4", "score de Mac Isaac"], "answer":"Validé." },
+            { "id": "q_anginebactérienne_7", "patterns":["test diagnostic rapide", "TDR"], "answer":"Le TDR réalisé avec prélèvement de fond de gorge est positif." },
+            { "id": "q_anginebactérienne_8", "patterns":["amoxicilline", "2 à 3 fois par jour", "6 jours"], "answer":"Prescription faite." },
+            { "id": "q_anginebactérienne_9", "patterns":["antalgique", "antipyrétique", "paracétamol"], "answer":"Prescription faite." },
+            { "id": "q_anginebactérienne_10", "patterns":["lavage des mains"], "answer":"Le patient en est avisé." },
+            { "id": "q_anginebactérienne_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je viens car j'ai mal à la gorge et du mal à bouger depuis 2 jours. C'est arrivé brutalement et c'est majoré quand je mange. Je ne connais personne de malade au boulot mais ma fille de 6 ans a eu une angine."},
+            { "id": "q_anginebactérienne_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci pour tout Docteur." },
+            { "id": "q_anginebactérienne_13", "patterns":["arrêt de travail", "éviction de collectivité", "3 jours"], "answer":"Merci." },
+            { "id": "q_anginebactérienne_14", "patterns":["fièvre pendant plus de 3 jours", "fièvre >3j", "réapparition de fièvre après 3 jours", "10 jours", "gêne respiratoire", "conjonctivite purulente", "oedème palpébral", "troubles digestifs"], "answer":"Ok je retiens bien ces signes pour reconsulter au besoin." }
+          ]
+        },
+
+{
+          id: "SDD11",
+          title: "Dysphonie",
+          intro: "Vous êtes ORL. Vous recevez dans votre bureau un homme de 60 ans qui consulte par rapport à la situation de son père. Son père est un patient de 93 ans hospitalisé dans votre service ; il avait consulté initialement pour dysphonie, dysphagie haute et altération de l'état général avec perte de 12 kg sur 2 mois. L'étiologie retenue était un carcinome épidermoïde indifférencié de l'hypopharynx au stade métastatique (métastases pulmonaires bilatérales avec aspect de lâcher de ballons). Le patient a comme antécédents une insuffisance rénale chronique terminale, une insuffisance cardiaque sur cardiopathie ischémique, une bronchopneumopathie chronique obstructive et un tabagisme actif évalué à 75 PA. il avait été décidé d'une prise en charge par chimiothérapie néoadjuvante avant potentielle prise en charge chirurgicale ; mais cette chimiothérapie n'a pas permis de limiter la progression tumorale. Au vu de l'ensemble du tableau, une prise en charge palliative a été décidée en réunion de concertation pluridisciplinaire ; la chirurgie ayant été réfutée. Recevoir le fils du patient pour lui annoncer et lui expliquer la prise en charge palliative.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Se présenter, inviter le patient à s'asseoir, demander ce que le patient sait, être empathique. Lui demander ce qu'il veut savoir et ce qu'il ne veut pas savoir. Résumer la situation grave en lui expliquant que soit on fait une chirurgie très mutilante puis des soins lourds ou on propose une PEC palliative d'emblée avec soins de support. Expliquer que la PEC chirurgicale apparait déraisonnable et trop risquée. Il s'agit d'une décision collégiale murement réfléchie et ayant fait intervenir plusieurs médecins.",
+            "- Expliquer que l'on n'arrête pas les soins et qu'ils seront axés sur le confort de vie. Laisser place aux émotions. Vérifier la bonne compréhension du patient le faire reformuler et répéter si besoin. Demander si le père avec des directives anticipées ou une personne de confiance. Demander au patient s'il a des questions. Inviter le patient à aller voir son père."
+          ],
+
+          questionSet: [
+            { "id": "q_annoncefindevie_1", "patterns":["bonjour", "je suis", "je me présente""], "answer":"Bonjour Docteur (le patient reste debout devant vous après vous avoir serré la main)."},
+            { "id": "q_annoncefindevie_2", "patterns":["asseyez vous", "vous pouvez vous assoir", "asseyiez vous"], "answer":"Merci c'est gentil." },
+            { "id": "q_annoncefindevie_3", "patterns":["qu'est-ce que vous savez", "qu'est-ce qu'on vous a dit", "qu'est-ce qu'on vous a expliqué", "que savez vous"], "answer":"Alors je sais qu'il est venu pour des troubles ORL et qu'il avait perdu + de 10 kg en 2 mois. Je sais qu'on avait retenu que c'était un cancer avec des métastases aux poumons. Je sais aussi qu'il a eu une chimiothérapie et qu'on avait évoqué une chirurgie, pour ce qui est de la chimiothérapie elle n'a pas permis de faire réduire de taille les tumeurs..." },
+            { "id": "q_annoncefindevie_4", "patterns":["voulez savoir", "voudriez savoir", "ne voulez pas savoir", "ne voulez pas connaître", "aimeriez savoir"], "answer":"C'est gentil de me demander... Je voudrais savoir les options qu'on a maintenant que la chimiothérapie n'a pas marché. Et n'hésitez pas à tout me dire, je préfère savoir et ne pas être dans le flou ou le déni malgré tout (le patient semble sur de sa réponse)." },
+            { "id": "q_annoncefindevie_5", "patterns":["chirurgie", "soins lourds", "prise en charge palliative"], "answer":"Ok je vois donc c'est soit la chirurgie soit les soins palliatifs. Mais de ce que j'ai compris, vous ne vouliez pas trop l'opérer... Pourquoi ? (le patient semble touché par le doute sur la prise en charge chirurgicale)" },
+            { "id": "q_annoncefindevie_6", "patterns":["déraisonnable", "trop risquée"], "answer":"Je comprends... (le patient prend une grande respiration). Qui a décidé de ça ?" },
+            { "id": "q_annoncefindevie_7", "patterns":["décision collégiale", "plusieurs médecins", "plusieurs docteurs"], "answer":"D'accord je vois, c'est une décision de groupe de médecin (le patient semble légèrement rassuré). Mais les soins palliatifs ça veut dire qu'on arrête tout et on le laisse mourir ou on lui donne des médicaments ?" },
+            { "id": "q_annoncefindevie_8", "patterns":["n'arrête pas les soins", "soins de confort", "confort de vie", "lutter contre ses symptômes", "diminuer ses symptômes", "diminution de ses symptômes"], "answer":"Ah je vois donc il n'aura pas de douleurs mais il ne sera pas guéri (semble au clair sur cette information)." },
+            { "id": "q_annoncefindevie_9", "patterns":["je comprends", "je vous écoute", "je vous laisse le temps", "je suis là pour vous"], "answer":"Merci de m'écouter Docteur." },
+            { "id": "q_annoncefindevie_10", "patterns":["avez compris", "clair", "reformule", "reformuler", "reformulation", "répète", "ré explique", "réexplique"], "answer":"Oui je pense avoir compris. Pas besoin que vous reformuliez. Si je répète on va lui proposer des soins palliatifs pour le soulager mais on ne peut pas le guérir." },
+            { "id": "q_annoncefindevie_11", "patterns":["directives anticipées", "personne de confiance"], "answer":"J'avoue qu'on en avait pas franchement discuté de tout ça... Je ne saurais pas vous dire désolé."},
+            { "id": "q_annoncefindevie_12", "patterns":["questions", "que vous n'avez compris", "que vous n'avez pas comprise", "pas claires", "interrogations"], "answer":"Je crois que vous avez répondu à toutes mes questions. Oh une dernière est-ce que je peux aller voir mon père ?" },
+            { "id": "q_annoncefindevie_13", "patterns":["aller voir votre père", "voir votre père", "aller en chambre", "rejoindre votre père"], "answer":"Merci beaucoup malgré tout Docteur." }
+         ]
+        },
+
+{
+          id: "SDD12",
+          title: "Epistaxis",
+          intro: "Vous êtes interne de garde aux urgences. Une patiente de 82 ans est admise pour épistaxis non contrôlée. Elle est connue pour une insuffisance cardiaque secondaire à une cardiopathie hypertensive, une fibrillation atriale permanente, une dyslipidémie et une gonarthrose bilatérale. Elle est traitée par ENALAPRIL (IEC), CARVEDILOL ((3-bloquant), SPIRONOLACTONE (antagoniste des récepteurs aux minéralocorticoïdes), DAPAGLIFOZINE (inhibiteur de SGLT2) et COUMADINE (AVK). La patiente -est calme dans le box des urgences, consciente et orientée, euvolémique, et ne présente pas de signes de détresse respiratoire aiguë. Les constantes demandées sont : Tension artérielle 108/57 mmHg - saturation 96 % en air ambiant -fréquence cardiaque 116/min - fréquence respiratoire 12/min -Température 37,2 °C Cliniquement, vous ne retrouvez pas de signes de décompensation cardiaque ni de signes d'anémie mal tolérée. L'ECG déroule une tachycardie irrégulière à QRS  fins en faveur d'une fibrillation atriale, et ne retrouve pas de changement par rapport aux ECG antérieurement réalisés. Prenez en charge ce saignement avec des premières mesures rapides et expliquez les à votre patiente. Les examens demandés sont reçus et vos premières mesures n'ont pas réussi à tarir le saignement, le saignement ne vient pas de la tache vasculaire, proposez une prise en charge et expliquez là à la patiente.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Hospitalisation (devant IC et AC par AVK), surveillance scopée, position demi-assise, mouchage énergétique tête surélevée légèrement en avant, compression bi digitale simple de l'aile du nez (théoriquement 10mn), introduction de tampons hémostatiques locaux, bilan biologique (NFS, TP/TCA, dosage INR, GS et RAI 4/5)",
+            "- Pas de nécessité de transfusion (taux Hb > 10 g/dL et pas de signes de mauvaise tolérance), tamponnement antérieur avec explication du geste (introduction d'une mèche pour 24-48h), arrêt AVK, vitamine K orale (1-2mg).",
+            "Traitement de l'épistaxis par hémostase locale :",
+            "- 1e mesures : position demi-assise, anxiolytiques non sédatifs si besoin, mouchage énergétique tête surélevée légèrement an avant, compression bidigitale simple pendant 10 mn +/- tampons hémostatiques locaux.",
+            "- Hospitalisation si : terrain à risque, mauvaise tolérance anémie ou transfusion, patient sous AVK, tamponnement antéropostérieur.",
+            "- Epistaxis antérieure (tâche vasculaire) : souvent bénigne du sujet jeune par extasie vasculaire, cautérisation tache si persistante possible à distance.",
+            "- Epistaxis postérieure : tamponnement antérieur si insuffisant hospit pour tamponnement antéropostérieur / sonde à double ballonnet si échec ou récidive, puis coagulation / embolisation a. sphénopalatine puis ligature a. éthmoïdale antérieur (mais pas d'embolisation).",
+          ],
+
+          questionSet: [
+            { "id": "q_épistaxisAVK_1", "patterns":["hospitalisation", "hospitaliser", "hospitalisé"], "answer":"(L'infirmière vous répond). Ok la patiente sera hospitalisée."},
+            { "id": "q_épistaxisAVK_2", "patterns":["surveillance scopée", "scope", "monitoring", "monitorer"], "answer":"(L'infirmière vous répond) Pas de soucis on va la scoper. Actuellement ses constantes sont TA 108/57, sat 96%AA, FC 116, FR 12, température 37,2°C." },
+            { "id": "q_épistaxisAVK_3", "patterns":["position semi-assise", "position demi-assise"], "answer":"Ok je vois." },
+            { "id": "q_épistaxisAVK_4", "patterns":["mouchage énergétique", "tête surélevée", "penchée en avant"], "answer":"Ok je vais le faire." },
+            { "id": "q_épistaxisAVK_5", "patterns":["compression bidigitale"], "answer":"Ok donc j'appuie bien sur ma narine avec des doigts" },
+            { "id": "q_épistaxisAVK_6", "patterns":["tampons hémostatiques"], "answer":"Je suis d'accord pour la pose de tampons hémostatiques." },
+            { "id": "q_épistaxisAVK_7", "patterns":["NFS", "hémostase", "TP", "TCA", "INR", "groupe sanguin", "GS", "RAI", "recherche d'agglutinines irrégulières"], "answer":"Hb 11,1 g/dL, VGM 97, leucocytes 7,2 G/L, plaquettes 282 G/L, TP 55%, TCA 1,02T, INR 9,4. Patiente O+, RAI - ." },
+            { "id": "q_épistaxisAVK_8", "patterns":["pas de transfusion", "ne transfuse pas"], "answer":"Ok tant mieux." },
+            { "id": "q_épistaxisAVK_9", "patterns":["tamponnement antérieur", "24 à 48h", "un à deux jours"], "answer":"Ok et pour mes traitements on fait quoi ?" },
+            { "id": "q_épistaxisAVK_10", "patterns":["arrêt des AVK", "arrêter les AVK", "arrêt des anticoagulants", "arrêter les anticoagulants"], "answer":"Ok ça va." },
+            { "id": "q_épistaxisAVK_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai un saignement de nez qui ne s'arrête pas, mais moi je vais plutôt bien."},
+            { "id": "q_épistaxisAVK_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Merci Docteur, tout est clair." },
+            { "id": "q_épistaxisAVK_13", "patterns":["vitamine K", "vitamine K orale"], "answer":"Ok je comprends." }
+          ]
+        },
+
+{
+          id: "SDD13",
+          title: "Limitation de l'ouverture buccale",
+          intro: `Interne de garde aux urgences, vous recevez un patient de 17 ans pour traumatisme maxillo-facial. Ce dernier s'est fait agresser et aurait reçu de multiples coups au visage. Depuis, il présente un franc trismus antalgique avec une ouverture buccale limitée à 3 cm en raison des douleurs. Le patient n'a aucun antécédent médico-chirurgical. L'examen clinique retrouve notamment un œdème facial de l'hémiface inférieure avec de multiples ecchymoses. Les voies aériennes sont libres, il n'y a pas de saignement actif extériorisé abondant. Il n'y a ni diplopie, ni trouble oculomoteur. Vous réalisez un cliché de panoramique dentaire (également appelé orthopantomogramme). Analysez le cliché, au vu de celui-ci quelles anomalies vous attendez vous à retrouver, répondez au patient qui demande s'il va devoir se faire opérer et quel traitement il allait recevoir. <img src= "fracturemandibule.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Analyse de l'orthopantogramme : fracture trifocale, fracture de l'angle droit passant par la dent de sagesse / fracture parasymphysaire G avec fragment intermédiaire / fracture sous-condylienne basse G.",
+            "- Fractures parasymphysaire et angulaire : anomalie avant mobilisation = douleur au niveau des traits de fracture, stomatorragie et sialorrhée, diastème (écartement interdentaire) avec plaie de la muqueuse gingivale, signe de Vincent. 2/3",
+            "- Fractures parasymphysaire et angulaire : anomalie à la mobilisation = impotence fonctionnelle, trouble de l'articulé dentaire, mobilité osseuse mandibulaire anormale. 2/3",
+            "- Fractures sous-condylienne basse : anomalie avant mobilisation = plaie sous-mentonnière, douleur et tuméfaction au niveau de la région pré-auriculaire gauche, otorragie éventuelle (signant une fracture de l'os tympanal associée). 2/3",
+            "- Fractures sous-condylienne basse : anomalie à la mobilisation = impotence fonctionnelle mandibulaire avec limitation de l'ouverture buccale, de la propulsion et la diduction mandibulaire, latérodéviation mandibulaire gauche à l'ouverture buccale, contact molaire prématuré du côté gauche avec pseudo béance à droite. 2/3",
+            "- Traitement symptomatique antalgique, antibiothérapie intraveineuse, fracture ouverte plurifocale = traitement chir en urgence relative, chir sous AG avec pose de plaques."
+          ],
+
+          questionSet: [
+            { "id": "q_fracturemandibule_1", "patterns":["fracture trifocale", "fracture de l'angle droit", "fracture parasymphysaire gauche", "fracture sous-condylienne gauche"], "answer":"Oh ça fait beaucoup...."},
+            { "id": "q_fracturemandibule_2", "patterns":["douleur", "stomatorragie", "sialorrhée", "diastème", "signe de Vincent", "anesthésie du territoire labio-mentonnier"], "answer":"Validé." },
+            { "id": "q_fracturemandibule_3", "patterns":["impotence fonctionnelle", "trouble de l'articulé dentaire", "mobilité osseuse anormale"], "answer":"Validé." },
+            { "id": "q_fracturemandibule_4", "patterns":["plaie sous-mentonnière", "tuméfaction pré-auriculaire", "otorragie"], "answer":"Validé." },
+            { "id": "q_fracturemandibule_5", "patterns":["limitation de l'ouverture buccale", "latérodéviation mandibulaire", "contact molaire prématuré"], "answer":"Validé." },
+            { "id": "q_fracturemandibule_6", "patterns":["antalgique", "respo", "antipyrétique", "paracétamol"], "answer":"Ok je vois et je ne prends pas de traitement ?" },
+            { "id": "q_fracturemandibule_7", "patterns":["antibiothérapie intraveineuse", "antibiothérapie IV"], "answer":"D'accord je vois." },
+            { "id": "q_fracturemandibule_8", "patterns":["chirurgie", "urgence relative", "anesthésie générale", "plaques"], "answer":"Ok, je me ferais opérer un peu plus tard." },
+            { "id": "q_fracturemandibule_9", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai été agressé et on m'a frappé au visage. Depuis je n'arrive plus à ouvrir la bouche car j'ai trop mal..."},
+            { "id": "q_fracturemandibule_10", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair merci Docteur." }
+          ]
+        },
+
+{
+          id: "SDD14",
+          title: "Œdème de la face et du cou",
+          intro: "Vous êtes médecin de garde aux urgences à l'hôpital. Vous recevez en début d'après-midi un patient de 25 ans dans le service d'accueil des urgences devant une difficulté respiratoire. Il n'a pas d'antécédent et ne prend pas de traitement. Il n'a pas d'allergie connue ni de terrain atopique. Les constantes sont : pression artérielle 101/49 mmHg, fréquence cardiaque 115 bpm, fréquence respiratoire 25 cycles/min, SpO2 en air ambiant 89 %, température 37,1 °C. À l'interrogatoire, il est essoufflé au moindre effort. Il relate un déjeuner comprenant un plat à loase de crevettes après lequel tout a commencé. Il décrit une sensation de gonflement dans la gorge. Effectuez un examen ciblé, énoncez votre hypothèse diagnostique et réalisez les premières mesures d'urgence, une infirmière est avec vous et vous disposez d'un téléphone de garde (aucun bilan paraclinique ne vous est demandé).",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher signes de lutte (polypnée, tirage, expiration abdominale active, battement des ailes du nez, stridor), signes de faillite (cyanose, bradypnée, difficulté pour parler, toux inefficace, respiration paradoxale, signes hypercapnie), signes de gravité hémodynamique (marbrures, extrémités froides, augmentation du TRC), signes CM (urticaire, oedème de Quincke), examen endobuccal, auscultation cardiopulmonaire.",
+            "- Anaphylaxie grade III, injection de 0,5mg d'adrénaline IM, surveillance scopée / pose de 2 VVP / oxygénothérapie (2/3), position demi assise / aérosols en nébulisation et b2-mimétiques / antihistaminiques type 1 / corticothérapie systémique IV (2/4). Appeler le réanimation de garde et se présenter, décrire la situation clinique, décrire les mesures instaurées.",
+            "Rappel classification Ring et Messmer : I signes CM, II atteinte multiviscérale modérée, III atteinte multiviscérale sévère, IV arrêt cardiorespiratoire."
+          ],
+
+          questionSet: [
+            { "id": "q_anaphylaxie_1", "patterns":["polypnée", "tirage", "expiration abdominale active", "battement des ailes du nez", "stridor"], "answer":"Légère polypnée, pas de tirage, pas d'expiration abdominale active, pas de stridor."},
+            { "id": "q_anaphylaxie_2", "patterns":["cyanose", "bradypnée", "difficulté pour parler", "toux inefficace", "respiration paradoxale", "hypercapnie", "sueurs", "astérixis"], "answer":"Difficultés pour parler. Absence de cyanose, bradypnée, respiration abdominale active, signes d'hypercapnie." },
+            { "id": "q_anaphylaxie_3", "patterns":["marbrures", "extrémités froides", "augmentation du temps de recoloration cutané", "augmentation du TRC"], "answer":"Pas de marbrures, pas d'extrémités. TRC à 2 secondes." },
+            { "id": "q_anaphylaxie_4", "patterns":["urticaire", "oedème de Quincke"], "answer":"Exanthème prurigineux touchant le visage, le cou et la partie supérieure du thorax. Oedème blanc, ferme et douloureux des paupières et des lèvres." },
+            { "id": "q_anaphylaxie_5", "patterns":["examen endobuccal"], "answer":"Odème du pharynx." },
+            { "id": "q_anaphylaxie_6", "patterns":["auscultation cardio-pulmonaire", "auscultation cardiaque", "auscultation pulmonaire"], "answer":"Tachycardie sinusale sans souffle associé, sibilants et frein expiratoire audibles, pas de wheezing audible à l'oreille." },
+            { "id": "q_anaphylaxie_7", "patterns":["anaphylaxie de grade 3", "anaphylaxie de grade III"], "answer":"Validé." },
+            { "id": "q_anaphylaxie_8", "patterns":["adrénaline 0,5mg IM", "0,5mg d'adrénaline en IM", "0,5mg", "intramusculaire"], "answer":"Adrénaline administrée en IM." },
+            { "id": "q_anaphylaxie_9", "patterns":["scope", "monitoring", "pose de 2 VVP", "pose de deux voies veineuses périphériques", "oxygénothérapie"], "answer":"D'accord." },
+            { "id": "q_anaphylaxie_10", "patterns":["position demi-assise", "aérosols d'adrénaline", "nébulisation", "antihistaminiques de type 1", "polaramine", "corticothérapie systémique", "corticothérapie IV"], "answer":"Prescriptions faites." },
+            { "id": "q_anaphylaxie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je suis essoufflé au moindre effort, et je crois être gonflé dans la gorge. Tout a commencé après mon déjeuner qui était à base de crevettes."},
+            { "id": "q_anaphylaxie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_anaphylaxie_13", "patterns":["appeler le réanimateur", "réanimateur", "anaphylaxie avec œdème des voies aériennes supérieure", "bronchospasme"], "answer":"Réanimation mise au courant." }
+          ]
+        },
+
+{
+          id: "SDD15",
+          title: "Oeil rouge et/ou douloureux",
+          intro: "Une femme de 81 ans, à J3 postopératoire d'une chirurgie de cataracte de l'œil droit, vient vous voir aux urgences ophtalmologiques pour œil droit rouge. Interrogez la patiente et recherchez les signes associé, décrivez votre examen clinique ophtalmologique, décrivez l'oeil de la patiente, donnez un diagnostic clinique et proposez une PEC / quelle opération chirurgicale est possible ?",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Rechercher BAV de près et de loin, rougeur oculaire diffuse, cinétique d'apparition de la douleur, intensité de la douleur, irradiation de la douleur.",
+            "- Echelle de Monoyer de loin et de Parinaud de près, étude de l'oeil par lampe à fente, fond d'oeil. Image de lampe à fente, oedème de cornée, hypopion.",
+            "- Diagnostic d'endophtalmie postopératoire. Hospitalisation en service d'ophtalmologie, injection intravitréenne d'antibiotiques + ATB IV, vitrectomie.",
+            "Oeil rouge non traumatique :",
+            "- BAV + douleur : endophtalmie, glaucome aigu, kératite aigue, uvéite antérieure, uvéite postérieure.",
+            "- Pas de BAV + indolore : hémorragie sous conjonctivale, conjonctivite.",
+            "- Pas de BAV + douleur + bilatéral : conjonctivite, sd sec oculaire, maladie de Basedow, malposition palpébrale.",
+            "- Pas de BAV + douleur + unilatéral : épisclérite, sclérite, malposition palpébrale."
+          ],
+
+          questionSet: [
+            { "id": "q_endophtalmie_1", "patterns":["baisse d'acuité visuelle", "de près", "de loin"], "answer":"Oui je viens moi bien."},
+            { "id": "q_endophtalmie_2", "patterns":["rougeur oculaire", "oeil rouge"], "answer":"Oui mon oeil est plutôt rouge." },
+            { "id": "q_endophtalmie_3", "patterns":["depuis quand", "combien de temps", "brutal", "brutale", "progressif", "progressive"], "answer":"Si vous voulez j'ai eu une chirurgie de la cataracte et 2 jours après j'ai commencé à avoir mal à l'oeil droit. C'est une douleur qui a été progressive." },
+            { "id": "q_endophtalmie_4", "patterns":["intensité", "sur 10"], "answer":"Ah c'est vraiment une douleur intense et profonde." },
+            { "id": "q_endophtalmie_5", "patterns":["irradiation", "irradie"], "answer":"Oui j'ai l'impression que la douleur irradie en sus-orbitaire." },
+            { "id": "q_endophtalmie_6", "patterns":["Monoyer", "Parinaud"], "answer":"Validé. Baisse d'acuité visuelle notée de près et de loin." },
+            { "id": "q_endophtalmie_7", "patterns":["lampe à fente"], "answer":`Voici l'image en lampe à fente : <img src= "endophtalmie.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">.` },
+            { "id": "q_endophtalmie_8", "patterns":["fond d'oeil"], "answer":"Validé." },
+            { "id": "q_endophtalmie_9", "patterns":["oedème de cornée"], "answer":"Validé." },
+            { "id": "q_endophtalmie_10", "patterns":["hypopion"], "answer":"Validé." },
+            { "id": "q_endophtalmie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai mal à l'oeil droit depuis quelques jours."},
+            { "id": "q_endophtalmie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur !" },
+            { "id": "q_endophtalmie_13", "patterns":["endophtalmie post opératoire", "endophtalmie post-opératoire"], "answer":"Validé." },
+            { "id": "q_endophtalmie_14", "patterns":["hospitalisation"], "answer":"Oui je veux bien." },
+            { "id": "q_endophtalmie_15", "patterns":["injection intravitréenne d'antibiotiques", "antibiotiques en intravitréen", "injection intra vitréenne", "injection intravitréenne", "antibiothérapie IV", "antibiothérapie intraveineuse"], "answer":"Ok pas de soucis." },
+            { "id": "q_endophtalmie_16", "patterns":["vitrectomie"], "answer":"D'accord." }
+          ]
+        },
+
+{
+          id: "SDD16",
+          title: "Otalgie",
+          intro: "Vous recevez en consultation de médecine générale un homme accompagné de sa fille de 4 ans, elle se plaint d'otalgies droites. Elle n'a pas d'antécédents personnels ni familiaux. Elle n'a aucun traitement. Elle n'a pas d'allergie notable. Les vaccinations sont à jour du calendrier vaccinal. Elle décrit une douleur pulsatile de l'oreille droite depuis 48 h, à prédominance interne (non localisée sur le pavillon) apparue brutalement et évaluée à 9/10. Il s'y associe une franche fièvre à 39 °C. Il n'y a pas de facteur calmant ou aggravant retrouvé. Il n'y a pas eu de prise médicamenteuse associée. Il n'y a pas de contage infectieux au sein de l'établissement scolaire ni de la famille. Examinez la patiente, posez un diagnostic, proposez une PEC. Répondez aux 2 questions du père : peut on lui donnez de l'ibuprofène en sirop si elle a des douleurs, peut on la laisser aller à l'école ou doit elle rester à la maison ?",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Otoscopie, examen fond de gorge, recherche complications (mastoïdite, paralysie faciale et méningite), arguments en faveur d'une sinusite, arguments en faveur d'une rhinopharyngite. Otoscopie : inflammation tympanique avec épanchement rétro tympanique abondant et opaque.",
+            "- Diagnostic d'otite moyenne aiguë droite (ou otite moyenne purulente droite). Prescription d'amoxicilline 5 jours, antalgiques et antipyrétiques, reconsulter si persistance des signes cliniques à 48-72h de PEC. Pas d'éviction scolaire obligatoire, pas d'AINS à visée antalgique car risque de complications infectieuses.",
+            "Recommandations HAS :",
+            "- OMA congestive ou séromuqueuse : pas ATB.",
+            "- OMA enfant < 3 mois : avis spécialisé + paracentèse et ATB adaptée.",
+            "- OMA enfant < 2 ans : ATB par amox 80 mg/kg/j pendant 10j / si sd otite conjonctivite augmentin 10 j.",
+            "- OMA enfant > 2 ans + symptômes modérés : pas ATB, réévaluation à 48-72h.",
+            "- OMA enfant > 2 ans + symptômes importants : ATB par amoxicilline 80 mg.kg/j pendant 5j, si otorrhée ou otite récidivante 10j de ttt / si sd otite conjonctivite augmentin 5j."
+          ],
+
+          questionSet: [
+            { "id": "q_OMA_1", "patterns":["otoscopie"], "answer":`Vous réalisez une otoscopie. Le conduit auditif externe n'est pas inflammatoire, il n'y a pas d'hypoacousie, pas d'otorrhée ni d'acouphènes. Le tympan gauche est visible avec reliefs des osselets, pas d'épanchement ni de rétractation rétro tympanique, pas d'hyperhémie. Le tympan droit : <img src= "otoscopieOMA.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`."},
+            { "id": "q_OMA_2", "patterns":["examen du fond de gorge", "examen du fond de la gorge"], "answer":"Pas d'anomalies du fond de gorge, pas d'anomalies des amygdales." },
+            { "id": "q_OMA_3", "patterns":["mastoïdite", "paralysie faciale", "méningite"], "answer":"Absence de signes évoquant une mastoïdite, une ménigite ou une paralysie faciale." },
+            { "id": "q_OMA_4", "patterns":["sinusite", "obstruction nasale"], "answer":"Absence de signes en faveur d'une sinusite." },
+            { "id": "q_OMA_5", "patterns":["rhinopharyngite", "rhinorrhée"], "answer":"Absence de signes en faveur d'une rhinopharyngite." },
+            { "id": "q_OMA_6", "patterns":["inflammation", "épanchement rétro tympanique", "effacement des reliefs", "bombement du tympan"], "answer":"Validé." },
+            { "id": "q_OMA_7", "patterns":["otite moyenne aigue droite", "otite moyenne aiguë droite", "otite moyenne purulente droite"], "answer":"Validé." },
+            { "id": "q_OMA_8", "patterns":["amoxicilline", "5 jours"], "answer":"Ok pas de soucis." },
+            { "id": "q_OMA_9", "patterns":["antalgiques", "antipyrétiques", "antalgie" "paracétamol"], "answer":"Oui c'est gentil." },
+            { "id": "q_OMA_10", "patterns":["reconsulter", "à 48-72h", "dans 2-3 jours"], "answer":"Ok pas de soucis." },
+            { "id": "q_OMA_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Ma fille décrit une douleur pulsatile de l'oreille droite depuis 48h, plutôt dans l'oreille selon elle, apparue brutalement et évaluée à 9/10. Aussi elle a de la fièvre à 39°C. C'est la seule malade à la maison ou dans ses copines de l'école."},
+            { "id": "q_OMA_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci grandement Docteur." },
+            { "id": "q_OMA_13", "patterns":["pas d'éviction scolaire", "peut aller à l'école"], "answer":"Ok très bien." },
+            { "id": "q_OMA_14", "patterns":["pas d'AINS", "complications infectieuses"], "answer":"Ok je comprends on ne lui donnera pas ce sirop alors." }
+          ]
+        },
+
+{
+          id: "SDD17",
+          title: "Otorrhée",
+          intro: "Vous recevez en consultation de médecine générale un homme de 27 ans pour douleur et écoulement liquidien au niveau de l'oreille gauche. Il présente une otalgie intense, lancinante, augmentant en première partie de nuit, évaluée à 10/10, sans irradiation, accompagnée d'une otorrhée purulente. La mastication réveille la douleur, sans facteur calmant. Il n'y a pas eu de prise médicamenteuse associée. Il vous dit s'être baigné dans un lac pendant le week-end 2 jours auparavant. Il a comme antécédents un diabète de type I traité par insulinothérapie basal-bolus et un eczéma atopique avec xérose cutanée traité par émollients quotidiens et pommade de dermocorticoïdes lors des poussées. Il a une allergie aux pénicillines (œdème de Quincke sous C3G). Les vaccinations sont à jour du calendrier vaccinal. Il est célibataire, il vit seul et est assistant parlementaire. Examinez le patient, explicitez ce que vous rechercher et constatez, suspectez un diagnostic, proposez une PEC, répondez aux questions : est-ce contagieux ? dois-je réaliser des examens pour être sur du diagnostic ?",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Température, otoscopie, description des lésions (conque inflammatoire sans disparition des reliefs cartilagineux, lésions érythémato-squameuses en regard), recherche de complications (chondrite, otite externe maligne ou nécrosante).",
+            "- Diag d'otite externe gauche non compliquée. On prescrit une ATB locale par gouttes auriculaires (type fluoroquinolones), antalgiques et antipyrétiques type paracétamol, CI aux AINS, reconsulter si persistance des signes cliniques à 48-72h. Non contagieux, diagnostic clinique sans examen complémentaire nécessaire.",
+            "Complications de l'otite externe :",
+            "- Périchondrite ou chondrite: hyperalgique, insomniant, pavillo rouge, tuméfié, effacement des reliefs, douleur augmentée par contact.",
+            "- Otite externe nécrosante : ostéite de la base du crâne, risque de survenir chez patient âgé ou diabétique ou immunodéprimé, se propage aux tissus avoisinants, otalgie trainante et sévère, AEG, paralysie NC.",
+
+          ],
+
+          questionSet: [
+            { "id": "q_otitexterne_1", "patterns":["température", "fièvre"], "answer":"Pas de température 37,2°C."},
+            { "id": "q_otitexterne_2", "patterns":["otoscopie"], "answer":"Examen douloureux à l'introduction de l'otoscope. CAE inflammatoire et oedématié. Tympan gauche visible avec reliefs osseux, pas d'épanchement. Oreille droite sans anomalie." },
+            { "id": "q_otitexterne_3", "patterns":["pavillon"], "answer":`Voici ce que vous voyez à l'inspection de l'oreille gauche : <img src= "otitexterne.png" style ="max-width:100%; border-radius:8px; margin-top:10px;". Aucune anomalie de l'oreille droite>` },
+            { "id": "q_otitexterne_4", "patterns":["conque inflammatoire", "inflammation de la conque", "pas de disparition des reliefs cartilagineux", "présence des reliefs cartilagineux", "érythémateuse", "érythème", "érytho-squameuse", "squames"], "answer":"Validé." },
+            { "id": "q_otitexterne_5", "patterns":["chondrite", "otite externe maligne", "otite externe nécrosante"], "answer":"Vous ne retrouvez pas d'arguments en faveur d'une chondrite ou otite externe maligne (en particulier pas de paralysie des nerfs crâniens ni de franche AEG)." },
+            { "id": "q_otitexterne_6", "patterns":["otite externe gauche", "non compliquée"], "answer":"Validé." },
+            { "id": "q_otitexterne_7", "patterns":["antibiothérapie locale", "gouttes auriculaires"], "answer":"D'accord je veux bien mettre ses gouttes." },
+            { "id": "q_otitexterne_8", "patterns":["antalgique", "antipyrétique", "paracétamol", "antalgiques", "antipyrétiques"], "answer":"Ok." },
+            { "id": "q_otitexterne_9", "patterns":["contre indication aux AINS", "les AINS sont contre indiqués", "contre-indication aux AINS", "CI des AINS", "CI aux AINS"], "answer":"D'accord je me le note bien." },
+            { "id": "q_otitexterne_10", "patterns":["reconsulter", "à 48-72h", "dans 2-3 jours", "dans 2-3j"], "answer":"Ok je vois." },
+            { "id": "q_otitexterne_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai une douleur à l'oreille gauche avec un écoulement un peu sale. Cette douleur est intense et lancinante, augmentant en 1e partie de nuit et je dirais qu'elle est à 10/10."},
+            { "id": "q_otitexterne_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"C'est clair, merci Docteur." },
+            { "id": "q_otitexterne_13", "patterns":["non contagieux", "pas contagieux"], "answer":"Ok tant mieux." },
+            { "id": "q_otitexterne_14", "patterns":["diagnostic clinique", "pas d'examen"], "answer":"Super je vous fais confiance alors." }
+          ]
+        },
+
+{
+          id: "SDD18",
+          title: "Rhinorrhée",
+          intro: "Vous recevez en consultation dans votre cabinet de médecine générale en plein hiver un patient de 38 ans pour rhinorrhée persistante. C'est un maçon sans antécédent médico-chirurgical, sans allergie connue ni traitement à domicile, autonome au quotidien, marié avec deux enfants. Il est actuellement en congés. En effet, il présente depuis 5 jours une rhinorrhée claire, avec obstruction nasale, un syndrome pseudo-grippal (fièvre modérée, avec frissons et myalgies) et une toux sèche. Le patient avait consulté 2 jours auparavant devant cette symptomatologie, pour laquelle vous aviez évoqué une rhinopharyngite non compliquée et aviez prescrit un traitement symptomatique. Néanmoins, il reconsulte ce jour devant la persistance des symptômes malgré le traitement symptomatique et décrit une augmentation de la quantité des rhinorrhées, devenues franchement purulentes ; accompagnées de douleurs évaluées à une intensité de 4/10. Evoquez un diagnostic, recherchez les signes en faveur de ce diagnostic à l'examen clinique, recherchez et éliminez un type de complication, proposez une PEC (sachez que vous décidez d'introduire une ATB), répondez aux questions du patient : dois-je faire un scanner ou une IRM ? puis-je prendre des AINS comme du kétoprofène si j'ai mal ?",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Sinusite maxillaire aigue. Persistance ou augmentation des douleurs sinusiennes infra-orbitaires malgré un traitement symptomatique >48h, douleur unilatérale et pulsatile augmentée quand la tête est penchée en avant max en fin d'aprèm et la nuit, rhinorrhée purulente prédominance unilatérale. Critères mineurs persistants : fièvre >3j, ob nasale, éternuements, gêne pharyngée et/ou toux (3/5). Recherche porte entrée dentaire (examen endobuccal et infection buccodentaire). Rechercher signes infectieux ORL associés : angine, otite, autre sinusite associée, adénopathies cervicales.",
+            "- Complications neuromingées (méningite, thrombophlébite des sinus, abcès cérébral, empyème sous dural) avec recherche d'un sd méningé et tb de la conscience. Traitement symptomatique à poursuivre (antalgique/antipyrétique, lavage des fosses nasales au sérum phy), amox pour 7j.",
+            "- Pas d'indication au scanner ou à l'IRM. Les AINS ne sont pas recommandés."
+          ],
+
+          questionSet: [
+            { "id": "q_sinusitemax_1", "patterns":["sinusite maxillaire aigue", "sinusite maxillaire aiguë"], "answer":"Validé."},
+            { "id": "q_sinusitemax_2", "patterns":["persistance ou augmentation des douleurs", "malgré traitement", "persistance des douleurs", "augmentation des douleurs"], "answer":"Présence d'une douleur sinusienne infra-orbitaire." },
+            { "id": "q_sinusitemax_3", "patterns":["unilatérale", "pulsatile", "augmentée quand la tête est penchée en avant", "maximale en fin de journée"], "answer":"La douleur est pulsatile, augmentée quand la tête est penchée en avant, max en fin de journée." },
+            { "id": "q_sinusitemax_4", "patterns":["rhinorrhée purulente", "rhinorrhée unilatérale"], "answer":"La rhinorrhée est purulente et unilatérale." },
+            { "id": "q_sinusitemax_5", "patterns":["fièvre persistante", "obstruction nasale", "éternuements", "gêne pharyngée", "toux"], "answer":"Le patient présente de la fièvre à 38,4°C, une obstruction nasale, une gêne pharyngée et une toux sèche." },
+            { "id": "q_sinusitemax_6", "patterns":["porte d'entrée dentaire", "infection buccodentaire", "examen endobuccal"], "answer":"Pas d'arguments en faveur d'une porte d'entrée dentaire." },
+            { "id": "q_sinusitemax_7", "patterns":["angine", "examen du fond de gorge", "otite", "otoscopie", "examen otoscopique", "sinusite associée", "adénopathies cervicales", "adénopathies dans le territoire de drainage"], "answer":"Pas de signes infectieux ORL associés." },
+            { "id": "q_sinusitemax_8", "patterns":["complications neuroméningées", "méningite", "syndrome méningé", "troubles de la conscience", "abcès cérébral", "thrombophlébite", "empyème"], "answer":"Pas de signes évoquant une complication neuroméningée." },
+            { "id": "q_sinusitemax_9", "patterns":["antalgique", "antalgiques", "antipyrétique", "antipyrétiques", "paracétamol"], "answer":"Prescription d'antalgique renouvelée." },
+            { "id": "q_sinusitemax_10", "patterns":["lavage", "sérum physiologique"], "answer":"Explication sur le lavage des fosses nasales." },
+            { "id": "q_sinusitemax_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai depuis 5 jours le nez qui coule et le nez bouché, un syndrome pseudo grippal et une toux sèche. J'ai consulté il y a deux jours déjà pour la même chose et j'ai attendu 48h comme vous me l'aviez dit mais honnêtement c'est encore pire..."},
+            { "id": "q_sinusitemax_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_sinusitemax_13", "patterns":["amoxicilline", "7 jours", "7j", "une semaine"], "answer":"Prescription faite." },
+            { "id": "q_sinusitemax_14", "patterns":["pas de scanner", "pas d'IRM", "pas nécessaire", "pas nécessaires"], "answer":"D'accord alors on ne fait pas d'imagerie." },
+            { "id": "q_sinusitemax_15", "patterns":["AINS pas recommandés", "pas prendre d'AINS"], "answer":"Ok pas de souci, merci de l'info !" }
+          ]
+        },
+
+{
+          id: "SDD19",
+          title: "Strabisme chez l'enfant",
+          intro: `Un garçon de 3 ans, sans antécédents notables, vous est adressé par son médecin traitant pour strabisme permanent. Il est accompagné de sa mère et de son frère. Dites quel type de strabisme est mis en évidence, décrivez votre examen clinique diagnostic et étiologique face à ce strabisme et dites ce que vous recherchez, donnez la principale complication du strabisme et expliquez la à la mère du patient. Vous regardez également le frère du patient et vous découvrez une anomalie (demandez : photo frère) citez les 1 étiologies à évoquer.<img src= "strabisme.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Esotropie de l'oeil droit. Examen des reflets cornéens à la recherche d'une déviation du reflet du côté de l'oeil strabique, test à l'écran alterné ou test sous écran à la recherche d'un mouvement de refixation de l'oeil strabique, examen lueur papillaire à la recherche d'une leucocorie, examen oculomotricité à la recherche paralysie oculomotrice, examen lampe à fente à la recherche anomalie transparence des milieux ou cataracte ou taie cornéenne, fond oeil recherche rétinoblastome ou neuroblastome, examen réfraction objective sous cytoplégique recherche trouble réfraction ou amétropie ou hypermétropie, examen acuité visuelle recherche amblyopie.",
+            "- La principale complication est l'amblyopie. AV d'un oeil < AV optimale théorique ou différence AV > 2/10e entre les deux yeux après correction ou mauvaise acuité visuelle par non usage de l'oeil. Définitive après 8-10ans.",
+            "- Frère présente une leucocorie, on recherche cataracte congénitale et rétinoblastome."
+          ],
+
+          questionSet: [
+            { "id": "q_esotropie_1", "patterns":["ésotropie", "strabisme convergent"], "answer":"Validé."},
+            { "id": "q_esotropie_2", "patterns":["reflets cornéens"], "answer":"Ok et qu'est-ce qu'on recherche sur cet examen ?" },
+            { "id": "q_esotropie_3", "patterns":["déviation du reflet du côté pathologique", "déviation du reflet du côté strabique"], "answer":"D'accord." },
+            { "id": "q_esotropie_4", "patterns":["test sous écran", "test à l'écran alterné"], "answer":"Ok et on veut vérifier quoi ?" },
+            { "id": "q_esotropie_5", "patterns":["refixation", "mouvement de refixation", "rattrapage"], "answer":"Ok je vois." },
+            { "id": "q_esotropie_6", "patterns":["lueur papillaire"], "answer":"D'accord." },
+            { "id": "q_esotropie_7", "patterns":["oculomotricité"], "answer":"Ok je vois et on veut éliminer quoi ?" },
+            { "id": "q_esotropie_8", "patterns":["paralysie"], "answer":"Je vois." },
+            { "id": "q_esotropie_9", "patterns":["lampe à fente"], "answer":"D'accord et pour voir quoi ?" },
+            { "id": "q_esotropie_10", "patterns":["bonjour"], "answer":"Bonjour Docteur. Je vous amène mon fils sur avis de mon médecin traitant pour un strabisme permanent."},
+            { "id": "q_esotropie_11", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_esotropie_12", "patterns":["transparence", "cataracte", "taie cornéenne"], "answer":"D'accord." },
+            { "id": "q_esotropie_13", "patterns":["fond d'oeil", "FO"], "answer":"Ok je vois et pour éliminer quoi ?" },
+            { "id": "q_esotropie_14", "patterns":["rétinoblastome", "neuroblastome"], "answer":"D'accord." },
+            { "id": "q_esotropie_15", "patterns":["réfraction", "cycloplégique"], "answer":"Ok pourquoi on le ferait cet examen ?" },
+            { "id": "q_esotropie_16", "patterns":["trouble de la réfraction", "amétropie"], "answer":"Ok pas de soucis." },
+            { "id": "q_esotropie_17", "patterns":["acuité visuelle"], "answer":"D'accord." },
+            { "id": "q_esotropie_18", "patterns":["amblyopie"], "answer":"Validé." },
+            { "id": "q_esotropie_19", "patterns":["acuité visuelle inférieure à l'acuité visuelle optimale", "différence d'acuité visuelle > à 2/1Oe", "mauvais acuité visuelle par non usage"], "answer":"Je comprends." },
+            { "id": "q_esotropie_20", "patterns":["définitive après 8 ans", "définitive après 10 ans", "définitive après 8-10 ans"], "answer":"Ah oui donc c'est bien si on tarde pas trop trop non plus quoi." },
+            { "id": "q_esotropie_21", "patterns":["photo frère"], "answer":`img src= "leucocorie.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_esotropie_22", "patterns":["leucocorie"], "answer":"D'accord et ça peut être un signe de quelles maladies ?" },
+            { "id": "q_esotropie_23", "patterns":["cataracte congénitale", "rétinoblastome"], "answer":"Ok." }
+          ]
+        },
+
+{
+          id: "SDD20",
+          title: "Tuméfaction cervicofaciale",
+          intro: `Vous recevez en consultation de médecine générale un enfant de 5 ans accompagné de sa mère pour une tuméfaction prétragiale bilatérale. C'est un garçon de 5 ans, fils unique, ayant pour seul antécédent une varicelle non compliquée l'année dernière. Il n'a pas de traitement à domicile ni d'allergie connue. La mère reconnaît ne pas être à jour des vaccinations de son fils. Les symptômes ont commencé il y a 48 h, avec une fièvre modérée à 38,6 °C, une otalgie bilatérale et une gêne à la mastication. Depuis hier s'y associe un gonflement cervico-facial, d'abord à gauche puis rapidement devenu bilatéral. Vous êtes d'emblée frappé(e) par le faciès du garçon : <img src= "oreillons.png" style ="max width:100%; border-radius:8px; margin-top:10px;">. Donnez votre principale hypothèse diagnostique, examinez l'enfant avec un examen clinique orienté, expliquez à la mère les principales mesures thérapeutiques, répondez aux questions : pouvez vous m'expliquer  le diagnostic, doit on faire d'autres examens pour confirmer le diagnostic, est-ce que peut être un cancer, est-ce que c'est contagieux et si oui comment ça s'attrape, est-ce qu'il peut aller à l'école, pourra t'il avoir cette maladie à nouveau ?`,
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Diagnostic de parotide ourlienne bilatérale ou parotide virale ou oreillons ou infection ourlienne. Palpation parotidienne bilatérale, examen endobuccal, recherche d'adénopathies cervicales, atteintes associées (méningite / encéphalite, orchi-épididymite, pancréatite aigue 2/3), examen otoscopique.",
+            "- Traitement symptomatique (repos antipyrétique).",
+            "- Explication maladie : infection virale aiguë bénigne due aux virus des oreillons. Examens complémentaires : diagnostic clinique. Cancer : gonflement parotidien est due à une réaction inflammatoire et est totalement bénin. Contagion : infection très contagieuse transmise entre les hommes par salive. Eviction de collectivité non obligatoire mais recommandée. Immunité durable.",
+            "Eviction obligatoire pour : angine streptococcique (2j après ATB), coqueluche (5j après ATB), GE à E. Coli entérohémorragique ou Shigella (2 copros négatives), impétigo étendu (3j après ATB), méningite à méningocoque (guérison clinique), rougeole (5j après ATB), scarlatine (2j après ATB), teigne (certificat médical non contagiosité), tuberculose (certificat médical non contagiosité)."
+          ],
+
+          questionSet: [
+            { "id": "q_oreillons_1", "patterns":["parotidite ourlienne", "oreillons", "parotidite virale", "infection ourlienne"], "answer":"Validé."},
+            { "id": "q_oreillons_2", "patterns":["palpation parotidienne"], "answer":"Palpation parotidienne bilatérale douloureuse, tuméfaction diffuse et homogène des parotides." },
+            { "id": "q_oreillons_3", "patterns":["examen endobuccal", "canal de Sténon", "pharyngite"], "answer":"Turgescence de l'orifice du canal de Sténon, pas de pharyngite." },
+            { "id": "q_oreillons_4", "patterns":["adénopathies cervicales"], "answer":"Adénopathies sous-angulo-maxillaires bilatérales palpées, pas d'autres adénopathies cervicales." },
+            { "id": "q_oreillons_5", "patterns":["méningite", "encéphalite", "orchi-épididymite", "pancréatite aigue"], "answer":"Aucun argument en faveur d'une méningite et/ou encéphalite, absence d'orchi-épididymite, absence de douleur abdominale évocatrice de pancréatite ourlienne aiguë oedémateuse." },
+            { "id": "q_oreillons_6", "patterns":["examen otoscopique"], "answer":"Examen otoscopique normal." },
+            { "id": "q_oreillons_7", "patterns":["repos", "antipyrétique", "paracétamol"], "answer":"D'accord." },
+            { "id": "q_oreillons_8", "patterns":["infection virale", "virus des oreillons"], "answer":"Ok je comprends." },
+            { "id": "q_oreillons_9", "patterns":["diagnostic clinique", "pas d'examen complémentaire", "pas nécessaires"], "answer":"Ok je vous fais confiance." },
+            { "id": "q_oreillons_10", "patterns":["réaction inflammatoire", "pas dégénérer en cancer"], "answer":"Bon je suis rassurée." },
+            { "id": "q_oreillons_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon fils est gonflé et il a mal au cou. Ca a commencé il y a 48h avec une petite fièvre, il a mal à l'oreille et a du mal à manger."},
+            { "id": "q_oreillons_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci beaucoup Docteur." },
+            { "id": "q_oreillons_13", "patterns":["très contagieuse", "salive"], "answer":"Oh je vois, on fera attention alors." },
+            { "id": "q_oreillons_14", "patterns":["peut aller à l'école"], "answer":"Ok je vois c'est possible mais peut être pas franchement recommandée." },
+            { "id": "q_oreillons_15", "patterns":["immunité durable", "il ne pourra pas l'attraper à nouveau", "il ne pourra pas l'avoir à nouveau"], "answer":"Bon tant mieux ça." }
+          ]
+        },
+
+{
+          id: "SDD21",
+          title: "Dyspnée",
+          intro: "Vous êtes de garde aux urgences pédiatriques. Vous recevez un enfant de 4 ans amené aux urgences pour dyspnée. Ses parents ne vous rapportent aucun antécédent personnel ni traitement à domicile. Il n'a pas d'allergie connue. Ils n'ont pas réalisé les vaccinations itératives obligatoires chez leur enfant. Les parents vous décrivent une dyspnée apparue depuis 1h, d'apparition rapide, se majorant progressivement. Lorsque vous rentrez dans le box, vous remarquez immédiatement que la dyspnée est mal tolérée avec un enfant assis, angoissé et tachypnéique présentant des difficultés inspiratoires, associée à une voix faible et étouffée et une hypersialorrhée. Effectuez un examen ciblé de l'enfant et recherchez des signes de gravité, suspectez un diagnostic, proposez une PEC.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Constantes (TA, FC, sat, température, FC), signes de lutte respiratoire (polypnée, tirage, expiration abdominale active, battement ailes nez, stridor), signes de faillite (cyanose, bradypnée, difficulté pour parler, toux inefficace, respiration paradoxale, hypercapnie), signes de gravité hémodynamique (hypotension, marbrures, extrémités froides, augmentation TRC), signes de gravité neurologique (céphalées, désorientation, confusion, coma). Dyspnée laryngée et obstruction des VAS à l'examen endobuccal.",
+            "Dyspnée laryngée de l'enfant :",
+            "- Laryngomalacie : stridor laryngé congénital du NN, dyspnée et/ou tb de la déglutition, régression après 6 mois, surveillance seule sans ttt si forme simple.",
+            "- Angiome sous-glottique : enfant <6 mois avec angiome de la lèvre ou en barbe, nasofibroscopie obligatoire, ttt par propranolol.",
+            "- épiglottite : due à Haemophilus, enfant 4-6ans, dysphagie intense avec hypersialorrhée. URGENCE VITALE = hospit enréa, aérosols corticoïdes + adrénaline, ATB IV, intubation voire trachéotomie de sauvetage.",
+            "- laryngite sous-glottique : oedème de la région glottique (laryngite la + fréquente), dyspnée, modification voix et toux rauque, traitement par aérosols adrénalinés et/ou corticoïdes +/- O2, corticoïdes IV parfois hospit et intubation.",
+          ],
+
+          questionSet: [
+            { "id": "q_épiglottite_1", "patterns":["constantes", "paramètres vitaux", "fréquence cardiaque", "fréquence respiratoire", "saturation", "température"], "answer":"Température 38,7°C, TA 114/56, FC 88/mn, FR 34/mn, saturation 95% AA."},
+            { "id": "q_épiglottite_2", "patterns":["signes de lutte", "polypnée", "tirage", "expiration abdominale active", "battement des ailes du nez", "stridor"], "answer":"Présence d'une polypnée, d'un tirage sus-claviculaire et intercostal avec stridor à l'inspiration. Pas d'expiration abdominale paradoxale." },
+            { "id": "q_épiglottite_3", "patterns":["signes de faillite", "cyanose", "bradypnée", "toux inefficace", "respiration paradoxale", "sueurs", "astérixis"], "answer":"Difficultés pour parler et toux inefficace." },
+            { "id": "q_épiglottite_4", "patterns":["hypotension artérielle", "marbrures", "extrémités froides", "allongement du TRC", "allogement du temps de recoloration cutanée", "augmentation du TRC", "augmentation du temps de recoloration cutanée"], "answer":"Pas de signes de gravité hémodynamique." },
+            { "id": "q_épiglottite_5", "patterns":["céphalées", "désorientation", "confusion", "coma"], "answer":"Absence de céphalées, absence d'astérixis." },
+            { "id": "q_épiglottite_6", "patterns":["dyspnée laryngée", "obstruction des voies aériennes supérieures"], "answer":"Pas de corps étranger endobuccal, absence d'obstruction des VAS." },
+            { "id": "q_épiglottite_7", "patterns":["épiglottite"], "answer":"Validé." },
+            { "id": "q_épiglottite_8", "patterns":["réanimation"], "answer":"D'accord je vois." },
+            { "id": "q_épiglottite_9", "patterns":["scope", "monitorer", "monitoring", "scopé", "scopée", "VVP", "voies veineuses périphériques"], "answer":"Patient scopé et pose de 2 VVP." },
+            { "id": "q_épiglottite_10", "patterns":["oxygénothérapie", "oxygène"], "answer":"Mise en place d'une oxygénothérapie." },
+            { "id": "q_épiglottite_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Mon fils a du mal à respirer et à parler j'ai l'impression ..."},
+            { "id": "q_épiglottite_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_épiglottite_13", "patterns":["aérosols", "corticoïdes", "adrénaline"], "answer":"D'accord, allez y." },
+            { "id": "q_épiglottite_14", "patterns":["position demi-assise", "contre indication au décubitus dorsal"], "answer":"Ok on le laisse assis et on ne le couche pas." },
+            { "id": "q_épiglottite_15", "patterns":["antibiothérapie IV", "antibiothérapie intraveineuse", "antibiotiques en IV", "antibiotique en IV", "antibiotiques en intraveineuse"], "answer":"Oui mettons lui un antibiotique si besoin." },
+            { "id": "q_épiglottite_16", "patterns":["corticothérapie intraveineuse", "corticothérapie IV"], "answer":"Pas de problème je vous fais confiance." }
+          ]
+        },
+
+{
+          id: "SDD22",
+          title: "Traumatisme facial",
+          intro: "Interne de garde aux urgences, vous prenez en charge une patiente de 29 ans victime d'un accident de la voie publique à haute cinétique compliqué d'une fracture occlusofaciale de Le Fort II bilatérale. Eliminez les urgences vitales et fonctionnelles, réalisez un examen clinique orienté sur la fracture en pensant à expliciter ce que vous recherchez.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Prise de constante. Vérifier absence d'asphyxie et liberté des VAS, présence ou non de signes de choc, état de conscience. Examen sensitivo-moteur rapide des 4 membres. Recherche atteinte oculaire (diplopie, plaie délabrante paupière, BAV), perte ou luxation dentaire.",
+            "- A l'inspection : trouble occlusion dentaire (contacts molaires prématurés bilatéraux et pseudo béance antérieure), impotence fonctionnelle (aspect figé, bouche entrouverte), ecchymoses périorbitaires en lunettes et/ou œdème facial global avec faciès lunaire, effondrement de la pyramide nasale avec effacement de la racine du nez, rhinoliquorrhée en lien avec BOM (3/5).",
+            "- Palpation : emphysème sous cutané périorbitaire, marche d'escalier à la palpation des margelles infra-orbitaires, palpation douloureuse en regard de la racine du nez des rebords infra orbitaires et des cintres zygomato-maxillaires, mobilité du palais de l'arcade dentaire maxillaire et de la pyramide nasale, hypoesthésie territoire V2.",
+            `Rappel fracture Le Fort II : <img src= "lefort2.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">.`
+          ],
+
+          questionSet: [
+            { "id": "q_lefort2_1", "patterns":["constantes", "paramètres vitaux", "fréquence cardiaque", "FC", "fréquence respiratoire", "FR", "saturation", "température"], "answer":"TA 110/65, FC 95, saturation 96%, température 37,2°C."},
+            { "id": "q_lefort2_2", "patterns":["asphyxie", "liberté des voies aériennes supérieures"], "answer":"Pas de signe d'asphyxie ni de détresse respiratoire aigue, liberté des voies aériennes supérieures." },
+            { "id": "q_lefort2_3", "patterns":["signes de choc"], "answer":"Absence de signe de choc hypovolémique." },
+            { "id": "q_lefort2_4", "patterns":["conscience"], "answer":"SGW 13 (réponse verbale confusion, ouverture des yeux à la demande)." },
+            { "id": "q_lefort2_5", "patterns":["examen sensitif", "examen moteur", "sensitivo-moteur"], "answer":"Pas de déficit sensitivo-moteur des 4 membres." },
+            { "id": "q_lefort2_6", "patterns":["diplopie", "plaie de la paupière", "baisse de l'acuité visuelle", "BAV"], "answer":"Absence de diplopie, absence de plaie délabrante de la paupières, pas de BAV." },
+            { "id": "q_lefort2_7", "patterns":["atteinte de la motricité faciale"], "answer":"Pas de paralysie faciale périphérique et pas de plaie en regard du trajet du nerf facial." },
+            { "id": "q_lefort2_8", "patterns":["perte dentaire", "luxation dentaire"], "answer":"Absence de perte ou luxation dentaire." },
+            { "id": "q_lefort2_9", "patterns":["trouble de l'occlusion dentaire", "contacts molaires prématurés"], "answer":"Contacts molaire prématurés bilatéraux et pseudo béance antérieure." },
+            { "id": "q_lefort2_10", "patterns":["impotence fonctionnelle", "figé", "entrouverte"], "answer":"Aspect figé et bouche entrouverte." },
+            { "id": "q_lefort2_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai été victime d'un accident de la voie publique à haute cinétique compliqué d'un traumatisme facial."},
+            { "id": "q_lefort2_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair Docteur." },
+            { "id": "q_lefort2_13", "patterns":["ecchymoses périorbitaires", "lunettes", "oedème facial", "faciès lunaire"], "answer":"Ecchymoses périorbitaires en lunettes, pas de faciès lunaire" },
+            { "id": "q_lefort2_14", "patterns":["effondrement de la pyramide nasale", "effacement de la racine du nez"], "answer":"Effondrement de la pyramide nasale." },
+            { "id": "q_lefort2_15", "patterns":["rhinoliquorrhée", "rhinorrhée cérébrospinale", "brèche ostéoméningée", "BOM"], "answer":"Pas de rhinorrhée cérébro-spinale." },
+            { "id": "q_lefort2_16", "patterns":["emphysème sous cutané", "marche d'escalier"], "answer":"Emphysème sous-cutané périorbitaire, marche d'escalier à la palpation des margelles infra-orbitaires." },
+            { "id": "q_lefort2_17", "patterns":["palpation douloureuse", "racine du nez", "rebords infraorbitaires", "zygomato-maxillaires"], "answer":"Palpation douloureuse en regard de la racine du nez, des rebords infra orbitaires et des cintres zygomato-maxillaires." },
+            { "id": "q_lefort2_18", "patterns":["mobilité du palais", "mobilité de l'arcade dentaire", "mobilité de la pyramide nasale"], "answer":"Mobilité du palais, de l'arcade dentaire maxillaire et de la pyramide nasale." },
+            { "id": "q_lefort2_19", "patterns":["hypoesthésie", "V2"], "answer":"Hypoesthésie dans le territoire du nerf V2." }
+          ]
+        },
+
+{
+          id: "SDD23",
+          title: "Prescription et interprétation d'un audiogramme",
+          intro: "Vous êtes en cabinet de médecine générale et prenez en charge une patiente de 76 ans pour baisse de l'audition bilatérale progressive depuis 5 mois. Ancienne horticultrice, autonome au quotidien et vivant avec son époux, vous la suivez pour une hypertension artérielle traitée par AMLODIPINE (inhibiteur calcique) et RAMIPRIL(IEC),et dyslipidémie sous règles hygiéno-diététiques seules. Elle n'a pas d'intoxication éthylo-tabagique ; ni d'allergie connue. Son époux vous explique qu'elle a des difficultés à entendre et comprendre les discussions lors des repas de famille le week-end, qu'elle augmente le volume sonore de la radio et de la télévision et qu'elle ne se plaint pour autant que très peu de ses difficultés auditives. L'examen otoscopique ne met pas en évidence de bouchon de cérumen ni d'anomalie tympanique. Vous suspectez une presbyacousie. Expliquez à la patiente et son époux ce qu'est la presbyacousie, vous demandez la réalisation d'un audiogramme et en recevez les résultats expliquez alors le but de cet examen et interprétez les résultats, expliquez les modalités de mise en place d'un appareillage prothétique auditif.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Surdité très fréquente liée à l'âge, conséquence du vieillissement des structures neurosensorielles du système auditifs de l'oreille interne et des voies nerveuses associées (surdité de perception), installation progressive lente et insidieuse avec une baisse de l'audition entrainant à terme à une altération de la compréhension de la prole et une élévation des seuils auditifs.",
+            "- Audiométrie tonale détecte l'intensité minimale nécessaire pour induire la perception sonore fréquence par fréquence, analyse = surdité perception bilatérale et symétrique / perte intensité sonore 30-40dB / prédominant sur fréquences conversationnelles aigues entre 1000-2000Hz (2/3). Audiométrie vocale étudie intelligibilité des sons perçus en étant le % de reconnaissance des mots d'une liste en fonction de l'intensité du signal, analyse = perte d'intelligibilité.",
+            "- Appareillage améliore communication mais ne permet pas un retour à une audition normal permet de prévenir un déclin cognitif et psychologique, bilatéral pour favoriser la stéréophonie, à porter toute la journée, prescrit par ORL et réglé par audioprothésiste, prothèse prise en charge à 100% par assurance maladie et complémentaire santé."
+          ],
+
+          questionSet: [
+            { "id": "q_presbyacousie_1", "patterns":["très fréquente", "liée à l'âge", "sujet âgé"], "answer":"D'accord je vois je vois."},
+            { "id": "q_presbyacousie_2", "patterns":["vieillissement du système auditif", "surdité de perception"], "answer":"Donc c'est juste que ses oreilles vieillissent alors." },
+            { "id": "q_presbyacousie_3", "patterns":["progressif", "progressive", "lente", "insidieuse", "dégénérescence physiologique", "altération de la compréhension", "élévation des seuils auditifs"], "answer":"Oui effectivement c'était progressif et puis elle comprend de moins en moins ce qu'on dit." },
+            { "id": "q_presbyacousie_4", "patterns":["perception sonore", "seuil auditif", "fréquence par fréquence", "intensité minimale"], "answer":"D'accord." },
+            { "id": "q_presbyacousie_5", "patterns":["surdité de perception bilatérale", "symétrique", "perte de 30 à 40dB", "perte de 30-40dB", "fréquences conversationnelles", "1000-2000Hz", "1000 à 2000 Hz"], "answer":"Ok." },
+            { "id": "q_presbyacousie_6", "patterns":["intelligibilité", "reconnaissance des mots", "liste"], "answer":"D'accord." },
+            { "id": "q_presbyacousie_7", "patterns":["perte d'intelligibilité"], "answer":"Oui c'est sûr." },
+            { "id": "q_presbyacousie_8", "patterns":["améliore la communication", "déclin cognitif", "déclin psychologique", "évite l'isolement", "évite un isolement"], "answer":"Je comprends, c'est plutôt positif." },
+            { "id": "q_presbyacousie_9", "patterns":["appareillage bilatéral"], "answer":"Ok je vois." },
+            { "id": "q_presbyacousie_10", "patterns":["toute la journée", "du lever au coucher"], "answer":"Oui évidemment." },
+            { "id": "q_presbyacousie_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. Ma femme a l'impression d'entendre normalement mais elle met la télé et la radio très fort et elle a du mal à comprendre les discussions quand on est dans un restaurant en famille par exemple… J'aimerai bien savoir ce que ça peut être."},
+            { "id": "q_presbyacousie_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_presbyacousie_13", "patterns":["prescrit par l'ORL", "réglé par l'audioprothésiste"], "answer":"Ok." },
+            { "id": "q_presbyacousie_14", "patterns":["pris en charge", "100%", "assurance maladie", "complémentaire santé"], "answer":"Bon c'est rassurant ça." },
+            { "id": "q_presbyacousie_15", "patterns":["audiogramme"], "answer":`<img src= "audiogramme.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">`}
+          ]
+        },
+
+{
+          id: "SDD24",
+          title: "Découverte d'une anomalie cervico-faciale à l'examen d'imagerie médicale",
+          intro: "De garde aux urgences, vous recevez un patient de 20 ans suite à un choc direct sur la pommette gauche au cours d'un match de rugby : l'adversaire lancé à pleine course a heurté la face de votre patient. Vous êtes d'emblée frappé(e) par l'aspect de son visage. Examinez le cliniquement et décrivez ce que vous observez et recherchez, dites ce que vous suspectez, demandez l'examen d'imagerie complémentaire adapté à votre hypothèse diagnostique, décrivez les examens reçus.",
+
+          recap: [
+            "Pour cet ECOS la grille comprenait : ",
+            "- Inspection : effacement relief de a pommette gauche, trismus douloureux, épistaxis homolatérale, hémorragie sous conjonctivale externe, énophtalmie ou dystopie oculaire. Palpation : décalage en marche d'escalier en regard des foyers de fracture et ecchymose associée, déclenchement d'une douleur exquise à la palpation, mobilité du zygoma, pneumorbitie gauche ou emphysème sous-cutané de la paupière inférieure gauche, hypoesthésie dans le territoire du nerf infra-orbitaire gauche branche du V2. Complication essentielle : recherche d'une diplopie avec limitation de l'élévation du globe oculaire gauche.",
+            "- Suspicion diagnostique : fracture os zygomatique gauche, compliquée d'une incarcération du muscle droit inférieur gauche dans le foyer de fracture du plancher orbitaire. Scanner du massif facial..",
+            "- Scanner du massif centré sur les orbites : scanner en fenêtre osseuse en coupe coronale / scanner en fenêtre parenchymateuse en coupe coronale / scanner en fenêtre osseuse en coupe sagittale / scanner en fenêtre parenchymateuse en coupe sagittale. Fracture du plancher de l'orbite gauche de type fracture en trappe, incarcération du muscle droit inférieure gauche dans le foyer de fracture du plancher orbitaire."
+          ],
+
+          questionSet: [
+            { "id": "q_traumaorbite_1", "patterns":["effacement du relief", "trismus douloureux", "épistaxis homolatéral", "hémorragie sous-conjonctivale externe", "énophtalmie", "dystopie oculaire"], "answer":"A l'inspection vous retrouvez un effacement du reliez de la pommette gauche, trismus, épistaxis homolatérale, ecchymose."},
+            { "id": "q_traumaorbite_2", "patterns":["marche d'escalier"], "answer":"Décalage en marche d'escalier." },
+            { "id": "q_traumaorbite_3", "patterns":["diplopie", "limitation de l'élévation du globe oculaire"], "answer":"Présence d'une diplopie." },
+            { "id": "q_traumaorbite_4", "patterns":["fracture de l'os zygomatique gauche"], "answer":"Validé." },
+            { "id": "q_traumaorbite_5", "patterns":["douleur exquise"], "answer":"Douleur exquise à la palpation en regard des foyers de fracture." },
+            { "id": "q_traumaorbite_6", "patterns":["mobilité du zygoma"], "answer":"Présence d'une mobilité du zygoma gauche." },
+            { "id": "q_traumaorbite_7", "patterns":["pneumorbitie gauche", "emphysème sous-cutané"], "answer":"Absence de pneumorbitie gauche, absence d'emphysème sous cutané des paupières inférieures." },
+            { "id": "q_traumaorbite_8", "patterns":["hypoesthésie", "V2"], "answer":"Absence d'hypoesthésie du territoire du nerf infra-orbitaire gauche." },
+            { "id": "q_traumaorbite_9", "patterns":["incarcération du muscle droit inférieur gauche"], "answer":"Validé." },
+            { "id": "q_traumaorbite_10", "patterns":["scanner du massif facial", "scanner de la face"], "answer":`Voici le scanner du massif facial demandé : <img src= "scannertraumaface.png" style ="max-width:100%; border-radius:8px; margin-top:10px;">` },
+            { "id": "q_traumaorbite_11", "patterns":["bonjour"], "answer":"Bonjour Docteur. J'ai pris un choc direct sur la pommette gauche au rugby. ."},
+            { "id": "q_traumaorbite_12", "patterns":["compris", "clair", "autres questions", "questions"], "answer":"Tout est clair, merci Docteur." },
+            { "id": "q_traumaorbite_13", "patterns":["fenêtre osseuse", "coupe coronale"], "answer":"Validé." },
+            { "id": "q_traumaorbite_14", "patterns":["fenêtre parenchymateuse", "coupe sagittale"], "answer":"Validé." },
+            { "id": "q_traumaorbite_15", "patterns":["fracture du plancher de l'orbite", "fracture en trappe"], "answer":"Validé." },
+            { "id": "q_traumaorbite_16", "patterns":["incarcération du muscle droit inférieur"], "answer":"Validé." }
           ]
         }
       ]
